@@ -2,71 +2,64 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2021-07-29 16:59:59+01000\n"
+"PO-Revision-Date: 2026-02-18 12:09+0000\n"
+"Last-Translator: Francisco Serrador <fserrador@gmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jamovi/module-"
+"vijplots/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #: R/qqplot.b.R
-#, fuzzy
 msgid "{distribStr} {typeStr} Plot of {varStr}"
-msgstr "{distribStr} {typeStr} Gráfico de {varStr}"
+msgstr "{distribStr} {typeStr} Trama de {varStr}"
 
 #: R/corresp.b.R
-#, fuzzy
 msgid "{normalization} Normalization"
 msgstr "{normalization} Normalización"
 
 #: R/principal.b.R
-#, fuzzy
 msgid "{rotation} rotation"
 msgstr "{rotation} rotación"
 
 #: R/principal.b.R
-#, fuzzy
 msgid "{rotation} rotation was used."
-msgstr "{rotation} rotación se utilizó."
+msgstr "se utilizó {rotation} rotación."
 
 #: R/principal.b.R
-#, fuzzy
 msgid "{rotation} rotation with Kaiser normalization"
-msgstr "{rotation} rotación con normalización de Kaiser"
+msgstr "se utilizó rotación {rotation} con normalización de Kaiser"
 
 #: R/principal.b.R
-#, fuzzy
 msgid "{rotation} rotation with Kaiser normalization was used."
-msgstr "{rotation} rotación con normalización de Kaiser se utilizó."
+msgstr "se utilizó {rotation} rotación con normalización de Kaiser."
 
 #: barplot/options/facetNumber.title histogram/options/facetNumber.title
 #: lollipop/options/facetNumber.title piechart/options/facetNumber.title
-#, fuzzy
 msgid "# of rows/columns"
-msgstr "# de filas/columnas"
+msgstr "nº de filas/columnas"
 
 #: barplot/options/accuracy.title barplot/ui[2][0][2][0].label
 #: likertplot/options/accuracy.title likertplot/ui[4][0][2][0].label
 #: mrcrosstabs/options/accuracy.title mrcrosstabs/ui[2][0][2][0].label
 #: mrfrequencies/options/accuracy.title mrfrequencies/ui[2][0][2][0].label
 #: piechart/options/accuracy.title piechart/ui[2][0][2][0].label
-#, fuzzy
 msgid "% Accuracy"
 msgstr "% Precisión"
 
 #: mrcrosstabs/options/computedValues/options.title
 #: mrcrosstabs/ui[1][1][0]/computedValues_options.label
-#, fuzzy
 msgid "% by Row"
 msgstr "% por fila"
 
 #: R/multcorresp.b.R multcorresp/results/categories.columns.title
-#, fuzzy
 msgid "% Inertia"
 msgstr "% Inercia"
 
 #: likertplot/ui[4][1][0][0].label
-#, fuzzy
 msgid "% Labels"
 msgstr "% Etiquetas"
 
@@ -77,15 +70,13 @@ msgstr "% Etiquetas"
 #: mrfrequencies/options/yaxis/cases.title
 #: mrfrequencies/ui[1][2][0]/yaxis_cases.label
 #: mrfrequencies/results/responses.columns.title
-#, fuzzy
 msgid "% of Cases"
-msgstr "% de casos"
+msgstr "% de Casos"
 
 #: R/multcorresp.b.R corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
-#, fuzzy
 msgid "% of Inertia"
-msgstr "% de inercia"
+msgstr "% de Inercia"
 
 #: R/mrcrosstabs.b.R R/mrfrequencies.b.R
 #: mrcrosstabs/options/computedValues/responses.title
@@ -94,19 +85,16 @@ msgstr "% de inercia"
 #: mrfrequencies/options/yaxis/responses.title
 #: mrfrequencies/ui[1][2][0]/yaxis_responses.label
 #: mrfrequencies/results/responses.columns.title
-#, fuzzy
 msgid "% of Responses"
-msgstr "% de respuestas"
+msgstr "% de Respuestas"
 
 #: principal/results/summaryTable.columns.title
-#, fuzzy
 msgid "% of Variance"
-msgstr "% de varianza"
+msgstr "% de Varianza"
 
 #: R/mrcrosstabs.b.R
-#, fuzzy
 msgid "% within"
-msgstr "% dentro"
+msgstr "% interno"
 
 #: likertplot/results/helpMessage.content
 #, fuzzy
@@ -213,7 +201,6 @@ msgstr ""
 "</div>"
 
 #: qqplot/results/helpMessage.content
-#, fuzzy
 msgid ""
 "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>QQ & PP Plots Help</strong></p>\n"
 "<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and Heike Hofmann. In-depth information can be found in the package documentation on CRAN site.</p>\n"
@@ -223,168 +210,176 @@ msgid ""
 "<p><strong>Parameter values:</strong> The distribution parameters can be estimated from data using <ul> <li><strong>Maximum Likelihood Method</strong> (using MASS package) : it should work with all distributions but \"t\" and \"uniform\";</li> <li><strong>Method of Moments</strong> for moment based parameters : it should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", \"Gamma\", \"Logistic\", \"Uniform\";</li> </ul> or entered by user: <ul> <li><strong>Parameter 1:</strong> : mean (Normal), meanlog (Log-normal), shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 (F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li> <li><strong>Parameter 2:</strong> : sd (normal), sdlog (Log-normal), shape2 (Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max (Uniform).</li> </ul> </p>\n"
 "</div>"
 msgstr ""
-"<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>Ayuda de tramas QQ y PP</strong></p>\n"
-"<p>Este módulo utiliza el paquete <a href = \"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr de R</a> por Alexandre Almeida, Adam Loy y Heike Hofmann. La información detallada se puede encontrar en la documentación del paquete en el sitio de CRAN.</p>\n"
-"<p><strong>Línea de referencia:</strong> Dibuja la <em>línea de identidad</em> (y = x) o la línea de QQ comúnnmente utilizada que intercepta dos cuantiles de datos (Q<sub>0.25</sub> y Q<sub>0.75</sub>). La trama de PP sólo admite la línea de identidad.</p>\n"
-"<p><strong>Banda de confianza:</strong> Dibuja una banda de confianza alrededor de la línea de referencia. El paquete qqplotr proporciona varios métodos para calcular la banda de confianza: <ul> <li><strong><em>Puntual</em></strong> construye bandas de confianza puntuales basadas en intervalos de confianza normales;</li> <li><strong><em>Bootstrap</em></strong> crea bandas de confianza puntuales basadas en un bootstrap paramétrico;</li> <li><strong><em>Kolmogorov-Smirnov</em></strong> la banda se basa en la prueba de Kolmogorov-Smirnov;</li> <li><strong><em>Sensible a la cola</em></strong> construye una banda de confianza sensible a la cola, pero sólo se implementa para tramas de QQ normales;</li> <li><strong><em>Niveles locales iguales (ELL)</em></strong> construye bandas simultáneas utilizando los niveles locales iguales.</li> </ul> Las tramas de PP sólo admiten los métodos \"ELL\" y \"Bootstrap\".</p>\n"
-"<p><strong>Trama desestandarizada:</strong> Los objetos se <em>desestandarizan</em> según la línea de referencia. Este procedimiento puede ayudar a reducir el sesgo visual causado por las distancias ortogonales de los puntos a la línea de referencia.</p>\n"
-"<p><strong>Valores de parámetro:</strong> Los parámetros de la distribución se pueden estimar a partir de los datos utilizando <ul> <li><strong>Método de máxima verosimilitud</strong> (usando el paquete MASS): debería funcionar con todas las distribuciones excepto \"t\" y \"uniforme\";</li> <li><strong>Método de los momentos</strong> para parámetros basados en momentos: debería funcionar con \"normal\", \"log-normal\", \"Beta\", \"Exponencial\", \"Gamma\", \"Logística\", \"Uniforme\";</li> </ul> o se pueden introducir manualmente por el usuario: <ul> <li><strong>Parámetro 1:</strong>: media (Normal), meanlog (Log-normal), shape1 (Beta), ubicación (Cauchy, Logística), df (Chi-cuadrado, Student), df1 (F), tasa (Exponencial), forma (Gamma, Weibull) y mín (Uniforme);</li> <li><strong>Parámetro 2:</strong>: desviación estándar (normal), sdlog (Log-normal), shape2 (Beta), escala (Cauchy, Logística), df2 (F), tasa (Gamma, Weibull) y máx (Uniforme).</li> </ul> </p>\n"
+"<style> .block { border: 2px solid gray; border-radius: 15px; background-"
+"color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div "
+"class=\"block\"> <p><strong>Ayuda de tramas QQ y PP</strong></p>\n"
+"<p>Este módulo utiliza el paquete <a href = \"https://CRAN.R-project.org/"
+"package=qqplotr\" target=\"_blank\">qqplotr de R</a> por Alexandre Almeida, "
+"Adam Loy y Heike Hofmann. La información detallada se puede encontrar en la "
+"documentación del paquete en el sitio de CRAN.</p>\n"
+"<p><strong>Línea de referencia:</strong> Dibuja la <em>línea de identidad</"
+"em> (y = x) o la línea de QQ comúnmente utilizada que intercepta dos "
+"cuantiles de datos (Q<sub>0.25</sub> y Q<sub>0.75</sub>). La trama de PP "
+"sólo admite la línea de identidad.</p>\n"
+"<p><strong>Banda de confianza:</strong> Dibuja una banda de confianza "
+"alrededor de la línea de referencia. El paquete qqplotr proporciona varios "
+"métodos para calcular la banda de confianza: <ul> <li><strong><em>Puntual</"
+"em></strong> construye bandas de confianza puntuales basadas en intervalos "
+"de confianza normales;</li> <li><strong><em>Bootstrap</em></strong> crea "
+"bandas de confianza puntuales basadas en un bootstrap paramétrico;</li> <li>"
+"<strong><em>Kolmogorov-Smirnov</em></strong> la banda se basa en la prueba "
+"de Kolmogorov-Smirnov;</li> <li><strong><em>Sensible a la cola</em></strong> "
+"construye una banda de confianza sensible a la cola, pero sólo se implementa "
+"para tramas de QQ normales;</li> <li><strong><em>Niveles locales iguales "
+"(ELL)</em></strong> construye bandas simultáneas utilizando los niveles "
+"locales iguales.</li> </ul> Las tramas de PP sólo admiten los métodos "
+"\"ELL\" y \"Bootstrap\".</p>\n"
+"<p><strong>Trama desestandarizada:</strong> Los objetos se <em>"
+"desestandarizan</em> según la línea de referencia. Este procedimiento puede "
+"ayudar a reducir el sesgo visual causado por las distancias ortogonales de "
+"los puntos a la línea de referencia.</p>\n"
+"<p><strong>Valores de parámetro:</strong> Los parámetros de la distribución "
+"se pueden estimar a partir de los datos utilizando <ul> <li><strong>Método "
+"de máxima verosimilitud</strong> (usando el paquete MASS): debería funcionar "
+"con todas las distribuciones excepto \"t\" y \"uniforme\";</li> <li><strong>"
+"Método de los momentos</strong> para parámetros basados en momentos: debería "
+"funcionar con \"normal\", \"log-normal\", \"Beta\", \"Exponencial\", "
+"\"Gamma\", \"Logística\", \"Uniforme\";</li> </ul> o se pueden introducir "
+"manualmente por el usuario: <ul> <li><strong>Parámetro 1:</strong>: media "
+"(Normal), meanlog (Log-normal), shape1 (Beta), ubicación (Cauchy, Logística)"
+", df (Chi-cuadrado, Student), df1 (F), tasa (Exponencial), forma (Gamma, "
+"Weibull) y mín (Uniforme);</li> <li><strong>Parámetro 2:</strong>: "
+"desviación estándar (normal), sdlog (Log-normal), shape2 (Beta), escala "
+"(Cauchy, Logística), df2 (F), tasa (Gamma, Weibull) y máx (Uniforme).</li> </"
+"ul> </p>\n"
 "</div>"
 
 #: areachart/options/dateBreak/1 day.title linechart/options/dateBreak/1
 #: day.title
-#, fuzzy
 msgid "1 day"
 msgstr "1 día"
 
 #: areachart/options/dateBreak/1 month.title linechart/options/dateBreak/1
 #: month.title
-#, fuzzy
 msgid "1 month"
 msgstr "1 mes"
 
 #: areachart/options/dateBreak/1 week.title linechart/options/dateBreak/1
 #: week.title
-#, fuzzy
 msgid "1 week"
 msgstr "1 semana"
 
 #: areachart/options/dateBreak/1 year.title linechart/options/dateBreak/1
 #: year.title
-#, fuzzy
 msgid "1 year"
 msgstr "1 año"
 
 #: areachart/options/dateBreak/10 year.title linechart/options/dateBreak/10
 #: year.title
-#, fuzzy
 msgid "10 years"
 msgstr "10 años"
 
 #: areachart/options/displayFormat/%m-%d-%Y.title
 #: linechart/options/displayFormat/%m-%d-%Y.title
-#, fuzzy
 msgid "10-20-2035"
 msgstr "10-20-2035"
 
 #: areachart/options/displayFormat/%m/%d/%y.title
 #: linechart/options/displayFormat/%m/%d/%y.title
-#, fuzzy
 msgid "10/20/35"
 msgstr "10/20/35"
 
 #: areachart/options/dateBreak/2 week.title linechart/options/dateBreak/2
 #: week.title
-#, fuzzy
 msgid "2 weeks"
 msgstr "2 semanas"
 
 #: areachart/options/displayFormat/%e %B %Y.title
 #: linechart/options/displayFormat/%e %B %Y.title
-#, fuzzy
 msgid "20 October 2035"
-msgstr "20 October 2035"
+msgstr "20 de octubre de 2035"
 
 #: areachart/options/displayFormat/%d-%m-%Y.title
 #: linechart/options/displayFormat/%d-%m-%Y.title
-#, fuzzy
 msgid "20-10-2035"
 msgstr "20-10-2035"
 
 #: areachart/options/displayFormat/%d/%m/%y.title
 #: linechart/options/displayFormat/%d/%m/%y.title
-#, fuzzy
 msgid "20/10/35"
 msgstr "20/10/35"
 
 #: areachart/options/displayFormat/%Y %b.title
 #: linechart/options/displayFormat/%Y %b.title
-#, fuzzy
 msgid "2035 Oct"
 msgstr "2035 Oct"
 
 #: areachart/options/displayFormat/%Y %B.title
 #: linechart/options/displayFormat/%Y %B.title
-#, fuzzy
 msgid "2035 October"
-msgstr "2035 October"
+msgstr "2035 Octubre"
 
 #: areachart/options/displayFormat/%Y %B %e.title
 #: linechart/options/displayFormat/%Y %B %e.title
-#, fuzzy
 msgid "2035 October 20"
-msgstr "2035 October 20"
+msgstr "2035 Octubre 20"
 
 #: areachart/options/displayFormat/%Y-%m-%d.title
 #: linechart/options/displayFormat/%Y-%m-%d.title
-#, fuzzy
 msgid "2035-10-20"
-msgstr "20-10-2035"
+msgstr "2035-10-20"
 
 #: areachart/options/dateBreak/3 month.title linechart/options/dateBreak/3
 #: month.title
-#, fuzzy
 msgid "3 months"
 msgstr "3 meses"
 
 #: areachart/options/dateBreak/6 month.title linechart/options/dateBreak/6
 #: month.title
-#, fuzzy
 msgid "6 months"
 msgstr "6 meses"
 
 #: package/datasets/vijPlots.description
-#, fuzzy
 msgid "A demonstration dataset for vijPlots module."
 msgstr "Un conjunto de datos de demostración para el módulo vijPlots."
 
 #: package/datasets/Smoking.description
-#, fuzzy
 msgid "A demonstration dataset for vijPlots/Correspondence Analysis."
 msgstr ""
 "Un conjunto de datos de demostración para vijPlots / Análisis de "
 "Correspondencia."
 
 #: package/datasets/Likert.description
-#, fuzzy
 msgid "A demonstration dataset for vijPlots/Likert plots."
-msgstr "Un conjunto de datos de demostración para vijPlots/Likert plots."
+msgstr "Un conjunto de datos de demostración para vijPlots/Tramas Likert."
 
 #: package/datasets/Cars.description
-#, fuzzy
 msgid ""
 "A demonstration dataset for vijPlots/Multiple Correspondence Analysis."
 msgstr ""
-"Conjunto de datos de demostración para vijPlots/Análisis de Correspondencia"
-" Múltiple."
+"Un conjunto de datos de demostración para vijPlots/Análisis de "
+"Correspondencia Múltiple."
 
 #: package/datasets/Credit Cards.description
-#, fuzzy
 msgid "A demonstration dataset for vijPlots/Multiple Response plots."
 msgstr ""
-"Un conjunto de datos de demostración para vijPlots/Gráficos de respuestas "
-"múltiples."
+"Un conjunto de datos de demostración para tramas vijPlots/Respuestas "
+"Múltiples."
 
 #: package/datasets/Iris.description
-#, fuzzy
 msgid "A demonstration dataset for vijPlots/Principal Component Analysis."
 msgstr ""
-"Un conjunto de datos de demostración para vijPlots/Análisis de componentes "
-"principales."
+"Un conjunto de datos de demostración para Análisis de Componente vijPlots/"
+"Principal."
 
 #: package/datasets/Raincloud.description
-#, fuzzy
 msgid "A demonstration dataset for vijPlots/Raincloud plot."
-msgstr ""
-"Un conjunto de datos de demostración para vijPlots / gráfico de nube de "
-"lluvia."
+msgstr "Un conjunto de datos de demostración para trama vijPlots/Raincloud."
 
 #: package/datasets/Time Series.description
-#, fuzzy
 msgid "A demonstration dataset for vijPlots/Time Serie plots."
 msgstr ""
-"Un conjunto de datos de demostración para vijPlots/Tramas de serie "
-"temporal."
+"Un conjunto de datos de demostración para tramas vijPlots/Serie Temporal."
 
 #: areachart/options/colorPalette/Accent.title
 #: barplot/options/colorPalette/Accent.title
@@ -398,34 +393,28 @@ msgstr ""
 #: principal/options/colorPalette/Accent.title
 #: raincloud/options/colorPalette/Accent.title
 #: scatterplot/options/colorPalette/Accent.title
-#, fuzzy
 msgid "Accent"
 msgstr "Acento"
 
 #: R/corresp.b.R
-#, fuzzy
 msgid "Active Margin"
-msgstr "Margen activo"
+msgstr "Margen Activo"
 
 #: likertplot/options/addMedianLine.title
-#, fuzzy
 msgid "Add median line (Stacked only)"
-msgstr "Agregar línea de mediana (solo apilada)"
+msgstr "Agregar línea de mediana (solo Apilada)"
 
 #: scatterplot/options/plotBorder.title
-#, fuzzy
 msgid "Add plot frame"
-msgstr "Agregar marco de gráfico"
+msgstr "Agregar marco de trama"
 
 #: R/likertplot.b.R
-#, fuzzy
 msgid "Adj. p"
 msgstr "Adj. p"
 
 #: principal/ui[7].label
-#, fuzzy
 msgid "Advanced Options"
-msgstr "Opciones avanzadas"
+msgstr "Opciones Avanzadas"
 
 #: areachart/options/titleAlign.title areachart/options/subtitleAlign.title
 #: areachart/options/captionAlign.title barplot/options/titleAlign.title
@@ -456,49 +445,40 @@ msgstr "Opciones avanzadas"
 #: raincloud/options/captionAlign.title scatterplot/options/titleAlign.title
 #: scatterplot/options/subtitleAlign.title
 #: scatterplot/options/captionAlign.title
-#, fuzzy
 msgid "Align"
 msgstr "Alinear"
 
 #: raincloud/options/alphaC.title
-#, fuzzy
 msgid "Alpha"
 msgstr "Alfa"
 
 #: R/areachart.b.R R/linechart.b.R
-#, fuzzy
 msgid "Apr"
 msgstr "Abr"
 
 #: R/areachart.b.R R/linechart.b.R
-#, fuzzy
 msgid "April"
 msgstr "Abril"
 
 #: package/analyses/areachart.title package/analyses/areachart.menuTitle
 #: areachart/options.title areachart/ui.title areachart/results.title
-#, fuzzy
 msgid "Area Chart"
-msgstr "Gráfico de área"
+msgstr "Diagrama de Área"
 
 #: principal/options/varColor.title
-#, fuzzy
 msgid "Arrows"
 msgstr "Flechas"
 
 #: likertplot/options/sorting/ascending.title
 #: likertplot/ui[1][1][0]/sorting_ascending.label
-#, fuzzy
 msgid "Ascending"
 msgstr "Ascendente"
 
 #: R/areachart.b.R R/linechart.b.R
-#, fuzzy
 msgid "Aug"
 msgstr "Ago"
 
 #: R/areachart.b.R R/linechart.b.R
-#, fuzzy
 msgid "August"
 msgstr "Agosto"
 
@@ -529,7 +509,6 @@ msgstr "Agosto"
 #: raincloud/options/xAxisRangeType/auto.title
 #: scatterplot/options/yAxisRangeType/auto.title
 #: scatterplot/options/xAxisRangeType/auto.title
-#, fuzzy
 msgid "Auto"
 msgstr "Automático"
 
@@ -537,66 +516,54 @@ msgstr "Automático"
 #: histogram/ui[5].label likertplot/ui[6].label linechart/ui[3].label
 #: lollipop/ui[5].label mrcrosstabs/ui[5].label mrfrequencies/ui[5].label
 #: qqplot/ui[5].label raincloud/ui[3].label scatterplot/ui[3].label
-#, fuzzy
 msgid "Axes"
 msgstr "Ejes"
 
 #: corresp/ui[7].label mrfrequencies/ui[6].label
-#, fuzzy
 msgid "Axis Titles"
-msgstr "Títulos de eje"
+msgstr "Títulos de Eje"
 
 #: package/analyses/barplot.title package/analyses/barplot.menuTitle
 #: barplot/options.title barplot/ui.title barplot/results.title
-#, fuzzy
 msgid "Bar Plot"
-msgstr "Gráfico de barras"
+msgstr "Trama de Barra"
 
 #: barplot/options/barType.title barplot/ui[1][1][0].label
 #: mrcrosstabs/options/bartype.title mrcrosstabs/ui[2][0][1][0].label
-#, fuzzy
 msgid "Bar Type"
-msgstr "Tipo de barra"
+msgstr "Tipo de Barra"
 
 #: R/principal.b.R
-#, fuzzy
 msgid "Bartlett's Test of Sphericity"
 msgstr "Prueba de esfericidad de Bartlett"
 
 #: principal/options/rotation/bentlerT.title
-#, fuzzy
 msgid "Bentler T"
 msgstr "Bentler T"
 
 #: R/multcorresp.b.R
-#, fuzzy
 msgid "Benzécri Correction"
 msgstr "Corrección de Benzécri"
 
 #: multcorresp/options/BenzecriAdj.title
-#, fuzzy
 msgid "Benzécri correction"
 msgstr "Corrección de Benzécri"
 
 #: qqplot/options/distrib/beta.title
-#, fuzzy
 msgid "Beta"
 msgstr "Beta"
 
 #: likertplot/options/adjustMethod/BH.title
-#, fuzzy
 msgid "BH"
 msgstr "BH"
 
 #: histogram/ui[3][0][0].label
-#, fuzzy
 msgid "Bin Color"
-msgstr "Color de bin"
+msgstr "Color de Celda"
 
 #: histogram/ui[1][1][0].label
-#, fuzzy
 msgid "Bin Size"
-msgstr "Tamaño de la celda"
+msgstr "Tamaño de Celda"
 
 #: R/multcorresp.b.R corresp/options/showBiPlot.title
 #: corresp/options/biplotTitleText.title
@@ -616,12 +583,10 @@ msgid "Biplot"
 msgstr "Biplot"
 
 #: multcorresp/ui[7][0][1][0].label
-#, fuzzy
 msgid "Biplot Size"
 msgstr "Tamaño de biplot"
 
 #: principal/options/biplotType.title
-#, fuzzy
 msgid "Biplot Type"
 msgstr "Tipo de biplot"
 
@@ -643,7 +608,6 @@ msgstr "Tipo de biplot"
 #: principal/options/labelColor/black.title
 #: principal/options/obsColor/black.title
 #: scatterplot/options/singleColor/black.title
-#, fuzzy
 msgid "Black"
 msgstr "Negro"
 
@@ -655,7 +619,6 @@ msgstr "Negro"
 #: principal/options/varColor/#377EB8.title
 #: principal/options/obsColor/#377EB8.title
 #: scatterplot/options/singleColor/#377EB8.title
-#, fuzzy
 msgid "Blue"
 msgstr "Azul"
 
@@ -671,7 +634,6 @@ msgstr "Azul"
 #: principal/options/colorPalette/BuGn.title
 #: raincloud/options/colorPalette/BuGn.title
 #: scatterplot/options/colorPalette/BuGn.title
-#, fuzzy
 msgid "Blue to Green"
 msgstr "Azul a Verde"
 
@@ -687,9 +649,8 @@ msgstr "Azul a Verde"
 #: principal/options/colorPalette/BuPu.title
 #: raincloud/options/colorPalette/BuPu.title
 #: scatterplot/options/colorPalette/BuPu.title
-#, fuzzy
 msgid "Blue to Purple"
-msgstr "Azul a pùrpura"
+msgstr "Azul a Púrpura"
 
 #: areachart/options/colorPalette/Blues.title
 #: barplot/options/colorPalette/Blues.title
@@ -703,9 +664,8 @@ msgstr "Azul a pùrpura"
 #: principal/options/colorPalette/Blues.title
 #: raincloud/options/colorPalette/Blues.title
 #: scatterplot/options/colorPalette/Blues.title
-#, fuzzy
 msgid "Blues"
-msgstr "Blues"
+msgstr "Azules"
 
 #: areachart/options/titleFontFace/bold.title
 #: areachart/options/subtitleFontFace/bold.title
@@ -755,7 +715,6 @@ msgstr "Blues"
 #: scatterplot/options/titleFontFace/bold.title
 #: scatterplot/options/subtitleFontFace/bold.title
 #: scatterplot/options/captionFontFace/bold.title
-#, fuzzy
 msgid "Bold"
 msgstr "Negrita"
 
@@ -807,24 +766,20 @@ msgstr "Negrita"
 #: scatterplot/options/titleFontFace/bold.italic.title
 #: scatterplot/options/subtitleFontFace/bold.italic.title
 #: scatterplot/options/captionFontFace/bold.italic.title
-#, fuzzy
 msgid "Bold Italic"
 msgstr "Negrita cursiva"
 
 #: likertplot/options/adjustMethod/bonferroni.title
-#, fuzzy
 msgid "Bonferroni"
 msgstr "Bonferroni"
 
 #: qqplot/options/methodQQ/boot.title qqplot/options/methodPP/boot.title
-#, fuzzy
 msgid "Boostrap"
 msgstr "Bootstrap"
 
 #: barplot/options/borderColor.title histogram/options/borderColor.title
 #: mrcrosstabs/options/borderColor.title
 #: mrfrequencies/options/borderColor.title piechart/options/borderColor.title
-#, fuzzy
 msgid "Border"
 msgstr "Borde"
 
@@ -855,26 +810,22 @@ msgstr "Borde"
 #: raincloud/options/yAxisPosition/0.title
 #: scatterplot/options/legendPosition/bottom.title
 #: scatterplot/options/yAxisPosition/0.title
-#, fuzzy
 msgid "Bottom"
 msgstr "Inferior"
 
 #: histogram/options/binBoundary.title
-#, fuzzy
 msgctxt "boundary"
 msgid "Position"
 msgstr "Posición"
 
 #: package/analyses/boxplot.title package/analyses/boxplot.menuTitle
 #: boxplot/options.title boxplot/ui.title boxplot/results.title
-#, fuzzy
 msgid "Box Plot"
-msgstr "Gráfico de caja"
+msgstr "Trama de Caja"
 
 #: boxplot/ui[2][0][1][0].label
-#, fuzzy
 msgid "Boxplot Elements"
-msgstr "Elementos del gráfico de caja"
+msgstr "Elementos del trama de caja"
 
 #: histogram/options/fillColor/#A65628.title
 #: lollipop/options/dotColor/#A65628.title
@@ -882,7 +833,6 @@ msgstr "Elementos del gráfico de caja"
 #: principal/options/varColor/#A65628.title
 #: principal/options/obsColor/#A65628.title
 #: scatterplot/options/singleColor/#A65628.title
-#, fuzzy
 msgid "Brown"
 msgstr "Marrón"
 
@@ -899,30 +849,25 @@ msgstr "Marrón"
 #: principal/options/colorPalette/BrBG.title
 #: raincloud/options/colorPalette/BrBG.title
 #: scatterplot/options/colorPalette/BrBG.title
-#, fuzzy
 msgid "Brown and Green"
 msgstr "Marrón y Verde"
 
 #: R/multcorresp.b.R multcorresp/options/method/Burt.title
 #: multcorresp/ui[3][0][0]/method_burt.label
-#, fuzzy
 msgid "Burt matrix"
 msgstr "Matriz de Burt"
 
 #: likertplot/options/adjustMethod/BY.title
-#, fuzzy
 msgid "BY"
 msgstr "POR"
 
 #: likertplot/options/groupBy/group.title
 #: likertplot/ui[4][0][1][0]/groupBy_group.label
-#, fuzzy
 msgid "By group"
 msgstr "Por grupo"
 
 #: likertplot/options/groupBy/variable.title
 #: likertplot/ui[4][0][1][0]/groupBy_variable.label
-#, fuzzy
 msgid "By variable"
 msgstr "Por variable"
 
@@ -932,9 +877,8 @@ msgstr "Por variable"
 #: mrcrosstabs/ui[7][2].label mrfrequencies/ui[7][2].label
 #: piechart/ui[6][2].label qqplot/ui[7][2].label raincloud/ui[5][2].label
 #: scatterplot/ui[5][2].label
-#, fuzzy
 msgid "Caption"
-msgstr "Leyenda"
+msgstr "Subtítulo"
 
 #: corresp/ui[8][2][1][0].label multcorresp/ui[9][2][1][0].label
 #: principal/ui[6][2][1][0].label
@@ -1561,7 +1505,6 @@ msgid "Donut chart"
 msgstr "Gráfico de donas"
 
 #: lollipop/options/dotColor.title
-#, fuzzy
 msgid "Dot"
 msgstr "Punto"
 
@@ -1927,7 +1870,6 @@ msgstr "Gris"
 #: piechart/options/labels/group.title principal/options/groupVar.title
 #: principal/ui[0][2].label scatterplot/options/group.title
 #: scatterplot/ui[0][2].label
-#, fuzzy
 msgid "Group"
 msgstr "Grupo"
 
@@ -2516,7 +2458,6 @@ msgid "Lémovice"
 msgstr "Lémovice"
 
 #: multcorresp/results/categories.columns.title
-#, fuzzy
 msgid "Level"
 msgstr "Nivel"
 
@@ -2642,9 +2583,8 @@ msgstr "Tamaño de línea"
 
 #: areachart/options/lineWidth.title linechart/options/lineWidth.title
 #: lollipop/options/lineWidth.title
-#, fuzzy
 msgid "Line width"
-msgstr "Anchura de la línea"
+msgstr "Anchura de línea"
 
 #: scatterplot/options/lineMethod/lm.title
 #, fuzzy
@@ -3352,7 +3292,6 @@ msgstr "Los valores de p se ajustan utilizando el método {method}."
 #: principal/options/colorPalette/Paired.title
 #: raincloud/options/colorPalette/Paired.title
 #: scatterplot/options/colorPalette/Paired.title
-#, fuzzy
 msgid "Paired"
 msgstr "Emparejado"
 
@@ -3491,9 +3430,8 @@ msgstr "Rosa y verde"
 
 #: likertplot/ui[4].label likertplot/results/plot.title
 #: mrfrequencies/ui[1][2][0].label
-#, fuzzy
 msgid "Plot"
-msgstr "Gráfico"
+msgstr "Trama"
 
 #: scatterplot/ui[2].label
 #, fuzzy
@@ -3585,9 +3523,8 @@ msgstr "Tipo de trama"
 
 #: corresp/ui[5][1][0].label mrcrosstabs/results/plot.title
 #: multcorresp/ui[5][1][0].label principal/ui[3][1][0].label
-#, fuzzy
 msgid "Plots"
-msgstr "Gráficos"
+msgstr "Tramas"
 
 #: scatterplot/options/pointSize.title
 #, fuzzy
@@ -4235,7 +4172,6 @@ msgid "Sample Quantiles Deviation"
 msgstr "Desviación de cuantiles de muestra"
 
 #: multcorresp/ui[10].label principal/ui[8].label
-#, fuzzy
 msgid "Save"
 msgstr "Guardar"
 
@@ -5080,7 +5016,6 @@ msgstr "Gráfico de variable"
 #: principal/options/vars.title principal/options/showLoadings.title
 #: principal/options/showVarPlot.title principal/options/varLabelSize.title
 #: principal/ui[0][0].label principal/results/loadingTable.title
-#, fuzzy
 msgid "Variables"
 msgstr "Variables"
 
