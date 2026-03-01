@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-02-28 11:21+0000\n"
+"PO-Revision-Date: 2026-03-01 12:09+0000\n"
 "Last-Translator: 陳正昌 <chencc99@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/jamovi/module-vijplots/zh_Hant/>\n"
@@ -31,16 +31,16 @@ msgstr "{rotation} 旋轉被使用。"
 
 #: R/principal.b.R
 msgid "{rotation} rotation with Kaiser normalization"
-msgstr "{rotation} 以Kaiser標準化轉軸"
+msgstr "{rotation} 以 Kaiser 標準化旋轉"
 
 #: R/principal.b.R
 msgid "{rotation} rotation with Kaiser normalization was used."
-msgstr "{rotation}轉軸，使用Kaiser標準化。"
+msgstr "{rotation}旋轉，使用 Kaiser 標準化。"
 
 #: barplot/options/facetNumber.title histogram/options/facetNumber.title
 #: lollipop/options/facetNumber.title piechart/options/facetNumber.title
 msgid "# of rows/columns"
-msgstr "列/行 數"
+msgstr "# 列/行"
 
 #: barplot/options/accuracy.title barplot/ui[2][0][2][0].label
 #: likertplot/options/accuracy.title likertplot/ui[4][0][2][0].label
@@ -48,7 +48,7 @@ msgstr "列/行 數"
 #: mrfrequencies/options/accuracy.title mrfrequencies/ui[2][0][2][0].label
 #: piechart/options/accuracy.title piechart/ui[2][0][2][0].label
 msgid "% Accuracy"
-msgstr "% 準確性"
+msgstr "% 準確度"
 
 #: mrcrosstabs/options/computedValues/options.title
 #: mrcrosstabs/ui[1][1][0]/computedValues_options.label
@@ -71,7 +71,7 @@ msgstr "% 標籤"
 #: mrfrequencies/ui[1][2][0]/yaxis_cases.label
 #: mrfrequencies/results/responses.columns.title
 msgid "% of Cases"
-msgstr "% 個案"
+msgstr "% 案例"
 
 #: R/multcorresp.b.R corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -97,20 +97,32 @@ msgid "% within"
 msgstr "% 組內"
 
 #: likertplot/results/helpMessage.content
-#, fuzzy
 msgid ""
 "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <h2>Likert Plot Help</h2> <h3>Data & Sorting</h3>\n"
 "<ul> <li>Likert variables must be of ordinal measure-type. (Continuous measure-type works as well.)</li> <li>If you plan to compute mean/median/sd or to use comparison tests, they must be of integer data-type.</li> <li><strong>Tidy up levels:</strong> when checked, try to fix the labels order in table and graph (when some variables miss some levels).</li> <li><strong>Convert variables to integer:</strong> when checked, the level labels are ignored and only integer values are used.</li> <li><strong>Sort Variables by Median:</strong> orders the list of Likert variables by median.</li> </ul>\n"
 "<h3>Comparison Tests</h3> When using a group variable, several tests are available: <ul> <li><strong>Mann-Whitney U:</strong> Two group comparison</li> <li><strong>Kruskal-Wallis:</strong> n group comparison</li> <li><strong>Post Hoc Tests:</strong> Dunn, Conover and Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li> </ul>\n"
 "<p>p-Values can be adjusted <strong>groupwise</strong> (for each question) for post hoc tests or <strong>overall</strong> (groupwise and questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF p-values are already adjusted (groupwise); no other adjustment is possible.</p> </div>"
 msgstr ""
-"<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <h2>Likert Plot 帮助</h2> <h3>数据和排序</h3>\n"
-"<ul> <li>Likert 变量必须是有序测量类型。 (连续测量类型也可以。)</li> <li>如果您计划计算均值/中位数/标准差或使用比较测试，则它们必须是整数数据类型。</li> <li><strong>整理级别：</strong> 当选中时，尝试在表格和图表中修复标签顺序（当某些变量缺少某些级别时）。</li> <li><strong>将变量转换为整数：</strong> 当选中时，会忽略级别标签，只使用整数值。</li> <li><strong>按中位数排序变量：</strong> 按中位数顺序排列 Likert 变量列表。</li> </ul>\n"
-"<h3>比较测试</h3> 使用组变量时，有几种测试可用： <ul> <li><strong>Mann-Whitney U：</strong> 两个组的比较</li> <li><strong>Kruskal-Wallis：</strong> n 组比较</li> <li><strong>事后测试：</strong> Dunn、Conover 和 Dwass-Steel-Critchlow-Fligner (DSCF) 成对比较测试。</li> </ul>\n"
-"<p>p 值可以按 <strong>组</strong> （对于每个问题）进行事后测试的调整，或按 <strong>整体</strong> （组和问题）进行 Mann-Whitney U、Kruskal-Wallis 和事后测试的调整。DSCF p 值已经按组调整；不可能进行其他调整。</p> </div>"
+"<style> .block { border: 2px solid gray; border-radius: 15px; background-"
+"color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div "
+"class=\"block\"> <h2>Likert 圖形說明</h2> <h3>資料與排序</h3>\n"
+"<ul> <li>Likert 變項必須為<strong>次序尺度（ordinal）</strong。（連續尺度亦可"
+"使用。）</li><li>若計畫計算平均數／中位數／標準差，或使用比較檢定，資料型態必"
+"須為<strong>整數（integer）</strong>。</li><li><strong>整理水準：</strong>勾"
+"選後，當部分變項缺少某些水準時，會嘗試修正表格與圖形中的標籤順序。</li><li>"
+"<strong>將變項轉為整數：</strong>勾選後，水準標籤將被忽略，僅使用整數數值進行"
+"分析。</li><li><strong>依中位數排序變項：</strong>依各 Likert 變項的中位數對"
+"變項清單進行排序。</li></ul>\n"
+"<h3>比較檢定</h3>當使用分組變項時，可使用下列檢定方法：<ul><li><strong>Mann-"
+"Whitney U：</strong>兩組比較</li><li><strong>Kruskal-Wallis：</strong>多組（"
+"n 組）比較</li><li><strong>事後檢定：</strong>Dunn、Conover，以及 Dwass-"
+"Steel-Critchlow-Fligner（DSCF）成對比較檢定。</li></ul>\n"
+"<p> p 值可針對事後檢定進行<strong>群組內（groupwise）</strong>調整（每一題各"
+"自調整），或針對 Mann-Whitney U、Kruskal-Wallis 及事後檢定進行<strong>整體（"
+"overall）</strong>調整（同時跨群組與跨題目）。DSCF 的 p 值已事先進行群組內調"
+"整，因此無法再進行其他調整。</p></div>"
 
 #: corresp/results/helpMessage.content
-#, fuzzy
 msgid ""
 "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>Correspondence Plot Help</strong></p>\n"
 "<p>This module computes <strong>Correspondence Analysis (CA)</strong> for two categorical variables. Computations are based on <a href = \"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
@@ -120,16 +132,28 @@ msgid ""
 "<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>\n"
 "</div>"
 msgstr ""
-"<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>对应图像帮助</strong></p>\n"
-"<p>此模块计算 <strong>对应分析 (CA)</strong> 二个分类变量。 计算栖为 <a href = \"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">FactoMineR<a/> 包作。</p>\n"
-"<p>数据可以使用 <em>jamovi</em> 内置权重系统 或者使用 「数量」 变量。</p>\n"
-"<p><strong>附加行或列</strong> 号数可以作为数字列表 : 1,3,6</p>\n"
-"<p>在上是最多三种标准。 <ul> <li><strong>主题标准：</strong> 行和列分债分为给一个标准债。</li> <li><strong>简三标准：</strong> 行和列分债分为给一个标准债的二别前债。 </li> <li><strong>行主题标准：</strong> 只有行分债分为给一个标准债。</li> <li><strong>列主题标准：</strong> 只有列分债分为给一个标准债。</li> <li><strong>标准债：</strong> 本消体数据。</li> </ul></p>\n"
-"<p>浏览文件包含在 Open > Data Library > vijPlots > Smoking</p>\n"
+"<style> .block { border: 2px solid gray; border-radius: 15px; background-"
+"color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div "
+"class=\"block\"> <p><strong>對應分析圖形說明（Correspondence Plot Help）</"
+"strong></p>\n"
+"<p>本模組用於針對兩個類別變項進行<strong>對應分析（Correspondence Analysis,CA"
+"）</strong>。計算基於F.Husson、J.Josse、S.Le、J.Mazet所開發之<a "
+"href=\"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">"
+"FactoMineR</a>套件。</p>\n"
+"<p>資料可透過<em>jamovi</em>內建的加權系統進行加權，或使用「Counts」變項作為"
+"權重。</p>\n"
+"<p><strong>補充列或補充欄（Supplementary row or column）</strong>可輸入為整數"
+"清單，例如：1,3,6</p>\n"
+"<p>提供下列正規化方式（在繪圖前對列與欄的座標分數進行尺度轉換）：</p><ul><li>"
+"<strong>Principal：</strong>列與欄的分數以特徵值（eigenvalues）進行尺度化。</"
+"li><li><strong>Symetric：</strong>列與欄的分數以特徵值的平方根進行尺度化。</"
+"li><li><strong>Row Principal：</strong>僅列分數以特徵值進行尺度化。</li><li>"
+"<strong>Column Principal：</strong>僅欄分數以特徵值進行尺度化。</li><li>"
+"<strong>Standard：</strong>未進行正規化，使用原始座標。</li></ul><p>\n"
+"範例資料檔案位於：Open>Data Library>vijPlots>Smoking</p>\n"
 "</div>"
 
 #: multcorresp/results/helpMessage.content
-#, fuzzy
 msgid ""
 "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>Multiple Correspondence Analysis Help</strong></p>\n"
 "<p>This module computes <strong>Multiple Correspondence Analysis (MCA)</strong> for several categorical variables. Computations are based on <a href = \"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
@@ -140,17 +164,29 @@ msgid ""
 "<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>\n"
 "</div>"
 msgstr ""
-"<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>多重對應分析說明</strong></p>\n"
-"<p>此模組計算 <strong>多重對應分析 (MCA)</strong> 的數個分類變數。計算基於 <a href = \"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">FactoMineR<a/> 包由 F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>兩種經典方法都可用： <ul> <li><strong>指標矩陣：</strong> CA 的指標矩陣</li> <li><strong>Burt 矩陣：</strong> CA 的 Burt 矩陣。特徵值是指標矩陣方法的平方。 </li> </ul> </p>\n"
+"<style> .block { border: 2px solid gray; border-radius: 15px; background-"
+"color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div "
+"class=\"block\"> <p><strong>多重對應分析說明</strong></p>\n"
+"<p>此模組計算 <strong>多重對應分析 (MCA)</strong> 的數個分類變數。計算基於 "
+"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> 包由 F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>兩種經典方法都可用： <ul> <li><strong>指標矩陣：</strong> CA 的指標矩陣</"
+"li> <li><strong>Burt 矩陣：</strong> CA 的 Burt 矩陣。特徵值是指標矩陣方法的"
+"平方。 </li> </ul> </p>\n"
 "<p>兩種方法都給出相同的 <em>標準</em> 坐標（但不同 <em>主</em> 坐標）。</p>\n"
-"<p>當選擇時，<strong>Benzécri 和 Greenacre 校正</strong> 只適用於特徵值（<strong>摘要</strong> 表）。類別和觀察的坐標（和慣量）是從 Burt 矩陣的原始特徵值計算得出。</p>\n"
-"<p><strong>標準化</strong> 選項指定坐標的縮放方式（按特徵值）： <ul> <li><strong>主：</strong> 類別和觀察的坐標都進行縮放。</li> <li><strong>類別主：</strong> 只有類別坐標進行縮放。</li> <li><strong>觀察主：</strong> 只有觀察坐標進行縮放。</li> <li><strong>標準：</strong> 類別和觀察的坐標都標準化。</li> </ul></p>\n"
+"<p>當選擇時，<strong>Benzécri 和 Greenacre 校正</strong> 只適用於特徵值"
+"（<strong>摘要</strong> 表）。類別和觀察的坐標（和慣量）是從 Burt 矩陣的原始"
+"特徵值計算得出。</p>\n"
+"<p><strong>標準化</strong> 選項指定坐標的縮放方式（按特徵值）： <ul> <li>"
+"<strong>主：</strong> 類別和觀察的坐標都進行縮放。</li> <li><strong>類別主"
+"：</strong> 只有類別坐標進行縮放。</li> <li><strong>觀察主：</strong> 只有觀"
+"察坐標進行縮放。</li> <li><strong>標準：</strong> 類別和觀察的坐標都標準化"
+"。</li> </ul></p>\n"
 "<p>示範檔案包含在 Open > Data Library > vijPlots > Cars</p>\n"
 "</div>"
 
 #: mrcrosstabs/results/helpMessage.content
-#, fuzzy
 msgid ""
 "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>Multiple Response Crosstab Help</strong></p>\n"
 "<p>This module computes crosstab frequencies for multiple response questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
@@ -158,14 +194,20 @@ msgid ""
 "<p>A sample file is included at Open > Data Library > vijPlots > Credit Cards</p>\n"
 "</div>"
 msgstr ""
-"<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>多一回应答表帮助</strong></p>\n"
-"<p>此模块计算 多一回应答表高量。</p>\n"
-"<p>问题可以编码为 : <ul> <li>多个 <strong>棒字 (or 指示) 变量</strong> 使用 0/1 或 1/2 以为每个可能答结。</li> <li>一个 <strong>多债变量</strong> 包含选中答结。</li> </ul></p>\n"
-"<p>浏览文件包含在 Open > Data Library > vijPlots > Credit Cards</p>\n"
+"<style> .block { border: 2px solid gray; border-radius: 15px; background-"
+"color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div "
+"class=\"block\"> <p><strong>多重反應交叉表說明（Multiple Response Crosstab "
+"Help）</strong></p>\n"
+"<p>本模組用於計算多重反應題目的交叉表次數分配，此類題目亦稱為「複選題」或「全"
+"選適用（Check All That Apply,CATA）」題型。</p>\n"
+"<p>題目可採以下方式編碼：</p><ul><li>使用多個<strong>虛擬變項（dummy或"
+"indicator variables）</strong>，每一可能選項各一個變項，數值可為0/1或1/2</li>"
+"<li>使用單一<strong>多值變項（multi-valued variable）</strong>，將所勾選的答"
+"案以符號分隔（通常為「,」或「;」）</li></ul><p>\n"
+"範例資料檔案位於：Open > Data Library > vijPlots > Credit Cards</p>\n"
 "</div>"
 
 #: mrfrequencies/results/helpMessage.content
-#, fuzzy
 msgid ""
 "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>Multiple Response Frequencies Help</strong></p>\n"
 "<p>This module computes frequencies for multiple response questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
@@ -173,13 +215,20 @@ msgid ""
 "<p>A sample file is included at Open > Data Library > vijPlots > Credit Cards</p>\n"
 "</div>"
 msgstr ""
-"<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>多选项流行债分为帮助</strong></p>\n"
-"<p>此模式计算多选项题的债分为。一个例子文件已在 Open > 数据库徵 > vijPlots > 修改卡中</p>\n"
-"<p>问题可以被编码为 : <ul> <li>多个当为代表受信感。</li> <li>一个多债序受信感。</li> </ul></p>\n"
+"<style> .block { border: 2px solid gray; border-radius: 15px; background-"
+"color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div "
+"class=\"block\"> <p><strong>多重反應次數分配說明（Multiple Response "
+"Frequencies Help）</strong></p>\n"
+"<p>本模組用於計算多重反應題目的次數分配，此類題目亦稱為「複選題」或「全選適用"
+"（Check All That Apply,CATA）」題型。</p>\n"
+"<p>題目可採以下方式編碼：</p><ul><li>使用多個<strong>虛擬變項（dummy或"
+"indicator variables）</strong>，每一可能選項各一個變項，數值可為0/1或1/2</li>"
+"<li>使用單一<strong>多值變項（multi-valued variable）</strong>，將所勾選的答"
+"案以符號分隔（通常為「,」或「;」）</li></ul><p>\n"
+"範例資料檔案位於：Open > Data Library > vijPlots > Credit Cards</p>\n"
 "</div>"
 
 #: principal/results/helpMessage.content
-#, fuzzy
 msgid ""
 "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>Principal Component Analysis Help</strong></p>\n"
 "<p>This module computes <strong>Principal Component Analysis (PCA)</strong> for several continuous variables. Computations are based on <tt>stats::prcomp</tt> function.</p>\n"
@@ -190,17 +239,30 @@ msgid ""
 "<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>\n"
 "</div>"
 msgstr ""
-"<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>主行编角帮助</strong></p>\n"
-"<p>此模块计筗主行编角器片 (〈PCA〉) 与多个纯纯发量。 计筗为于 <tt>stats::prcomp</tt> 函数。</p>\n"
-"<p>能一起行编角对象不是主行编角。 不过对于象都使用。 只有横行编角 (之于 GPArotation 包。)</p>\n"
-"<p>负載 (发量当鷴) 和 警告 (目录当鷴) 都为主行编角 (分为二並平均债)。\n"
-"<p>Biplots 以为 “Biplots in Practice” [Michael Greenacre, 2010]: <ul> <li><strong>形成 biplot:</strong> 警告为主行 (分为二並平均债) 和 负載为标准。</li> <li><strong>对续 biplot:</strong> 负載为主行 和 警告为标准 。 </li> </ul></p>\n"
-"<p><strong>高级选项</strong>: <ul> <li><strong>标准负載:</strong> 负載为标准化于一 (及于二並平均债)</li> <li><strong>标准警告:</strong> 警告为标准化于一 (及于二並平均债)</li> <li><strong>改量谁組:</strong> 改量 (比如 varimax) 被用于谁組 (标准负載) 。</li> </ul> </p>\n"
-"<p>测试文件可以在 Open > 数据库弹 > vijPlots > Iris</p>\n"
+"<style>.block{border:2px solid gray;border-radius:15px;background-"
+"color:WhiteSmoke;padding:0px 20px;text-align:justify;}</style><div "
+"class=\"block\"><p><strong>主成分分析說明（Principal Component Analysis Help"
+"）</strong></p>\n"
+"<p>本模組用於對多個連續變項進行<strong>主成分分析（Principal Component "
+"Analysis, PCA）</strong>，計算基於<tt>stats::prcomp</tt>函數。</p>\n"
+"<p>雖然旋轉後的成分並非真正的主成分，但廣泛應用。僅提供正交旋轉（orthogonal "
+"rotation，使用GPArotation套件）。</p>\n"
+"<p>載入矩陣（loadings, 變項座標）與得分（scores, 觀測值座標）皆為主成分座標（"
+"以特徵值平方根縮放）。</p>\n"
+"<p>Biplot 依據 \"Biplots in Practice\" [Michael Greenacre, 2010]：</p><ul>"
+"<li><strong>Form biplot：</strong>得分為主成分（以特徵值縮放），載入矩陣為標"
+"準化座標。</li><li><strong>Covariance biplot：</strong>載入矩陣為主成分，得分"
+"為標準化座標。</li></ul><p>\n"
+"<strong>進階選項：</strong></p><ul><li><strong>標準化載入矩陣（Standardize "
+"loadings）：</strong>載入矩陣正規化，使平方和等於1（取代以特徵值縮放）。</li>"
+"<li><strong>標準化得分（Standardize scores）：</strong>得分正規化，使變異數等"
+"於1（取代以特徵值縮放）。</li><li><strong>旋轉特徵向量（Rotate eigenvectors）"
+"：</strong>將旋轉（varimax等）應用於特徵向量（標準載入矩陣），而非主成分載入"
+"矩陣（Stata 方式）。</li></ul><p>\n"
+"範例資料檔案位於：Open>Data Library>vijPlots>Iris</p>\n"
 "</div>"
 
 #: qqplot/results/helpMessage.content
-#, fuzzy
 msgid ""
 "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>QQ & PP Plots Help</strong></p>\n"
 "<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and Heike Hofmann. In-depth information can be found in the package documentation on CRAN site.</p>\n"
@@ -210,12 +272,36 @@ msgid ""
 "<p><strong>Parameter values:</strong> The distribution parameters can be estimated from data using <ul> <li><strong>Maximum Likelihood Method</strong> (using MASS package) : it should work with all distributions but \"t\" and \"uniform\";</li> <li><strong>Method of Moments</strong> for moment based parameters : it should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", \"Gamma\", \"Logistic\", \"Uniform\";</li> </ul> or entered by user: <ul> <li><strong>Parameter 1:</strong> : mean (Normal), meanlog (Log-normal), shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 (F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li> <li><strong>Parameter 2:</strong> : sd (normal), sdlog (Log-normal), shape2 (Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max (Uniform).</li> </ul> </p>\n"
 "</div>"
 msgstr ""
-"<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>QQ & PP 圖表說明</strong></p>\n"
-"<p>此模組使用 <a href = \"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R 套件<a/> 由 Alexandre Almeida, Adam Loy 和 Heike Hofmann 開發。詳細資訊可在 CRAN 網站的套件文件中找到。</p>\n"
-"<p><strong>參考線:</strong> 繪製 <em>身份線</em> (y = x) 或常用的 <em>Q-Q 線</em>，該線截斷兩個數據量級 (Q<sub>0.25</sub> 和 Q<sub>0.75</sub>)。P-P 圖表僅支援身份線。</p>\n"
-"<p><strong>信賴帶:</strong> 繪製參考線周圍的信賴帶。qqplotr 套件提供多種方法計算信賴帶：<ul> <li><strong><em>點對點</em></strong> 基於 Normal 信賴區間構建點對點信賴帶；</li> <li><strong><em>自舉法</em></strong> 基於參數自舉法構建點對點信賴帶；</li> <li><strong><em>Kolmogorov-Smirnov</em></strong> 帶基於 Kolmogorov-Smirnov 測試；</li> <li><strong><em>尾敏感</em></strong> 構建尾敏感信賴帶，但僅實現於 Normal Q-Q 圖表；</li> <li><strong><em>等局部水平 (ELL)</em></strong> 構建同時帶使用等局部水平。</li> </ul> P-P 圖表僅支援 \"ELL\" 和 \"自舉法\" 方法。 </p>\n"
-"<p><strong>去趨勢圖:</strong> 物體根據參考線 <em>去趨勢</em>。此程序可能有助於減少由點到參考線的正交距離引起的視覺偏差。 </p>\n"
-"<p><strong>參數值:</strong> 分佈參數可以使用 <ul> <li><strong>最大似然法</strong> (使用 MASS 套件)：它應該適用於所有分佈，但 \"t\" 和 \"uniform\"；</li> <li><strong>矩法</strong> 進行基於矩的參數：它應該適用於 \"normal\"、\"log-normal\"、\"Beta\"、\"Exponential\"、\"Gamma\"、\"Logistic\" 和 \"Uniform\"；</li> </ul> 或由用戶輸入：<ul> <li><strong>參數 1:</strong>：均值 (Normal)、均值對數 (Log-normal)、形狀 1 (Beta)、位置 (Cauchy、Logistic)、自由度 (Chi-squared、Student)、自由度 1 (F)、速率 (Exponential)、形狀 (Gamma、Weibull) 和最小值 (Uniform)；</li> <li><strong>參數 2:</strong>：標準差 (normal)、標準差對數 (Log-normal)、形狀 2 (Beta)、尺度 (Cauchy、Logistic)、自由度 2 (F)、速率 (Gamma、Weibull) 和最大值 (Uniform)。</li> </ul> </p>\n"
+"<style> .block { border: 2px solid gray; border-radius: 15px; background-"
+"color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div "
+"class=\"block\"> <p><strong>QQ & PP 圖表說明</strong></p>\n"
+"<p>此模組使用 <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
+"target=\"_blank\">qqplotr R 套件<a/> 由 Alexandre Almeida, Adam Loy 和 Heike "
+"Hofmann 開發。詳細資訊可在 CRAN 網站的套件文件中找到。</p>\n"
+"<p><strong>參考線:</strong> 繪製 <em>身份線</em> (y = x) 或常用的 <em>Q-Q "
+"線</em>，該線截斷兩個數據量級 (Q<sub>0.25</sub> 和 Q<sub>0.75</sub>)。P-P 圖"
+"表僅支援身份線。</p>\n"
+"<p><strong>信賴帶:</strong> 繪製參考線周圍的信賴帶。qqplotr 套件提供多種方法"
+"計算信賴帶：<ul> <li><strong><em>點對點</em></strong> 基於 Normal 信賴區間構"
+"建點對點信賴帶；</li> <li><strong><em>自舉法</em></strong> 基於參數自舉法構建"
+"點對點信賴帶；</li> <li><strong><em>Kolmogorov-Smirnov</em></strong> 帶基於 "
+"Kolmogorov-Smirnov 測試；</li> <li><strong><em>尾敏感</em></strong> 構建尾敏"
+"感信賴帶，但僅實現於 Normal Q-Q 圖表；</li> <li><strong><em>等局部水平 (ELL)"
+"</em></strong> 構建同時帶使用等局部水平。</li> </ul> P-P 圖表僅支援 \"ELL\" "
+"和 \"自舉法\" 方法。 </p>\n"
+"<p><strong>去趨勢圖:</strong> 物體根據參考線 <em>去趨勢</em>。此程序可能有助"
+"於減少由點到參考線的正交距離引起的視覺偏差。 </p>\n"
+"<p><strong>參數值:</strong> 分佈參數可以使用 <ul> <li><strong>最大似然法</"
+"strong> (使用 MASS 套件)：它應該適用於所有分佈，但 \"t\" 和 \"uniform\"；</"
+"li> <li><strong>矩法</strong> 進行基於矩的參數：它應該適用於 "
+"\"normal\"、\"log-"
+"normal\"、\"Beta\"、\"Exponential\"、\"Gamma\"、\"Logistic\" 和 "
+"\"Uniform\"；</li> </ul> 或由用戶輸入：<ul> <li><strong>參數 1:</strong>：均"
+"值 (Normal)、均值對數 (Log-normal)、形狀 1 (Beta)、位置 (Cauchy、Logistic)、"
+"自由度 (Chi-squared、Student)、自由度 1 (F)、速率 (Exponential)、形狀 (Gamma"
+"、Weibull) 和最小值 (Uniform)；</li> <li><strong>參數 2:</strong>：標準差 "
+"(normal)、標準差對數 (Log-normal)、形狀 2 (Beta)、尺度 (Cauchy、Logistic)、自"
+"由度 2 (F)、速率 (Gamma、Weibull) 和最大值 (Uniform)。</li> </ul> </p>\n"
 "</div>"
 
 #: areachart/options/dateBreak/1 day.title linechart/options/dateBreak/1
@@ -404,7 +490,7 @@ msgstr "對齊"
 
 #: raincloud/options/alphaC.title
 msgid "Alpha"
-msgstr ""
+msgstr "Alpha"
 
 #: R/areachart.b.R R/linechart.b.R
 msgid "Apr"
@@ -844,7 +930,6 @@ msgid "Caption Text"
 msgstr "標題文字"
 
 #: package/datasets/Cars.name
-#, fuzzy
 msgid "Cars"
 msgstr "車"
 
@@ -896,7 +981,7 @@ msgstr "類別摘要"
 
 #: qqplot/options/distrib/cauchy.title
 msgid "Cauchy"
-msgstr ""
+msgstr "Cauchy"
 
 #: areachart/options/titleAlign/0.5.title
 #: areachart/options/subtitleAlign/0.5.title
@@ -1089,7 +1174,6 @@ msgstr "連接順序類別"
 
 #: likertplot/options/postHoc/conover.title
 #: likertplot/ui[3][0][1][0]/postHoc_conover.label
-#, fuzzy
 msgid "Conover"
 msgstr "Conover"
 
@@ -1115,7 +1199,7 @@ msgstr "列聯表"
 #: qqplot/options.menuSubgroup raincloud/options.menuSubgroup
 #: scatterplot/options.menuSubgroup
 msgid "Continuous"
-msgstr "連續型"
+msgstr "連續"
 
 #: R/multcorresp.b.R
 msgid "Contributions"
@@ -1135,7 +1219,6 @@ msgid "Correspondence Analysis"
 msgstr "對應分析"
 
 #: R/multcorresp.b.R
-#, fuzzy
 msgid "COS2"
 msgstr "COS2"
 
@@ -1193,7 +1276,7 @@ msgstr "交叉表 (列百分比)"
 
 #: R/mrcrosstabs.b.R
 msgid "Crosstab (% of Cases)"
-msgstr "交叉表 (個數百分比)"
+msgstr "交叉表 (個案的百分比)"
 
 #: R/mrcrosstabs.b.R
 msgid "Crosstab (% of Responses)"
@@ -1217,9 +1300,8 @@ msgstr "累積百分比"
 #: principal/options/colorPalette/Dark2.title
 #: raincloud/options/colorPalette/Dark2.title
 #: scatterplot/options/colorPalette/Dark2.title
-#, fuzzy
 msgid "Dark 2"
-msgstr "Dark 2"
+msgstr "暗色系2"
 
 #: multcorresp/options/obsColor/darkgray.title
 msgid "Dark Gray"
@@ -1330,7 +1412,6 @@ msgid "Dichromat:Categorical"
 msgstr "Dichromat:分類"
 
 #: R/multcorresp.b.R R/principal.b.R
-#, fuzzy
 msgid "Dim"
 msgstr "Dim"
 
@@ -1438,7 +1519,6 @@ msgid "Equal Local Levels"
 msgstr "相等局部水準"
 
 #: principal/options/rotation/equamax.title
-#, fuzzy
 msgid "Equamax"
 msgstr "Equamax"
 
@@ -1765,7 +1845,7 @@ msgstr "直方圖"
 
 #: likertplot/options/adjustMethod/hochberg.title
 msgid "Hochberg"
-msgstr ""
+msgstr "Hochberg"
 
 #: likertplot/options/adjustMethod/holm.title
 msgid "Holm"
@@ -1991,7 +2071,7 @@ msgstr "六月"
 
 #: principal/options/kaiser.title
 msgid "Kaiser normalization"
-msgstr "Kaiser 正規化"
+msgstr "Kaiser 標準化"
 
 #: R/principal.b.R
 msgid "Kaiser-Meyer-Olkin Measure of Sampling Adequacy (MSA)"
@@ -2567,7 +2647,7 @@ msgstr "多重回應交叉表"
 
 #: mrfrequencies/ui.title mrfrequencies/results.title
 msgid "Multiple Response Frequencies"
-msgstr "多重回應次數"
+msgstr "多重回應頻率"
 
 #: mrcrosstabs/options/repVar.title mrfrequencies/options/repVar.title
 msgid "Multiple Value Variable"
@@ -2697,16 +2777,16 @@ msgstr "微調箱形圖"
 
 #: R/mrcrosstabs.b.R mrcrosstabs/options/showNbOfCases.title
 msgid "Number of cases"
-msgstr "觀察值個數"
+msgstr "案例個數"
 
 #: R/mrfrequencies.b.R
 msgid "Number of cases:"
-msgstr "觀察值個數："
+msgstr "案例個數："
 
 #: corresp/options/dimNum.title multcorresp/options/dimNum.title
 #: principal/options/dimNum.title
 msgid "Number of dimensions"
-msgstr "維度數目"
+msgstr "維度個數"
 
 #: multcorresp/options/obsColor.title
 msgid "Obs color"
@@ -2719,7 +2799,7 @@ msgstr "觀察座標"
 #: R/multcorresp.b.R R/principal.b.R multcorresp/results/obsplot.title
 #: principal/results/obsPlot.title
 msgid "Observation Plot"
-msgstr "觀察圖"
+msgstr "觀察值圖"
 
 #: multcorresp/options/obsTitleText.title
 #: multcorresp/options/obsSubtitleText.title
@@ -2770,7 +2850,7 @@ msgstr "2035 年 10 月"
 #: areachart/options/displayFormat/%b %y.title
 #: linechart/options/displayFormat/%b %y.title
 msgid "Oct 35"
-msgstr ""
+msgstr "Oct 35"
 
 #: R/areachart.b.R R/linechart.b.R
 msgid "October"
@@ -3771,7 +3851,7 @@ msgstr "九月"
 #: raincloud/options/colorPalette/Set1.title
 #: scatterplot/options/colorPalette/Set1.title
 msgid "Set 1"
-msgstr ""
+msgstr "第1組"
 
 #: areachart/options/colorPalette/Set2.title
 #: barplot/options/colorPalette/Set2.title
@@ -3786,7 +3866,7 @@ msgstr ""
 #: raincloud/options/colorPalette/Set2.title
 #: scatterplot/options/colorPalette/Set2.title
 msgid "Set 2"
-msgstr ""
+msgstr "第2組"
 
 #: areachart/options/colorPalette/Set3.title
 #: barplot/options/colorPalette/Set3.title
@@ -3801,7 +3881,7 @@ msgstr ""
 #: raincloud/options/colorPalette/Set3.title
 #: scatterplot/options/colorPalette/Set3.title
 msgid "Set 3"
-msgstr ""
+msgstr "第3組"
 
 #: areachart/options/mode/severalVariables.title
 msgid "Several variables"
@@ -4171,7 +4251,6 @@ msgid "Theoretical Quantiles"
 msgstr "理論分位數"
 
 #: likertplot/options/tidyUp.title
-#, fuzzy
 msgid "Tidy up levels"
 msgstr "整理等級"
 
@@ -4187,7 +4266,6 @@ msgstr "整理等級"
 #: principal/options/colorPalette/tidy::alger.title
 #: raincloud/options/colorPalette/tidy::alger.title
 #: scatterplot/options/colorPalette/tidy::alger.title
-#, fuzzy
 msgid "Tidy:Alger"
 msgstr "Tidy:Alger"
 
@@ -4203,7 +4281,6 @@ msgstr "Tidy:Alger"
 #: principal/options/colorPalette/tidy::apple.title
 #: raincloud/options/colorPalette/tidy::apple.title
 #: scatterplot/options/colorPalette/tidy::apple.title
-#, fuzzy
 msgid "Tidy:Apple"
 msgstr "Tidy:Apple"
 
@@ -4220,7 +4297,7 @@ msgstr "Tidy:Apple"
 #: raincloud/options/colorPalette/tidy::candy.title
 #: scatterplot/options/colorPalette/tidy::candy.title
 msgid "Tidy:Candy"
-msgstr ""
+msgstr "Tidy:Candy"
 
 #: areachart/options/colorPalette/tidy::friendly.title
 #: barplot/options/colorPalette/tidy::friendly.title
@@ -4234,7 +4311,6 @@ msgstr ""
 #: principal/options/colorPalette/tidy::friendly.title
 #: raincloud/options/colorPalette/tidy::friendly.title
 #: scatterplot/options/colorPalette/tidy::friendly.title
-#, fuzzy
 msgid "Tidy:Friendly"
 msgstr "Tidy:Friendly"
 
@@ -4250,7 +4326,6 @@ msgstr "Tidy:Friendly"
 #: principal/options/colorPalette/tidy::ibm.title
 #: raincloud/options/colorPalette/tidy::ibm.title
 #: scatterplot/options/colorPalette/tidy::ibm.title
-#, fuzzy
 msgid "Tidy:Ibm"
 msgstr "Tidy:Ibm"
 
@@ -4266,7 +4341,6 @@ msgstr "Tidy:Ibm"
 #: principal/options/colorPalette/tidy::metro.title
 #: raincloud/options/colorPalette/tidy::metro.title
 #: scatterplot/options/colorPalette/tidy::metro.title
-#, fuzzy
 msgid "Tidy:Metro"
 msgstr "Tidy:Metro"
 
@@ -4283,7 +4357,7 @@ msgstr "Tidy:Metro"
 #: raincloud/options/colorPalette/tidy::rainbow.title
 #: scatterplot/options/colorPalette/tidy::rainbow.title
 msgid "Tidy:Rainbow"
-msgstr ""
+msgstr "Tidy:Rainbow"
 
 #: areachart/options/colorPalette/tidy::seaside.title
 #: barplot/options/colorPalette/tidy::seaside.title
@@ -4297,7 +4371,6 @@ msgstr ""
 #: principal/options/colorPalette/tidy::seaside.title
 #: raincloud/options/colorPalette/tidy::seaside.title
 #: scatterplot/options/colorPalette/tidy::seaside.title
-#, fuzzy
 msgid "Tidy:Seaside"
 msgstr "Tidy:Seaside"
 
@@ -4401,7 +4474,7 @@ msgstr "使用顏色編號"
 
 #: histogram/options/usePalette.title
 msgid "Use Palette"
-msgstr "使用調色板"
+msgstr "使用調色盤"
 
 #: boxplot/options/singleColor.title raincloud/options/singleColor.title
 msgid "Use the same color for variables"
@@ -4430,7 +4503,6 @@ msgstr "變項"
 
 #: multcorresp/options/showDiscriminations.title
 #: multcorresp/options/showDiscriminationPlot.title
-#, fuzzy
 msgid "Variable dicriminations"
 msgstr "變數判別"
 
@@ -4460,7 +4532,6 @@ msgid "Variables"
 msgstr "變項"
 
 #: principal/options/rotation/Varimax.title
-#, fuzzy
 msgid "Varimax"
 msgstr "Varimax"
 
@@ -4490,7 +4561,6 @@ msgstr "垂直線位於"
 #: piechart/options.menuGroup principal/options.menuGroup
 #: qqplot/options.menuGroup raincloud/options.menuGroup
 #: scatterplot/options.menuGroup
-#, fuzzy
 msgid "vijPlots"
 msgstr "vijPlots"
 
@@ -4510,7 +4580,6 @@ msgstr "vijPlots：另一個 jamovi 繪圖模組"
 #: principal/options/colorPalette/viridis::inferno.title
 #: raincloud/options/colorPalette/viridis::inferno.title
 #: scatterplot/options/colorPalette/viridis::inferno.title
-#, fuzzy
 msgid "Viridis:Inferno"
 msgstr "Viridis:Inferno"
 
@@ -4526,7 +4595,6 @@ msgstr "Viridis:Inferno"
 #: principal/options/colorPalette/viridis::magma.title
 #: raincloud/options/colorPalette/viridis::magma.title
 #: scatterplot/options/colorPalette/viridis::magma.title
-#, fuzzy
 msgid "Viridis:Magma"
 msgstr "Viridis:Magma"
 
@@ -4542,7 +4610,6 @@ msgstr "Viridis:Magma"
 #: principal/options/colorPalette/viridis::plasma.title
 #: raincloud/options/colorPalette/viridis::plasma.title
 #: scatterplot/options/colorPalette/viridis::plasma.title
-#, fuzzy
 msgid "Viridis:Plasma"
 msgstr "Viridis:Plasma"
 
@@ -4558,7 +4625,6 @@ msgstr "Viridis:Plasma"
 #: principal/options/colorPalette/viridis::turbo.title
 #: raincloud/options/colorPalette/viridis::turbo.title
 #: scatterplot/options/colorPalette/viridis::turbo.title
-#, fuzzy
 msgid "Viridis:Turbo"
 msgstr "Viridis:Turbo"
 
@@ -4578,7 +4644,6 @@ msgid "Viridis:Viridis"
 msgstr "Viridis:Viridis"
 
 #: qqplot/options/distrib/weibull.title
-#, fuzzy
 msgid "Weibull"
 msgstr "Weibull"
 
