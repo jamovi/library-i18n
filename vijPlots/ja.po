@@ -3,8 +3,8 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-02-28 11:21+0000\n"
 "Last-Translator: SHIBATA Seiji <contact@sbtseiji.net>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/jamovi/module-"
-"vijplots/ja/>\n"
+"Language-Team: Japanese "
+"<https://hosted.weblate.org/projects/jamovi/module-vijplots/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -15,10 +15,6 @@ msgstr ""
 #: R/qqplot.b.R
 msgid "{distribStr} {typeStr} Plot of {varStr}"
 msgstr "{distribStr} {typeStr} {varStr}のプロット"
-
-#: R/corresp.b.R
-msgid "{normalization} Normalization"
-msgstr "{normalization}正規化"
 
 #: R/principal.b.R
 msgid "{rotation} rotation"
@@ -37,9 +33,11 @@ msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "カイザー正規化を伴う{rotation}回転が用いられました。"
 
 #: barplot/options/facetNumber.title
+#: boxplot/options/facetNumber.title
 #: histogram/options/facetNumber.title
 #: lollipop/options/facetNumber.title
 #: piechart/options/facetNumber.title
+#: scatterplot/options/facetNumber.title
 msgid "# of rows/columns"
 msgstr "行/列数"
 
@@ -56,11 +54,6 @@ msgstr "行/列数"
 msgid "% Accuracy"
 msgstr "%精度"
 
-#: mrcrosstabs/options/computedValues/options.title
-#: mrcrosstabs/ui[1][1][0]/computedValues_options.label
-msgid "% by Row"
-msgstr "行%"
-
 #: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
 msgid "% Inertia"
@@ -72,11 +65,6 @@ msgstr "%ラベル"
 
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
-#: mrcrosstabs/options/computedValues/cases.title
-#: mrcrosstabs/ui[1][1][0]/computedValues_cases.label
-#: mrfrequencies/options/showCases.title
-#: mrfrequencies/options/yaxis/cases.title
-#: mrfrequencies/ui[1][2][0]/yaxis_cases.label
 #: mrfrequencies/results/responses.columns.title
 msgid "% of Cases"
 msgstr "ケース%"
@@ -89,11 +77,6 @@ msgstr "慣性%"
 
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
-#: mrcrosstabs/options/computedValues/responses.title
-#: mrcrosstabs/ui[1][1][0]/computedValues_responses.label
-#: mrfrequencies/options/showResponses.title
-#: mrfrequencies/options/yaxis/responses.title
-#: mrfrequencies/ui[1][2][0]/yaxis_responses.label
 #: mrfrequencies/results/responses.columns.title
 msgid "% of Responses"
 msgstr "回答%"
@@ -106,130 +89,28 @@ msgstr "分散%"
 msgid "% within"
 msgstr "内部%"
 
-#: likertplot/results/helpMessage.content
-msgid "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <h2>Likert Plot Help</h2> <h3>Data & Sorting</h3>\n"
-"<ul> <li>Likert variables must be of ordinal measure-type. (Continuous measure-type works as well.)</li> <li>If you plan to compute mean/median/sd or to use comparison tests, they must be of integer data-type.</li> <li><strong>Tidy up levels:</strong> when checked, try to fix the labels order in table and graph (when some variables miss some levels).</li> <li><strong>Convert variables to integer:</strong> when checked, the level labels are ignored and only integer values are used.</li> <li><strong>Sort Variables by Median:</strong> orders the list of Likert variables by median.</li> </ul>\n"
-"<h3>Comparison Tests</h3> When using a group variable, several tests are available: <ul> <li><strong>Mann-Whitney U:</strong> Two group comparison</li> <li><strong>Kruskal-Wallis:</strong> n group comparison</li> <li><strong>Post Hoc Tests:</strong> Dunn, Conover and Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li> </ul>\n"
-"<p>p-Values can be adjusted <strong>groupwise</strong> (for each question) for post hoc tests or <strong>overall</strong> (groupwise and questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF p-values are already adjusted (groupwise); no other adjustment is possible.</p> </div>"
-msgstr "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <h2>リッカートプロットのヘルプ</h2> <h3>データと並べ替え</h3>\n"
-"<ul> <li>リッカート変数は順序尺度変数または連続尺度変数でなくてはなりません。</li> <li>平均値・中央値・標準偏差を算出したり、比較検定を行う場合は、整数型データである必要があります。</li> <li><strong>水準を整理</strong>にチェックを入れると、一部の変数で特定の水準が欠けている場合に、表やグラフのラベル順を調整します。</li> <li><strong>変数を整数に変換</strong>にチェックを入れると、水準ラベルを無視し、整数値のみを使用します。</li> <li><strong>中央値で並べ替え</strong>は、リッカート変数の一覧を中央値の順に並べ替えます。</li> </ul>\n"
-"<h3>比較検定</h3> 群変数を使用する場合、次の検定を利用できます。 <ul> <li><strong>マン・ホイットニーのU：</strong> 2群の比較</li> <li><strong>クラスカル・ウォリス：</strong> 多群の比較</li> <li><strong>事後検定：</strong> ダン、コノバー、DSCFによる多重比較</li> </ul>\n"
-"<p>p値は、事後検定では<strong>グループ単位</strong>（各設問ごと）、または<strong>全体</strong>（グループおよび設問単位）で調整できます。DSCFのp値はすでにグループ単位で調整されており、その他の方法による追加調整はできません。</p> </div>"
-
-#: corresp/results/helpMessage.content
-msgid "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>Correspondence Plot Help</strong></p>\n"
-"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for two categorical variables. Computations are based on <a href = \"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data may be weighted using <em>jamovi</em> built-in weight system or using the \"Counts\" variable.</p>\n"
-"<p><strong>Supplementary row or column</strong> numbers may be entered as integer lists : 1,3,6</p>\n"
-"<p>Four normalizations (scaling of row and column scores before plotting) are avalaible : <ul> <li><strong>Principal:</strong> Row an columns scores are scaled by eigenvalues.</li> <li><strong>Symetric:</strong> Row an columns scores are scaled by the square root of eigenvalues. </li> <li><strong>Row Principal:</strong> Only row scores are scaled by eigenvalues.</li> <li><strong>Column Principal:</strong> Only column scores are scaled by eigenvalues.</li> <li><strong>Standard:</strong> The raw coordinates without normalization.</li> </ul></p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>\n"
-"</div>"
-msgstr "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>対応分析プロットのヘルプ</strong></p>\n"
-"<p>本モジュールは、2つのカテゴリ変数に対する<strong>対応分析（CA）</strong>を実行します。計算には、F.&nbsp;Husson、J.&nbsp;Josse、S.&nbsp;Le、J.&nbsp;Mazet による <a href = \"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">FactoMineR<a/> パッケージを使用しています。</p>\n"
-"<p>データは、<em>jamovi</em> の組み込みウェイト機能または「度数」変数を用いて重みづけできます。</p>\n"
-"<p><strong>補助行または補助列</strong>は、整数のリスト（例：1,3,6）で指定できます。</p>\n"
-"<p>プロット前に行得点および列得点をどのようにスケーリングするかを選択できます。利用可能な正規化（スケーリング）は次のとおりです： <ul> <li><strong>主成分：</strong> 行得点と列得点を固有値でスケーリングします。</li> <li><strong>対称：</strong> 行得点と列得点を固有値の平方根でスケーリングします。</li> <li><strong>行主成分：</strong> 行得点のみを固有値でスケーリングします。</li> <li><strong>列主成分：</strong> 列得点のみを固有値でスケーリングします。</li> <li><strong>標準：</strong> 正規化を行わず、生の座標を使用します。</li> </ul></p>\n"
-"<p>サンプルデータは Open > Data Library > vijPlots > Smoking に含まれています。</p>\n"
-"</div>"
-
-#: multcorresp/results/helpMessage.content
-msgid "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>Multiple Correspondence Analysis Help</strong></p>\n"
-"<p>This module computes <strong>Multiple Correspondence Analysis (MCA)</strong> for several categorical variables. Computations are based on <a href = \"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Both classic methods are available: <ul> <li><strong>Indicator matrix:</strong> CA of the indicator matrix</li> <li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues are the squares of those of the indicator matrix method. </li> </ul> </p>\n"
-"<p>Both methods give the same <em>standard</em> coordinates (but different <em>principal</em> coordinates).</p>\n"
-"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are applied to eigenvalues only (<strong>Summary</strong> table). Coordinates (and inertia) of categories and observations are computed from the original eigenvalues of the Burt matrix.</p>\n"
-"<p>The <strong>Normalization</strong> options specify how the coordinates are scaled (by eigenvalues): <ul> <li><strong>Principal:</strong> Both category and observation coordinates are scaled.</li> <li><strong>Category principal:</strong> Only category coordinates are scaled.</li> <li><strong>Observation principal:</strong> Only observation coordinates are scaled.</li> <li><strong>Standard:</strong> Both category and observation coordinates are standard.</li> </ul></p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>\n"
-"</div>"
-msgstr "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>多重対応分析のヘルプ</strong></p>\n"
-"<p>本モジュールは、複数のカテゴリ変数に対する<strong>多重対応分析（MCA）</strong>を実行します。計算には、F.&nbsp;Husson、J.&nbsp;Josse、S.&nbsp;Le、J.&nbsp;Mazet による <a href = \"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">FactoMineR<a/> パッケージを使用しています。</p>\n"
-"<p>次の2つの古典的手法を利用できます： <ul> <li><strong>指標行列：</strong> 指標行列に対する対応分析</li> <li><strong>バート行列：</strong> バート行列に対する対応分析。この方法の固有値は、指標行列法による固有値の2乗になります。 </li> </ul> </p>\n"
-"<p>両手法ともに <em>標準</em> 座標は同一ですが、<em>主成分</em> 座標は異なります。</p>\n"
-"<p><strong>ベンゼクリ補正およびグリーンエーカー補正</strong>を選択すると、固有値にのみ補正が適用されます（<strong>要約</strong> 表）。カテゴリおよび観測の座標（および慣性）は、バート行列の元の固有値から算出されます。</p>\n"
-"<p><strong>正規化</strong> オプションでは、座標をどのようにスケーリング（固有値による）するかを指定します： <ul> <li><strong>Principal:</strong> カテゴリ座標と観測座標の両方をスケーリングします。</li> <li><strong>カテゴリ主成分：</strong> カテゴリ座標のみをスケーリングします。</li> <li><strong>観測値主成分：</strong> 観測座標のみをスケーリングします。</li> <li><strong>標準：</strong> カテゴリ座標と観測座標のいずれも標準化座標とします。</li> </ul></p>\n"
-"<p>サンプルデータは Open > Data Library > vijPlots > Cars に含まれています。</p>\n"
-"</div>"
-
-#: mrcrosstabs/results/helpMessage.content
-msgid "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>Multiple Response Crosstab Help</strong></p>\n"
-"<p>This module computes crosstab frequencies for multiple response questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as : <ul> <li>several <strong>dummy (or indicator) variables</strong> using 0/1 or 1/2 for each possible answer</li> <li>a single <strong>multi-valued variable</strong> containing the checked answers, separated by a symbol (usually \",\" or \";\").</li> </ul></p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit Cards</p>\n"
-"</div>"
-msgstr "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>多重回答クロス集計のヘルプ</strong></p>\n"
-"<p>本モジュールは、多重回答形式の質問（いわゆる「該当するものをすべて選択」形式）のクロス集計度数を算出します。</p>\n"
-"<p>質問は次のいずれかの形式でコーディングできます。 <ul> <li>各選択肢について 0/1 または 1/2 で表す複数の<strong>ダミー変数</strong></li> <li>選択された回答を区切り記号（通常は「,」または「;」）で連結した、1つの<strong>多値変数</strong></li> </ul></p>\n"
-"<p>サンプルデータは Open > Data Library > vijPlots > Credit Cards に含まれています。</p>\n"
-"</div>"
-
-#: mrfrequencies/results/helpMessage.content
-msgid "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>Multiple Response Frequencies Help</strong></p>\n"
-"<p>This module computes frequencies for multiple response questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as : <ul> <li>several <strong>dummy (or indicator) variables</strong> using 0/1 or 1/2 for each possible answer</li> <li>a single <strong>multi-valued variable</strong> containing the checked answers, separated by a symbol (usually \",\" or \";\").</li> </ul></p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit Cards</p>\n"
-"</div>"
-msgstr "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>多重回答度数のヘルプ</strong></p>\n"
-"<p>本モジュールは、多重回答形式の質問（いわゆる「該当するものをすべて選択」形式）の度数を算出します。</p>\n"
-"<p>質問は次のいずれかの形式でコーディングできます： <ul> <li>各選択肢について 0/1 または 1/2 で表す複数の<strong>ダミー変数</strong></li> <li>選択された回答を区切り記号（通常は「,」または「;」）で連結した、1つの<strong>多値変数</strong></li> </ul></p>\n"
-"<p>サンプルデータは Open > Data Library > vijPlots > Credit Cards に含まれています。</p>\n"
-"</div>"
-
-#: principal/results/helpMessage.content
-msgid "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>Principal Component Analysis Help</strong></p>\n"
-"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> for several continuous variables. Computations are based on <tt>stats::prcomp</tt> function.</p>\n"
-"<p>Although rotated components are not principal components, they are widely used. Only orthogonal rotations are available (from GPArotation package).</p>\n"
-"<p>Loadings (variable coordinates) and scores (observation coordinates) are principal (scaled by the squareroot of eigenvalues).\n"
-"<p>Biplot follows \"Biplots in Practice\" [Michael Greenacre, 2010]: <ul> <li><strong>Form biplot:</strong> Scores are principal (scaled by eigenvalues) while loadings are standard.</li> <li><strong>Covariance biplot:</strong> Loadings are principal while scores are standard. </li> </ul></p>\n"
-"<p><strong>Advanced options</strong>: <ul> <li><strong>Standardize loadings:</strong> loadings are normalized with sums of squared equal to 1 (instead of eigenvalues)</li> <li><strong>Standardize scores:</strong> scores are normalized with variances equal to 1 (instead of eigenvalues)</li> <li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is applied to eigenvectors (standard loadings) instead of principal loadings (Stata way).</li> </ul> </p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>\n"
-"</div>"
-msgstr "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>主成分分析のヘルプ</strong></p>\n"
-"<p>本モジュールは、複数の連続変数に対する<strong>主成分分析（PCA）</strong>を実行します。計算には <tt>stats::prcomp</tt> 関数を使用します。</p>\n"
-"<p>回転後の成分は厳密には主成分ではありませんが、広く利用されています。利用できるのは直交回転のみです（GPArotation パッケージ）。</p>\n"
-"<p>負荷量（変数の座標）および得点（観測値の座標）は 主成分座標（固有値の平方根でスケーリング）です。</p>\n"
-"<p>バイプロットは “Biplots in Practice” [Michael Greenacre, 2010] に従います： <ul> <li><strong>形式バイプロット：</strong> 得点は 主成分（固有値でスケーリング）、負荷量は標準です。</li> <li><strong>共分散バイプロット：</strong> 負荷量は主成分、得点は標準です。 </li> </ul></p>\n"
-"<p><strong>詳細オプション</strong>：<ul> <li><strong>負荷量を標準化：</strong> 負荷量を、（固有値でスケーリングする代わりに）2乗和が 1 になるように正規化します。</li> <li><strong>得点を標準化：</strong> 得点を、（固有値でスケーリングする代わりに）分散が 1 になるように正規化します。</li> <li><strong>固有ベクトルを回転：</strong> 回転（バリマックスなど）を 主成分負荷量ではなく、固有ベクトル（標準負荷量）に適用します（Stata 方式）。</li> </ul> </p>\n"
-"<p>サンプルデータは Open > Data Library > vijPlots > Iris に含まれています。</p>\n"
-"</div>"
-
-#: qqplot/results/helpMessage.content
-msgid "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>QQ & PP Plots Help</strong></p>\n"
-"<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and Heike Hofmann. In-depth information can be found in the package documentation on CRAN site.</p>\n"
-"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> (y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports identity line.</p>\n"
-"<p><strong>Confidence band:</strong> Draws a confidence band around the reference line. qqplotr package provides several methods to compute the confidence band : <ul> <li><strong><em>Pointwise</em></strong> constructs pointwise confidence bands based on Normal confidence intervals;</li> <li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands based on a parametric bootstrap;</li> <li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the Kolmogorov-Smirnov test;</li> <li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive confidence bands but is only implemented for Normal Q-Q plots;</li> <li><strong><em>Equal Local Levels (ELL)</em></strong> constructs simultaneous bands using the equal local levels.</li> </ul> P-P plots only support \"ELL\" and \"Bootstrap\" methods. </p>\n"
-"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> according to the reference line. This procedure may help reducing visual bias caused by the orthogonal distances from the points to the reference line. </p>\n"
-"<p><strong>Parameter values:</strong> The distribution parameters can be estimated from data using <ul> <li><strong>Maximum Likelihood Method</strong> (using MASS package) : it should work with all distributions but \"t\" and \"uniform\";</li> <li><strong>Method of Moments</strong> for moment based parameters : it should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", \"Gamma\", \"Logistic\", \"Uniform\";</li> </ul> or entered by user: <ul> <li><strong>Parameter 1:</strong> : mean (Normal), meanlog (Log-normal), shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 (F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li> <li><strong>Parameter 2:</strong> : sd (normal), sdlog (Log-normal), shape2 (Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max (Uniform).</li> </ul> </p>\n"
-"</div>"
-msgstr "<style> .block { border: 2px solid gray; border-radius: 15px; background-color: WhiteSmoke; padding: 0px 20px; text-align: justify; } </style> <div class=\"block\"> <p><strong>QQおよびPPプロットのヘルプ</strong></p>\n"
-"<p>本モジュールは、Alexandre Almeida、Adam Loy、Heike Hofmann による <a href = \"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R パッケージ<a/> を使用しています。詳細については、CRAN サイトのパッケージ文書を参照してください。</p>\n"
-"<p><strong>参照線：</strong> <em>恒等線</em>（y = x）または、2つのデータ分位点（Q<sub>0.25</sub> と Q<sub>0.75</sub>）を通る一般的な <em>Q–Q 線</em> を描画します。P–P プロットでは恒等線のみ使用できます。</p>\n"
-"<p><strong>信頼帯：</strong> 参照線の周囲に信頼帯を描画します。qqplotr パッケージでは、信頼帯を計算するための複数の方法が用意されています。 <ul> <li><strong><em>点ごと：</em></strong> 正規分布に基づく信頼区間から点ごとの信頼帯を構成します。</li> <li><strong><em>ブートストラップ：</em></strong> パラメトリック・ブートストラップに基づく点ごとの信頼帯を作成します。</li> <li><strong><em>コルモゴロフ・スミルノフ</em></strong> コルモゴロフ・スミルノフ検定に基づく信頼帯です；</li> <li><strong><em>Tail-Sensitive</em></strong> 裾に敏感な信頼帯を構成しますが、正規 Q–Q プロットにのみ実装されています。</li> <li><strong><em>等局所レベル（ELL）：</em></strong> 等局所有意水準に基づいて同時信頼帯を構成します。</li> </ul> P–P プロットでは「ELL」と「ブートストラップ」のみ利用可能です。 </p>\n"
-"<p><strong>トレンド除去プロット：</strong> 参照線に基づいてオブジェクトを<em>トレンド除去</em>（デトレンド）します。この処理により、点から参照線への直交距離によって生じる視覚的バイアスを軽減できる場合があります。 </p>\n"
-"<p><strong>パラメータ値：</strong> 分布パラメータは次の方法でデータから推定できます。 <ul> <li><strong>最尤法</strong>（MASS パッケージ使用）：\"t\" および \"uniform\" を除くすべての分布で使用できます。</li> <li><strong>モーメント法</strong>：モーメントに基づくパラメータに適用され、\"normal\"、\"log-normal\"、\"Beta\"、\"Exponential\"、\"Gamma\"、\"Logistic\"、\"Uniform\" に使用できます。</li> </ul> または、ユーザーが直接入力することもできます。 <ul> <li><strong>パラメータ1：</strong> mean（正規分布）、meanlog（対数正規分布）、shape1（ベータ分布）、location（コーシー分布、ロジスティック分布）、df（カイ2乗、スチューデント）、df1（F）、rate（指数分布）、shape（ガンマ分布、ウェイブル分布）、min（一様分布）。</li> <li><strong>パラメータ2：</strong> sd（正規分布）、sdlog（対数正規分布）、shape2（ベータ分布）、scale（コーシ分布、ロジスティック分布）、df2（F）、rate（ガンマ分布、ウェイブル分布）、max（一様分布）。</li> </ul> </p>\n"
-"</div>"
-
-#: areachart/options/dateBreak/1 day.title
-#: linechart/options/dateBreak/1 day.title
+#: areachart/options/dateBreak/1day.title
+#: linechart/options/dateBreak/1day.title
 msgid "1 day"
 msgstr "1日"
 
-#: areachart/options/dateBreak/1 month.title
-#: linechart/options/dateBreak/1 month.title
+#: areachart/options/dateBreak/1month.title
+#: linechart/options/dateBreak/1month.title
 msgid "1 month"
 msgstr "1か月"
 
-#: areachart/options/dateBreak/1 week.title
-#: linechart/options/dateBreak/1 week.title
+#: areachart/options/dateBreak/1week.title
+#: linechart/options/dateBreak/1week.title
 msgid "1 week"
 msgstr "1週間"
 
-#: areachart/options/dateBreak/1 year.title
-#: linechart/options/dateBreak/1 year.title
+#: areachart/options/dateBreak/1year.title
+#: linechart/options/dateBreak/1year.title
 msgid "1 year"
 msgstr "1年"
 
-#: areachart/options/dateBreak/10 year.title
-#: linechart/options/dateBreak/10 year.title
+#: areachart/options/dateBreak/10year.title
+#: linechart/options/dateBreak/10year.title
 msgid "10 years"
 msgstr "10年"
 
@@ -243,13 +124,13 @@ msgstr "10-20-2035"
 msgid "10/20/35"
 msgstr "10/20/35"
 
-#: areachart/options/dateBreak/2 week.title
-#: linechart/options/dateBreak/2 week.title
+#: areachart/options/dateBreak/2week.title
+#: linechart/options/dateBreak/2week.title
 msgid "2 weeks"
 msgstr "2週間"
 
-#: areachart/options/displayFormat/%e %B %Y.title
-#: linechart/options/displayFormat/%e %B %Y.title
+#: areachart/options/displayFormat/%e%B%Y.title
+#: linechart/options/displayFormat/%e%B%Y.title
 msgid "20 October 2035"
 msgstr "20 October 2035"
 
@@ -263,18 +144,18 @@ msgstr "20-10-2035"
 msgid "20/10/35"
 msgstr "20/10/35"
 
-#: areachart/options/displayFormat/%Y %b.title
-#: linechart/options/displayFormat/%Y %b.title
+#: areachart/options/displayFormat/%Y%b.title
+#: linechart/options/displayFormat/%Y%b.title
 msgid "2035 Oct"
 msgstr "2035 Oct"
 
-#: areachart/options/displayFormat/%Y %B.title
-#: linechart/options/displayFormat/%Y %B.title
+#: areachart/options/displayFormat/%Y%B.title
+#: linechart/options/displayFormat/%Y%B.title
 msgid "2035 October"
 msgstr "2035 October"
 
-#: areachart/options/displayFormat/%Y %B %e.title
-#: linechart/options/displayFormat/%Y %B %e.title
+#: areachart/options/displayFormat/%Y%B%e.title
+#: linechart/options/displayFormat/%Y%B%e.title
 msgid "2035 October 20"
 msgstr "2035 October 20"
 
@@ -283,13 +164,13 @@ msgstr "2035 October 20"
 msgid "2035-10-20"
 msgstr "2035-10-20"
 
-#: areachart/options/dateBreak/3 month.title
-#: linechart/options/dateBreak/3 month.title
+#: areachart/options/dateBreak/3month.title
+#: linechart/options/dateBreak/3month.title
 msgid "3 months"
 msgstr "3か月"
 
-#: areachart/options/dateBreak/6 month.title
-#: linechart/options/dateBreak/6 month.title
+#: areachart/options/dateBreak/6month.title
+#: linechart/options/dateBreak/6month.title
 msgid "6 months"
 msgstr "6か月"
 
@@ -309,7 +190,7 @@ msgstr "vijPlots/リッカートプロットのデモンストレーション用
 msgid "A demonstration dataset for vijPlots/Multiple Correspondence Analysis."
 msgstr "vijPlots/多重対応分析のデモンストレーション用データセット。"
 
-#: package/datasets/Credit Cards.description
+#: package/datasets/CreditCards.description
 msgid "A demonstration dataset for vijPlots/Multiple Response plots."
 msgstr "vijPlots/多重応答プロットのデモンストレーション用データセット。"
 
@@ -321,7 +202,7 @@ msgstr "vijPlots/主成分分析のデモンストレーション用データセ
 msgid "A demonstration dataset for vijPlots/Raincloud plot."
 msgstr "vijPlots/レインクラウドプロットのデモンストレーション用データセット。"
 
-#: package/datasets/Time Series.description
+#: package/datasets/TimeSeries.description
 msgid "A demonstration dataset for vijPlots/Time Serie plots."
 msgstr "vijPlots/時系列プロットのデモンストレーション用データセット。"
 
@@ -335,6 +216,7 @@ msgstr "vijPlots/時系列プロットのデモンストレーション用デー
 #: multcorresp/options/colorPalette/Accent.title
 #: piechart/options/colorPalette/Accent.title
 #: principal/options/colorPalette/Accent.title
+#: qqplot/options/colorPalette/Accent.title
 #: raincloud/options/colorPalette/Accent.title
 #: scatterplot/options/colorPalette/Accent.title
 msgid "Accent"
@@ -482,23 +364,23 @@ msgstr "8月"
 msgid "Auto"
 msgstr "自動"
 
-#: areachart/ui[3].label
+#: areachart/ui[2].label
 #: barplot/ui[5].label
 #: boxplot/ui[4].label
 #: histogram/ui[5].label
 #: likertplot/ui[6].label
-#: linechart/ui[3].label
+#: linechart/ui[2].label
 #: lollipop/ui[5].label
-#: mrcrosstabs/ui[5].label
-#: mrfrequencies/ui[5].label
+#: mrcrosstabs/ui[4].label
+#: mrfrequencies/ui[4].label
 #: qqplot/ui[5].label
-#: raincloud/ui[3].label
+#: raincloud/ui[2].label
 #: scatterplot/ui[3].label
 msgid "Axes"
 msgstr "軸"
 
 #: corresp/ui[7].label
-#: mrfrequencies/ui[6].label
+#: mrfrequencies/ui[5].label
 msgid "Axis Titles"
 msgstr "軸タイトル"
 
@@ -533,6 +415,7 @@ msgstr "ベンゼクリ補正"
 msgid "Benzécri correction"
 msgstr "ベンゼクリ補正"
 
+#: R/qqplot.b.R
 #: qqplot/options/distrib/beta.title
 msgid "Beta"
 msgstr "ベータ"
@@ -568,10 +451,6 @@ msgstr "階級（ビン）のサイズ"
 #: principal/results/biPlot.title
 msgid "Biplot"
 msgstr "バイプロット"
-
-#: multcorresp/ui[7][0][1][0].label
-msgid "Biplot Size"
-msgstr "バイプロットのサイズ"
 
 #: principal/options/biplotType.title
 msgid "Biplot Type"
@@ -621,6 +500,7 @@ msgstr "青"
 #: multcorresp/options/colorPalette/BuGn.title
 #: piechart/options/colorPalette/BuGn.title
 #: principal/options/colorPalette/BuGn.title
+#: qqplot/options/colorPalette/BuGn.title
 #: raincloud/options/colorPalette/BuGn.title
 #: scatterplot/options/colorPalette/BuGn.title
 msgid "Blue to Green"
@@ -636,6 +516,7 @@ msgstr "青 → 緑"
 #: multcorresp/options/colorPalette/BuPu.title
 #: piechart/options/colorPalette/BuPu.title
 #: principal/options/colorPalette/BuPu.title
+#: qqplot/options/colorPalette/BuPu.title
 #: raincloud/options/colorPalette/BuPu.title
 #: scatterplot/options/colorPalette/BuPu.title
 msgid "Blue to Purple"
@@ -651,6 +532,7 @@ msgstr "青 → 紫"
 #: multcorresp/options/colorPalette/Blues.title
 #: piechart/options/colorPalette/Blues.title
 #: principal/options/colorPalette/Blues.title
+#: qqplot/options/colorPalette/Blues.title
 #: raincloud/options/colorPalette/Blues.title
 #: scatterplot/options/colorPalette/Blues.title
 msgid "Blues"
@@ -805,11 +687,6 @@ msgstr "枠線"
 msgid "Bottom"
 msgstr "下"
 
-#: histogram/options/binBoundary.title
-msgctxt "boundary"
-msgid "Position"
-msgstr "位置"
-
 #: package/analyses/boxplot.title
 #: package/analyses/boxplot.menuTitle
 #: boxplot/options.title
@@ -817,10 +694,6 @@ msgstr "位置"
 #: boxplot/results.title
 msgid "Box Plot"
 msgstr "箱ひげ図"
-
-#: boxplot/ui[2][0][1][0].label
-msgid "Boxplot Elements"
-msgstr "箱ひげ図の要素"
 
 #: histogram/options/fillColor/#A65628.title
 #: lollipop/options/dotColor/#A65628.title
@@ -842,6 +715,7 @@ msgstr "茶色"
 #: multcorresp/options/colorPalette/BrBG.title
 #: piechart/options/colorPalette/BrBG.title
 #: principal/options/colorPalette/BrBG.title
+#: qqplot/options/colorPalette/BrBG.title
 #: raincloud/options/colorPalette/BrBG.title
 #: scatterplot/options/colorPalette/BrBG.title
 msgid "Brown and Green"
@@ -867,30 +741,30 @@ msgstr "グループごと"
 msgid "By variable"
 msgstr "変数ごと"
 
-#: areachart/ui[5][2].label
+#: areachart/ui[4][2].label
 #: barplot/ui[7][2].label
 #: boxplot/ui[6][2].label
 #: histogram/ui[7][2].label
 #: likertplot/ui[8][2].label
-#: linechart/ui[5][2].label
+#: linechart/ui[4][2].label
 #: lollipop/ui[7][2].label
-#: mrcrosstabs/ui[7][2].label
-#: mrfrequencies/ui[7][2].label
+#: mrcrosstabs/ui[6][2].label
+#: mrfrequencies/ui[6][2].label
 #: piechart/ui[6][2].label
 #: qqplot/ui[7][2].label
-#: raincloud/ui[5][2].label
+#: raincloud/ui[4][2].label
 #: scatterplot/ui[5][2].label
 msgid "Caption"
 msgstr "キャプション"
 
 #: corresp/ui[8][2][1][0].label
-#: multcorresp/ui[9][2][1][0].label
+#: multcorresp/ui[8][2][1][0].label
 #: principal/ui[6][2][1][0].label
 msgid "Caption Style"
 msgstr "キャプションスタイル"
 
 #: corresp/ui[8][2][0][0].label
-#: multcorresp/ui[9][2][0][0].label
+#: multcorresp/ui[8][2][0][0].label
 #: principal/ui[6][2][0][0].label
 msgid "Caption Text"
 msgstr "キャプションテキスト"
@@ -933,10 +807,6 @@ msgstr "カテゴリープロット"
 msgid "Category Plot Options"
 msgstr "カテゴリープロットオプション"
 
-#: multcorresp/ui[7][0][0][0].label
-msgid "Category Plot Size"
-msgstr "カテゴリープロットサイズ"
-
 #: multcorresp/options/normalization/catprincipal.title
 msgid "Category principal"
 msgstr "カテゴリー主成分"
@@ -949,6 +819,7 @@ msgstr "カテゴリー主成分座標"
 msgid "Category Summary"
 msgstr "カテゴリーの要約"
 
+#: R/qqplot.b.R
 #: qqplot/options/distrib/cauchy.title
 msgid "Cauchy"
 msgstr "コーシー"
@@ -1037,6 +908,7 @@ msgstr "中央"
 msgid "Centered"
 msgstr "中央揃え"
 
+#: R/qqplot.b.R
 #: qqplot/options/distrib/chisq.title
 msgid "Chi-squared"
 msgstr "カイ2乗"
@@ -1064,6 +936,7 @@ msgstr "カラーオプション"
 #: mrcrosstabs/ui[3][0][0][0].label
 #: mrfrequencies/ui[3][0][0][0].label
 #: piechart/ui[3][0][0][0].label
+#: qqplot/ui[4][0][0][0].label
 msgid "Color Palette"
 msgstr "カラーパレット"
 
@@ -1078,18 +951,23 @@ msgid "Colors"
 msgstr "配色"
 
 #: boxplot/ui[2].label
+#: qqplot/ui[4].label
 msgid "Colors & Options"
 msgstr "配色 & オプション"
 
 #: barplot/options/facetBy/column.title
 #: barplot/ui[4][0][1][0][0]/facetBy_column.label
+#: boxplot/options/facetBy/column.title
+#: boxplot/ui[3][0][1][0][0]/facetBy_column.label
 #: corresp/options/colColor.title
 #: histogram/options/facetBy/column.title
-#: histogram/ui[4][0][1][0][0]/facetBy_column.label
+#: histogram/ui[4][0][0][0][0]/facetBy_column.label
 #: lollipop/options/facetBy/column.title
-#: lollipop/ui[4][0][1][0][0]/facetBy_column.label
+#: lollipop/ui[4][0][0][0][0]/facetBy_column.label
 #: piechart/options/facetBy/column.title
 #: piechart/ui[4][0][1][0][0]/facetBy_column.label
+#: scatterplot/options/facetBy/column.title
+#: scatterplot/ui[2][0][1][0][0]/facetBy_column.label
 msgid "Column"
 msgstr "列"
 
@@ -1103,10 +981,6 @@ msgstr "列プロット"
 #: corresp/options/columnCaptionText.title
 msgid "Column plot"
 msgstr "列プロット"
-
-#: R/corresp.b.R
-msgid "Column Points for"
-msgstr "列点"
 
 #: corresp/options/normalization/colprincipal.title
 msgid "Column principal"
@@ -1224,8 +1098,6 @@ msgstr "コサイン2乗"
 #: barplot/ui[1][0][0]/yaxis_count.label
 #: histogram/options/histtype/count.title
 #: histogram/ui[1][0][0]/histtype_count.label
-#: mrcrosstabs/options/computedValues/count.title
-#: mrcrosstabs/ui[1][1][0]/computedValues_count.label
 #: piechart/options/labels/count.title
 msgid "Count"
 msgstr "度数"
@@ -1238,9 +1110,9 @@ msgstr "計数値"
 #: R/mrfrequencies.b.R
 #: likertplot/options/frequencies/counts.title
 #: likertplot/ui[2][0][1][0]/frequencies_counts.label
+#: mrcrosstabs/options/computedValues/count.title
 #: mrfrequencies/options/showCounts.title
 #: mrfrequencies/options/yaxis/counts.title
-#: mrfrequencies/ui[1][2][0]/yaxis_counts.label
 #: mrfrequencies/results/responses.columns.title
 msgid "Counts"
 msgstr "度数"
@@ -1262,7 +1134,7 @@ msgstr "共分散 (主成分負荷量)"
 msgid "Covariance Biplot"
 msgstr "共分散バイプロット"
 
-#: package/datasets/Credit Cards.name
+#: package/datasets/CreditCards.name
 msgid "Credit Cards"
 msgstr "クレジットカード"
 
@@ -1276,14 +1148,6 @@ msgstr "クロス集計"
 #: R/mrcrosstabs.b.R
 msgid "Crosstab (% by row)"
 msgstr "クロス集計（行%）"
-
-#: R/mrcrosstabs.b.R
-msgid "Crosstab (% of Cases)"
-msgstr "クロス集計（ケース％）"
-
-#: R/mrcrosstabs.b.R
-msgid "Crosstab (% of Responses)"
-msgstr "クロス集計（回答％）"
 
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
@@ -1302,6 +1166,7 @@ msgstr "累積％"
 #: multcorresp/options/colorPalette/Dark2.title
 #: piechart/options/colorPalette/Dark2.title
 #: principal/options/colorPalette/Dark2.title
+#: qqplot/options/colorPalette/Dark2.title
 #: raincloud/options/colorPalette/Dark2.title
 #: scatterplot/options/colorPalette/Dark2.title
 msgid "Dark 2"
@@ -1351,6 +1216,7 @@ msgstr "12月"
 msgid "Decreasing"
 msgstr "降順"
 
+#: R/utils.R
 #: corresp/options/columnTitleText.default
 #: corresp/options/rowTitleText.default
 #: corresp/options/biplotTitleText.default
@@ -1416,6 +1282,7 @@ msgstr "自由度"
 #: multcorresp/options/colorPalette/dichromat::Categorical.12.title
 #: piechart/options/colorPalette/dichromat::Categorical.12.title
 #: principal/options/colorPalette/dichromat::Categorical.12.title
+#: qqplot/options/colorPalette/dichromat::Categorical.12.title
 #: raincloud/options/colorPalette/dichromat::Categorical.12.title
 #: scatterplot/options/colorPalette/dichromat::Categorical.12.title
 msgid "Dichromat:Categorical"
@@ -1448,10 +1315,6 @@ msgstr "判別プロット"
 msgid "Discrimination plot"
 msgstr "判別プロット"
 
-#: multcorresp/ui[7][0][1][1].label
-msgid "Discrimination Plot Size"
-msgstr "判別プロットサイズ"
-
 #: areachart/options/displayFormat.title
 #: linechart/options/displayFormat.title
 msgid "Display format"
@@ -1460,11 +1323,6 @@ msgstr "表示形式"
 #: qqplot/options/distrib.title
 msgid "Distribution"
 msgstr "分布"
-
-#: R/areachart.b.R
-#: R/linechart.b.R
-msgid "doesn't have a valid date format."
-msgstr "には妥当な日付形式がありません。"
 
 #: piechart/options/donut.title
 msgid "Donut chart"
@@ -1522,15 +1380,6 @@ msgstr "固有値"
 msgid "Eigenvalues"
 msgstr "固有値"
 
-#: scatterplot/ui[2][0][1][0].label
-msgid "Element Size"
-msgstr "要素サイズ"
-
-#: mrcrosstabs/options/emptyAsNA.title
-#: mrfrequencies/options/emptyAsNA.title
-msgid "Empty value as NA"
-msgstr "空の値をNAとして扱う"
-
 #: qqplot/options/methodQQ/ell.title
 #: qqplot/options/methodPP/ell.title
 msgid "Equal Local Levels"
@@ -1550,6 +1399,7 @@ msgstr "データからパラメーターを推定"
 msgid "EU (D-M-Y)"
 msgstr "EU（日-月-年）"
 
+#: R/qqplot.b.R
 #: qqplot/options/distrib/exp.title
 msgid "Exponential"
 msgstr "指数"
@@ -1561,6 +1411,8 @@ msgstr "抽出された負荷量の2乗和"
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
 #: barplot/ui[0][2].label
+#: boxplot/options/facet.title
+#: boxplot/ui[0][3].label
 #: histogram/options/facet.title
 #: histogram/ui[0][2].label
 #: lollipop/options/facet.title
@@ -1568,15 +1420,23 @@ msgstr "抽出された負荷量の2乗和"
 #: lollipop/ui[0][2].label
 #: piechart/options/facet.title
 #: piechart/ui[0][1].label
+#: scatterplot/options/facet.title
+#: scatterplot/ui[0][5].label
 msgid "Facet"
 msgstr "ファセット"
 
 #: barplot/ui[4][0][1][0].label
+#: boxplot/options/facetBy.title
+#: boxplot/ui[3][0][1][0].label
 #: histogram/options/facetBy.title
-#: histogram/ui[4][0][1][0].label
-#: lollipop/ui[4][0][1][0].label
+#: histogram/ui[4].label
+#: histogram/ui[4][0][0][0].label
+#: lollipop/ui[4].label
+#: lollipop/ui[4][0][0][0].label
 #: piechart/options/facetBy.title
 #: piechart/ui[4][0][1][0].label
+#: scatterplot/options/facetBy.title
+#: scatterplot/ui[2][0][1][0].label
 msgid "Facets"
 msgstr "ファセット"
 
@@ -1707,6 +1567,7 @@ msgstr "度数分布表"
 msgid "Frequency Type"
 msgstr "度数の種類"
 
+#: R/qqplot.b.R
 #: qqplot/options/distrib/gamma.title
 msgid "Gamma"
 msgstr "ガンマ"
@@ -1748,6 +1609,7 @@ msgstr "緑"
 #: multcorresp/options/colorPalette/GnBu.title
 #: piechart/options/colorPalette/GnBu.title
 #: principal/options/colorPalette/GnBu.title
+#: qqplot/options/colorPalette/GnBu.title
 #: raincloud/options/colorPalette/GnBu.title
 #: scatterplot/options/colorPalette/GnBu.title
 msgid "Green to Blue"
@@ -1775,6 +1637,7 @@ msgstr "グリーンエーカーの補正慣性 ="
 #: multcorresp/options/colorPalette/Greens.title
 #: piechart/options/colorPalette/Greens.title
 #: principal/options/colorPalette/Greens.title
+#: qqplot/options/colorPalette/Greens.title
 #: raincloud/options/colorPalette/Greens.title
 #: scatterplot/options/colorPalette/Greens.title
 msgid "Greens"
@@ -1794,6 +1657,7 @@ msgstr "グレー"
 #: multcorresp/options/colorPalette/Greys.title
 #: piechart/options/colorPalette/Greys.title
 #: principal/options/colorPalette/Greys.title
+#: qqplot/options/colorPalette/Greys.title
 #: raincloud/options/colorPalette/Greys.title
 #: scatterplot/options/colorPalette/Greys.title
 msgid "Greys"
@@ -1826,11 +1690,6 @@ msgstr "グループ"
 msgid "Group (Overlapped)"
 msgstr "グループ（重ね合わせ）"
 
-#: raincloud/options/groupOne.title
-#: raincloud/ui[0][1].label
-msgid "Group (Side by side)"
-msgstr "グループ（横並び）"
-
 #: piechart/options/labels/group+count.title
 msgid "Group + Count"
 msgstr "グループ + 度数"
@@ -1843,7 +1702,9 @@ msgstr "グループ + パーセント"
 msgid "Group By"
 msgstr "グループ化の基準"
 
+#: barplot/options/barType/dodge2.title
 #: histogram/options/grouping/dodge.title
+#: mrcrosstabs/options/bartype/dodge2.title
 msgid "Grouped"
 msgstr "グループ化済"
 
@@ -1868,28 +1729,6 @@ msgstr "グループ変数"
 #: likertplot/ui[3][0][2][0]/pValue_group.label
 msgid "Groupwise"
 msgstr "グループ単位"
-
-#: areachart/options/plotHeight.title
-#: barplot/options/plotHeight.title
-#: boxplot/options/plotHeight.title
-#: corresp/options/plotHeight.title
-#: histogram/options/plotHeight.title
-#: likertplot/options/plotHeight.title
-#: linechart/options/plotHeight.title
-#: lollipop/options/plotHeight.title
-#: mrcrosstabs/options/plotHeight.title
-#: mrfrequencies/options/plotHeight.title
-#: multcorresp/options/discrimHeight.title
-#: multcorresp/options/catHeight.title
-#: multcorresp/options/obsHeight.title
-#: multcorresp/options/biplotHeight.title
-#: piechart/options/plotHeight.title
-#: principal/options/plotHeight.title
-#: qqplot/options/plotHeight.title
-#: raincloud/options/plotHeight.title
-#: scatterplot/options/plotHeight.title
-msgid "Height"
-msgstr "高さ"
 
 #: likertplot/options/hideLabelsBelow.title
 msgid "Hide % labels below 5%"
@@ -1933,24 +1772,10 @@ msgstr "水平線"
 msgid "Horizontal plot"
 msgstr "水平プロット"
 
-#: mrcrosstabs/options/size/huge.title
-#: mrfrequencies/options/size/huge.title
-msgid "Huge (800x500)"
-msgstr "特大 (800x500)"
-
 #: qqplot/options/refType/identity.title
 #: qqplot/ui[2][1][0]/refLine[0]/refType_identity.label
 msgid "Identity line"
 msgstr "同一線"
-
-#: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-msgid "Ignore NA"
-msgstr "NAを無視"
-
-#: likertplot/options/ignoreNA.title
-msgid "Ignore NA groups"
-msgstr "NAグループを無視"
 
 #: multcorresp/options/ggrepel.title
 msgid "Improve label display"
@@ -2083,6 +1908,7 @@ msgstr "jmv 青"
 #: multcorresp/options/colorPalette/jmv.title
 #: piechart/options/colorPalette/jmv.title
 #: principal/options/colorPalette/jmv.title
+#: qqplot/options/colorPalette/jmv.title
 #: raincloud/options/colorPalette/jmv.title
 #: scatterplot/options/colorPalette/jmv.title
 msgid "jmv Default"
@@ -2175,6 +2001,7 @@ msgstr "クラスカル・ウォリス検定"
 #: barplot/options/textColor.title
 #: barplot/options/labelFontSize.title
 #: boxplot/options/label.title
+#: boxplot/options/labSize.title
 #: boxplot/ui[0][2].label
 #: corresp/options/labelSize.title
 #: likertplot/options/textSize.title
@@ -2185,6 +2012,7 @@ msgstr "クラスカル・ウォリス検定"
 #: multcorresp/options/labelVar.title
 #: multcorresp/ui[0][2].label
 #: piechart/options/labType/label.title
+#: piechart/options/labSize.title
 #: piechart/options/textColor.title
 #: piechart/ui[2][0][0][0]/labType_label.label
 #: principal/options/labelVar.title
@@ -2277,11 +2105,6 @@ msgstr "ラベル サイズ"
 msgid "Labels"
 msgstr "ラベル"
 
-#: mrcrosstabs/options/size/large.title
-#: mrfrequencies/options/size/large.title
-msgid "Large (600x400)"
-msgstr "大 (600x400)"
-
 #: areachart/options/titleAlign/0.title
 #: areachart/options/subtitleAlign/0.title
 #: areachart/options/captionAlign/0.title
@@ -2360,34 +2183,34 @@ msgstr "大 (600x400)"
 msgid "Left"
 msgstr "左"
 
-#: areachart/ui[4][0].label
+#: areachart/ui[3][0].label
 #: barplot/ui[6][0].label
 #: boxplot/ui[5][0].label
 #: histogram/ui[6][0].label
 #: likertplot/ui[7][0].label
-#: linechart/ui[4][0].label
-#: mrcrosstabs/ui[6][0].label
-#: multcorresp/ui[8][0].label
+#: linechart/ui[3][0].label
+#: mrcrosstabs/ui[5][0].label
+#: multcorresp/ui[7][0].label
 #: piechart/ui[5].label
 #: piechart/ui[5][0].label
 #: principal/ui[5][0].label
 #: qqplot/ui[6][0].label
-#: raincloud/ui[4][0].label
+#: raincloud/ui[3][0].label
 #: scatterplot/ui[4][0].label
 msgid "Legend"
 msgstr "凡例"
 
-#: areachart/ui[4].label
+#: areachart/ui[3].label
 #: barplot/ui[6].label
 #: boxplot/ui[5].label
 #: histogram/ui[6].label
-#: linechart/ui[4].label
+#: linechart/ui[3].label
 #: lollipop/ui[6].label
-#: mrcrosstabs/ui[6].label
-#: multcorresp/ui[8].label
+#: mrcrosstabs/ui[5].label
+#: multcorresp/ui[7].label
 #: principal/ui[5].label
 #: qqplot/ui[6].label
-#: raincloud/ui[4].label
+#: raincloud/ui[3].label
 #: scatterplot/ui[4].label
 msgid "Legend & Axis Titles"
 msgstr "凡例 & 軸タイトル"
@@ -2406,6 +2229,7 @@ msgstr "凡例タイトル"
 #: multcorresp/options/colorPalette/custom::lemovice.title
 #: piechart/options/colorPalette/custom::lemovice.title
 #: principal/options/colorPalette/custom::lemovice.title
+#: qqplot/options/colorPalette/custom::lemovice.title
 #: raincloud/options/colorPalette/custom::lemovice.title
 #: scatterplot/options/colorPalette/custom::lemovice.title
 msgid "Lémovice"
@@ -2538,10 +2362,12 @@ msgstr "線幅"
 msgid "Linear"
 msgstr "線形"
 
+#: R/qqplot.b.R
 #: qqplot/options/distrib/lnorm.title
 msgid "Log-normal"
 msgstr "対数正規"
 
+#: R/qqplot.b.R
 #: qqplot/options/distrib/logis.title
 msgid "Logistic"
 msgstr "ロジスティック"
@@ -2563,8 +2389,17 @@ msgid "Lollipop Size & Colors"
 msgstr "ロリポップのサイズ & 色"
 
 #: package.description
-msgid "Main statistical charts (histogram, boxplot, point, bar, line, raincloud…) with many options along with Likert plot, multiple response barplot, Principal Component and (Multiple) Correspondence Analyses. Project source (and changelog) is available at <a href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>."
-msgstr "主な統計グラフ（ヒストグラム、箱ひげ図、点プロット、棒グラフ、折れ線グラフ、レインクラウドプロットなど）には多数のオプションが用意されています。あわせて、リッカートプロット、多重回答棒グラフ、主成分分析および（多重）対応分析にも対応しています。 プロジェクトのソースコード（および変更履歴）は <a href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>で公開されています。"
+msgid ""
+"Main statistical charts (histogram, boxplot, point, bar, line, raincloud…) "
+"with many options along with Likert plot, multiple response barplot, "
+"Principal Component and (Multiple) Correspondence Analyses. Project source "
+"(and changelog) is available at <a "
+"href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>."
+msgstr ""
+"主な統計グラフ（ヒストグラム、箱ひげ図、点プロット、棒グラフ、折れ線グラフ、レインクラウドプロットなど）には多数のオプションが用意されています。あわせて"
+"、リッカートプロット、多重回答棒グラフ、主成分分析および（多重）対応分析にも対応しています。 プロジェクトのソースコード（および変更履歴）は <a "
+"href=\"https://github.com/vjalby/vijPlots\" "
+"target=\"_blank\">Github</a>で公開されています。"
 
 #: likertplot/options/showMannU.title
 msgid "Mann-Whitney U"
@@ -2638,10 +2473,6 @@ msgstr "質量"
 msgid "Max"
 msgstr "最大値"
 
-#: R/lollipop.b.R
-msgid "Maximum of"
-msgstr "最大値"
-
 #: qqplot/options/paramEstMethod/mle.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mle.label
 msgid "Maximum-likelihood (MLE)"
@@ -2652,10 +2483,6 @@ msgstr "最尤法（MLE）"
 msgid "May"
 msgstr "5月"
 
-#: R/multcorresp.b.R
-msgid "MCA {type} Coordinate ({method} method)"
-msgstr "MCA {type}座標 ({method}法)"
-
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 msgid "Mean"
@@ -2665,37 +2492,12 @@ msgstr "平均値"
 msgid "Mean & SD"
 msgstr "平均値 & 標準偏差"
 
-#: R/lollipop.b.R
-msgid "Mean of"
-msgstr "平均値"
-
 #: R/likertplot.b.R
 #: likertplot/options/showMedian.title
 #: lollipop/options/yaxis/median.title
 #: lollipop/ui[2][0][0][0]/yaxis_median.label
 msgid "Median"
 msgstr "中央値"
-
-#: R/lollipop.b.R
-msgid "Median of"
-msgstr "中央値"
-
-#: mrcrosstabs/options/size/medium.title
-#: mrfrequencies/options/size/medium.title
-msgid "Medium (400x300)"
-msgstr "中 (400x300)"
-
-#: areachart/options/displayFormat/%b.title
-#: linechart/options/displayFormat/%b.title
-msgctxt "menu"
-msgid "Oct"
-msgstr "10月"
-
-#: areachart/options/displayFormat/%B.title
-#: linechart/options/displayFormat/%B.title
-msgctxt "menu"
-msgid "October"
-msgstr "10月"
 
 #: likertplot/options/adjustMethod.title
 #: multcorresp/options/method.title
@@ -2755,10 +2557,6 @@ msgstr "最小値／最大値"
 #: principal/options/rotation/entropy.title
 msgid "Minimum entropy"
 msgstr "最小エントロピー"
-
-#: R/lollipop.b.R
-msgid "Minimum of"
-msgstr "最小値"
 
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
@@ -2886,7 +2684,6 @@ msgstr "なし"
 #: principal/options/titleFontFace/plain.title
 #: principal/options/subtitleFontFace/plain.title
 #: principal/options/captionFontFace/plain.title
-#: qqplot/options/distrib/norm.title
 #: qqplot/options/titleFontFace/plain.title
 #: qqplot/options/subtitleFontFace/plain.title
 #: qqplot/options/captionFontFace/plain.title
@@ -2977,10 +2774,6 @@ msgstr "観測値プロット"
 msgid "Observation Plot Options"
 msgstr "観測値プロットオプション"
 
-#: multcorresp/ui[7][0][0][1].label
-msgid "Observation Plot Size"
-msgstr "観測値プロットサイズ"
-
 #: multcorresp/options/normalization/obsprincipal.title
 msgid "Observation principal"
 msgstr "観測値主成分"
@@ -3007,13 +2800,13 @@ msgstr "観測値"
 msgid "Oct"
 msgstr "10月"
 
-#: areachart/options/displayFormat/%b %Y.title
-#: linechart/options/displayFormat/%b %Y.title
+#: areachart/options/displayFormat/%b%Y.title
+#: linechart/options/displayFormat/%b%Y.title
 msgid "Oct 2035"
 msgstr "Oct 2035"
 
-#: areachart/options/displayFormat/%b %y.title
-#: linechart/options/displayFormat/%b %y.title
+#: areachart/options/displayFormat/%b%y.title
+#: linechart/options/displayFormat/%b%y.title
 msgid "Oct 35"
 msgstr "Oct 35"
 
@@ -3022,13 +2815,13 @@ msgstr "Oct 35"
 msgid "October"
 msgstr "10月"
 
-#: areachart/options/displayFormat/%B %Y.title
-#: linechart/options/displayFormat/%B %Y.title
+#: areachart/options/displayFormat/%B%Y.title
+#: linechart/options/displayFormat/%B%Y.title
 msgid "October 2035"
 msgstr "October 2035"
 
-#: areachart/options/displayFormat/%B %y.title
-#: linechart/options/displayFormat/%B %y.title
+#: areachart/options/displayFormat/%B%y.title
+#: linechart/options/displayFormat/%B%y.title
 msgid "October 35"
 msgstr "October 35"
 
@@ -3042,7 +2835,7 @@ msgstr "1変数"
 
 #: barplot/ui[3][0][0][0]/singleColor/colorNo.suffix
 #: boxplot/ui[2][0][0][0]/singleColor/colorNo.suffix
-#: mrfrequencies/ui[3][0][0][0]/singleColor/colorNo.suffix
+#: mrfrequencies/ui[3][0][0][0][1]/colorNo.suffix
 #: raincloud/ui[1][1][0]/singleColor/colorNo.suffix
 msgid "only"
 msgstr "のみ"
@@ -3092,6 +2885,7 @@ msgstr "オレンジ"
 #: multcorresp/options/colorPalette/PuOr.title
 #: piechart/options/colorPalette/PuOr.title
 #: principal/options/colorPalette/PuOr.title
+#: qqplot/options/colorPalette/PuOr.title
 #: raincloud/options/colorPalette/PuOr.title
 #: scatterplot/options/colorPalette/PuOr.title
 msgid "Orange and Purple"
@@ -3107,6 +2901,7 @@ msgstr "オレンジと紫"
 #: multcorresp/options/colorPalette/OrRd.title
 #: piechart/options/colorPalette/OrRd.title
 #: principal/options/colorPalette/OrRd.title
+#: qqplot/options/colorPalette/OrRd.title
 #: raincloud/options/colorPalette/OrRd.title
 #: scatterplot/options/colorPalette/OrRd.title
 msgid "Orange to Red"
@@ -3122,6 +2917,7 @@ msgstr "オレンジ → 赤"
 #: multcorresp/options/colorPalette/Oranges.title
 #: piechart/options/colorPalette/Oranges.title
 #: principal/options/colorPalette/Oranges.title
+#: qqplot/options/colorPalette/Oranges.title
 #: raincloud/options/colorPalette/Oranges.title
 #: scatterplot/options/colorPalette/Oranges.title
 msgid "Oranges"
@@ -3131,7 +2927,7 @@ msgstr "オレンジ系"
 msgid "Original Eigenvalues"
 msgstr "元の固有値"
 
-#: areachart/ui[2][0][1][0].label
+#: areachart/ui[1][0][1].label
 msgid "Other Options"
 msgstr "その他のオプション"
 
@@ -3189,6 +2985,7 @@ msgstr "p値は{method}法で調整されています。"
 #: multcorresp/options/colorPalette/Paired.title
 #: piechart/options/colorPalette/Paired.title
 #: principal/options/colorPalette/Paired.title
+#: qqplot/options/colorPalette/Paired.title
 #: raincloud/options/colorPalette/Paired.title
 #: scatterplot/options/colorPalette/Paired.title
 msgid "Paired"
@@ -3208,6 +3005,7 @@ msgstr "多重比較"
 #: multcorresp/options/colorPalette.title
 #: piechart/options/colorPalette.title
 #: principal/options/colorPalette.title
+#: qqplot/options/colorPalette.title
 #: raincloud/options/colorPalette.title
 #: scatterplot/options/colorPalette.title
 msgid "Palette"
@@ -3249,6 +3047,7 @@ msgstr "パーシマックス"
 #: multcorresp/options/colorPalette/Pastel1.title
 #: piechart/options/colorPalette/Pastel1.title
 #: principal/options/colorPalette/Pastel1.title
+#: qqplot/options/colorPalette/Pastel1.title
 #: raincloud/options/colorPalette/Pastel1.title
 #: scatterplot/options/colorPalette/Pastel1.title
 msgid "Pastel 1"
@@ -3264,14 +3063,11 @@ msgstr "パステル1"
 #: multcorresp/options/colorPalette/Pastel2.title
 #: piechart/options/colorPalette/Pastel2.title
 #: principal/options/colorPalette/Pastel2.title
+#: qqplot/options/colorPalette/Pastel2.title
 #: raincloud/options/colorPalette/Pastel2.title
 #: scatterplot/options/colorPalette/Pastel2.title
 msgid "Pastel 2"
 msgstr "パステル2"
-
-#: R/principal.b.R
-msgid "PCA {norm} Coordinate{rotation}"
-msgstr "PCA {norm}座標{rotation}"
 
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
@@ -3315,6 +3111,7 @@ msgstr "ピンク"
 #: multcorresp/options/colorPalette/PiYG.title
 #: piechart/options/colorPalette/PiYG.title
 #: principal/options/colorPalette/PiYG.title
+#: qqplot/options/colorPalette/PiYG.title
 #: raincloud/options/colorPalette/PiYG.title
 #: scatterplot/options/colorPalette/PiYG.title
 msgid "Pink and Green"
@@ -3325,16 +3122,6 @@ msgstr "ピンクと緑"
 #: mrfrequencies/ui[1][2][0].label
 msgid "Plot"
 msgstr "プロット"
-
-#: scatterplot/ui[2].label
-msgid "Plot & Element Sizes"
-msgstr "プロット & 要素サイズ"
-
-#: likertplot/ui[5].label
-#: mrcrosstabs/ui[4].label
-#: mrfrequencies/ui[4].label
-msgid "Plot & Text Sizes"
-msgstr "プロット & 文字サイズ"
 
 #: likertplot/ui[4][2][1][0].label
 #: multcorresp/ui[6][0][0][0].label
@@ -3362,78 +3149,24 @@ msgstr "プロットの色"
 msgid "Plot Options"
 msgstr "プロットオプション"
 
-#: areachart/ui[2][0][0][0].label
-#: barplot/ui[4][0][0][0].label
-#: boxplot/ui[3].label
-#: boxplot/ui[3][0][0].label
-#: corresp/ui[6][0][0][0].label
-#: histogram/ui[4][0][0][0].label
-#: likertplot/ui[5][0][0][0].label
-#: linechart/ui[2][0][0][0].label
-#: lollipop/ui[4][0][0][0].label
-#: mrcrosstabs/ui[4][0][0][0].label
-#: mrfrequencies/ui[4][0][0][0].label
-#: multcorresp/ui[7].label
-#: piechart/ui[4][0][0][0].label
-#: principal/ui[4][0][0][0].label
-#: qqplot/ui[4][0][0][0].label
-#: raincloud/ui[2].label
-#: raincloud/ui[2][0].label
-#: scatterplot/ui[2][0][0][0].label
-msgid "Plot Size"
-msgstr "プロットサイズ"
-
-#: corresp/ui[6].label
-#: principal/ui[4].label
-msgid "Plot Size & Colors"
-msgstr "プロットサイズ & 色"
-
-#: barplot/ui[4].label
-#: histogram/ui[4].label
-#: lollipop/ui[4].label
-#: piechart/ui[4].label
-msgid "Plot Size & Facets"
-msgstr "プロットサイズ & ファセット"
-
-#: areachart/ui[2].label
-#: linechart/ui[2].label
-#: qqplot/ui[4].label
-msgid "Plot Size & Options"
-msgstr "プロットサイズ & オプション"
-
-#: R/areachart.b.R
-#: R/barplot.b.R
-#: R/boxplot.b.R
-#: R/histogram.b.R
-#: R/linechart.b.R
-#: R/lollipop.b.R
-#: R/mrcrosstabs.b.R
-#: R/mrfrequencies.b.R
-#: R/piechart.b.R
-#: R/qqplot.b.R
-#: R/raincloud.b.R
-#: R/scatterplot.b.R
-msgid "Plot size must be at least 200px (or 0 = default)"
-msgstr "プロットサイズは少なくとも 200px でなければなりません（または 0 = 初期値）"
-
-#: areachart/ui[5].label
+#: areachart/ui[4].label
 #: barplot/ui[7].label
 #: boxplot/ui[6].label
 #: histogram/ui[7].label
 #: likertplot/ui[8].label
-#: linechart/ui[5].label
+#: linechart/ui[4].label
 #: lollipop/ui[7].label
-#: mrcrosstabs/ui[7].label
-#: mrfrequencies/ui[7].label
+#: mrcrosstabs/ui[6].label
+#: mrfrequencies/ui[6].label
 #: piechart/ui[6].label
 #: qqplot/ui[7].label
-#: raincloud/ui[5].label
+#: raincloud/ui[4].label
 #: scatterplot/ui[5].label
 msgid "Plot Titles"
 msgstr "プロットタイトル"
 
 #: corresp/ui[8].label
-#: multcorresp/ui[9].label
+#: multcorresp/ui[8].label
 #: principal/ui[6].label
 msgid "Plot Titles & Subtitles"
 msgstr "プロットタイトル & サブタイトル"
@@ -3454,10 +3187,6 @@ msgstr "プロット"
 #: scatterplot/options/pointSize.title
 msgid "Point"
 msgstr "点"
-
-#: linechart/ui[2][0][1][0].label
-msgid "Point & Line Size"
-msgstr "点 & 線サイズ"
 
 #: principal/options/pointSize.title
 msgid "Point size"
@@ -3558,20 +3287,6 @@ msgstr "主成分座標"
 msgid "Proportional point size"
 msgstr "点のサイズを割合で指定"
 
-#: barplot/ui[4][0][0][1]/labelFontSize.suffix
-#: corresp/ui[6][0][0][0]/labelSize.suffix
-#: likertplot/ui[5][0][1][0]/labelSize.suffix
-#: likertplot/ui[5][0][1][0]/groupSize.suffix
-#: mrcrosstabs/ui[4][0][1][0]/labelFontSize.suffix
-#: mrfrequencies/ui[4][0][1][0]/labelFontSize.suffix
-#: multcorresp/ui[6][0][0][1]/labelSize.suffix
-#: piechart/ui[4][0][0][1]/labSize.suffix
-#: principal/ui[4][0][0][0]/varLabelSize.suffix
-#: principal/ui[4][0][0][0]/obsLabelSize.suffix
-#: principal/ui[4][0][0][0]/pointSize.suffix
-msgid "pt"
-msgstr "pt"
-
 #: corresp/options/rowColor/purple.title
 #: corresp/options/colColor/purple.title
 #: histogram/options/fillColor/#984EA3.title
@@ -3594,6 +3309,7 @@ msgstr "紫"
 #: multcorresp/options/colorPalette/PRGn.title
 #: piechart/options/colorPalette/PRGn.title
 #: principal/options/colorPalette/PRGn.title
+#: qqplot/options/colorPalette/PRGn.title
 #: raincloud/options/colorPalette/PRGn.title
 #: scatterplot/options/colorPalette/PRGn.title
 msgid "Purple and Green"
@@ -3609,6 +3325,7 @@ msgstr "紫と緑"
 #: multcorresp/options/colorPalette/PuBu.title
 #: piechart/options/colorPalette/PuBu.title
 #: principal/options/colorPalette/PuBu.title
+#: qqplot/options/colorPalette/PuBu.title
 #: raincloud/options/colorPalette/PuBu.title
 #: scatterplot/options/colorPalette/PuBu.title
 msgid "Purple to Blue"
@@ -3624,6 +3341,7 @@ msgstr "紫 → 青"
 #: multcorresp/options/colorPalette/PuBuGn.title
 #: piechart/options/colorPalette/PuBuGn.title
 #: principal/options/colorPalette/PuBuGn.title
+#: qqplot/options/colorPalette/PuBuGn.title
 #: raincloud/options/colorPalette/PuBuGn.title
 #: scatterplot/options/colorPalette/PuBuGn.title
 msgid "Purple to Green"
@@ -3639,6 +3357,7 @@ msgstr "紫 → 緑"
 #: multcorresp/options/colorPalette/PuRd.title
 #: piechart/options/colorPalette/PuRd.title
 #: principal/options/colorPalette/PuRd.title
+#: qqplot/options/colorPalette/PuRd.title
 #: raincloud/options/colorPalette/PuRd.title
 #: scatterplot/options/colorPalette/PuRd.title
 msgid "Purple to Red"
@@ -3654,48 +3373,11 @@ msgstr "紫 → 赤"
 #: multcorresp/options/colorPalette/Purples.title
 #: piechart/options/colorPalette/Purples.title
 #: principal/options/colorPalette/Purples.title
+#: qqplot/options/colorPalette/Purples.title
 #: raincloud/options/colorPalette/Purples.title
 #: scatterplot/options/colorPalette/Purples.title
 msgid "Purples"
 msgstr "紫系"
-
-#: areachart/ui[2][0][0][0]/plotWidth.suffix
-#: areachart/ui[2][0][0][0]/plotHeight.suffix
-#: areachart/ui[2][0][1][0]/lineWidth.suffix
-#: barplot/ui[4][0][0][0]/plotWidth.suffix
-#: barplot/ui[4][0][0][0]/plotHeight.suffix
-#: boxplot/ui[3][0][0]/plotWidth.suffix
-#: boxplot/ui[3][0][0]/plotHeight.suffix
-#: corresp/ui[6][0][0][0]/plotWidth.suffix
-#: corresp/ui[6][0][0][0]/plotHeight.suffix
-#: histogram/ui[4][0][0][0]/plotWidth.suffix
-#: histogram/ui[4][0][0][0]/plotHeight.suffix
-#: likertplot/ui[5][0][0][0]/plotWidth.suffix
-#: likertplot/ui[5][0][0][0]/plotHeight.suffix
-#: linechart/ui[2][0][0][0]/plotWidth.suffix
-#: linechart/ui[2][0][0][0]/plotHeight.suffix
-#: linechart/ui[2][0][1][0]/dotSize.suffix
-#: linechart/ui[2][0][1][0]/lineWidth.suffix
-#: lollipop/ui[3][1][0]/dotSize.suffix
-#: lollipop/ui[3][1][0]/lineWidth.suffix
-#: lollipop/ui[4][0][0][0]/plotWidth.suffix
-#: lollipop/ui[4][0][0][0]/plotHeight.suffix
-#: mrcrosstabs/ui[4][0][0][0]/plotWidth.suffix
-#: mrcrosstabs/ui[4][0][0][0]/plotHeight.suffix
-#: mrfrequencies/ui[4][0][0][0]/plotWidth.suffix
-#: mrfrequencies/ui[4][0][0][0]/plotHeight.suffix
-#: piechart/ui[4][0][0][0]/plotWidth.suffix
-#: piechart/ui[4][0][0][0]/plotHeight.suffix
-#: principal/ui[4][0][0][0]/plotWidth.suffix
-#: principal/ui[4][0][0][0]/plotHeight.suffix
-#: qqplot/ui[4][0][0][0]/plotWidth.suffix
-#: qqplot/ui[4][0][0][0]/plotHeight.suffix
-#: raincloud/ui[2][0]/plotWidth.suffix
-#: raincloud/ui[2][0]/plotHeight.suffix
-#: scatterplot/ui[2][0][0][0]/plotWidth.suffix
-#: scatterplot/ui[2][0][0][0]/plotHeight.suffix
-msgid "px"
-msgstr "px"
 
 #: R/qqplot.b.R
 #: qqplot/options/methodQQ.title
@@ -3746,24 +3428,24 @@ msgstr "レインクラウド"
 msgid "Raincloud Plot"
 msgstr "レインクラウドプロット"
 
-#: areachart/ui[3][0][1][1].label
+#: areachart/ui[2][0][1][1].label
 #: barplot/ui[5][0][0][1].label
 #: barplot/ui[5][0][1][1].label
 #: boxplot/ui[4][0][0][1].label
 #: boxplot/ui[4][0][1][1].label
 #: histogram/ui[5][0][0][1].label
 #: histogram/ui[5][0][1][1].label
-#: linechart/ui[3][0][1][1].label
+#: linechart/ui[2][0][1][1].label
 #: lollipop/ui[5][0][0][1].label
 #: lollipop/ui[5][0][1][1].label
-#: mrcrosstabs/ui[5][0][0][1].label
-#: mrcrosstabs/ui[5][0][1][1].label
-#: mrfrequencies/ui[5][0][0][1].label
-#: mrfrequencies/ui[5][0][1][1].label
+#: mrcrosstabs/ui[4][0][0][1].label
+#: mrcrosstabs/ui[4][0][1][1].label
+#: mrfrequencies/ui[4][0][0][1].label
+#: mrfrequencies/ui[4][0][1][1].label
 #: qqplot/ui[5][0][0][1].label
 #: qqplot/ui[5][0][1][1].label
-#: raincloud/ui[3][0][0][1].label
-#: raincloud/ui[3][0][1][1].label
+#: raincloud/ui[2][0][0][1].label
+#: raincloud/ui[2][0][1][1].label
 #: scatterplot/ui[3][0][0][1].label
 #: scatterplot/ui[3][0][1][1].label
 msgid "Range"
@@ -3792,6 +3474,7 @@ msgstr "赤"
 #: multcorresp/options/colorPalette/RdBu.title
 #: piechart/options/colorPalette/RdBu.title
 #: principal/options/colorPalette/RdBu.title
+#: qqplot/options/colorPalette/RdBu.title
 #: raincloud/options/colorPalette/RdBu.title
 #: scatterplot/options/colorPalette/RdBu.title
 msgid "Red and Blue"
@@ -3808,6 +3491,7 @@ msgstr "赤と青"
 #: multcorresp/options/colorPalette/RdGy.title
 #: piechart/options/colorPalette/RdGy.title
 #: principal/options/colorPalette/RdGy.title
+#: qqplot/options/colorPalette/RdGy.title
 #: raincloud/options/colorPalette/RdGy.title
 #: scatterplot/options/colorPalette/RdGy.title
 msgid "Red and Gray"
@@ -3823,6 +3507,7 @@ msgstr "赤とグレー"
 #: multcorresp/options/colorPalette/RdPu.title
 #: piechart/options/colorPalette/RdPu.title
 #: principal/options/colorPalette/RdPu.title
+#: qqplot/options/colorPalette/RdPu.title
 #: raincloud/options/colorPalette/RdPu.title
 #: scatterplot/options/colorPalette/RdPu.title
 msgid "Red to Purple"
@@ -3846,6 +3531,7 @@ msgstr "赤・黄・緑"
 #: multcorresp/options/colorPalette/RdYlBu.title
 #: piechart/options/colorPalette/RdYlBu.title
 #: principal/options/colorPalette/RdYlBu.title
+#: qqplot/options/colorPalette/RdYlBu.title
 #: raincloud/options/colorPalette/RdYlBu.title
 #: scatterplot/options/colorPalette/RdYlBu.title
 msgid "Red, Yellow, Blue"
@@ -3861,6 +3547,7 @@ msgstr "赤・黄・青"
 #: multcorresp/options/colorPalette/RdYlGn.title
 #: piechart/options/colorPalette/RdYlGn.title
 #: principal/options/colorPalette/RdYlGn.title
+#: qqplot/options/colorPalette/RdYlGn.title
 #: raincloud/options/colorPalette/RdYlGn.title
 #: scatterplot/options/colorPalette/RdYlGn.title
 msgid "Red, Yellow, Green"
@@ -3876,16 +3563,14 @@ msgstr "赤・黄・緑"
 #: multcorresp/options/colorPalette/Reds.title
 #: piechart/options/colorPalette/Reds.title
 #: principal/options/colorPalette/Reds.title
+#: qqplot/options/colorPalette/Reds.title
 #: raincloud/options/colorPalette/Reds.title
 #: scatterplot/options/colorPalette/Reds.title
 msgid "Reds"
 msgstr "赤系"
 
-#: qqplot/options/refType.title
-msgid "Reference Line"
-msgstr "参照線"
-
 #: qqplot/options/refLine.title
+#: qqplot/options/refType.title
 msgid "Reference line"
 msgstr "参照線"
 
@@ -3900,15 +3585,6 @@ msgstr "回帰線"
 #: raincloud/options/reverse.title
 msgid "Reverse disposition"
 msgstr "配置を逆にする"
-
-#: barplot/options/reverseStack.title
-#: mrcrosstabs/options/reverseStack.title
-msgid "Reverse stack order"
-msgstr "積み上げ順を逆にする"
-
-#: likertplot/options/reverseLikert.title
-msgid "Reverse the staking order"
-msgstr "配置順を逆にする"
 
 #: areachart/options/titleAlign/1.title
 #: areachart/options/subtitleAlign/1.title
@@ -4000,13 +3676,17 @@ msgstr "回転"
 
 #: barplot/options/facetBy/row.title
 #: barplot/ui[4][0][1][0][0]/facetBy_row.label
+#: boxplot/options/facetBy/row.title
+#: boxplot/ui[3][0][1][0][0]/facetBy_row.label
 #: corresp/options/rowColor.title
 #: histogram/options/facetBy/row.title
-#: histogram/ui[4][0][1][0][0]/facetBy_row.label
+#: histogram/ui[4][0][0][0][0]/facetBy_row.label
 #: lollipop/options/facetBy/row.title
-#: lollipop/ui[4][0][1][0][0]/facetBy_row.label
+#: lollipop/ui[4][0][0][0][0]/facetBy_row.label
 #: piechart/options/facetBy/row.title
 #: piechart/ui[4][0][1][0][0]/facetBy_row.label
+#: scatterplot/options/facetBy/row.title
+#: scatterplot/ui[2][0][1][0][0]/facetBy_row.label
 msgid "Row"
 msgstr "行"
 
@@ -4032,10 +3712,6 @@ msgstr "行プロット"
 #: corresp/options/rowCaptionText.title
 msgid "Row plot"
 msgstr "行プロット"
-
-#: R/corresp.b.R
-msgid "Row Points for"
-msgstr "行の点"
 
 #: corresp/options/normalization/rowprincipal.title
 msgid "Row principal"
@@ -4063,11 +3739,6 @@ msgstr "行（オプション）"
 msgid "Same as point/arrow"
 msgstr "点／矢印と同じ"
 
-#: barplot/options/singleColor.title
-#: mrfrequencies/options/singleColor.title
-msgid "Same color for all bars"
-msgstr "棒をすべて同色にする"
-
 #: R/qqplot.b.R
 msgid "Sample Probabilities"
 msgstr "サンプル確率"
@@ -4084,7 +3755,7 @@ msgstr "サンプル分位点"
 msgid "Sample Quantiles Deviation"
 msgstr "サンプル分位点偏差"
 
-#: multcorresp/ui[10].label
+#: multcorresp/ui[9].label
 #: principal/ui[8].label
 msgid "Save"
 msgstr "保存"
@@ -4143,6 +3814,7 @@ msgstr "9月"
 #: multcorresp/options/colorPalette/Set1.title
 #: piechart/options/colorPalette/Set1.title
 #: principal/options/colorPalette/Set1.title
+#: qqplot/options/colorPalette/Set1.title
 #: raincloud/options/colorPalette/Set1.title
 #: scatterplot/options/colorPalette/Set1.title
 msgid "Set 1"
@@ -4158,6 +3830,7 @@ msgstr "セット1"
 #: multcorresp/options/colorPalette/Set2.title
 #: piechart/options/colorPalette/Set2.title
 #: principal/options/colorPalette/Set2.title
+#: qqplot/options/colorPalette/Set2.title
 #: raincloud/options/colorPalette/Set2.title
 #: scatterplot/options/colorPalette/Set2.title
 msgid "Set 2"
@@ -4173,6 +3846,7 @@ msgstr "セット2"
 #: multcorresp/options/colorPalette/Set3.title
 #: piechart/options/colorPalette/Set3.title
 #: principal/options/colorPalette/Set3.title
+#: qqplot/options/colorPalette/Set3.title
 #: raincloud/options/colorPalette/Set3.title
 #: scatterplot/options/colorPalette/Set3.title
 msgid "Set 3"
@@ -4228,17 +3902,6 @@ msgstr "欠損グループ／ラベルの点を表示"
 msgid "Show totals (Centered only)"
 msgstr "合計を表示（中央寄せのみ）"
 
-#: barplot/options/barType/dodge2.title
-#: barplot/ui[1][1][0]/barType_dodge.label
-#: mrcrosstabs/options/bartype/dodge.title
-msgid "Side-by-side"
-msgstr "横並び"
-
-#: barplot/options/barType/dodge.title
-#: barplot/ui[1][1][0]/barType_dodge2.label
-msgid "Side-by-side (tight)"
-msgstr "横並び（タイト）"
-
 #: scatterplot/options/singleColor.title
 msgid "Single"
 msgstr "単一"
@@ -4291,11 +3954,6 @@ msgstr "特異値"
 msgid "Size"
 msgstr "サイズ"
 
-#: mrcrosstabs/options/size/small.title
-#: mrfrequencies/options/size/small.title
-msgid "Small (300x200)"
-msgstr "小 (300x200)"
-
 #: package/datasets/Smoking.name
 msgid "Smoking"
 msgstr "喫煙"
@@ -4342,6 +4000,7 @@ msgstr "並び替え（中央値順）"
 #: multcorresp/options/colorPalette/Spectral.title
 #: piechart/options/colorPalette/Spectral.title
 #: principal/options/colorPalette/Spectral.title
+#: qqplot/options/colorPalette/Spectral.title
 #: raincloud/options/colorPalette/Spectral.title
 #: scatterplot/options/colorPalette/Spectral.title
 msgid "Spectral"
@@ -4353,7 +4012,6 @@ msgstr "負荷量2乗和"
 
 #: areachart/options/position/stack.title
 #: barplot/options/barType/stack.title
-#: barplot/ui[1][1][0]/barType_stack.label
 #: histogram/options/grouping/stack.title
 #: histogram/options/groupingN/stack.title
 #: histogram/ui[1][2][0]/groupingN_stack.label
@@ -4417,61 +4075,35 @@ msgstr "統計量"
 msgid "Stretch arrows by"
 msgstr "矢印の伸縮"
 
-#: R/corresp.b.R
-msgctxt "string"
-msgid "Column Principal"
-msgstr "列主成分"
-
-#: R/corresp.b.R
-#: R/multcorresp.b.R
-msgctxt "string"
-msgid "Principal"
-msgstr "主成分"
-
-#: R/corresp.b.R
-msgctxt "string"
-msgid "Row Principal"
-msgstr "行主成分"
-
-#: R/corresp.b.R
-#: R/multcorresp.b.R
-msgctxt "string"
-msgid "Standard"
-msgstr "標準"
-
-#: R/corresp.b.R
-msgctxt "string"
-msgid "Symetric"
-msgstr "対称"
-
+#: R/qqplot.b.R
 #: qqplot/options/distrib/t.title
 msgid "Student"
 msgstr "スチューデント"
 
-#: areachart/ui[5][1].label
+#: areachart/ui[4][1].label
 #: barplot/ui[7][1].label
 #: boxplot/ui[6][1].label
 #: histogram/ui[7][1].label
 #: likertplot/ui[8][1].label
-#: linechart/ui[5][1].label
+#: linechart/ui[4][1].label
 #: lollipop/ui[7][1].label
-#: mrcrosstabs/ui[7][1].label
-#: mrfrequencies/ui[7][1].label
+#: mrcrosstabs/ui[6][1].label
+#: mrfrequencies/ui[6][1].label
 #: piechart/ui[6][1].label
 #: qqplot/ui[7][1].label
-#: raincloud/ui[5][1].label
+#: raincloud/ui[4][1].label
 #: scatterplot/ui[5][1].label
 msgid "Subtitle"
 msgstr "サブタイトル"
 
 #: corresp/ui[8][1][1][0].label
-#: multcorresp/ui[9][1][1][0].label
+#: multcorresp/ui[8][1][1][0].label
 #: principal/ui[6][1][1][0].label
 msgid "Subtitle Style"
 msgstr "サブタイトルスタイル"
 
 #: corresp/ui[8][1][0][0].label
-#: multcorresp/ui[9][1][0][0].label
+#: multcorresp/ui[8][1][0][0].label
 #: principal/ui[6][1][0][0].label
 msgid "Subtitle Text"
 msgstr "サブタイトル文字"
@@ -4527,10 +4159,6 @@ msgstr "補助変数"
 msgid "Supplementary variables"
 msgstr "補助変数"
 
-#: corresp/options/normalization/symetric.title
-msgid "Symetric"
-msgstr "対称"
-
 #: likertplot/ui[2].label
 #: likertplot/ui[2][0][0][0].label
 #: mrcrosstabs/ui[1][0][0].label
@@ -4558,18 +4186,23 @@ msgstr "検定"
 msgid "Text"
 msgstr "文字"
 
-#: barplot/ui[4][0][0][1].label
-#: likertplot/ui[5][0][1][0].label
-#: mrcrosstabs/ui[4][0][1][0].label
-#: mrfrequencies/ui[4][0][1][0].label
+#: barplot/ui[4][0][0][0].label
+#: boxplot/ui[3][0][0][0].label
+#: corresp/ui[6][0][0][0].label
+#: likertplot/ui[5].label
+#: likertplot/ui[5][0][0][0].label
+#: mrcrosstabs/ui[2][0][2][1].label
+#: mrfrequencies/ui[2][0][0][1].label
 #: multcorresp/ui[6][0][0][1].label
-#: piechart/options/labSize.title
-#: piechart/ui[4][0][0][1].label
+#: piechart/ui[4][0][0][0].label
+#: principal/ui[4][0][0][0].label
 msgid "Text Size"
 msgstr "文字サイズ"
 
 #: R/principal.b.R
-msgid "The correlation matrix is not positive definite. Computations may not be accurate."
+msgid ""
+"The correlation matrix is not positive definite. Computations may not be "
+"accurate."
 msgstr "相関行列は正定値ではありません。計算が正確でない可能性があります。"
 
 #: R/multcorresp.b.R
@@ -4598,6 +4231,7 @@ msgstr "レベルを整理"
 #: multcorresp/options/colorPalette/tidy::alger.title
 #: piechart/options/colorPalette/tidy::alger.title
 #: principal/options/colorPalette/tidy::alger.title
+#: qqplot/options/colorPalette/tidy::alger.title
 #: raincloud/options/colorPalette/tidy::alger.title
 #: scatterplot/options/colorPalette/tidy::alger.title
 msgid "Tidy:Alger"
@@ -4613,6 +4247,7 @@ msgstr "Tidy：アルジェ"
 #: multcorresp/options/colorPalette/tidy::apple.title
 #: piechart/options/colorPalette/tidy::apple.title
 #: principal/options/colorPalette/tidy::apple.title
+#: qqplot/options/colorPalette/tidy::apple.title
 #: raincloud/options/colorPalette/tidy::apple.title
 #: scatterplot/options/colorPalette/tidy::apple.title
 msgid "Tidy:Apple"
@@ -4628,6 +4263,7 @@ msgstr "Tidy：アップル"
 #: multcorresp/options/colorPalette/tidy::candy.title
 #: piechart/options/colorPalette/tidy::candy.title
 #: principal/options/colorPalette/tidy::candy.title
+#: qqplot/options/colorPalette/tidy::candy.title
 #: raincloud/options/colorPalette/tidy::candy.title
 #: scatterplot/options/colorPalette/tidy::candy.title
 msgid "Tidy:Candy"
@@ -4643,6 +4279,7 @@ msgstr "Tidy：キャンディ"
 #: multcorresp/options/colorPalette/tidy::friendly.title
 #: piechart/options/colorPalette/tidy::friendly.title
 #: principal/options/colorPalette/tidy::friendly.title
+#: qqplot/options/colorPalette/tidy::friendly.title
 #: raincloud/options/colorPalette/tidy::friendly.title
 #: scatterplot/options/colorPalette/tidy::friendly.title
 msgid "Tidy:Friendly"
@@ -4658,6 +4295,7 @@ msgstr "Tidy：フレンドリー"
 #: multcorresp/options/colorPalette/tidy::ibm.title
 #: piechart/options/colorPalette/tidy::ibm.title
 #: principal/options/colorPalette/tidy::ibm.title
+#: qqplot/options/colorPalette/tidy::ibm.title
 #: raincloud/options/colorPalette/tidy::ibm.title
 #: scatterplot/options/colorPalette/tidy::ibm.title
 msgid "Tidy:Ibm"
@@ -4673,6 +4311,7 @@ msgstr "Tidy：IBM"
 #: multcorresp/options/colorPalette/tidy::metro.title
 #: piechart/options/colorPalette/tidy::metro.title
 #: principal/options/colorPalette/tidy::metro.title
+#: qqplot/options/colorPalette/tidy::metro.title
 #: raincloud/options/colorPalette/tidy::metro.title
 #: scatterplot/options/colorPalette/tidy::metro.title
 msgid "Tidy:Metro"
@@ -4688,6 +4327,7 @@ msgstr "Tidy：メトロ"
 #: multcorresp/options/colorPalette/tidy::rainbow.title
 #: piechart/options/colorPalette/tidy::rainbow.title
 #: principal/options/colorPalette/tidy::rainbow.title
+#: qqplot/options/colorPalette/tidy::rainbow.title
 #: raincloud/options/colorPalette/tidy::rainbow.title
 #: scatterplot/options/colorPalette/tidy::rainbow.title
 msgid "Tidy:Rainbow"
@@ -4703,6 +4343,7 @@ msgstr "Tidy：レインボー"
 #: multcorresp/options/colorPalette/tidy::seaside.title
 #: piechart/options/colorPalette/tidy::seaside.title
 #: principal/options/colorPalette/tidy::seaside.title
+#: qqplot/options/colorPalette/tidy::seaside.title
 #: raincloud/options/colorPalette/tidy::seaside.title
 #: scatterplot/options/colorPalette/tidy::seaside.title
 msgid "Tidy:Seaside"
@@ -4710,36 +4351,36 @@ msgstr "Tidy：シーサイド"
 
 #: package/analyses/linechart.menuSubgroup
 #: package/analyses/areachart.menuSubgroup
-#: package/datasets/Time Series.name
+#: package/datasets/TimeSeries.name
 #: areachart/options.menuSubgroup
 #: linechart/options.menuSubgroup
 msgid "Time Series"
 msgstr "時系列"
 
-#: areachart/ui[5][0].label
+#: areachart/ui[4][0].label
 #: barplot/ui[7][0].label
 #: boxplot/ui[6][0].label
 #: histogram/ui[7][0].label
 #: likertplot/ui[8][0].label
-#: linechart/ui[5][0].label
+#: linechart/ui[4][0].label
 #: lollipop/ui[7][0].label
-#: mrcrosstabs/ui[7][0].label
-#: mrfrequencies/ui[7][0].label
+#: mrcrosstabs/ui[6][0].label
+#: mrfrequencies/ui[6][0].label
 #: piechart/ui[6][0].label
 #: qqplot/ui[7][0].label
-#: raincloud/ui[5][0].label
+#: raincloud/ui[4][0].label
 #: scatterplot/ui[5][0].label
 msgid "Title"
 msgstr "タイトル"
 
 #: corresp/ui[8][0][1][0].label
-#: multcorresp/ui[9][0][1][0].label
+#: multcorresp/ui[8][0][1][0].label
 #: principal/ui[6][0][1][0].label
 msgid "Title Style"
 msgstr "タイトルスタイル"
 
 #: corresp/ui[8][0][0][0].label
-#: multcorresp/ui[9][0][0][0].label
+#: multcorresp/ui[8][0][0][0].label
 #: principal/ui[6][0][0][0].label
 msgid "Title Text"
 msgstr "タイトル"
@@ -4799,6 +4440,7 @@ msgstr "種類"
 msgid "Unable to use {rotation} rotation."
 msgstr "{rotation}回転を使用できません。"
 
+#: R/qqplot.b.R
 #: qqplot/options/distrib/unif.title
 msgid "Uniform"
 msgstr "一様"
@@ -4812,9 +4454,9 @@ msgstr "US（月-日-年）"
 msgid "Use boldface"
 msgstr "太字を使用"
 
-#: barplot/ui[3][0][0][0]/singleColor.label
+#: barplot/options/singleColor.title
 #: boxplot/ui[2][0][0][0]/singleColor.label
-#: mrfrequencies/ui[3][0][0][0]/singleColor.label
+#: mrfrequencies/options/singleColor.title
 #: raincloud/ui[1][1][0]/singleColor.label
 msgid "Use color No."
 msgstr "色番号を使用"
@@ -4960,6 +4602,7 @@ msgstr "vijPlots：もう1つのjamovi作図モジュール"
 #: multcorresp/options/colorPalette/viridis::inferno.title
 #: piechart/options/colorPalette/viridis::inferno.title
 #: principal/options/colorPalette/viridis::inferno.title
+#: qqplot/options/colorPalette/viridis::inferno.title
 #: raincloud/options/colorPalette/viridis::inferno.title
 #: scatterplot/options/colorPalette/viridis::inferno.title
 msgid "Viridis:Inferno"
@@ -4975,6 +4618,7 @@ msgstr "Viridis：インフェルノ"
 #: multcorresp/options/colorPalette/viridis::magma.title
 #: piechart/options/colorPalette/viridis::magma.title
 #: principal/options/colorPalette/viridis::magma.title
+#: qqplot/options/colorPalette/viridis::magma.title
 #: raincloud/options/colorPalette/viridis::magma.title
 #: scatterplot/options/colorPalette/viridis::magma.title
 msgid "Viridis:Magma"
@@ -4990,6 +4634,7 @@ msgstr "Viridis：マグマ"
 #: multcorresp/options/colorPalette/viridis::plasma.title
 #: piechart/options/colorPalette/viridis::plasma.title
 #: principal/options/colorPalette/viridis::plasma.title
+#: qqplot/options/colorPalette/viridis::plasma.title
 #: raincloud/options/colorPalette/viridis::plasma.title
 #: scatterplot/options/colorPalette/viridis::plasma.title
 msgid "Viridis:Plasma"
@@ -5005,6 +4650,7 @@ msgstr "Viridis：プラズマ"
 #: multcorresp/options/colorPalette/viridis::turbo.title
 #: piechart/options/colorPalette/viridis::turbo.title
 #: principal/options/colorPalette/viridis::turbo.title
+#: qqplot/options/colorPalette/viridis::turbo.title
 #: raincloud/options/colorPalette/viridis::turbo.title
 #: scatterplot/options/colorPalette/viridis::turbo.title
 msgid "Viridis:Turbo"
@@ -5020,11 +4666,13 @@ msgstr "Viridis：ターボ"
 #: multcorresp/options/colorPalette/viridis::viridis.title
 #: piechart/options/colorPalette/viridis::viridis.title
 #: principal/options/colorPalette/viridis::viridis.title
+#: qqplot/options/colorPalette/viridis::viridis.title
 #: raincloud/options/colorPalette/viridis::viridis.title
 #: scatterplot/options/colorPalette/viridis::viridis.title
 msgid "Viridis:Viridis"
 msgstr "Viridis：基本"
 
+#: R/qqplot.b.R
 #: qqplot/options/distrib/weibull.title
 msgid "Weibull"
 msgstr "ワイブル"
@@ -5047,31 +4695,7 @@ msgstr "ワイブル"
 msgid "White"
 msgstr "白"
 
-#: mrcrosstabs/options/size/wide.title
-#: mrfrequencies/options/size/wide.title
-msgid "Wide (700x400)"
-msgstr "幅広 (700x400)"
-
-#: areachart/options/plotWidth.title
-#: barplot/options/plotWidth.title
-#: boxplot/options/plotWidth.title
-#: corresp/options/plotWidth.title
 #: histogram/options/binWidth.title
-#: histogram/options/plotWidth.title
-#: likertplot/options/plotWidth.title
-#: linechart/options/plotWidth.title
-#: lollipop/options/plotWidth.title
-#: mrcrosstabs/options/plotWidth.title
-#: mrfrequencies/options/plotWidth.title
-#: multcorresp/options/discrimWidth.title
-#: multcorresp/options/catWidth.title
-#: multcorresp/options/obsWidth.title
-#: multcorresp/options/biplotWidth.title
-#: piechart/options/plotWidth.title
-#: principal/options/plotWidth.title
-#: qqplot/options/plotWidth.title
-#: raincloud/options/plotWidth.title
-#: scatterplot/options/plotWidth.title
 msgid "Width"
 msgstr "幅"
 
@@ -5090,8 +4714,8 @@ msgstr "グループ内"
 #: areachart/ui/mode/oneVariable[0][0][0].label
 #: areachart/ui/mode/severalVariables[0][0][0].label
 #: areachart/ui[1][1][0].label
-#: areachart/ui[3][0][0][0].label
-#: areachart/ui[4][1].label
+#: areachart/ui[2][0][0][0].label
+#: areachart/ui[3][1].label
 #: barplot/ui[5][0][0][0].label
 #: barplot/ui[6][1].label
 #: boxplot/ui[4][0][0][0].label
@@ -5104,24 +4728,24 @@ msgstr "グループ内"
 #: linechart/options/timeVar.title
 #: linechart/ui[0][0].label
 #: linechart/ui[1][1][0].label
-#: linechart/ui[3][0][0][0].label
-#: linechart/ui[4][1].label
+#: linechart/ui[2][0][0][0].label
+#: linechart/ui[3][1].label
 #: lollipop/ui[5][0][0][0].label
 #: lollipop/ui[6][0].label
 #: mrcrosstabs/options/xaxis.title
 #: mrcrosstabs/ui[2][0][1][1].label
-#: mrcrosstabs/ui[5][0][0][0].label
-#: mrcrosstabs/ui[6][1].label
-#: mrfrequencies/ui[5][0][0][0].label
-#: mrfrequencies/ui[6][0].label
+#: mrcrosstabs/ui[4][0][0][0].label
+#: mrcrosstabs/ui[5][1].label
+#: mrfrequencies/ui[4][0][0][0].label
+#: mrfrequencies/ui[5][0].label
 #: multcorresp/options/xaxis.title
-#: multcorresp/ui[8][1].label
+#: multcorresp/ui[7][1].label
 #: principal/options/xaxis.title
 #: principal/ui[5][1].label
 #: qqplot/ui[5][0][0][0].label
 #: qqplot/ui[6][1].label
-#: raincloud/ui[3][0][0][0].label
-#: raincloud/ui[4][1].label
+#: raincloud/ui[2][0][0][0].label
+#: raincloud/ui[3][1].label
 #: scatterplot/options/xaxis.title
 #: scatterplot/ui[0][0].label
 #: scatterplot/ui[3][0][0][0].label
@@ -5146,8 +4770,8 @@ msgstr "X軸は日付"
 msgid "X-Axis Range"
 msgstr "X軸範囲"
 
-#: areachart/ui[3][0][1][0].label
-#: areachart/ui[4][2].label
+#: areachart/ui[2][0][1][0].label
+#: areachart/ui[3][2].label
 #: barplot/options/yaxis.title
 #: barplot/ui[1][0][0].label
 #: barplot/ui[5][0][1][0].label
@@ -5160,25 +4784,25 @@ msgstr "X軸範囲"
 #: histogram/ui[5][0][1][0].label
 #: histogram/ui[6][2].label
 #: likertplot/ui[6][0][1][0].label
-#: linechart/ui[3][0][1][0].label
-#: linechart/ui[4][2].label
+#: linechart/ui[2][0][1][0].label
+#: linechart/ui[3][2].label
 #: lollipop/options/yaxis.title
 #: lollipop/ui[2][0][0].label
 #: lollipop/ui[5][0][1][0].label
 #: lollipop/ui[6][1].label
-#: mrcrosstabs/ui[5][0][1][0].label
-#: mrcrosstabs/ui[6][2].label
+#: mrcrosstabs/ui[4][0][1][0].label
+#: mrcrosstabs/ui[5][2].label
 #: mrfrequencies/options/yaxis.title
-#: mrfrequencies/ui[5][0][1][0].label
-#: mrfrequencies/ui[6][1].label
+#: mrfrequencies/ui[4][0][1][0].label
+#: mrfrequencies/ui[5][1].label
 #: multcorresp/options/yaxis.title
-#: multcorresp/ui[8][2].label
+#: multcorresp/ui[7][2].label
 #: principal/options/yaxis.title
 #: principal/ui[5][2].label
 #: qqplot/ui[5][0][1][0].label
 #: qqplot/ui[6][2].label
-#: raincloud/ui[3][0][1][0].label
-#: raincloud/ui[4][2].label
+#: raincloud/ui[2][0][1][0].label
+#: raincloud/ui[3][2].label
 #: scatterplot/options/yaxis.title
 #: scatterplot/ui[0][1].label
 #: scatterplot/ui[3][0][1][0].label
@@ -5220,6 +4844,7 @@ msgstr "黄"
 #: multcorresp/options/colorPalette/YlGnBu.title
 #: piechart/options/colorPalette/YlGnBu.title
 #: principal/options/colorPalette/YlGnBu.title
+#: qqplot/options/colorPalette/YlGnBu.title
 #: raincloud/options/colorPalette/YlGnBu.title
 #: scatterplot/options/colorPalette/YlGnBu.title
 msgid "Yellow to Blue"
@@ -5235,6 +4860,7 @@ msgstr "黄 → 青"
 #: multcorresp/options/colorPalette/YlOrBr.title
 #: piechart/options/colorPalette/YlOrBr.title
 #: principal/options/colorPalette/YlOrBr.title
+#: qqplot/options/colorPalette/YlOrBr.title
 #: raincloud/options/colorPalette/YlOrBr.title
 #: scatterplot/options/colorPalette/YlOrBr.title
 msgid "Yellow to Brown"
@@ -5250,6 +4876,7 @@ msgstr "黄 → 茶色"
 #: multcorresp/options/colorPalette/YlGn.title
 #: piechart/options/colorPalette/YlGn.title
 #: principal/options/colorPalette/YlGn.title
+#: qqplot/options/colorPalette/YlGn.title
 #: raincloud/options/colorPalette/YlGn.title
 #: scatterplot/options/colorPalette/YlGn.title
 msgid "Yellow to Green"
@@ -5265,7 +4892,515 @@ msgstr "黄 → 緑"
 #: multcorresp/options/colorPalette/YlOrRd.title
 #: piechart/options/colorPalette/YlOrRd.title
 #: principal/options/colorPalette/YlOrRd.title
+#: qqplot/options/colorPalette/YlOrRd.title
 #: raincloud/options/colorPalette/YlOrRd.title
 #: scatterplot/options/colorPalette/YlOrRd.title
 msgid "Yellow to Red"
 msgstr "黄 → 赤"
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "{var} doesn't have a valid date format."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Supplementary row numbers must be between 1 and {nmax}."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Supplementary column numbers must be between 1 and {nmax}."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Number of dimensions must be less than or equal to {maxDim}."
+msgstr ""
+
+#: R/corresp.b.R
+msgid ""
+"Axis numbers must be less than or equal to the number of dimensions "
+"({nDim})."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Axis numbers cannot be equal."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Principal normalization"
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Symetric normalization"
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Row principal normalization"
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Column principal normalization"
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Standard normalization"
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Row Points for {rows}"
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Column Points for {cols}"
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Symmetric normalization"
+msgstr ""
+
+#: R/corresp.b.R
+msgid ""
+"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
+"two categorical variables. Computations are based on <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
+"using the \"Counts\" variable.</p>\n"
+"<p><strong>Supplementary row or column</strong> numbers may be entered as "
+"integer lists : 1,3,6</p>\n"
+"<p>Four normalizations (scaling of row and column scores before plotting) "
+"are avalaible :</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Row an columns scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
+"square root of eigenvalues. </li>\n"
+"<li><strong>Row Principal:</strong> Only row scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Column Principal:</strong> Only column scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Standard:</strong> The raw coordinates without "
+"normalization.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
+msgstr ""
+
+#: R/likertplot.b.R
+msgid "Likert Plot requires ordinal (or numeric) variables"
+msgstr ""
+
+#: R/likertplot.b.R
+msgid "Median and mean require numeric variables"
+msgstr ""
+
+#: R/likertplot.b.R
+msgid "Comparison tests require numeric variables"
+msgstr ""
+
+#: R/likertplot.b.R
+msgid "Cannot convert text variables to integers"
+msgstr ""
+
+#: R/likertplot.b.R
+msgid "Cannot tidy up text variables"
+msgstr ""
+
+#: R/likertplot.b.R
+msgid "Comparison tests cannot be computed with empty (N=0) groups"
+msgstr ""
+
+#: R/likertplot.b.R
+msgid ""
+"<h3>Data & Sorting</h3>\n"
+"<ul>\n"
+"<li>Likert variables must be of ordinal measure-type. (Continuous "
+"measure-type works as well.)</li>\n"
+"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
+"must be of integer data-type.</li>\n"
+"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
+"order in table and graph (when some variables miss some levels).</li>\n"
+"<li><strong>Convert variables to integer:</strong> when checked, the level "
+"labels are ignored and only integer values are used.</li>\n"
+"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
+"variables by median.</li>\n"
+"</ul>\n"
+"<h3>Comparison Tests</h3>\n"
+"<p>When using a group variable, several tests are available:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
+"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
+"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
+"</ul>\n"
+"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
+"question) for post hoc tests or <strong>overall</strong> (groupwise and "
+"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
+"p-values are already adjusted (groupwise); no other adjustment is "
+"possible.</p>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
+msgstr ""
+
+#: R/lollipop.b.R
+msgid "Mean of {var}"
+msgstr ""
+
+#: R/lollipop.b.R
+msgid "Median of {var}"
+msgstr ""
+
+#: R/lollipop.b.R
+msgid "Minimum of {var}"
+msgstr ""
+
+#: R/lollipop.b.R
+msgid "Maximum of {var}"
+msgstr ""
+
+#: R/mrcrosstabs.b.R
+msgid "Crosstab (% of cases)"
+msgstr ""
+
+#: R/mrcrosstabs.b.R
+msgid "Crosstab (% of responses)"
+msgstr ""
+
+#: R/mrcrosstabs.b.R
+msgid ""
+"<p>This module computes two-way frequencies for multiple response "
+"questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+
+#: R/mrfrequencies.b.R
+msgid ""
+"<p>This module computes frequencies for multiple response questions, also "
+"known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
+msgstr ""
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "X-Axis and Y-Axis cannot be equal."
+msgstr ""
+
+#: R/multcorresp.b.R
+msgid "MCA Principal Coordinates"
+msgstr ""
+
+#: R/multcorresp.b.R
+msgid "MCA Standard Coordinates"
+msgstr ""
+
+#: R/multcorresp.b.R
+msgid ""
+"<p>This module computes <strong>Multiple Correspondence Analysis "
+"(MCA)</strong> for several categorical variables. Computations are based on "
+"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Both classic methods are available:</p>\n"
+"<ul>\n"
+"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
+"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues "
+"are the squares of those of the indicator matrix method. </li>\n"
+"</ul>\n"
+"<p>Both methods give the same <em>standard</em> coordinates (but different "
+"<em>principal</em> coordinates).</p>\n"
+"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
+"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
+"(and inertia) of categories and observations are computed from the original "
+"eigenvalues of the Burt matrix.</p>\n"
+"<p>The <strong>Normalization</strong> options specify how the coordinates "
+"are scaled (by eigenvalues):</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Both category and observation coordinates "
+"are scaled.</li>\n"
+"<li><strong>Category principal:</strong> Only category coordinates are "
+"scaled.</li>\n"
+"<li><strong>Observation principal:</strong> Only observation coordinates "
+"are scaled.</li>\n"
+"<li><strong>Standard:</strong> Both category and observation coordinates "
+"are standard.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
+msgstr ""
+
+#: R/piechart.b.R
+msgid "Pie charts are for educational use only. Please do not use Pie charts!"
+msgstr ""
+
+#: R/principal.b.R
+msgid "The number of dimensions cannot be greater than the number of variables."
+msgstr ""
+
+#: R/principal.b.R
+msgid "PCA Principal Coordinates"
+msgstr ""
+
+#: R/principal.b.R
+msgid "PCA Standard Coordinates"
+msgstr ""
+
+#: R/principal.b.R
+msgid ""
+"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
+"for several continuous variables. Computations are based on "
+"<tt>stats::prcomp</tt> function.</p>\n"
+"<p>Although rotated components are not principal components, they are "
+"widely used. Only orthogonal rotations are available (from GPArotation "
+"package).</p>\n"
+"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
+"principal (scaled by the squareroot of eigenvalues).</p>\n"
+"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
+"eigenvalues) while loadings are standard.</li>\n"
+"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
+"are standard. </li>\n"
+"</ul>\n"
+"<p><strong>Advanced options</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Standardize loadings:</strong> loadings are normalized with "
+"sums of squared equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Standardize scores:</strong> scores are normalized with "
+"variances equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
+"applied to eigenvectors (standard loadings) instead of principal loadings "
+"(STATA way).</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
+msgstr ""
+
+#: R/qqplot.b.R
+msgid "Natural Log Tranform requires positive (>0) data."
+msgstr ""
+
+#: R/qqplot.b.R
+msgid "{distrib} distribution requires positive (>0) data."
+msgstr ""
+
+#: R/qqplot.b.R
+msgid "Exponential distribution requires non-negative (≥0) data."
+msgstr ""
+
+#: R/qqplot.b.R
+msgid "Beta distribution requires data between 0 and 1."
+msgstr ""
+
+#: R/qqplot.b.R
+msgid "Unable to estimate the distribution parameters."
+msgstr ""
+
+#: R/qqplot.b.R
+msgid "Wrong parameter values."
+msgstr ""
+
+#: R/qqplot.b.R
+msgid "F"
+msgstr ""
+
+#: R/qqplot.b.R
+msgid ""
+"<p>This module uses <a href = "
+"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
+"package<a/> by Alexandre Almeida, Adam Loy and Heike Hofmann. In-depth "
+"information can be found in the package documentation on CRAN site.</p>\n"
+"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
+"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
+"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
+"identity line.</p>\n"
+"<p><strong>Confidence band:</strong> Draws a confidence band around the "
+"reference line. qqplotr package provides several methods to compute the "
+"confidence band:</p>\n"
+"<ul>\n"
+"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
+"bands based on Normal confidence intervals;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
+"based on a parametric bootstrap;</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
+"Kolmogorov-Smirnov test;</li>\n"
+"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
+"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
+"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
+"simultaneous bands using the equal local levels.</li>\n"
+"</ul>\n"
+"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
+"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
+"according to the reference line. This procedure may help reducing visual "
+"bias caused by the orthogonal distances from the points to the reference "
+"line.</p>\n"
+"<p><strong>Parameter values:</strong> The distribution parameters can be "
+"estimated from data using:</p>\n"
+"<ul>\n"
+"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
+"should work with all distributions but \"t\" and \"uniform\";</li>\n"
+"<li><strong>Method of Moments</strong> for moment based parameters : it "
+"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
+"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
+"</ul>\n"
+"<p>or entered by user:</p>\n"
+"<ul>\n"
+"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
+"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
+"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
+"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
+"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
+"(Uniform).</li>\n"
+"</ul>\n"
+"</p>"
+msgstr ""
+
+#: areachart/options/ignoreNA.title
+#: barplot/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
+msgid "Ignore missing values"
+msgstr ""
+
+#: areachart/options/yTicks.title
+#: barplot/options/xTicks.title
+#: barplot/options/yTicks.title
+#: boxplot/options/xTicks.title
+#: boxplot/options/yTicks.title
+#: histogram/options/xTicks.title
+#: histogram/options/yTicks.title
+#: linechart/options/yTicks.title
+#: lollipop/options/xTicks.title
+#: lollipop/options/yTicks.title
+#: mrcrosstabs/options/xTicks.title
+#: mrcrosstabs/options/yTicks.title
+#: mrfrequencies/options/xTicks.title
+#: mrfrequencies/options/yTicks.title
+#: qqplot/options/xTicks.title
+#: qqplot/options/yTicks.title
+#: raincloud/options/xTicks.title
+#: raincloud/options/yTicks.title
+#: scatterplot/options/xTicks.title
+#: scatterplot/options/yTicks.title
+msgid "Tick count"
+msgstr ""
+
+#: barplot/options/reverseStack.title
+#: likertplot/options/reverseLikert.title
+#: mrcrosstabs/options/reverseStack.title
+msgid "Reverse stacking order"
+msgstr ""
+
+#: barplot/options/barType/dodge.title
+#: mrcrosstabs/options/bartype/dodge.title
+msgid "Grouped (tight)"
+msgstr ""
+
+#: barplot/ui[4].label
+#: boxplot/ui[3].label
+#: piechart/ui[4].label
+msgid "Text Size & Facets"
+msgstr ""
+
+#: boxplot/ui[2][0][1][0].label
+msgid "Box Elements"
+msgstr ""
+
+#: corresp/options/normalization/symmetric.title
+msgid "Symmetric"
+msgstr ""
+
+#: corresp/ui[6].label
+msgid "Text Size & Colors"
+msgstr ""
+
+#: likertplot/options/ignoreNA.title
+msgid "Ignore missing groups"
+msgstr ""
+
+#: linechart/ui[1][0][1].label
+#: principal/ui[4].label
+msgid "Sizes & Colors"
+msgstr ""
+
+#: mrcrosstabs/options/emptyAsNA.title
+#: mrfrequencies/options/emptyAsNA.title
+msgid "Treat empty values as missing"
+msgstr ""
+
+#: mrcrosstabs/options/computedValues/responses.title
+#: mrfrequencies/options/showResponses.title
+#: mrfrequencies/options/yaxis/responses.title
+msgid "% of responses"
+msgstr ""
+
+#: mrcrosstabs/options/computedValues/cases.title
+#: mrfrequencies/options/showCases.title
+#: mrfrequencies/options/yaxis/cases.title
+msgid "% of cases"
+msgstr ""
+
+#: mrcrosstabs/options/computedValues/options.title
+msgid "% by row"
+msgstr ""
+
+#: principal/ui[4][0][0][1].label
+#: scatterplot/ui[2][0][0][0].label
+msgid "Element Sizes"
+msgstr ""
+
+#: raincloud/options/groupOne.title
+#: raincloud/ui[0][1].label
+msgid "Group (Side-by-side)"
+msgstr ""
+
+#: scatterplot/ui[2].label
+msgid "Element Sizes & Facets"
+msgstr ""
+
+#: histogram/options/binBoundary.title
+msgctxt "boundary"
+msgid "Position"
+msgstr "位置"
+
+#: areachart/options/displayFormat/%b.title
+#: linechart/options/displayFormat/%b.title
+msgctxt "menu"
+msgid "Oct"
+msgstr "10月"
+
+#: areachart/options/displayFormat/%B.title
+#: linechart/options/displayFormat/%B.title
+msgctxt "menu"
+msgid "October"
+msgstr "10月"
+
+#: R/qqplot.b.R
+#: qqplot/options/distrib/norm.title
+msgctxt "distribution"
+msgid "Normal"
+msgstr ""
