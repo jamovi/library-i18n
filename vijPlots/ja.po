@@ -3,14 +3,18 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-03-27 01:09+0000\n"
 "Last-Translator: SHIBATA Seiji <contact@sbtseiji.net>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/jamovi/module-"
-"vijplots/ja/>\n"
+"Language-Team: Japanese "
+"<https://hosted.weblate.org/projects/jamovi/module-vijplots/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.17-dev\n"
+
+#: R/qqplot.b.R
+msgid "{distrib} distribution requires positive (>0) data."
+msgstr "{distrib} 分布は正のデータ（>0）を必要とします。"
 
 #: R/qqplot.b.R
 msgid "{distribStr} {typeStr} Plot of {varStr}"
@@ -31,6 +35,11 @@ msgstr "カイザー正規化を伴う{rotation}回転"
 #: R/principal.b.R
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "カイザー正規化を伴う{rotation}回転が用いられました。"
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "{var} doesn't have a valid date format."
+msgstr "{var} は妥当な日付形式ではありません。"
 
 #: barplot/options/facetNumber.title
 #: boxplot/options/facetNumber.title
@@ -54,6 +63,10 @@ msgstr "行/列数"
 msgid "% Accuracy"
 msgstr "%精度"
 
+#: mrcrosstabs/options/computedValues/options.title
+msgid "% by row"
+msgstr "行%"
+
 #: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
 msgid "% Inertia"
@@ -69,6 +82,12 @@ msgstr "%ラベル"
 msgid "% of Cases"
 msgstr "ケース%"
 
+#: mrcrosstabs/options/computedValues/cases.title
+#: mrfrequencies/options/showCases.title
+#: mrfrequencies/options/yaxis/cases.title
+msgid "% of cases"
+msgstr "ケース%"
+
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -81,6 +100,12 @@ msgstr "慣性%"
 msgid "% of Responses"
 msgstr "回答%"
 
+#: mrcrosstabs/options/computedValues/responses.title
+#: mrfrequencies/options/showResponses.title
+#: mrfrequencies/options/yaxis/responses.title
+msgid "% of responses"
+msgstr "回答%"
+
 #: principal/results/summaryTable.columns.title
 msgid "% of Variance"
 msgstr "分散%"
@@ -88,6 +113,331 @@ msgstr "分散%"
 #: R/mrcrosstabs.b.R
 msgid "% within"
 msgstr "内部%"
+
+#: R/likertplot.b.R
+msgid ""
+"<h3>Data & Sorting</h3>\n"
+"<ul>\n"
+"<li>Likert variables must be of ordinal measure-type. (Continuous "
+"measure-type works as well.)</li>\n"
+"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
+"must be of integer data-type.</li>\n"
+"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
+"order in table and graph (when some variables miss some levels).</li>\n"
+"<li><strong>Convert variables to integer:</strong> when checked, the level "
+"labels are ignored and only integer values are used.</li>\n"
+"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
+"variables by median.</li>\n"
+"</ul>\n"
+"<h3>Comparison Tests</h3>\n"
+"<p>When using a group variable, several tests are available:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
+"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
+"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
+"</ul>\n"
+"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
+"question) for post hoc tests or <strong>overall</strong> (groupwise and "
+"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
+"p-values are already adjusted (groupwise); no other adjustment is "
+"possible.</p>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
+msgstr ""
+"<h3>データと並べ替え</h3>\n"
+"<ul>\n"
+"<li>リッカート変数は順序変数である必要があります（連続変数でも動作します）。</li>\n"
+"<li>平均・中央値・標準偏差の計算や比較検定を行う場合、データ型は整数である必要があります。</li>\n"
+"<li><strong>水準の整理：</strong>水準が欠けている変数がある場合に、表やグラフのラベル順を調整します。</li>\n"
+"<li><strong>変数を整数に変換：</strong>水準ラベルは無視され、整数値のみが使用されます。</li>\n"
+"<li><strong>中央値で変数を並べ替え：</strong>リッカート変数の一覧を中央値で並べ替えます。</li>\n"
+"</ul>\n"
+"<h3>比較検定</h3>\n"
+"<p>グループ変数を使用する場合、以下の検定が利用できます：</p>\n"
+"<ul>\n"
+"<li><strong>マン・ホイットニーのU：</strong>2群の比較</li>\n"
+"<li><strong>クラスカル・ウォリス：</strong>n群の比較</li>\n"
+"<li><strong>事後検定：</strong>ダン、コノヴァー、ドゥワス・スティール・クリッチロウ・フリグナー（DSCF）によるペアワイズ比較</"
+"li>\n"
+"</ul>\n"
+"<p>p値は、事後検定については<strong>グループ単位</"
+"strong>（各質問ごと）で、マン・ホイットニーのU、クラスカル・ウォリス、および事後検定については<strong>全体</"
+"strong>（グループおよび質問全体）で調整できます。DSCFのp値はすでに（グループ単位で）調整されており、追加の調整はできません。</p>\n"
+"<p>サンプルデータは「Open > Data Library > vijPlots > Likert」から利用できます。</p>"
+
+#: R/corresp.b.R
+msgid ""
+"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
+"two categorical variables. Computations are based on <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
+"using the \"Counts\" variable.</p>\n"
+"<p><strong>Supplementary row or column</strong> numbers may be entered as "
+"integer lists : 1,3,6</p>\n"
+"<p>Four normalizations (scaling of row and column scores before plotting) "
+"are avalaible :</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Row an columns scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
+"square root of eigenvalues. </li>\n"
+"<li><strong>Row Principal:</strong> Only row scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Column Principal:</strong> Only column scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Standard:</strong> The raw coordinates without "
+"normalization.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
+msgstr ""
+"<p>このモジュールは、2つのカテゴリ変数に対して対応分析（CA）を実行します。計算は、F. Husson、J. Josse、S. Le、J. "
+"Mazet による FactoMineR パッケージに基づいています。</p>\n"
+"<p>データは、jamovi の組み込み重み付け機能、または「Counts」変数を用いて重み付けできます。</p>\n"
+"<p><strong>補助行</strong>または補助列の番号は、整数のリスト（例：1,3,6）で指定できます。</p>\n"
+"<p>プロット前に行・列スコアをスケーリングする方法として、以下の4種類の正規化が利用可能です。</p>\n"
+"<ul>\n"
+"<li><strong>主正規化</strong>　行・列スコアを固有値でスケーリングします。</li>\n"
+"<li><strong>対称正規化</strong>　行・列スコアを固有値の平方根でスケーリングします。</li>\n"
+"<li><strong>行主正規化</strong>　 行スコアのみを固有値でスケーリングします。</li>\n"
+"<li><strong>列主正規化</strong>　 列スコアのみを固有値でスケーリングします。</li>\n"
+"<li><strong>標準表示</strong>　正規化を行わない生の座標を使用します。</li>\n"
+"</ul>\n"
+"<p>サンプルデータは「Open > Data Library > vijPlots > Smoking」から利用できます。</p>"
+
+#: R/multcorresp.b.R
+msgid ""
+"<p>This module computes <strong>Multiple Correspondence Analysis "
+"(MCA)</strong> for several categorical variables. Computations are based on "
+"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Both classic methods are available:</p>\n"
+"<ul>\n"
+"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
+"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues are "
+"the squares of those of the indicator matrix method. </li>\n"
+"</ul>\n"
+"<p>Both methods give the same <em>standard</em> coordinates (but different "
+"<em>principal</em> coordinates).</p>\n"
+"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
+"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
+"(and inertia) of categories and observations are computed from the original "
+"eigenvalues of the Burt matrix.</p>\n"
+"<p>The <strong>Normalization</strong> options specify how the coordinates "
+"are scaled (by eigenvalues):</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Both category and observation coordinates "
+"are scaled.</li>\n"
+"<li><strong>Category principal:</strong> Only category coordinates are "
+"scaled.</li>\n"
+"<li><strong>Observation principal:</strong> Only observation coordinates are "
+"scaled.</li>\n"
+"<li><strong>Standard:</strong> Both category and observation coordinates are "
+"standard.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
+msgstr ""
+"<p>このモジュールは、複数のカテゴリ変数に対して<strong>多重コレスポンデンス分析 (MCA)</strong> "
+"を実行します。計算は、F.&nbsp;Husson、J.&nbsp;Josse、S.&nbsp;Le、J.&nbsp;Mazetらによる <a href "
+"= \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> パッケージに基づいています。</p>\n"
+"<p>以下の2つの古典的な手法が利用可能です：</p>\n"
+"<ul>\n"
+"<li><strong>指示行列：</strong> 指示行列に対する対応分析</li>\n"
+"<li><strong>バート行列：</strong> バート行列に対する対応分析。固有値は指示行列法の固有値の2乗になります。</li>\n"
+"</ul>\n"
+"<p>どちらの手法を用いても、同じ <em>標準</em> 座標（ただし異なる <em>主</em> 座標）が得られます。</p>\n"
+"<p>選択した場合、<strong>ベンゼクリおよびグリーンエーカーの補正</strong>は固有値のみに適用されます（<strong>要約</"
+"strong> テーブル）。カテゴリおよび観測値の座標は、バート行列の元の固有値から計算されます。</p>\n"
+"<p><strong>標準化</strong> オプションは、座標を（固有値で）どのようにスケーリングするかを指定します：</p>\n"
+"<ul>\n"
+"<li><strong>主標準化：</strong> カテゴリと個体の両方の座標がスケーリングされます。</li>\n"
+"<li><strong>カテゴリ主標準化：</strong> カテゴリの座標のみがスケーリングされます。</li>\n"
+"<li><strong>観測値主標準化：</strong> 観測値の座標のみがスケーリングされます。</li>\n"
+"<li><strong>標準：</strong> カテゴリと観測値の両方の座標が標準となります。</li>\n"
+"</ul>\n"
+"<p>サンプルファイルは Open > Data Library > vijPlots > Cars に含まれています。</p>"
+
+#: R/principal.b.R
+msgid ""
+"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
+"for several continuous variables. Computations are based on "
+"<tt>stats::prcomp</tt> function.</p>\n"
+"<p>Although rotated components are not principal components, they are widely "
+"used. Only orthogonal rotations are available (from GPArotation "
+"package).</p>\n"
+"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
+"principal (scaled by the squareroot of eigenvalues).</p>\n"
+"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
+"eigenvalues) while loadings are standard.</li>\n"
+"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
+"are standard. </li>\n"
+"</ul>\n"
+"<p><strong>Advanced options</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Standardize loadings:</strong> loadings are normalized with sums "
+"of squared equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Standardize scores:</strong> scores are normalized with "
+"variances equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
+"applied to eigenvectors (standard loadings) instead of principal loadings "
+"(STATA way).</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
+msgstr ""
+"<p>このモジュールは、複数の連続変数に対して<strong>主成分分析 (PCA)</strong> を実行します。計算は "
+"<tt>stats::prcomp</tt> 関数に基づいています。</p>\n"
+"<p>回転後の成分は厳密には主成分ではありませんが、広く利用されています。直交回転のみが利用可能です（GPArotation "
+"パッケージを使用）。</p>\n"
+"<p>主成分負荷量（変数座標）およびスコア（観測値座標）は主座標（固有値の平方根でスケーリングされたもの）です。</p>\n"
+"<p>バイプロットは \"Biplots in Practice\" (Michael Greenacre, 2010) に準拠しています：</p>\n"
+"<ul>\n"
+"<li><strong>フォーム・バイプロット：</strong> スコアは主座標（固有値でスケーリング）され、負荷量は標準座標となります。</li>\n"
+"<li><strong>共分散バイプロット：</strong> 負荷量は主座標となり、スコアは標準座標となります。</li>\n"
+"</ul>\n"
+"<p><strong>詳細設定</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>負荷量の標準化：</strong> 負荷量を（固有値ではなく）2乗和が1になるように標準化します。</li>\n"
+"<li><strong>スコアの標準化</strong> スコアを（固有値ではなく）分散が1になるように標準化します。</li>\n"
+"<li><strong>固有ベクトルの回転：</strong> "
+"主座標としての負荷量ではなく、固有ベクトル（標準負荷量）に対して回転（バリマックス回転など）を適用します（STATA方式）。</li>\n"
+"</ul>\n"
+"<p>サンプルファイルは「開く > データライブラリ > vijPlots > Iris」に含まれています。</p>"
+
+#: R/mrfrequencies.b.R
+msgid ""
+"<p>This module computes frequencies for multiple response questions, also "
+"known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>このモジュールは、複数回答質問（いわゆる「該当するものをすべて選択」）の度数集計を行います。</p>\n"
+"<p>質問は以下の形式でコーディングできます：</p>\n"
+"<ul>\n"
+"<li>各選択肢ごとに、0/1、1/2、Y/N などで表した複数の<strong>ダミー変数</strong>；</li>\n"
+"<li>選択された回答を区切り記号（通常は「,」や「;」）で並べた、単一の<strong>多値変数</strong>。</li>\n"
+"</ul>\n"
+"<p>サンプルデータは「Open > Data Library > vijPlots > Credit Cards」から利用できます。</p>"
+
+#: R/mrcrosstabs.b.R
+msgid ""
+"<p>This module computes two-way frequencies for multiple response questions, "
+"also known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>このモジュールは、複数回答質問（いわゆる「該当するものをすべて選択」）に対して、2変数の度数集計を行います。</p>\n"
+"<p>質問は以下の形式でコーディングできます：</p>\n"
+"<ul>\n"
+"<li> 各選択肢ごとに、0/1、1/2、Y/N などで表した複数の <strong> ダミー変数 </strong> ； </li>\n"
+"<li>選択された回答を区切り記号（通常は「,」や「;」）で並べた、単一の <strong> 多値変数 </strong> 。</li>\n"
+"</ul>\n"
+"<p>サンプルデータは「Open > Data Library > vijPlots > Credit Cards」から利用できます。</p>"
+
+#: R/qqplot.b.R
+msgid ""
+"<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
+"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"Heike Hofmann. In-depth information can be found in the package "
+"documentation on CRAN site.</p>\n"
+"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
+"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
+"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
+"identity line.</p>\n"
+"<p><strong>Confidence band:</strong> Draws a confidence band around the "
+"reference line. qqplotr package provides several methods to compute the "
+"confidence band:</p>\n"
+"<ul>\n"
+"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
+"bands based on Normal confidence intervals;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
+"based on a parametric bootstrap;</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
+"Kolmogorov-Smirnov test;</li>\n"
+"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
+"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
+"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
+"simultaneous bands using the equal local levels.</li>\n"
+"</ul>\n"
+"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
+"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
+"according to the reference line. This procedure may help reducing visual "
+"bias caused by the orthogonal distances from the points to the reference "
+"line.</p>\n"
+"<p><strong>Parameter values:</strong> The distribution parameters can be "
+"estimated from data using:</p>\n"
+"<ul>\n"
+"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
+"should work with all distributions but \"t\" and \"uniform\";</li>\n"
+"<li><strong>Method of Moments</strong> for moment based parameters : it "
+"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
+"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
+"</ul>\n"
+"<p>or entered by user:</p>\n"
+"<ul>\n"
+"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
+"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
+"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
+"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
+"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
+"(Uniform).</li>\n"
+"</ul>\n"
+"</p>"
+msgstr ""
+"<p>このモジュールは、Alexandre Almeida、Adam Loy、Heike Hofmannらによる <a href = "
+"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
+"パッケージ<a/> を使用しています。詳細な情報は、CRANサイトにあるパッケージのドキュメントで確認できます。</p>\n"
+"<p><strong>参照線：</strong> <em>恒等線</em> (y = x)、または2つのデータ分位数 (Q<sub>0.25</sub> "
+"および Q<sub>0.75</sub>) を通る一般的な <em>Q-Q 線</em> のいずれかを描画します。P-P "
+"プロットは恒等線のみをサポートしています。</p>\n"
+"<p><strong>信頼帯：</strong> 参照線の周囲に信頼帯を描画します。qqplotr "
+"パッケージでは、信頼帯を計算するために以下のようないくつかの手法が提供されています：</p>\n"
+"<ul>\n"
+"<li><strong><em>点別</em></strong> は、正規分布の信頼区間に基づいて点別の信頼帯を構築します。</li>\n"
+"<li><strong><em>ブートストラップ</em></strong> "
+"は、パラメトリック・ブートストラップに基づいて点別の信頼帯を作成します。</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> "
+"帯は、コルモゴロフ・スミルノフ検定に基づいています。</li>\n"
+"<li><strong><em>Tail-Sensitive</em></strong> は、裾の重さに感度を持たせた信頼帯を構築しますが、正規 Q-Q "
+"プロットに対してのみ実装されています。</li>\n"
+"<li><strong><em>等局所水準</em></strong> は、等局所水準を用いて同時信頼帯を構築します。</li>\n"
+"</ul>\n"
+"<p>P-P プロットは「等局所水準」と「ブートストラップ」の手法のみをサポートしています。</p>\n"
+"<p><strong>トレンド除去プロット：</strong> 各オブジェクトは、参照線に基づいて <em>トレンド除去</em> "
+"されます。この手順は、点から参照線までの直交距離によって生じる視覚的なバイアスを軽減するのに役立ちます。</p>\n"
+"<p><strong>パラメタ値：</strong> 分布のパラメタは、以下の方法でデータから推定できます：</p>\n"
+"<ul>\n"
+"<li><strong>最尤法</strong>（MASS パッケージを使用）： 「t分布」と「一様分布」を除くすべての分布で機能します。</li>\n"
+"<li><strong>モーメント法 </strong> (モーメントに基づくパラメーター用): "
+"「正規分布」、「対数正規分布」、「ベータ分布」、「指数分布」、「ガンマ分布」、「ロジスティック分布」、「一様分布」で機能します。</li>\n"
+"</ul>\n"
+"<p>または、ユーザーが入力することも可能です：</p>\n"
+"<ul>\n"
+"<li><strong>パラメーター 1：</strong> 平均（正規分布）、対数平均（対数正規分布）、形状1 "
+"(ベータ分布)、位置（コーシー分布、ロジスティック分布）、自由度（カイ2乗、スチューデント）、自由度1"
+"（F分布）、レート（指数分布）、形状（ガンマ分布、ワイブル分布）、最小値（一様分布）。</li>\n"
+"<li><strong>パラメーター 2：</strong> 標準偏差（正規分布）、対数標準偏差（対数正規分布）、形状2 (ベータ分布)、スケール "
+"（コーシー分布、ロジスティック分布）、自由度2（F分布）、レート （ガンマ分布、ワイブル分布）、最大値（一様分布）。</li>\n"
+"</ul>\n"
+"</p>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -379,6 +729,14 @@ msgstr "自動"
 msgid "Axes"
 msgstr "軸"
 
+#: R/corresp.b.R
+msgid "Axis numbers cannot be equal."
+msgstr "軸番号は同じ値にはできません。"
+
+#: R/corresp.b.R
+msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
+msgstr "軸番号は次元数（{nDim}）以下でなければなりません。"
+
 #: corresp/ui[7].label
 #: mrfrequencies/ui[5].label
 msgid "Axis Titles"
@@ -419,6 +777,10 @@ msgstr "ベンゼクリ補正"
 #: qqplot/options/distrib/beta.title
 msgid "Beta"
 msgstr "ベータ"
+
+#: R/qqplot.b.R
+msgid "Beta distribution requires data between 0 and 1."
+msgstr "ベータ分布は 0 から 1 の間のデータを必要とします。"
 
 #: likertplot/options/adjustMethod/BH.title
 msgid "BH"
@@ -687,6 +1049,15 @@ msgstr "枠線"
 msgid "Bottom"
 msgstr "下"
 
+#: histogram/options/binBoundary.title
+msgctxt "boundary"
+msgid "Position"
+msgstr "位置"
+
+#: boxplot/ui[2][0][1][0].label
+msgid "Box Elements"
+msgstr "ボックス要素"
+
 #: package/analyses/boxplot.title
 #: package/analyses/boxplot.menuTitle
 #: boxplot/options.title
@@ -740,6 +1111,14 @@ msgstr "グループごと"
 #: likertplot/ui[4][0][1][0]/groupBy_variable.label
 msgid "By variable"
 msgstr "変数ごと"
+
+#: R/likertplot.b.R
+msgid "Cannot convert text variables to integers"
+msgstr "文字変数を整数に変換できません"
+
+#: R/likertplot.b.R
+msgid "Cannot tidy up text variables"
+msgstr "テキスト変数は整形できません"
 
 #: areachart/ui[4][2].label
 #: barplot/ui[7][2].label
@@ -982,9 +1361,17 @@ msgstr "列プロット"
 msgid "Column plot"
 msgstr "列プロット"
 
+#: R/corresp.b.R
+msgid "Column Points for {cols}"
+msgstr "{cols} の列点"
+
 #: corresp/options/normalization/colprincipal.title
 msgid "Column principal"
 msgstr "列の主成分"
+
+#: R/corresp.b.R
+msgid "Column principal normalization"
+msgstr "列主正規化"
 
 #: corresp/results/colProfiles.title
 msgid "Column Profiles"
@@ -1008,6 +1395,14 @@ msgstr "列（グループ）"
 #: likertplot/results/comp.title
 msgid "Comparison Tests"
 msgstr "比較検定"
+
+#: R/likertplot.b.R
+msgid "Comparison tests cannot be computed with empty (N=0) groups"
+msgstr "空のグループ（N=0）がある場合、比較検定は実行できません"
+
+#: R/likertplot.b.R
+msgid "Comparison tests require numeric variables"
+msgstr "比較検定には数値変数が必要です"
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
@@ -1148,6 +1543,14 @@ msgstr "クロス集計"
 #: R/mrcrosstabs.b.R
 msgid "Crosstab (% by row)"
 msgstr "クロス集計（行%）"
+
+#: R/mrcrosstabs.b.R
+msgid "Crosstab (% of cases)"
+msgstr "クロス集計（ケース%）"
+
+#: R/mrcrosstabs.b.R
+msgid "Crosstab (% of responses)"
+msgstr "クロス集計（回答%）"
 
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
@@ -1324,6 +1727,12 @@ msgstr "表示形式"
 msgid "Distribution"
 msgstr "分布"
 
+#: R/qqplot.b.R
+#: qqplot/options/distrib/norm.title
+msgctxt "distribution"
+msgid "Normal"
+msgstr "標準"
+
 #: piechart/options/donut.title
 msgid "Donut chart"
 msgstr "ドーナツチャート"
@@ -1380,6 +1789,15 @@ msgstr "固有値"
 msgid "Eigenvalues"
 msgstr "固有値"
 
+#: principal/ui[4][0][0][1].label
+#: scatterplot/ui[2][0][0][0].label
+msgid "Element Sizes"
+msgstr "要素サイズ"
+
+#: scatterplot/ui[2].label
+msgid "Element Sizes & Facets"
+msgstr "要素サイズとファセット"
+
 #: qqplot/options/methodQQ/ell.title
 #: qqplot/options/methodPP/ell.title
 msgid "Equal Local Levels"
@@ -1404,9 +1822,17 @@ msgstr "EU（日-月-年）"
 msgid "Exponential"
 msgstr "指数"
 
+#: R/qqplot.b.R
+msgid "Exponential distribution requires non-negative (≥0) data."
+msgstr "指数分布は非負（≥0）のデータを必要とします。"
+
 #: principal/results/summaryTable.columns.superTitle
 msgid "Extraction Sums of Squared Loadings"
 msgstr "抽出された負荷量の2乗和"
+
+#: R/qqplot.b.R
+msgid "F"
+msgstr "F"
 
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
@@ -1690,6 +2116,11 @@ msgstr "グループ"
 msgid "Group (Overlapped)"
 msgstr "グループ（重ね合わせ）"
 
+#: raincloud/options/groupOne.title
+#: raincloud/ui[0][1].label
+msgid "Group (Side-by-side)"
+msgstr "グループ（横並び）"
+
 #: piechart/options/labels/group+count.title
 msgid "Group + Count"
 msgstr "グループ + 度数"
@@ -1707,6 +2138,11 @@ msgstr "グループ化の基準"
 #: mrcrosstabs/options/bartype/dodge2.title
 msgid "Grouped"
 msgstr "グループ化済"
+
+#: barplot/options/barType/dodge.title
+#: mrcrosstabs/options/bartype/dodge.title
+msgid "Grouped (tight)"
+msgstr "グループ化（間隔を詰める）"
 
 #: histogram/options/grouping.title
 #: histogram/options/groupingN.title
@@ -1776,6 +2212,17 @@ msgstr "水平プロット"
 #: qqplot/ui[2][1][0]/refLine[0]/refType_identity.label
 msgid "Identity line"
 msgstr "同一線"
+
+#: likertplot/options/ignoreNA.title
+msgid "Ignore missing groups"
+msgstr "欠損グループを無視"
+
+#: areachart/options/ignoreNA.title
+#: barplot/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
+msgid "Ignore missing values"
+msgstr "欠損値を無視"
 
 #: multcorresp/options/ggrepel.title
 msgid "Improve label display"
@@ -2324,6 +2771,10 @@ msgstr "リッカート"
 msgid "Likert Plot"
 msgstr "リッカートプロット"
 
+#: R/likertplot.b.R
+msgid "Likert Plot requires ordinal (or numeric) variables"
+msgstr "リッカートプロットには順序尺度（または数値）変数が必要です"
+
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
 msgid "Likert Variables"
@@ -2396,12 +2847,10 @@ msgid ""
 "(and changelog) is available at <a "
 "href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>."
 msgstr ""
-"主な統計グラフ（ヒストグラム、箱ひげ図、点プロット、棒グラフ、折れ線グラフ、"
-"レインクラウドプロットなど）には多数のオプションが用意されています。あわせて"
-"、リッカートプロット、多重回答棒グラフ、主成分分析および（多重）対応分析にも"
-"対応しています。 プロジェクトのソースコード（および変更履歴）は <a "
-"href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a> で公"
-"開されています。"
+"主な統計グラフ（ヒストグラム、箱ひげ図、点プロット、棒グラフ、折れ線グラフ、レインクラウドプロットなど）には多数のオプションが用意されています。あわせて、"
+"リッカートプロット、多重回答棒グラフ、主成分分析および（多重）対応分析にも対応しています。 プロジェクトのソースコード（および変更履歴）は <a "
+"href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a> "
+"で公開されています。"
 
 #: likertplot/options/showMannU.title
 msgid "Mann-Whitney U"
@@ -2475,6 +2924,10 @@ msgstr "質量"
 msgid "Max"
 msgstr "最大値"
 
+#: R/lollipop.b.R
+msgid "Maximum of {var}"
+msgstr "{var} の最大値"
+
 #: qqplot/options/paramEstMethod/mle.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mle.label
 msgid "Maximum-likelihood (MLE)"
@@ -2485,6 +2938,14 @@ msgstr "最尤法（MLE）"
 msgid "May"
 msgstr "5月"
 
+#: R/multcorresp.b.R
+msgid "MCA Principal Coordinates"
+msgstr "MCA主座標"
+
+#: R/multcorresp.b.R
+msgid "MCA Standard Coordinates"
+msgstr "MCA標準座標"
+
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 msgid "Mean"
@@ -2494,12 +2955,36 @@ msgstr "平均値"
 msgid "Mean & SD"
 msgstr "平均値 & 標準偏差"
 
+#: R/lollipop.b.R
+msgid "Mean of {var}"
+msgstr "{var} の平均値"
+
 #: R/likertplot.b.R
 #: likertplot/options/showMedian.title
 #: lollipop/options/yaxis/median.title
 #: lollipop/ui[2][0][0][0]/yaxis_median.label
 msgid "Median"
 msgstr "中央値"
+
+#: R/likertplot.b.R
+msgid "Median and mean require numeric variables"
+msgstr "中央値と平均値には数値変数が必要です"
+
+#: R/lollipop.b.R
+msgid "Median of {var}"
+msgstr "{var} の中央値"
+
+#: areachart/options/displayFormat/%b.title
+#: linechart/options/displayFormat/%b.title
+msgctxt "menu"
+msgid "Oct"
+msgstr "10月"
+
+#: areachart/options/displayFormat/%B.title
+#: linechart/options/displayFormat/%B.title
+msgctxt "menu"
+msgid "October"
+msgstr "10月"
 
 #: likertplot/options/adjustMethod.title
 #: multcorresp/options/method.title
@@ -2560,6 +3045,10 @@ msgstr "最小値／最大値"
 msgid "Minimum entropy"
 msgstr "最小エントロピー"
 
+#: R/lollipop.b.R
+msgid "Minimum of {var}"
+msgstr "{var} の最小値"
+
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
 #: mrcrosstabs/ui/mode/onevar[0][1].label
@@ -2615,6 +3104,10 @@ msgstr "名前"
 #: qqplot/options/transLog.title
 msgid "Natural log tranform"
 msgstr "自然対数変換"
+
+#: R/qqplot.b.R
+msgid "Natural Log Tranform requires positive (>0) data."
+msgstr "自然対数変換は正のデータ（>0）を必要とします。"
 
 #: R/principal.b.R
 msgid "No rotation used."
@@ -2746,6 +3239,10 @@ msgstr "ケース数："
 #: principal/options/dimNum.title
 msgid "Number of dimensions"
 msgstr "次元数"
+
+#: R/corresp.b.R
+msgid "Number of dimensions must be less than or equal to {maxDim}."
+msgstr "次元数は {maxDim} 以下でなければなりません。"
 
 #: multcorresp/options/obsColor.title
 msgid "Obs color"
@@ -3071,6 +3568,14 @@ msgstr "パステル1"
 msgid "Pastel 2"
 msgstr "パステル2"
 
+#: R/principal.b.R
+msgid "PCA Principal Coordinates"
+msgstr "PCA 主座標"
+
+#: R/principal.b.R
+msgid "PCA Standard Coordinates"
+msgstr "PCA標準座標"
+
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
 #: barplot/ui[1][0][0]/yaxis_percent.label
@@ -3090,6 +3595,10 @@ msgstr "パーセンテージ"
 #: piechart/results.title
 msgid "Pie Chart"
 msgstr "円グラフ"
+
+#: R/piechart.b.R
+msgid "Pie charts are for educational use only. Please do not use Pie charts!"
+msgstr "円グラフは教育用途のみです。円グラフを使用しないでください！"
 
 #: corresp/options/rowColor/hotpink.title
 #: corresp/options/colColor/hotpink.title
@@ -3284,6 +3793,10 @@ msgstr "主成分分析"
 #: principal/results/obsTable.notes.norm
 msgid "Principal coordinates"
 msgstr "主成分座標"
+
+#: R/corresp.b.R
+msgid "Principal normalization"
+msgstr "主正規化"
 
 #: multcorresp/options/propPoint.title
 msgid "Proportional point size"
@@ -3588,6 +4101,12 @@ msgstr "回帰線"
 msgid "Reverse disposition"
 msgstr "配置を逆にする"
 
+#: barplot/options/reverseStack.title
+#: likertplot/options/reverseLikert.title
+#: mrcrosstabs/options/reverseStack.title
+msgid "Reverse stacking order"
+msgstr "積み上げ順を反転"
+
 #: areachart/options/titleAlign/1.title
 #: areachart/options/subtitleAlign/1.title
 #: areachart/options/captionAlign/1.title
@@ -3715,9 +4234,17 @@ msgstr "行プロット"
 msgid "Row plot"
 msgstr "行プロット"
 
+#: R/corresp.b.R
+msgid "Row Points for {rows}"
+msgstr "{rows} の行点"
+
 #: corresp/options/normalization/rowprincipal.title
 msgid "Row principal"
 msgstr "行主成分"
+
+#: R/corresp.b.R
+msgid "Row principal normalization"
+msgstr "行主正規化"
 
 #: corresp/results/rowProfiles.title
 msgid "Row Profiles"
@@ -3956,6 +4483,11 @@ msgstr "特異値"
 msgid "Size"
 msgstr "サイズ"
 
+#: linechart/ui[1][0][1].label
+#: principal/ui[4].label
+msgid "Sizes & Colors"
+msgstr "サイズと色"
+
 #: package/datasets/Smoking.name
 msgid "Smoking"
 msgstr "喫煙"
@@ -4036,6 +4568,10 @@ msgstr "標準"
 #: R/principal.b.R
 msgid "Standard coordinates"
 msgstr "標準座標"
+
+#: R/corresp.b.R
+msgid "Standard normalization"
+msgstr "標準表示"
 
 #: principal/options/stdLoadings.title
 msgid "Standardize loadings (eigenvectors)"
@@ -4135,6 +4671,14 @@ msgid "Supplement"
 msgstr "補助"
 
 #: R/corresp.b.R
+msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "補助列番号は数値のリストで指定してください（例：1,2,9）"
+
+#: R/corresp.b.R
+msgid "Supplementary column numbers must be between 1 and {nmax}."
+msgstr "補助列番号は 1 から {nmax} の数値でなくてはなりません。"
+
+#: R/corresp.b.R
 #: corresp/options/supplementaryCols.title
 msgid "Supplementary columns"
 msgstr "補助列"
@@ -4142,6 +4686,14 @@ msgstr "補助列"
 #: corresp/ui[3][0].label
 msgid "Supplementary Points"
 msgstr "補助点"
+
+#: R/corresp.b.R
+msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "補助行番号は数値のリストで指定してください（例：1,2,9）"
+
+#: R/corresp.b.R
+msgid "Supplementary row numbers must be between 1 and {nmax}."
+msgstr "補助行番号は 1 から {nmax} の数値でなければなりません。"
 
 #: R/corresp.b.R
 #: corresp/options/supplementaryRows.title
@@ -4160,6 +4712,18 @@ msgstr "補助変数"
 #: R/multcorresp.b.R
 msgid "Supplementary variables"
 msgstr "補助変数"
+
+#: R/corresp.b.R
+msgid "Symetric normalization"
+msgstr "対称正規化"
+
+#: corresp/options/normalization/symmetric.title
+msgid "Symmetric"
+msgstr "対称"
+
+#: R/corresp.b.R
+msgid "Symmetric normalization"
+msgstr "対称正規化"
 
 #: likertplot/ui[2].label
 #: likertplot/ui[2][0][0][0].label
@@ -4201,6 +4765,16 @@ msgstr "文字"
 msgid "Text Size"
 msgstr "文字サイズ"
 
+#: corresp/ui[6].label
+msgid "Text Size & Colors"
+msgstr "文字サイズと色"
+
+#: barplot/ui[4].label
+#: boxplot/ui[3].label
+#: piechart/ui[4].label
+msgid "Text Size & Facets"
+msgstr "文字サイズとファセット"
+
 #: R/principal.b.R
 msgid ""
 "The correlation matrix is not positive definite. Computations may not be "
@@ -4211,6 +4785,10 @@ msgstr "相関行列は正定値ではありません。計算が正確でない
 msgid "The number of dimensions cannot be greater than {max}."
 msgstr "次元数は {max} を超えることはできません。"
 
+#: R/principal.b.R
+msgid "The number of dimensions cannot be greater than the number of variables."
+msgstr "次元数は変数の数を超えることはできません。"
+
 #: R/qqplot.b.R
 msgid "Theoretical Probabilities"
 msgstr "理論確率"
@@ -4218,6 +4796,29 @@ msgstr "理論確率"
 #: R/qqplot.b.R
 msgid "Theoretical Quantiles"
 msgstr "理論分位点"
+
+#: areachart/options/yTicks.title
+#: barplot/options/xTicks.title
+#: barplot/options/yTicks.title
+#: boxplot/options/xTicks.title
+#: boxplot/options/yTicks.title
+#: histogram/options/xTicks.title
+#: histogram/options/yTicks.title
+#: linechart/options/yTicks.title
+#: lollipop/options/xTicks.title
+#: lollipop/options/yTicks.title
+#: mrcrosstabs/options/xTicks.title
+#: mrcrosstabs/options/yTicks.title
+#: mrfrequencies/options/xTicks.title
+#: mrfrequencies/options/yTicks.title
+#: qqplot/options/xTicks.title
+#: qqplot/options/yTicks.title
+#: raincloud/options/xTicks.title
+#: raincloud/options/yTicks.title
+#: scatterplot/options/xTicks.title
+#: scatterplot/options/yTicks.title
+msgid "Tick count"
+msgstr "目盛り数"
 
 #: likertplot/options/tidyUp.title
 msgid "Tidy up levels"
@@ -4432,11 +5033,20 @@ msgstr "合計"
 msgid "Total row"
 msgstr "行合計"
 
+#: mrcrosstabs/options/emptyAsNA.title
+#: mrfrequencies/options/emptyAsNA.title
+msgid "Treat empty values as missing"
+msgstr "空の値を欠損値として扱う"
+
 #: likertplot/ui[4][0][0][0].label
 #: piechart/options/labType.title
 #: piechart/ui[2][0][0][0].label
 msgid "Type"
 msgstr "種類"
+
+#: R/qqplot.b.R
+msgid "Unable to estimate the distribution parameters."
+msgstr "分布のパラメタを推定できません。"
 
 #: R/principal.b.R
 msgid "Unable to use {rotation} rotation."
@@ -4711,6 +5321,10 @@ msgstr "カテゴリ内"
 msgid "Within groups"
 msgstr "グループ内"
 
+#: R/qqplot.b.R
+msgid "Wrong parameter values."
+msgstr "パラメタ値が不正です。"
+
 #: areachart/options/timeVar.title
 #: areachart/options/timeVar1.title
 #: areachart/ui/mode/oneVariable[0][0][0].label
@@ -4754,6 +5368,16 @@ msgstr "グループ内"
 #: scatterplot/ui[4][1].label
 msgid "X-Axis"
 msgstr "X軸"
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "X-Axis and Y-Axis cannot be equal."
+msgstr "X軸とY軸を同一にはできません。"
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
+msgstr "X軸とY軸の値は、次元数を以下でなくてはなりません。"
 
 #: areachart/options/isDate.title
 #: linechart/options/isDate.title
@@ -4899,685 +5523,3 @@ msgstr "黄 → 緑"
 #: scatterplot/options/colorPalette/YlOrRd.title
 msgid "Yellow to Red"
 msgstr "黄 → 赤"
-
-#: R/areachart.b.R
-#: R/linechart.b.R
-msgid "{var} doesn't have a valid date format."
-msgstr "{var} は妥当な日付形式ではありません。"
-
-#: R/corresp.b.R
-msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "補助行番号は数値のリストで指定してください（例：1,2,9）"
-
-#: R/corresp.b.R
-msgid "Supplementary row numbers must be between 1 and {nmax}."
-msgstr "補助行番号は 1 から {nmax} の数値でなければなりません。"
-
-#: R/corresp.b.R
-msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "補助列番号は数値のリストで指定してください（例：1,2,9）"
-
-#: R/corresp.b.R
-msgid "Supplementary column numbers must be between 1 and {nmax}."
-msgstr "補助列番号は 1 から {nmax} の数値でなくてはなりません。"
-
-#: R/corresp.b.R
-msgid "Number of dimensions must be less than or equal to {maxDim}."
-msgstr "次元数は {maxDim} 以下でなければなりません。"
-
-#: R/corresp.b.R
-msgid ""
-"Axis numbers must be less than or equal to the number of dimensions "
-"({nDim})."
-msgstr "軸番号は次元数（{nDim}）以下でなければなりません。"
-
-#: R/corresp.b.R
-msgid "Axis numbers cannot be equal."
-msgstr "軸番号は同じ値にはできません。"
-
-#: R/corresp.b.R
-msgid "Principal normalization"
-msgstr "主正規化"
-
-#: R/corresp.b.R
-msgid "Symetric normalization"
-msgstr "対称正規化"
-
-#: R/corresp.b.R
-msgid "Row principal normalization"
-msgstr "行主正規化"
-
-#: R/corresp.b.R
-msgid "Column principal normalization"
-msgstr "列主正規化"
-
-#: R/corresp.b.R
-msgid "Standard normalization"
-msgstr "標準表示"
-
-#: R/corresp.b.R
-msgid "Row Points for {rows}"
-msgstr "{rows} の行点"
-
-#: R/corresp.b.R
-msgid "Column Points for {cols}"
-msgstr "{cols} の列点"
-
-#: R/corresp.b.R
-msgid "Symmetric normalization"
-msgstr "対称正規化"
-
-#: R/corresp.b.R
-msgid ""
-"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
-"two categorical variables. Computations are based on <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
-"using the \"Counts\" variable.</p>\n"
-"<p><strong>Supplementary row or column</strong> numbers may be entered as "
-"integer lists : 1,3,6</p>\n"
-"<p>Four normalizations (scaling of row and column scores before plotting) "
-"are avalaible :</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Row an columns scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
-"square root of eigenvalues. </li>\n"
-"<li><strong>Row Principal:</strong> Only row scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Column Principal:</strong> Only column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Standard:</strong> The raw coordinates without "
-"normalization.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
-msgstr ""
-"<p>このモジュールは、2つのカテゴリ変数に対して対応分析（CA）を実行します。計"
-"算は、F. Husson、J. Josse、S. Le、J. Mazet による FactoMineR パッケージに基づ"
-"いています。</p>\n"
-"<p>データは、jamovi の組み込み重み付け機能、または「Counts」変数を用いて重み"
-"付けできます。</p>\n"
-"<p><strong>補助行</strong>または補助列の番号は、整数のリスト（例：1,3,6）で指"
-"定できます。</p>\n"
-"<p>プロット前に行・列スコアをスケーリングする方法として、以下の4種類の正規化"
-"が利用可能です。</p>\n"
-"<ul>\n"
-"<li><strong>主正規化</strong>　行・列スコアを固有値でスケーリングします。</"
-"li>\n"
-"<li><strong>対称正規化</strong>　行・列スコアを固有値の平方根でスケーリングし"
-"ます。</li>\n"
-"<li><strong>行主正規化</strong>　 行スコアのみを固有値でスケーリングします"
-"。</li>\n"
-"<li><strong>列主正規化</strong>　 列スコアのみを固有値でスケーリングします"
-"。</li>\n"
-"<li><strong>標準表示</strong>　正規化を行わない生の座標を使用します。</li>\n"
-"</ul>\n"
-"<p>サンプルデータは「Open > Data Library > vijPlots > Smoking」から利用できま"
-"す。</p>"
-
-#: R/likertplot.b.R
-msgid "Likert Plot requires ordinal (or numeric) variables"
-msgstr "リッカートプロットには順序尺度（または数値）変数が必要です"
-
-#: R/likertplot.b.R
-msgid "Median and mean require numeric variables"
-msgstr "中央値と平均値には数値変数が必要です"
-
-#: R/likertplot.b.R
-msgid "Comparison tests require numeric variables"
-msgstr "比較検定には数値変数が必要です"
-
-#: R/likertplot.b.R
-msgid "Cannot convert text variables to integers"
-msgstr "文字変数を整数に変換できません"
-
-#: R/likertplot.b.R
-msgid "Cannot tidy up text variables"
-msgstr "テキスト変数は整形できません"
-
-#: R/likertplot.b.R
-msgid "Comparison tests cannot be computed with empty (N=0) groups"
-msgstr "空のグループ（N=0）がある場合、比較検定は実行できません"
-
-#: R/likertplot.b.R
-msgid ""
-"<h3>Data & Sorting</h3>\n"
-"<ul>\n"
-"<li>Likert variables must be of ordinal measure-type. (Continuous "
-"measure-type works as well.)</li>\n"
-"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
-"must be of integer data-type.</li>\n"
-"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
-"order in table and graph (when some variables miss some levels).</li>\n"
-"<li><strong>Convert variables to integer:</strong> when checked, the level "
-"labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
-"</ul>\n"
-"<h3>Comparison Tests</h3>\n"
-"<p>When using a group variable, several tests are available:</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
-"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
-"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
-"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
-"</ul>\n"
-"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
-"p-values are already adjusted (groupwise); no other adjustment is "
-"possible.</p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
-msgstr ""
-"<h3>データと並べ替え</h3>\n"
-"<ul>\n"
-"<li>リッカート変数は順序変数である必要があります（連続変数でも動作します）"
-"。</li>\n"
-"<li>平均・中央値・標準偏差の計算や比較検定を行う場合、データ型は整数である必"
-"要があります。</li>\n"
-"<li><strong>水準の整理：</strong>水準が欠けている変数がある場合に、表やグラフ"
-"のラベル順を調整します。</li>\n"
-"<li><strong>変数を整数に変換：</strong>水準ラベルは無視され、整数値のみが使用"
-"されます。</li>\n"
-"<li><strong>中央値で変数を並べ替え：</strong>リッカート変数の一覧を中央値で並"
-"べ替えます。</li>\n"
-"</ul>\n"
-"<h3>比較検定</h3>\n"
-"<p>グループ変数を使用する場合、以下の検定が利用できます：</p>\n"
-"<ul>\n"
-"<li><strong>マン・ホイットニーのU：</strong>2群の比較</li>\n"
-"<li><strong>クラスカル・ウォリス：</strong>n群の比較</li>\n"
-"<li><strong>事後検定：</strong>ダン、コノヴァー、ドゥワス・スティール・"
-"クリッチロウ・フリグナー（DSCF）によるペアワイズ比較</li>\n"
-"</ul>\n"
-"<p>p値は、事後検定については<strong>グループ単位</strong>（各質問ごと）で、"
-"マン・ホイットニーのU、クラスカル・ウォリス、および事後検定については<strong>"
-"全体</strong>（グループおよび質問全体）で調整できます。DSCFのp値はすでに（"
-"グループ単位で）調整されており、追加の調整はできません。</p>\n"
-"<p>サンプルデータは「Open > Data Library > vijPlots > Likert」から利用できま"
-"す。</p>"
-
-#: R/lollipop.b.R
-msgid "Mean of {var}"
-msgstr "{var} の平均値"
-
-#: R/lollipop.b.R
-msgid "Median of {var}"
-msgstr "{var} の中央値"
-
-#: R/lollipop.b.R
-msgid "Minimum of {var}"
-msgstr "{var} の最小値"
-
-#: R/lollipop.b.R
-msgid "Maximum of {var}"
-msgstr "{var} の最大値"
-
-#: R/mrcrosstabs.b.R
-msgid "Crosstab (% of cases)"
-msgstr "クロス集計（ケース%）"
-
-#: R/mrcrosstabs.b.R
-msgid "Crosstab (% of responses)"
-msgstr "クロス集計（回答%）"
-
-#: R/mrcrosstabs.b.R
-msgid ""
-"<p>This module computes two-way frequencies for multiple response "
-"questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>このモジュールは、複数回答質問（いわゆる「該当するものをすべて選択」）に対"
-"して、2変数の度数集計を行います。</p>\n"
-"<p>質問は以下の形式でコーディングできます：</p>\n"
-"<ul>\n"
-"<li> 各選択肢ごとに、0/1、1/2、Y/N などで表した複数の <strong> ダミー変数 </"
-"strong> ； </li>\n"
-"<li>選択された回答を区切り記号（通常は「,」や「;」）で並べた、単一の "
-"<strong> 多値変数 </strong> 。</li>\n"
-"</ul>\n"
-"<p>サンプルデータは「Open > Data Library > vijPlots > Credit Cards」から利用"
-"できます。</p>"
-
-#: R/mrfrequencies.b.R
-msgid ""
-"<p>This module computes frequencies for multiple response questions, also "
-"known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>このモジュールは、複数回答質問（いわゆる「該当するものをすべて選択」）の度"
-"数集計を行います。</p>\n"
-"<p>質問は以下の形式でコーディングできます：</p>\n"
-"<ul>\n"
-"<li>各選択肢ごとに、0/1、1/2、Y/N などで表した複数の<strong>ダミー変数</"
-"strong>；</li>\n"
-"<li>選択された回答を区切り記号（通常は「,」や「;」）で並べた、単一の<strong>"
-"多値変数</strong>。</li>\n"
-"</ul>\n"
-"<p>サンプルデータは「Open > Data Library > vijPlots > Credit Cards」から利用"
-"できます。</p>"
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
-msgstr "X軸とY軸の値は、次元数を以下でなくてはなりません。"
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-msgid "X-Axis and Y-Axis cannot be equal."
-msgstr "X軸とY軸を同一にはできません。"
-
-#: R/multcorresp.b.R
-msgid "MCA Principal Coordinates"
-msgstr "MCA主座標"
-
-#: R/multcorresp.b.R
-msgid "MCA Standard Coordinates"
-msgstr "MCA標準座標"
-
-#: R/multcorresp.b.R
-msgid ""
-"<p>This module computes <strong>Multiple Correspondence Analysis "
-"(MCA)</strong> for several categorical variables. Computations are based on "
-"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Both classic methods are available:</p>\n"
-"<ul>\n"
-"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
-"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues "
-"are the squares of those of the indicator matrix method. </li>\n"
-"</ul>\n"
-"<p>Both methods give the same <em>standard</em> coordinates (but different "
-"<em>principal</em> coordinates).</p>\n"
-"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
-"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
-"(and inertia) of categories and observations are computed from the original "
-"eigenvalues of the Burt matrix.</p>\n"
-"<p>The <strong>Normalization</strong> options specify how the coordinates "
-"are scaled (by eigenvalues):</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Both category and observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Category principal:</strong> Only category coordinates are "
-"scaled.</li>\n"
-"<li><strong>Observation principal:</strong> Only observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Standard:</strong> Both category and observation coordinates "
-"are standard.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
-msgstr ""
-"<p>このモジュールは、複数のカテゴリ変数に対して<strong>多重コレスポンデンス分"
-"析 (MCA)</strong> を実行します。計算は、F.&nbsp;Husson、J.&nbsp;Josse、"
-"S.&nbsp;Le、J.&nbsp;Mazetらによる <a href = \"https://CRAN.R-project.org/"
-"package=FactoMineR\" target=\"_blank\">FactoMineR<a/> パッケージに基づいてい"
-"ます。</p>\n"
-"<p>以下の2つの古典的な手法が利用可能です：</p>\n"
-"<ul>\n"
-"<li><strong>指示行列：</strong> 指示行列に対する対応分析</li>\n"
-"<li><strong>バート行列：</strong> バート行列に対する対応分析。固有値は指示行"
-"列法の固有値の2乗になります。</li>\n"
-"</ul>\n"
-"<p>どちらの手法を用いても、同じ <em>標準</em> 座標（ただし異なる <em>主</em> "
-"座標）が得られます。</p>\n"
-"<p>選択した場合、<strong>ベンゼクリおよびグリーンエーカーの補正</strong>は固"
-"有値のみに適用されます（<strong>要約</strong> テーブル）。カテゴリおよび観測"
-"値の座標は、バート行列の元の固有値から計算されます。</p>\n"
-"<p><strong>標準化</strong> オプションは、座標を（固有値で）どのように"
-"スケーリングするかを指定します：</p>\n"
-"<ul>\n"
-"<li><strong>主標準化：</strong> カテゴリと個体の両方の座標がスケーリングされ"
-"ます。</li>\n"
-"<li><strong>カテゴリ主標準化：</strong> カテゴリの座標のみがスケーリングされ"
-"ます。</li>\n"
-"<li><strong>観測値主標準化：</strong> 観測値の座標のみがスケーリングされます"
-"。</li>\n"
-"<li><strong>標準：</strong> カテゴリと観測値の両方の座標が標準となります。</"
-"li>\n"
-"</ul>\n"
-"<p>サンプルファイルは Open > Data Library > vijPlots > Cars に含まれています"
-"。</p>"
-
-#: R/piechart.b.R
-msgid "Pie charts are for educational use only. Please do not use Pie charts!"
-msgstr "円グラフは教育用途のみです。円グラフを使用しないでください！"
-
-#: R/principal.b.R
-msgid "The number of dimensions cannot be greater than the number of variables."
-msgstr "次元数は変数の数を超えることはできません。"
-
-#: R/principal.b.R
-msgid "PCA Principal Coordinates"
-msgstr "PCA 主座標"
-
-#: R/principal.b.R
-msgid "PCA Standard Coordinates"
-msgstr "PCA標準座標"
-
-#: R/principal.b.R
-msgid ""
-"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
-"for several continuous variables. Computations are based on "
-"<tt>stats::prcomp</tt> function.</p>\n"
-"<p>Although rotated components are not principal components, they are "
-"widely used. Only orthogonal rotations are available (from GPArotation "
-"package).</p>\n"
-"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
-"principal (scaled by the squareroot of eigenvalues).</p>\n"
-"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
-"eigenvalues) while loadings are standard.</li>\n"
-"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
-"are standard. </li>\n"
-"</ul>\n"
-"<p><strong>Advanced options</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Standardize loadings:</strong> loadings are normalized with "
-"sums of squared equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Standardize scores:</strong> scores are normalized with "
-"variances equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
-"applied to eigenvectors (standard loadings) instead of principal loadings "
-"(STATA way).</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
-msgstr ""
-"<p>このモジュールは、複数の連続変数に対して<strong>主成分分析 (PCA)</strong> "
-"を実行します。計算は <tt>stats::prcomp</tt> 関数に基づいています。</p>\n"
-"<p>回転後の成分は厳密には主成分ではありませんが、広く利用されています。直交回"
-"転のみが利用可能です（GPArotation パッケージを使用）。</p>\n"
-"<p>主成分負荷量（変数座標）およびスコア（観測値座標）は主座標（固有値の平方根"
-"でスケーリングされたもの）です。</p>\n"
-"<p>バイプロットは \"Biplots in Practice\" (Michael Greenacre, 2010) に準拠し"
-"ています：</p>\n"
-"<ul>\n"
-"<li><strong>フォーム・バイプロット：</strong> スコアは主座標（固有値で"
-"スケーリング）され、負荷量は標準座標となります。</li>\n"
-"<li><strong>共分散バイプロット：</strong> 負荷量は主座標となり、スコアは標準"
-"座標となります。</li>\n"
-"</ul>\n"
-"<p><strong>詳細設定</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>負荷量の標準化：</strong> 負荷量を（固有値ではなく）2乗和が1にな"
-"るように標準化します。</li>\n"
-"<li><strong>スコアの標準化</strong> スコアを（固有値ではなく）分散が1になるよ"
-"うに標準化します。</li>\n"
-"<li><strong>固有ベクトルの回転：</strong> 主座標としての負荷量ではなく、固有"
-"ベクトル（標準負荷量）に対して回転（バリマックス回転など）を適用します（STATA"
-"方式）。</li>\n"
-"</ul>\n"
-"<p>サンプルファイルは「開く > データライブラリ > vijPlots > Iris」に含まれて"
-"います。</p>"
-
-#: R/qqplot.b.R
-msgid "Natural Log Tranform requires positive (>0) data."
-msgstr "自然対数変換は正のデータ（>0）を必要とします。"
-
-#: R/qqplot.b.R
-msgid "{distrib} distribution requires positive (>0) data."
-msgstr "{distrib} 分布は正のデータ（>0）を必要とします。"
-
-#: R/qqplot.b.R
-msgid "Exponential distribution requires non-negative (≥0) data."
-msgstr "指数分布は非負（≥0）のデータを必要とします。"
-
-#: R/qqplot.b.R
-msgid "Beta distribution requires data between 0 and 1."
-msgstr "ベータ分布は 0 から 1 の間のデータを必要とします。"
-
-#: R/qqplot.b.R
-msgid "Unable to estimate the distribution parameters."
-msgstr "分布のパラメタを推定できません。"
-
-#: R/qqplot.b.R
-msgid "Wrong parameter values."
-msgstr "パラメタ値が不正です。"
-
-#: R/qqplot.b.R
-msgid "F"
-msgstr "F"
-
-#: R/qqplot.b.R
-msgid ""
-"<p>This module uses <a href = "
-"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
-"package<a/> by Alexandre Almeida, Adam Loy and Heike Hofmann. In-depth "
-"information can be found in the package documentation on CRAN site.</p>\n"
-"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
-"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
-"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
-"identity line.</p>\n"
-"<p><strong>Confidence band:</strong> Draws a confidence band around the "
-"reference line. qqplotr package provides several methods to compute the "
-"confidence band:</p>\n"
-"<ul>\n"
-"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
-"bands based on Normal confidence intervals;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
-"based on a parametric bootstrap;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
-"Kolmogorov-Smirnov test;</li>\n"
-"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
-"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
-"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
-"simultaneous bands using the equal local levels.</li>\n"
-"</ul>\n"
-"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
-"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
-"according to the reference line. This procedure may help reducing visual "
-"bias caused by the orthogonal distances from the points to the reference "
-"line.</p>\n"
-"<p><strong>Parameter values:</strong> The distribution parameters can be "
-"estimated from data using:</p>\n"
-"<ul>\n"
-"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
-"should work with all distributions but \"t\" and \"uniform\";</li>\n"
-"<li><strong>Method of Moments</strong> for moment based parameters : it "
-"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
-"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
-"</ul>\n"
-"<p>or entered by user:</p>\n"
-"<ul>\n"
-"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
-"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
-"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
-"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
-"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
-"(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
-msgstr ""
-"<p>このモジュールは、Alexandre Almeida、Adam Loy、Heike Hofmannらによる <a "
-"href = \"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">"
-"qqplotr R パッケージ<a/> を使用しています。詳細な情報は、CRANサイトにある"
-"パッケージのドキュメントで確認できます。</p>\n"
-"<p><strong>参照線：</strong> <em>恒等線</em> (y = x)、または2つのデータ分位"
-"数 (Q<sub>0.25</sub> および Q<sub>0.75</sub>) を通る一般的な <em>Q-Q 線</em> "
-"のいずれかを描画します。P-P プロットは恒等線のみをサポートしています。</p>\n"
-"<p><strong>信頼帯：</strong> 参照線の周囲に信頼帯を描画します。qqplotr "
-"パッケージでは、信頼帯を計算するために以下のようないくつかの手法が提供されて"
-"います：</p>\n"
-"<ul>\n"
-"<li><strong><em>点別</em></strong> は、正規分布の信頼区間に基づいて点別の信頼"
-"帯を構築します。</li>\n"
-"<li><strong><em>ブートストラップ</em></strong> は、パラメトリック・"
-"ブートストラップに基づいて点別の信頼帯を作成します。</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> 帯は、コルモゴロフ・"
-"スミルノフ検定に基づいています。</li>\n"
-"<li><strong><em>Tail-Sensitive</em></strong> は、裾の重さに感度を持たせた信頼"
-"帯を構築しますが、正規 Q-Q プロットに対してのみ実装されています。</li>\n"
-"<li><strong><em>等局所水準</em></strong> は、等局所水準を用いて同時信頼帯を構"
-"築します。</li>\n"
-"</ul>\n"
-"<p>P-P プロットは「等局所水準」と「ブートストラップ」の手法のみをサポートして"
-"います。</p>\n"
-"<p><strong>トレンド除去プロット：</strong> 各オブジェクトは、参照線に基づい"
-"て <em>トレンド除去</em> されます。この手順は、点から参照線までの直交距離によ"
-"って生じる視覚的なバイアスを軽減するのに役立ちます。</p>\n"
-"<p><strong>パラメタ値：</strong> 分布のパラメタは、以下の方法でデータから推定"
-"できます：</p>\n"
-"<ul>\n"
-"<li><strong>最尤法</strong>（MASS パッケージを使用）： 「t分布」と「一様分布"
-"」を除くすべての分布で機能します。</li>\n"
-"<li><strong>モーメント法 </strong> (モーメントに基づくパラメーター用): 「正規"
-"分布」、「対数正規分布」、「ベータ分布」、「指数分布」、「ガンマ分布」、「"
-"ロジスティック分布」、「一様分布」で機能します。</li>\n"
-"</ul>\n"
-"<p>または、ユーザーが入力することも可能です：</p>\n"
-"<ul>\n"
-"<li><strong>パラメーター 1：</strong> 平均（正規分布）、対数平均（対数正規分"
-"布）、形状1 (ベータ分布)、位置（コーシー分布、ロジスティック分布）、自由度（"
-"カイ2乗、スチューデント）、自由度1（F分布）、レート（指数分布）、形状（ガンマ"
-"分布、ワイブル分布）、最小値（一様分布）。</li>\n"
-"<li><strong>パラメーター 2：</strong> 標準偏差（正規分布）、対数標準偏差（対"
-"数正規分布）、形状2 (ベータ分布)、スケール （コーシー分布、ロジスティック分布"
-"）、自由度2（F分布）、レート （ガンマ分布、ワイブル分布）、最大値（一様分布）"
-"。</li>\n"
-"</ul>\n"
-"</p>"
-
-#: areachart/options/ignoreNA.title
-#: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
-msgid "Ignore missing values"
-msgstr "欠損値を無視"
-
-#: areachart/options/yTicks.title
-#: barplot/options/xTicks.title
-#: barplot/options/yTicks.title
-#: boxplot/options/xTicks.title
-#: boxplot/options/yTicks.title
-#: histogram/options/xTicks.title
-#: histogram/options/yTicks.title
-#: linechart/options/yTicks.title
-#: lollipop/options/xTicks.title
-#: lollipop/options/yTicks.title
-#: mrcrosstabs/options/xTicks.title
-#: mrcrosstabs/options/yTicks.title
-#: mrfrequencies/options/xTicks.title
-#: mrfrequencies/options/yTicks.title
-#: qqplot/options/xTicks.title
-#: qqplot/options/yTicks.title
-#: raincloud/options/xTicks.title
-#: raincloud/options/yTicks.title
-#: scatterplot/options/xTicks.title
-#: scatterplot/options/yTicks.title
-msgid "Tick count"
-msgstr "目盛り数"
-
-#: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
-#: mrcrosstabs/options/reverseStack.title
-msgid "Reverse stacking order"
-msgstr "積み上げ順を反転"
-
-#: barplot/options/barType/dodge.title
-#: mrcrosstabs/options/bartype/dodge.title
-msgid "Grouped (tight)"
-msgstr "グループ化（間隔を詰める）"
-
-#: barplot/ui[4].label
-#: boxplot/ui[3].label
-#: piechart/ui[4].label
-msgid "Text Size & Facets"
-msgstr "文字サイズとファセット"
-
-#: boxplot/ui[2][0][1][0].label
-msgid "Box Elements"
-msgstr "ボックス要素"
-
-#: corresp/options/normalization/symmetric.title
-msgid "Symmetric"
-msgstr "対称"
-
-#: corresp/ui[6].label
-msgid "Text Size & Colors"
-msgstr "文字サイズと色"
-
-#: likertplot/options/ignoreNA.title
-msgid "Ignore missing groups"
-msgstr "欠損グループを無視"
-
-#: linechart/ui[1][0][1].label
-#: principal/ui[4].label
-msgid "Sizes & Colors"
-msgstr "サイズと色"
-
-#: mrcrosstabs/options/emptyAsNA.title
-#: mrfrequencies/options/emptyAsNA.title
-msgid "Treat empty values as missing"
-msgstr "空の値を欠損値として扱う"
-
-#: mrcrosstabs/options/computedValues/responses.title
-#: mrfrequencies/options/showResponses.title
-#: mrfrequencies/options/yaxis/responses.title
-msgid "% of responses"
-msgstr "回答%"
-
-#: mrcrosstabs/options/computedValues/cases.title
-#: mrfrequencies/options/showCases.title
-#: mrfrequencies/options/yaxis/cases.title
-msgid "% of cases"
-msgstr "ケース%"
-
-#: mrcrosstabs/options/computedValues/options.title
-msgid "% by row"
-msgstr "行%"
-
-#: principal/ui[4][0][0][1].label
-#: scatterplot/ui[2][0][0][0].label
-msgid "Element Sizes"
-msgstr "要素サイズ"
-
-#: raincloud/options/groupOne.title
-#: raincloud/ui[0][1].label
-msgid "Group (Side-by-side)"
-msgstr "グループ（横並び）"
-
-#: scatterplot/ui[2].label
-msgid "Element Sizes & Facets"
-msgstr "要素サイズとファセット"
-
-#: histogram/options/binBoundary.title
-msgctxt "boundary"
-msgid "Position"
-msgstr "位置"
-
-#: areachart/options/displayFormat/%b.title
-#: linechart/options/displayFormat/%b.title
-msgctxt "menu"
-msgid "Oct"
-msgstr "10月"
-
-#: areachart/options/displayFormat/%B.title
-#: linechart/options/displayFormat/%B.title
-msgctxt "menu"
-msgid "October"
-msgstr "10月"
-
-#: R/qqplot.b.R
-#: qqplot/options/distrib/norm.title
-msgctxt "distribution"
-msgid "Normal"
-msgstr "標準"

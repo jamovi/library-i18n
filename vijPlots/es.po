@@ -1,36 +1,41 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-04-04 00:09+0000\n"
-"Last-Translator: \"Francisco J. Miguel Quesada\" <fxmiguel@gmail.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/jamovi/module-"
-"vijplots/es/>\n"
-"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
+"PO-Revision-Date: 2021-07-29 16:59:59+01000\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: R/qqplot.b.R
+msgid "{distrib} distribution requires positive (>0) data."
+msgstr "La distribución {distrib} requiere datos positivos (>0)."
 
 #: R/qqplot.b.R
 msgid "{distribStr} {typeStr} Plot of {varStr}"
-msgstr "{distribStr} {typeStr} Gráfico de {varStr}"
+msgstr "Gráfico {typeStr} {distribStr} de {varStr}"
 
 #: R/principal.b.R
 msgid "{rotation} rotation"
-msgstr "{rotation} rotación"
+msgstr "Rotación {rotation}"
 
 #: R/principal.b.R
 msgid "{rotation} rotation was used."
-msgstr "se utilizó {rotation} rotación."
+msgstr "Se ha utilizado la rotación {rotation}."
 
 #: R/principal.b.R
 msgid "{rotation} rotation with Kaiser normalization"
-msgstr "se utilizó rotación {rotation} con normalización de Kaiser"
+msgstr "Rotación {rotation} con normalización de Kaiser"
 
 #: R/principal.b.R
 msgid "{rotation} rotation with Kaiser normalization was used."
-msgstr "se utilizó {rotation} rotación con normalización de Kaiser."
+msgstr "Se ha utilizado la rotación {rotation} con normalización de Kaiser."
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "{var} doesn't have a valid date format."
+msgstr "{var} no tiene un formato de fecha válido."
 
 #: barplot/options/facetNumber.title
 #: boxplot/options/facetNumber.title
@@ -39,7 +44,7 @@ msgstr "se utilizó {rotation} rotación con normalización de Kaiser."
 #: piechart/options/facetNumber.title
 #: scatterplot/options/facetNumber.title
 msgid "# of rows/columns"
-msgstr "nº de filas/columnas"
+msgstr "Nº de filas/columnas"
 
 #: barplot/options/accuracy.title
 #: barplot/ui[2][0][2][0].label
@@ -52,42 +57,457 @@ msgstr "nº de filas/columnas"
 #: piechart/options/accuracy.title
 #: piechart/ui[2][0][2][0].label
 msgid "% Accuracy"
-msgstr "% Precisión"
+msgstr "Precisión de los %"
+
+#: mrcrosstabs/options/computedValues/options.title
+msgid "% by row"
+msgstr "% por fila"
 
 #: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
 msgid "% Inertia"
-msgstr "% Inercia"
+msgstr "% de inercia"
 
 #: likertplot/ui[4][1][0][0].label
 msgid "% Labels"
-msgstr "% Etiquetas"
+msgstr "Etiquetas de los %"
 
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
 #: mrfrequencies/results/responses.columns.title
 msgid "% of Cases"
-msgstr "% de Casos"
+msgstr "% de casos"
+
+#: mrcrosstabs/options/computedValues/cases.title
+#: mrfrequencies/options/showCases.title
+#: mrfrequencies/options/yaxis/cases.title
+msgid "% of cases"
+msgstr "% de casos"
 
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
 msgid "% of Inertia"
-msgstr "% de Inercia"
+msgstr "% de inercia"
 
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
 #: mrfrequencies/results/responses.columns.title
 msgid "% of Responses"
-msgstr "% de Respuestas"
+msgstr "% de respuestas"
+
+#: mrcrosstabs/options/computedValues/responses.title
+#: mrfrequencies/options/showResponses.title
+#: mrfrequencies/options/yaxis/responses.title
+msgid "% of responses"
+msgstr "% de respuestas"
 
 #: principal/results/summaryTable.columns.title
 msgid "% of Variance"
-msgstr "% de Varianza"
+msgstr "% de varianza"
 
 #: R/mrcrosstabs.b.R
 msgid "% within"
-msgstr "% interno"
+msgstr "% en"
+
+#: R/likertplot.b.R
+msgid ""
+"<h3>Data & Sorting</h3>\n"
+"<ul>\n"
+"<li>Likert variables must be of ordinal measure-type. (Continuous "
+"measure-type works as well.)</li>\n"
+"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
+"must be of integer data-type.</li>\n"
+"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
+"order in table and graph (when some variables miss some levels).</li>\n"
+"<li><strong>Convert variables to integer:</strong> when checked, the level "
+"labels are ignored and only integer values are used.</li>\n"
+"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
+"variables by median.</li>\n"
+"</ul>\n"
+"<h3>Comparison Tests</h3>\n"
+"<p>When using a group variable, several tests are available:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
+"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
+"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
+"</ul>\n"
+"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
+"question) for post hoc tests or <strong>overall</strong> (groupwise and "
+"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
+"p-values are already adjusted (groupwise); no other adjustment is "
+"possible.</p>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
+msgstr ""
+"<h3>Datos y ordenación</h3>\n"
+"<ul>\n"
+"<li>Las variables de los gráficos Likert deben ser de tipo Ordinal (el tipo "
+"de medida Continua también se admite).</li>\n"
+"<li>Si tiene previsto calcular la media, la mediana o la desviación típica, "
+"o bien utilizar tests de comparativos, entonces el tipo de dato ha de ser "
+"entero.</li>\n"
+"<li><strong>Corregir niveles:</strong> cuando se selecciona, se intenta "
+"corregir el orden de las etiquetas en la tabla y el gráfico (en el caso de "
+"que a alguna de las variables le falten niveles).</li>\n"
+"<li><strong>Convertir variables a entero:</strong> cuando se selecciona, se "
+"ignoran las etiquetas de los niveles y solo se utilizan los valores "
+"enteros.</li>\n"
+"<li><strong>Ordenar variables según mediana:</strong> ordena la lista de "
+"variables según su mediana.</li>\n"
+"</ul>\n"
+"<h3>Test de comparación</h3>\n"
+"<p>Cuando se utiliza una variable de agrupación, es posible llevar a cabo "
+"varios test:</p>\n"
+"<ul>\n"
+"<li><strong>U de Mann-Whitney:</strong> comparación de dos grupos.</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> comparación de n grupos.</li>\n"
+"<li><strong>Tests Post Hoc:</strong> tests de comparación por pares de Dunn, "
+"Conover y Dwass-Steel-Critchlow-Fligner (DSCF).</li>\n"
+"</ul>\n"
+"<p>Los p-valores se pueden ajustar <strong>por grupo</strong> (para cada "
+"pregunta) en los test post hoc o <strong>globalmente</strong> (por grupo y "
+"por pregunta) para la U de Mann-Whitney, Kruskal-Wallis y los test post hoc. "
+"Los p-valores del test DSCF ya están ajustados (por grupo); no es posible "
+"realizar ningún otro ajuste.</p>\n"
+"<p>Un archivo de ejemplo está incluido en Abrir > Biblioteca de datos > "
+"vijPlots > Likert</p>"
+
+#: R/corresp.b.R
+msgid ""
+"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
+"two categorical variables. Computations are based on <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
+"using the \"Counts\" variable.</p>\n"
+"<p><strong>Supplementary row or column</strong> numbers may be entered as "
+"integer lists : 1,3,6</p>\n"
+"<p>Four normalizations (scaling of row and column scores before plotting) "
+"are avalaible :</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Row an columns scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
+"square root of eigenvalues. </li>\n"
+"<li><strong>Row Principal:</strong> Only row scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Column Principal:</strong> Only column scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Standard:</strong> The raw coordinates without "
+"normalization.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
+msgstr ""
+"<p>Este módulo realiza un <strong>Análisis de Correspondencias (AC)</strong> "
+"para dos variables categóricas. Los cálculos se basan en el paquete <a "
+"href=\"https://CRAN.R-project.org/package=FactoMineR\">FactoMineR</a> de F. "
+"Husson, J. Josse, S. Le, J. Mazet.</p>\n"
+"<p>Los datos pueden ser ponderados mediante el sistema de ponderación "
+"integrado de <em>jamovi</em> o utilizando la variable \"Conteos\".</p>\n"
+"<p>Los números de <strong>filas o columnas suplementarias</strong> pueden "
+"introducirse como listas de enteros: 1,3,6.</p>\n"
+"<p>Hay cuatro normalizaciones disponibles (escalado de las puntuaciones de "
+"filas y columnas antes de la representación gráfica):</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> las puntuaciones de filas y columnas se "
+"escalan mediante los valores propios.</li>\n"
+"<li><strong>Simétrica:</strong> las puntuaciones de filas y columnas se "
+"escalan mediante la raíz cuadrada de los valores propios.</li>\n"
+"<li><strong>Principal de filas:</strong> solo las puntuaciones de las filas "
+"se escalan mediante los valores propios.</li>\n"
+"<li><strong>Principal de columnas:</strong> solo las puntuaciones de las "
+"columnas se escalan mediante los valores propios.</li>\n"
+"<li><strong>Estándar:</strong> coordenadas brutas, sin normalización.</li>\n"
+"</ul>\n"
+"<p>Se incluye un archivo de ejemplo en Abrir > Biblioteca de datos > "
+"vijPlots > Smoking.</p>"
+
+#: R/multcorresp.b.R
+msgid ""
+"<p>This module computes <strong>Multiple Correspondence Analysis "
+"(MCA)</strong> for several categorical variables. Computations are based on "
+"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Both classic methods are available:</p>\n"
+"<ul>\n"
+"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
+"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues are "
+"the squares of those of the indicator matrix method. </li>\n"
+"</ul>\n"
+"<p>Both methods give the same <em>standard</em> coordinates (but different "
+"<em>principal</em> coordinates).</p>\n"
+"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
+"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
+"(and inertia) of categories and observations are computed from the original "
+"eigenvalues of the Burt matrix.</p>\n"
+"<p>The <strong>Normalization</strong> options specify how the coordinates "
+"are scaled (by eigenvalues):</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Both category and observation coordinates "
+"are scaled.</li>\n"
+"<li><strong>Category principal:</strong> Only category coordinates are "
+"scaled.</li>\n"
+"<li><strong>Observation principal:</strong> Only observation coordinates are "
+"scaled.</li>\n"
+"<li><strong>Standard:</strong> Both category and observation coordinates are "
+"standard.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
+msgstr ""
+"<p>Este módulo realiza un <strong>Análisis de Correspondencias Múltiples "
+"(ACM)</strong> para varias variables categóricas. Los cálculos se basan en "
+"el paquete <a "
+"href=\"https://CRAN.R-project.org/package=FactoMineR\">FactoMineR</a> de F. "
+"Husson, J. Josse, S. Le, J. Mazet.</p>\n"
+"<p>Están disponibles ambos métodos clásicos:</p>\n"
+"<ul>\n"
+"<li><strong>Matriz de indicadores:</strong> AC de la matriz indicadora.</li>\n"
+"<li><strong>Matriz de Burt:</strong> AC de la matriz de Burt. Los valores "
+"propios son los cuadrados de los del método de la matriz indicadora.</li>\n"
+"</ul>\n"
+"<p>Ambos métodos dan las mismas coordenadas <em>estándar</em> (pero "
+"distintas coordenadas <em>principales</em>).</p>\n"
+"<p>Cuando se seleccionan, las correcciones de <strong>Benzécri y "
+"Greenacre</strong> se aplican solo a los valores propios (tabla de "
+"<strong>resumen</strong>). Las coordenadas (y la inercia) de las categorías "
+"y las observaciones se calculan a partir de los valores propios originales "
+"de la matriz de Burt.</p>\n"
+"<p>Las opciones de <strong>Normalización</strong> especifican cómo se "
+"escalan las coordenadas (mediante valores propios):</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> se escalan tanto las coordenadas de las "
+"categorías como las de las observaciones.</li>\n"
+"<li><strong>Principal de categorías:</strong> solo se escalan las "
+"coordenadas de las categorías.</li>\n"
+"<li><strong>Principal de observaciones: </strong>solo se escalan las "
+"coordenadas de las observaciones.</li>\n"
+"<li><strong>Estándar:</strong> tanto las coordenadas de las categorías como "
+"las de las observaciones son estándar.</li>\n"
+"</ul>\n"
+"<p>Se incluye un archivo de ejemplo en Abrir > Biblioteca de datos > "
+"vijPlots > Cars</p>"
+
+#: R/principal.b.R
+msgid ""
+"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
+"for several continuous variables. Computations are based on "
+"<tt>stats::prcomp</tt> function.</p>\n"
+"<p>Although rotated components are not principal components, they are widely "
+"used. Only orthogonal rotations are available (from GPArotation "
+"package).</p>\n"
+"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
+"principal (scaled by the squareroot of eigenvalues).</p>\n"
+"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
+"eigenvalues) while loadings are standard.</li>\n"
+"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
+"are standard. </li>\n"
+"</ul>\n"
+"<p><strong>Advanced options</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Standardize loadings:</strong> loadings are normalized with sums "
+"of squared equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Standardize scores:</strong> scores are normalized with "
+"variances equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
+"applied to eigenvectors (standard loadings) instead of principal loadings "
+"(STATA way).</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
+msgstr ""
+"<p>Este módulo realiza un <strong>Análisis de Componentes Principales "
+"(ACP)</strong> para varias variables continuas. Los cálculos se basan en la "
+"función stats::prcomp.</p>\n"
+"<p>Aunque los componentes rotados no son componentes principales, se usan "
+"ampliamente. Solo están disponibles rotaciones ortogonales (del paquete "
+"GPArotation).</p>\n"
+"<p>Las cargas (coordenadas de las variables) y las puntuaciones (coordenadas "
+"de las observaciones) están en escala principal (multiplicadas por la raíz "
+"cuadrada de los valores propios).</p>\n"
+"<p>El biplot sigue \"<em>Biplots in Practice</em>\" (Michael Greenacre, "
+"2010):</p>\n"
+"<ul>\n"
+"<li><strong>Biplot de forma: </strong>las puntuaciones están en escala "
+"principal (escaladas por los valores propios), mientras que las cargas son "
+"estándar.</li>\n"
+"<li><strong>Biplot de covarianza:</strong> las cargas están en escala "
+"principal, mientras que las puntuaciones son estándar.</li>\n"
+"</ul>\n"
+"<p><strong>Opciones avanzadas</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Estandarizar cargas: </strong>las cargas se normalizan para que "
+"la suma de cuadrados sea igual a 1 (en lugar de a los valores propios).</li>\n"
+"<li><strong>Estandarizar puntuaciones: </strong>las puntuaciones se "
+"normalizan para que las varianzas sean iguales a 1 (en lugar de a los "
+"valores propios).</li>\n"
+"<li><strong>Rotar vectores propios: </strong>la rotación (varimax, etc.) se "
+"aplica a los vectores propios (cargas estándar) en lugar de a las cargas "
+"principales (al estilo de STATA).</li>\n"
+"</ul>\n"
+"<p>Se incluye un archivo de ejemplo en Abrir > Biblioteca de datos > "
+"vijPlots > Iris.</p>"
+
+#: R/mrfrequencies.b.R
+msgid ""
+"<p>This module computes frequencies for multiple response questions, also "
+"known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>Este módulo calcula las frecuencias para preguntas de respuestas "
+"múltiples, también conocidas como preguntas \"Seleccionar todo lo que se "
+"aplica\" (CATA).</p>\n"
+"<p>Las preguntas pueden codificarse como:</p>\n"
+"<ul>\n"
+"<li>varias <strong>variables indicadoras (o ficticias)</strong>, usando 0/1, "
+"1/2 o Sí/No para cada respuesta posible;</li>\n"
+"<li>una única <strong>variable multirrespuesta</strong> que contenga las "
+"respuestas marcadas, separadas por un símbolo (normalmente. \",\" o "
+"\";\").</li>\n"
+"</ul>\n"
+"<p>Se incluye un archivo de ejemplo en Abrir > Biblioteca de datos > "
+"vijPlots > Credit Cards.</p>"
+
+#: R/mrcrosstabs.b.R
+msgid ""
+"<p>This module computes two-way frequencies for multiple response questions, "
+"also known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>Este módulo calcula frecuencias de doble entrada para preguntas de "
+"respuesta múltiple, también conocidas como preguntas de \"Seleccionar todas "
+"las opciones\" (CATA).</p>\n"
+"<p>Las preguntas pueden codificarse como:</p>\n"
+"<ul>\n"
+"<li>varias <strong>variables indicadoras (o ficticias)</strong>, usando 0/1, "
+"1/2 o Sí/No para cada respuesta posible;</li>\n"
+"<li>una sola <strong>variable multirrespuesta</strong> que contenga las "
+"respuestas marcadas, separadas por un símbolo (normalmente \",\" o "
+"\";\").</li>\n"
+"</ul>\n"
+"<p>Se incluye un archivo de ejemplo en Abrir > Biblioteca de datos > "
+"vijPlots > Credit Cards.</p>"
+
+#: R/qqplot.b.R
+msgid ""
+"<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
+"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"Heike Hofmann. In-depth information can be found in the package "
+"documentation on CRAN site.</p>\n"
+"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
+"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
+"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
+"identity line.</p>\n"
+"<p><strong>Confidence band:</strong> Draws a confidence band around the "
+"reference line. qqplotr package provides several methods to compute the "
+"confidence band:</p>\n"
+"<ul>\n"
+"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
+"bands based on Normal confidence intervals;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
+"based on a parametric bootstrap;</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
+"Kolmogorov-Smirnov test;</li>\n"
+"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
+"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
+"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
+"simultaneous bands using the equal local levels.</li>\n"
+"</ul>\n"
+"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
+"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
+"according to the reference line. This procedure may help reducing visual "
+"bias caused by the orthogonal distances from the points to the reference "
+"line.</p>\n"
+"<p><strong>Parameter values:</strong> The distribution parameters can be "
+"estimated from data using:</p>\n"
+"<ul>\n"
+"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
+"should work with all distributions but \"t\" and \"uniform\";</li>\n"
+"<li><strong>Method of Moments</strong> for moment based parameters : it "
+"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
+"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
+"</ul>\n"
+"<p>or entered by user:</p>\n"
+"<ul>\n"
+"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
+"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
+"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
+"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
+"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
+"(Uniform).</li>\n"
+"</ul>\n"
+"</p>"
+msgstr ""
+"<p>Este módulo utiliza el <a "
+"href=\"https://CRAN.R-project.org/package=qqplotr\">paquete de R "
+"qqplotr</a>, desarrollado por Alexandre Almeida, Adam Loy y Heike Hofmann. "
+"Se puede encontrar información detallada en la documentación del paquete "
+"disponible en la web de CRAN.</p>\n"
+"<p><strong>Recta de referencia:</strong> Dibuja la <em>recta identidad</em> "
+"(y = x) o la <em>recta Q-Q</em> que pasa por dos cuantiles específicos "
+"(Q<sub>0.25</sub> y Q<sub>0.75</sub>). Los gráficos P-P solo admiten la "
+"línea identidad.</p>\n"
+"<p><strong>Banda de confianza:</strong> Dibuja una banda de confianza "
+"alrededor de la línea de referencia. El paquete qqplotr ofrece varios "
+"métodos para calcular la banda de confianza:</p>\n"
+"<ul>\n"
+"<li><em><strong>Puntual</strong></em> construye bandas de confianza "
+"puntuales basadas en intervalos de confianza normales;</li>\n"
+"<li><em><strong>Bootstrap</strong></em> crea bandas de confianza puntuales "
+"basadas en un bootstrap paramétrico;</li>\n"
+"<li><em><strong>Kolmogorov-Smirnov</strong></em>: la banda se basa en el "
+"test de Kolmogorov-Smirnov;</li>\n"
+"<li><em><strong>Sensible a las colas</strong></em> construye bandas de "
+"confianza sensibles a las colas, pero solo está implementado para gráficos "
+"Q-Q normales;</li>\n"
+"<li><em><strong>Niveles locales iguales</strong></em> construye bandas "
+"simultáneas utilizando niveles locales iguales.</li>\n"
+"</ul>\n"
+"<p>Los gráficos P-P solo admiten los métodos \"Niveles locales iguales\" y "
+"\"Bootstrap\".</p>\n"
+"<p><strong>Gráfico sin tendencia (Detrended):</strong> Los objetos se "
+"representan <em>sin tendencia</em> en relación a la línea de referencia. "
+"Este procedimiento puede ayudar a reducir el sesgo visual causado por las "
+"distancias ortogonales de los puntos a la línea de referencia.</p>\n"
+"<p><strong>Valores de los parámetros:</strong> Los parámetros de la "
+"distribución pueden estimarse a partir de los datos mediante:</p>\n"
+"<ul>\n"
+"<li><strong>Método de máxima verosimilitud</strong> (utilizando el paquete "
+"MASS) : funciona con todas las distribuciones excepto \"t-Student\" y "
+"\"Uniform\";</li>\n"
+"<li><strong>Método de los momentos</strong> para parámetros basados en "
+"momentos : funciona con \"Normal\", \"Log-normal\", \"Beta\", "
+"\"Exponencial\", \"Gamma\", \"Logística\", \"Uniforme\";</li>\n"
+"</ul>\n"
+"<p>o introducidos por el usuario:</p>\n"
+"<ul>\n"
+"<li><strong>Parámetro 1:</strong> media (Normal), media-log (Log-normal), "
+"forma 1 (Beta), localización (Cauchy, Logística), grados de libertad "
+"(Chi-cuadrado, t-Student), grados de libertad 1 (F), tasa (Exponencial), "
+"forma (Gamma, Weibull) y mínimo (Uniforme);</li>\n"
+"<li><strong>Parámetro 2:</strong> desviación típica (Normal), desviación "
+"típica-log (Log-normal), forma 2 (Beta), escala (Cauchy, Logística), grados "
+"de libertad 2 (F), escala (Gamma, Weibull) y máximo (Uniforme).</li>\n"
+"</ul>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -132,7 +552,7 @@ msgstr "2 semanas"
 #: areachart/options/displayFormat/%e%B%Y.title
 #: linechart/options/displayFormat/%e%B%Y.title
 msgid "20 October 2035"
-msgstr "20 de octubre de 2035"
+msgstr "20 Octubre 2035"
 
 #: areachart/options/displayFormat/%d-%m-%Y.title
 #: linechart/options/displayFormat/%d-%m-%Y.title
@@ -176,43 +596,41 @@ msgstr "6 meses"
 
 #: package/datasets/vijPlots.description
 msgid "A demonstration dataset for vijPlots module."
-msgstr "Un conjunto de datos de demostración para el módulo vijPlots."
+msgstr "Conjunto de datos de ejemplo para el módulo vijPlots."
 
 #: package/datasets/Smoking.description
 msgid "A demonstration dataset for vijPlots/Correspondence Analysis."
 msgstr ""
-"Un conjunto de datos de demostración para vijPlots / Análisis de "
-"Correspondencia."
+"Conjunto de datos de ejemplo para el módulo vijPlots/Análisis de "
+"correspondencia."
 
 #: package/datasets/Likert.description
 msgid "A demonstration dataset for vijPlots/Likert plots."
-msgstr "Un conjunto de datos de demostración para vijPlots/Gráficos Likert."
+msgstr "Conjunto de datos de ejemplo para el módulo vijPlots/Likert."
 
 #: package/datasets/Cars.description
 msgid "A demonstration dataset for vijPlots/Multiple Correspondence Analysis."
 msgstr ""
-"Un conjunto de datos de demostración para vijPlots/Análisis de "
-"Correspondencia Múltiple."
+"Conjunto de datos de ejemplo para el módulo vijPlots/Análisis de "
+"correspondencia múltiple."
 
 #: package/datasets/CreditCards.description
 msgid "A demonstration dataset for vijPlots/Multiple Response plots."
-msgstr ""
-"Un conjunto de datos de demostración para tramas vijPlots/Respuestas "
-"Múltiples."
+msgstr "Conjunto de datos de ejemplo para el módulo vijPlots/Respuesta múltiple."
 
 #: package/datasets/Iris.description
 msgid "A demonstration dataset for vijPlots/Principal Component Analysis."
 msgstr ""
-"Un conjunto de datos de demostración para Análisis de Componente "
-"vijPlots/Principal."
+"Conjunto de datos de ejemplo para el módulo vijPlots/Análisis de componentes "
+"principales."
 
 #: package/datasets/Raincloud.description
 msgid "A demonstration dataset for vijPlots/Raincloud plot."
-msgstr "Un conjunto de datos de demostración para trama vijPlots/Raincloud."
+msgstr "Conjunto de datos de ejemplo para el módulo vijPlots/Nube de lluvia."
 
 #: package/datasets/TimeSeries.description
 msgid "A demonstration dataset for vijPlots/Time Serie plots."
-msgstr "Un conjunto de datos de demostración para tramas vijPlots/Serie Temporal."
+msgstr "Un conjunto de datos de ejemplo para el módulo vijPlots/Series Temporales."
 
 #: areachart/options/colorPalette/Accent.title
 #: barplot/options/colorPalette/Accent.title
@@ -228,19 +646,19 @@ msgstr "Un conjunto de datos de demostración para tramas vijPlots/Serie Tempora
 #: raincloud/options/colorPalette/Accent.title
 #: scatterplot/options/colorPalette/Accent.title
 msgid "Accent"
-msgstr "Acento"
+msgstr "Resaltado"
 
 #: R/corresp.b.R
 msgid "Active Margin"
-msgstr "Margen Activo"
+msgstr "Margen activo"
 
 #: likertplot/options/addMedianLine.title
 msgid "Add median line (Stacked only)"
-msgstr "Agregar línea de mediana (solo Apilada)"
+msgstr "Mostrar mediana (solo apilado)"
 
 #: scatterplot/options/plotBorder.title
 msgid "Add plot frame"
-msgstr "Agregar marco"
+msgstr "Añadir marco del gráfico"
 
 #: R/likertplot.b.R
 msgid "Adj. p"
@@ -248,7 +666,7 @@ msgstr "Adj. p"
 
 #: principal/ui[7].label
 msgid "Advanced Options"
-msgstr "Opciones Avanzadas"
+msgstr "Opciones avanzadas"
 
 #: areachart/options/titleAlign.title
 #: areachart/options/subtitleAlign.title
@@ -299,7 +717,7 @@ msgstr "Opciones Avanzadas"
 #: scatterplot/options/subtitleAlign.title
 #: scatterplot/options/captionAlign.title
 msgid "Align"
-msgstr "Alinear"
+msgstr "Alin."
 
 #: raincloud/options/alphaC.title
 msgid "Alpha"
@@ -321,16 +739,16 @@ msgstr "Abril"
 #: areachart/ui.title
 #: areachart/results.title
 msgid "Area Chart"
-msgstr "Diagrama de Área"
+msgstr "Gráfico de áreas"
 
 #: principal/options/varColor.title
 msgid "Arrows"
-msgstr "Flechas"
+msgstr "Vectores"
 
 #: likertplot/options/sorting/ascending.title
 #: likertplot/ui[1][1][0]/sorting_ascending.label
 msgid "Ascending"
-msgstr "Ascendente"
+msgstr "Creciente"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -387,10 +805,20 @@ msgstr "Auto"
 msgid "Axes"
 msgstr "Ejes"
 
+#: R/corresp.b.R
+msgid "Axis numbers cannot be equal."
+msgstr "Los números de los ejes no pueden ser iguales."
+
+#: R/corresp.b.R
+msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
+msgstr ""
+"Los números de eje deben ser menores o iguales que el número de dimensiones "
+"({nDim})."
+
 #: corresp/ui[7].label
 #: mrfrequencies/ui[5].label
 msgid "Axis Titles"
-msgstr "Títulos de Eje"
+msgstr "Títulos de los ejes"
 
 #: package/analyses/barplot.title
 #: package/analyses/barplot.menuTitle
@@ -398,14 +826,14 @@ msgstr "Títulos de Eje"
 #: barplot/ui.title
 #: barplot/results.title
 msgid "Bar Plot"
-msgstr "Gráfico de Barras"
+msgstr "Gráfico de barras"
 
 #: barplot/options/barType.title
 #: barplot/ui[1][1][0].label
 #: mrcrosstabs/options/bartype.title
 #: mrcrosstabs/ui[2][0][1][0].label
 msgid "Bar Type"
-msgstr "Tipo de Barra"
+msgstr "Tipo de barras"
 
 #: R/principal.b.R
 msgid "Bartlett's Test of Sphericity"
@@ -428,17 +856,21 @@ msgstr "Corrección de Benzécri"
 msgid "Beta"
 msgstr "Beta"
 
+#: R/qqplot.b.R
+msgid "Beta distribution requires data between 0 and 1."
+msgstr "La distribución Beta requiere datos entre 0 y 1."
+
 #: likertplot/options/adjustMethod/BH.title
 msgid "BH"
 msgstr "BH"
 
 #: histogram/ui[3][0][0].label
 msgid "Bin Color"
-msgstr "Color de Celda"
+msgstr "Color de las barras"
 
 #: histogram/ui[1][1][0].label
 msgid "Bin Size"
-msgstr "Tamaño de Celda"
+msgstr "Tamaño de las barras"
 
 #: R/multcorresp.b.R
 #: corresp/options/showBiPlot.title
@@ -462,7 +894,7 @@ msgstr "Biplot"
 
 #: principal/options/biplotType.title
 msgid "Biplot Type"
-msgstr "Tipo de biplot"
+msgstr "Tipo de Biplot"
 
 #: barplot/options/borderColor/black.title
 #: barplot/options/textColor/black.title
@@ -512,7 +944,7 @@ msgstr "Azul"
 #: raincloud/options/colorPalette/BuGn.title
 #: scatterplot/options/colorPalette/BuGn.title
 msgid "Blue to Green"
-msgstr "Azul a Verde"
+msgstr "Azul y verde"
 
 #: areachart/options/colorPalette/BuPu.title
 #: barplot/options/colorPalette/BuPu.title
@@ -528,7 +960,7 @@ msgstr "Azul a Verde"
 #: raincloud/options/colorPalette/BuPu.title
 #: scatterplot/options/colorPalette/BuPu.title
 msgid "Blue to Purple"
-msgstr "Azul a Púrpura"
+msgstr "Azul y morado"
 
 #: areachart/options/colorPalette/Blues.title
 #: barplot/options/colorPalette/Blues.title
@@ -646,7 +1078,7 @@ msgstr "Negrita"
 #: scatterplot/options/subtitleFontFace/bold.italic.title
 #: scatterplot/options/captionFontFace/bold.italic.title
 msgid "Bold Italic"
-msgstr "Negrita cursiva"
+msgstr "Negr. Curs."
 
 #: likertplot/options/adjustMethod/bonferroni.title
 msgid "Bonferroni"
@@ -655,7 +1087,7 @@ msgstr "Bonferroni"
 #: qqplot/options/methodQQ/boot.title
 #: qqplot/options/methodPP/boot.title
 msgid "Boostrap"
-msgstr "Bootstrap"
+msgstr "Boostrap"
 
 #: barplot/options/borderColor.title
 #: histogram/options/borderColor.title
@@ -693,7 +1125,16 @@ msgstr "Borde"
 #: scatterplot/options/legendPosition/bottom.title
 #: scatterplot/options/yAxisPosition/0.title
 msgid "Bottom"
-msgstr "Inferior"
+msgstr "Abajo"
+
+#: histogram/options/binBoundary.title
+msgctxt "boundary"
+msgid "Position"
+msgstr "Posición"
+
+#: boxplot/ui[2][0][1][0].label
+msgid "Box Elements"
+msgstr "Elementos del gráfico"
 
 #: package/analyses/boxplot.title
 #: package/analyses/boxplot.menuTitle
@@ -701,7 +1142,7 @@ msgstr "Inferior"
 #: boxplot/ui.title
 #: boxplot/results.title
 msgid "Box Plot"
-msgstr "Gráfico de Caja"
+msgstr "Gráfico de caja"
 
 #: histogram/options/fillColor/#A65628.title
 #: lollipop/options/dotColor/#A65628.title
@@ -727,7 +1168,7 @@ msgstr "Marrón"
 #: raincloud/options/colorPalette/BrBG.title
 #: scatterplot/options/colorPalette/BrBG.title
 msgid "Brown and Green"
-msgstr "Marrón y Verde"
+msgstr "Marrón y verde"
 
 #: R/multcorresp.b.R
 #: multcorresp/options/method/Burt.title
@@ -749,6 +1190,14 @@ msgstr "Por grupo"
 msgid "By variable"
 msgstr "Por variable"
 
+#: R/likertplot.b.R
+msgid "Cannot convert text variables to integers"
+msgstr "No se pueden convertir variables de texto a números enteros"
+
+#: R/likertplot.b.R
+msgid "Cannot tidy up text variables"
+msgstr "No se pueden ordenar las variables de texto"
+
 #: areachart/ui[4][2].label
 #: barplot/ui[7][2].label
 #: boxplot/ui[6][2].label
@@ -763,23 +1212,23 @@ msgstr "Por variable"
 #: raincloud/ui[4][2].label
 #: scatterplot/ui[5][2].label
 msgid "Caption"
-msgstr "Subtítulo"
+msgstr "Descripción"
 
 #: corresp/ui[8][2][1][0].label
 #: multcorresp/ui[8][2][1][0].label
 #: principal/ui[6][2][1][0].label
 msgid "Caption Style"
-msgstr "Estilo de Subtítulo"
+msgstr "Estilo del pie de gráfico"
 
 #: corresp/ui[8][2][0][0].label
 #: multcorresp/ui[8][2][0][0].label
 #: principal/ui[6][2][0][0].label
 msgid "Caption Text"
-msgstr "Texto de Subtítulo"
+msgstr "Texto del pie de gráfico"
 
 #: package/datasets/Cars.name
 msgid "Cars"
-msgstr "Coches"
+msgstr "Cars"
 
 #: package/analyses/barplot.menuSubgroup
 #: package/analyses/piechart.menuSubgroup
@@ -788,7 +1237,7 @@ msgstr "Coches"
 #: likertplot/options.menuSubgroup
 #: piechart/options.menuSubgroup
 msgid "Categorical"
-msgstr "Categórico"
+msgstr "Variables cualitativas"
 
 #: multcorresp/options/showCategories.title
 #: multcorresp/options/showCategoryPlot.title
@@ -798,34 +1247,34 @@ msgstr "Categorías"
 #: barplot/options/rows.title
 #: barplot/ui[0][0].label
 msgid "Category Axis"
-msgstr "Eje de Categoría"
+msgstr "Eje de categorías"
 
 #: R/multcorresp.b.R
 #: multcorresp/results/categoryplot.title
 msgid "Category Plot"
-msgstr "Gráfica de categorías"
+msgstr "Gráfico de categorías"
 
 #: multcorresp/options/catTitleText.title
 #: multcorresp/options/catSubtitleText.title
 #: multcorresp/options/catCaptionText.title
 msgid "Category plot"
-msgstr "Categorías"
+msgstr "Gráfico de categorías"
 
 #: multcorresp/ui[6][0][1][0].label
 msgid "Category Plot Options"
-msgstr "Opciones de Trama de Categoría"
+msgstr "Opciones del gráfico de categorías"
 
 #: multcorresp/options/normalization/catprincipal.title
 msgid "Category principal"
-msgstr "Principal de categoría"
+msgstr "Principal de categorías"
 
 #: R/multcorresp.b.R
 msgid "Category principal coordinates"
-msgstr "Coordenadas principales de categoría"
+msgstr "Coordenadas principales de las categorías"
 
 #: multcorresp/results/categories.title
 msgid "Category Summary"
-msgstr "Resumen de Categoría"
+msgstr "Resumen de las categorías"
 
 #: R/qqplot.b.R
 #: qqplot/options/distrib/cauchy.title
@@ -926,7 +1375,7 @@ msgstr "Chi-cuadrado"
 #: mrfrequencies/options/colorNo.title
 #: raincloud/options/colorNo.title
 msgid "Color Number"
-msgstr "Número de Color"
+msgstr "Número del color"
 
 #: barplot/ui[3][0][1][0].label
 #: mrcrosstabs/ui[3][0][1][0].label
@@ -935,7 +1384,7 @@ msgstr "Número de Color"
 #: raincloud/ui[1][1][0].label
 #: scatterplot/ui[1][1][0].label
 msgid "Color Options"
-msgstr "Opciones de Color"
+msgstr "Opciones de color"
 
 #: barplot/ui[3][0][0][0].label
 #: boxplot/ui[2][0][0][0].label
@@ -946,7 +1395,7 @@ msgstr "Opciones de Color"
 #: piechart/ui[3][0][0][0].label
 #: qqplot/ui[4][0][0][0].label
 msgid "Color Palette"
-msgstr "Paleta de Color"
+msgstr "Paleta de colores"
 
 #: barplot/ui[3].label
 #: corresp/ui[6][0][1][0].label
@@ -961,7 +1410,7 @@ msgstr "Colores"
 #: boxplot/ui[2].label
 #: qqplot/ui[4].label
 msgid "Colors & Options"
-msgstr "Colores y Opciones"
+msgstr "Colores y opciones"
 
 #: barplot/options/facetBy/column.title
 #: barplot/ui[4][0][1][0][0]/facetBy_column.label
@@ -981,26 +1430,34 @@ msgstr "Columna"
 
 #: corresp/results/colplot.title
 msgid "Column Plot"
-msgstr "Trama de Columna"
+msgstr "Gráfico de columnas"
 
 #: corresp/options/showColPlot.title
 #: corresp/options/columnTitleText.title
 #: corresp/options/columnSubtitleText.title
 #: corresp/options/columnCaptionText.title
 msgid "Column plot"
-msgstr "Trama de columna"
+msgstr "Gráfico de columnas"
+
+#: R/corresp.b.R
+msgid "Column Points for {cols}"
+msgstr "Puntos de columna para {cols}"
 
 #: corresp/options/normalization/colprincipal.title
 msgid "Column principal"
-msgstr "Columna principal"
+msgstr "Principal de columnas"
+
+#: R/corresp.b.R
+msgid "Column principal normalization"
+msgstr "Normalización de columna principal"
 
 #: corresp/results/colProfiles.title
 msgid "Column Profiles"
-msgstr "Perfiles de Columna"
+msgstr "Perfiles de columna"
 
 #: corresp/results/colSummary.title
 msgid "Column Summary"
-msgstr "Resumen de Columna"
+msgstr "Resumen de columnas"
 
 #: corresp/options/cols.title
 #: corresp/ui[0][1].label
@@ -1010,12 +1467,20 @@ msgstr "Columnas"
 #: mrcrosstabs/options/xaxis/xcols.title
 #: mrcrosstabs/ui[2][0][1][1]/xaxis_xcols.label
 msgid "Columns (Groups)"
-msgstr "Columnas (Grupos)"
+msgstr "Columnas (grupos)"
 
 #: likertplot/ui[3].label
 #: likertplot/results/comp.title
 msgid "Comparison Tests"
-msgstr "Pruebas de Comparación"
+msgstr "Test de comparación"
+
+#: R/likertplot.b.R
+msgid "Comparison tests cannot be computed with empty (N=0) groups"
+msgstr "Las pruebas de comparación no se pueden calcular con grupos vacíos (N=0)"
+
+#: R/likertplot.b.R
+msgid "Comparison tests require numeric variables"
+msgstr "Las pruebas de comparación requieren variables numéricas"
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
@@ -1024,7 +1489,7 @@ msgstr "Componente"
 
 #: R/principal.b.R
 msgid "Component Plot"
-msgstr "Trama de Componente"
+msgstr "Gráfico de componentes"
 
 #: qqplot/options/band.title
 msgid "Confidence band"
@@ -1032,15 +1497,15 @@ msgstr "Banda de confianza"
 
 #: qqplot/ui[4][0][1][0].label
 msgid "Confidence Band Methods"
-msgstr "Métodos de Banda de Confianza"
+msgstr "Cálculo de la banda de confianza"
 
 #: scatterplot/options/lineSE.title
 msgid "Confidence interval"
-msgstr "Intervalo de confianza"
+msgstr "Banda de confianza"
 
 #: multcorresp/options/connectOrdinalCat.title
 msgid "Connect ordinal categories"
-msgstr "Conectar categorías ordinales"
+msgstr "Unir categorías ordinales"
 
 #: likertplot/options/postHoc/conover.title
 #: likertplot/ui[3][0][1][0]/postHoc_conover.label
@@ -1049,11 +1514,11 @@ msgstr "Conover"
 
 #: R/likertplot.b.R
 msgid "Conover's Pairwise Comparisons"
-msgstr "Comparaciones Pareadas de Conover"
+msgstr "Comparaciones por pares de Conover"
 
 #: corresp/results/contingency.title
 msgid "Contingency Table"
-msgstr "Tabla de Contingencia"
+msgstr "Tabla de contingencia"
 
 #: corresp/options/showContingency.title
 msgid "Contingency table"
@@ -1072,7 +1537,7 @@ msgstr "Tabla de contingencia"
 #: raincloud/options.menuSubgroup
 #: scatterplot/options.menuSubgroup
 msgid "Continuous"
-msgstr "Continuo"
+msgstr "Variables cuantitativas"
 
 #: R/multcorresp.b.R
 msgid "Contributions"
@@ -1080,7 +1545,7 @@ msgstr "Contribuciones"
 
 #: likertplot/options/toInteger.title
 msgid "Convert variables to integer"
-msgstr "Convertir variables a entero"
+msgstr "Convertir variables en enteros"
 
 #: R/corresp.b.R
 #: R/multcorresp.b.R
@@ -1093,7 +1558,7 @@ msgstr "Coordenadas"
 #: corresp/ui.title
 #: corresp/results.title
 msgid "Correspondence Analysis"
-msgstr "Análisis de Correspondencia"
+msgstr "Análisis de correspondencias"
 
 #: R/multcorresp.b.R
 msgid "COS2"
@@ -1108,7 +1573,7 @@ msgstr "COS2"
 #: histogram/ui[1][0][0]/histtype_count.label
 #: piechart/options/labels/count.title
 msgid "Count"
-msgstr "Recuento"
+msgstr "Frecuencia"
 
 #: mrcrosstabs/options/endorsed.title
 #: mrfrequencies/options/endorsed.title
@@ -1123,7 +1588,7 @@ msgstr "Valor contado"
 #: mrfrequencies/options/yaxis/counts.title
 #: mrfrequencies/results/responses.columns.title
 msgid "Counts"
-msgstr "Recuentos"
+msgstr "Recuento"
 
 #: corresp/options/counts.title
 #: corresp/ui[0][2].label
@@ -1132,37 +1597,45 @@ msgstr "Recuentos (opcional)"
 
 #: principal/ui[3][2][0]/biplotType_covPlot.label
 msgid "Cov (Loading principal)"
-msgstr "Cov (Carga principal)"
+msgstr "Cov (cargas principales)"
 
 #: principal/options/biplotType/covPlot.title
 msgid "Covariance (Loading principal)"
-msgstr "Covarianza (Carga principal)"
+msgstr "Covarianza (cargas principales)"
 
 #: R/principal.b.R
 msgid "Covariance Biplot"
-msgstr "Bitrama de Co-varianza"
+msgstr "Biplot (Covarianza)"
 
 #: package/datasets/CreditCards.name
 msgid "Credit Cards"
-msgstr "Tarjetas Crediticias"
+msgstr "Credit Cards"
 
 #: package/analyses/mrcrosstabs.title
 #: package/analyses/mrcrosstabs.menuTitle
 #: mrcrosstabs/options.title
 #: mrcrosstabs/results/crosstab.title
 msgid "Crosstab"
-msgstr "Tabla de Contingencia"
+msgstr "Tabla de contingencia"
 
 #: R/mrcrosstabs.b.R
 msgid "Crosstab (% by row)"
-msgstr "Tabla de Contingencia (% por fila)"
+msgstr "Tabla de contingencia (% por fila)"
+
+#: R/mrcrosstabs.b.R
+msgid "Crosstab (% of cases)"
+msgstr "Tabla de contingencia (% de casos)"
+
+#: R/mrcrosstabs.b.R
+msgid "Crosstab (% of responses)"
+msgstr "Tabla de contingencia (% de respuestas)"
 
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
 #: principal/results/summaryTable.columns.title
 msgid "Cumulative %"
-msgstr "% Acumulativo"
+msgstr "% acumulado"
 
 #: areachart/options/colorPalette/Dark2.title
 #: barplot/options/colorPalette/Dark2.title
@@ -1182,7 +1655,7 @@ msgstr "Oscuro 2"
 
 #: multcorresp/options/obsColor/darkgray.title
 msgid "Dark Gray"
-msgstr "Gris Oscuro"
+msgstr "Gris oscuro"
 
 #: histogram/options/dashedDensity.title
 msgid "Dashed line"
@@ -1194,12 +1667,12 @@ msgstr "Datos"
 
 #: qqplot/ui[2][0][1].label
 msgid "Data Transform"
-msgstr "Transformación de Datos"
+msgstr "Transformación de datos"
 
 #: areachart/options/dateBreak.title
 #: linechart/options/dateBreak.title
 msgid "Date breaks"
-msgstr "Ruptura de Fecha"
+msgstr "Intervalos de fecha"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -1222,7 +1695,7 @@ msgstr "Diciembre"
 #: mrfrequencies/options/order/decreasing.title
 #: mrfrequencies/ui[1][1][0]/order_decreasing.label
 msgid "Decreasing"
-msgstr "Decrementando"
+msgstr "Decreciente"
 
 #: R/utils.R
 #: corresp/options/columnTitleText.default
@@ -1249,7 +1722,7 @@ msgstr "Decrementando"
 #: principal/options/obsCaptionText.default
 #: qqplot/options/titleText.default
 msgid "default"
-msgstr "predeterminado"
+msgstr "por defecto"
 
 #: R/histogram.b.R
 #: histogram/options/histtype/density.title
@@ -1260,25 +1733,25 @@ msgstr "Densidad"
 
 #: histogram/options/densityOpacity.title
 msgid "Density opacity"
-msgstr "Opacidad de densidad"
+msgstr "Opacidad"
 
 #: likertplot/options/sorting/descending.title
 #: likertplot/ui[1][1][0]/sorting_descending.label
 msgid "Descending"
-msgstr "Descendente"
+msgstr "Decreciente"
 
 #: R/qqplot.b.R
 msgid "Detrended {distribStr} {typeStr} Plot of {varStr}"
-msgstr "Trama de {distribStr} {typeStr} Sin Tendencia de {varStr}"
+msgstr "Gráfico sin tendencia {typeStr} {distribStr} de {varStr}"
 
 #: qqplot/options/detrend.title
 msgid "Detrended plot"
-msgstr "Trama Sin Tendencia"
+msgstr "Gráfico sin tendencia"
 
 #: likertplot/results/comp/kwTable.columns.title
 #: principal/results/kmoTable.columns.title
 msgid "df"
-msgstr "df"
+msgstr "gl"
 
 #: areachart/options/colorPalette/dichromat::Categorical.12.title
 #: barplot/options/colorPalette/dichromat::Categorical.12.title
@@ -1315,26 +1788,32 @@ msgstr "Discriminación"
 #: R/multcorresp.b.R
 #: multcorresp/results/discrimplot.title
 msgid "Discrimination Plot"
-msgstr "Trama de Discriminación"
+msgstr "Gráfico de discriminación"
 
 #: multcorresp/options/discrimTitleText.title
 #: multcorresp/options/discrimSubtitleText.title
 #: multcorresp/options/discrimCaptionText.title
 msgid "Discrimination plot"
-msgstr "Trama de discriminación"
+msgstr "Gráfico de discriminación"
 
 #: areachart/options/displayFormat.title
 #: linechart/options/displayFormat.title
 msgid "Display format"
-msgstr "Formato de exhibición"
+msgstr "Formato de visualización"
 
 #: qqplot/options/distrib.title
 msgid "Distribution"
 msgstr "Distribución"
 
+#: R/qqplot.b.R
+#: qqplot/options/distrib/norm.title
+msgctxt "distribution"
+msgid "Normal"
+msgstr "Normal"
+
 #: piechart/options/donut.title
 msgid "Donut chart"
-msgstr "Gráfico de Donut"
+msgstr "Gráfico de anillo"
 
 #: lollipop/options/dotColor.title
 msgid "Dot"
@@ -1343,15 +1822,15 @@ msgstr "Punto"
 #: linechart/options/dotSize.title
 #: lollipop/options/dotSize.title
 msgid "Dot size"
-msgstr "Tamaño del punto"
+msgstr "Punto"
 
 #: principal/options/biplotLines.title
 msgid "Draw arrow lines"
-msgstr "Dibujar líneas de flecha"
+msgstr "Dibujar líneas de los vectores"
 
 #: boxplot/options/staple.title
 msgid "Draw staples"
-msgstr "Dibujar grapas"
+msgstr "Dibujar barreras"
 
 #: likertplot/options/postHoc/dscf.title
 #: likertplot/ui[3][0][1][0]/postHoc_dscf.label
@@ -1360,12 +1839,12 @@ msgstr "DSCF"
 
 #: R/likertplot.b.R
 msgid "DSCF p-values are adjusted groupwise."
-msgstr "Los valores p de DSCF se ajustan de forma grupal."
+msgstr "Los p-valores de DSCF están ajustados por grupo."
 
 #: mrcrosstabs/options/mode/morevar.title
 #: mrfrequencies/options/mode/morevar.title
 msgid "Dummy Variables"
-msgstr "Variables Ficticias"
+msgstr "Variables dicotómicas"
 
 #: likertplot/options/postHoc/dunn.title
 #: likertplot/ui[3][0][1][0]/postHoc_dunn.label
@@ -1374,11 +1853,11 @@ msgstr "Dunn"
 
 #: R/likertplot.b.R
 msgid "Dunn's Pairwise Comparisons"
-msgstr "Comparaciones Emparejadas de Dunn"
+msgstr "Comparaciones por pares de Dunn"
 
 #: R/likertplot.b.R
 msgid "Dwass-Steel-Critchlow-Fligner Pairwise Comparisons"
-msgstr "Comparaciones Pareadas de Dwass-Steel-Critchlow-Fligner"
+msgstr "Comparaciones por pares de Dwass-Steel-Critchlow-Fligner"
 
 #: principal/results/summaryTable.columns.title
 msgid "Eigenvalue"
@@ -1388,10 +1867,19 @@ msgstr "Valor propio"
 msgid "Eigenvalues"
 msgstr "Valores propios"
 
+#: principal/ui[4][0][0][1].label
+#: scatterplot/ui[2][0][0][0].label
+msgid "Element Sizes"
+msgstr "Tamaño de los elementos"
+
+#: scatterplot/ui[2].label
+msgid "Element Sizes & Facets"
+msgstr "Tamaño de los elementos y subgráficos"
+
 #: qqplot/options/methodQQ/ell.title
 #: qqplot/options/methodPP/ell.title
 msgid "Equal Local Levels"
-msgstr "Niveles Locales Iguales"
+msgstr "Niveles locales iguales"
 
 #: principal/options/rotation/equamax.title
 msgid "Equamax"
@@ -1400,7 +1888,7 @@ msgstr "Equamax"
 #: qqplot/options/paramMethod/paraEstimate.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat.label
 msgid "Estimate parameters from data"
-msgstr "Estimar parámetros a partir de los datos"
+msgstr "Estimar parámetros a partir de datos"
 
 #: areachart/options/dateFormat/eu.title
 #: linechart/options/dateFormat/eu.title
@@ -1412,9 +1900,17 @@ msgstr "UE (D-M-A)"
 msgid "Exponential"
 msgstr "Exponencial"
 
+#: R/qqplot.b.R
+msgid "Exponential distribution requires non-negative (≥0) data."
+msgstr "La distribución exponencial requiere datos no negativos (≥0)."
+
 #: principal/results/summaryTable.columns.superTitle
 msgid "Extraction Sums of Squared Loadings"
-msgstr "Cargando Sumas de Cuadrados de Extracción"
+msgstr "Suma de cuadrados de las cargas extraídas"
+
+#: R/qqplot.b.R
+msgid "F"
+msgstr "F"
 
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
@@ -1431,7 +1927,7 @@ msgstr "Cargando Sumas de Cuadrados de Extracción"
 #: scatterplot/options/facet.title
 #: scatterplot/ui[0][5].label
 msgid "Facet"
-msgstr "Faceta"
+msgstr "Subgráfico"
 
 #: barplot/ui[4][0][1][0].label
 #: boxplot/options/facetBy.title
@@ -1446,11 +1942,11 @@ msgstr "Faceta"
 #: scatterplot/options/facetBy.title
 #: scatterplot/ui[2][0][1][0].label
 msgid "Facets"
-msgstr "Facetas"
+msgstr "Subgráficos"
 
 #: multcorresp/results/categories.columns.title
 msgid "Factor"
-msgstr "Factor"
+msgstr "Variable"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -1530,26 +2026,26 @@ msgstr "Tipo de letra"
 #: principal/options/subtitleFontSize.title
 #: principal/options/captionFontSize.title
 msgid "Font size"
-msgstr "Tamaño de fuente"
+msgstr "Tamaño de letra"
 
 #: histogram/options/usePalette/forBorder.title
 #: histogram/ui[3][1][0][1]/usePalette_forBoder.label
 msgid "For border"
-msgstr "Para borde"
+msgstr "Para el borde"
 
 #: histogram/options/usePalette/forFilling.title
 #: histogram/ui[3][1][0][1]/usePalette_forFilling.label
 msgid "For filling"
-msgstr "Para rellenar"
+msgstr "Para el relleno"
 
 #: principal/options/biplotType/formPlot.title
 #: principal/ui[3][2][0]/biplotType_formPlot.label
 msgid "Form (Score principal)"
-msgstr "Forma (Puntuación principal)"
+msgstr "Forma (puntuaciones principales)"
 
 #: R/principal.b.R
 msgid "Form Biplot"
-msgstr "Forma de bi-trama"
+msgstr "Biplot de forma"
 
 #: package/analyses/mrfrequencies.title
 #: package/analyses/mrfrequencies.menuTitle
@@ -1561,11 +2057,11 @@ msgstr "Frecuencias"
 
 #: mrfrequencies/results/plot.title
 msgid "Frequency Plot"
-msgstr "Trama de Frecuencia"
+msgstr "Gráfico"
 
 #: likertplot/results/frequencies.title
 msgid "Frequency Table"
-msgstr "Tabla de Frecuencia"
+msgstr "Tabla de frecuencias"
 
 #: likertplot/options/frequencyTable.title
 msgid "Frequency table"
@@ -1573,12 +2069,12 @@ msgstr "Tabla de frecuencias"
 
 #: likertplot/ui[2][0][1][0].label
 msgid "Frequency Type"
-msgstr "Tipo de Frecuencia"
+msgstr "Tipo de frecuencia"
 
 #: R/qqplot.b.R
 #: qqplot/options/distrib/gamma.title
 msgid "Gamma"
-msgstr "Gama"
+msgstr "Gamma"
 
 #: barplot/options/borderColor/gray.title
 #: corresp/options/supColor/darkgray.title
@@ -1621,7 +2117,7 @@ msgstr "Verde"
 #: raincloud/options/colorPalette/GnBu.title
 #: scatterplot/options/colorPalette/GnBu.title
 msgid "Green to Blue"
-msgstr "Verde a Azul"
+msgstr "Verde y azul"
 
 #: R/multcorresp.b.R
 msgid "Greenacre Correction"
@@ -1698,9 +2194,14 @@ msgstr "Grupo"
 msgid "Group (Overlapped)"
 msgstr "Grupo (superpuesto)"
 
+#: raincloud/options/groupOne.title
+#: raincloud/ui[0][1].label
+msgid "Group (Side-by-side)"
+msgstr "Grupo (al lado)"
+
 #: piechart/options/labels/group+count.title
 msgid "Group + Count"
-msgstr "Grupo + Recuento"
+msgstr "Grupo + Frecuencia"
 
 #: piechart/options/labels/group+percent.title
 msgid "Group + Percent"
@@ -1714,13 +2215,18 @@ msgstr "Agrupar por"
 #: histogram/options/grouping/dodge.title
 #: mrcrosstabs/options/bartype/dodge2.title
 msgid "Grouped"
-msgstr "Agrupado"
+msgstr "Al lado"
+
+#: barplot/options/barType/dodge.title
+#: mrcrosstabs/options/bartype/dodge.title
+msgid "Grouped (tight)"
+msgstr "Al lado (juntas)"
 
 #: histogram/options/grouping.title
 #: histogram/options/groupingN.title
 #: histogram/ui[1][2][0].label
 msgid "Grouping"
-msgstr "Agrupación"
+msgstr "Agrupamiento"
 
 #: likertplot/options/group.title
 #: likertplot/ui[0][1].label
@@ -1731,16 +2237,16 @@ msgstr "Agrupación"
 #: qqplot/options/group.title
 #: qqplot/ui[0][1].label
 msgid "Grouping Variable"
-msgstr "Variable de Agrupación"
+msgstr "Agrupar por:"
 
 #: likertplot/options/pValue/group.title
 #: likertplot/ui[3][0][2][0]/pValue_group.label
 msgid "Groupwise"
-msgstr "Grupo a grupo"
+msgstr "Por grupo"
 
 #: likertplot/options/hideLabelsBelow.title
 msgid "Hide % labels below 5%"
-msgstr "Ocultar etiquetas de % por debajo del 5%"
+msgstr "Ocultar % inferiores al 5%"
 
 #: package/analyses/histogram.title
 #: package/analyses/histogram.menuTitle
@@ -1765,11 +2271,11 @@ msgstr "Hommel"
 
 #: likertplot/options/hLabelWrap.title
 msgid "Horizontal label wrap"
-msgstr "Envoltura de etiqueta horizontal"
+msgstr "Ancho de las etiquetas horizontales"
 
 #: scatterplot/options/hline.title
 msgid "Horizontal line at"
-msgstr "Línea horizontal en"
+msgstr "Recta horizontal en"
 
 #: barplot/options/horizontal.title
 #: boxplot/options/horizontal.title
@@ -1778,16 +2284,27 @@ msgstr "Línea horizontal en"
 #: mrfrequencies/options/horizontal.title
 #: raincloud/options/horizontal.title
 msgid "Horizontal plot"
-msgstr "Trama horizontal"
+msgstr "Gráfico horizontal"
 
 #: qqplot/options/refType/identity.title
 #: qqplot/ui[2][1][0]/refLine[0]/refType_identity.label
 msgid "Identity line"
-msgstr "Línea de identidad"
+msgstr "Recta identidad"
+
+#: likertplot/options/ignoreNA.title
+msgid "Ignore missing groups"
+msgstr "Ignorar grupos faltantes"
+
+#: areachart/options/ignoreNA.title
+#: barplot/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
+msgid "Ignore missing values"
+msgstr "Ignorar valores faltantes"
 
 #: multcorresp/options/ggrepel.title
 msgid "Improve label display"
-msgstr "Mejorar la exhibición de etiquetas"
+msgstr "Mejorar la visualización de etiquetas"
 
 #: barplot/options/order/increasing.title
 #: barplot/ui[1][2][0]/order_increasing.label
@@ -1800,7 +2317,7 @@ msgstr "Mejorar la exhibición de etiquetas"
 #: mrfrequencies/options/order/increasing.title
 #: mrfrequencies/ui[1][1][0]/order_increasing.label
 msgid "Increasing"
-msgstr "Aumento"
+msgstr "Creciente"
 
 #: R/multcorresp.b.R
 #: multcorresp/options/method/Indicator.title
@@ -1820,7 +2337,7 @@ msgstr "Resumen de inercia"
 
 #: principal/results/summaryTable.columns.superTitle
 msgid "Initial Eigenvalues"
-msgstr "Valores Propios Iniciales"
+msgstr "Valores propios iniciales"
 
 #: areachart/options/dateFormat.title
 #: linechart/options/dateFormat.title
@@ -1904,7 +2421,7 @@ msgstr "Enero"
 #: principal/options/obsColor/#A6C4F1.title
 #: scatterplot/options/singleColor/#A6C4F1.title
 msgid "jmv Blue"
-msgstr "azul jmv"
+msgstr "Azul jmv"
 
 #: areachart/options/colorPalette/jmv.title
 #: barplot/options/colorPalette/jmv.title
@@ -1920,7 +2437,7 @@ msgstr "azul jmv"
 #: raincloud/options/colorPalette/jmv.title
 #: scatterplot/options/colorPalette/jmv.title
 msgid "jmv Default"
-msgstr "Predeterminado de jmv"
+msgstr "Colores jmv"
 
 #: histogram/options/fillColor/#C5C5C5.title
 #: lollipop/options/dotColor/#C5C5C5.title
@@ -1929,7 +2446,7 @@ msgstr "Predeterminado de jmv"
 #: principal/options/obsColor/#C5C5C5.title
 #: scatterplot/options/singleColor/#C5C5C5.title
 msgid "jmv Gray"
-msgstr "gris jmv"
+msgstr "Gris jmv"
 
 #: histogram/options/fillColor/#88C38B.title
 #: lollipop/options/dotColor/#88C38B.title
@@ -1938,7 +2455,7 @@ msgstr "gris jmv"
 #: principal/options/obsColor/#88C38B.title
 #: scatterplot/options/singleColor/#88C38B.title
 msgid "jmv Green"
-msgstr "verde jmv"
+msgstr "Verde jmv"
 
 #: histogram/options/fillColor/#E18A8A.title
 #: lollipop/options/dotColor/#E18A8A.title
@@ -1947,7 +2464,7 @@ msgstr "verde jmv"
 #: principal/options/obsColor/#E18A8A.title
 #: scatterplot/options/singleColor/#E18A8A.title
 msgid "jmv Red"
-msgstr "rojo jmv"
+msgstr "Rojo jmv"
 
 #: histogram/options/fillColor/#F0CD8C.title
 #: lollipop/options/dotColor/#F0CD8C.title
@@ -1956,7 +2473,7 @@ msgstr "rojo jmv"
 #: principal/options/obsColor/#F0CD8C.title
 #: scatterplot/options/singleColor/#F0CD8C.title
 msgid "jmv Yellow"
-msgstr "amarillo jmv"
+msgstr "Amarillo jmv"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -1984,15 +2501,15 @@ msgstr "Normalización de Kaiser"
 
 #: R/principal.b.R
 msgid "Kaiser-Meyer-Olkin Measure of Sampling Adequacy (MSA)"
-msgstr "Medida de Kaiser-Meyer-Olkin de Adecuación de Muestra (MSA)"
+msgstr "Medida Kaiser-Meyer-Olkin de adecuación del muestreo (MSA)"
 
 #: principal/results/kmoTable.title
 msgid "KMO & Bartlett's Test"
-msgstr "Prueba de KMO y Bartlett"
+msgstr "KMO y prueba de Bartlett"
 
 #: principal/options/showKMO.title
 msgid "KMO & Bartlett's test"
-msgstr "Prueba KMO y de Bartlett"
+msgstr "KMO y prueba de Bartlett"
 
 #: qqplot/options/methodQQ/ks.title
 msgid "Kolmogorov-Smirnov"
@@ -2004,7 +2521,7 @@ msgstr "Kruskal-Wallis"
 
 #: likertplot/results/comp/kwTable.title
 msgid "Kruskal-Wallis Tests"
-msgstr "Pruebas de Kruskal-Wallis"
+msgstr "Test de Kruskal-Wallis"
 
 #: barplot/options/textColor.title
 #: barplot/options/labelFontSize.title
@@ -2028,11 +2545,11 @@ msgstr "Pruebas de Kruskal-Wallis"
 #: scatterplot/options/labelVar.title
 #: scatterplot/ui[0][3].label
 msgid "Label"
-msgstr "Etiqueta"
+msgstr "Etiquetas"
 
 #: likertplot/options/labelColor.title
 msgid "Label color"
-msgstr "Color de etiqueta"
+msgstr "Color de las etiquetas"
 
 #: areachart/options/yAxisLabelFontSize.title
 #: areachart/options/xAxisLabelFontSize.title
@@ -2059,11 +2576,11 @@ msgstr "Color de etiqueta"
 #: scatterplot/options/yAxisLabelFontSize.title
 #: scatterplot/options/xAxisLabelFontSize.title
 msgid "Label font size"
-msgstr "Tamaño de fuente de etiqueta"
+msgstr "Tamaño de las etiquetas"
 
 #: piechart/ui[2][0][1][0].label
 msgid "Label Options"
-msgstr "Opciones de Etiqueta"
+msgstr "Opciones de las etiquetas"
 
 #: barplot/options/labelPosition.title
 #: barplot/ui[2][0][1][0].label
@@ -2072,7 +2589,7 @@ msgstr "Opciones de Etiqueta"
 #: mrfrequencies/options/labelPosition.title
 #: mrfrequencies/ui[2][0][1][0].label
 msgid "Label Position"
-msgstr "Posición de Etiqueta"
+msgstr "Posición de las etiquetas"
 
 #: areachart/options/yAxisLabelRotation.title
 #: areachart/options/xAxisLabelRotation.title
@@ -2099,11 +2616,11 @@ msgstr "Posición de Etiqueta"
 #: scatterplot/options/yAxisLabelRotation.title
 #: scatterplot/options/xAxisLabelRotation.title
 msgid "Label rotation"
-msgstr "Rotación de etiqueta"
+msgstr "Rotación de las etiquetas"
 
 #: likertplot/ui[4][2][0][0].label
 msgid "Label Size"
-msgstr "Tamaño de Etiqueta"
+msgstr "Tamaño de las etiquetas"
 
 #: multcorresp/options/labelSize.title
 #: piechart/options/labels.title
@@ -2221,11 +2738,11 @@ msgstr "Leyenda"
 #: raincloud/ui[3].label
 #: scatterplot/ui[4].label
 msgid "Legend & Axis Titles"
-msgstr "Leyenda y Títulos de Ejes"
+msgstr "Títulos de leyenda y ejes"
 
 #: likertplot/ui[7].label
 msgid "Legend Title"
-msgstr "Título de Leyenda"
+msgstr "Título de la leyenda"
 
 #: areachart/options/colorPalette/custom::lemovice.title
 #: barplot/options/colorPalette/custom::lemovice.title
@@ -2253,7 +2770,7 @@ msgstr "Nivel"
 #: principal/options/varColor/#B3CDE3.title
 #: principal/options/obsColor/#B3CDE3.title
 msgid "Light Blue"
-msgstr "Azul Claro"
+msgstr "Azul claro"
 
 #: histogram/options/fillColor/#E5D8BD.title
 #: lollipop/options/dotColor/#E5D8BD.title
@@ -2261,7 +2778,7 @@ msgstr "Azul Claro"
 #: principal/options/varColor/#E5D8BD.title
 #: principal/options/obsColor/#E5D8BD.title
 msgid "Light Brown"
-msgstr "Marrón Claro"
+msgstr "Marrón claro"
 
 #: histogram/options/fillColor/#F2F2F2.title
 #: lollipop/options/dotColor/#F2F2F2.title
@@ -2270,7 +2787,7 @@ msgstr "Marrón Claro"
 #: principal/options/varColor/#F2F2F2.title
 #: principal/options/obsColor/#F2F2F2.title
 msgid "Light Gray"
-msgstr "Gris Claro"
+msgstr "Gris claro"
 
 #: histogram/options/fillColor/#CCEBC5.title
 #: lollipop/options/dotColor/#CCEBC5.title
@@ -2278,7 +2795,7 @@ msgstr "Gris Claro"
 #: principal/options/varColor/#CCEBC5.title
 #: principal/options/obsColor/#CCEBC5.title
 msgid "Light Green"
-msgstr "Verde Claro"
+msgstr "Verde claro"
 
 #: histogram/options/fillColor/#FED9A6.title
 #: lollipop/options/dotColor/#FED9A6.title
@@ -2286,7 +2803,7 @@ msgstr "Verde Claro"
 #: principal/options/varColor/#FED9A6.title
 #: principal/options/obsColor/#FED9A6.title
 msgid "Light Orange"
-msgstr "Naranja Claro"
+msgstr "Naranja claro"
 
 #: histogram/options/fillColor/#FDDAEC.title
 #: lollipop/options/dotColor/#FDDAEC.title
@@ -2294,7 +2811,7 @@ msgstr "Naranja Claro"
 #: principal/options/varColor/#FDDAEC.title
 #: principal/options/obsColor/#FDDAEC.title
 msgid "Light Pink"
-msgstr "Rosa Claro"
+msgstr "Rosa claro"
 
 #: histogram/options/fillColor/#DECBE4.title
 #: lollipop/options/dotColor/#DECBE4.title
@@ -2302,7 +2819,7 @@ msgstr "Rosa Claro"
 #: principal/options/varColor/#DECBE4.title
 #: principal/options/obsColor/#DECBE4.title
 msgid "Light Purple"
-msgstr "Púrpura Claro"
+msgstr "Morado claro"
 
 #: histogram/options/fillColor/#FBB4AE.title
 #: lollipop/options/dotColor/#FBB4AE.title
@@ -2310,7 +2827,7 @@ msgstr "Púrpura Claro"
 #: principal/options/varColor/#FBB4AE.title
 #: principal/options/obsColor/#FBB4AE.title
 msgid "Light Red"
-msgstr "Rojo Claro"
+msgstr "Rojo claro"
 
 #: histogram/options/fillColor/#FFFFCC.title
 #: lollipop/options/dotColor/#FFFFCC.title
@@ -2318,7 +2835,7 @@ msgstr "Rojo Claro"
 #: principal/options/varColor/#FFFFCC.title
 #: principal/options/obsColor/#FFFFCC.title
 msgid "Light Yellow"
-msgstr "Amarillo Claro"
+msgstr "Amarillo claro"
 
 #: package/datasets/Likert.name
 msgid "Likert"
@@ -2330,17 +2847,21 @@ msgstr "Likert"
 #: likertplot/ui.title
 #: likertplot/results.title
 msgid "Likert Plot"
-msgstr "Trama de Likert"
+msgstr "Gráfico de Likert"
+
+#: R/likertplot.b.R
+msgid "Likert Plot requires ordinal (or numeric) variables"
+msgstr "El gráfico de Likert requiere variables ordinales (o numéricas)"
 
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
 msgid "Likert Variables"
-msgstr "Variables Likert"
+msgstr "Variable de tipo Likert"
 
 #: R/multcorresp.b.R
 #: R/principal.b.R
 msgid "Limited to the first 100 observations"
-msgstr "Limitado a las primeras 100 observaciones"
+msgstr "Limitado a las primeras 100 observaciónes."
 
 #: lollipop/options/lineColor.title
 #: scatterplot/options/lineSize.title
@@ -2353,18 +2874,18 @@ msgstr "Línea"
 #: linechart/ui.title
 #: linechart/results.title
 msgid "Line Chart"
-msgstr "Gráfico de línea"
+msgstr "Gráfico de líneas"
 
 #: histogram/options/densityLineSize.title
 #: histogram/options/normalCurveLineSize.title
 msgid "Line size"
-msgstr "Tamaño de línea"
+msgstr "Grosor de línea"
 
 #: areachart/options/lineWidth.title
 #: linechart/options/lineWidth.title
 #: lollipop/options/lineWidth.title
 msgid "Line width"
-msgstr "Anchura de línea"
+msgstr "Línea"
 
 #: scatterplot/options/lineMethod/lm.title
 msgid "Linear"
@@ -2386,15 +2907,15 @@ msgstr "Logística"
 #: lollipop/ui.title
 #: lollipop/results.title
 msgid "Lollipop Plot"
-msgstr "Trama de Piruleta"
+msgstr "Gráfico de piruleta"
 
 #: lollipop/ui[3][1][0].label
 msgid "Lollipop Size"
-msgstr "Tamaño de Piruleta"
+msgstr "Tamaño de la piruleta"
 
 #: lollipop/ui[3].label
 msgid "Lollipop Size & Colors"
-msgstr "Tamaño y Colores de Piruleta"
+msgstr "Tamaño y colores de la piruleta"
 
 #: package.description
 msgid ""
@@ -2407,17 +2928,17 @@ msgstr ""
 "Gráficos estadísticos principales (histograma, gráfico de caja, punto, "
 "barra, línea, nube de lluvia...) con muchas opciones, junto con tramas de "
 "Likert, trama de barra de respuesta múltiple, Análisis de Componentes "
-"Principales y Análisis de Correspondencia (múltiple). La fuente del "
-"proyecto (y registro de cambios) está disponible en <a "
+"Principales y Análisis de Correspondencia (múltiple). La fuente del proyecto "
+"(y registro de cambios) está disponible en <a "
 "href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>."
 
 #: likertplot/options/showMannU.title
 msgid "Mann-Whitney U"
-msgstr "Mann-Whitney U"
+msgstr "U de Mann-Withney"
 
 #: likertplot/results/comp/uTestTable.title
 msgid "Mann-Whitney U Tests"
-msgstr "Pruebas U de Mann-Whitney"
+msgstr "Prueba de la U de Mann-Whitney"
 
 #: areachart/options/yAxisRangeType/manual.title
 #: barplot/options/yAxisRangeType/manual.title
@@ -2481,7 +3002,11 @@ msgstr "Masa"
 #: scatterplot/options/yAxisRangeMax.title
 #: scatterplot/options/xAxisRangeMax.title
 msgid "Max"
-msgstr "Máx"
+msgstr "Max"
+
+#: R/lollipop.b.R
+msgid "Maximum of {var}"
+msgstr "Máximo de {var}"
 
 #: qqplot/options/paramEstMethod/mle.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mle.label
@@ -2493,6 +3018,14 @@ msgstr "Máxima verosimilitud (MLE)"
 msgid "May"
 msgstr "Mayo"
 
+#: R/multcorresp.b.R
+msgid "MCA Principal Coordinates"
+msgstr "Coordenadas principales del ACM"
+
+#: R/multcorresp.b.R
+msgid "MCA Standard Coordinates"
+msgstr "Coordenadas estándar del ACM"
+
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 msgid "Mean"
@@ -2500,7 +3033,11 @@ msgstr "Media"
 
 #: likertplot/options/showMean.title
 msgid "Mean & SD"
-msgstr "Media y DS"
+msgstr "Media y desviación típica"
+
+#: R/lollipop.b.R
+msgid "Mean of {var}"
+msgstr "Media de {var}"
 
 #: R/likertplot.b.R
 #: likertplot/options/showMedian.title
@@ -2508,6 +3045,26 @@ msgstr "Media y DS"
 #: lollipop/ui[2][0][0][0]/yaxis_median.label
 msgid "Median"
 msgstr "Mediana"
+
+#: R/likertplot.b.R
+msgid "Median and mean require numeric variables"
+msgstr "La mediana y la media requieren variables numéricas"
+
+#: R/lollipop.b.R
+msgid "Median of {var}"
+msgstr "Mediana de {var}"
+
+#: areachart/options/displayFormat/%b.title
+#: linechart/options/displayFormat/%b.title
+msgctxt "menu"
+msgid "Oct"
+msgstr "Oct"
+
+#: areachart/options/displayFormat/%B.title
+#: linechart/options/displayFormat/%B.title
+msgctxt "menu"
+msgid "October"
+msgstr "Octubre"
 
 #: likertplot/options/adjustMethod.title
 #: multcorresp/options/method.title
@@ -2519,7 +3076,7 @@ msgstr "Método"
 #: qqplot/options/paramEstMethod/mme.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mme.label
 msgid "Method of moments (MME)"
-msgstr "Método de momentos (MME)"
+msgstr "Método de los momentos (MME)"
 
 #: R/multcorresp.b.R
 msgid "Method:"
@@ -2532,7 +3089,7 @@ msgstr "Método:"
 #: mrfrequencies/options/labelPosition/middle.title
 #: mrfrequencies/ui[2][0][1][0]/labelPosition_middle.label
 msgid "Middle"
-msgstr "Medio"
+msgstr "En medio"
 
 #: areachart/options/yAxisRangeMin.title
 #: barplot/options/yAxisRangeMin.title
@@ -2557,16 +3114,20 @@ msgstr "Medio"
 #: scatterplot/options/yAxisRangeMin.title
 #: scatterplot/options/xAxisRangeMin.title
 msgid "Min"
-msgstr "Mín"
+msgstr "Min"
 
 #: lollipop/options/yaxis/minmax.title
 #: lollipop/ui[2][0][0][1]/yaxis_minmax.label
 msgid "Min / Max"
-msgstr "Mín / Máx"
+msgstr "Min / Max"
 
 #: principal/options/rotation/entropy.title
 msgid "Minimum entropy"
 msgstr "Entropía mínima"
+
+#: R/lollipop.b.R
+msgid "Minimum of {var}"
+msgstr "Mínimo de {var}"
 
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
@@ -2575,7 +3136,7 @@ msgstr "Entropía mínima"
 #: mrfrequencies/ui/mode/onevar[0][0][0].label
 #: mrfrequencies/ui/mode/onevar[0][1].label
 msgid "Multi-valued Variable"
-msgstr "Variable de Multi-evaluado"
+msgstr "Variable multirrespuesta"
 
 #: package/analyses/multcorresp.title
 #: package/analyses/multcorresp.menuTitle
@@ -2583,29 +3144,29 @@ msgstr "Variable de Multi-evaluado"
 #: multcorresp/ui.title
 #: multcorresp/results.title
 msgid "Multiple Correspondence Analysis"
-msgstr "Análisis de Correspondencia Múltiple"
+msgstr "Análisis de correspondencias múltiples"
 
 #: package/analyses/mrfrequencies.menuSubgroup
 #: package/analyses/mrcrosstabs.menuSubgroup
 #: mrcrosstabs/options.menuSubgroup
 #: mrfrequencies/options.menuSubgroup
 msgid "Multiple Response"
-msgstr "Respuesta Múltiple"
+msgstr "Respuesta múltiple"
 
 #: mrcrosstabs/ui.title
 #: mrcrosstabs/results.title
 msgid "Multiple Response Crosstab"
-msgstr "Cruce de Tabla de Respuesta Múltiple"
+msgstr "Tabla cruzada de respuestas múltiples"
 
 #: mrfrequencies/ui.title
 #: mrfrequencies/results.title
 msgid "Multiple Response Frequencies"
-msgstr "Frecuencias de Respuestas Múltiples"
+msgstr "Respuestas Múltiples - Frecuencias"
 
 #: mrcrosstabs/options/repVar.title
 #: mrfrequencies/options/repVar.title
 msgid "Multiple Value Variable"
-msgstr "Variable de Valor Múltiple"
+msgstr "Variable con valores múltiples"
 
 #: package/analyses/principal.menuSubgroup
 #: package/analyses/corresp.menuSubgroup
@@ -2614,15 +3175,19 @@ msgstr "Variable de Valor Múltiple"
 #: multcorresp/options.menuSubgroup
 #: principal/options.menuSubgroup
 msgid "Multivariate"
-msgstr "Multivariante"
+msgstr "Multivariado"
 
 #: multcorresp/results/observations.columns.title
 msgid "Name"
-msgstr "Nombre"
+msgstr "Caso"
 
 #: qqplot/options/transLog.title
 msgid "Natural log tranform"
-msgstr "Transformada logarítmica natural"
+msgstr "Transformación logaritmo neperiano"
+
+#: R/qqplot.b.R
+msgid "Natural Log Tranform requires positive (>0) data."
+msgstr "Natural Log Tranform requiere datos positivos (>0)."
 
 #: R/principal.b.R
 msgid "No rotation used."
@@ -2720,11 +3285,11 @@ msgstr "Normalización"
 
 #: boxplot/options/notchWidth.title
 msgid "Notch width"
-msgstr "Ancho de muesca"
+msgstr "Ancho de la cintura"
 
 #: boxplot/options/notches.title
 msgid "Notched box"
-msgstr "Caja de muesca"
+msgstr "Caja con cintura"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -2738,16 +3303,16 @@ msgstr "Noviembre"
 
 #: raincloud/options/nudgeBoxplot.title
 msgid "Nudged boxplots"
-msgstr "Tramas de caja empujadas"
+msgstr "Gráficos de caja separados"
 
 #: R/mrcrosstabs.b.R
 #: mrcrosstabs/options/showNbOfCases.title
 msgid "Number of cases"
-msgstr "Número de casos"
+msgstr "Número de observaciones"
 
 #: R/mrfrequencies.b.R
 msgid "Number of cases:"
-msgstr "Número de casos:"
+msgstr "Número de observaciones:"
 
 #: corresp/options/dimNum.title
 #: multcorresp/options/dimNum.title
@@ -2755,21 +3320,25 @@ msgstr "Número de casos:"
 msgid "Number of dimensions"
 msgstr "Número de dimensiones"
 
+#: R/corresp.b.R
+msgid "Number of dimensions must be less than or equal to {maxDim}."
+msgstr "El número de dimensiones debe ser menor o igual que {maxDim}."
+
 #: multcorresp/options/obsColor.title
 msgid "Obs color"
-msgstr "Color de obs"
+msgstr "Color obs."
 
 #: multcorresp/results/obsCoordOV.title
 #: principal/results/obsCoordOV.title
 msgid "Observation Coordinates"
-msgstr "Coordenadas de Observación"
+msgstr "Coordenadas de las observaciones"
 
 #: R/multcorresp.b.R
 #: R/principal.b.R
 #: multcorresp/results/obsplot.title
 #: principal/results/obsPlot.title
 msgid "Observation Plot"
-msgstr "Trama de Observación"
+msgstr "Gráfico de observaciones"
 
 #: multcorresp/options/obsTitleText.title
 #: multcorresp/options/obsSubtitleText.title
@@ -2778,23 +3347,23 @@ msgstr "Trama de Observación"
 #: principal/options/obsSubtitleText.title
 #: principal/options/obsCaptionText.title
 msgid "Observation plot"
-msgstr "Trama de observación"
+msgstr "Gráfico de observaciones"
 
 #: multcorresp/ui[6][0][1][1].label
 msgid "Observation Plot Options"
-msgstr "Opciones de Trama de Observaciones"
+msgstr "Opciones del gráfico de observaciones"
 
 #: multcorresp/options/normalization/obsprincipal.title
 msgid "Observation principal"
-msgstr "Observación principal"
+msgstr "Principal de observaciones"
 
 #: R/multcorresp.b.R
 msgid "Observation principal coordinates"
-msgstr "Coordenadas principales de observación"
+msgstr "Coordenadas principales  de las observaciones"
 
 #: multcorresp/results/observations.title
 msgid "Observation Summary"
-msgstr "Sumario de Observación"
+msgstr "Resumen de las observaciones"
 
 #: multcorresp/options/showObservations.title
 #: multcorresp/options/showObservationPlot.title
@@ -2848,12 +3417,12 @@ msgstr "Una variable"
 #: mrfrequencies/ui[3][0][0][0][1]/colorNo.suffix
 #: raincloud/ui[1][1][0]/singleColor/colorNo.suffix
 msgid "only"
-msgstr "solo"
+msgstr "únicamente"
 
 #: mrcrosstabs/options/optionname.title
 #: mrfrequencies/options/optionname.title
 msgid "Option name"
-msgstr "Nombre de la opción"
+msgstr "Nombre de las opciones"
 
 #: mrcrosstabs/options/resps.title
 #: mrcrosstabs/ui/mode/morevar[0][0][0].label
@@ -2862,7 +3431,7 @@ msgstr "Nombre de la opción"
 #: mrfrequencies/ui/mode/morevar[0][0][0].label
 #: mrfrequencies/ui/mode/morevar[1].label
 msgid "Option Variables"
-msgstr "Variables de Opción"
+msgstr "Variables de respuesta"
 
 #: histogram/ui[2].label
 #: likertplot/ui[4][1][1][0].label
@@ -2899,7 +3468,7 @@ msgstr "Naranja"
 #: raincloud/options/colorPalette/PuOr.title
 #: scatterplot/options/colorPalette/PuOr.title
 msgid "Orange and Purple"
-msgstr "Naranja y Púrpura"
+msgstr "Naranja y morado"
 
 #: areachart/options/colorPalette/OrRd.title
 #: barplot/options/colorPalette/OrRd.title
@@ -2915,7 +3484,7 @@ msgstr "Naranja y Púrpura"
 #: raincloud/options/colorPalette/OrRd.title
 #: scatterplot/options/colorPalette/OrRd.title
 msgid "Orange to Red"
-msgstr "Naranja a Rojo"
+msgstr "Naranja y rojo"
 
 #: areachart/options/colorPalette/Oranges.title
 #: barplot/options/colorPalette/Oranges.title
@@ -2935,28 +3504,28 @@ msgstr "Naranjas"
 
 #: multcorresp/results/eigenvalues.columns.superTitle
 msgid "Original Eigenvalues"
-msgstr "Autovalores Originales"
+msgstr "Valores propios originales"
 
 #: areachart/ui[1][0][1].label
 msgid "Other Options"
-msgstr "Otras Opciones"
+msgstr "Otras opciones"
 
 #: R/mrcrosstabs.b.R
 #: likertplot/options/pValue/overall.title
 #: likertplot/ui[3][0][2][0]/pValue_overall.label
 msgid "Overall"
-msgstr "Global"
+msgstr "Globalmente"
 
 #: mrcrosstabs/options/overall.title
 msgid "Overall (all groups)"
-msgstr "Global (todos los grupos)"
+msgstr "General (todos los grupos)"
 
 #: areachart/options/position/identity.title
 #: histogram/options/grouping/identity.title
 #: histogram/options/groupingN/identity.title
 #: histogram/ui[1][2][0]/groupingN_identity.label
 msgid "Overlapping"
-msgstr "Superpuestos"
+msgstr "Superpuesto"
 
 #: R/qqplot.b.R
 #: qqplot/options/methodPP.title
@@ -2966,24 +3535,24 @@ msgstr "P-P"
 #: qqplot/options/type/PP.title
 #: qqplot/ui[2][0][0]/type_PP.label
 msgid "P-P plot"
-msgstr "Trama P-P"
+msgstr "Gráfico P-P"
 
 #: likertplot/options/pValue.title
 #: likertplot/ui[3][0][2][0].label
 msgid "p-Value Adjustment"
-msgstr "Ajuste del valor p"
+msgstr "Ajuste de los p-valores"
 
 #: R/likertplot.b.R
 msgid "p-values are adjusted groupwise using {method} method."
-msgstr "Los valores-p se ajustan de forma grupal utilizando el método {method}."
+msgstr "Los p-valores se ajustan por grupo utilizando el método {method}."
 
 #: R/likertplot.b.R
 msgid "p-values are adjusted overall using {method} method."
-msgstr "Los valores-p se ajustan en general utilizando el método {method}."
+msgstr "Los p-valores se ajustan globalmente utilizando el método {method}."
 
 #: R/likertplot.b.R
 msgid "p-values are adjusted using {method} method."
-msgstr "Los valores-p se ajustan utilizando el método {method}."
+msgstr "Los p-valores se ajustan utilizando el método {method}."
 
 #: areachart/options/colorPalette/Paired.title
 #: barplot/options/colorPalette/Paired.title
@@ -2999,11 +3568,11 @@ msgstr "Los valores-p se ajustan utilizando el método {method}."
 #: raincloud/options/colorPalette/Paired.title
 #: scatterplot/options/colorPalette/Paired.title
 msgid "Paired"
-msgstr "Emparejado"
+msgstr "Por parejas"
 
 #: likertplot/results/comp/pwTable.title
 msgid "Pairwise Comparisons"
-msgstr "Comparaciones Pareadas"
+msgstr "Comparaciones por pares"
 
 #: areachart/options/colorPalette.title
 #: barplot/options/colorPalette.title
@@ -3032,16 +3601,16 @@ msgstr "Parámetro 2"
 #: R/qqplot.b.R
 #: qqplot/results/paramTable.title
 msgid "Parameter Estimates"
-msgstr "Estimaciones del Parámetro"
+msgstr "Estimación de los parámetros"
 
 #: qqplot/ui[3].label
 msgid "Parameter Values"
-msgstr "Valores del Parámetro"
+msgstr "Valor de los parámetros"
 
 #: qqplot/options/paramMethod/paraValue.title
 #: qqplot/ui[3][0][1]/paramMethod_paraValue.label
 msgid "Parameter values"
-msgstr "Valores del parámetro"
+msgstr "Valor de los parámetros"
 
 #: principal/options/rotation/parsimax.title
 msgid "Parsimax"
@@ -3079,6 +3648,14 @@ msgstr "Pastel 1"
 msgid "Pastel 2"
 msgstr "Pastel 2"
 
+#: R/principal.b.R
+msgid "PCA Principal Coordinates"
+msgstr "Coordenadas principales del ACP"
+
+#: R/principal.b.R
+msgid "PCA Standard Coordinates"
+msgstr "Coordenadas estándar del ACP"
+
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
 #: barplot/ui[1][0][0]/yaxis_percent.label
@@ -3097,7 +3674,13 @@ msgstr "Porcentajes"
 #: piechart/ui.title
 #: piechart/results.title
 msgid "Pie Chart"
-msgstr "Gráfico circular"
+msgstr "Gráfico de sectores"
+
+#: R/piechart.b.R
+msgid "Pie charts are for educational use only. Please do not use Pie charts!"
+msgstr ""
+"Los gráficos de sectores son solo para uso educativo. Por favor, ¡no los "
+"utilices!"
 
 #: corresp/options/rowColor/hotpink.title
 #: corresp/options/colColor/hotpink.title
@@ -3125,22 +3708,22 @@ msgstr "Rosa"
 #: raincloud/options/colorPalette/PiYG.title
 #: scatterplot/options/colorPalette/PiYG.title
 msgid "Pink and Green"
-msgstr "Rosa y Verde"
+msgstr "Rosa y verde"
 
 #: likertplot/ui[4].label
 #: likertplot/results/plot.title
 #: mrfrequencies/ui[1][2][0].label
 msgid "Plot"
-msgstr "Trama"
+msgstr "Gráfico"
 
 #: likertplot/ui[4][2][1][0].label
 #: multcorresp/ui[6][0][0][0].label
 msgid "Plot Color"
-msgstr "Color de Trama"
+msgstr "Colores del gráfico"
 
 #: principal/ui[4][0][1][0].label
 msgid "Plot Colors"
-msgstr "Colores de Trama"
+msgstr "Colores del gráfico"
 
 #: areachart/ui[1][0][0].label
 #: barplot/ui[2].label
@@ -3157,7 +3740,7 @@ msgstr "Colores de Trama"
 #: raincloud/ui[1][0][0].label
 #: scatterplot/ui[1][0][0].label
 msgid "Plot Options"
-msgstr "Opciones de Trama"
+msgstr "Opciones del gráfico"
 
 #: areachart/ui[4].label
 #: barplot/ui[7].label
@@ -3173,13 +3756,13 @@ msgstr "Opciones de Trama"
 #: raincloud/ui[4].label
 #: scatterplot/ui[5].label
 msgid "Plot Titles"
-msgstr "Títulos del Trama"
+msgstr "Títulos del gráfico"
 
 #: corresp/ui[8].label
 #: multcorresp/ui[8].label
 #: principal/ui[6].label
 msgid "Plot Titles & Subtitles"
-msgstr "Títulos y subtítulos de Trama"
+msgstr "Títulos y subtítulos de gráficos"
 
 #: likertplot/options/type.title
 #: qqplot/options/type.title
@@ -3192,7 +3775,7 @@ msgstr "Tipo de gráfico"
 #: multcorresp/ui[5][1][0].label
 #: principal/ui[3][1][0].label
 msgid "Plots"
-msgstr "Tramas"
+msgstr "Gráficos"
 
 #: scatterplot/options/pointSize.title
 msgid "Point"
@@ -3205,7 +3788,7 @@ msgstr "Tamaño del punto"
 #: scatterplot/options/ptSize.title
 #: scatterplot/ui[0][4].label
 msgid "Point Size"
-msgstr "Tamaño de Punto"
+msgstr "Tamaño del punto"
 
 #: principal/options/obsColor.title
 msgid "Points"
@@ -3267,12 +3850,12 @@ msgstr "Post Hoc"
 #: likertplot/options/postHoc.title
 #: likertplot/ui[3][0][1][0].label
 msgid "Post Hoc Tests"
-msgstr "Pruebas post hoc"
+msgstr "Tests Post Hoc"
 
 #: piechart/options/overlap.title
 #: scatterplot/options/overlap.title
 msgid "Prevent overlap"
-msgstr "Prevenir superposición"
+msgstr "Evitar superposición"
 
 #: corresp/options/normalization/principal.title
 #: multcorresp/options/normalization/principal.title
@@ -3285,13 +3868,17 @@ msgstr "Principal"
 #: principal/ui.title
 #: principal/results.title
 msgid "Principal Component Analysis"
-msgstr "Análisis de Componente Principal"
+msgstr "Análisis de componentes principales"
 
 #: R/multcorresp.b.R
 #: principal/results/loadingTable.notes.norm
 #: principal/results/obsTable.notes.norm
 msgid "Principal coordinates"
 msgstr "Coordenadas principales"
+
+#: R/corresp.b.R
+msgid "Principal normalization"
+msgstr "Normalización principal"
 
 #: multcorresp/options/propPoint.title
 msgid "Proportional point size"
@@ -3306,7 +3893,7 @@ msgstr "Tamaño de punto proporcional"
 #: principal/options/obsColor/#984EA3.title
 #: scatterplot/options/singleColor/#984EA3.title
 msgid "Purple"
-msgstr "Púrpura"
+msgstr "Morado"
 
 #: areachart/options/colorPalette/PRGn.title
 #: barplot/options/colorPalette/PRGn.title
@@ -3323,7 +3910,7 @@ msgstr "Púrpura"
 #: raincloud/options/colorPalette/PRGn.title
 #: scatterplot/options/colorPalette/PRGn.title
 msgid "Purple and Green"
-msgstr "Púrpura y Verde"
+msgstr "Morado y verde"
 
 #: areachart/options/colorPalette/PuBu.title
 #: barplot/options/colorPalette/PuBu.title
@@ -3339,7 +3926,7 @@ msgstr "Púrpura y Verde"
 #: raincloud/options/colorPalette/PuBu.title
 #: scatterplot/options/colorPalette/PuBu.title
 msgid "Purple to Blue"
-msgstr "Púrpura a Azul"
+msgstr "Morado y azul"
 
 #: areachart/options/colorPalette/PuBuGn.title
 #: barplot/options/colorPalette/PuBuGn.title
@@ -3355,7 +3942,7 @@ msgstr "Púrpura a Azul"
 #: raincloud/options/colorPalette/PuBuGn.title
 #: scatterplot/options/colorPalette/PuBuGn.title
 msgid "Purple to Green"
-msgstr "Púrpura a Verde"
+msgstr "Morado y verde"
 
 #: areachart/options/colorPalette/PuRd.title
 #: barplot/options/colorPalette/PuRd.title
@@ -3371,7 +3958,7 @@ msgstr "Púrpura a Verde"
 #: raincloud/options/colorPalette/PuRd.title
 #: scatterplot/options/colorPalette/PuRd.title
 msgid "Purple to Red"
-msgstr "Púrpura a Rojo"
+msgstr "Morado y rojo"
 
 #: areachart/options/colorPalette/Purples.title
 #: barplot/options/colorPalette/Purples.title
@@ -3387,7 +3974,7 @@ msgstr "Púrpura a Rojo"
 #: raincloud/options/colorPalette/Purples.title
 #: scatterplot/options/colorPalette/Purples.title
 msgid "Purples"
-msgstr "Púrpuras"
+msgstr "Morados"
 
 #: R/qqplot.b.R
 #: qqplot/options/methodQQ.title
@@ -3400,21 +3987,21 @@ msgstr "Q-Q"
 #: qqplot/ui.title
 #: qqplot/results.title
 msgid "Q-Q & P-P Plots"
-msgstr "Tramas Q-Q y P-P"
+msgstr "Gráficos Q-Q y P-P"
 
 #: qqplot/options/refType/qqline.title
 #: qqplot/ui[2][1][0]/refLine[0]/refType_qqline.label
 msgid "Q-Q line"
-msgstr "Línea Q-Q"
+msgstr "Recta Q-Q"
 
 #: qqplot/options/type/QQ.title
 #: qqplot/ui[2][0][0]/type_QQ.label
 msgid "Q-Q plot"
-msgstr "Trama Q-Q"
+msgstr "Gráfico Q-Q"
 
 #: multcorresp/results/categories.columns.title
 msgid "QLT"
-msgstr "QLT"
+msgstr "Calidad"
 
 #: principal/options/rotation/quartimax.title
 msgid "Quartimax"
@@ -3424,7 +4011,7 @@ msgstr "Quartimax"
 #: likertplot/results/comp/uTestTable.columns.title
 #: likertplot/results/comp/kwTable.columns.title
 msgid "Questions"
-msgstr "Cuestiones"
+msgstr "Preguntas"
 
 #: package/datasets/Raincloud.name
 msgid "Raincloud"
@@ -3436,7 +4023,7 @@ msgstr "Nube de lluvia"
 #: raincloud/ui.title
 #: raincloud/results.title
 msgid "Raincloud Plot"
-msgstr "Trama de nube de lluvia"
+msgstr "Gráfico de nube de lluvia"
 
 #: areachart/ui[2][0][1][1].label
 #: barplot/ui[5][0][0][1].label
@@ -3488,7 +4075,7 @@ msgstr "Rojo"
 #: raincloud/options/colorPalette/RdBu.title
 #: scatterplot/options/colorPalette/RdBu.title
 msgid "Red and Blue"
-msgstr "Rojo y Azul"
+msgstr "Rojo y azul"
 
 #: areachart/options/colorPalette/RdGy.title
 #: barplot/options/colorPalette/RdGy.title
@@ -3505,7 +4092,7 @@ msgstr "Rojo y Azul"
 #: raincloud/options/colorPalette/RdGy.title
 #: scatterplot/options/colorPalette/RdGy.title
 msgid "Red and Gray"
-msgstr "Rojo y Gris"
+msgstr "Rojo y gris"
 
 #: areachart/options/colorPalette/RdPu.title
 #: barplot/options/colorPalette/RdPu.title
@@ -3521,15 +4108,15 @@ msgstr "Rojo y Gris"
 #: raincloud/options/colorPalette/RdPu.title
 #: scatterplot/options/colorPalette/RdPu.title
 msgid "Red to Purple"
-msgstr "Rojo a Púrpura"
+msgstr "Rojo y morado"
 
 #: likertplot/options/plotColor/RdYlBu.title
 msgid "Red, Yellow and Blue"
-msgstr "Rojo, Amarillo y Azul"
+msgstr "Rojo, amarillo y azul"
 
 #: likertplot/options/plotColor/RdYlGn.title
 msgid "Red, Yellow and Green"
-msgstr "Rojo, Amarillo y Verde"
+msgstr "Rojo, amarillo y verde"
 
 #: areachart/options/colorPalette/RdYlBu.title
 #: barplot/options/colorPalette/RdYlBu.title
@@ -3545,7 +4132,7 @@ msgstr "Rojo, Amarillo y Verde"
 #: raincloud/options/colorPalette/RdYlBu.title
 #: scatterplot/options/colorPalette/RdYlBu.title
 msgid "Red, Yellow, Blue"
-msgstr "Rojo, Amarillo, Azul"
+msgstr "Rojo, amarillo y azul"
 
 #: areachart/options/colorPalette/RdYlGn.title
 #: barplot/options/colorPalette/RdYlGn.title
@@ -3561,7 +4148,7 @@ msgstr "Rojo, Amarillo, Azul"
 #: raincloud/options/colorPalette/RdYlGn.title
 #: scatterplot/options/colorPalette/RdYlGn.title
 msgid "Red, Yellow, Green"
-msgstr "Rojo, Amarillo, Verde"
+msgstr "Rojo, amarillo y verde"
 
 #: areachart/options/colorPalette/Reds.title
 #: barplot/options/colorPalette/Reds.title
@@ -3582,19 +4169,25 @@ msgstr "Rojos"
 #: qqplot/options/refLine.title
 #: qqplot/options/refType.title
 msgid "Reference line"
-msgstr "Línea referencial"
+msgstr "Recta de referencia"
 
 #: scatterplot/ui[1][2][0].label
 msgid "Reference Lines"
-msgstr "Líneas Referenciales"
+msgstr "Rectas de referencia"
 
 #: scatterplot/ui[1][3][0].label
 msgid "Regression Line"
-msgstr "Línea de Regresión"
+msgstr "Recta de regresión"
 
 #: raincloud/options/reverse.title
 msgid "Reverse disposition"
 msgstr "Disposición inversa"
+
+#: barplot/options/reverseStack.title
+#: likertplot/options/reverseLikert.title
+#: mrcrosstabs/options/reverseStack.title
+msgid "Reverse stacking order"
+msgstr "Invertir orden de apilado"
 
 #: areachart/options/titleAlign/1.title
 #: areachart/options/subtitleAlign/1.title
@@ -3702,38 +4295,46 @@ msgstr "Fila"
 
 #: R/corresp.b.R
 msgid "Row and Column Points for {rows} and {cols}"
-msgstr "Puntos de Fila y Columna para {rows} y {cols}"
+msgstr "Gráfico de filas y columnas para {rows} y {cols}"
 
 #: corresp/options/showProfiles.title
 msgid "Row and column profiles"
-msgstr "Perfiles de fila y columna"
+msgstr "Perfiles de filas y columnas"
 
 #: corresp/options/showSummaries.title
 msgid "Row and column summaries"
-msgstr "Sumarios de fila y columna"
+msgstr "Resumen de filas y columnas"
 
 #: corresp/results/rowplot.title
 msgid "Row Plot"
-msgstr "Trama de Fila"
+msgstr "Gráfico de filas"
 
 #: corresp/options/showRowPlot.title
 #: corresp/options/rowTitleText.title
 #: corresp/options/rowSubtitleText.title
 #: corresp/options/rowCaptionText.title
 msgid "Row plot"
-msgstr "Trama de fila"
+msgstr "Gráfico de filas"
+
+#: R/corresp.b.R
+msgid "Row Points for {rows}"
+msgstr "Gráfico de filas para {rows}"
 
 #: corresp/options/normalization/rowprincipal.title
 msgid "Row principal"
-msgstr "Fila principal"
+msgstr "Principal de filas"
+
+#: R/corresp.b.R
+msgid "Row principal normalization"
+msgstr "Normalización de fila principal"
 
 #: corresp/results/rowProfiles.title
 msgid "Row Profiles"
-msgstr "Perfiles de Fila"
+msgstr "Perfiles de fila"
 
 #: corresp/results/rowSummary.title
 msgid "Row Summary"
-msgstr "Sumario de Fila"
+msgstr "Resumen de fila"
 
 #: corresp/options/rows.title
 #: corresp/ui[0][0].label
@@ -3743,11 +4344,11 @@ msgstr "Filas"
 #: mrcrosstabs/options/xaxis/xrows.title
 #: mrcrosstabs/ui[2][0][1][1]/xaxis_xrows.label
 msgid "Rows (Options)"
-msgstr "Filas (Opciones)"
+msgstr "Filas (opciones)"
 
 #: principal/options/labelColor/none.title
 msgid "Same as point/arrow"
-msgstr "Mismo que punto/flecha"
+msgstr "Igual que punto/vector"
 
 #: R/qqplot.b.R
 msgid "Sample Probabilities"
@@ -3759,11 +4360,11 @@ msgstr "Muestra de Desviación de Probabilidad"
 
 #: R/qqplot.b.R
 msgid "Sample Quantiles"
-msgstr "Cuantiles de Muestra"
+msgstr "Cuantiles observados"
 
 #: R/qqplot.b.R
 msgid "Sample Quantiles Deviation"
-msgstr "Muestra de Desviación de Cuantiles"
+msgstr "Desviaciones de los cuantiles observados"
 
 #: multcorresp/ui[9].label
 #: principal/ui[8].label
@@ -3773,7 +4374,7 @@ msgstr "Guardar"
 #: multcorresp/options/obsCoordOV.title
 #: principal/options/obsCoordOV.title
 msgid "Save observation coordinates"
-msgstr "Guardar coordenadas de observación"
+msgstr "Guardar coordenadas de las observaciones"
 
 #: package/analyses/scatterplot.title
 #: package/analyses/scatterplot.menuTitle
@@ -3781,23 +4382,23 @@ msgstr "Guardar coordenadas de observación"
 #: scatterplot/ui.title
 #: scatterplot/results.title
 msgid "Scatter Plot"
-msgstr "Trama de Dispersión"
+msgstr "Diagrama de dispersión"
 
 #: R/principal.b.R
 #: principal/results/screePlot.title
 msgid "Scree Plot"
-msgstr "Trama de Cresta"
+msgstr "Gráfico de sedimentación"
 
 #: principal/options/showScreePlot.title
 #: principal/options/screeTitleText.title
 #: principal/options/screeSubtitleText.title
 #: principal/options/screeCaptionText.title
 msgid "Scree plot"
-msgstr "Trama de Scree"
+msgstr "Gráfico de sedimentación"
 
 #: R/likertplot.b.R
 msgid "SD"
-msgstr "DE"
+msgstr "SD"
 
 #: mrcrosstabs/options/separator.title
 #: mrfrequencies/options/separator.title
@@ -3864,17 +4465,17 @@ msgstr "Conjunto 3"
 
 #: areachart/options/mode/severalVariables.title
 msgid "Several variables"
-msgstr "Varias variables"
+msgstr "Múltiples variables"
 
 #: likertplot/options/addLabels.title
 msgid "Show % labels"
-msgstr "Mostrar etiquetas de %"
+msgstr "Mostrar los %"
 
 #: barplot/options/showLabels.title
 #: mrcrosstabs/options/showLabels.title
 #: mrfrequencies/options/showLabels.title
 msgid "Show count labels"
-msgstr "Mostrar etiquetas de recuento"
+msgstr "Mostrar valores"
 
 #: histogram/options/density.title
 msgid "Show density"
@@ -3882,7 +4483,7 @@ msgstr "Mostrar densidad"
 
 #: scatterplot/options/regLine.title
 msgid "Show line"
-msgstr "Mostrar línea"
+msgstr "Mostrar recta"
 
 #: areachart/options/showLine.title
 msgid "Show lines"
@@ -3898,7 +4499,7 @@ msgstr "Mostrar curva normal"
 
 #: boxplot/options/showOutliers.title
 msgid "Show outliers"
-msgstr "Mostrar valores atípicos"
+msgstr "Mostrar atípicos"
 
 #: linechart/options/showPoint.title
 msgid "Show points"
@@ -3906,7 +4507,7 @@ msgstr "Mostrar puntos"
 
 #: scatterplot/options/keepNA.title
 msgid "Show points with missing group/label"
-msgstr "Mostrar puntos con grupo/etiqueta ausentes"
+msgstr "Mostrar puntos con grupo faltante"
 
 #: likertplot/options/addTotals.title
 msgid "Show totals (Centered only)"
@@ -3918,7 +4519,7 @@ msgstr "Único"
 
 #: corresp/results/eigenvalues.columns.title
 msgid "Singular Value"
-msgstr "Valor Singular"
+msgstr "Valor singular"
 
 #: areachart/options/legendFontSize.title
 #: areachart/options/xAxisFontSize.title
@@ -3964,13 +4565,18 @@ msgstr "Valor Singular"
 msgid "Size"
 msgstr "Tamaño"
 
+#: linechart/ui[1][0][1].label
+#: principal/ui[4].label
+msgid "Sizes & Colors"
+msgstr "Tamaños y colores"
+
 #: package/datasets/Smoking.name
 msgid "Smoking"
-msgstr "Fumígeno"
+msgstr "Smoking"
 
 #: scatterplot/options/lineMethod/loess.title
 msgid "Smooth"
-msgstr "Suave"
+msgstr "Suavizado"
 
 #: corresp/ui[2][0].label
 #: multcorresp/ui[2][0].label
@@ -3981,7 +4587,7 @@ msgstr "Solución"
 #: likertplot/options/sorting.title
 #: likertplot/ui[1][1][0].label
 msgid "Sort Variables by Median"
-msgstr "Ordenar Variables por Mediana"
+msgstr "Ordenar variables según la mediana"
 
 #: barplot/options/order.title
 #: barplot/ui[1][2][0].label
@@ -3992,12 +4598,12 @@ msgstr "Ordenar Variables por Mediana"
 #: mrfrequencies/options/order.title
 #: mrfrequencies/ui[1][1][0].label
 msgid "Sorting"
-msgstr "Ordenación"
+msgstr "Orden"
 
 #: boxplot/options/order.title
 #: boxplot/ui[1][1][0].label
 msgid "Sorting (by median)"
-msgstr "Ordenación (por mediana)"
+msgstr "Clasificación (por mediana)"
 
 #: areachart/options/colorPalette/Spectral.title
 #: barplot/options/colorPalette/Spectral.title
@@ -4014,11 +4620,11 @@ msgstr "Ordenación (por mediana)"
 #: raincloud/options/colorPalette/Spectral.title
 #: scatterplot/options/colorPalette/Spectral.title
 msgid "Spectral"
-msgstr "Espectral"
+msgstr "Espectro"
 
 #: principal/results/summaryTable.columns.title
 msgid "SS Loadings"
-msgstr "Cargas de SS"
+msgstr "Cargas SS"
 
 #: areachart/options/position/stack.title
 #: barplot/options/barType/stack.title
@@ -4029,11 +4635,11 @@ msgstr "Cargas de SS"
 #: likertplot/ui[4][0][0][0]/type_stacked.label
 #: mrcrosstabs/options/bartype/stack.title
 msgid "Stacked"
-msgstr "Apilados"
+msgstr "Apilado"
 
 #: areachart/options/position/fill.title
 msgid "Stacked 100%"
-msgstr "Apilados 100%"
+msgstr "Apilado 100%"
 
 #: corresp/options/normalization/standard.title
 #: multcorresp/options/normalization/standard.title
@@ -4045,6 +4651,10 @@ msgstr "Estándar"
 msgid "Standard coordinates"
 msgstr "Coordenadas estándar"
 
+#: R/corresp.b.R
+msgid "Standard normalization"
+msgstr "Normalización estándar"
+
 #: principal/options/stdLoadings.title
 msgid "Standardize loadings (eigenvectors)"
 msgstr "Estandarizar cargas (vectores propios)"
@@ -4055,7 +4665,7 @@ msgstr "Estandarizar puntuaciones"
 
 #: qqplot/options/standardize.title
 msgid "Standardize values"
-msgstr "Estandarizar valores"
+msgstr "Valores estandarizados"
 
 #: principal/options/stdVariables.title
 msgid "Standardize variables"
@@ -4063,11 +4673,11 @@ msgstr "Estandarizar variables"
 
 #: R/qqplot.b.R
 msgid "Standardized Sample Quantiles"
-msgstr "Estandarizar Muestra de Cuantiles"
+msgstr "Cuantiles observados estandarizados"
 
 #: R/qqplot.b.R
 msgid "Standardized Sample Quantiles Deviation"
-msgstr "Desviación de Cuantiles de Muestra Estandarizada"
+msgstr "Desviaciones de los cuantiles observados estandarizados"
 
 #: R/qqplot.b.R
 msgid "Standardized values"
@@ -4075,20 +4685,20 @@ msgstr "Valores estandarizados"
 
 #: boxplot/options/stapleWidth.title
 msgid "Staple width"
-msgstr "Anchura de grapa"
+msgstr "Ancho de la barrera"
 
 #: principal/results/kmoTable.columns.title
 msgid "Statistic"
-msgstr "Estadística"
+msgstr "Estadístico"
 
 #: principal/options/biplotStretch.title
 msgid "Stretch arrows by"
-msgstr "Flechas estiradas por"
+msgstr "Ampliar las flechas por"
 
 #: R/qqplot.b.R
 #: qqplot/options/distrib/t.title
 msgid "Student"
-msgstr "Student"
+msgstr "t-Student"
 
 #: areachart/ui[4][1].label
 #: barplot/ui[7][1].label
@@ -4110,13 +4720,13 @@ msgstr "Subtítulo"
 #: multcorresp/ui[8][1][1][0].label
 #: principal/ui[6][1][1][0].label
 msgid "Subtitle Style"
-msgstr "Estilo de Subtítulo"
+msgstr "Estilo de subtítulo"
 
 #: corresp/ui[8][1][0][0].label
 #: multcorresp/ui[8][1][0][0].label
 #: principal/ui[6][1][0][0].label
 msgid "Subtitle Text"
-msgstr "Texto de Subtítulo"
+msgstr "Texto de subtítulo"
 
 #: corresp/results/eigenvalues.title
 #: multcorresp/options/showSummary.title
@@ -4128,11 +4738,11 @@ msgstr "Resumen"
 
 #: R/corresp.b.R
 msgid "Suppl. Column"
-msgstr "Columna supl."
+msgstr "Columna adicional"
 
 #: R/corresp.b.R
 msgid "Suppl. Row"
-msgstr "Fila supl."
+msgstr "Fila adicional"
 
 #: R/multcorresp.b.R
 msgid "Suppl. variables"
@@ -4140,7 +4750,17 @@ msgstr "Variables supl."
 
 #: corresp/options/supColor.title
 msgid "Supplement"
-msgstr "Suplemento"
+msgstr "Adicional"
+
+#: R/corresp.b.R
+msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
+msgstr ""
+"Los números de columnas suplementarias deben ser una lista de números, p.e. "
+"1,2,9"
+
+#: R/corresp.b.R
+msgid "Supplementary column numbers must be between 1 and {nmax}."
+msgstr "Los números de columnas suplementarias deben estar entre 1 y {nmax}."
 
 #: R/corresp.b.R
 #: corresp/options/supplementaryCols.title
@@ -4149,7 +4769,15 @@ msgstr "Columnas suplementarias"
 
 #: corresp/ui[3][0].label
 msgid "Supplementary Points"
-msgstr "Puntos Suplementarios"
+msgstr "Elementos suplementarios"
+
+#: R/corresp.b.R
+msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "Los números de fila suplementarios deben ser una lista de números, p.e. 1,2,9"
+
+#: R/corresp.b.R
+msgid "Supplementary row numbers must be between 1 and {nmax}."
+msgstr "Los números de fila suplementarios deben estar entre 1 y {nmax}."
 
 #: R/corresp.b.R
 #: corresp/options/supplementaryRows.title
@@ -4163,11 +4791,23 @@ msgstr "Filas/columnas suplementarias"
 #: multcorresp/options/supplVars.title
 #: multcorresp/ui[0][1].label
 msgid "Supplementary Variables"
-msgstr "Variables Suplementarias"
+msgstr "Variables suplementarias"
 
 #: R/multcorresp.b.R
 msgid "Supplementary variables"
-msgstr "Variables Suplementarias"
+msgstr "Variables suplementarias"
+
+#: R/corresp.b.R
+msgid "Symetric normalization"
+msgstr "Normalización simétrica"
+
+#: corresp/options/normalization/symmetric.title
+msgid "Symmetric"
+msgstr "Simétrico"
+
+#: R/corresp.b.R
+msgid "Symmetric normalization"
+msgstr "Normalización simétrica"
 
 #: likertplot/ui[2].label
 #: likertplot/ui[2][0][0][0].label
@@ -4184,7 +4824,7 @@ msgstr "Tablas"
 
 #: qqplot/options/methodQQ/ts.title
 msgid "Tail-Sensitive (Normal)"
-msgstr "Distinguible con cola (Normal)"
+msgstr "Sensible a colas (Normal)"
 
 #: likertplot/ui[3][0][0][0].label
 msgid "Tests"
@@ -4207,31 +4847,68 @@ msgstr "Texto"
 #: piechart/ui[4][0][0][0].label
 #: principal/ui[4][0][0][0].label
 msgid "Text Size"
-msgstr "Tamaño de Texto"
+msgstr "Tamaño del texto"
+
+#: corresp/ui[6].label
+msgid "Text Size & Colors"
+msgstr "Tamaño del texto y colores"
+
+#: barplot/ui[4].label
+#: boxplot/ui[3].label
+#: piechart/ui[4].label
+msgid "Text Size & Facets"
+msgstr "Tamaño del texto y subgráficos"
 
 #: R/principal.b.R
 msgid ""
 "The correlation matrix is not positive definite. Computations may not be "
 "accurate."
 msgstr ""
-"La matriz de correlación no es definida positiva. Los cálculos pueden no "
-"ser precisos."
+"La matriz de correlación no es positiva definida. Es posible que los "
+"cálculos no sean precisos."
 
 #: R/multcorresp.b.R
 msgid "The number of dimensions cannot be greater than {max}."
 msgstr "El número de dimensiones no puede ser mayor que {max}."
 
+#: R/principal.b.R
+msgid "The number of dimensions cannot be greater than the number of variables."
+msgstr "El número de dimensiones no puede ser mayor que el número de variables."
+
 #: R/qqplot.b.R
 msgid "Theoretical Probabilities"
-msgstr "Probabilidades Teóricas"
+msgstr "Probabilidades teóricas"
 
 #: R/qqplot.b.R
 msgid "Theoretical Quantiles"
-msgstr "Cuantiles Teóricos"
+msgstr "Cuantiles teóricos"
+
+#: areachart/options/yTicks.title
+#: barplot/options/xTicks.title
+#: barplot/options/yTicks.title
+#: boxplot/options/xTicks.title
+#: boxplot/options/yTicks.title
+#: histogram/options/xTicks.title
+#: histogram/options/yTicks.title
+#: linechart/options/yTicks.title
+#: lollipop/options/xTicks.title
+#: lollipop/options/yTicks.title
+#: mrcrosstabs/options/xTicks.title
+#: mrcrosstabs/options/yTicks.title
+#: mrfrequencies/options/xTicks.title
+#: mrfrequencies/options/yTicks.title
+#: qqplot/options/xTicks.title
+#: qqplot/options/yTicks.title
+#: raincloud/options/xTicks.title
+#: raincloud/options/yTicks.title
+#: scatterplot/options/xTicks.title
+#: scatterplot/options/yTicks.title
+msgid "Tick count"
+msgstr "Número de marcas"
 
 #: likertplot/options/tidyUp.title
 msgid "Tidy up levels"
-msgstr "Organizar niveles"
+msgstr "Corregir niveles"
 
 #: areachart/options/colorPalette/tidy::alger.title
 #: barplot/options/colorPalette/tidy::alger.title
@@ -4247,7 +4924,7 @@ msgstr "Organizar niveles"
 #: raincloud/options/colorPalette/tidy::alger.title
 #: scatterplot/options/colorPalette/tidy::alger.title
 msgid "Tidy:Alger"
-msgstr "Alger"
+msgstr "Tidy:Alger"
 
 #: areachart/options/colorPalette/tidy::apple.title
 #: barplot/options/colorPalette/tidy::apple.title
@@ -4263,7 +4940,7 @@ msgstr "Alger"
 #: raincloud/options/colorPalette/tidy::apple.title
 #: scatterplot/options/colorPalette/tidy::apple.title
 msgid "Tidy:Apple"
-msgstr "Manzana"
+msgstr "Tidy:Apple"
 
 #: areachart/options/colorPalette/tidy::candy.title
 #: barplot/options/colorPalette/tidy::candy.title
@@ -4279,7 +4956,7 @@ msgstr "Manzana"
 #: raincloud/options/colorPalette/tidy::candy.title
 #: scatterplot/options/colorPalette/tidy::candy.title
 msgid "Tidy:Candy"
-msgstr "Caramelo"
+msgstr "Tidy:Candy"
 
 #: areachart/options/colorPalette/tidy::friendly.title
 #: barplot/options/colorPalette/tidy::friendly.title
@@ -4295,7 +4972,7 @@ msgstr "Caramelo"
 #: raincloud/options/colorPalette/tidy::friendly.title
 #: scatterplot/options/colorPalette/tidy::friendly.title
 msgid "Tidy:Friendly"
-msgstr "Amigable"
+msgstr "Tidy:Friendly"
 
 #: areachart/options/colorPalette/tidy::ibm.title
 #: barplot/options/colorPalette/tidy::ibm.title
@@ -4311,7 +4988,7 @@ msgstr "Amigable"
 #: raincloud/options/colorPalette/tidy::ibm.title
 #: scatterplot/options/colorPalette/tidy::ibm.title
 msgid "Tidy:Ibm"
-msgstr "IBM"
+msgstr "Tidy:Ibm"
 
 #: areachart/options/colorPalette/tidy::metro.title
 #: barplot/options/colorPalette/tidy::metro.title
@@ -4327,7 +5004,7 @@ msgstr "IBM"
 #: raincloud/options/colorPalette/tidy::metro.title
 #: scatterplot/options/colorPalette/tidy::metro.title
 msgid "Tidy:Metro"
-msgstr "Metro"
+msgstr "Tidy:Metro"
 
 #: areachart/options/colorPalette/tidy::rainbow.title
 #: barplot/options/colorPalette/tidy::rainbow.title
@@ -4343,7 +5020,7 @@ msgstr "Metro"
 #: raincloud/options/colorPalette/tidy::rainbow.title
 #: scatterplot/options/colorPalette/tidy::rainbow.title
 msgid "Tidy:Rainbow"
-msgstr "Arcoíris"
+msgstr "Tidy:Rainbow"
 
 #: areachart/options/colorPalette/tidy::seaside.title
 #: barplot/options/colorPalette/tidy::seaside.title
@@ -4359,7 +5036,7 @@ msgstr "Arcoíris"
 #: raincloud/options/colorPalette/tidy::seaside.title
 #: scatterplot/options/colorPalette/tidy::seaside.title
 msgid "Tidy:Seaside"
-msgstr "Playa"
+msgstr "Tidy:Seaside"
 
 #: package/analyses/linechart.menuSubgroup
 #: package/analyses/areachart.menuSubgroup
@@ -4367,7 +5044,7 @@ msgstr "Playa"
 #: areachart/options.menuSubgroup
 #: linechart/options.menuSubgroup
 msgid "Time Series"
-msgstr "Series de Tiempo"
+msgstr "Series temporales"
 
 #: areachart/ui[4][0].label
 #: barplot/ui[7][0].label
@@ -4389,13 +5066,13 @@ msgstr "Título"
 #: multcorresp/ui[8][0][1][0].label
 #: principal/ui[6][0][1][0].label
 msgid "Title Style"
-msgstr "Estilo de Título"
+msgstr "Estilo del título"
 
 #: corresp/ui[8][0][0][0].label
 #: multcorresp/ui[8][0][0][0].label
 #: principal/ui[6][0][0][0].label
 msgid "Title Text"
-msgstr "Texto del Título"
+msgstr "Texto del título"
 
 #: areachart/options/legendPosition/top.title
 #: areachart/options/yAxisPosition/1.title
@@ -4431,7 +5108,7 @@ msgstr "Texto del Título"
 #: scatterplot/options/legendPosition/top.title
 #: scatterplot/options/yAxisPosition/1.title
 msgid "Top"
-msgstr "Cima"
+msgstr "Arriba"
 
 #: R/multcorresp.b.R
 #: mrfrequencies/options/showTotal.title
@@ -4442,15 +5119,24 @@ msgstr "Total"
 msgid "Total row"
 msgstr "Fila total"
 
+#: mrcrosstabs/options/emptyAsNA.title
+#: mrfrequencies/options/emptyAsNA.title
+msgid "Treat empty values as missing"
+msgstr "Tratar los valores vacíos como perdidos"
+
 #: likertplot/ui[4][0][0][0].label
 #: piechart/options/labType.title
 #: piechart/ui[2][0][0][0].label
 msgid "Type"
 msgstr "Tipo"
 
+#: R/qqplot.b.R
+msgid "Unable to estimate the distribution parameters."
+msgstr "No se pueden estimar los parámetros de la distribución."
+
 #: R/principal.b.R
 msgid "Unable to use {rotation} rotation."
-msgstr "No es capaz de utilizar la rotación {rotation}."
+msgstr "No se puede utilizar la rotación {rotation}."
 
 #: R/qqplot.b.R
 #: qqplot/options/distrib/unif.title
@@ -4460,7 +5146,7 @@ msgstr "Uniforme"
 #: areachart/options/dateFormat/us.title
 #: linechart/options/dateFormat/us.title
 msgid "US (M-D-Y)"
-msgstr "EUA (M-D-A)"
+msgstr "US (M-D-A)"
 
 #: multcorresp/options/boldCat.title
 msgid "Use boldface"
@@ -4471,23 +5157,23 @@ msgstr "Usar negrita"
 #: mrfrequencies/options/singleColor.title
 #: raincloud/ui[1][1][0]/singleColor.label
 msgid "Use color No."
-msgstr "Usar color Nº."
+msgstr "Color nº"
 
 #: histogram/options/usePalette.title
 msgid "Use Palette"
-msgstr "Usar Paleta"
+msgstr "Utilizar la paleta"
 
 #: boxplot/options/singleColor.title
 #: raincloud/options/singleColor.title
 msgid "Use the same color for variables"
-msgstr "Usar el mismo color para las variables"
+msgstr "Utilizar un único color"
 
 #: corresp/options/descAsVarName.title
 #: likertplot/options/descAsVarName.title
 #: multcorresp/options/descAsVarName.title
 #: principal/options/descAsVarName.title
 msgid "Use variable's description as name"
-msgstr "Usar la descripción de la variable como nombre"
+msgstr "Usar descripción de las variables como etiqueta"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -4517,21 +5203,21 @@ msgstr "Variable"
 #: multcorresp/options/showDiscriminations.title
 #: multcorresp/options/showDiscriminationPlot.title
 msgid "Variable dicriminations"
-msgstr "Discriminaciones de variable"
+msgstr "Discriminación de variables"
 
 #: multcorresp/results/discrim.title
 msgid "Variable Discriminations"
-msgstr "Discriminaciones de Variable"
+msgstr "Discriminación de variables"
 
 #: principal/options/varTitleText.title
 #: principal/options/varSubtitleText.title
 #: principal/options/varCaptionText.title
 msgid "Variable plot"
-msgstr "Trama de variable"
+msgstr "Gráfico de variables"
 
 #: principal/results/varPlot.title
 msgid "Variable Plot"
-msgstr "Trama de Variable"
+msgstr "Gráfico de variables"
 
 #: R/linechart.b.R
 #: R/multcorresp.b.R
@@ -4558,11 +5244,11 @@ msgstr "Varimax"
 
 #: likertplot/options/vLabelWrap.title
 msgid "Vertical label wrap"
-msgstr "Etiqueta vertical de envoltura"
+msgstr "Altura de las etiquetas horizontales"
 
 #: scatterplot/options/vline.title
 msgid "Vertical line at"
-msgstr "Línea vertical en"
+msgstr "Recta vertical en"
 
 #: package/analyses/histogram.menuGroup
 #: package/analyses/boxplot.menuGroup
@@ -4602,7 +5288,7 @@ msgstr "vijPlots"
 
 #: package.title
 msgid "vijPlots: Yet Another jamovi Plotting Module"
-msgstr "vijPlots: Otro Módulo de Trazado de jamovi"
+msgstr "vijPlots: otro módulo de gráficos para jamovi"
 
 #: areachart/options/colorPalette/viridis::inferno.title
 #: barplot/options/colorPalette/viridis::inferno.title
@@ -4618,7 +5304,7 @@ msgstr "vijPlots: Otro Módulo de Trazado de jamovi"
 #: raincloud/options/colorPalette/viridis::inferno.title
 #: scatterplot/options/colorPalette/viridis::inferno.title
 msgid "Viridis:Inferno"
-msgstr "Infierno"
+msgstr "Viridis:Inferno"
 
 #: areachart/options/colorPalette/viridis::magma.title
 #: barplot/options/colorPalette/viridis::magma.title
@@ -4634,7 +5320,7 @@ msgstr "Infierno"
 #: raincloud/options/colorPalette/viridis::magma.title
 #: scatterplot/options/colorPalette/viridis::magma.title
 msgid "Viridis:Magma"
-msgstr "Magma"
+msgstr "Viridis:Magma"
 
 #: areachart/options/colorPalette/viridis::plasma.title
 #: barplot/options/colorPalette/viridis::plasma.title
@@ -4650,7 +5336,7 @@ msgstr "Magma"
 #: raincloud/options/colorPalette/viridis::plasma.title
 #: scatterplot/options/colorPalette/viridis::plasma.title
 msgid "Viridis:Plasma"
-msgstr "Plasma"
+msgstr "Viridis:Plasma"
 
 #: areachart/options/colorPalette/viridis::turbo.title
 #: barplot/options/colorPalette/viridis::turbo.title
@@ -4666,7 +5352,7 @@ msgstr "Plasma"
 #: raincloud/options/colorPalette/viridis::turbo.title
 #: scatterplot/options/colorPalette/viridis::turbo.title
 msgid "Viridis:Turbo"
-msgstr "Turbo"
+msgstr "Viridis:Turbo"
 
 #: areachart/options/colorPalette/viridis::viridis.title
 #: barplot/options/colorPalette/viridis::viridis.title
@@ -4682,7 +5368,7 @@ msgstr "Turbo"
 #: raincloud/options/colorPalette/viridis::viridis.title
 #: scatterplot/options/colorPalette/viridis::viridis.title
 msgid "Viridis:Viridis"
-msgstr "Viridis"
+msgstr "Viridis:Viridis"
 
 #: R/qqplot.b.R
 #: qqplot/options/distrib/weibull.title
@@ -4709,7 +5395,7 @@ msgstr "Blanco"
 
 #: histogram/options/binWidth.title
 msgid "Width"
-msgstr "Anchura"
+msgstr "Ancho"
 
 #: barplot/options/percentWithin/category.title
 #: barplot/ui[1][0][0]/yaxis_percent/percentWithin_category.label
@@ -4720,6 +5406,10 @@ msgstr "Dentro de categorías"
 #: barplot/ui[1][0][0]/yaxis_percent/percentWithin_gGroup.label
 msgid "Within groups"
 msgstr "Dentro de grupos"
+
+#: R/qqplot.b.R
+msgid "Wrong parameter values."
+msgstr "Valores de parámetros incorrectos."
 
 #: areachart/options/timeVar.title
 #: areachart/options/timeVar1.title
@@ -4764,6 +5454,16 @@ msgstr "Dentro de grupos"
 #: scatterplot/ui[4][1].label
 msgid "X-Axis"
 msgstr "Eje X"
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "X-Axis and Y-Axis cannot be equal."
+msgstr "El eje X y el eje Y no pueden ser iguales."
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
+msgstr "El eje X y el eje Y no pueden ser mayores que el número de dimensiones."
 
 #: areachart/options/isDate.title
 #: linechart/options/isDate.title
@@ -4860,7 +5560,7 @@ msgstr "Amarillo"
 #: raincloud/options/colorPalette/YlGnBu.title
 #: scatterplot/options/colorPalette/YlGnBu.title
 msgid "Yellow to Blue"
-msgstr "Amarillo a Azul"
+msgstr "Amarillo y azul"
 
 #: areachart/options/colorPalette/YlOrBr.title
 #: barplot/options/colorPalette/YlOrBr.title
@@ -4876,7 +5576,7 @@ msgstr "Amarillo a Azul"
 #: raincloud/options/colorPalette/YlOrBr.title
 #: scatterplot/options/colorPalette/YlOrBr.title
 msgid "Yellow to Brown"
-msgstr "Amarillo a Marrón"
+msgstr "Amarillo y marrón"
 
 #: areachart/options/colorPalette/YlGn.title
 #: barplot/options/colorPalette/YlGn.title
@@ -4892,7 +5592,7 @@ msgstr "Amarillo a Marrón"
 #: raincloud/options/colorPalette/YlGn.title
 #: scatterplot/options/colorPalette/YlGn.title
 msgid "Yellow to Green"
-msgstr "Amarillo a Verde"
+msgstr "Amarillo y verde"
 
 #: areachart/options/colorPalette/YlOrRd.title
 #: barplot/options/colorPalette/YlOrRd.title
@@ -4908,712 +5608,4 @@ msgstr "Amarillo a Verde"
 #: raincloud/options/colorPalette/YlOrRd.title
 #: scatterplot/options/colorPalette/YlOrRd.title
 msgid "Yellow to Red"
-msgstr "Amarillo a Rojo"
-
-#: R/areachart.b.R
-#: R/linechart.b.R
-msgid "{var} doesn't have a valid date format."
-msgstr "{var} no tiene un formato de fecha válido."
-
-#: R/corresp.b.R
-msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
-msgstr ""
-"Los números de fila suplementarios deben ser una lista de números, por "
-"ejemplo 1,2,9"
-
-#: R/corresp.b.R
-msgid "Supplementary row numbers must be between 1 and {nmax}."
-msgstr "Los números de fila suplementarios deben estar entre 1 y {nmax}."
-
-#: R/corresp.b.R
-msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
-msgstr ""
-"Los números de columna suplementarios deben ser una lista de números, por "
-"ejemplo 1,2,9"
-
-#: R/corresp.b.R
-msgid "Supplementary column numbers must be between 1 and {nmax}."
-msgstr "Los números de columna suplementarios deben estar entre 1 y {nmax}."
-
-#: R/corresp.b.R
-msgid "Number of dimensions must be less than or equal to {maxDim}."
-msgstr "El número de dimensiones debe ser menor o igual a {maxDim}."
-
-#: R/corresp.b.R
-msgid ""
-"Axis numbers must be less than or equal to the number of dimensions "
-"({nDim})."
-msgstr ""
-"Los números de ejes deben ser menores o iguales al número de dimensiones ("
-"{nDim})."
-
-#: R/corresp.b.R
-msgid "Axis numbers cannot be equal."
-msgstr "Los números de ejes no pueden ser iguales."
-
-#: R/corresp.b.R
-msgid "Principal normalization"
-msgstr "Normalización principal"
-
-#: R/corresp.b.R
-msgid "Symetric normalization"
-msgstr "Normalización simétrica"
-
-#: R/corresp.b.R
-msgid "Row principal normalization"
-msgstr "Normalización principal de fila"
-
-#: R/corresp.b.R
-msgid "Column principal normalization"
-msgstr "Normalización principal de columna"
-
-#: R/corresp.b.R
-msgid "Standard normalization"
-msgstr "Normalización estándar"
-
-#: R/corresp.b.R
-msgid "Row Points for {rows}"
-msgstr "Puntos de Fila para {rows}"
-
-#: R/corresp.b.R
-msgid "Column Points for {cols}"
-msgstr "Puntos de Columna para {cols}"
-
-#: R/corresp.b.R
-msgid "Symmetric normalization"
-msgstr "Normalización simétrica"
-
-#: R/corresp.b.R
-msgid ""
-"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
-"two categorical variables. Computations are based on <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
-"using the \"Counts\" variable.</p>\n"
-"<p><strong>Supplementary row or column</strong> numbers may be entered as "
-"integer lists : 1,3,6</p>\n"
-"<p>Four normalizations (scaling of row and column scores before plotting) "
-"are avalaible :</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Row an columns scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
-"square root of eigenvalues. </li>\n"
-"<li><strong>Row Principal:</strong> Only row scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Column Principal:</strong> Only column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Standard:</strong> The raw coordinates without "
-"normalization.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
-msgstr ""
-"<p Este módulo calcula el <strong>Análisis de Correspondencia (CA)</strong> "
-"para dos variables categóricas. Los cálculos se basan en el paquete <a href "
-"= \"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">"
-"FactoMineR<a/> de F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</"
-"p>\n"
-"<p>Los datos pueden ser ponderados utilizando el sistema de ponderación "
-"integrado de <em>jamovi</em> o utilizando la variable \"Recuentos\".</p>\n"
-"<p>Los números de fila o columna <strong>suplementarios</strong> pueden ser "
-"introducidos como listas de enteros: 1,3,6</p>\n"
-"<p>Hay disponibles cuatro normalizaciones (escalado de las puntuaciones de "
-"fila y columna antes de hacer el gráfico) :</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Las puntuaciones de fila y columna se "
-"escalan por autovalores.</li>\n"
-"<li><strong>Simétrico:</strong> Las puntuaciones de fila y columna se "
-"escalan por la raíz cuadrada de los autovalores. </li>\n"
-"<li><strong>Fila principal:</strong> Solo las puntuaciones de fila se "
-"escalan por autovalores.</li>\n"
-"<li><strong>Columna principal:</strong> Solo las puntuaciones de columna se "
-"escalan por autovalores.</li>\n"
-"<li><strong>Estándar:</strong> Las coordenadas sin normalización.</li>\n"
-"</ul>\n"
-"<p>Un archivo de ejemplo se incluye en Abrir > Biblioteca de datos > "
-"vijPlots > Smoking</p>"
-
-#: R/likertplot.b.R
-msgid "Likert Plot requires ordinal (or numeric) variables"
-msgstr "El Gráfico de Likert requiere variables ordinales (o numéricas)"
-
-#: R/likertplot.b.R
-msgid "Median and mean require numeric variables"
-msgstr "La mediana y la media requieren variables numéricas"
-
-#: R/likertplot.b.R
-msgid "Comparison tests require numeric variables"
-msgstr "Las pruebas de comparación requieren variables numéricas"
-
-#: R/likertplot.b.R
-msgid "Cannot convert text variables to integers"
-msgstr "No se pueden convertir las variables de texto en enteros"
-
-#: R/likertplot.b.R
-msgid "Cannot tidy up text variables"
-msgstr "No se pueden ordenar las variables de texto"
-
-#: R/likertplot.b.R
-msgid "Comparison tests cannot be computed with empty (N=0) groups"
-msgstr ""
-"Las pruebas de comparación no se pueden calcular con grupos vacíos (N=0)"
-
-#: R/likertplot.b.R
-msgid ""
-"<h3>Data & Sorting</h3>\n"
-"<ul>\n"
-"<li>Likert variables must be of ordinal measure-type. (Continuous "
-"measure-type works as well.)</li>\n"
-"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
-"must be of integer data-type.</li>\n"
-"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
-"order in table and graph (when some variables miss some levels).</li>\n"
-"<li><strong>Convert variables to integer:</strong> when checked, the level "
-"labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
-"</ul>\n"
-"<h3>Comparison Tests</h3>\n"
-"<p>When using a group variable, several tests are available:</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
-"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
-"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
-"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
-"</ul>\n"
-"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
-"p-values are already adjusted (groupwise); no other adjustment is "
-"possible.</p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
-msgstr ""
-"<h3>Datos y ordenación</h3>\n"
-"<ul>\n"
-"<li>Las variables Likert deben ser de tipo de medida ordinal. (El tipo de "
-"medida continuo también funciona.)</li>\n"
-"<li>Si planea calcular la media/mediana/desviación estándar o utilizar "
-"pruebas de comparación, deben ser de tipo de datos entero.</li>\n"
-"<li><strong>Organizar niveles:</strong> cuando se selecciona, intenta "
-"arreglar el orden de las etiquetas en la tabla y el gráfico (cuando algunas "
-"variables faltan algunos niveles).</li>\n"
-"<li><strong>Convertir variables a enteros:</strong> cuando se selecciona, se "
-"ignoran las etiquetas de nivel y solo se utilizan los valores enteros.</li>\n"
-"<li><strong>Ordenar variables por mediana:</strong> ordena la lista de "
-"variables Likert por mediana.</li>\n"
-"</ul>\n"
-"<h3>Pruebas de comparación</h3>\n"
-"<p>Cuando se utiliza una variable de grupo, hay varias pruebas disponibles:</"
-"p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U:</strong> Comparación de dos grupos</li>\n"
-"<li><strong>Kruskal-Wallis:</strong> Comparación de n grupos</li>\n"
-"<li><strong>Pruebas post hoc:</strong> Pruebas de comparación pareada de "
-"Dunn, Conover y Dwass-Steel-Critchlow-Fligner (DSCF).</li>\n"
-"</ul>\n"
-"<p>Los valores p se pueden ajustar <strong>por grupo</strong> (para cada "
-"pregunta) para las pruebas post hoc o <strong>en general</strong> (por grupo "
-"y pregunta) para las pruebas de Mann-Whitney U, Kruskal-Wallis y post hoc. "
-"Los valores p de DSCF ya están ajustados (por grupo); no es posible ningún "
-"otro ajuste.</p>\n"
-"<p>Un archivo de ejemplo se incluye en Abrir > Biblioteca de datos > "
-"vijPlots > Likert</p>"
-
-#: R/lollipop.b.R
-msgid "Mean of {var}"
-msgstr "Media de {var}"
-
-#: R/lollipop.b.R
-msgid "Median of {var}"
-msgstr "Mediana de {var}"
-
-#: R/lollipop.b.R
-msgid "Minimum of {var}"
-msgstr "Mínimo de {var}"
-
-#: R/lollipop.b.R
-msgid "Maximum of {var}"
-msgstr "Máximo de {var}"
-
-#: R/mrcrosstabs.b.R
-msgid "Crosstab (% of cases)"
-msgstr "Tabla cruzada (% de casos)"
-
-#: R/mrcrosstabs.b.R
-msgid "Crosstab (% of responses)"
-msgstr "Tabla cruzada (% de respuestas)"
-
-#: R/mrcrosstabs.b.R
-msgid ""
-"<p>This module computes two-way frequencies for multiple response "
-"questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>Este módulo calcula frecuencias bidireccionales para preguntas de "
-"respuesta múltiple, también conocidas como preguntas \"Comprueba todas las "
-"posibilidades\" (CATA).</p>\n"
-"<p>Las preguntas pueden estar codificadas como:</p>\n"
-"<ul>\n"
-"<li>varias <strong>variables ficticias (o indicadoras)</strong> que utilizan "
-"0/1, 1/2, S/N para cada respuesta posible;</li>\n"
-"<li>una sola <strong>variable de múltiples valores</strong> que contiene las "
-"respuestas marcadas, separadas por un símbolo (generalmente \",\" o \";\").</"
-"li>\n"
-"</ul>\n"
-"<p>Un archivo de ejemplo se incluye en Abrir > Biblioteca de datos > "
-"vijPlots > Credit Cards</p>"
-
-#: R/mrfrequencies.b.R
-msgid ""
-"<p>This module computes frequencies for multiple response questions, also "
-"known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p Este módulo calcula las frecuencias para preguntas de respuesta múltiple, "
-"también conocidas como preguntas \"Comprueba todas las posibilidades\" (CATA)"
-".</p>\n"
-"<p>Las preguntas pueden estar codificadas como:</p>\n"
-"<ul>\n"
-"<li>varias <strong>variables ficticias (o indicadoras)</strong> que utilizan "
-"0/1, 1/2, S/N para cada respuesta posible;</li>\n"
-"<li>una sola <strong>variable de múltiples valores</strong> que contiene las "
-"respuestas seleccionadas, separadas por un símbolo (generalmente \",\" o "
-"\";\").</li>\n"
-"</ul>\n"
-"<p>Un archivo de ejemplo se incluye en Abrir > Biblioteca de datos > "
-"vijPlots > Tarjetas de crédito</p>"
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
-msgstr "Los ejes X e Y no pueden ser mayores que el número de dimensiones."
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-msgid "X-Axis and Y-Axis cannot be equal."
-msgstr "El eje X y el eje Y no pueden ser iguales."
-
-#: R/multcorresp.b.R
-msgid "MCA Principal Coordinates"
-msgstr "Coordenadas Principales de MCA"
-
-#: R/multcorresp.b.R
-msgid "MCA Standard Coordinates"
-msgstr "Coordenadas Estándar de MCA"
-
-#: R/multcorresp.b.R
-msgid ""
-"<p>This module computes <strong>Multiple Correspondence Analysis "
-"(MCA)</strong> for several categorical variables. Computations are based on "
-"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Both classic methods are available:</p>\n"
-"<ul>\n"
-"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
-"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues "
-"are the squares of those of the indicator matrix method. </li>\n"
-"</ul>\n"
-"<p>Both methods give the same <em>standard</em> coordinates (but different "
-"<em>principal</em> coordinates).</p>\n"
-"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
-"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
-"(and inertia) of categories and observations are computed from the original "
-"eigenvalues of the Burt matrix.</p>\n"
-"<p>The <strong>Normalization</strong> options specify how the coordinates "
-"are scaled (by eigenvalues):</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Both category and observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Category principal:</strong> Only category coordinates are "
-"scaled.</li>\n"
-"<li><strong>Observation principal:</strong> Only observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Standard:</strong> Both category and observation coordinates "
-"are standard.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
-msgstr ""
-"<p>Este módulo calcula el <strong>Análisis de Correspondencia Múltiple (MCA)"
-"</strong> para varias variables categóricas. Los cálculos se basan en el "
-"paquete <a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> de F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Están disponibles ambos métodos clásicos:</p>\n"
-"<ul>\n"
-"<li><strong>Matriz de indicadores:</strong> CA de la matriz de indicadores</"
-"li>\n"
-"<li><strong>Matriz de Burt:</strong> CA de la matriz de Burt. Los valores "
-"propios son los cuadrados de los de la matriz de indicadores.</li>\n"
-"</ul>\n"
-"<p>Ambos métodos dan las mismas <em>coordenadas estándar</em> (pero "
-"diferentes <em>coordenadas principales</em>). </p>\n"
-"<p>Cuando se selecciona, se aplican las <strong>correcciones de Benzécri y "
-"Greenacre</strong> solo a los valores propios (<strong>Tabla de resumen</"
-"strong>). Las coordenadas (y la inercia) de las categorías y las "
-"observaciones se calculan a partir de los valores propios originales de la "
-"matriz de Burt.</p>\n"
-"<p>Las <strong>Opciones de normalización</strong> especifican cómo se "
-"escalan las coordenadas (por valores propios):</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Se escalan tanto las coordenadas de "
-"categoría como las de observación.</li>\n"
-"<li><strong>Principal de categoría:</strong> Solo se escalan las coordenadas "
-"de categoría.</li>\n"
-"<li><strong>Principal de observación:</strong> Solo se escalan las "
-"coordenadas de observación.</li>\n"
-"<li><strong>Estándar:</strong> Tanto las coordenadas de categoría como las "
-"de observación son estándar.</li>\n"
-"</ul>\n"
-"<p>Se incluye un archivo de ejemplo en Abrir > Biblioteca de datos > "
-"vijPlots > Cars</p>"
-
-#: R/piechart.b.R
-msgid "Pie charts are for educational use only. Please do not use Pie charts!"
-msgstr ""
-"Los gráficos circulares son únicamente para uso educativo. Por favor, no "
-"utilizar gráficos circulares."
-
-#: R/principal.b.R
-msgid "The number of dimensions cannot be greater than the number of variables."
-msgstr "El número de dimensiones no puede ser mayor que el número de variables."
-
-#: R/principal.b.R
-msgid "PCA Principal Coordinates"
-msgstr "Coordenadas Principales de PCA"
-
-#: R/principal.b.R
-msgid "PCA Standard Coordinates"
-msgstr "Coordenadas Estándar de PCA"
-
-#: R/principal.b.R
-msgid ""
-"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
-"for several continuous variables. Computations are based on "
-"<tt>stats::prcomp</tt> function.</p>\n"
-"<p>Although rotated components are not principal components, they are "
-"widely used. Only orthogonal rotations are available (from GPArotation "
-"package).</p>\n"
-"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
-"principal (scaled by the squareroot of eigenvalues).</p>\n"
-"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
-"eigenvalues) while loadings are standard.</li>\n"
-"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
-"are standard. </li>\n"
-"</ul>\n"
-"<p><strong>Advanced options</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Standardize loadings:</strong> loadings are normalized with "
-"sums of squared equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Standardize scores:</strong> scores are normalized with "
-"variances equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
-"applied to eigenvectors (standard loadings) instead of principal loadings "
-"(STATA way).</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
-msgstr ""
-"<p>Este módulo calcula el <strong>Análisis de Componentes Principales (PCA)</"
-"strong> para varias variables continuas. Los cálculos se basan en la función "
-"<tt>stats::prcomp</tt>.</p>\n"
-"<p>Aunque los componentes rotados no son componentes principales, se "
-"utilizan ampliamente. Solo están disponibles rotaciones ortogonales (del "
-"paquete GPArotation).</p>\n"
-"<p>Las cargas (coordenadas de variable) y las puntuaciones (coordenadas de "
-"observación) son principales (escaladas por la raíz cuadrada de los "
-"autovalores).</p>\n"
-"<p>La biplot sigue \"Biplots en la práctica\" (Michael Greenacre, 2010):</p>"
-"\n"
-"<ul>\n"
-"<li><strong>Forma biplot:</strong> Las puntuaciones son principales "
-"(escaladas por autovalores) mientras que las cargas son estándar.</li>\n"
-"<li><strong>Biplot de covarianza:</strong> Las cargas son principales "
-"mientras que las puntuaciones son estándar.</li>\n"
-"</ul>\n"
-"<p><strong>Opciones avanzadas</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Estándarizar cargas:</strong> Las cargas se normalizan con sumas "
-"de cuadrados iguales a 1 (en lugar de autovalores)</li>\n"
-"<li><strong>Estándarizar puntuaciones:</strong> Las puntuaciones se "
-"normalizan con varianzas iguales a 1 (en lugar de autovalores)</li>\n"
-"<li><strong>Rotar vectores propios:</strong> La rotación (varimax, etc.) se "
-"aplica a los vectores propios (cargas estándar) en lugar de las cargas "
-"principales (forma de STATA).</li>\n"
-"</ul>\n"
-"<p>Un archivo de ejemplo se incluye en Abrir > Biblioteca de datos > "
-"vijPlots > Iris</p>"
-
-#: R/qqplot.b.R
-msgid "Natural Log Tranform requires positive (>0) data."
-msgstr "La Transformación de Logaritmo Natural requiere datos positivos (>0)."
-
-#: R/qqplot.b.R
-msgid "{distrib} distribution requires positive (>0) data."
-msgstr "{distrib} distribución requiere datos positivos (>0)."
-
-#: R/qqplot.b.R
-msgid "Exponential distribution requires non-negative (≥0) data."
-msgstr "La distribución exponencial requiere datos no negativos (≥0)."
-
-#: R/qqplot.b.R
-msgid "Beta distribution requires data between 0 and 1."
-msgstr "La distribución beta requiere datos entre 0 y 1."
-
-#: R/qqplot.b.R
-msgid "Unable to estimate the distribution parameters."
-msgstr "No se pueden estimar los parámetros de la distribución."
-
-#: R/qqplot.b.R
-msgid "Wrong parameter values."
-msgstr "Valores de parámetro incorrectos."
-
-#: R/qqplot.b.R
-msgid "F"
-msgstr "F"
-
-#: R/qqplot.b.R
-msgid ""
-"<p>This module uses <a href = "
-"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
-"package<a/> by Alexandre Almeida, Adam Loy and Heike Hofmann. In-depth "
-"information can be found in the package documentation on CRAN site.</p>\n"
-"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
-"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
-"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
-"identity line.</p>\n"
-"<p><strong>Confidence band:</strong> Draws a confidence band around the "
-"reference line. qqplotr package provides several methods to compute the "
-"confidence band:</p>\n"
-"<ul>\n"
-"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
-"bands based on Normal confidence intervals;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
-"based on a parametric bootstrap;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
-"Kolmogorov-Smirnov test;</li>\n"
-"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
-"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
-"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
-"simultaneous bands using the equal local levels.</li>\n"
-"</ul>\n"
-"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
-"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
-"according to the reference line. This procedure may help reducing visual "
-"bias caused by the orthogonal distances from the points to the reference "
-"line.</p>\n"
-"<p><strong>Parameter values:</strong> The distribution parameters can be "
-"estimated from data using:</p>\n"
-"<ul>\n"
-"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
-"should work with all distributions but \"t\" and \"uniform\";</li>\n"
-"<li><strong>Method of Moments</strong> for moment based parameters : it "
-"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
-"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
-"</ul>\n"
-"<p>or entered by user:</p>\n"
-"<ul>\n"
-"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
-"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
-"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
-"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
-"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
-"(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
-msgstr ""
-"<p>Este módulo utiliza el paquete <a href = \"https://CRAN.R-project.org/"
-"package=qqplotr\" target=\"_blank\">qqplotr R package<a/> de Alexandre "
-"Almeida, Adam Loy y Heike Hofmann. La información detallada se puede "
-"encontrar en la documentación del paquete en el sitio de CRAN.</p>\n"
-"<p><strong>Línea de referencia:</strong> Dibuja la <em>línea de identidad</"
-"em> (y = x) o la línea de Q-Q comúnmente utilizada que intercepta dos "
-"cuantiles de datos (Q<sub>0.25</sub> y Q<sub>0.75</sub>). El gráfico P-P "
-"solo admite la línea de identidad.</p>\n"
-"<p><strong>Banda de confianza:</strong> Dibuja una banda de confianza "
-"alrededor de la línea de referencia. El paquete qqplotr proporciona varios "
-"métodos para calcular la banda de confianza:</p>\n"
-"<ul>\n"
-"<li><strong><em>Puntual</em></strong> construye bandas de confianza "
-"puntuales basadas en intervalos de confianza normales;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> crea bandas de confianza puntuales "
-"basadas en un bootstrap paramétrico;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> la banda se basa en la "
-"prueba de Kolmogorov-Smirnov;</li>\n"
-"<li><strong><em>Sensible a la cola</em></strong> construye bandas de "
-"confianza sensibles a la cola, pero solo se implementa para gráficos Q-Q "
-"normales;</li>\n"
-"<li><strong><em>Niveles locales iguales (ELL)</em></strong> construye bandas "
-"simultáneas utilizando los niveles locales iguales.</li>\n"
-"</ul>\n"
-"<p>Los gráficos P-P solo admiten los métodos \"ELL\" y \"Bootstrap\".</p>\n"
-"<p><strong>Gráfico dsestacional:</strong> Los objetos se <em>"
-"desestacionaalizados</em> según la línea de referencia. Este procedimiento "
-"puede ayudar a reducir el sesgo visual causado por las distancias "
-"ortogonales de los puntos a la línea de referencia.</p>\n"
-"<p><strong>Valores de parámetro:</strong> Los parámetros de la distribución "
-"se pueden estimar a partir de los datos utilizando:</p>\n"
-"<ul>\n"
-"<li><strong>Método de máxima verosimilitud</strong> (usando el paquete MASS)"
-": debe funcionar con todas las distribuciones, excepto \"t\" y "
-"\"uniforme\";</li>\n"
-"<li><strong>Método de momentos</strong> para parámetros basados en momentos: "
-"debe funcionar con distribuciones \"normales\", \"log-normales\", \"Beta\", "
-"\"Exponenciales\", \"Gamma\", \"Logísticas\" y \"Uniformes\";</li>\n"
-"</ul>\n"
-"<p>o introducidos por el usuario:</p>\n"
-"<ul>\n"
-"<li><strong>Parámetro 1:</strong> media (Normal), media log (Log-normal), "
-"forma1 (Beta), ubicación (Cauchy, Logística), df (Chi-cuadrado, Estudiante), "
-"df1 (F), tasa (Exponencial), forma (Gamma, Weibull) y mínimo (Uniforme);</li>"
-"\n"
-"<li><strong>Parámetro 2:</strong> desviación estándar (normal), desviación "
-"estándar log (Log-normal), forma2 (Beta), escala (Cauchy, Logística), df2 (F)"
-", tasa (Gamma, Weibull) y máximo (Uniforme).</li>\n"
-"</ul>\n"
-"</p>"
-
-#: areachart/options/ignoreNA.title
-#: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
-msgid "Ignore missing values"
-msgstr "Ignorar los valores perdidos"
-
-#: areachart/options/yTicks.title
-#: barplot/options/xTicks.title
-#: barplot/options/yTicks.title
-#: boxplot/options/xTicks.title
-#: boxplot/options/yTicks.title
-#: histogram/options/xTicks.title
-#: histogram/options/yTicks.title
-#: linechart/options/yTicks.title
-#: lollipop/options/xTicks.title
-#: lollipop/options/yTicks.title
-#: mrcrosstabs/options/xTicks.title
-#: mrcrosstabs/options/yTicks.title
-#: mrfrequencies/options/xTicks.title
-#: mrfrequencies/options/yTicks.title
-#: qqplot/options/xTicks.title
-#: qqplot/options/yTicks.title
-#: raincloud/options/xTicks.title
-#: raincloud/options/yTicks.title
-#: scatterplot/options/xTicks.title
-#: scatterplot/options/yTicks.title
-msgid "Tick count"
-msgstr "Recuento de marcas"
-
-#: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
-#: mrcrosstabs/options/reverseStack.title
-msgid "Reverse stacking order"
-msgstr "Orden reverso de apilamiento"
-
-#: barplot/options/barType/dodge.title
-#: mrcrosstabs/options/bartype/dodge.title
-msgid "Grouped (tight)"
-msgstr "Agrupados (ajustados)"
-
-#: barplot/ui[4].label
-#: boxplot/ui[3].label
-#: piechart/ui[4].label
-msgid "Text Size & Facets"
-msgstr "Tamaño de Texto y Facetas"
-
-#: boxplot/ui[2][0][1][0].label
-msgid "Box Elements"
-msgstr "Elementos de Caja"
-
-#: corresp/options/normalization/symmetric.title
-msgid "Symmetric"
-msgstr "Simétrico"
-
-#: corresp/ui[6].label
-msgid "Text Size & Colors"
-msgstr "Tamaño y colores de texto"
-
-#: likertplot/options/ignoreNA.title
-msgid "Ignore missing groups"
-msgstr "Ignorar grupos perdidos"
-
-#: linechart/ui[1][0][1].label
-#: principal/ui[4].label
-msgid "Sizes & Colors"
-msgstr "Tamaños y colores"
-
-#: mrcrosstabs/options/emptyAsNA.title
-#: mrfrequencies/options/emptyAsNA.title
-msgid "Treat empty values as missing"
-msgstr "Tratar valores vacíos como perdidos"
-
-#: mrcrosstabs/options/computedValues/responses.title
-#: mrfrequencies/options/showResponses.title
-#: mrfrequencies/options/yaxis/responses.title
-msgid "% of responses"
-msgstr "% de respuestas"
-
-#: mrcrosstabs/options/computedValues/cases.title
-#: mrfrequencies/options/showCases.title
-#: mrfrequencies/options/yaxis/cases.title
-msgid "% of cases"
-msgstr "% de casos"
-
-#: mrcrosstabs/options/computedValues/options.title
-msgid "% by row"
-msgstr "% por fila"
-
-#: principal/ui[4][0][0][1].label
-#: scatterplot/ui[2][0][0][0].label
-msgid "Element Sizes"
-msgstr "Tamaño de los elementos"
-
-#: raincloud/options/groupOne.title
-#: raincloud/ui[0][1].label
-msgid "Group (Side-by-side)"
-msgstr "Grupo (uno al lado del otro)"
-
-#: scatterplot/ui[2].label
-msgid "Element Sizes & Facets"
-msgstr "Tamaños y facetas de elementos"
-
-#: histogram/options/binBoundary.title
-msgctxt "boundary"
-msgid "Position"
-msgstr "Posición"
-
-#: areachart/options/displayFormat/%b.title
-#: linechart/options/displayFormat/%b.title
-msgctxt "menu"
-msgid "Oct"
-msgstr "Oct"
-
-#: areachart/options/displayFormat/%B.title
-#: linechart/options/displayFormat/%B.title
-msgctxt "menu"
-msgid "October"
-msgstr "Octubre"
-
-#: R/qqplot.b.R
-#: qqplot/options/distrib/norm.title
-msgctxt "distribution"
-msgid "Normal"
-msgstr "Normal"
+msgstr "Amarillo y rojo"

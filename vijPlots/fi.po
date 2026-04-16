@@ -10,6 +10,11 @@ msgstr ""
 
 #: R/qqplot.b.R
 #, fuzzy
+msgid "{distrib} distribution requires positive (>0) data."
+msgstr "{distrib} -jakauma vaatii positiivisia (>0) tietoja."
+
+#: R/qqplot.b.R
+#, fuzzy
 msgid "{distribStr} {typeStr} Plot of {varStr}"
 msgstr "{distribStr} {typeStr} -kaavio {varStr}:sta"
 
@@ -32,6 +37,12 @@ msgstr "{rotation} kierto Kaiserin normalisoinnin kanssa"
 #, fuzzy
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "{rotation} kierto Kaiserin normalisoinnin kanssa käytettiin."
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+#, fuzzy
+msgid "{var} doesn't have a valid date format."
+msgstr "{var} ei ole kelvollinen päivämäärämuoto."
 
 #: barplot/options/facetNumber.title
 #: boxplot/options/facetNumber.title
@@ -57,6 +68,11 @@ msgstr "Rivien/sarakkeiden määrä"
 msgid "% Accuracy"
 msgstr "% Tarkkuus"
 
+#: mrcrosstabs/options/computedValues/options.title
+#, fuzzy
+msgid "% by row"
+msgstr "% rivin mukaan"
+
 #: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
 #, fuzzy
@@ -75,6 +91,13 @@ msgstr "% Merkit"
 msgid "% of Cases"
 msgstr "% tapauksista"
 
+#: mrcrosstabs/options/computedValues/cases.title
+#: mrfrequencies/options/showCases.title
+#: mrfrequencies/options/yaxis/cases.title
+#, fuzzy
+msgid "% of cases"
+msgstr "% tapauksista"
+
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -89,6 +112,13 @@ msgstr "%:ia inertia"
 msgid "% of Responses"
 msgstr "Vastausprosentti"
 
+#: mrcrosstabs/options/computedValues/responses.title
+#: mrfrequencies/options/showResponses.title
+#: mrfrequencies/options/yaxis/responses.title
+#, fuzzy
+msgid "% of responses"
+msgstr "Vastausprosentti"
+
 #: principal/results/summaryTable.columns.title
 #, fuzzy
 msgid "% of Variance"
@@ -98,6 +128,404 @@ msgstr "% varianssista"
 #, fuzzy
 msgid "% within"
 msgstr "% sisällä"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid ""
+"<h3>Data & Sorting</h3>\n"
+"<ul>\n"
+"<li>Likert variables must be of ordinal measure-type. (Continuous "
+"measure-type works as well.)</li>\n"
+"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
+"must be of integer data-type.</li>\n"
+"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
+"order in table and graph (when some variables miss some levels).</li>\n"
+"<li><strong>Convert variables to integer:</strong> when checked, the level "
+"labels are ignored and only integer values are used.</li>\n"
+"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
+"variables by median.</li>\n"
+"</ul>\n"
+"<h3>Comparison Tests</h3>\n"
+"<p>When using a group variable, several tests are available:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
+"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
+"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
+"</ul>\n"
+"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
+"question) for post hoc tests or <strong>overall</strong> (groupwise and "
+"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
+"p-values are already adjusted (groupwise); no other adjustment is "
+"possible.</p>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
+msgstr ""
+"<h3>Data & järjestäminen</h3>\n"
+"<ul>\n"
+"<li>Likert-muuttujien on oltava järjestysmitattyyppiä. (Jatkuva mitattyyppi "
+"toimii myös.)</li>\n"
+"<li>Jos aiot laskea keskiarvo/keskiluku/keskihajonta tai käyttää "
+"vertailutestejä, ne on oltava kokonaislukutyyppiä.</li>\n"
+"<li><strong>Siivota tasot:</strong> kun valittuna, yritä korjata merkintöjen "
+"järjestys taulukossa ja graafisessa esityksessä (jos jotkin muuttujat "
+"puuttuvat joistakin tasoista).</li>\n"
+"<li><strong>Muunna muuttujat kokonaisluvuiksi:</strong> kun valittuna, "
+"tasojen merkintöjä ei huomioida, ja käytetään vain kokonaislukuja.</li>\n"
+"<li><strong>Lajittele muuttujat mediaanin mukaan:</strong> lajittelee "
+"Likert-muuttujat mediaanin mukaan.</li>\n"
+"</ul>\n"
+"<h3>Vertailutestit</h3>\n"
+"<p>Kun käytät ryhmämuuttujaa, useita testejä on käytettävissä:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> kahden ryhmän vertailu</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> usean ryhmän vertailu</li>\n"
+"<li><strong>Post hoc -testit:</strong> Dunn, Conover ja "
+"Dwass-Steel-Critchlow-Fligner (DSCF) parittaiset vertailutestit.</li>\n"
+"</ul>\n"
+"<p>p-arvoja voidaan säätää <strong>ryhmäkohtaisesti</strong> (kunkin "
+"kysymyksen osalta) post hoc -testeissä tai <strong>yhteensä</strong> "
+"(ryhmäkohtaisesti ja kysymyskohtaisesti) Mann-Whitney U:ssa, "
+"Kruskal-Wallisissa ja post hoc -testeissä. DSCF p-arvot on jo säädettynä "
+"(ryhmäkohtaisesti); muuta säätöä ei ole mahdollista.</p>\n"
+"<p>Esimerkkitiedosto on sisällytetty kohtaan Avaa > Tietokirjasto > vijPlots "
+"> Likert</p>"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
+"two categorical variables. Computations are based on <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
+"using the \"Counts\" variable.</p>\n"
+"<p><strong>Supplementary row or column</strong> numbers may be entered as "
+"integer lists : 1,3,6</p>\n"
+"<p>Four normalizations (scaling of row and column scores before plotting) "
+"are avalaible :</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Row an columns scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
+"square root of eigenvalues. </li>\n"
+"<li><strong>Row Principal:</strong> Only row scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Column Principal:</strong> Only column scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Standard:</strong> The raw coordinates without "
+"normalization.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
+msgstr ""
+"<p>Tämä moduuli laskee <strong>Vastavuoroisen analyysin (CA)</strong> "
+"kahdelle kategoriselle muuttujalle. Laskelmat perustuvat <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> -pakettiin F.&nbsp;Hussonilta, "
+"J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Dataa voidaan painottaa käyttämällä <em>jamovi</em> sisäänrakennettua "
+"painotusjärjestelmää tai \"Counts\" -muuttujaa.</p>\n"
+"<p><strong>Lisärivin tai -sarakkeen</strong> numerot voidaan syöttää "
+"kokonaislukulistoina: 1,3,6</p>\n"
+"<p>Neljä normalisointia (skaalauksia rivi- ja sarakepisteille ennen kaavion "
+"piirtämistä) on saatavilla:</p>\n"
+"<ul>\n"
+"<li><strong>Pää:</strong> Rivien ja sarakkeiden pisteet skaalataan "
+"eigenarvojen mukaan.</li>\n"
+"<li><strong>Symmetrinen:</strong> Rivien ja sarakkeiden pisteet skaalataan "
+"eigenarvojen neliöjuuren mukaan.</li>\n"
+"<li><strong>Rivin pää:</strong> Vain rivien pisteet skaalataan eigenarvojen "
+"mukaan.</li>\n"
+"<li><strong>Sarakkeen pää:</strong> Vain sarakkeiden pisteet skaalataan "
+"eigenarvojen mukaan.</li>\n"
+"<li><strong>Standardi:</strong> Raaka koordinaatit ilman "
+"normalisointia.</li>\n"
+"</ul>\n"
+"<p>Esimerkkitiedosto on sisällytetty kohtaan Avaa > Tietokirjasto > vijPlots "
+"> Smoking</p>"
+
+#: R/multcorresp.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes <strong>Multiple Correspondence Analysis "
+"(MCA)</strong> for several categorical variables. Computations are based on "
+"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Both classic methods are available:</p>\n"
+"<ul>\n"
+"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
+"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues are "
+"the squares of those of the indicator matrix method. </li>\n"
+"</ul>\n"
+"<p>Both methods give the same <em>standard</em> coordinates (but different "
+"<em>principal</em> coordinates).</p>\n"
+"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
+"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
+"(and inertia) of categories and observations are computed from the original "
+"eigenvalues of the Burt matrix.</p>\n"
+"<p>The <strong>Normalization</strong> options specify how the coordinates "
+"are scaled (by eigenvalues):</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Both category and observation coordinates "
+"are scaled.</li>\n"
+"<li><strong>Category principal:</strong> Only category coordinates are "
+"scaled.</li>\n"
+"<li><strong>Observation principal:</strong> Only observation coordinates are "
+"scaled.</li>\n"
+"<li><strong>Standard:</strong> Both category and observation coordinates are "
+"standard.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
+msgstr ""
+"<p>Tämä moduuli laskee useiden kategoristen muuttujien <strong>Monitason "
+"Sopimusanalyysi (MCA)</strong>. Laskelmat perustuvat <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> -pakettiin, jonka ovat luoneet "
+"F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Molemmat perinteiset menetelmät ovat käytettävissä:</p>\n"
+"<ul>\n"
+"<li><strong>Indikaattorimatriisi:</strong> CA indikaattorimatriisista</li>\n"
+"<li><strong>Burt-matriisi:</strong> CA Burt-matriisista. Omienarvot ovat "
+"indikaattorimatriisin menetelmän omienarvojen neliöitä. </li>\n"
+"</ul>\n"
+"<p>Molemmat menetelmät antavat samat <em>standardi</em>koordinaatit (mutta "
+"erilaiset <em>pää</em>koordinaatit).</p>\n"
+"<p>Valitsemalla <strong>Benzécrin ja Greenacren korjaukset</strong> "
+"sovelletaan omienarvoihin vain (<strong>Yhteenveto</strong> -taulukko). "
+"Kategoroiden ja havaintojen koordinaatit ja inertia lasketaan Burt-matriisin "
+"alkuperäisistä omienarvoista.</p>\n"
+"<p><strong>Normalisointi</strong> -vaihtoehdot määrittävät, miten "
+"koordinaatit mitataan (omienarvojen mukaan):</p>\n"
+"<ul>\n"
+"<li><strong>Pää:</strong> Sekä kategorian että havainnon koordinaatit "
+"mitataan.</li>\n"
+"<li><strong>Kategorian pää:</strong> Vain kategorian koordinaatit "
+"mitataan.</li>\n"
+"<li><strong>Havainnon pää:</strong> Vain havainnon koordinaatit "
+"mitataan.</li>\n"
+"<li><strong>Standardi:</strong> Sekä kategorian että havainnon koordinaatit "
+"ovat standardoituja.</li>\n"
+"</ul>\n"
+"<p>Esimerkkitiedosto on sisällytetty Open > Data Library > vijPlots > "
+"Cars</p>"
+
+#: R/principal.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
+"for several continuous variables. Computations are based on "
+"<tt>stats::prcomp</tt> function.</p>\n"
+"<p>Although rotated components are not principal components, they are widely "
+"used. Only orthogonal rotations are available (from GPArotation "
+"package).</p>\n"
+"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
+"principal (scaled by the squareroot of eigenvalues).</p>\n"
+"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
+"eigenvalues) while loadings are standard.</li>\n"
+"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
+"are standard. </li>\n"
+"</ul>\n"
+"<p><strong>Advanced options</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Standardize loadings:</strong> loadings are normalized with sums "
+"of squared equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Standardize scores:</strong> scores are normalized with "
+"variances equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
+"applied to eigenvectors (standard loadings) instead of principal loadings "
+"(STATA way).</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
+msgstr ""
+"<p>Tämä moduuli laskee <strong>Pääkomponenttianalyysin (PCA)</strong> "
+"useille jatkuville muuttujille. Laskelmat perustuvat <tt>stats::prcomp</tt> "
+"-funktiolle.</p>\n"
+"<p>Vaikka pyöritykselliset komponentit eivät ole pääkomponentteja, niitä "
+"käytetään laajasti. Vain ortogonaaliset pyöritykset ovat saatavilla "
+"(GPArotation-paketista).</p>\n"
+"<p>Lataukset (muuttujakoordinaatit) ja pisteet (havaintokoordinaatit) ovat "
+"pääkomponentteja (skaalattu eigenarvojen neliöjuuren mukaan).</p>\n"
+"<p>Biplot noudattaa \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Muodosta biplot:</strong> Pisteet ovat pääkomponentteja "
+"(skaalattu eigenarvojen mukaan), kun taas lataukset ovat "
+"standardoituja.</li>\n"
+"<li><strong>Kovarianssibiplot:</strong> Lataukset ovat pääkomponentteja, kun "
+"taas pisteet ovat standardoituja.</li>\n"
+"</ul>\n"
+"<p><strong>Edistyneet vaihtoehdot</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Standardisoi lataukset:</strong> Lataukset on normalisoitu niin, "
+"että niiden neliöiden summa on 1 (eigenarvojen sijaan)</li>\n"
+"<li><strong>Standardisoi pisteet:</strong> Pisteet on normalisoitu niin, "
+"että niiden varianssi on 1 (eigenarvojen sijaan)</li>\n"
+"<li><strong>Pyöritysvektorit:</strong> Pyöritys (varimax jne.) on sovellettu "
+"vektoreihin (standardilataukset) sen sijaan, että ne olisivat "
+"pääkomponenttilatauksia (STATA-tapa).</li>\n"
+"</ul>\n"
+"<p>Esimerkkitiedosto on sisällytetty kohtaan Avaa > Tietokirjasto > vijPlots "
+"> Iris</p>"
+
+#: R/mrfrequencies.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes frequencies for multiple response questions, also "
+"known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>Tämä moduuli laskee useiden vastausvaihtoehtojen kysymysten taajuuksia, "
+"jotka tunnetaan myös nimellä \"Valitse kaikki, mitkä ovat sovellettavissa\" "
+"(CATA) -kysymykset.</p>\n"
+"<p>Kysymykset voidaan koodata:</p>\n"
+"<ul>\n"
+"<li>useita <strong>dummy- (tai indikaattori-) muuttujia</strong> käyttäen "
+"0/1, 1/2, K/T kunkin mahdollisen vastauksen kohdalla;</li>\n"
+"<li>yhtä <strong>moniarvoista muuttujaa</strong> sisältävää tarkistettua "
+"vastausta, joka on eroteltu symboleilla (yleensä \",\" tai \";\").</li>\n"
+"</ul>\n"
+"<p>Esimerkkitiedosto on sisällytetty Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+
+#: R/mrcrosstabs.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes two-way frequencies for multiple response questions, "
+"also known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>Tämä moduuli laskee kaksiulotteiset taajuuksien useille "
+"vastausvaihtoehdoille, jotka tunnetaan myös nimellä \"Valitse kaikki, jotka "
+"ovat sovellettavissa\" (CATA) -kysymykset.</p>\n"
+"<p>Kysymykset voidaan koodata:</p>\n"
+"<ul>\n"
+"<li>useita <strong>dummy- (tai osoittimemuuttujia)</strong> käyttäen 0/1, "
+"1/2, K/T kullekin mahdolliselle vastaukselle;</li>\n"
+"<li>yksi <strong>moniarvoinen muuttuja</strong>, joka sisältää valitut "
+"vastaukset, erotettuna merkillä (yleensä \",\" tai \";\").</li>\n"
+"</ul>\n"
+"<p>Esimerkkitiedosto on sisällytetty kohtaan Avaa > Tietokirjasto > vijPlots "
+"> Credit Cards</p>"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid ""
+"<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
+"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"Heike Hofmann. In-depth information can be found in the package "
+"documentation on CRAN site.</p>\n"
+"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
+"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
+"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
+"identity line.</p>\n"
+"<p><strong>Confidence band:</strong> Draws a confidence band around the "
+"reference line. qqplotr package provides several methods to compute the "
+"confidence band:</p>\n"
+"<ul>\n"
+"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
+"bands based on Normal confidence intervals;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
+"based on a parametric bootstrap;</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
+"Kolmogorov-Smirnov test;</li>\n"
+"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
+"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
+"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
+"simultaneous bands using the equal local levels.</li>\n"
+"</ul>\n"
+"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
+"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
+"according to the reference line. This procedure may help reducing visual "
+"bias caused by the orthogonal distances from the points to the reference "
+"line.</p>\n"
+"<p><strong>Parameter values:</strong> The distribution parameters can be "
+"estimated from data using:</p>\n"
+"<ul>\n"
+"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
+"should work with all distributions but \"t\" and \"uniform\";</li>\n"
+"<li><strong>Method of Moments</strong> for moment based parameters : it "
+"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
+"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
+"</ul>\n"
+"<p>or entered by user:</p>\n"
+"<ul>\n"
+"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
+"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
+"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
+"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
+"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
+"(Uniform).</li>\n"
+"</ul>\n"
+"</p>"
+msgstr ""
+"<p>Tämä moduuli käyttää <a href = "
+"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr "
+"R-pakettia</a> Alexandre Almeidan, Adam Loy:n ja Heike Hofmannin kanssa. "
+"Tarkemmat tiedot löytyvät paketin dokumentaatiosta CRAN-sivustolta.</p>\n"
+"<p><strong>Viittelinja:</strong> Piirtää joko <em>identiteettilinjan</em> (y "
+"= x) tai yleisesti käytetyn <em>Q-Q-linjan</em>, joka leikkaa kaksi "
+"datakvantiilia (Q<sub>0.25</sub> ja Q<sub>0.75</sub>). P-P-kaavio tukee vain "
+"identiteettilinjaa.</p>\n"
+"<p><strong>Luottamusväli:</strong> Piirtää luottamusvälin viittelinjan "
+"ympärille. qqplotr-paketti tarjoaa useita menetelmiä luottamusvälin "
+"laskemiseen:</p>\n"
+"<ul>\n"
+"<li><strong><em>Pistemäinen</em></strong> rakentaa pistemäisiä "
+"luottamusvälejä normaalien luottamusvälien perusteella;</li>\n"
+"<li><strong><em>Bootstrapping</em></strong> luo pistemäisiä luottamusvälejä "
+"parametrin mukaisen bootstrappingin avulla;</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> -väli perustuu "
+"Kolmogorov-Smirnov-testiin;</li>\n"
+"<li><strong><em>Häntäherkkyys</em></strong> rakentaa häntäherkkyyden "
+"luottamusvälejä, mutta se on toteutettu vain normaaleille "
+"Q-Q-kaavioille;</li>\n"
+"<li><strong><em>Yhdenmukaiset paikalliset tasot (ELL)</em></strong> rakentaa "
+"samanaikaisia välejä käyttäen yhdenmukaisia paikallisia tasoja.</li>\n"
+"</ul>\n"
+"<p>P-P-kaaviot tukevat vain \"ELL\"- ja \"Bootstrapping\"-menetelmiä.</p>\n"
+"<p><strong>Detrendattu kaavio:</strong> Objektit on <em>detrendattu</em> "
+"viittelinjan mukaan. Tämä prosessi voi auttaa vähentämään visuaalista "
+"harhaa, joka johtuu kohteiden etäisyyksistä viittelinjasta.</p>\n"
+"<p><strong>Parametrien arvot:</strong> Jakumaparametrit voidaan arvioida "
+"tiedoista käyttäen:</p>\n"
+"<ul>\n"
+"<li><strong>Maximum Likelihood -menetelmä</strong> (käyttäen MASS-pakettia): "
+"se pitäisi toimia kaikkien jakumien kanssa, paitsi \"t\" ja "
+"\"uniform\";</li>\n"
+"<li><strong>Method of Moments</strong> momenttipohjaisille parametreille: se "
+"pitäisi toimia \"normaali\", \"log-normaali\", \"Beta\", "
+"\"Eksponentiaalinen\", \"Gamma\", \"Logistinen\" ja \"Uniform\" -jakumien "
+"kanssa;</li>\n"
+"</ul>\n"
+"<p>tai käyttäjä voi syöttää ne:</p>\n"
+"<ul>\n"
+"<li><strong>Parametri 1:</strong> keskiarvo (Normaali), keskiarvolog "
+"(Log-normaali), muoto1 (Beta), sijainti (Cauchy, Logistinen), df "
+"(Chi-squared, Student), df1 (F), nopeus (Eksponentiaalinen), muoto (Gamma, "
+"Weibull) ja min (Uniform);</li>\n"
+"<li><strong>Parametri 2:</strong> keskihajonta (normaali), keskihajontalog "
+"(Log-normaali), muoto2 (Beta), aste (Cauchy, Logistinen), df2 (F), nopeus "
+"(Gamma, Weibull) ja maks (Uniform).</li>\n"
+"</ul>\n"
+"</p>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -431,6 +859,18 @@ msgstr "Automaattinen"
 msgid "Axes"
 msgstr "Akseleita"
 
+#: R/corresp.b.R
+#, fuzzy
+msgid "Axis numbers cannot be equal."
+msgstr "Akseleiden numerot eivät voi olla yhtäsuuria."
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
+msgstr ""
+"Akseleiden lukumäärä on oltava pienempi tai yhtä suuri kuin ulottuvuuksien "
+"lukumäärä ({nDim})."
+
 #: corresp/ui[7].label
 #: mrfrequencies/ui[5].label
 #, fuzzy
@@ -479,6 +919,11 @@ msgstr "Benzécrin korjaus"
 #, fuzzy
 msgid "Beta"
 msgstr "Beeta"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Beta distribution requires data between 0 and 1."
+msgstr "Beeta-jakauma edellyttää arvoja välillä 0 ja 1."
 
 #: likertplot/options/adjustMethod/BH.title
 #, fuzzy
@@ -763,6 +1208,17 @@ msgstr "Reuna"
 msgid "Bottom"
 msgstr "Ala"
 
+#: histogram/options/binBoundary.title
+#, fuzzy
+msgctxt "boundary"
+msgid "Position"
+msgstr "Sijainti"
+
+#: boxplot/ui[2][0][1][0].label
+#, fuzzy
+msgid "Box Elements"
+msgstr "Laatikon alkiot"
+
 #: package/analyses/boxplot.title
 #: package/analyses/boxplot.menuTitle
 #: boxplot/options.title
@@ -823,6 +1279,16 @@ msgstr "Ryhmän mukaan"
 #, fuzzy
 msgid "By variable"
 msgstr "Muuttujittain"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Cannot convert text variables to integers"
+msgstr "Tekstimuuttujia ei voida muuttaa kokonaisluvuiksi"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Cannot tidy up text variables"
+msgstr "Tekst muuttujia ei voida siivota"
 
 #: areachart/ui[4][2].label
 #: barplot/ui[7][2].label
@@ -1090,10 +1556,20 @@ msgstr "Sarakekaavio"
 msgid "Column plot"
 msgstr "Sarakekaavio"
 
+#: R/corresp.b.R
+#, fuzzy
+msgid "Column Points for {cols}"
+msgstr "Sarakkeiden pisteet {cols}:lle"
+
 #: corresp/options/normalization/colprincipal.title
 #, fuzzy
 msgid "Column principal"
 msgstr "Sarakkeen pääkomponentti"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Column principal normalization"
+msgstr "Sarakenormaali"
 
 #: corresp/results/colProfiles.title
 #, fuzzy
@@ -1122,6 +1598,16 @@ msgstr "Sarakkeet (ryhmät)"
 #, fuzzy
 msgid "Comparison Tests"
 msgstr "Vertailutestit"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Comparison tests cannot be computed with empty (N=0) groups"
+msgstr "Vertailukokeita ei voida laskea tyhjillä (N=0) ryhmillä"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Comparison tests require numeric variables"
+msgstr "Vertailukokeet vaativat numeerisia muuttujia"
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
@@ -1288,6 +1774,16 @@ msgstr "Ristitaulukko"
 #, fuzzy
 msgid "Crosstab (% by row)"
 msgstr "Ristitaulukko (% rivin mukaan)"
+
+#: R/mrcrosstabs.b.R
+#, fuzzy
+msgid "Crosstab (% of cases)"
+msgstr "Ristitaulukko (tapauksien %)"
+
+#: R/mrcrosstabs.b.R
+#, fuzzy
+msgid "Crosstab (% of responses)"
+msgstr "Ristitaulukko (vastausprosentti)"
 
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
@@ -1489,6 +1985,13 @@ msgstr "Näyttömuoto"
 msgid "Distribution"
 msgstr "Jakauma"
 
+#: R/qqplot.b.R
+#: qqplot/options/distrib/norm.title
+#, fuzzy
+msgctxt "distribution"
+msgid "Normal"
+msgstr "Normaali"
+
 #: piechart/options/donut.title
 #, fuzzy
 msgid "Donut chart"
@@ -1558,6 +2061,17 @@ msgstr "Ominaisarvo"
 msgid "Eigenvalues"
 msgstr "Ominaisarvot"
 
+#: principal/ui[4][0][0][1].label
+#: scatterplot/ui[2][0][0][0].label
+#, fuzzy
+msgid "Element Sizes"
+msgstr "Alkioitten koot"
+
+#: scatterplot/ui[2].label
+#, fuzzy
+msgid "Element Sizes & Facets"
+msgstr "Alkiovien koot & Jakot"
+
 #: qqplot/options/methodQQ/ell.title
 #: qqplot/options/methodPP/ell.title
 #, fuzzy
@@ -1587,10 +2101,20 @@ msgstr "EU (P-V-K)"
 msgid "Exponential"
 msgstr "Eksponentiaalinen"
 
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Exponential distribution requires non-negative (≥0) data."
+msgstr "Eksponentiaalinen jakauma edellyttää ei-negatiivisia (≥ 0) arvoja."
+
 #: principal/results/summaryTable.columns.superTitle
 #, fuzzy
 msgid "Extraction Sums of Squared Loadings"
 msgstr "Erittelyjen summat"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "F"
+msgstr "F"
 
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
@@ -1904,6 +2428,12 @@ msgstr "Ryhmä"
 msgid "Group (Overlapped)"
 msgstr "Ryhmä (Päällekkäin)"
 
+#: raincloud/options/groupOne.title
+#: raincloud/ui[0][1].label
+#, fuzzy
+msgid "Group (Side-by-side)"
+msgstr "Ryhmä (vierekkäin)"
+
 #: piechart/options/labels/group+count.title
 #, fuzzy
 msgid "Group + Count"
@@ -1925,6 +2455,12 @@ msgstr "Ryhmä"
 #, fuzzy
 msgid "Grouped"
 msgstr "Ryhmittyneet"
+
+#: barplot/options/barType/dodge.title
+#: mrcrosstabs/options/bartype/dodge.title
+#, fuzzy
+msgid "Grouped (tight)"
+msgstr "Ryhmätty (tiivis)"
 
 #: histogram/options/grouping.title
 #: histogram/options/groupingN.title
@@ -2006,6 +2542,19 @@ msgstr "Vaakasuora kaavio"
 #, fuzzy
 msgid "Identity line"
 msgstr "Identiteettiviiva"
+
+#: likertplot/options/ignoreNA.title
+#, fuzzy
+msgid "Ignore missing groups"
+msgstr "Jätä puuttuvat ryhmät huomioimatta"
+
+#: areachart/options/ignoreNA.title
+#: barplot/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
+#, fuzzy
+msgid "Ignore missing values"
+msgstr "Jätä puuttuvat arvot huomioimatta"
 
 #: multcorresp/options/ggrepel.title
 #, fuzzy
@@ -2608,6 +3157,11 @@ msgstr "Likert"
 msgid "Likert Plot"
 msgstr "Likert-kaavio"
 
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Likert Plot requires ordinal (or numeric) variables"
+msgstr "Likert-kaavio vaatii järjestyksellisiä (tai numeerisia) muuttujia"
+
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
 #, fuzzy
@@ -2778,6 +3332,11 @@ msgstr "Massa"
 msgid "Max"
 msgstr "Maksimi"
 
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Maximum of {var}"
+msgstr "{var} maksimi"
+
 #: qqplot/options/paramEstMethod/mle.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mle.label
 #, fuzzy
@@ -2790,6 +3349,16 @@ msgstr "Maksimitemptodennäköisyys (MLE)"
 msgid "May"
 msgstr "Toukokuu"
 
+#: R/multcorresp.b.R
+#, fuzzy
+msgid "MCA Principal Coordinates"
+msgstr "MCA-pääkoordinaatit"
+
+#: R/multcorresp.b.R
+#, fuzzy
+msgid "MCA Standard Coordinates"
+msgstr "MCA Standardikoordinaatit"
+
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 #, fuzzy
@@ -2801,6 +3370,11 @@ msgstr "Keskiarvo"
 msgid "Mean & SD"
 msgstr "Keskiarvo & SD"
 
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Mean of {var}"
+msgstr "Arvo {var} keskiarvo"
+
 #: R/likertplot.b.R
 #: likertplot/options/showMedian.title
 #: lollipop/options/yaxis/median.title
@@ -2808,6 +3382,30 @@ msgstr "Keskiarvo & SD"
 #, fuzzy
 msgid "Median"
 msgstr "Mediaani"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Median and mean require numeric variables"
+msgstr "Mediaani ja keskiarvo vaativat numeerisia muuttujia"
+
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Median of {var}"
+msgstr "{var} keskiarvo"
+
+#: areachart/options/displayFormat/%b.title
+#: linechart/options/displayFormat/%b.title
+#, fuzzy
+msgctxt "menu"
+msgid "Oct"
+msgstr "Lokakuu"
+
+#: areachart/options/displayFormat/%B.title
+#: linechart/options/displayFormat/%B.title
+#, fuzzy
+msgctxt "menu"
+msgid "October"
+msgstr "Lokakuu"
 
 #: likertplot/options/adjustMethod.title
 #: multcorresp/options/method.title
@@ -2875,6 +3473,11 @@ msgstr "Min / Maks"
 msgid "Minimum entropy"
 msgstr "Minimi entropia"
 
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Minimum of {var}"
+msgstr "Vähintään {var}"
+
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
 #: mrcrosstabs/ui/mode/onevar[0][1].label
@@ -2939,6 +3542,11 @@ msgstr "Nimi"
 #, fuzzy
 msgid "Natural log tranform"
 msgstr "Luonnollinen logaritmimuunnos"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Natural Log Tranform requires positive (>0) data."
+msgstr "Luonnollinen logaritminen muunnos vaatii positiivisia (>0) dataa."
 
 #: R/principal.b.R
 #, fuzzy
@@ -3083,6 +3691,11 @@ msgstr "Tapauksia: "
 #, fuzzy
 msgid "Number of dimensions"
 msgstr "Ulottuvuuksien määrä"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Number of dimensions must be less than or equal to {maxDim}."
+msgstr "Ulottuvuuksien lukumäärä on oltava pienempi tai yhtä suuri kuin {maxDim}."
 
 #: multcorresp/options/obsColor.title
 #, fuzzy
@@ -3455,6 +4068,16 @@ msgstr "Pastelli 1"
 msgid "Pastel 2"
 msgstr "Pastelli 2"
 
+#: R/principal.b.R
+#, fuzzy
+msgid "PCA Principal Coordinates"
+msgstr "PCA-pääkoordinaatit"
+
+#: R/principal.b.R
+#, fuzzy
+msgid "PCA Standard Coordinates"
+msgstr "PCA Standardikoordinaatit"
+
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
 #: barplot/ui[1][0][0]/yaxis_percent.label
@@ -3477,6 +4100,13 @@ msgstr "Prosentit"
 #, fuzzy
 msgid "Pie Chart"
 msgstr "Pilarikehä"
+
+#: R/piechart.b.R
+#, fuzzy
+msgid "Pie charts are for educational use only. Please do not use Pie charts!"
+msgstr ""
+"Piparkakkukaavioita tulee käyttää vain opetustarkoituksiin. Älä käytä "
+"piparkakkukaavioita!"
 
 #: corresp/options/rowColor/hotpink.title
 #: corresp/options/colColor/hotpink.title
@@ -3693,6 +4323,11 @@ msgstr "Pääkomponenttianalyysi"
 #, fuzzy
 msgid "Principal coordinates"
 msgstr "Pääkoordinaatit"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Principal normalization"
+msgstr "Päänormalisointi"
 
 #: multcorresp/options/propPoint.title
 #, fuzzy
@@ -4027,6 +4662,13 @@ msgstr "Regressiolinja"
 msgid "Reverse disposition"
 msgstr "Käännä asento"
 
+#: barplot/options/reverseStack.title
+#: likertplot/options/reverseLikert.title
+#: mrcrosstabs/options/reverseStack.title
+#, fuzzy
+msgid "Reverse stacking order"
+msgstr "Käännä pinorjärjestys"
+
 #: areachart/options/titleAlign/1.title
 #: areachart/options/subtitleAlign/1.title
 #: areachart/options/captionAlign/1.title
@@ -4163,10 +4805,20 @@ msgstr "Rivikaavio"
 msgid "Row plot"
 msgstr "Rivikaavio"
 
+#: R/corresp.b.R
+#, fuzzy
+msgid "Row Points for {rows}"
+msgstr "Rivipisteet {rows} kohdalla"
+
 #: corresp/options/normalization/rowprincipal.title
 #, fuzzy
 msgid "Row principal"
 msgstr "Riviprincipal"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Row principal normalization"
+msgstr "Rivin päänormaali"
 
 #: corresp/results/rowProfiles.title
 #, fuzzy
@@ -4441,6 +5093,12 @@ msgstr "Yksinkertainen arvo"
 msgid "Size"
 msgstr "Koko"
 
+#: linechart/ui[1][0][1].label
+#: principal/ui[4].label
+#, fuzzy
+msgid "Sizes & Colors"
+msgstr "Koot & Värit"
+
 #: package/datasets/Smoking.name
 #, fuzzy
 msgid "Smoking"
@@ -4533,6 +5191,11 @@ msgstr "Standardi"
 #, fuzzy
 msgid "Standard coordinates"
 msgstr "Standardikoordinaatit"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Standard normalization"
+msgstr "Standardinormaali"
 
 #: principal/options/stdLoadings.title
 #, fuzzy
@@ -4651,6 +5314,16 @@ msgid "Supplement"
 msgstr "Lisä"
 
 #: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "Lisäsarakkeiden numerot on oltava luettelo lukuja, esim. 1,2,9"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary column numbers must be between 1 and {nmax}."
+msgstr "Lisäpilarien numerot on oltava välillä 1 ja {nmax}."
+
+#: R/corresp.b.R
 #: corresp/options/supplementaryCols.title
 #, fuzzy
 msgid "Supplementary columns"
@@ -4660,6 +5333,16 @@ msgstr "Lisäsarakkeet"
 #, fuzzy
 msgid "Supplementary Points"
 msgstr "Lisäpisteet"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "Lisärivien numerot on oltava luettelo lukuja, esim. 1,2,9"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary row numbers must be between 1 and {nmax}."
+msgstr "Lisärivienumerot on oltava välillä 1 ja {nmax}."
 
 #: R/corresp.b.R
 #: corresp/options/supplementaryRows.title
@@ -4682,6 +5365,21 @@ msgstr "Lisämuuttujat"
 #, fuzzy
 msgid "Supplementary variables"
 msgstr "Lisämuuttujat"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Symetric normalization"
+msgstr "Symmetrinen normalisointi"
+
+#: corresp/options/normalization/symmetric.title
+#, fuzzy
+msgid "Symmetric"
+msgstr "Symmetrinen"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Symmetric normalization"
+msgstr "Symmetrinen normalisointi"
 
 #: likertplot/ui[2].label
 #: likertplot/ui[2][0][0][0].label
@@ -4729,6 +5427,18 @@ msgstr "Teksti"
 msgid "Text Size"
 msgstr "Tekstin koko"
 
+#: corresp/ui[6].label
+#, fuzzy
+msgid "Text Size & Colors"
+msgstr "Tekstin koko ja värit"
+
+#: barplot/ui[4].label
+#: boxplot/ui[3].label
+#: piechart/ui[4].label
+#, fuzzy
+msgid "Text Size & Facets"
+msgstr "Tekstin koko & Jakot"
+
 #: R/principal.b.R
 #, fuzzy
 msgid ""
@@ -4743,6 +5453,11 @@ msgstr ""
 msgid "The number of dimensions cannot be greater than {max}."
 msgstr "Dimensioiden lukumäärä ei voi olla suurempi kuin {max}."
 
+#: R/principal.b.R
+#, fuzzy
+msgid "The number of dimensions cannot be greater than the number of variables."
+msgstr "Ulottuvuuksien lukumäärä ei voi olla suurempi kuin muuttujien lukumäärä."
+
 #: R/qqplot.b.R
 #, fuzzy
 msgid "Theoretical Probabilities"
@@ -4752,6 +5467,30 @@ msgstr "Teoreettiset todennäköisyydet"
 #, fuzzy
 msgid "Theoretical Quantiles"
 msgstr "Teoreettiset kvantiilit"
+
+#: areachart/options/yTicks.title
+#: barplot/options/xTicks.title
+#: barplot/options/yTicks.title
+#: boxplot/options/xTicks.title
+#: boxplot/options/yTicks.title
+#: histogram/options/xTicks.title
+#: histogram/options/yTicks.title
+#: linechart/options/yTicks.title
+#: lollipop/options/xTicks.title
+#: lollipop/options/yTicks.title
+#: mrcrosstabs/options/xTicks.title
+#: mrcrosstabs/options/yTicks.title
+#: mrfrequencies/options/xTicks.title
+#: mrfrequencies/options/yTicks.title
+#: qqplot/options/xTicks.title
+#: qqplot/options/yTicks.title
+#: raincloud/options/xTicks.title
+#: raincloud/options/yTicks.title
+#: scatterplot/options/xTicks.title
+#: scatterplot/options/yTicks.title
+#, fuzzy
+msgid "Tick count"
+msgstr "Merkin lukumäärä"
 
 #: likertplot/options/tidyUp.title
 #, fuzzy
@@ -4982,12 +5721,23 @@ msgstr "Yhteensä"
 msgid "Total row"
 msgstr "Yhteensä rivi"
 
+#: mrcrosstabs/options/emptyAsNA.title
+#: mrfrequencies/options/emptyAsNA.title
+#, fuzzy
+msgid "Treat empty values as missing"
+msgstr "Käsittele tyhjät arvot puuttuvina arvoina"
+
 #: likertplot/ui[4][0][0][0].label
 #: piechart/options/labType.title
 #: piechart/ui[2][0][0][0].label
 #, fuzzy
 msgid "Type"
 msgstr "Tyyppi"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Unable to estimate the distribution parameters."
+msgstr "Jakautumisparametrien arvioiminen epäonnistui."
 
 #: R/principal.b.R
 #, fuzzy
@@ -5292,6 +6042,11 @@ msgstr "Luokkien sisällä"
 msgid "Within groups"
 msgstr "Ryhmien sisällä"
 
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Wrong parameter values."
+msgstr "Väärät parametriarvot."
+
 #: areachart/options/timeVar.title
 #: areachart/options/timeVar1.title
 #: areachart/ui/mode/oneVariable[0][0][0].label
@@ -5336,6 +6091,18 @@ msgstr "Ryhmien sisällä"
 #, fuzzy
 msgid "X-Axis"
 msgstr "X-akseli"
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+#, fuzzy
+msgid "X-Axis and Y-Axis cannot be equal."
+msgstr "X-akseli ja Y-akseli eivät voi olla samat."
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+#, fuzzy
+msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
+msgstr "X-akseli ja Y-akseli eivät voi olla suurempia kuin ulottuvuuksien lukumäärä."
 
 #: areachart/options/isDate.title
 #: linechart/options/isDate.title
@@ -5490,773 +6257,3 @@ msgstr "Keltainen - Vihreä"
 #, fuzzy
 msgid "Yellow to Red"
 msgstr "Keltainen-Punainen"
-
-#: R/areachart.b.R
-#: R/linechart.b.R
-#, fuzzy
-msgid "{var} doesn't have a valid date format."
-msgstr "{var} ei ole kelvollinen päivämäärämuoto."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "Lisärivien numerot on oltava luettelo lukuja, esim. 1,2,9"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary row numbers must be between 1 and {nmax}."
-msgstr "Lisärivienumerot on oltava välillä 1 ja {nmax}."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "Lisäsarakkeiden numerot on oltava luettelo lukuja, esim. 1,2,9"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary column numbers must be between 1 and {nmax}."
-msgstr "Lisäpilarien numerot on oltava välillä 1 ja {nmax}."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Number of dimensions must be less than or equal to {maxDim}."
-msgstr "Ulottuvuuksien lukumäärä on oltava pienempi tai yhtä suuri kuin {maxDim}."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid ""
-"Axis numbers must be less than or equal to the number of dimensions "
-"({nDim})."
-msgstr ""
-"Akseleiden lukumäärä on oltava pienempi tai yhtä suuri kuin ulottuvuuksien "
-"lukumäärä ({nDim})."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Axis numbers cannot be equal."
-msgstr "Akseleiden numerot eivät voi olla yhtäsuuria."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Principal normalization"
-msgstr "Päänormalisointi"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Symetric normalization"
-msgstr "Symmetrinen normalisointi"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Row principal normalization"
-msgstr "Rivin päänormaali"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Column principal normalization"
-msgstr "Sarakenormaali"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Standard normalization"
-msgstr "Standardinormaali"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Row Points for {rows}"
-msgstr "Rivipisteet {rows} kohdalla"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Column Points for {cols}"
-msgstr "Sarakkeiden pisteet {cols}:lle"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Symmetric normalization"
-msgstr "Symmetrinen normalisointi"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
-"two categorical variables. Computations are based on <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
-"using the \"Counts\" variable.</p>\n"
-"<p><strong>Supplementary row or column</strong> numbers may be entered as "
-"integer lists : 1,3,6</p>\n"
-"<p>Four normalizations (scaling of row and column scores before plotting) "
-"are avalaible :</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Row an columns scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
-"square root of eigenvalues. </li>\n"
-"<li><strong>Row Principal:</strong> Only row scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Column Principal:</strong> Only column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Standard:</strong> The raw coordinates without "
-"normalization.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
-msgstr ""
-"<p>Tämä moduuli laskee <strong>Vastavuoroisen analyysin (CA)</strong> "
-"kahdelle kategoriselle muuttujalle. Laskelmat perustuvat <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> -pakettiin F.&nbsp;Hussonilta, "
-"J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Dataa voidaan painottaa käyttämällä <em>jamovi</em> sisäänrakennettua "
-"painotusjärjestelmää tai \"Counts\" -muuttujaa.</p>\n"
-"<p><strong>Lisärivin tai -sarakkeen</strong> numerot voidaan syöttää "
-"kokonaislukulistoina: 1,3,6</p>\n"
-"<p>Neljä normalisointia (skaalauksia rivi- ja sarakepisteille ennen kaavion "
-"piirtämistä) on saatavilla:</p>\n"
-"<ul>\n"
-"<li><strong>Pää:</strong> Rivien ja sarakkeiden pisteet skaalataan "
-"eigenarvojen mukaan.</li>\n"
-"<li><strong>Symmetrinen:</strong> Rivien ja sarakkeiden pisteet skaalataan "
-"eigenarvojen neliöjuuren mukaan.</li>\n"
-"<li><strong>Rivin pää:</strong> Vain rivien pisteet skaalataan eigenarvojen "
-"mukaan.</li>\n"
-"<li><strong>Sarakkeen pää:</strong> Vain sarakkeiden pisteet skaalataan "
-"eigenarvojen mukaan.</li>\n"
-"<li><strong>Standardi:</strong> Raaka koordinaatit ilman "
-"normalisointia.</li>\n"
-"</ul>\n"
-"<p>Esimerkkitiedosto on sisällytetty kohtaan Avaa > Tietokirjasto > "
-"vijPlots > Smoking</p>"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Likert Plot requires ordinal (or numeric) variables"
-msgstr "Likert-kaavio vaatii järjestyksellisiä (tai numeerisia) muuttujia"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Median and mean require numeric variables"
-msgstr "Mediaani ja keskiarvo vaativat numeerisia muuttujia"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Comparison tests require numeric variables"
-msgstr "Vertailukokeet vaativat numeerisia muuttujia"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Cannot convert text variables to integers"
-msgstr "Tekstimuuttujia ei voida muuttaa kokonaisluvuiksi"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Cannot tidy up text variables"
-msgstr "Tekst muuttujia ei voida siivota"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Comparison tests cannot be computed with empty (N=0) groups"
-msgstr "Vertailukokeita ei voida laskea tyhjillä (N=0) ryhmillä"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid ""
-"<h3>Data & Sorting</h3>\n"
-"<ul>\n"
-"<li>Likert variables must be of ordinal measure-type. (Continuous "
-"measure-type works as well.)</li>\n"
-"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
-"must be of integer data-type.</li>\n"
-"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
-"order in table and graph (when some variables miss some levels).</li>\n"
-"<li><strong>Convert variables to integer:</strong> when checked, the level "
-"labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
-"</ul>\n"
-"<h3>Comparison Tests</h3>\n"
-"<p>When using a group variable, several tests are available:</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
-"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
-"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
-"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
-"</ul>\n"
-"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
-"p-values are already adjusted (groupwise); no other adjustment is "
-"possible.</p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
-msgstr ""
-"<h3>Data & järjestäminen</h3>\n"
-"<ul>\n"
-"<li>Likert-muuttujien on oltava järjestysmitattyyppiä. (Jatkuva mitattyyppi "
-"toimii myös.)</li>\n"
-"<li>Jos aiot laskea keskiarvo/keskiluku/keskihajonta tai käyttää "
-"vertailutestejä, ne on oltava kokonaislukutyyppiä.</li>\n"
-"<li><strong>Siivota tasot:</strong> kun valittuna, yritä korjata "
-"merkintöjen järjestys taulukossa ja graafisessa esityksessä (jos jotkin "
-"muuttujat puuttuvat joistakin tasoista).</li>\n"
-"<li><strong>Muunna muuttujat kokonaisluvuiksi:</strong> kun valittuna, "
-"tasojen merkintöjä ei huomioida, ja käytetään vain kokonaislukuja.</li>\n"
-"<li><strong>Lajittele muuttujat mediaanin mukaan:</strong> lajittelee "
-"Likert-muuttujat mediaanin mukaan.</li>\n"
-"</ul>\n"
-"<h3>Vertailutestit</h3>\n"
-"<p>Kun käytät ryhmämuuttujaa, useita testejä on käytettävissä:</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U:</strong> kahden ryhmän vertailu</li>\n"
-"<li><strong>Kruskal-Wallis:</strong> usean ryhmän vertailu</li>\n"
-"<li><strong>Post hoc -testit:</strong> Dunn, Conover ja "
-"Dwass-Steel-Critchlow-Fligner (DSCF) parittaiset vertailutestit.</li>\n"
-"</ul>\n"
-"<p>p-arvoja voidaan säätää <strong>ryhmäkohtaisesti</strong> (kunkin "
-"kysymyksen osalta) post hoc -testeissä tai <strong>yhteensä</strong> "
-"(ryhmäkohtaisesti ja kysymyskohtaisesti) Mann-Whitney U:ssa, "
-"Kruskal-Wallisissa ja post hoc -testeissä. DSCF p-arvot on jo säädettynä "
-"(ryhmäkohtaisesti); muuta säätöä ei ole mahdollista.</p>\n"
-"<p>Esimerkkitiedosto on sisällytetty kohtaan Avaa > Tietokirjasto > "
-"vijPlots > Likert</p>"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Mean of {var}"
-msgstr "Arvo {var} keskiarvo"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Median of {var}"
-msgstr "{var} keskiarvo"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Minimum of {var}"
-msgstr "Vähintään {var}"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Maximum of {var}"
-msgstr "{var} maksimi"
-
-#: R/mrcrosstabs.b.R
-#, fuzzy
-msgid "Crosstab (% of cases)"
-msgstr "Ristitaulukko (tapauksien %)"
-
-#: R/mrcrosstabs.b.R
-#, fuzzy
-msgid "Crosstab (% of responses)"
-msgstr "Ristitaulukko (vastausprosentti)"
-
-#: R/mrcrosstabs.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes two-way frequencies for multiple response "
-"questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>Tämä moduuli laskee kaksiulotteiset taajuuksien useille "
-"vastausvaihtoehdoille, jotka tunnetaan myös nimellä \"Valitse kaikki, jotka "
-"ovat sovellettavissa\" (CATA) -kysymykset.</p>\n"
-"<p>Kysymykset voidaan koodata:</p>\n"
-"<ul>\n"
-"<li>useita <strong>dummy- (tai osoittimemuuttujia)</strong> käyttäen 0/1, "
-"1/2, K/T kullekin mahdolliselle vastaukselle;</li>\n"
-"<li>yksi <strong>moniarvoinen muuttuja</strong>, joka sisältää valitut "
-"vastaukset, erotettuna merkillä (yleensä \",\" tai \";\").</li>\n"
-"</ul>\n"
-"<p>Esimerkkitiedosto on sisällytetty kohtaan Avaa > Tietokirjasto > "
-"vijPlots > Credit Cards</p>"
-
-#: R/mrfrequencies.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes frequencies for multiple response questions, also "
-"known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>Tämä moduuli laskee useiden vastausvaihtoehtojen kysymysten taajuuksia, "
-"jotka tunnetaan myös nimellä \"Valitse kaikki, mitkä ovat sovellettavissa\" "
-"(CATA) -kysymykset.</p>\n"
-"<p>Kysymykset voidaan koodata:</p>\n"
-"<ul>\n"
-"<li>useita <strong>dummy- (tai indikaattori-) muuttujia</strong> käyttäen "
-"0/1, 1/2, K/T kunkin mahdollisen vastauksen kohdalla;</li>\n"
-"<li>yhtä <strong>moniarvoista muuttujaa</strong> sisältävää tarkistettua "
-"vastausta, joka on eroteltu symboleilla (yleensä \",\" tai \";\").</li>\n"
-"</ul>\n"
-"<p>Esimerkkitiedosto on sisällytetty Open > Data Library > vijPlots > "
-"Credit Cards</p>"
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-#, fuzzy
-msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
-msgstr "X-akseli ja Y-akseli eivät voi olla suurempia kuin ulottuvuuksien lukumäärä."
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-#, fuzzy
-msgid "X-Axis and Y-Axis cannot be equal."
-msgstr "X-akseli ja Y-akseli eivät voi olla samat."
-
-#: R/multcorresp.b.R
-#, fuzzy
-msgid "MCA Principal Coordinates"
-msgstr "MCA-pääkoordinaatit"
-
-#: R/multcorresp.b.R
-#, fuzzy
-msgid "MCA Standard Coordinates"
-msgstr "MCA Standardikoordinaatit"
-
-#: R/multcorresp.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes <strong>Multiple Correspondence Analysis "
-"(MCA)</strong> for several categorical variables. Computations are based on "
-"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Both classic methods are available:</p>\n"
-"<ul>\n"
-"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
-"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues "
-"are the squares of those of the indicator matrix method. </li>\n"
-"</ul>\n"
-"<p>Both methods give the same <em>standard</em> coordinates (but different "
-"<em>principal</em> coordinates).</p>\n"
-"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
-"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
-"(and inertia) of categories and observations are computed from the original "
-"eigenvalues of the Burt matrix.</p>\n"
-"<p>The <strong>Normalization</strong> options specify how the coordinates "
-"are scaled (by eigenvalues):</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Both category and observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Category principal:</strong> Only category coordinates are "
-"scaled.</li>\n"
-"<li><strong>Observation principal:</strong> Only observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Standard:</strong> Both category and observation coordinates "
-"are standard.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
-msgstr ""
-"<p>Tämä moduuli laskee useiden kategoristen muuttujien <strong>Monitason "
-"Sopimusanalyysi (MCA)</strong>. Laskelmat perustuvat <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> -pakettiin, jonka ovat luoneet "
-"F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Molemmat perinteiset menetelmät ovat käytettävissä:</p>\n"
-"<ul>\n"
-"<li><strong>Indikaattorimatriisi:</strong> CA indikaattorimatriisista</li>\n"
-"<li><strong>Burt-matriisi:</strong> CA Burt-matriisista. Omienarvot ovat "
-"indikaattorimatriisin menetelmän omienarvojen neliöitä. </li>\n"
-"</ul>\n"
-"<p>Molemmat menetelmät antavat samat <em>standardi</em>koordinaatit (mutta "
-"erilaiset <em>pää</em>koordinaatit).</p>\n"
-"<p>Valitsemalla <strong>Benzécrin ja Greenacren korjaukset</strong> "
-"sovelletaan omienarvoihin vain (<strong>Yhteenveto</strong> -taulukko). "
-"Kategoroiden ja havaintojen koordinaatit ja inertia lasketaan "
-"Burt-matriisin alkuperäisistä omienarvoista.</p>\n"
-"<p><strong>Normalisointi</strong> -vaihtoehdot määrittävät, miten "
-"koordinaatit mitataan (omienarvojen mukaan):</p>\n"
-"<ul>\n"
-"<li><strong>Pää:</strong> Sekä kategorian että havainnon koordinaatit "
-"mitataan.</li>\n"
-"<li><strong>Kategorian pää:</strong> Vain kategorian koordinaatit "
-"mitataan.</li>\n"
-"<li><strong>Havainnon pää:</strong> Vain havainnon koordinaatit "
-"mitataan.</li>\n"
-"<li><strong>Standardi:</strong> Sekä kategorian että havainnon koordinaatit "
-"ovat standardoituja.</li>\n"
-"</ul>\n"
-"<p>Esimerkkitiedosto on sisällytetty Open > Data Library > vijPlots > "
-"Cars</p>"
-
-#: R/piechart.b.R
-#, fuzzy
-msgid "Pie charts are for educational use only. Please do not use Pie charts!"
-msgstr ""
-"Piparkakkukaavioita tulee käyttää vain opetustarkoituksiin. Älä käytä "
-"piparkakkukaavioita!"
-
-#: R/principal.b.R
-#, fuzzy
-msgid "The number of dimensions cannot be greater than the number of variables."
-msgstr "Ulottuvuuksien lukumäärä ei voi olla suurempi kuin muuttujien lukumäärä."
-
-#: R/principal.b.R
-#, fuzzy
-msgid "PCA Principal Coordinates"
-msgstr "PCA-pääkoordinaatit"
-
-#: R/principal.b.R
-#, fuzzy
-msgid "PCA Standard Coordinates"
-msgstr "PCA Standardikoordinaatit"
-
-#: R/principal.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
-"for several continuous variables. Computations are based on "
-"<tt>stats::prcomp</tt> function.</p>\n"
-"<p>Although rotated components are not principal components, they are "
-"widely used. Only orthogonal rotations are available (from GPArotation "
-"package).</p>\n"
-"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
-"principal (scaled by the squareroot of eigenvalues).</p>\n"
-"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
-"eigenvalues) while loadings are standard.</li>\n"
-"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
-"are standard. </li>\n"
-"</ul>\n"
-"<p><strong>Advanced options</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Standardize loadings:</strong> loadings are normalized with "
-"sums of squared equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Standardize scores:</strong> scores are normalized with "
-"variances equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
-"applied to eigenvectors (standard loadings) instead of principal loadings "
-"(STATA way).</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
-msgstr ""
-"<p>Tämä moduuli laskee <strong>Pääkomponenttianalyysin (PCA)</strong> "
-"useille jatkuville muuttujille. Laskelmat perustuvat <tt>stats::prcomp</tt> "
-"-funktiolle.</p>\n"
-"<p>Vaikka pyöritykselliset komponentit eivät ole pääkomponentteja, niitä "
-"käytetään laajasti. Vain ortogonaaliset pyöritykset ovat saatavilla "
-"(GPArotation-paketista).</p>\n"
-"<p>Lataukset (muuttujakoordinaatit) ja pisteet (havaintokoordinaatit) ovat "
-"pääkomponentteja (skaalattu eigenarvojen neliöjuuren mukaan).</p>\n"
-"<p>Biplot noudattaa \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Muodosta biplot:</strong> Pisteet ovat pääkomponentteja "
-"(skaalattu eigenarvojen mukaan), kun taas lataukset ovat "
-"standardoituja.</li>\n"
-"<li><strong>Kovarianssibiplot:</strong> Lataukset ovat pääkomponentteja, "
-"kun taas pisteet ovat standardoituja.</li>\n"
-"</ul>\n"
-"<p><strong>Edistyneet vaihtoehdot</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Standardisoi lataukset:</strong> Lataukset on normalisoitu "
-"niin, että niiden neliöiden summa on 1 (eigenarvojen sijaan)</li>\n"
-"<li><strong>Standardisoi pisteet:</strong> Pisteet on normalisoitu niin, "
-"että niiden varianssi on 1 (eigenarvojen sijaan)</li>\n"
-"<li><strong>Pyöritysvektorit:</strong> Pyöritys (varimax jne.) on "
-"sovellettu vektoreihin (standardilataukset) sen sijaan, että ne olisivat "
-"pääkomponenttilatauksia (STATA-tapa).</li>\n"
-"</ul>\n"
-"<p>Esimerkkitiedosto on sisällytetty kohtaan Avaa > Tietokirjasto > "
-"vijPlots > Iris</p>"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Natural Log Tranform requires positive (>0) data."
-msgstr "Luonnollinen logaritminen muunnos vaatii positiivisia (>0) dataa."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "{distrib} distribution requires positive (>0) data."
-msgstr "{distrib} -jakauma vaatii positiivisia (>0) tietoja."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Exponential distribution requires non-negative (≥0) data."
-msgstr "Eksponentiaalinen jakauma edellyttää ei-negatiivisia (≥ 0) arvoja."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Beta distribution requires data between 0 and 1."
-msgstr "Beeta-jakauma edellyttää arvoja välillä 0 ja 1."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Unable to estimate the distribution parameters."
-msgstr "Jakautumisparametrien arvioiminen epäonnistui."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Wrong parameter values."
-msgstr "Väärät parametriarvot."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "F"
-msgstr "F"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid ""
-"<p>This module uses <a href = "
-"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
-"package<a/> by Alexandre Almeida, Adam Loy and Heike Hofmann. In-depth "
-"information can be found in the package documentation on CRAN site.</p>\n"
-"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
-"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
-"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
-"identity line.</p>\n"
-"<p><strong>Confidence band:</strong> Draws a confidence band around the "
-"reference line. qqplotr package provides several methods to compute the "
-"confidence band:</p>\n"
-"<ul>\n"
-"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
-"bands based on Normal confidence intervals;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
-"based on a parametric bootstrap;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
-"Kolmogorov-Smirnov test;</li>\n"
-"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
-"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
-"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
-"simultaneous bands using the equal local levels.</li>\n"
-"</ul>\n"
-"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
-"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
-"according to the reference line. This procedure may help reducing visual "
-"bias caused by the orthogonal distances from the points to the reference "
-"line.</p>\n"
-"<p><strong>Parameter values:</strong> The distribution parameters can be "
-"estimated from data using:</p>\n"
-"<ul>\n"
-"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
-"should work with all distributions but \"t\" and \"uniform\";</li>\n"
-"<li><strong>Method of Moments</strong> for moment based parameters : it "
-"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
-"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
-"</ul>\n"
-"<p>or entered by user:</p>\n"
-"<ul>\n"
-"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
-"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
-"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
-"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
-"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
-"(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
-msgstr ""
-"<p>Tämä moduuli käyttää <a href = "
-"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr "
-"R-pakettia</a> Alexandre Almeidan, Adam Loy:n ja Heike Hofmannin kanssa. "
-"Tarkemmat tiedot löytyvät paketin dokumentaatiosta CRAN-sivustolta.</p>\n"
-"<p><strong>Viittelinja:</strong> Piirtää joko <em>identiteettilinjan</em> "
-"(y = x) tai yleisesti käytetyn <em>Q-Q-linjan</em>, joka leikkaa kaksi "
-"datakvantiilia (Q<sub>0.25</sub> ja Q<sub>0.75</sub>). P-P-kaavio tukee "
-"vain identiteettilinjaa.</p>\n"
-"<p><strong>Luottamusväli:</strong> Piirtää luottamusvälin viittelinjan "
-"ympärille. qqplotr-paketti tarjoaa useita menetelmiä luottamusvälin "
-"laskemiseen:</p>\n"
-"<ul>\n"
-"<li><strong><em>Pistemäinen</em></strong> rakentaa pistemäisiä "
-"luottamusvälejä normaalien luottamusvälien perusteella;</li>\n"
-"<li><strong><em>Bootstrapping</em></strong> luo pistemäisiä luottamusvälejä "
-"parametrin mukaisen bootstrappingin avulla;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> -väli perustuu "
-"Kolmogorov-Smirnov-testiin;</li>\n"
-"<li><strong><em>Häntäherkkyys</em></strong> rakentaa häntäherkkyyden "
-"luottamusvälejä, mutta se on toteutettu vain normaaleille "
-"Q-Q-kaavioille;</li>\n"
-"<li><strong><em>Yhdenmukaiset paikalliset tasot (ELL)</em></strong> "
-"rakentaa samanaikaisia välejä käyttäen yhdenmukaisia paikallisia "
-"tasoja.</li>\n"
-"</ul>\n"
-"<p>P-P-kaaviot tukevat vain \"ELL\"- ja \"Bootstrapping\"-menetelmiä.</p>\n"
-"<p><strong>Detrendattu kaavio:</strong> Objektit on <em>detrendattu</em> "
-"viittelinjan mukaan. Tämä prosessi voi auttaa vähentämään visuaalista "
-"harhaa, joka johtuu kohteiden etäisyyksistä viittelinjasta.</p>\n"
-"<p><strong>Parametrien arvot:</strong> Jakumaparametrit voidaan arvioida "
-"tiedoista käyttäen:</p>\n"
-"<ul>\n"
-"<li><strong>Maximum Likelihood -menetelmä</strong> (käyttäen "
-"MASS-pakettia): se pitäisi toimia kaikkien jakumien kanssa, paitsi \"t\" ja "
-"\"uniform\";</li>\n"
-"<li><strong>Method of Moments</strong> momenttipohjaisille parametreille: "
-"se pitäisi toimia \"normaali\", \"log-normaali\", \"Beta\", "
-"\"Eksponentiaalinen\", \"Gamma\", \"Logistinen\" ja \"Uniform\" -jakumien "
-"kanssa;</li>\n"
-"</ul>\n"
-"<p>tai käyttäjä voi syöttää ne:</p>\n"
-"<ul>\n"
-"<li><strong>Parametri 1:</strong> keskiarvo (Normaali), keskiarvolog "
-"(Log-normaali), muoto1 (Beta), sijainti (Cauchy, Logistinen), df "
-"(Chi-squared, Student), df1 (F), nopeus (Eksponentiaalinen), muoto (Gamma, "
-"Weibull) ja min (Uniform);</li>\n"
-"<li><strong>Parametri 2:</strong> keskihajonta (normaali), keskihajontalog "
-"(Log-normaali), muoto2 (Beta), aste (Cauchy, Logistinen), df2 (F), nopeus "
-"(Gamma, Weibull) ja maks (Uniform).</li>\n"
-"</ul>\n"
-"</p>"
-
-#: areachart/options/ignoreNA.title
-#: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
-#, fuzzy
-msgid "Ignore missing values"
-msgstr "Jätä puuttuvat arvot huomioimatta"
-
-#: areachart/options/yTicks.title
-#: barplot/options/xTicks.title
-#: barplot/options/yTicks.title
-#: boxplot/options/xTicks.title
-#: boxplot/options/yTicks.title
-#: histogram/options/xTicks.title
-#: histogram/options/yTicks.title
-#: linechart/options/yTicks.title
-#: lollipop/options/xTicks.title
-#: lollipop/options/yTicks.title
-#: mrcrosstabs/options/xTicks.title
-#: mrcrosstabs/options/yTicks.title
-#: mrfrequencies/options/xTicks.title
-#: mrfrequencies/options/yTicks.title
-#: qqplot/options/xTicks.title
-#: qqplot/options/yTicks.title
-#: raincloud/options/xTicks.title
-#: raincloud/options/yTicks.title
-#: scatterplot/options/xTicks.title
-#: scatterplot/options/yTicks.title
-#, fuzzy
-msgid "Tick count"
-msgstr "Merkin lukumäärä"
-
-#: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
-#: mrcrosstabs/options/reverseStack.title
-#, fuzzy
-msgid "Reverse stacking order"
-msgstr "Käännä pinorjärjestys"
-
-#: barplot/options/barType/dodge.title
-#: mrcrosstabs/options/bartype/dodge.title
-#, fuzzy
-msgid "Grouped (tight)"
-msgstr "Ryhmätty (tiivis)"
-
-#: barplot/ui[4].label
-#: boxplot/ui[3].label
-#: piechart/ui[4].label
-#, fuzzy
-msgid "Text Size & Facets"
-msgstr "Tekstin koko & Jakot"
-
-#: boxplot/ui[2][0][1][0].label
-#, fuzzy
-msgid "Box Elements"
-msgstr "Laatikon alkiot"
-
-#: corresp/options/normalization/symmetric.title
-#, fuzzy
-msgid "Symmetric"
-msgstr "Symmetrinen"
-
-#: corresp/ui[6].label
-#, fuzzy
-msgid "Text Size & Colors"
-msgstr "Tekstin koko ja värit"
-
-#: likertplot/options/ignoreNA.title
-#, fuzzy
-msgid "Ignore missing groups"
-msgstr "Jätä puuttuvat ryhmät huomioimatta"
-
-#: linechart/ui[1][0][1].label
-#: principal/ui[4].label
-#, fuzzy
-msgid "Sizes & Colors"
-msgstr "Koot & Värit"
-
-#: mrcrosstabs/options/emptyAsNA.title
-#: mrfrequencies/options/emptyAsNA.title
-#, fuzzy
-msgid "Treat empty values as missing"
-msgstr "Käsittele tyhjät arvot puuttuvina arvoina"
-
-#: mrcrosstabs/options/computedValues/responses.title
-#: mrfrequencies/options/showResponses.title
-#: mrfrequencies/options/yaxis/responses.title
-#, fuzzy
-msgid "% of responses"
-msgstr "Vastausprosentti"
-
-#: mrcrosstabs/options/computedValues/cases.title
-#: mrfrequencies/options/showCases.title
-#: mrfrequencies/options/yaxis/cases.title
-#, fuzzy
-msgid "% of cases"
-msgstr "% tapauksista"
-
-#: mrcrosstabs/options/computedValues/options.title
-#, fuzzy
-msgid "% by row"
-msgstr "% rivin mukaan"
-
-#: principal/ui[4][0][0][1].label
-#: scatterplot/ui[2][0][0][0].label
-#, fuzzy
-msgid "Element Sizes"
-msgstr "Alkioitten koot"
-
-#: raincloud/options/groupOne.title
-#: raincloud/ui[0][1].label
-#, fuzzy
-msgid "Group (Side-by-side)"
-msgstr "Ryhmä (vierekkäin)"
-
-#: scatterplot/ui[2].label
-#, fuzzy
-msgid "Element Sizes & Facets"
-msgstr "Alkiovien koot & Jakot"
-
-#: histogram/options/binBoundary.title
-#, fuzzy
-msgctxt "boundary"
-msgid "Position"
-msgstr "Sijainti"
-
-#: areachart/options/displayFormat/%b.title
-#: linechart/options/displayFormat/%b.title
-#, fuzzy
-msgctxt "menu"
-msgid "Oct"
-msgstr "Lokakuu"
-
-#: areachart/options/displayFormat/%B.title
-#: linechart/options/displayFormat/%B.title
-#, fuzzy
-msgctxt "menu"
-msgid "October"
-msgstr "Lokakuu"
-
-#: R/qqplot.b.R
-#: qqplot/options/distrib/norm.title
-#, fuzzy
-msgctxt "distribution"
-msgid "Normal"
-msgstr "Normaali"

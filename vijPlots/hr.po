@@ -3,8 +3,8 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-04-16 02:12+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language-Team: Croatian <https://hosted.weblate.org/projects/jamovi/module-"
-"vijplots/hr/>\n"
+"Language-Team: Croatian "
+"<https://hosted.weblate.org/projects/jamovi/module-vijplots/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -12,6 +12,10 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.17.1-dev\n"
+
+#: R/qqplot.b.R
+msgid "{distrib} distribution requires positive (>0) data."
+msgstr "{distrib} distribucija zahtijeva pozitivne (>0) podatke."
 
 #: R/qqplot.b.R
 msgid "{distribStr} {typeStr} Plot of {varStr}"
@@ -32,6 +36,11 @@ msgstr "okretanje od {rotation} s Kaiserovom normalizacijom"
 #: R/principal.b.R
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "Korišteno je okretanje od {rotation} s Kaiserovom normalizacijom."
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "{var} doesn't have a valid date format."
+msgstr "{var} nema važeći format datuma."
 
 #: barplot/options/facetNumber.title
 #: boxplot/options/facetNumber.title
@@ -55,6 +64,10 @@ msgstr "Broj redaka/stupaca"
 msgid "% Accuracy"
 msgstr "% točnost"
 
+#: mrcrosstabs/options/computedValues/options.title
+msgid "% by row"
+msgstr "% po retku"
+
 #: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
 msgid "% Inertia"
@@ -70,6 +83,12 @@ msgstr "% oznake"
 msgid "% of Cases"
 msgstr "% slučajeva"
 
+#: mrcrosstabs/options/computedValues/cases.title
+#: mrfrequencies/options/showCases.title
+#: mrfrequencies/options/yaxis/cases.title
+msgid "% of cases"
+msgstr "% slučajeva"
+
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -82,6 +101,12 @@ msgstr "% inercije"
 msgid "% of Responses"
 msgstr "% odgovora"
 
+#: mrcrosstabs/options/computedValues/responses.title
+#: mrfrequencies/options/showResponses.title
+#: mrfrequencies/options/yaxis/responses.title
+msgid "% of responses"
+msgstr "% odgovora"
+
 #: principal/results/summaryTable.columns.title
 msgid "% of Variance"
 msgstr "% varijanci"
@@ -89,6 +114,392 @@ msgstr "% varijanci"
 #: R/mrcrosstabs.b.R
 msgid "% within"
 msgstr "% unutar"
+
+#: R/likertplot.b.R
+msgid ""
+"<h3>Data & Sorting</h3>\n"
+"<ul>\n"
+"<li>Likert variables must be of ordinal measure-type. (Continuous "
+"measure-type works as well.)</li>\n"
+"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
+"must be of integer data-type.</li>\n"
+"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
+"order in table and graph (when some variables miss some levels).</li>\n"
+"<li><strong>Convert variables to integer:</strong> when checked, the level "
+"labels are ignored and only integer values are used.</li>\n"
+"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
+"variables by median.</li>\n"
+"</ul>\n"
+"<h3>Comparison Tests</h3>\n"
+"<p>When using a group variable, several tests are available:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
+"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
+"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
+"</ul>\n"
+"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
+"question) for post hoc tests or <strong>overall</strong> (groupwise and "
+"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
+"p-values are already adjusted (groupwise); no other adjustment is "
+"possible.</p>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
+msgstr ""
+"<h3>Podaci i sortiranje</h3>\n"
+"<ul>\n"
+"<li>Likert varijable moraju biti ordinalnog tipa mjere. (Kontinuirani tip "
+"mjere također funkcionira.)</li>\n"
+"<li>Ako planirate izračunati prosjek/medijanu/standardnu devijaciju ili "
+"koristiti testove usporedbe, one moraju biti cijelog broja tipa "
+"podatka.</li>\n"
+"<li><strong>Čistite razine:</strong> kada je označeno, pokušajte popraviti "
+"redosled oznaka u tablici i grafu (kada neke varijable nedostaju neke "
+"razine).</li>\n"
+"<li><strong>Pretvori varijable u cijele brojeve:</strong> kada je označeno, "
+"oznake razina se ignorišu i koriste se samo cijeli brojevi.</li>\n"
+"<li><strong>Sortiraj varijable po medijani:</strong> uređuje listu Likert "
+"varijabli po medijani.</li>\n"
+"</ul>\n"
+"<h3>Testovi usporedbe</h3>\n"
+"<p>Kada se koristi grupna varijabla, dostupni su sljedeći testovi:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> usporedba dvije grupe</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> usporedba n grupa</li>\n"
+"<li><strong>Testovi nakon toga:</strong> Dunn, Conover i "
+"Dwass-Steel-Critchlow-Fligner (DSCF) parni usporedni testovi.</li>\n"
+"</ul>\n"
+"<p>P-vrijednosti se mogu prilagoditi <strong>po grupama</strong> (za svako "
+"pitanje) za testove nakon toga ili <strong>ukupno</strong> (po grupama i "
+"pitanjima) za Mann-Whitney U, Kruskal-Wallis i testove nakon toga. DSCF "
+"p-vrijednosti su već prilagođene (po grupama); nije moguće drugo "
+"prilagođavanje.</p>\n"
+"<p>Uzorak datoteke je uključen u Otvori > Biblioteka podataka > vijPlots > "
+"Likert</p>"
+
+#: R/corresp.b.R
+msgid ""
+"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
+"two categorical variables. Computations are based on <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
+"using the \"Counts\" variable.</p>\n"
+"<p><strong>Supplementary row or column</strong> numbers may be entered as "
+"integer lists : 1,3,6</p>\n"
+"<p>Four normalizations (scaling of row and column scores before plotting) "
+"are avalaible :</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Row an columns scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
+"square root of eigenvalues. </li>\n"
+"<li><strong>Row Principal:</strong> Only row scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Column Principal:</strong> Only column scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Standard:</strong> The raw coordinates without "
+"normalization.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
+msgstr ""
+"<p>Ovaj modul izračunava <strong>analizu korespondencije (CA)</strong> za "
+"dvije kategorije varijabli. Izračuni se temelje na <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> paketu autora F.&nbsp;Husson, "
+"J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Podaci mogu biti težinski pomoću <em>jamovi</em> ugrađenog sustava za "
+"težinsko ili pomoću \"Counts\" varijable.</p>\n"
+"<p><strong>Dodatni brojevi redaka ili stupaca</strong> mogu se unijeti kao "
+"popis cijelih brojeva: 1,3,6</p>\n"
+"<p>Četiri normalizacije (skaliranje redaka i stupaca prije crtanja) su "
+"dostupne:</p>\n"
+"<ul>\n"
+"<li><strong>Glavni:</strong> Redak i stupac bodova skalirani su eigen "
+"vrijednostima.</li>\n"
+"<li><strong>Simetrični:</strong> Redak i stupac bodova skalirani su "
+"kvadratnim korijenom eigen vrijednosti. </li>\n"
+"<li><strong>Glavni redak:</strong> Samo redak bodova skalirani su eigen "
+"vrijednostima.</li>\n"
+"<li><strong>Glavni stupac:</strong> Samo stupac bodova skalirani su eigen "
+"vrijednostima.</li>\n"
+"<li><strong>Standardno:</strong> Neobrađene koordinate bez "
+"normalizacije.</li>\n"
+"</ul>\n"
+"<p>Uzorak datoteke je uključen u Otvori > Bibiloteka podataka > vijPlots > "
+"Smoking</p>"
+
+#: R/multcorresp.b.R
+msgid ""
+"<p>This module computes <strong>Multiple Correspondence Analysis "
+"(MCA)</strong> for several categorical variables. Computations are based on "
+"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Both classic methods are available:</p>\n"
+"<ul>\n"
+"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
+"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues are "
+"the squares of those of the indicator matrix method. </li>\n"
+"</ul>\n"
+"<p>Both methods give the same <em>standard</em> coordinates (but different "
+"<em>principal</em> coordinates).</p>\n"
+"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
+"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
+"(and inertia) of categories and observations are computed from the original "
+"eigenvalues of the Burt matrix.</p>\n"
+"<p>The <strong>Normalization</strong> options specify how the coordinates "
+"are scaled (by eigenvalues):</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Both category and observation coordinates "
+"are scaled.</li>\n"
+"<li><strong>Category principal:</strong> Only category coordinates are "
+"scaled.</li>\n"
+"<li><strong>Observation principal:</strong> Only observation coordinates are "
+"scaled.</li>\n"
+"<li><strong>Standard:</strong> Both category and observation coordinates are "
+"standard.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
+msgstr ""
+"<p>Ovaj modul izračunava <strong>Multiple Correspondence Analysis "
+"(MCA)</strong> za nekoliko kategorijalnih varijabli. Izračuni se temelje na "
+"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> paketu od F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Dostupne su obje klasične metode:</p>\n"
+"<ul>\n"
+"<li><strong>Indikatorska matrica:</strong> CA indikatorske matrice</li>\n"
+"<li><strong>Burt matrica:</strong> CA Burt matrice. Eigenvalues su kvadrati "
+"onih iz indikatorske matrice metode. </li>\n"
+"</ul>\n"
+"<p>Obje metode daju iste <em>standardne</em> koordinate (ali različite "
+"<em>glavne</em> koordinate).</p>\n"
+"<p>Kada je odabrano, <strong>Benzécri i Greenacre korekcije</strong> se "
+"primjenjuju samo na eigenvalues (<strong>Sažetak</strong> tablica). "
+"Koordinate (i inercija) kategorija i promatrača se izračunavaju iz "
+"originalnih eigenvalues Burt matrice.</p>\n"
+"<p><strong>Normalizacija</strong> opcije specificiraju kako se koordinate "
+"skaliraju (prema eigenvalues):</p>\n"
+"<ul>\n"
+"<li><strong>Glavna:</strong> Skaliraju se koordinate kategorija i "
+"promatrača.</li>\n"
+"<li><strong>Kategorija glavna:</strong> Skaliraju se samo koordinate "
+"kategorija.</li>\n"
+"<li><strong>Promatrač glavna:</strong> Skaliraju se samo koordinate "
+"promatrača.</li>\n"
+"<li><strong>Standardna:</strong> Skaliraju se koordinate kategorija i "
+"promatrača.</li>\n"
+"</ul>\n"
+"<p>Uzorak datoteke je uključen u Otvori > Bibiloteka podataka> vijPlots > "
+"Vozila</p>"
+
+#: R/principal.b.R
+msgid ""
+"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
+"for several continuous variables. Computations are based on "
+"<tt>stats::prcomp</tt> function.</p>\n"
+"<p>Although rotated components are not principal components, they are widely "
+"used. Only orthogonal rotations are available (from GPArotation "
+"package).</p>\n"
+"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
+"principal (scaled by the squareroot of eigenvalues).</p>\n"
+"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
+"eigenvalues) while loadings are standard.</li>\n"
+"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
+"are standard. </li>\n"
+"</ul>\n"
+"<p><strong>Advanced options</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Standardize loadings:</strong> loadings are normalized with sums "
+"of squared equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Standardize scores:</strong> scores are normalized with "
+"variances equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
+"applied to eigenvectors (standard loadings) instead of principal loadings "
+"(STATA way).</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
+msgstr ""
+"<p>Ovaj modul izračunava <strong>Glavnu komponentnu analizu (PCA)</strong> "
+"za nekoliko kontinuiranih varijabli. Izračuni su temeljeni na "
+"<tt>stats::prcomp</tt> funkciji.</p>\n"
+"<p>Iako su rotirane komponente nisu glavne komponente, široko se koriste. "
+"Dostupne su samo ortogonalne rotacije (iz paketa GPArotation).</p>\n"
+"<p>Opterećenja (koordinate varijabli) i rezultati (koordinate promatraanja) "
+"su glavni (mjereni kvadratnim korijenom eigenvalues).</p>\n"
+"<p>Biplots slijedi \"Biplots u praksi\" (Michael Greenacre, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Forma biplota:</strong> Rezultati su glavni (mjereni "
+"eigenvalues) dok su opterećenja standardna.</li>\n"
+"<li><strong>Kovarijacijski biplot:</strong> Opterećenja su glavna dok su "
+"rezultati standardni. </li>\n"
+"</ul>\n"
+"<p><strong>Napredne opcije</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Standardizirajte opterećenja:</strong> opterećenja su "
+"normalizirana sa zbrojem kvadrata jednakim 1 (umjesto eigenvalues)</li>\n"
+"<li><strong>Standardizirajte rezultate:</strong> rezultati su normalizirani "
+"sa varijancama jednake 1 (umjesto eigenvalues)</li>\n"
+"<li><strong>Rotirajte eigenvektor:</strong> rotacija (varimax, itd.) se "
+"primjenjuje na eigenvektor (standardna opterećenja) umjesto glavnih "
+"opterećenja (način STATA).</li>\n"
+"</ul>\n"
+"<p>Uzorak datoteke je uključen u Otvori > Bibiloteka podataka> vijPlots > "
+"Iris</p>"
+
+#: R/mrfrequencies.b.R
+msgid ""
+"<p>This module computes frequencies for multiple response questions, also "
+"known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>Ovaj modul izračunava učestalosti za višestruka pitanja, također poznata "
+"kao \"Check All That Apply\" (CATA) pitanja.</p>\n"
+"<p>Pitanja mogu biti kodirana kao:</p>\n"
+"<ul>\n"
+"<li>nekoliko <strong>dummy (ili indikator) varijabli</strong> koje koriste "
+"0/1, 1/2, Y/N za svaki mogući odgovor;</li>\n"
+"<li>jedna <strong>viševrijedna varijabla</strong> koja sadrži označene "
+"odgovore, razdvojene simbolom (obično \",\" ili \";\").</li>\n"
+"</ul>\n"
+"<p>Uzorak datoteke je uključen u Otvori > Bibiloteka podataka> vijPlots > "
+"Kreditne kartice</p>"
+
+#: R/mrcrosstabs.b.R
+msgid ""
+"<p>This module computes two-way frequencies for multiple response questions, "
+"also known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>Ovaj modul izračunava dvosmjerne učestalosti za višestruka pitanja, "
+"također poznata kao \"Check All That Apply\" (CATA) pitanja.</p>\n"
+"<p>Pitanja mogu biti kodirana kao:</p>\n"
+"<ul>\n"
+"<li>nekoliko <strong>dummy (ili indikator) varijabli</strong> koje koriste "
+"0/1, 1/2, Y/N za svaki mogući odgovor;</li>\n"
+"<li>jedna <strong>viševrijedna varijabla</strong> koja sadrži označene "
+"odgovore, razdvojene simbolom (obično \",\" ili \";\").</li>\n"
+"</ul>\n"
+"<p>Uzorak datoteke je uključen u Otvori > Bibiloteka podataka> vijPlots > "
+"Kreditne kartice</p>"
+
+#: R/qqplot.b.R
+msgid ""
+"<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
+"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"Heike Hofmann. In-depth information can be found in the package "
+"documentation on CRAN site.</p>\n"
+"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
+"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
+"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
+"identity line.</p>\n"
+"<p><strong>Confidence band:</strong> Draws a confidence band around the "
+"reference line. qqplotr package provides several methods to compute the "
+"confidence band:</p>\n"
+"<ul>\n"
+"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
+"bands based on Normal confidence intervals;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
+"based on a parametric bootstrap;</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
+"Kolmogorov-Smirnov test;</li>\n"
+"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
+"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
+"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
+"simultaneous bands using the equal local levels.</li>\n"
+"</ul>\n"
+"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
+"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
+"according to the reference line. This procedure may help reducing visual "
+"bias caused by the orthogonal distances from the points to the reference "
+"line.</p>\n"
+"<p><strong>Parameter values:</strong> The distribution parameters can be "
+"estimated from data using:</p>\n"
+"<ul>\n"
+"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
+"should work with all distributions but \"t\" and \"uniform\";</li>\n"
+"<li><strong>Method of Moments</strong> for moment based parameters : it "
+"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
+"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
+"</ul>\n"
+"<p>or entered by user:</p>\n"
+"<ul>\n"
+"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
+"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
+"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
+"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
+"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
+"(Uniform).</li>\n"
+"</ul>\n"
+"</p>"
+msgstr ""
+"<p>Ovaj modul koristi <a href = "
+"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
+"paket<a/> autora Alexandre Almeida, Adam Loy i Heike Hofmann. Detaljne "
+"informacije se mogu pronaći u dokumentaciji paketa na CRAN web-stranici.</p>\n"
+"<p><strong>Referentna linija:</strong> Crta <em>identitetne linije</em> (y = "
+"x) ili uobičajeno korištene <em>Q-Q linije</em> koje presjecaju dvije "
+"podatkovne kvantile (Q<sub>0.25</sub> i Q<sub>0.75</sub>). P-P plot podržava "
+"samo identitetnu liniju.</p>\n"
+"<p><strong>Pouzdani opseg:</strong> Crta pouzdani opsega oko referentne "
+"linije. qqplotr paket pruža nekoliko metoda za izračun pouzdanog opsega:</p>\n"
+"<ul>\n"
+"<li><strong><em>Točkasti</em></strong> konstruiraju točkaste pouzdane opsege "
+"na temelju intervala pouzdane norme;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> stvara točkaste pouzdane opsege na "
+"temelju parametričkog bootstrapa;</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> opseg temelji se na "
+"Kolmogorov-Smirnovovom testu;</li>\n"
+"<li><strong><em>Osjetljiv na rep</em></strong> konstruiraju pouzdane opsege "
+"osjetljive na rep, ali su implementirani samo za Q-Q plotove norme;</li>\n"
+"<li><strong><em>Jednake lokalne razine (ELL)</em></strong> konstruira "
+"istovremene trake pomoću jednakih lokalnih razina.</li>\n"
+"</ul>\n"
+"<p>P-P dijagrami podržavaju samo metode \"ELL\" i \"Bootstrap\".</p>\n"
+"<p><strong>Detrendirani dijagram:</strong> Objekti su <em>detrendirani</em> "
+"prema referentnoj liniji. Ova procedura može pomoći u smanjenju vizualne "
+"pristranosti uzrokovane ortogonalnim udaljenostima od točaka do referentne "
+"linije.</p>\n"
+"<p><strong>Vrijednosti parametara:</strong> Parametri distribucije mogu se "
+"procijeniti iz podataka pomoću:</p>\n"
+"<ul>\n"
+"<li><strong>Metoda maksimalne vjerojatnosti</strong> (korištenje MASS "
+"paketa): trebao bi raditi sa svim distribucijama, osim \"t\" i "
+"\"uniform\";</li>\n"
+"<li><strong>Metoda momenta</strong> za parametre temeljene na momentu: "
+"trebao bi raditi sa distribucijama \"normal\", \"log-normal\", \"Beta\", "
+"\"Exponential\", \"Gamma\", \"Logistic\" i \"Uniform\";</li>\n"
+"</ul>\n"
+"<p>ili uneseni od strane korisnika:</p>\n"
+"<ul>\n"
+"<li><strong>Parametar 1:</strong> srednja vrijednost (Normal), meanlog "
+"(Log-normal), shape1 (Beta), lokacija (Cauchy, Logistic), df (Chi-kvadrat, "
+"Student), df1 (F), stopa (Exponential), oblik (Gamma, Weibull) i min "
+"(Uniform);</li>\n"
+"<li><strong>Parametar 2:</strong> standardna devijacija (normal), sdlog "
+"(Log-normal), shape2 (Beta), skaliranje (Cauchy, Logistic), df2 (F), stopa "
+"(Gamma, Weibull) i maks. (Uniform).</li>\n"
+"</ul>\n"
+"</p>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -189,9 +600,7 @@ msgstr "Demonstracijski skup podataka za vijPlots/Likert dijagrami."
 
 #: package/datasets/Cars.description
 msgid "A demonstration dataset for vijPlots/Multiple Correspondence Analysis."
-msgstr ""
-"Demonstracijski skup podataka za vijPlots/Višestruka analiza "
-"korespondencije."
+msgstr "Demonstracijski skup podataka za vijPlots/Višestruka analiza korespondencije."
 
 #: package/datasets/CreditCards.description
 msgid "A demonstration dataset for vijPlots/Multiple Response plots."
@@ -382,6 +791,14 @@ msgstr "Automatski"
 msgid "Axes"
 msgstr "Osi"
 
+#: R/corresp.b.R
+msgid "Axis numbers cannot be equal."
+msgstr "Brojevi osi ne mogu biti jednaki."
+
+#: R/corresp.b.R
+msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
+msgstr "Brojevi osi moraju biti manji ili jednaki broju dimenzija ({nDim})."
+
 #: corresp/ui[7].label
 #: mrfrequencies/ui[5].label
 msgid "Axis Titles"
@@ -422,6 +839,10 @@ msgstr "Benzécri korekcija"
 #: qqplot/options/distrib/beta.title
 msgid "Beta"
 msgstr "Beta"
+
+#: R/qqplot.b.R
+msgid "Beta distribution requires data between 0 and 1."
+msgstr "Beta distribucija zahtijeva podatke između 0 i 1."
 
 #: likertplot/options/adjustMethod/BH.title
 msgid "BH"
@@ -690,6 +1111,15 @@ msgstr "Rub"
 msgid "Bottom"
 msgstr "Dolje"
 
+#: histogram/options/binBoundary.title
+msgctxt "boundary"
+msgid "Position"
+msgstr "Pozicija"
+
+#: boxplot/ui[2][0][1][0].label
+msgid "Box Elements"
+msgstr "Elementi kutije"
+
 #: package/analyses/boxplot.title
 #: package/analyses/boxplot.menuTitle
 #: boxplot/options.title
@@ -743,6 +1173,14 @@ msgstr "Po grupi"
 #: likertplot/ui[4][0][1][0]/groupBy_variable.label
 msgid "By variable"
 msgstr "Po varijabli"
+
+#: R/likertplot.b.R
+msgid "Cannot convert text variables to integers"
+msgstr "Nije moguće pretvoriti varijable teksta u cijele brojeve"
+
+#: R/likertplot.b.R
+msgid "Cannot tidy up text variables"
+msgstr "Nije moguće urediti varijable teksta"
 
 #: areachart/ui[4][2].label
 #: barplot/ui[7][2].label
@@ -985,9 +1423,17 @@ msgstr "Dijagram stupaca"
 msgid "Column plot"
 msgstr "Dijagram stupaca"
 
+#: R/corresp.b.R
+msgid "Column Points for {cols}"
+msgstr "Točke stupaca za {cols}"
+
 #: corresp/options/normalization/colprincipal.title
 msgid "Column principal"
 msgstr "Glavni stupac"
+
+#: R/corresp.b.R
+msgid "Column principal normalization"
+msgstr "Glavna normalizacija stupaca"
 
 #: corresp/results/colProfiles.title
 msgid "Column Profiles"
@@ -1011,6 +1457,14 @@ msgstr "Stupci (grupe)"
 #: likertplot/results/comp.title
 msgid "Comparison Tests"
 msgstr "Testovi usporedbe"
+
+#: R/likertplot.b.R
+msgid "Comparison tests cannot be computed with empty (N=0) groups"
+msgstr "Usporedni testovi ne mogu se izračunati s praznim (N=0) skupinama"
+
+#: R/likertplot.b.R
+msgid "Comparison tests require numeric variables"
+msgstr "Usporedni testovi zahtijevaju numeričke varijable"
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
@@ -1151,6 +1605,14 @@ msgstr "Tablica kontingencije"
 #: R/mrcrosstabs.b.R
 msgid "Crosstab (% by row)"
 msgstr "Tablica kontingencije (% po retku)"
+
+#: R/mrcrosstabs.b.R
+msgid "Crosstab (% of cases)"
+msgstr "Križna tablica (% slučajeva)"
+
+#: R/mrcrosstabs.b.R
+msgid "Crosstab (% of responses)"
+msgstr "Križna tablica (% odgovora)"
 
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
@@ -1327,6 +1789,12 @@ msgstr "Format prikaza"
 msgid "Distribution"
 msgstr "Distribucija"
 
+#: R/qqplot.b.R
+#: qqplot/options/distrib/norm.title
+msgctxt "distribution"
+msgid "Normal"
+msgstr "Normalno"
+
 #: piechart/options/donut.title
 msgid "Donut chart"
 msgstr "Kružni dijagram"
@@ -1383,6 +1851,15 @@ msgstr "Svojstvena vrijednost"
 msgid "Eigenvalues"
 msgstr "Svojstvene vrijednosti"
 
+#: principal/ui[4][0][0][1].label
+#: scatterplot/ui[2][0][0][0].label
+msgid "Element Sizes"
+msgstr "Veličine elemenata"
+
+#: scatterplot/ui[2].label
+msgid "Element Sizes & Facets"
+msgstr "Veličine elemenata i fasete"
+
 #: qqplot/options/methodQQ/ell.title
 #: qqplot/options/methodPP/ell.title
 msgid "Equal Local Levels"
@@ -1407,9 +1884,17 @@ msgstr "EU (D-M-Y)"
 msgid "Exponential"
 msgstr "Eksponencijalno"
 
+#: R/qqplot.b.R
+msgid "Exponential distribution requires non-negative (≥0) data."
+msgstr "Eksponencijalna distribucija zahtijeva nenegativne (≥0) podatke."
+
 #: principal/results/summaryTable.columns.superTitle
 msgid "Extraction Sums of Squared Loadings"
 msgstr "Zbrojevi ekstrakcije kvadratnih opterećenja"
+
+#: R/qqplot.b.R
+msgid "F"
+msgstr "F"
 
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
@@ -1693,6 +2178,11 @@ msgstr "Grupa"
 msgid "Group (Overlapped)"
 msgstr "Grupa (preklapajuća)"
 
+#: raincloud/options/groupOne.title
+#: raincloud/ui[0][1].label
+msgid "Group (Side-by-side)"
+msgstr "Grupa (jedna pored druge)"
+
 #: piechart/options/labels/group+count.title
 msgid "Group + Count"
 msgstr "Grupa i broj"
@@ -1710,6 +2200,11 @@ msgstr "Grupiraj po"
 #: mrcrosstabs/options/bartype/dodge2.title
 msgid "Grouped"
 msgstr "Grupirano"
+
+#: barplot/options/barType/dodge.title
+#: mrcrosstabs/options/bartype/dodge.title
+msgid "Grouped (tight)"
+msgstr "Grupirano (tijesno)"
 
 #: histogram/options/grouping.title
 #: histogram/options/groupingN.title
@@ -1779,6 +2274,17 @@ msgstr "Vodoravni dijagram"
 #: qqplot/ui[2][1][0]/refLine[0]/refType_identity.label
 msgid "Identity line"
 msgstr "Linija identiteta"
+
+#: likertplot/options/ignoreNA.title
+msgid "Ignore missing groups"
+msgstr "Zanemari nedostajuće grupe"
+
+#: areachart/options/ignoreNA.title
+#: barplot/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
+msgid "Ignore missing values"
+msgstr "Zanemari nedostajuće vrijednosti"
 
 #: multcorresp/options/ggrepel.title
 msgid "Improve label display"
@@ -2327,6 +2833,10 @@ msgstr "Likert"
 msgid "Likert Plot"
 msgstr "Likertov dijagram"
 
+#: R/likertplot.b.R
+msgid "Likert Plot requires ordinal (or numeric) variables"
+msgstr "Likertov dijagram zahtijeva ordinalne (ili numeričke) varijable"
+
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
 msgid "Likert Variables"
@@ -2401,9 +2911,9 @@ msgid ""
 msgstr ""
 "Glavni statistički dijagrami (histogram, kutijasti dijagram, točka, crta, "
 "linija, raincloud …) s mnogo opcija zajedno s Likertovim dijagramom, "
-"stupčani dijagram višestrukih odgovora, glavnim komponentama i "
-"(višestrukim) analizama korespondencije. Izvorni kod projekta (i dnevnik "
-"promjena) dostupan je na <a href=\"https://github.com/vjalby/vijPlots\" "
+"stupčani dijagram višestrukih odgovora, glavnim komponentama i (višestrukim) "
+"analizama korespondencije. Izvorni kod projekta (i dnevnik promjena) "
+"dostupan je na <a href=\"https://github.com/vjalby/vijPlots\" "
 "target=\"_blank\">Github-u</a>."
 
 #: likertplot/options/showMannU.title
@@ -2478,6 +2988,10 @@ msgstr "Masa"
 msgid "Max"
 msgstr "Maks."
 
+#: R/lollipop.b.R
+msgid "Maximum of {var}"
+msgstr "Maksimum od {var}"
+
 #: qqplot/options/paramEstMethod/mle.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mle.label
 msgid "Maximum-likelihood (MLE)"
@@ -2488,6 +3002,14 @@ msgstr "Maksimalna vjerojatnost (MLE)"
 msgid "May"
 msgstr "Svibanj"
 
+#: R/multcorresp.b.R
+msgid "MCA Principal Coordinates"
+msgstr "MCA glavne koordinate"
+
+#: R/multcorresp.b.R
+msgid "MCA Standard Coordinates"
+msgstr "MCA standardne koordinate"
+
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 msgid "Mean"
@@ -2497,12 +3019,36 @@ msgstr "Srednja vrijednost"
 msgid "Mean & SD"
 msgstr "Srednja vrijednost i standardna devijacija"
 
+#: R/lollipop.b.R
+msgid "Mean of {var}"
+msgstr "Prosječna vrijednost od {var}"
+
 #: R/likertplot.b.R
 #: likertplot/options/showMedian.title
 #: lollipop/options/yaxis/median.title
 #: lollipop/ui[2][0][0][0]/yaxis_median.label
 msgid "Median"
 msgstr "Medijan"
+
+#: R/likertplot.b.R
+msgid "Median and mean require numeric variables"
+msgstr "Medijan i prosjek zahtijevaju numeričke varijable"
+
+#: R/lollipop.b.R
+msgid "Median of {var}"
+msgstr "Medijan od {var}"
+
+#: areachart/options/displayFormat/%b.title
+#: linechart/options/displayFormat/%b.title
+msgctxt "menu"
+msgid "Oct"
+msgstr "Lis"
+
+#: areachart/options/displayFormat/%B.title
+#: linechart/options/displayFormat/%B.title
+msgctxt "menu"
+msgid "October"
+msgstr "Listopad"
 
 #: likertplot/options/adjustMethod.title
 #: multcorresp/options/method.title
@@ -2563,6 +3109,10 @@ msgstr "Min. / Maks."
 msgid "Minimum entropy"
 msgstr "Minimalna entropija"
 
+#: R/lollipop.b.R
+msgid "Minimum of {var}"
+msgstr "Minimum od {var}"
+
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
 #: mrcrosstabs/ui/mode/onevar[0][1].label
@@ -2618,6 +3168,10 @@ msgstr "Ime"
 #: qqplot/options/transLog.title
 msgid "Natural log tranform"
 msgstr "Prirodna logaritamska tranformacija"
+
+#: R/qqplot.b.R
+msgid "Natural Log Tranform requires positive (>0) data."
+msgstr "Prirodna logaritamska transformacija zahtijeva pozitivne (>0) podatke."
 
 #: R/principal.b.R
 msgid "No rotation used."
@@ -2749,6 +3303,10 @@ msgstr "Broj slučajeva:"
 #: principal/options/dimNum.title
 msgid "Number of dimensions"
 msgstr "Broj dimenzija"
+
+#: R/corresp.b.R
+msgid "Number of dimensions must be less than or equal to {maxDim}."
+msgstr "Broj dimenzija mora biti manji ili jednak {maxDim}."
 
 #: multcorresp/options/obsColor.title
 msgid "Obs color"
@@ -3074,6 +3632,14 @@ msgstr "Pastel 1"
 msgid "Pastel 2"
 msgstr "Pastel 2"
 
+#: R/principal.b.R
+msgid "PCA Principal Coordinates"
+msgstr "PCA glavne koordinate"
+
+#: R/principal.b.R
+msgid "PCA Standard Coordinates"
+msgstr "PCA standardne koordinate"
+
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
 #: barplot/ui[1][0][0]/yaxis_percent.label
@@ -3093,6 +3659,12 @@ msgstr "Postotci"
 #: piechart/results.title
 msgid "Pie Chart"
 msgstr "Kružni dijagram"
+
+#: R/piechart.b.R
+msgid "Pie charts are for educational use only. Please do not use Pie charts!"
+msgstr ""
+"Kružni dijagrami su samo za obrazovne svrhe. Nemoj koristiti kružne "
+"grafikone!"
 
 #: corresp/options/rowColor/hotpink.title
 #: corresp/options/colColor/hotpink.title
@@ -3287,6 +3859,10 @@ msgstr "Analiza glavnih komponenti (PCA)"
 #: principal/results/obsTable.notes.norm
 msgid "Principal coordinates"
 msgstr "Glavne koordinate"
+
+#: R/corresp.b.R
+msgid "Principal normalization"
+msgstr "Glavna normalizacija"
 
 #: multcorresp/options/propPoint.title
 msgid "Proportional point size"
@@ -3591,6 +4167,12 @@ msgstr "Linija regresije"
 msgid "Reverse disposition"
 msgstr "Obrnuta dispozicija"
 
+#: barplot/options/reverseStack.title
+#: likertplot/options/reverseLikert.title
+#: mrcrosstabs/options/reverseStack.title
+msgid "Reverse stacking order"
+msgstr "Obrni redoslijed"
+
 #: areachart/options/titleAlign/1.title
 #: areachart/options/subtitleAlign/1.title
 #: areachart/options/captionAlign/1.title
@@ -3718,9 +4300,17 @@ msgstr "Dijagram redaka"
 msgid "Row plot"
 msgstr "Dijagram redaka"
 
+#: R/corresp.b.R
+msgid "Row Points for {rows}"
+msgstr "Točke retka za {rows}"
+
 #: corresp/options/normalization/rowprincipal.title
 msgid "Row principal"
 msgstr "Glavni redak"
+
+#: R/corresp.b.R
+msgid "Row principal normalization"
+msgstr "Glavna normalizacija redaka"
 
 #: corresp/results/rowProfiles.title
 msgid "Row Profiles"
@@ -3959,6 +4549,11 @@ msgstr "Jedna vrijednost"
 msgid "Size"
 msgstr "Veličina"
 
+#: linechart/ui[1][0][1].label
+#: principal/ui[4].label
+msgid "Sizes & Colors"
+msgstr "Veličine i boje"
+
 #: package/datasets/Smoking.name
 msgid "Smoking"
 msgstr "Pušenje"
@@ -4039,6 +4634,10 @@ msgstr "Standardno"
 #: R/principal.b.R
 msgid "Standard coordinates"
 msgstr "Standardne koordinate"
+
+#: R/corresp.b.R
+msgid "Standard normalization"
+msgstr "Standardna normalizacija"
 
 #: principal/options/stdLoadings.title
 msgid "Standardize loadings (eigenvectors)"
@@ -4138,6 +4737,14 @@ msgid "Supplement"
 msgstr "Dodatak"
 
 #: R/corresp.b.R
+msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "Dodatni brojevi stupaca moraja biti popis brojeva, npr. 1,2,9"
+
+#: R/corresp.b.R
+msgid "Supplementary column numbers must be between 1 and {nmax}."
+msgstr "Dodatni brojevi stupaca moraju biti između 1 i {nmax}."
+
+#: R/corresp.b.R
 #: corresp/options/supplementaryCols.title
 msgid "Supplementary columns"
 msgstr "Dodatni stupci"
@@ -4145,6 +4752,14 @@ msgstr "Dodatni stupci"
 #: corresp/ui[3][0].label
 msgid "Supplementary Points"
 msgstr "Dodatne točke"
+
+#: R/corresp.b.R
+msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "Dodatni brojevi redaka mora biti popis brojeva, npr. 1,2,9"
+
+#: R/corresp.b.R
+msgid "Supplementary row numbers must be between 1 and {nmax}."
+msgstr "Dodatni brojevi redaka moraju biti između 1 i {nmax}."
 
 #: R/corresp.b.R
 #: corresp/options/supplementaryRows.title
@@ -4163,6 +4778,18 @@ msgstr "Dodatne varijable"
 #: R/multcorresp.b.R
 msgid "Supplementary variables"
 msgstr "Dodatne varijable"
+
+#: R/corresp.b.R
+msgid "Symetric normalization"
+msgstr "Simetrična normalizacija"
+
+#: corresp/options/normalization/symmetric.title
+msgid "Symmetric"
+msgstr "Simetrično"
+
+#: R/corresp.b.R
+msgid "Symmetric normalization"
+msgstr "Simetrična normalizacija"
 
 #: likertplot/ui[2].label
 #: likertplot/ui[2][0][0][0].label
@@ -4204,6 +4831,16 @@ msgstr "Tekst"
 msgid "Text Size"
 msgstr "Veličina teksta"
 
+#: corresp/ui[6].label
+msgid "Text Size & Colors"
+msgstr "Veličina teksta i boje"
+
+#: barplot/ui[4].label
+#: boxplot/ui[3].label
+#: piechart/ui[4].label
+msgid "Text Size & Facets"
+msgstr "Veličina teksta i fasete"
+
 #: R/principal.b.R
 msgid ""
 "The correlation matrix is not positive definite. Computations may not be "
@@ -4214,6 +4851,10 @@ msgstr "Matrica korelacije nije pozitivno definitivna. Izračuni možda nisu to�
 msgid "The number of dimensions cannot be greater than {max}."
 msgstr "Broj dimenzija ne može biti veći od {max}."
 
+#: R/principal.b.R
+msgid "The number of dimensions cannot be greater than the number of variables."
+msgstr "Broj dimenzija ne može biti veći od broja varijabli."
+
 #: R/qqplot.b.R
 msgid "Theoretical Probabilities"
 msgstr "Teorijske vjerojatnosti"
@@ -4221,6 +4862,29 @@ msgstr "Teorijske vjerojatnosti"
 #: R/qqplot.b.R
 msgid "Theoretical Quantiles"
 msgstr "Teorijski kvantili"
+
+#: areachart/options/yTicks.title
+#: barplot/options/xTicks.title
+#: barplot/options/yTicks.title
+#: boxplot/options/xTicks.title
+#: boxplot/options/yTicks.title
+#: histogram/options/xTicks.title
+#: histogram/options/yTicks.title
+#: linechart/options/yTicks.title
+#: lollipop/options/xTicks.title
+#: lollipop/options/yTicks.title
+#: mrcrosstabs/options/xTicks.title
+#: mrcrosstabs/options/yTicks.title
+#: mrfrequencies/options/xTicks.title
+#: mrfrequencies/options/yTicks.title
+#: qqplot/options/xTicks.title
+#: qqplot/options/yTicks.title
+#: raincloud/options/xTicks.title
+#: raincloud/options/yTicks.title
+#: scatterplot/options/xTicks.title
+#: scatterplot/options/yTicks.title
+msgid "Tick count"
+msgstr "Aktualiziraj zbroj"
 
 #: likertplot/options/tidyUp.title
 msgid "Tidy up levels"
@@ -4435,11 +5099,20 @@ msgstr "Ukupno"
 msgid "Total row"
 msgstr "Ukupni redak"
 
+#: mrcrosstabs/options/emptyAsNA.title
+#: mrfrequencies/options/emptyAsNA.title
+msgid "Treat empty values as missing"
+msgstr "Tretiraj prazne vrijednosti kao nedostajuće"
+
 #: likertplot/ui[4][0][0][0].label
 #: piechart/options/labType.title
 #: piechart/ui[2][0][0][0].label
 msgid "Type"
 msgstr "Vrsta"
+
+#: R/qqplot.b.R
+msgid "Unable to estimate the distribution parameters."
+msgstr "Nije moguće procijeniti parametre distribucije."
 
 #: R/principal.b.R
 msgid "Unable to use {rotation} rotation."
@@ -4714,6 +5387,10 @@ msgstr "Unutar kategorija"
 msgid "Within groups"
 msgstr "Unutar grupa"
 
+#: R/qqplot.b.R
+msgid "Wrong parameter values."
+msgstr "Krive vrijednosti parametara."
+
 #: areachart/options/timeVar.title
 #: areachart/options/timeVar1.title
 #: areachart/ui/mode/oneVariable[0][0][0].label
@@ -4757,6 +5434,16 @@ msgstr "Unutar grupa"
 #: scatterplot/ui[4][1].label
 msgid "X-Axis"
 msgstr "Os X"
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "X-Axis and Y-Axis cannot be equal."
+msgstr "X-os i Y-os ne mogu biti jednake."
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
+msgstr "X-os i Y-os ne mogu biti veće od broja dimenzija."
 
 #: areachart/options/isDate.title
 #: linechart/options/isDate.title
@@ -4902,693 +5589,3 @@ msgstr "Žuta u zelena"
 #: scatterplot/options/colorPalette/YlOrRd.title
 msgid "Yellow to Red"
 msgstr "Žuta u crvenu"
-
-#: R/areachart.b.R
-#: R/linechart.b.R
-msgid "{var} doesn't have a valid date format."
-msgstr "{var} nema važeći format datuma."
-
-#: R/corresp.b.R
-msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "Dodatni brojevi redaka mora biti popis brojeva, npr. 1,2,9"
-
-#: R/corresp.b.R
-msgid "Supplementary row numbers must be between 1 and {nmax}."
-msgstr "Dodatni brojevi redaka moraju biti između 1 i {nmax}."
-
-#: R/corresp.b.R
-msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "Dodatni brojevi stupaca moraja biti popis brojeva, npr. 1,2,9"
-
-#: R/corresp.b.R
-msgid "Supplementary column numbers must be between 1 and {nmax}."
-msgstr "Dodatni brojevi stupaca moraju biti između 1 i {nmax}."
-
-#: R/corresp.b.R
-msgid "Number of dimensions must be less than or equal to {maxDim}."
-msgstr "Broj dimenzija mora biti manji ili jednak {maxDim}."
-
-#: R/corresp.b.R
-msgid ""
-"Axis numbers must be less than or equal to the number of dimensions "
-"({nDim})."
-msgstr "Brojevi osi moraju biti manji ili jednaki broju dimenzija ({nDim})."
-
-#: R/corresp.b.R
-msgid "Axis numbers cannot be equal."
-msgstr "Brojevi osi ne mogu biti jednaki."
-
-#: R/corresp.b.R
-msgid "Principal normalization"
-msgstr "Glavna normalizacija"
-
-#: R/corresp.b.R
-msgid "Symetric normalization"
-msgstr "Simetrična normalizacija"
-
-#: R/corresp.b.R
-msgid "Row principal normalization"
-msgstr "Glavna normalizacija redaka"
-
-#: R/corresp.b.R
-msgid "Column principal normalization"
-msgstr "Glavna normalizacija stupaca"
-
-#: R/corresp.b.R
-msgid "Standard normalization"
-msgstr "Standardna normalizacija"
-
-#: R/corresp.b.R
-msgid "Row Points for {rows}"
-msgstr "Točke retka za {rows}"
-
-#: R/corresp.b.R
-msgid "Column Points for {cols}"
-msgstr "Točke stupaca za {cols}"
-
-#: R/corresp.b.R
-msgid "Symmetric normalization"
-msgstr "Simetrična normalizacija"
-
-#: R/corresp.b.R
-msgid ""
-"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
-"two categorical variables. Computations are based on <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
-"using the \"Counts\" variable.</p>\n"
-"<p><strong>Supplementary row or column</strong> numbers may be entered as "
-"integer lists : 1,3,6</p>\n"
-"<p>Four normalizations (scaling of row and column scores before plotting) "
-"are avalaible :</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Row an columns scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
-"square root of eigenvalues. </li>\n"
-"<li><strong>Row Principal:</strong> Only row scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Column Principal:</strong> Only column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Standard:</strong> The raw coordinates without "
-"normalization.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
-msgstr ""
-"<p>Ovaj modul izračunava <strong>analizu korespondencije (CA)</strong> za "
-"dvije kategorije varijabli. Izračuni se temelje na <a href = \"https://"
-"CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">FactoMineR<a/> "
-"paketu autora F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Podaci mogu biti težinski pomoću <em>jamovi</em> ugrađenog sustava za "
-"težinsko ili pomoću \"Counts\" varijable.</p>\n"
-"<p><strong>Dodatni brojevi redaka ili stupaca</strong> mogu se unijeti kao "
-"popis cijelih brojeva: 1,3,6</p>\n"
-"<p>Četiri normalizacije (skaliranje redaka i stupaca prije crtanja) su "
-"dostupne:</p>\n"
-"<ul>\n"
-"<li><strong>Glavni:</strong> Redak i stupac bodova skalirani su eigen "
-"vrijednostima.</li>\n"
-"<li><strong>Simetrični:</strong> Redak i stupac bodova skalirani su "
-"kvadratnim korijenom eigen vrijednosti. </li>\n"
-"<li><strong>Glavni redak:</strong> Samo redak bodova skalirani su eigen "
-"vrijednostima.</li>\n"
-"<li><strong>Glavni stupac:</strong> Samo stupac bodova skalirani su eigen "
-"vrijednostima.</li>\n"
-"<li><strong>Standardno:</strong> Neobrađene koordinate bez normalizacije.</"
-"li>\n"
-"</ul>\n"
-"<p>Uzorak datoteke je uključen u Otvori > Bibiloteka podataka > vijPlots > "
-"Smoking</p>"
-
-#: R/likertplot.b.R
-msgid "Likert Plot requires ordinal (or numeric) variables"
-msgstr "Likertov dijagram zahtijeva ordinalne (ili numeričke) varijable"
-
-#: R/likertplot.b.R
-msgid "Median and mean require numeric variables"
-msgstr "Medijan i prosjek zahtijevaju numeričke varijable"
-
-#: R/likertplot.b.R
-msgid "Comparison tests require numeric variables"
-msgstr "Usporedni testovi zahtijevaju numeričke varijable"
-
-#: R/likertplot.b.R
-msgid "Cannot convert text variables to integers"
-msgstr "Nije moguće pretvoriti varijable teksta u cijele brojeve"
-
-#: R/likertplot.b.R
-msgid "Cannot tidy up text variables"
-msgstr "Nije moguće urediti varijable teksta"
-
-#: R/likertplot.b.R
-msgid "Comparison tests cannot be computed with empty (N=0) groups"
-msgstr "Usporedni testovi ne mogu se izračunati s praznim (N=0) skupinama"
-
-#: R/likertplot.b.R
-msgid ""
-"<h3>Data & Sorting</h3>\n"
-"<ul>\n"
-"<li>Likert variables must be of ordinal measure-type. (Continuous "
-"measure-type works as well.)</li>\n"
-"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
-"must be of integer data-type.</li>\n"
-"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
-"order in table and graph (when some variables miss some levels).</li>\n"
-"<li><strong>Convert variables to integer:</strong> when checked, the level "
-"labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
-"</ul>\n"
-"<h3>Comparison Tests</h3>\n"
-"<p>When using a group variable, several tests are available:</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
-"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
-"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
-"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
-"</ul>\n"
-"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
-"p-values are already adjusted (groupwise); no other adjustment is "
-"possible.</p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
-msgstr ""
-"<h3>Podaci i sortiranje</h3>\n"
-"<ul>\n"
-"<li>Likert varijable moraju biti ordinalnog tipa mjere. (Kontinuirani tip "
-"mjere također funkcionira.)</li>\n"
-"<li>Ako planirate izračunati prosjek/medijanu/standardnu devijaciju ili "
-"koristiti testove usporedbe, one moraju biti cijelog broja tipa podatka.</li>"
-"\n"
-"<li><strong>Čistite razine:</strong> kada je označeno, pokušajte popraviti "
-"redosled oznaka u tablici i grafu (kada neke varijable nedostaju neke razine)"
-".</li>\n"
-"<li><strong>Pretvori varijable u cijele brojeve:</strong> kada je označeno, "
-"oznake razina se ignorišu i koriste se samo cijeli brojevi.</li>\n"
-"<li><strong>Sortiraj varijable po medijani:</strong> uređuje listu Likert "
-"varijabli po medijani.</li>\n"
-"</ul>\n"
-"<h3>Testovi usporedbe</h3>\n"
-"<p>Kada se koristi grupna varijabla, dostupni su sljedeći testovi:</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U:</strong> usporedba dvije grupe</li>\n"
-"<li><strong>Kruskal-Wallis:</strong> usporedba n grupa</li>\n"
-"<li><strong>Testovi nakon toga:</strong> Dunn, Conover i Dwass-Steel-"
-"Critchlow-Fligner (DSCF) parni usporedni testovi.</li>\n"
-"</ul>\n"
-"<p>P-vrijednosti se mogu prilagoditi <strong>po grupama</strong> (za svako "
-"pitanje) za testove nakon toga ili <strong>ukupno</strong> (po grupama i "
-"pitanjima) za Mann-Whitney U, Kruskal-Wallis i testove nakon toga. DSCF p-"
-"vrijednosti su već prilagođene (po grupama); nije moguće drugo "
-"prilagođavanje.</p>\n"
-"<p>Uzorak datoteke je uključen u Otvori > Biblioteka podataka > vijPlots > "
-"Likert</p>"
-
-#: R/lollipop.b.R
-msgid "Mean of {var}"
-msgstr "Prosječna vrijednost od {var}"
-
-#: R/lollipop.b.R
-msgid "Median of {var}"
-msgstr "Medijan od {var}"
-
-#: R/lollipop.b.R
-msgid "Minimum of {var}"
-msgstr "Minimum od {var}"
-
-#: R/lollipop.b.R
-msgid "Maximum of {var}"
-msgstr "Maksimum od {var}"
-
-#: R/mrcrosstabs.b.R
-msgid "Crosstab (% of cases)"
-msgstr "Križna tablica (% slučajeva)"
-
-#: R/mrcrosstabs.b.R
-msgid "Crosstab (% of responses)"
-msgstr "Križna tablica (% odgovora)"
-
-#: R/mrcrosstabs.b.R
-msgid ""
-"<p>This module computes two-way frequencies for multiple response "
-"questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>Ovaj modul izračunava dvosmjerne učestalosti za višestruka pitanja, "
-"također poznata kao \"Check All That Apply\" (CATA) pitanja.</p>\n"
-"<p>Pitanja mogu biti kodirana kao:</p>\n"
-"<ul>\n"
-"<li>nekoliko <strong>dummy (ili indikator) varijabli</strong> koje koriste 0/"
-"1, 1/2, Y/N za svaki mogući odgovor;</li>\n"
-"<li>jedna <strong>viševrijedna varijabla</strong> koja sadrži označene "
-"odgovore, razdvojene simbolom (obično \",\" ili \";\").</li>\n"
-"</ul>\n"
-"<p>Uzorak datoteke je uključen u Otvori > Bibiloteka podataka> vijPlots > "
-"Kreditne kartice</p>"
-
-#: R/mrfrequencies.b.R
-msgid ""
-"<p>This module computes frequencies for multiple response questions, also "
-"known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>Ovaj modul izračunava učestalosti za višestruka pitanja, također poznata "
-"kao \"Check All That Apply\" (CATA) pitanja.</p>\n"
-"<p>Pitanja mogu biti kodirana kao:</p>\n"
-"<ul>\n"
-"<li>nekoliko <strong>dummy (ili indikator) varijabli</strong> koje koriste 0/"
-"1, 1/2, Y/N za svaki mogući odgovor;</li>\n"
-"<li>jedna <strong>viševrijedna varijabla</strong> koja sadrži označene "
-"odgovore, razdvojene simbolom (obično \",\" ili \";\").</li>\n"
-"</ul>\n"
-"<p>Uzorak datoteke je uključen u Otvori > Bibiloteka podataka> vijPlots > "
-"Kreditne kartice</p>"
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
-msgstr "X-os i Y-os ne mogu biti veće od broja dimenzija."
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-msgid "X-Axis and Y-Axis cannot be equal."
-msgstr "X-os i Y-os ne mogu biti jednake."
-
-#: R/multcorresp.b.R
-msgid "MCA Principal Coordinates"
-msgstr "MCA glavne koordinate"
-
-#: R/multcorresp.b.R
-msgid "MCA Standard Coordinates"
-msgstr "MCA standardne koordinate"
-
-#: R/multcorresp.b.R
-msgid ""
-"<p>This module computes <strong>Multiple Correspondence Analysis "
-"(MCA)</strong> for several categorical variables. Computations are based on "
-"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Both classic methods are available:</p>\n"
-"<ul>\n"
-"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
-"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues "
-"are the squares of those of the indicator matrix method. </li>\n"
-"</ul>\n"
-"<p>Both methods give the same <em>standard</em> coordinates (but different "
-"<em>principal</em> coordinates).</p>\n"
-"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
-"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
-"(and inertia) of categories and observations are computed from the original "
-"eigenvalues of the Burt matrix.</p>\n"
-"<p>The <strong>Normalization</strong> options specify how the coordinates "
-"are scaled (by eigenvalues):</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Both category and observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Category principal:</strong> Only category coordinates are "
-"scaled.</li>\n"
-"<li><strong>Observation principal:</strong> Only observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Standard:</strong> Both category and observation coordinates "
-"are standard.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
-msgstr ""
-"<p>Ovaj modul izračunava <strong>Multiple Correspondence Analysis (MCA)</"
-"strong> za nekoliko kategorijalnih varijabli. Izračuni se temelje na <a href "
-"= \"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">"
-"FactoMineR<a/> paketu od F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, "
-"J.&nbsp;Mazet.</p>\n"
-"<p>Dostupne su obje klasične metode:</p>\n"
-"<ul>\n"
-"<li><strong>Indikatorska matrica:</strong> CA indikatorske matrice</li>\n"
-"<li><strong>Burt matrica:</strong> CA Burt matrice. Eigenvalues su kvadrati "
-"onih iz indikatorske matrice metode. </li>\n"
-"</ul>\n"
-"<p>Obje metode daju iste <em>standardne</em> koordinate (ali različite <em>"
-"glavne</em> koordinate).</p>\n"
-"<p>Kada je odabrano, <strong>Benzécri i Greenacre korekcije</strong> se "
-"primjenjuju samo na eigenvalues (<strong>Sažetak</strong> tablica). "
-"Koordinate (i inercija) kategorija i promatrača se izračunavaju iz "
-"originalnih eigenvalues Burt matrice.</p>\n"
-"<p><strong>Normalizacija</strong> opcije specificiraju kako se koordinate "
-"skaliraju (prema eigenvalues):</p>\n"
-"<ul>\n"
-"<li><strong>Glavna:</strong> Skaliraju se koordinate kategorija i "
-"promatrača.</li>\n"
-"<li><strong>Kategorija glavna:</strong> Skaliraju se samo koordinate "
-"kategorija.</li>\n"
-"<li><strong>Promatrač glavna:</strong> Skaliraju se samo koordinate "
-"promatrača.</li>\n"
-"<li><strong>Standardna:</strong> Skaliraju se koordinate kategorija i "
-"promatrača.</li>\n"
-"</ul>\n"
-"<p>Uzorak datoteke je uključen u Otvori > Bibiloteka podataka> vijPlots > "
-"Vozila</p>"
-
-#: R/piechart.b.R
-msgid "Pie charts are for educational use only. Please do not use Pie charts!"
-msgstr ""
-"Kružni dijagrami su samo za obrazovne svrhe. Nemoj koristiti kružne "
-"grafikone!"
-
-#: R/principal.b.R
-msgid "The number of dimensions cannot be greater than the number of variables."
-msgstr "Broj dimenzija ne može biti veći od broja varijabli."
-
-#: R/principal.b.R
-msgid "PCA Principal Coordinates"
-msgstr "PCA glavne koordinate"
-
-#: R/principal.b.R
-msgid "PCA Standard Coordinates"
-msgstr "PCA standardne koordinate"
-
-#: R/principal.b.R
-msgid ""
-"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
-"for several continuous variables. Computations are based on "
-"<tt>stats::prcomp</tt> function.</p>\n"
-"<p>Although rotated components are not principal components, they are "
-"widely used. Only orthogonal rotations are available (from GPArotation "
-"package).</p>\n"
-"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
-"principal (scaled by the squareroot of eigenvalues).</p>\n"
-"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
-"eigenvalues) while loadings are standard.</li>\n"
-"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
-"are standard. </li>\n"
-"</ul>\n"
-"<p><strong>Advanced options</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Standardize loadings:</strong> loadings are normalized with "
-"sums of squared equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Standardize scores:</strong> scores are normalized with "
-"variances equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
-"applied to eigenvectors (standard loadings) instead of principal loadings "
-"(STATA way).</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
-msgstr ""
-"<p>Ovaj modul izračunava <strong>Glavnu komponentnu analizu (PCA)</strong> "
-"za nekoliko kontinuiranih varijabli. Izračuni su temeljeni na <tt>"
-"stats::prcomp</tt> funkciji.</p>\n"
-"<p>Iako su rotirane komponente nisu glavne komponente, široko se koriste. "
-"Dostupne su samo ortogonalne rotacije (iz paketa GPArotation).</p>\n"
-"<p>Opterećenja (koordinate varijabli) i rezultati (koordinate promatraanja) "
-"su glavni (mjereni kvadratnim korijenom eigenvalues).</p>\n"
-"<p>Biplots slijedi \"Biplots u praksi\" (Michael Greenacre, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Forma biplota:</strong> Rezultati su glavni (mjereni "
-"eigenvalues) dok su opterećenja standardna.</li>\n"
-"<li><strong>Kovarijacijski biplot:</strong> Opterećenja su glavna dok su "
-"rezultati standardni. </li>\n"
-"</ul>\n"
-"<p><strong>Napredne opcije</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Standardizirajte opterećenja:</strong> opterećenja su "
-"normalizirana sa zbrojem kvadrata jednakim 1 (umjesto eigenvalues)</li>\n"
-"<li><strong>Standardizirajte rezultate:</strong> rezultati su normalizirani "
-"sa varijancama jednake 1 (umjesto eigenvalues)</li>\n"
-"<li><strong>Rotirajte eigenvektor:</strong> rotacija (varimax, itd.) se "
-"primjenjuje na eigenvektor (standardna opterećenja) umjesto glavnih "
-"opterećenja (način STATA).</li>\n"
-"</ul>\n"
-"<p>Uzorak datoteke je uključen u Otvori > Bibiloteka podataka> vijPlots > "
-"Iris</p>"
-
-#: R/qqplot.b.R
-msgid "Natural Log Tranform requires positive (>0) data."
-msgstr "Prirodna logaritamska transformacija zahtijeva pozitivne (>0) podatke."
-
-#: R/qqplot.b.R
-msgid "{distrib} distribution requires positive (>0) data."
-msgstr "{distrib} distribucija zahtijeva pozitivne (>0) podatke."
-
-#: R/qqplot.b.R
-msgid "Exponential distribution requires non-negative (≥0) data."
-msgstr "Eksponencijalna distribucija zahtijeva nenegativne (≥0) podatke."
-
-#: R/qqplot.b.R
-msgid "Beta distribution requires data between 0 and 1."
-msgstr "Beta distribucija zahtijeva podatke između 0 i 1."
-
-#: R/qqplot.b.R
-msgid "Unable to estimate the distribution parameters."
-msgstr "Nije moguće procijeniti parametre distribucije."
-
-#: R/qqplot.b.R
-msgid "Wrong parameter values."
-msgstr "Krive vrijednosti parametara."
-
-#: R/qqplot.b.R
-msgid "F"
-msgstr "F"
-
-#: R/qqplot.b.R
-msgid ""
-"<p>This module uses <a href = "
-"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
-"package<a/> by Alexandre Almeida, Adam Loy and Heike Hofmann. In-depth "
-"information can be found in the package documentation on CRAN site.</p>\n"
-"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
-"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
-"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
-"identity line.</p>\n"
-"<p><strong>Confidence band:</strong> Draws a confidence band around the "
-"reference line. qqplotr package provides several methods to compute the "
-"confidence band:</p>\n"
-"<ul>\n"
-"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
-"bands based on Normal confidence intervals;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
-"based on a parametric bootstrap;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
-"Kolmogorov-Smirnov test;</li>\n"
-"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
-"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
-"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
-"simultaneous bands using the equal local levels.</li>\n"
-"</ul>\n"
-"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
-"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
-"according to the reference line. This procedure may help reducing visual "
-"bias caused by the orthogonal distances from the points to the reference "
-"line.</p>\n"
-"<p><strong>Parameter values:</strong> The distribution parameters can be "
-"estimated from data using:</p>\n"
-"<ul>\n"
-"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
-"should work with all distributions but \"t\" and \"uniform\";</li>\n"
-"<li><strong>Method of Moments</strong> for moment based parameters : it "
-"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
-"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
-"</ul>\n"
-"<p>or entered by user:</p>\n"
-"<ul>\n"
-"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
-"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
-"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
-"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
-"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
-"(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
-msgstr ""
-"<p>Ovaj modul koristi <a href = \"https://CRAN.R-project.org/"
-"package=qqplotr\" target=\"_blank\">qqplotr R paket<a/> autora Alexandre "
-"Almeida, Adam Loy i Heike Hofmann. Detaljne informacije se mogu pronaći u "
-"dokumentaciji paketa na CRAN web-stranici.</p>\n"
-"<p><strong>Referentna linija:</strong> Crta <em>identitetne linije</em> (y = "
-"x) ili uobičajeno korištene <em>Q-Q linije</em> koje presjecaju dvije "
-"podatkovne kvantile (Q<sub>0.25</sub> i Q<sub>0.75</sub>). P-P plot podržava "
-"samo identitetnu liniju.</p>\n"
-"<p><strong>Pouzdani opseg:</strong> Crta pouzdani opsega oko referentne "
-"linije. qqplotr paket pruža nekoliko metoda za izračun pouzdanog opsega:</p>"
-"\n"
-"<ul>\n"
-"<li><strong><em>Točkasti</em></strong> konstruiraju točkaste pouzdane opsege "
-"na temelju intervala pouzdane norme;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> stvara točkaste pouzdane opsege na "
-"temelju parametričkog bootstrapa;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> opseg temelji se na "
-"Kolmogorov-Smirnovovom testu;</li>\n"
-"<li><strong><em>Osjetljiv na rep</em></strong> konstruiraju pouzdane opsege "
-"osjetljive na rep, ali su implementirani samo za Q-Q plotove norme;</li>\n"
-"<li><strong><em>Jednake lokalne razine (ELL)</em></strong> konstruira "
-"istovremene trake pomoću jednakih lokalnih razina.</li>\n"
-"</ul>\n"
-"<p>P-P dijagrami podržavaju samo metode \"ELL\" i \"Bootstrap\".</p>\n"
-"<p><strong>Detrendirani dijagram:</strong> Objekti su <em>detrendirani</em> "
-"prema referentnoj liniji. Ova procedura može pomoći u smanjenju vizualne "
-"pristranosti uzrokovane ortogonalnim udaljenostima od točaka do referentne "
-"linije.</p>\n"
-"<p><strong>Vrijednosti parametara:</strong> Parametri distribucije mogu se "
-"procijeniti iz podataka pomoću:</p>\n"
-"<ul>\n"
-"<li><strong>Metoda maksimalne vjerojatnosti</strong> (korištenje MASS paketa)"
-": trebao bi raditi sa svim distribucijama, osim \"t\" i \"uniform\";</li>\n"
-"<li><strong>Metoda momenta</strong> za parametre temeljene na momentu: "
-"trebao bi raditi sa distribucijama \"normal\", \"log-normal\", \"Beta\", "
-"\"Exponential\", \"Gamma\", \"Logistic\" i \"Uniform\";</li>\n"
-"</ul>\n"
-"<p>ili uneseni od strane korisnika:</p>\n"
-"<ul>\n"
-"<li><strong>Parametar 1:</strong> srednja vrijednost (Normal), meanlog (Log-"
-"normal), shape1 (Beta), lokacija (Cauchy, Logistic), df (Chi-kvadrat, "
-"Student), df1 (F), stopa (Exponential), oblik (Gamma, Weibull) i min "
-"(Uniform);</li>\n"
-"<li><strong>Parametar 2:</strong> standardna devijacija (normal), sdlog (Log-"
-"normal), shape2 (Beta), skaliranje (Cauchy, Logistic), df2 (F), stopa "
-"(Gamma, Weibull) i maks. (Uniform).</li>\n"
-"</ul>\n"
-"</p>"
-
-#: areachart/options/ignoreNA.title
-#: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
-msgid "Ignore missing values"
-msgstr "Zanemari nedostajuće vrijednosti"
-
-#: areachart/options/yTicks.title
-#: barplot/options/xTicks.title
-#: barplot/options/yTicks.title
-#: boxplot/options/xTicks.title
-#: boxplot/options/yTicks.title
-#: histogram/options/xTicks.title
-#: histogram/options/yTicks.title
-#: linechart/options/yTicks.title
-#: lollipop/options/xTicks.title
-#: lollipop/options/yTicks.title
-#: mrcrosstabs/options/xTicks.title
-#: mrcrosstabs/options/yTicks.title
-#: mrfrequencies/options/xTicks.title
-#: mrfrequencies/options/yTicks.title
-#: qqplot/options/xTicks.title
-#: qqplot/options/yTicks.title
-#: raincloud/options/xTicks.title
-#: raincloud/options/yTicks.title
-#: scatterplot/options/xTicks.title
-#: scatterplot/options/yTicks.title
-msgid "Tick count"
-msgstr "Aktualiziraj zbroj"
-
-#: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
-#: mrcrosstabs/options/reverseStack.title
-msgid "Reverse stacking order"
-msgstr "Obrni redoslijed"
-
-#: barplot/options/barType/dodge.title
-#: mrcrosstabs/options/bartype/dodge.title
-msgid "Grouped (tight)"
-msgstr "Grupirano (tijesno)"
-
-#: barplot/ui[4].label
-#: boxplot/ui[3].label
-#: piechart/ui[4].label
-msgid "Text Size & Facets"
-msgstr "Veličina teksta i fasete"
-
-#: boxplot/ui[2][0][1][0].label
-msgid "Box Elements"
-msgstr "Elementi kutije"
-
-#: corresp/options/normalization/symmetric.title
-msgid "Symmetric"
-msgstr "Simetrično"
-
-#: corresp/ui[6].label
-msgid "Text Size & Colors"
-msgstr "Veličina teksta i boje"
-
-#: likertplot/options/ignoreNA.title
-msgid "Ignore missing groups"
-msgstr "Zanemari nedostajuće grupe"
-
-#: linechart/ui[1][0][1].label
-#: principal/ui[4].label
-msgid "Sizes & Colors"
-msgstr "Veličine i boje"
-
-#: mrcrosstabs/options/emptyAsNA.title
-#: mrfrequencies/options/emptyAsNA.title
-msgid "Treat empty values as missing"
-msgstr "Tretiraj prazne vrijednosti kao nedostajuće"
-
-#: mrcrosstabs/options/computedValues/responses.title
-#: mrfrequencies/options/showResponses.title
-#: mrfrequencies/options/yaxis/responses.title
-msgid "% of responses"
-msgstr "% odgovora"
-
-#: mrcrosstabs/options/computedValues/cases.title
-#: mrfrequencies/options/showCases.title
-#: mrfrequencies/options/yaxis/cases.title
-msgid "% of cases"
-msgstr "% slučajeva"
-
-#: mrcrosstabs/options/computedValues/options.title
-msgid "% by row"
-msgstr "% po retku"
-
-#: principal/ui[4][0][0][1].label
-#: scatterplot/ui[2][0][0][0].label
-msgid "Element Sizes"
-msgstr "Veličine elemenata"
-
-#: raincloud/options/groupOne.title
-#: raincloud/ui[0][1].label
-msgid "Group (Side-by-side)"
-msgstr "Grupa (jedna pored druge)"
-
-#: scatterplot/ui[2].label
-msgid "Element Sizes & Facets"
-msgstr "Veličine elemenata i fasete"
-
-#: histogram/options/binBoundary.title
-msgctxt "boundary"
-msgid "Position"
-msgstr "Pozicija"
-
-#: areachart/options/displayFormat/%b.title
-#: linechart/options/displayFormat/%b.title
-msgctxt "menu"
-msgid "Oct"
-msgstr "Lis"
-
-#: areachart/options/displayFormat/%B.title
-#: linechart/options/displayFormat/%B.title
-msgctxt "menu"
-msgid "October"
-msgstr "Listopad"
-
-#: R/qqplot.b.R
-#: qqplot/options/distrib/norm.title
-msgctxt "distribution"
-msgid "Normal"
-msgstr "Normalno"

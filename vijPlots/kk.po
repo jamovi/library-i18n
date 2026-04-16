@@ -10,6 +10,11 @@ msgstr ""
 
 #: R/qqplot.b.R
 #, fuzzy
+msgid "{distrib} distribution requires positive (>0) data."
+msgstr "{distrib} тарату үшін оң (>0) мәндер қажет"
+
+#: R/qqplot.b.R
+#, fuzzy
 msgid "{distribStr} {typeStr} Plot of {varStr}"
 msgstr "{distribStr} {typeStr} {varStr} графігі"
 
@@ -32,6 +37,12 @@ msgstr "{rotation} вращение с нормализацией Кайзера
 #, fuzzy
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "{rotation} айналуы Кайзер нормалдауымен пайдаланылды."
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+#, fuzzy
+msgid "{var} doesn't have a valid date format."
+msgstr "{var} жарамсыз күнтізбе форматына ие"
 
 #: barplot/options/facetNumber.title
 #: boxplot/options/facetNumber.title
@@ -57,6 +68,11 @@ msgstr "Жолдар мен бағандар саны"
 msgid "% Accuracy"
 msgstr "% Дүрыс"
 
+#: mrcrosstabs/options/computedValues/options.title
+#, fuzzy
+msgid "% by row"
+msgstr "% бойынша қатар"
+
 #: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
 #, fuzzy
@@ -75,6 +91,13 @@ msgstr "% Мәтіндері"
 msgid "% of Cases"
 msgstr "Жағдайлардың пайызы"
 
+#: mrcrosstabs/options/computedValues/cases.title
+#: mrfrequencies/options/showCases.title
+#: mrfrequencies/options/yaxis/cases.title
+#, fuzzy
+msgid "% of cases"
+msgstr "Жағдайлардың пайызы"
+
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -89,6 +112,13 @@ msgstr "Инерцияның пайызы"
 msgid "% of Responses"
 msgstr "Жауаптардың пайызы"
 
+#: mrcrosstabs/options/computedValues/responses.title
+#: mrfrequencies/options/showResponses.title
+#: mrfrequencies/options/yaxis/responses.title
+#, fuzzy
+msgid "% of responses"
+msgstr "Жауаптардың пайызы"
+
 #: principal/results/summaryTable.columns.title
 #, fuzzy
 msgid "% of Variance"
@@ -98,6 +128,395 @@ msgstr "% өзгеріс"
 #, fuzzy
 msgid "% within"
 msgstr "% ішінде"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid ""
+"<h3>Data & Sorting</h3>\n"
+"<ul>\n"
+"<li>Likert variables must be of ordinal measure-type. (Continuous "
+"measure-type works as well.)</li>\n"
+"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
+"must be of integer data-type.</li>\n"
+"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
+"order in table and graph (when some variables miss some levels).</li>\n"
+"<li><strong>Convert variables to integer:</strong> when checked, the level "
+"labels are ignored and only integer values are used.</li>\n"
+"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
+"variables by median.</li>\n"
+"</ul>\n"
+"<h3>Comparison Tests</h3>\n"
+"<p>When using a group variable, several tests are available:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
+"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
+"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
+"</ul>\n"
+"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
+"question) for post hoc tests or <strong>overall</strong> (groupwise and "
+"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
+"p-values are already adjusted (groupwise); no other adjustment is "
+"possible.</p>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
+msgstr ""
+"<h3>Деректер & Сорттау</h3>\n"
+"<ul>\n"
+"<li>Лайкерт айнымалылары реттік өлшем түрінде болуы керек (Сондай-ақ бүтін "
+"өлшем түрі де жұмыс істеуі мүмкін).</li>\n"
+"<li>Егер орташа/орта/стандартты ауытқу есептеу немесе салыстыру тесттерін "
+"пайдалану ниетінде болсаңыз, олар бүтін деректер түрінде болуы керек.</li>\n"
+"<li><strong>Деңгейлерді тазарту:</strong> бұл белгіленген болса, кесте мен "
+"графикте (белгілі бір айнымалылардың деңгейлерін жоғалтқан кезде) таңбалар "
+"ретінде деңгейлердің ретін ретке келтіруге тырысады.</li>\n"
+"<li><strong>Айнымалыларды бүтінге ауыстыру:</strong> бұл белгіленген болса, "
+"деңгей таңбалары елемделіп, тек бүтін мәндер ғана пайдаланылады.</li>\n"
+"<li><strong>Айнымалыларды орта бойынша сорттау:</strong> Лайкерт "
+"айнымалыларының тізімін орта бойынша реттеу.</li>\n"
+"</ul>\n"
+"<h3>Салыстыру тесттері</h3>\n"
+"<p>Топ айнымалысын пайдаланған кезде бірнеше тесттер қол жетімді:</p>\n"
+"<ul>\n"
+"<li><strong>Манн-Уитни U:</strong> екі топ салыстыруы</li>\n"
+"<li><strong>Крускал-Уоллис:</strong> n топ салыстыруы</li>\n"
+"<li><strong>Пост-хок тесттері:</strong> Данн, Коновер және "
+"Двасс-Стил-Кричлоу-Флингер (DSCF) жұптас салыстыру тесттері.</li>\n"
+"</ul>\n"
+"<p>p-қимылдар пост-хок тесттері үшін <strong>топтық</strong> (әрбір сұраққа) "
+"немесе <strong>жалпы</strong> (топтық және сұрақтық) Манн-Уитни U, "
+"Крускал-Уоллис және пост-хок тесттері үшін бірлестірілуі мүмкін. DSCF "
+"p-қимылдары әлеуметтендірілген (топтық); басқа бірлестіру мүмкін емес.</p>\n"
+"<p>Үлгі файл Open > Data Library > vijPlots > Likert мекенжайында "
+"орналасқан</p>"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
+"two categorical variables. Computations are based on <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
+"using the \"Counts\" variable.</p>\n"
+"<p><strong>Supplementary row or column</strong> numbers may be entered as "
+"integer lists : 1,3,6</p>\n"
+"<p>Four normalizations (scaling of row and column scores before plotting) "
+"are avalaible :</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Row an columns scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
+"square root of eigenvalues. </li>\n"
+"<li><strong>Row Principal:</strong> Only row scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Column Principal:</strong> Only column scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Standard:</strong> The raw coordinates without "
+"normalization.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
+msgstr ""
+"<p>Бұл модуль екі санаттық айнымалыға <strong>Сәйкестік Анализі "
+"(CA)</strong> есептейді. Есептеулер <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> пакетінің F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Деректер <em>jamovi</em> ішкі салмақ жүйесін немесе \"Сан\" айнымалысын "
+"пайдаланып салмақталған болуы мүмкін.</p>\n"
+"<p><strong>Қосымша қатар немесе баған</strong> сандары бүтін сандар тізімі "
+"ретінде енгізіледі: 1,3,6</p>\n"
+"<p>Төрт нормалдандыру (графикке салыстырғанда қатар және баған нәтижелерін "
+"өлшеу) бар:</p>\n"
+"<ul>\n"
+"<li><strong>Басты:</strong> Қатар және баған нәтижелері эйгемәндермен "
+"өлшенеді.</li>\n"
+"<li><strong>Симметриялық:</strong> Қатар және баған нәтижелері эйгемәндердің "
+"квадрат түбірмен өлшенеді. </li>\n"
+"<li><strong>Қатар басты:</strong> Тек қана қатар нәтижелері эйгемәндермен "
+"өлшенеді.</li>\n"
+"<li><strong>Баған басты:</strong> Тек қана баған нәтижелері эйгемәндермен "
+"өлшенеді.</li>\n"
+"<li><strong>Стандарт:</strong> Нормалдандырылмаған күшті координаттар.</li>\n"
+"</ul>\n"
+"<p>Үлгі файл Open > Data Library > vijPlots > Smoking мекенжайында "
+"қосылған</p>"
+
+#: R/multcorresp.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes <strong>Multiple Correspondence Analysis "
+"(MCA)</strong> for several categorical variables. Computations are based on "
+"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Both classic methods are available:</p>\n"
+"<ul>\n"
+"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
+"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues are "
+"the squares of those of the indicator matrix method. </li>\n"
+"</ul>\n"
+"<p>Both methods give the same <em>standard</em> coordinates (but different "
+"<em>principal</em> coordinates).</p>\n"
+"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
+"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
+"(and inertia) of categories and observations are computed from the original "
+"eigenvalues of the Burt matrix.</p>\n"
+"<p>The <strong>Normalization</strong> options specify how the coordinates "
+"are scaled (by eigenvalues):</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Both category and observation coordinates "
+"are scaled.</li>\n"
+"<li><strong>Category principal:</strong> Only category coordinates are "
+"scaled.</li>\n"
+"<li><strong>Observation principal:</strong> Only observation coordinates are "
+"scaled.</li>\n"
+"<li><strong>Standard:</strong> Both category and observation coordinates are "
+"standard.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
+msgstr ""
+"<p>Бұл модуль бірнеше санаттық айнымалылар үшін <strong>Көп Санатты "
+"Сәйкестіктің Әдістемесі (MCA)</strong> есептеулерін жүргізеді. Есептеулер <a "
+"href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> пакетіне сүйенеді, Ф.&nbsp;Хассон, "
+"Ж.&nbsp;Жосс, С.&nbsp;Ле, Ж.&nbsp;Мазет.</p>\n"
+"<p>Классикалық әдістердің екеуі де қол жетімді:</p>\n"
+"<ul>\n"
+"<li><strong>Көрсеткіш матрицасы:</strong> Көрсеткіш матрицасының СА</li>\n"
+"<li><strong>Берт матрицасы:</strong> Берт матрицасының СА. Эйгмәндер "
+"көрсеткіш матрицасы әдісінің эйгмәндерінен алынған квадраттар.</li>\n"
+"</ul>\n"
+"<p>Екі әдіс де бірдей <em>стандарт</em> координаталар береді (бірақ әр түрлі "
+"<em>басты</em> координаталар).</p>\n"
+"<p>Тандырылған жағдайда, <strong>Бензекри және Гринакр түзетулері</strong> "
+"тек эйгмәндерге қолданылады (<strong>Қорытынды</strong> кестесі). Санаттар "
+"мен бақылаулардың координаталары (және илеу) Берт матрицасының алғашқы "
+"эйгмәндерінен есептеледі.</p>\n"
+"<p><strong>Нормалдау</strong> опциялары координаталарды қалай масштабтау "
+"керектігін (эйгмәндер бойынша) көрсетеді:</p>\n"
+"<ul>\n"
+"<li><strong>Басты:</strong> Санаттар мен бақылаулар координаталары екеуі де "
+"масштабталады.</li>\n"
+"<li><strong>Санат басты:</strong> Тек санат координаталары "
+"масштабталады.</li>\n"
+"<li><strong>Бақылау басты:</strong> Тек бақылау координаталары "
+"масштабталады.</li>\n"
+"<li><strong>Стандарт:</strong> Санаттар мен бақылаулар координаталары екеуі "
+"де стандартты.</li>\n"
+"</ul>\n"
+"<p>Сәйкес файл үлгісі Open > Data Library > vijPlots > Cars мекенжайында "
+"қосылған.</p>"
+
+#: R/principal.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
+"for several continuous variables. Computations are based on "
+"<tt>stats::prcomp</tt> function.</p>\n"
+"<p>Although rotated components are not principal components, they are widely "
+"used. Only orthogonal rotations are available (from GPArotation "
+"package).</p>\n"
+"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
+"principal (scaled by the squareroot of eigenvalues).</p>\n"
+"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
+"eigenvalues) while loadings are standard.</li>\n"
+"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
+"are standard. </li>\n"
+"</ul>\n"
+"<p><strong>Advanced options</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Standardize loadings:</strong> loadings are normalized with sums "
+"of squared equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Standardize scores:</strong> scores are normalized with "
+"variances equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
+"applied to eigenvectors (standard loadings) instead of principal loadings "
+"(STATA way).</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
+msgstr ""
+"<p>Бұл модуль бірнеше үздіксіз айнымалылар үшін <strong>Басты Компоненттер "
+"Әдістемесі (PCA)</strong> есептеулерін жүргізеді. Есептеулер "
+"<tt>stats::prcomp</tt> функциясына сүйенеді.</p>\n"
+"<p>Басты компоненттер емес болса да, айналдырылған компоненттер кеңінен "
+"қолданылады. Тек ортогональ айналдырулар ғана қол жетімді (GPArotation "
+"пакетінен).</p>\n"
+"<p>Жүктеулер (айнымалы координаталар) және баллдар (бақылау координаталар) "
+"басты (эigenvalues квадрат түбіне сәйкес масштабталған).</p>\n"
+"<p>Биплот \"Биплоттар практикасында\" (Майкл Гринакр, 2010) бойынша:</p>\n"
+"<ul>\n"
+"<li><strong>Форма биплоты:</strong> Баллдар басты (эigenvalues бойынша "
+"масштабталған), ал жүктеулер стандартты.</li>\n"
+"<li><strong>Ковариация биплоты:</strong> Жүктеулер басты, ал баллдар "
+"стандартты.</li>\n"
+"</ul>\n"
+"<p><strong>Кәдімгі опциялар</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Стандарттау жүктеулер:</strong> жүктеулер квадраттарының "
+"қосындысы 1-ге (эigenvalues орнына) тең болатындай нормалданады</li>\n"
+"<li><strong>Стандарттау баллдар:</strong> баллдар 1-ге (эigenvalues орнына) "
+"тең дисперсияларына сәйкес нормалданады</li>\n"
+"<li><strong>Айналдыру эйгenvectorлар:</strong> айналдыру (varimax, т.б.) "
+"эйгenvectorларға (стандартты жүктеулер) қолданылады, басты жүктеулерге "
+"(STATA әдісі) емес.</li>\n"
+"</ul>\n"
+"<p>Сәйкес файл үлгісі Open > Data Library > vijPlots > Iris мекенжайында "
+"қосылған.</p>"
+
+#: R/mrfrequencies.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes frequencies for multiple response questions, also "
+"known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>Бұл модуль көпжақты сұрақтарға жауап берудің жиіліктерін есептейді, яғни "
+"\"Барлығын таңдаңыз\" (CATA) сұрақтары.</p>\n"
+"<p>Сұрақтар мынадай түрде кодталуы мүмкін:</p>\n"
+"<ul>\n"
+"<li>әрбір мүмкін жауапқа 0/1, 1/2, Y/N деген бірнеше <strong>думми (немесе "
+"индикатор) айнымалылары</strong>;</li>\n"
+"<li>белгімен (көбінесе \",\" немесе \";\") бөлінген таңдалған жауаптарды "
+"қамтитын бір <strong>көпмәнді айнымалы</strong>;</li>\n"
+"</ul>\n"
+"<p>Үлгі файл Open > Data Library > vijPlots > Credit Cards мекенжайында "
+"орналасқан</p>"
+
+#: R/mrcrosstabs.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes two-way frequencies for multiple response questions, "
+"also known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>Бұл модуль көп response сұрақтары үшін екіжақты жиіліктерді есептейді, "
+"сондай-ақ \"Check All That Apply\" (CATA) сұрақтары.</p>\n"
+"<p>Сұрақтар мына тәсілдермен кодталуы мүмкін:</p>\n"
+"<ul>\n"
+"<li>әрбір мүмкін жауапқа 0/1, 1/2, Y/N пайдаланып бірнеше <strong>dummy "
+"(немесе индикатор) айнымалысы</strong>;</li>\n"
+"<li>белгімен (көбінесе \",\" немесе \";\") бөлініп, барлық белгіленген "
+"жауаптарды қамтитын <strong>бірнеше мәнді айнымалы</strong>;</li>\n"
+"</ul>\n"
+"<p>Үлгі файл Open > Data Library > vijPlots > Credit Cards мекенжайында "
+"қосылған</p>"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid ""
+"<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
+"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"Heike Hofmann. In-depth information can be found in the package "
+"documentation on CRAN site.</p>\n"
+"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
+"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
+"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
+"identity line.</p>\n"
+"<p><strong>Confidence band:</strong> Draws a confidence band around the "
+"reference line. qqplotr package provides several methods to compute the "
+"confidence band:</p>\n"
+"<ul>\n"
+"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
+"bands based on Normal confidence intervals;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
+"based on a parametric bootstrap;</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
+"Kolmogorov-Smirnov test;</li>\n"
+"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
+"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
+"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
+"simultaneous bands using the equal local levels.</li>\n"
+"</ul>\n"
+"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
+"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
+"according to the reference line. This procedure may help reducing visual "
+"bias caused by the orthogonal distances from the points to the reference "
+"line.</p>\n"
+"<p><strong>Parameter values:</strong> The distribution parameters can be "
+"estimated from data using:</p>\n"
+"<ul>\n"
+"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
+"should work with all distributions but \"t\" and \"uniform\";</li>\n"
+"<li><strong>Method of Moments</strong> for moment based parameters : it "
+"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
+"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
+"</ul>\n"
+"<p>or entered by user:</p>\n"
+"<ul>\n"
+"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
+"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
+"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
+"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
+"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
+"(Uniform).</li>\n"
+"</ul>\n"
+"</p>"
+msgstr ""
+"<p>Бұл модуль <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
+"target=\"_blank\">qqplotr R пакетінің<a/> Alexandre Almeida, Adam Loy және "
+"Heike Hofmann пайдаланады. Терең ақпарат пакеттің құжаттамасында CRAN "
+"сайтында табыла алады.</p>\n"
+"<p><strong>Сілтеме линиясы:</strong> Идентитет линиясын (y = x) немесе екі "
+"деректер квантілін (Q<sub>0.25</sub> және Q<sub>0.75</sub>) қиылыстыратын "
+"қолданылатын Q-Q линиясын салады. P-P графігі тек идентитет линиясын "
+"қолдайды.</p>\n"
+"<p><strong>Сенім бандасы:</strong> Сілтеме линиясының айналасында сенім "
+"бандасын салады. qqplotr пакеті сенім бандасын есептеу үшін бірнеше "
+"әдістерді ұсынады:</p>\n"
+"<ul>\n"
+"<li><strong><em>Нүктелік</em></strong> нормаль сенім аралықтарына сүйене "
+"отырып нүктелік сенім бандасын құрады;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> параметрлік бутстреп бойынша "
+"нүктелік сенім бандасын жасайды;</li>\n"
+"<li><strong><em>Колмогоров-Смирнов</em></strong> бандасы Колмогоров-Смирнов "
+"тестіне сүйене отырып жасалады;</li>\n"
+"<li><strong><em>Құйрықты сезгіш</em></strong> құйрықты сезгіш сенім бандасын "
+"құрады, бірақ тек нормаль Q-Q графігінде жасалған;</li>\n"
+"<li><strong><em>Тең локаль деңгейлер (ELL)</em></strong> бірдей локаль "
+"деңгейлерді пайдаланып синхронды бандасын құрады.</li>\n"
+"</ul>\n"
+"<p>P-P графігі тек \"ELL\" және \"Bootstrap\" әдістерін қолдайды.</p>\n"
+"<p><strong>Детрендталған график:</strong> Объектілер сілтеме линиясына "
+"сәйкес детрендталған. Бұл процедура сілтеме линиясына перпендикуляр "
+"қашықтықтардан туындайтын көріністік байланысты азайтуға көмектесуі "
+"мүмкін.</p>\n"
+"<p><strong>Параметрлердің мәндер:</strong> Тарату параметрлері деректерден "
+"MASS пакеті пайдаланылып максималь жақындық әдісі бойынша бағаланады: бұл "
+"барлық таратуларда, \"t\" және \"унитар\" таратуларынан басқа жұмыс істеуі "
+"тиіс;</li>\n"
+"<li><strong>Момент әдісі</strong> моменттік параметрлер үшін: бұл "
+"\"нормаль\", \"лог-нормаль\", \"Бета\", \"Экспоненциал\", \"Гамма\", "
+"\"Логистика\" және \"Унитар\" таратуларында жұмыс істеуі тиіс;</li>\n"
+"</ul>\n"
+"<p>немесе пайдаланушы енгізеді:</p>\n"
+"<ul>\n"
+"<li><strong>Параметр 1:</strong> орташа (Нормаль), meanlog (Лог-нормаль), "
+"shape1 (Бета), location (Кошы, Логистика), df (Хи-квадрат, Студент), df1 "
+"(F), rate (Экспоненциал), shape (Гамма, Вейбулл) және min (Унитар);</li>\n"
+"<li><strong>Параметр 2:</strong> sd (нормаль), sdlog (Лог-нормаль), shape2 "
+"(Бета), scale (Кошы, Логистика), df2 (F), rate (Гамма, Вейбулл) және max "
+"(Унитар).</li>\n"
+"</ul>\n"
+"</p>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -431,6 +850,16 @@ msgstr "Авто"
 msgid "Axes"
 msgstr "Окс"
 
+#: R/corresp.b.R
+#, fuzzy
+msgid "Axis numbers cannot be equal."
+msgstr "Ось сандары тең болмауы керек."
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
+msgstr "Аксистер нөмірлері өлшемдер санынан ({nDim}) асатын болуы мүмкін емес"
+
 #: corresp/ui[7].label
 #: mrfrequencies/ui[5].label
 #, fuzzy
@@ -479,6 +908,11 @@ msgstr "Бензекри коррекциясы"
 #, fuzzy
 msgid "Beta"
 msgstr "Бета"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Beta distribution requires data between 0 and 1."
+msgstr "Бета таратуы 0 және 1 аралығындағы мәндерді талап етеді"
 
 #: likertplot/options/adjustMethod/BH.title
 #, fuzzy
@@ -763,6 +1197,17 @@ msgstr "Шекарасы"
 msgid "Bottom"
 msgstr "Төменгі"
 
+#: histogram/options/binBoundary.title
+#, fuzzy
+msgctxt "boundary"
+msgid "Position"
+msgstr "Орналасу"
+
+#: boxplot/ui[2][0][1][0].label
+#, fuzzy
+msgid "Box Elements"
+msgstr "Коробка Элементтері"
+
 #: package/analyses/boxplot.title
 #: package/analyses/boxplot.menuTitle
 #: boxplot/options.title
@@ -823,6 +1268,16 @@ msgstr "Топ бойынша"
 #, fuzzy
 msgid "By variable"
 msgstr "Айнымалы бойынша"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Cannot convert text variables to integers"
+msgstr "Мәтін айнымалыларын бүтін санға ауыстыруға болмайды"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Cannot tidy up text variables"
+msgstr "Мәтін айнымалысын тазарту мүмкін емес"
 
 #: areachart/ui[4][2].label
 #: barplot/ui[7][2].label
@@ -1090,10 +1545,20 @@ msgstr "Бағана суреті"
 msgid "Column plot"
 msgstr "Табло графігі"
 
+#: R/corresp.b.R
+#, fuzzy
+msgid "Column Points for {cols}"
+msgstr "Баған нүктелері {cols}"
+
 #: corresp/options/normalization/colprincipal.title
 #, fuzzy
 msgid "Column principal"
 msgstr "Баганалық басты"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Column principal normalization"
+msgstr "Басты бағдарлама нормалдау"
 
 #: corresp/results/colProfiles.title
 #, fuzzy
@@ -1122,6 +1587,16 @@ msgstr "Бағаналар (Топтар)"
 #, fuzzy
 msgid "Comparison Tests"
 msgstr "Салыстыру тестілері"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Comparison tests cannot be computed with empty (N=0) groups"
+msgstr "Салыстыру тесттері бос (N=0) топтармен есептелуге болмайды"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Comparison tests require numeric variables"
+msgstr "Салыстыру тесттері сан айнымалыларын талап етеді"
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
@@ -1288,6 +1763,16 @@ msgstr "Кросстаб"
 #, fuzzy
 msgid "Crosstab (% by row)"
 msgstr "Крестабель (% жол бойынша)"
+
+#: R/mrcrosstabs.b.R
+#, fuzzy
+msgid "Crosstab (% of cases)"
+msgstr "Кросстабуляция (жағдайлардың пайызы)"
+
+#: R/mrcrosstabs.b.R
+#, fuzzy
+msgid "Crosstab (% of responses)"
+msgstr "Кросстабуляция (жауаптардың пайызы)"
 
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
@@ -1489,6 +1974,13 @@ msgstr "Көрсету форматы"
 msgid "Distribution"
 msgstr "Тарату"
 
+#: R/qqplot.b.R
+#: qqplot/options/distrib/norm.title
+#, fuzzy
+msgctxt "distribution"
+msgid "Normal"
+msgstr "Нормаль"
+
 #: piechart/options/donut.title
 #, fuzzy
 msgid "Donut chart"
@@ -1558,6 +2050,17 @@ msgstr "Еигенмән"
 msgid "Eigenvalues"
 msgstr "Еигенмәндер"
 
+#: principal/ui[4][0][0][1].label
+#: scatterplot/ui[2][0][0][0].label
+#, fuzzy
+msgid "Element Sizes"
+msgstr "Элемент Өлшемдері"
+
+#: scatterplot/ui[2].label
+#, fuzzy
+msgid "Element Sizes & Facets"
+msgstr "Элемент өлшемдері & Фасеттер"
+
 #: qqplot/options/methodQQ/ell.title
 #: qqplot/options/methodPP/ell.title
 #, fuzzy
@@ -1587,10 +2090,20 @@ msgstr "ЕО (Д-М-Ж)"
 msgid "Exponential"
 msgstr "Экспоненциальный"
 
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Exponential distribution requires non-negative (≥0) data."
+msgstr "Экспоненциалды тарату үшін не теріс емес (≥0) мәндер қажет"
+
 #: principal/results/summaryTable.columns.superTitle
 #, fuzzy
 msgid "Extraction Sums of Squared Loadings"
 msgstr "Жүктеу квадратының қосындылары"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "F"
+msgstr "F"
 
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
@@ -1904,6 +2417,12 @@ msgstr "Топ"
 msgid "Group (Overlapped)"
 msgstr "Группа (Перекрытие)"
 
+#: raincloud/options/groupOne.title
+#: raincloud/ui[0][1].label
+#, fuzzy
+msgid "Group (Side-by-side)"
+msgstr "Топ (Жақтан-жаққа)"
+
 #: piechart/options/labels/group+count.title
 #, fuzzy
 msgid "Group + Count"
@@ -1925,6 +2444,12 @@ msgstr "Топтастыру бойынша"
 #, fuzzy
 msgid "Grouped"
 msgstr "Топтастырылған"
+
+#: barplot/options/barType/dodge.title
+#: mrcrosstabs/options/bartype/dodge.title
+#, fuzzy
+msgid "Grouped (tight)"
+msgstr "Топтасқан (тығыз)"
 
 #: histogram/options/grouping.title
 #: histogram/options/groupingN.title
@@ -2006,6 +2531,19 @@ msgstr "Жол бойынша сурет"
 #, fuzzy
 msgid "Identity line"
 msgstr "Ішкі сызық"
+
+#: likertplot/options/ignoreNA.title
+#, fuzzy
+msgid "Ignore missing groups"
+msgstr "Жоқ топтарды елемеу"
+
+#: areachart/options/ignoreNA.title
+#: barplot/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
+#, fuzzy
+msgid "Ignore missing values"
+msgstr "Жоқтыларды елемеу"
 
 #: multcorresp/options/ggrepel.title
 #, fuzzy
@@ -2608,6 +3146,11 @@ msgstr "Likert"
 msgid "Likert Plot"
 msgstr "Likert суреті"
 
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Likert Plot requires ordinal (or numeric) variables"
+msgstr "Лайкерт графігі ординалды (немесе сан) айнымалыларды талап етеді"
+
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
 #, fuzzy
@@ -2693,10 +3236,10 @@ msgid ""
 "(and changelog) is available at <a "
 "href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>."
 msgstr ""
-"Басты статистикалық диаграммалар (гистограмма,箱плот, нүкте, бар, жол, "
-"жаңбыр бұлт...) көптеген таңдалармен қоса Likert қоспа, көпірме жауап "
-"барплот, Басты компонент және (көп) сәйкестік анализдері. Жобаның көзі "
-"(және өзгеріс журналы) <a href=\"https://github.com/vjalby/vijPlots\" "
+"Басты статистикалық диаграммалар (гистограмма,箱плот, нүкте, бар, жол, жаңбыр "
+"бұлт...) көптеген таңдалармен қоса Likert қоспа, көпірме жауап барплот, "
+"Басты компонент және (көп) сәйкестік анализдері. Жобаның көзі (және өзгеріс "
+"журналы) <a href=\"https://github.com/vjalby/vijPlots\" "
 "target=\"_blank\">Github</a>-та қолжетімді"
 
 #: likertplot/options/showMannU.title
@@ -2778,6 +3321,11 @@ msgstr "Масса"
 msgid "Max"
 msgstr "Макс"
 
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Maximum of {var}"
+msgstr "{var} максимумы"
+
 #: qqplot/options/paramEstMethod/mle.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mle.label
 #, fuzzy
@@ -2790,6 +3338,16 @@ msgstr "Максимум-likelihood (MLE)"
 msgid "May"
 msgstr "Мамыр"
 
+#: R/multcorresp.b.R
+#, fuzzy
+msgid "MCA Principal Coordinates"
+msgstr "МКА Басты координаталар"
+
+#: R/multcorresp.b.R
+#, fuzzy
+msgid "MCA Standard Coordinates"
+msgstr "MCA Стандарттік Координаттары"
+
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 #, fuzzy
@@ -2801,6 +3359,11 @@ msgstr "Орташа"
 msgid "Mean & SD"
 msgstr "Орташа & SD"
 
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Mean of {var}"
+msgstr "Орташа {var}"
+
 #: R/likertplot.b.R
 #: likertplot/options/showMedian.title
 #: lollipop/options/yaxis/median.title
@@ -2808,6 +3371,30 @@ msgstr "Орташа & SD"
 #, fuzzy
 msgid "Median"
 msgstr "Медиана"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Median and mean require numeric variables"
+msgstr "Медиана және орташа мән сандық айнымалыларды талап етеді"
+
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Median of {var}"
+msgstr "Медиана {var}"
+
+#: areachart/options/displayFormat/%b.title
+#: linechart/options/displayFormat/%b.title
+#, fuzzy
+msgctxt "menu"
+msgid "Oct"
+msgstr "Қаз"
+
+#: areachart/options/displayFormat/%B.title
+#: linechart/options/displayFormat/%B.title
+#, fuzzy
+msgctxt "menu"
+msgid "October"
+msgstr "Қазан"
 
 #: likertplot/options/adjustMethod.title
 #: multcorresp/options/method.title
@@ -2875,6 +3462,11 @@ msgstr "Минимум / Максимум"
 msgid "Minimum entropy"
 msgstr "Минималды энтропия"
 
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Minimum of {var}"
+msgstr "{var} минимумы"
+
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
 #: mrcrosstabs/ui/mode/onevar[0][1].label
@@ -2939,6 +3531,11 @@ msgstr "Атау"
 #, fuzzy
 msgid "Natural log tranform"
 msgstr "Табиғи логарифмдік өзгеріс"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Natural Log Tranform requires positive (>0) data."
+msgstr "Табиғи логарифмдік ауыстыру оң (>0) мәндерді талап етеді"
 
 #: R/principal.b.R
 #, fuzzy
@@ -3083,6 +3680,11 @@ msgstr "Количество случаев:"
 #, fuzzy
 msgid "Number of dimensions"
 msgstr "Өлшемдер саны"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Number of dimensions must be less than or equal to {maxDim}."
+msgstr "Өлшемдер саны {maxDim}-ден артық болмауы керек."
 
 #: multcorresp/options/obsColor.title
 #, fuzzy
@@ -3455,6 +4057,16 @@ msgstr "Пастель 1"
 msgid "Pastel 2"
 msgstr "Пастель 2"
 
+#: R/principal.b.R
+#, fuzzy
+msgid "PCA Principal Coordinates"
+msgstr "PCA Басты Координаттары"
+
+#: R/principal.b.R
+#, fuzzy
+msgid "PCA Standard Coordinates"
+msgstr "ПКА Стандарт координаталары"
+
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
 #: barplot/ui[1][0][0]/yaxis_percent.label
@@ -3477,6 +4089,11 @@ msgstr "Пайыздық"
 #, fuzzy
 msgid "Pie Chart"
 msgstr "Пирожковый график"
+
+#: R/piechart.b.R
+#, fuzzy
+msgid "Pie charts are for educational use only. Please do not use Pie charts!"
+msgstr "Пирог графігі тек білім беру мақсатында ғана. Пирог графігін пайдаланбаңыз!"
 
 #: corresp/options/rowColor/hotpink.title
 #: corresp/options/colColor/hotpink.title
@@ -3693,6 +4310,11 @@ msgstr "Басты компоненттер әдісі"
 #, fuzzy
 msgid "Principal coordinates"
 msgstr "Басты координаттар"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Principal normalization"
+msgstr "Басты нормалдандыру"
 
 #: multcorresp/options/propPoint.title
 #, fuzzy
@@ -4027,6 +4649,13 @@ msgstr "Регрессия сызығы"
 msgid "Reverse disposition"
 msgstr "Диспозицияны қайтару"
 
+#: barplot/options/reverseStack.title
+#: likertplot/options/reverseLikert.title
+#: mrcrosstabs/options/reverseStack.title
+#, fuzzy
+msgid "Reverse stacking order"
+msgstr "Тасымалдау ретін толтыру"
+
 #: areachart/options/titleAlign/1.title
 #: areachart/options/subtitleAlign/1.title
 #: areachart/options/captionAlign/1.title
@@ -4163,10 +4792,20 @@ msgstr "Қатар Суреті"
 msgid "Row plot"
 msgstr "Жол графігі"
 
+#: R/corresp.b.R
+#, fuzzy
+msgid "Row Points for {rows}"
+msgstr "Қатар нүктелері {rows} үшін"
+
 #: corresp/options/normalization/rowprincipal.title
 #, fuzzy
 msgid "Row principal"
 msgstr "Жол басты"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Row principal normalization"
+msgstr "Қатар басты нормалдау"
 
 #: corresp/results/rowProfiles.title
 #, fuzzy
@@ -4441,6 +5080,12 @@ msgstr "Жеке мән"
 msgid "Size"
 msgstr "Өлшем"
 
+#: linechart/ui[1][0][1].label
+#: principal/ui[4].label
+#, fuzzy
+msgid "Sizes & Colors"
+msgstr "Өлшемдер мен Түстер"
+
 #: package/datasets/Smoking.name
 #, fuzzy
 msgid "Smoking"
@@ -4533,6 +5178,11 @@ msgstr "Стандарт"
 #, fuzzy
 msgid "Standard coordinates"
 msgstr "Стандарттық координаттар"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Standard normalization"
+msgstr "Стандарт нормалдау"
 
 #: principal/options/stdLoadings.title
 #, fuzzy
@@ -4651,6 +5301,16 @@ msgid "Supplement"
 msgstr "Қосымша"
 
 #: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "Қосымша баған сандары сандар тізімі болуы керек, мысалы 1,2,9"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary column numbers must be between 1 and {nmax}."
+msgstr "Қосымша баған сандары 1 және {nmax} аралығында болуы керек."
+
+#: R/corresp.b.R
 #: corresp/options/supplementaryCols.title
 #, fuzzy
 msgid "Supplementary columns"
@@ -4660,6 +5320,16 @@ msgstr "Қосымша бағаналар"
 #, fuzzy
 msgid "Supplementary Points"
 msgstr "Қосымша нүктелер"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "Қосымша қатар нөмірлері сандар тізімі болуы керек, мысалы 1,2,9"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary row numbers must be between 1 and {nmax}."
+msgstr "Қосымша қатар сандары 1 және {nmax} аралығында болуы керек."
 
 #: R/corresp.b.R
 #: corresp/options/supplementaryRows.title
@@ -4682,6 +5352,21 @@ msgstr "Қосымша айнымалылар"
 #, fuzzy
 msgid "Supplementary variables"
 msgstr "Қосымша айнымалылар"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Symetric normalization"
+msgstr "Симметриялы нормалдау"
+
+#: corresp/options/normalization/symmetric.title
+#, fuzzy
+msgid "Symmetric"
+msgstr "Симметриялы"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Symmetric normalization"
+msgstr "Симметриялы нормалдау"
 
 #: likertplot/ui[2].label
 #: likertplot/ui[2][0][0][0].label
@@ -4729,6 +5414,18 @@ msgstr "Мәтін"
 msgid "Text Size"
 msgstr "Мәтін өлшемі"
 
+#: corresp/ui[6].label
+#, fuzzy
+msgid "Text Size & Colors"
+msgstr "Мәтін Өлшемі және Түстері"
+
+#: barplot/ui[4].label
+#: boxplot/ui[3].label
+#: piechart/ui[4].label
+#, fuzzy
+msgid "Text Size & Facets"
+msgstr "Мәтін өлшемі & Фасеттер"
+
 #: R/principal.b.R
 #, fuzzy
 msgid ""
@@ -4743,6 +5440,11 @@ msgstr ""
 msgid "The number of dimensions cannot be greater than {max}."
 msgstr "Өлшемдер саны {max}-тен артық болмауы керек."
 
+#: R/principal.b.R
+#, fuzzy
+msgid "The number of dimensions cannot be greater than the number of variables."
+msgstr "Өлшемдер саны өлшемдер санынан асатын болуы мүмкін емес"
+
 #: R/qqplot.b.R
 #, fuzzy
 msgid "Theoretical Probabilities"
@@ -4752,6 +5454,30 @@ msgstr "Теориялық өлкелік"
 #, fuzzy
 msgid "Theoretical Quantiles"
 msgstr "Теориялық қалыпты ауытқулар"
+
+#: areachart/options/yTicks.title
+#: barplot/options/xTicks.title
+#: barplot/options/yTicks.title
+#: boxplot/options/xTicks.title
+#: boxplot/options/yTicks.title
+#: histogram/options/xTicks.title
+#: histogram/options/yTicks.title
+#: linechart/options/yTicks.title
+#: lollipop/options/xTicks.title
+#: lollipop/options/yTicks.title
+#: mrcrosstabs/options/xTicks.title
+#: mrcrosstabs/options/yTicks.title
+#: mrfrequencies/options/xTicks.title
+#: mrfrequencies/options/yTicks.title
+#: qqplot/options/xTicks.title
+#: qqplot/options/yTicks.title
+#: raincloud/options/xTicks.title
+#: raincloud/options/yTicks.title
+#: scatterplot/options/xTicks.title
+#: scatterplot/options/yTicks.title
+#, fuzzy
+msgid "Tick count"
+msgstr "Тик саны"
 
 #: likertplot/options/tidyUp.title
 #, fuzzy
@@ -4982,12 +5708,23 @@ msgstr "Жалпы"
 msgid "Total row"
 msgstr "Жалпы жол"
 
+#: mrcrosstabs/options/emptyAsNA.title
+#: mrfrequencies/options/emptyAsNA.title
+#, fuzzy
+msgid "Treat empty values as missing"
+msgstr "Бос мәндерді жоқ деп есептеу"
+
 #: likertplot/ui[4][0][0][0].label
 #: piechart/options/labType.title
 #: piechart/ui[2][0][0][0].label
 #, fuzzy
 msgid "Type"
 msgstr "Түр"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Unable to estimate the distribution parameters."
+msgstr "Тарату параметрлерін бағалау мүмкін емес."
 
 #: R/principal.b.R
 #, fuzzy
@@ -5292,6 +6029,11 @@ msgstr "Санаттар ішінде"
 msgid "Within groups"
 msgstr "Топтар ішінде"
 
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Wrong parameter values."
+msgstr "Параметр мәндері қате"
+
 #: areachart/options/timeVar.title
 #: areachart/options/timeVar1.title
 #: areachart/ui/mode/oneVariable[0][0][0].label
@@ -5336,6 +6078,18 @@ msgstr "Топтар ішінде"
 #, fuzzy
 msgid "X-Axis"
 msgstr "X-осі"
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+#, fuzzy
+msgid "X-Axis and Y-Axis cannot be equal."
+msgstr "X және Y аксистері тең болуы мүмкін емес"
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+#, fuzzy
+msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
+msgstr "X-және Y-аксистер өлшемдер санынан асатын болуы мүмкін емес"
 
 #: areachart/options/isDate.title
 #: linechart/options/isDate.title
@@ -5490,759 +6244,3 @@ msgstr "Сары-жасыл"
 #, fuzzy
 msgid "Yellow to Red"
 msgstr "Сарыдан қызылға дейін"
-
-#: R/areachart.b.R
-#: R/linechart.b.R
-#, fuzzy
-msgid "{var} doesn't have a valid date format."
-msgstr "{var} жарамсыз күнтізбе форматына ие"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "Қосымша қатар нөмірлері сандар тізімі болуы керек, мысалы 1,2,9"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary row numbers must be between 1 and {nmax}."
-msgstr "Қосымша қатар сандары 1 және {nmax} аралығында болуы керек."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "Қосымша баған сандары сандар тізімі болуы керек, мысалы 1,2,9"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary column numbers must be between 1 and {nmax}."
-msgstr "Қосымша баған сандары 1 және {nmax} аралығында болуы керек."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Number of dimensions must be less than or equal to {maxDim}."
-msgstr "Өлшемдер саны {maxDim}-ден артық болмауы керек."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid ""
-"Axis numbers must be less than or equal to the number of dimensions "
-"({nDim})."
-msgstr "Аксистер нөмірлері өлшемдер санынан ({nDim}) асатын болуы мүмкін емес"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Axis numbers cannot be equal."
-msgstr "Ось сандары тең болмауы керек."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Principal normalization"
-msgstr "Басты нормалдандыру"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Symetric normalization"
-msgstr "Симметриялы нормалдау"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Row principal normalization"
-msgstr "Қатар басты нормалдау"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Column principal normalization"
-msgstr "Басты бағдарлама нормалдау"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Standard normalization"
-msgstr "Стандарт нормалдау"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Row Points for {rows}"
-msgstr "Қатар нүктелері {rows} үшін"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Column Points for {cols}"
-msgstr "Баған нүктелері {cols}"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Symmetric normalization"
-msgstr "Симметриялы нормалдау"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
-"two categorical variables. Computations are based on <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
-"using the \"Counts\" variable.</p>\n"
-"<p><strong>Supplementary row or column</strong> numbers may be entered as "
-"integer lists : 1,3,6</p>\n"
-"<p>Four normalizations (scaling of row and column scores before plotting) "
-"are avalaible :</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Row an columns scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
-"square root of eigenvalues. </li>\n"
-"<li><strong>Row Principal:</strong> Only row scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Column Principal:</strong> Only column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Standard:</strong> The raw coordinates without "
-"normalization.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
-msgstr ""
-"<p>Бұл модуль екі санаттық айнымалыға <strong>Сәйкестік Анализі "
-"(CA)</strong> есептейді. Есептеулер <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> пакетінің F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Деректер <em>jamovi</em> ішкі салмақ жүйесін немесе \"Сан\" айнымалысын "
-"пайдаланып салмақталған болуы мүмкін.</p>\n"
-"<p><strong>Қосымша қатар немесе баған</strong> сандары бүтін сандар тізімі "
-"ретінде енгізіледі: 1,3,6</p>\n"
-"<p>Төрт нормалдандыру (графикке салыстырғанда қатар және баған нәтижелерін "
-"өлшеу) бар:</p>\n"
-"<ul>\n"
-"<li><strong>Басты:</strong> Қатар және баған нәтижелері эйгемәндермен "
-"өлшенеді.</li>\n"
-"<li><strong>Симметриялық:</strong> Қатар және баған нәтижелері "
-"эйгемәндердің квадрат түбірмен өлшенеді. </li>\n"
-"<li><strong>Қатар басты:</strong> Тек қана қатар нәтижелері эйгемәндермен "
-"өлшенеді.</li>\n"
-"<li><strong>Баған басты:</strong> Тек қана баған нәтижелері эйгемәндермен "
-"өлшенеді.</li>\n"
-"<li><strong>Стандарт:</strong> Нормалдандырылмаған күшті координаттар.</li>\n"
-"</ul>\n"
-"<p>Үлгі файл Open > Data Library > vijPlots > Smoking мекенжайында "
-"қосылған</p>"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Likert Plot requires ordinal (or numeric) variables"
-msgstr "Лайкерт графігі ординалды (немесе сан) айнымалыларды талап етеді"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Median and mean require numeric variables"
-msgstr "Медиана және орташа мән сандық айнымалыларды талап етеді"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Comparison tests require numeric variables"
-msgstr "Салыстыру тесттері сан айнымалыларын талап етеді"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Cannot convert text variables to integers"
-msgstr "Мәтін айнымалыларын бүтін санға ауыстыруға болмайды"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Cannot tidy up text variables"
-msgstr "Мәтін айнымалысын тазарту мүмкін емес"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Comparison tests cannot be computed with empty (N=0) groups"
-msgstr "Салыстыру тесттері бос (N=0) топтармен есептелуге болмайды"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid ""
-"<h3>Data & Sorting</h3>\n"
-"<ul>\n"
-"<li>Likert variables must be of ordinal measure-type. (Continuous "
-"measure-type works as well.)</li>\n"
-"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
-"must be of integer data-type.</li>\n"
-"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
-"order in table and graph (when some variables miss some levels).</li>\n"
-"<li><strong>Convert variables to integer:</strong> when checked, the level "
-"labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
-"</ul>\n"
-"<h3>Comparison Tests</h3>\n"
-"<p>When using a group variable, several tests are available:</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
-"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
-"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
-"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
-"</ul>\n"
-"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
-"p-values are already adjusted (groupwise); no other adjustment is "
-"possible.</p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
-msgstr ""
-"<h3>Деректер & Сорттау</h3>\n"
-"<ul>\n"
-"<li>Лайкерт айнымалылары реттік өлшем түрінде болуы керек (Сондай-ақ бүтін "
-"өлшем түрі де жұмыс істеуі мүмкін).</li>\n"
-"<li>Егер орташа/орта/стандартты ауытқу есептеу немесе салыстыру тесттерін "
-"пайдалану ниетінде болсаңыз, олар бүтін деректер түрінде болуы керек.</li>\n"
-"<li><strong>Деңгейлерді тазарту:</strong> бұл белгіленген болса, кесте мен "
-"графикте (белгілі бір айнымалылардың деңгейлерін жоғалтқан кезде) таңбалар "
-"ретінде деңгейлердің ретін ретке келтіруге тырысады.</li>\n"
-"<li><strong>Айнымалыларды бүтінге ауыстыру:</strong> бұл белгіленген болса, "
-"деңгей таңбалары елемделіп, тек бүтін мәндер ғана пайдаланылады.</li>\n"
-"<li><strong>Айнымалыларды орта бойынша сорттау:</strong> Лайкерт "
-"айнымалыларының тізімін орта бойынша реттеу.</li>\n"
-"</ul>\n"
-"<h3>Салыстыру тесттері</h3>\n"
-"<p>Топ айнымалысын пайдаланған кезде бірнеше тесттер қол жетімді:</p>\n"
-"<ul>\n"
-"<li><strong>Манн-Уитни U:</strong> екі топ салыстыруы</li>\n"
-"<li><strong>Крускал-Уоллис:</strong> n топ салыстыруы</li>\n"
-"<li><strong>Пост-хок тесттері:</strong> Данн, Коновер және "
-"Двасс-Стил-Кричлоу-Флингер (DSCF) жұптас салыстыру тесттері.</li>\n"
-"</ul>\n"
-"<p>p-қимылдар пост-хок тесттері үшін <strong>топтық</strong> (әрбір "
-"сұраққа) немесе <strong>жалпы</strong> (топтық және сұрақтық) Манн-Уитни U, "
-"Крускал-Уоллис және пост-хок тесттері үшін бірлестірілуі мүмкін. DSCF "
-"p-қимылдары әлеуметтендірілген (топтық); басқа бірлестіру мүмкін емес.</p>\n"
-"<p>Үлгі файл Open > Data Library > vijPlots > Likert мекенжайында "
-"орналасқан</p>"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Mean of {var}"
-msgstr "Орташа {var}"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Median of {var}"
-msgstr "Медиана {var}"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Minimum of {var}"
-msgstr "{var} минимумы"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Maximum of {var}"
-msgstr "{var} максимумы"
-
-#: R/mrcrosstabs.b.R
-#, fuzzy
-msgid "Crosstab (% of cases)"
-msgstr "Кросстабуляция (жағдайлардың пайызы)"
-
-#: R/mrcrosstabs.b.R
-#, fuzzy
-msgid "Crosstab (% of responses)"
-msgstr "Кросстабуляция (жауаптардың пайызы)"
-
-#: R/mrcrosstabs.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes two-way frequencies for multiple response "
-"questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>Бұл модуль көп response сұрақтары үшін екіжақты жиіліктерді есептейді, "
-"сондай-ақ \"Check All That Apply\" (CATA) сұрақтары.</p>\n"
-"<p>Сұрақтар мына тәсілдермен кодталуы мүмкін:</p>\n"
-"<ul>\n"
-"<li>әрбір мүмкін жауапқа 0/1, 1/2, Y/N пайдаланып бірнеше <strong>dummy "
-"(немесе индикатор) айнымалысы</strong>;</li>\n"
-"<li>белгімен (көбінесе \",\" немесе \";\") бөлініп, барлық белгіленген "
-"жауаптарды қамтитын <strong>бірнеше мәнді айнымалы</strong>;</li>\n"
-"</ul>\n"
-"<p>Үлгі файл Open > Data Library > vijPlots > Credit Cards мекенжайында "
-"қосылған</p>"
-
-#: R/mrfrequencies.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes frequencies for multiple response questions, also "
-"known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>Бұл модуль көпжақты сұрақтарға жауап берудің жиіліктерін есептейді, яғни "
-"\"Барлығын таңдаңыз\" (CATA) сұрақтары.</p>\n"
-"<p>Сұрақтар мынадай түрде кодталуы мүмкін:</p>\n"
-"<ul>\n"
-"<li>әрбір мүмкін жауапқа 0/1, 1/2, Y/N деген бірнеше <strong>думми (немесе "
-"индикатор) айнымалылары</strong>;</li>\n"
-"<li>белгімен (көбінесе \",\" немесе \";\") бөлінген таңдалған жауаптарды "
-"қамтитын бір <strong>көпмәнді айнымалы</strong>;</li>\n"
-"</ul>\n"
-"<p>Үлгі файл Open > Data Library > vijPlots > Credit Cards мекенжайында "
-"орналасқан</p>"
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-#, fuzzy
-msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
-msgstr "X-және Y-аксистер өлшемдер санынан асатын болуы мүмкін емес"
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-#, fuzzy
-msgid "X-Axis and Y-Axis cannot be equal."
-msgstr "X және Y аксистері тең болуы мүмкін емес"
-
-#: R/multcorresp.b.R
-#, fuzzy
-msgid "MCA Principal Coordinates"
-msgstr "МКА Басты координаталар"
-
-#: R/multcorresp.b.R
-#, fuzzy
-msgid "MCA Standard Coordinates"
-msgstr "MCA Стандарттік Координаттары"
-
-#: R/multcorresp.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes <strong>Multiple Correspondence Analysis "
-"(MCA)</strong> for several categorical variables. Computations are based on "
-"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Both classic methods are available:</p>\n"
-"<ul>\n"
-"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
-"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues "
-"are the squares of those of the indicator matrix method. </li>\n"
-"</ul>\n"
-"<p>Both methods give the same <em>standard</em> coordinates (but different "
-"<em>principal</em> coordinates).</p>\n"
-"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
-"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
-"(and inertia) of categories and observations are computed from the original "
-"eigenvalues of the Burt matrix.</p>\n"
-"<p>The <strong>Normalization</strong> options specify how the coordinates "
-"are scaled (by eigenvalues):</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Both category and observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Category principal:</strong> Only category coordinates are "
-"scaled.</li>\n"
-"<li><strong>Observation principal:</strong> Only observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Standard:</strong> Both category and observation coordinates "
-"are standard.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
-msgstr ""
-"<p>Бұл модуль бірнеше санаттық айнымалылар үшін <strong>Көп Санатты "
-"Сәйкестіктің Әдістемесі (MCA)</strong> есептеулерін жүргізеді. Есептеулер "
-"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> пакетіне сүйенеді, Ф.&nbsp;Хассон, "
-"Ж.&nbsp;Жосс, С.&nbsp;Ле, Ж.&nbsp;Мазет.</p>\n"
-"<p>Классикалық әдістердің екеуі де қол жетімді:</p>\n"
-"<ul>\n"
-"<li><strong>Көрсеткіш матрицасы:</strong> Көрсеткіш матрицасының СА</li>\n"
-"<li><strong>Берт матрицасы:</strong> Берт матрицасының СА. Эйгмәндер "
-"көрсеткіш матрицасы әдісінің эйгмәндерінен алынған квадраттар.</li>\n"
-"</ul>\n"
-"<p>Екі әдіс де бірдей <em>стандарт</em> координаталар береді (бірақ әр "
-"түрлі <em>басты</em> координаталар).</p>\n"
-"<p>Тандырылған жағдайда, <strong>Бензекри және Гринакр түзетулері</strong> "
-"тек эйгмәндерге қолданылады (<strong>Қорытынды</strong> кестесі). Санаттар "
-"мен бақылаулардың координаталары (және илеу) Берт матрицасының алғашқы "
-"эйгмәндерінен есептеледі.</p>\n"
-"<p><strong>Нормалдау</strong> опциялары координаталарды қалай масштабтау "
-"керектігін (эйгмәндер бойынша) көрсетеді:</p>\n"
-"<ul>\n"
-"<li><strong>Басты:</strong> Санаттар мен бақылаулар координаталары екеуі де "
-"масштабталады.</li>\n"
-"<li><strong>Санат басты:</strong> Тек санат координаталары "
-"масштабталады.</li>\n"
-"<li><strong>Бақылау басты:</strong> Тек бақылау координаталары "
-"масштабталады.</li>\n"
-"<li><strong>Стандарт:</strong> Санаттар мен бақылаулар координаталары екеуі "
-"де стандартты.</li>\n"
-"</ul>\n"
-"<p>Сәйкес файл үлгісі Open > Data Library > vijPlots > Cars мекенжайында "
-"қосылған.</p>"
-
-#: R/piechart.b.R
-#, fuzzy
-msgid "Pie charts are for educational use only. Please do not use Pie charts!"
-msgstr "Пирог графігі тек білім беру мақсатында ғана. Пирог графігін пайдаланбаңыз!"
-
-#: R/principal.b.R
-#, fuzzy
-msgid "The number of dimensions cannot be greater than the number of variables."
-msgstr "Өлшемдер саны өлшемдер санынан асатын болуы мүмкін емес"
-
-#: R/principal.b.R
-#, fuzzy
-msgid "PCA Principal Coordinates"
-msgstr "PCA Басты Координаттары"
-
-#: R/principal.b.R
-#, fuzzy
-msgid "PCA Standard Coordinates"
-msgstr "ПКА Стандарт координаталары"
-
-#: R/principal.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
-"for several continuous variables. Computations are based on "
-"<tt>stats::prcomp</tt> function.</p>\n"
-"<p>Although rotated components are not principal components, they are "
-"widely used. Only orthogonal rotations are available (from GPArotation "
-"package).</p>\n"
-"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
-"principal (scaled by the squareroot of eigenvalues).</p>\n"
-"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
-"eigenvalues) while loadings are standard.</li>\n"
-"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
-"are standard. </li>\n"
-"</ul>\n"
-"<p><strong>Advanced options</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Standardize loadings:</strong> loadings are normalized with "
-"sums of squared equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Standardize scores:</strong> scores are normalized with "
-"variances equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
-"applied to eigenvectors (standard loadings) instead of principal loadings "
-"(STATA way).</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
-msgstr ""
-"<p>Бұл модуль бірнеше үздіксіз айнымалылар үшін <strong>Басты Компоненттер "
-"Әдістемесі (PCA)</strong> есептеулерін жүргізеді. Есептеулер "
-"<tt>stats::prcomp</tt> функциясына сүйенеді.</p>\n"
-"<p>Басты компоненттер емес болса да, айналдырылған компоненттер кеңінен "
-"қолданылады. Тек ортогональ айналдырулар ғана қол жетімді (GPArotation "
-"пакетінен).</p>\n"
-"<p>Жүктеулер (айнымалы координаталар) және баллдар (бақылау координаталар) "
-"басты (эigenvalues квадрат түбіне сәйкес масштабталған).</p>\n"
-"<p>Биплот \"Биплоттар практикасында\" (Майкл Гринакр, 2010) бойынша:</p>\n"
-"<ul>\n"
-"<li><strong>Форма биплоты:</strong> Баллдар басты (эigenvalues бойынша "
-"масштабталған), ал жүктеулер стандартты.</li>\n"
-"<li><strong>Ковариация биплоты:</strong> Жүктеулер басты, ал баллдар "
-"стандартты.</li>\n"
-"</ul>\n"
-"<p><strong>Кәдімгі опциялар</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Стандарттау жүктеулер:</strong> жүктеулер квадраттарының "
-"қосындысы 1-ге (эigenvalues орнына) тең болатындай нормалданады</li>\n"
-"<li><strong>Стандарттау баллдар:</strong> баллдар 1-ге (эigenvalues орнына) "
-"тең дисперсияларына сәйкес нормалданады</li>\n"
-"<li><strong>Айналдыру эйгenvectorлар:</strong> айналдыру (varimax, т.б.) "
-"эйгenvectorларға (стандартты жүктеулер) қолданылады, басты жүктеулерге "
-"(STATA әдісі) емес.</li>\n"
-"</ul>\n"
-"<p>Сәйкес файл үлгісі Open > Data Library > vijPlots > Iris мекенжайында "
-"қосылған.</p>"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Natural Log Tranform requires positive (>0) data."
-msgstr "Табиғи логарифмдік ауыстыру оң (>0) мәндерді талап етеді"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "{distrib} distribution requires positive (>0) data."
-msgstr "{distrib} тарату үшін оң (>0) мәндер қажет"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Exponential distribution requires non-negative (≥0) data."
-msgstr "Экспоненциалды тарату үшін не теріс емес (≥0) мәндер қажет"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Beta distribution requires data between 0 and 1."
-msgstr "Бета таратуы 0 және 1 аралығындағы мәндерді талап етеді"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Unable to estimate the distribution parameters."
-msgstr "Тарату параметрлерін бағалау мүмкін емес."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Wrong parameter values."
-msgstr "Параметр мәндері қате"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "F"
-msgstr "F"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid ""
-"<p>This module uses <a href = "
-"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
-"package<a/> by Alexandre Almeida, Adam Loy and Heike Hofmann. In-depth "
-"information can be found in the package documentation on CRAN site.</p>\n"
-"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
-"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
-"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
-"identity line.</p>\n"
-"<p><strong>Confidence band:</strong> Draws a confidence band around the "
-"reference line. qqplotr package provides several methods to compute the "
-"confidence band:</p>\n"
-"<ul>\n"
-"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
-"bands based on Normal confidence intervals;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
-"based on a parametric bootstrap;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
-"Kolmogorov-Smirnov test;</li>\n"
-"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
-"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
-"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
-"simultaneous bands using the equal local levels.</li>\n"
-"</ul>\n"
-"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
-"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
-"according to the reference line. This procedure may help reducing visual "
-"bias caused by the orthogonal distances from the points to the reference "
-"line.</p>\n"
-"<p><strong>Parameter values:</strong> The distribution parameters can be "
-"estimated from data using:</p>\n"
-"<ul>\n"
-"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
-"should work with all distributions but \"t\" and \"uniform\";</li>\n"
-"<li><strong>Method of Moments</strong> for moment based parameters : it "
-"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
-"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
-"</ul>\n"
-"<p>or entered by user:</p>\n"
-"<ul>\n"
-"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
-"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
-"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
-"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
-"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
-"(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
-msgstr ""
-"<p>Бұл модуль <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
-"target=\"_blank\">qqplotr R пакетінің<a/> Alexandre Almeida, Adam Loy және "
-"Heike Hofmann пайдаланады. Терең ақпарат пакеттің құжаттамасында CRAN "
-"сайтында табыла алады.</p>\n"
-"<p><strong>Сілтеме линиясы:</strong> Идентитет линиясын (y = x) немесе екі "
-"деректер квантілін (Q<sub>0.25</sub> және Q<sub>0.75</sub>) қиылыстыратын "
-"қолданылатын Q-Q линиясын салады. P-P графігі тек идентитет линиясын "
-"қолдайды.</p>\n"
-"<p><strong>Сенім бандасы:</strong> Сілтеме линиясының айналасында сенім "
-"бандасын салады. qqplotr пакеті сенім бандасын есептеу үшін бірнеше "
-"әдістерді ұсынады:</p>\n"
-"<ul>\n"
-"<li><strong><em>Нүктелік</em></strong> нормаль сенім аралықтарына сүйене "
-"отырып нүктелік сенім бандасын құрады;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> параметрлік бутстреп бойынша "
-"нүктелік сенім бандасын жасайды;</li>\n"
-"<li><strong><em>Колмогоров-Смирнов</em></strong> бандасы Колмогоров-Смирнов "
-"тестіне сүйене отырып жасалады;</li>\n"
-"<li><strong><em>Құйрықты сезгіш</em></strong> құйрықты сезгіш сенім "
-"бандасын құрады, бірақ тек нормаль Q-Q графігінде жасалған;</li>\n"
-"<li><strong><em>Тең локаль деңгейлер (ELL)</em></strong> бірдей локаль "
-"деңгейлерді пайдаланып синхронды бандасын құрады.</li>\n"
-"</ul>\n"
-"<p>P-P графігі тек \"ELL\" және \"Bootstrap\" әдістерін қолдайды.</p>\n"
-"<p><strong>Детрендталған график:</strong> Объектілер сілтеме линиясына "
-"сәйкес детрендталған. Бұл процедура сілтеме линиясына перпендикуляр "
-"қашықтықтардан туындайтын көріністік байланысты азайтуға көмектесуі "
-"мүмкін.</p>\n"
-"<p><strong>Параметрлердің мәндер:</strong> Тарату параметрлері деректерден "
-"MASS пакеті пайдаланылып максималь жақындық әдісі бойынша бағаланады: бұл "
-"барлық таратуларда, \"t\" және \"унитар\" таратуларынан басқа жұмыс істеуі "
-"тиіс;</li>\n"
-"<li><strong>Момент әдісі</strong> моменттік параметрлер үшін: бұл "
-"\"нормаль\", \"лог-нормаль\", \"Бета\", \"Экспоненциал\", \"Гамма\", "
-"\"Логистика\" және \"Унитар\" таратуларында жұмыс істеуі тиіс;</li>\n"
-"</ul>\n"
-"<p>немесе пайдаланушы енгізеді:</p>\n"
-"<ul>\n"
-"<li><strong>Параметр 1:</strong> орташа (Нормаль), meanlog (Лог-нормаль), "
-"shape1 (Бета), location (Кошы, Логистика), df (Хи-квадрат, Студент), df1 "
-"(F), rate (Экспоненциал), shape (Гамма, Вейбулл) және min (Унитар);</li>\n"
-"<li><strong>Параметр 2:</strong> sd (нормаль), sdlog (Лог-нормаль), shape2 "
-"(Бета), scale (Кошы, Логистика), df2 (F), rate (Гамма, Вейбулл) және max "
-"(Унитар).</li>\n"
-"</ul>\n"
-"</p>"
-
-#: areachart/options/ignoreNA.title
-#: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
-#, fuzzy
-msgid "Ignore missing values"
-msgstr "Жоқтыларды елемеу"
-
-#: areachart/options/yTicks.title
-#: barplot/options/xTicks.title
-#: barplot/options/yTicks.title
-#: boxplot/options/xTicks.title
-#: boxplot/options/yTicks.title
-#: histogram/options/xTicks.title
-#: histogram/options/yTicks.title
-#: linechart/options/yTicks.title
-#: lollipop/options/xTicks.title
-#: lollipop/options/yTicks.title
-#: mrcrosstabs/options/xTicks.title
-#: mrcrosstabs/options/yTicks.title
-#: mrfrequencies/options/xTicks.title
-#: mrfrequencies/options/yTicks.title
-#: qqplot/options/xTicks.title
-#: qqplot/options/yTicks.title
-#: raincloud/options/xTicks.title
-#: raincloud/options/yTicks.title
-#: scatterplot/options/xTicks.title
-#: scatterplot/options/yTicks.title
-#, fuzzy
-msgid "Tick count"
-msgstr "Тик саны"
-
-#: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
-#: mrcrosstabs/options/reverseStack.title
-#, fuzzy
-msgid "Reverse stacking order"
-msgstr "Тасымалдау ретін толтыру"
-
-#: barplot/options/barType/dodge.title
-#: mrcrosstabs/options/bartype/dodge.title
-#, fuzzy
-msgid "Grouped (tight)"
-msgstr "Топтасқан (тығыз)"
-
-#: barplot/ui[4].label
-#: boxplot/ui[3].label
-#: piechart/ui[4].label
-#, fuzzy
-msgid "Text Size & Facets"
-msgstr "Мәтін өлшемі & Фасеттер"
-
-#: boxplot/ui[2][0][1][0].label
-#, fuzzy
-msgid "Box Elements"
-msgstr "Коробка Элементтері"
-
-#: corresp/options/normalization/symmetric.title
-#, fuzzy
-msgid "Symmetric"
-msgstr "Симметриялы"
-
-#: corresp/ui[6].label
-#, fuzzy
-msgid "Text Size & Colors"
-msgstr "Мәтін Өлшемі және Түстері"
-
-#: likertplot/options/ignoreNA.title
-#, fuzzy
-msgid "Ignore missing groups"
-msgstr "Жоқ топтарды елемеу"
-
-#: linechart/ui[1][0][1].label
-#: principal/ui[4].label
-#, fuzzy
-msgid "Sizes & Colors"
-msgstr "Өлшемдер мен Түстер"
-
-#: mrcrosstabs/options/emptyAsNA.title
-#: mrfrequencies/options/emptyAsNA.title
-#, fuzzy
-msgid "Treat empty values as missing"
-msgstr "Бос мәндерді жоқ деп есептеу"
-
-#: mrcrosstabs/options/computedValues/responses.title
-#: mrfrequencies/options/showResponses.title
-#: mrfrequencies/options/yaxis/responses.title
-#, fuzzy
-msgid "% of responses"
-msgstr "Жауаптардың пайызы"
-
-#: mrcrosstabs/options/computedValues/cases.title
-#: mrfrequencies/options/showCases.title
-#: mrfrequencies/options/yaxis/cases.title
-#, fuzzy
-msgid "% of cases"
-msgstr "Жағдайлардың пайызы"
-
-#: mrcrosstabs/options/computedValues/options.title
-#, fuzzy
-msgid "% by row"
-msgstr "% бойынша қатар"
-
-#: principal/ui[4][0][0][1].label
-#: scatterplot/ui[2][0][0][0].label
-#, fuzzy
-msgid "Element Sizes"
-msgstr "Элемент Өлшемдері"
-
-#: raincloud/options/groupOne.title
-#: raincloud/ui[0][1].label
-#, fuzzy
-msgid "Group (Side-by-side)"
-msgstr "Топ (Жақтан-жаққа)"
-
-#: scatterplot/ui[2].label
-#, fuzzy
-msgid "Element Sizes & Facets"
-msgstr "Элемент өлшемдері & Фасеттер"
-
-#: histogram/options/binBoundary.title
-#, fuzzy
-msgctxt "boundary"
-msgid "Position"
-msgstr "Орналасу"
-
-#: areachart/options/displayFormat/%b.title
-#: linechart/options/displayFormat/%b.title
-#, fuzzy
-msgctxt "menu"
-msgid "Oct"
-msgstr "Қаз"
-
-#: areachart/options/displayFormat/%B.title
-#: linechart/options/displayFormat/%B.title
-#, fuzzy
-msgctxt "menu"
-msgid "October"
-msgstr "Қазан"
-
-#: R/qqplot.b.R
-#: qqplot/options/distrib/norm.title
-#, fuzzy
-msgctxt "distribution"
-msgid "Normal"
-msgstr "Нормаль"

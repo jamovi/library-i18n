@@ -3,14 +3,18 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-03-23 22:01+0000\n"
 "Last-Translator: yeyeye <m15658453017@163.com>\n"
-"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
-"projects/jamovi/module-vijplots/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified Han script) "
+"<https://hosted.weblate.org/projects/jamovi/module-vijplots/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.17-dev\n"
+
+#: R/qqplot.b.R
+msgid "{distrib} distribution requires positive (>0) data."
+msgstr "{distrib} 分布要求数据为正数 (>0)。"
 
 #: R/qqplot.b.R
 msgid "{distribStr} {typeStr} Plot of {varStr}"
@@ -31,6 +35,11 @@ msgstr "采用了 {rotation} 旋转及 Kaiser 标准化"
 #: R/principal.b.R
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "采用了 {rotation} 旋转及 Kaiser 标准化。"
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "{var} doesn't have a valid date format."
+msgstr "{var} 不具备有效的日期格式。"
 
 #: barplot/options/facetNumber.title
 #: boxplot/options/facetNumber.title
@@ -54,6 +63,10 @@ msgstr "行/列数"
 msgid "% Accuracy"
 msgstr "准确率 (%)"
 
+#: mrcrosstabs/options/computedValues/options.title
+msgid "% by row"
+msgstr "行百分比"
+
 #: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
 msgid "% Inertia"
@@ -69,6 +82,12 @@ msgstr "标签 (%)"
 msgid "% of Cases"
 msgstr "个案百分比（%）"
 
+#: mrcrosstabs/options/computedValues/cases.title
+#: mrfrequencies/options/showCases.title
+#: mrfrequencies/options/yaxis/cases.title
+msgid "% of cases"
+msgstr "案例百分比"
+
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -81,6 +100,12 @@ msgstr "惯量百分比（%）"
 msgid "% of Responses"
 msgstr "响应占比 (%)"
 
+#: mrcrosstabs/options/computedValues/responses.title
+#: mrfrequencies/options/showResponses.title
+#: mrfrequencies/options/yaxis/responses.title
+msgid "% of responses"
+msgstr "响应百分比"
+
 #: principal/results/summaryTable.columns.title
 msgid "% of Variance"
 msgstr "方差占比 (%)"
@@ -88,6 +113,332 @@ msgstr "方差占比 (%)"
 #: R/mrcrosstabs.b.R
 msgid "% within"
 msgstr "组内百分比（%）"
+
+#: R/likertplot.b.R
+msgid ""
+"<h3>Data & Sorting</h3>\n"
+"<ul>\n"
+"<li>Likert variables must be of ordinal measure-type. (Continuous "
+"measure-type works as well.)</li>\n"
+"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
+"must be of integer data-type.</li>\n"
+"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
+"order in table and graph (when some variables miss some levels).</li>\n"
+"<li><strong>Convert variables to integer:</strong> when checked, the level "
+"labels are ignored and only integer values are used.</li>\n"
+"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
+"variables by median.</li>\n"
+"</ul>\n"
+"<h3>Comparison Tests</h3>\n"
+"<p>When using a group variable, several tests are available:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
+"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
+"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
+"</ul>\n"
+"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
+"question) for post hoc tests or <strong>overall</strong> (groupwise and "
+"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
+"p-values are already adjusted (groupwise); no other adjustment is "
+"possible.</p>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
+msgstr ""
+"<h3>数据与排序</h3>\n"
+"<ul>\n"
+"<li>李克特变量必须为定序 (Ordinal) 测量类型。（连续型测量类型同样适用。）</li>\n"
+"<li>如果您计划计算均值/中位数/标准差或使用比较检验，变量必须为整数 (Integer) 数据类型。</li>\n"
+"<li><strong>整理水平：</strong> 勾选后，当某些变量缺失部分等级时，系统会尝试修正表格和图形中的标签顺序。</li>\n"
+"<li><strong>将变量转换为整数：</strong> 勾选后，系统将忽略等级标签，仅使用整数值进行计算。</li>\n"
+"<li><strong>按中位数排序变量：</strong> 根据中位数对李克特变量列表进行排序。</li>\n"
+"</ul>\n"
+"<h3>比较检验</h3>\n"
+"<p>当使用分组变量时，可进行以下几种检验：</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U：</strong> 两组间比较</li>\n"
+"<li><strong>Kruskal-Wallis：</strong> n 组间比较</li>\n"
+"<li><strong>事后检验：</strong> Dunn、Conover 以及 Dwass-Steel-Critchlow-Fligner "
+"(DSCF) 两两比较检验。</li>\n"
+"</ul>\n"
+"<p>对于事后检验，可以按每个问题 (groupwise) 调整 p 值；或者对于 Mann-Whitney U、Kruskal-Wallis "
+"及事后检验进行整体 (overall)（同时针对每个问题和组别）调整。DSCF 的 p 值已经过自动调整（按每个问题视角）；无法进行其他调整。</p>\n"
+"<p>示例文件位于：打开 > 数据库 > vijPlots > Likert</p>"
+
+#: R/corresp.b.R
+msgid ""
+"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
+"two categorical variables. Computations are based on <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
+"using the \"Counts\" variable.</p>\n"
+"<p><strong>Supplementary row or column</strong> numbers may be entered as "
+"integer lists : 1,3,6</p>\n"
+"<p>Four normalizations (scaling of row and column scores before plotting) "
+"are avalaible :</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Row an columns scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
+"square root of eigenvalues. </li>\n"
+"<li><strong>Row Principal:</strong> Only row scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Column Principal:</strong> Only column scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Standard:</strong> The raw coordinates without "
+"normalization.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
+msgstr ""
+"<p>本模块对两个分类变量进行对应分析 (Correspondence Analysis, CA)。计算基于由 F. Husson, J. Josse, "
+"S. Le, J. Mazet 开发的 <a href = \"\" target=\"_blank\">FactoMineR</a> R 包。</p>\n"
+"<p>可以使用 jamovi 内置的权重系统或“计数 (Counts)”变量对数据进行加权。</p>\n"
+"<p>补充行或列的编号可以输入为整数列表，例如：1,3,6</p>\n"
+"<p>提供四种归一化方式（绘图前对行和列得分进行缩放）：</p>\n"
+"<ul>\n"
+"<li>主标准 (Principal)： 行和列得分根据特征值进行缩放。</li>\n"
+"<li>对称标准 (Symmetric)： 行和列得分根据特征值的平方根进行缩放。</li>\n"
+"<li>行主标准 (Row Principal)： 仅对行得分根据特征值进行缩放。</li>\n"
+"<li>列主标准 (Column Principal)： 仅对列得分根据特征值进行缩放。</li>\n"
+"<li>标准 (Standard)： 未经归一化的原始坐标。</li>\n"
+"</ul>\n"
+"<p>示例文件位于：打开 > 数据库 > vijPlots > Smoking</p>"
+
+#: R/multcorresp.b.R
+msgid ""
+"<p>This module computes <strong>Multiple Correspondence Analysis "
+"(MCA)</strong> for several categorical variables. Computations are based on "
+"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Both classic methods are available:</p>\n"
+"<ul>\n"
+"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
+"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues are "
+"the squares of those of the indicator matrix method. </li>\n"
+"</ul>\n"
+"<p>Both methods give the same <em>standard</em> coordinates (but different "
+"<em>principal</em> coordinates).</p>\n"
+"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
+"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
+"(and inertia) of categories and observations are computed from the original "
+"eigenvalues of the Burt matrix.</p>\n"
+"<p>The <strong>Normalization</strong> options specify how the coordinates "
+"are scaled (by eigenvalues):</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Both category and observation coordinates "
+"are scaled.</li>\n"
+"<li><strong>Category principal:</strong> Only category coordinates are "
+"scaled.</li>\n"
+"<li><strong>Observation principal:</strong> Only observation coordinates are "
+"scaled.</li>\n"
+"<li><strong>Standard:</strong> Both category and observation coordinates are "
+"standard.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
+msgstr ""
+"<p>此模块对多个分类变量进行<strong>多重对应分析 (MCA)</strong>。计算基于 F.&nbsp;Husson, "
+"J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet 开发的 <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> 软件包。</p>\n"
+"<p>提供以下两种经典方法：</p>\n"
+"<ul>\n"
+"<li><strong>指示矩阵 (Indicator matrix)：</strong> 指示矩阵的 CA 分析</li>\n"
+"<li><strong>Burt 矩阵 (Burt matrix)：</strong> Burt 矩阵的 CA "
+"分析。其特征值是指示矩阵法特征值的平方。</li>\n"
+"</ul>\n"
+"<p>两种方法得到相同的<em>标准 (standard)</em> 坐标（但<em>主 (principal)</em> 坐标不同）。</p>\n"
+"<p>选中时，<strong>Benzécri 和 Greenacre "
+"校正</strong>仅应用于特征值（<strong>摘要</strong>表）。类别和观测值的坐标（及惯量）根据 Burt "
+"矩阵的原始特征值计算。</p>\n"
+"<p><strong>标准化 (Normalization)</strong> 选项指定坐标如何缩放（按特征值）：</p>\n"
+"<ul>\n"
+"<li><strong>主坐标 (Principal)：</strong> 类别和观测值坐标均进行缩放。</li>\n"
+"<li><strong>类别主坐标 (Category principal)：</strong> 仅对类别坐标进行缩放。</li>\n"
+"<li><strong>观测值主坐标 (Observation principal)：</strong> 仅对观测值坐标进行缩放。</li>\n"
+"<li><strong>标准坐标 (Standard)：</strong> 类别和观测值坐标均为标准坐标。</li>\n"
+"</ul>\n"
+"<p>示例文件位于：Open > Data Library > vijPlots > Cars</p>"
+
+#: R/principal.b.R
+msgid ""
+"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
+"for several continuous variables. Computations are based on "
+"<tt>stats::prcomp</tt> function.</p>\n"
+"<p>Although rotated components are not principal components, they are widely "
+"used. Only orthogonal rotations are available (from GPArotation "
+"package).</p>\n"
+"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
+"principal (scaled by the squareroot of eigenvalues).</p>\n"
+"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
+"eigenvalues) while loadings are standard.</li>\n"
+"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
+"are standard. </li>\n"
+"</ul>\n"
+"<p><strong>Advanced options</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Standardize loadings:</strong> loadings are normalized with sums "
+"of squared equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Standardize scores:</strong> scores are normalized with "
+"variances equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
+"applied to eigenvectors (standard loadings) instead of principal loadings "
+"(STATA way).</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
+msgstr ""
+"<p>本模块对多个连续变量进行<strong>主成分分析 (PCA)</strong>。计算基于 <tt>stats::prcomp</tt> "
+"函数。</p>\n"
+"<p>虽然旋转后的成分不再是主成分，但其应用非常广泛。目前仅支持正交旋转（由 GPArotation 包提供）。</p>\n"
+"<p>载荷（变量坐标）和得分（观测值坐标）均为“主坐标”（按特征值的平方根缩放）。</p>\n"
+"<p>双标图遵循《双标图实践》(Michael Greenacre, 2010) 的标准：</p>\n"
+"<ul>\n"
+"<li><strong>形状双标图 (Form biplot)：</strong> 得分为主坐标（按特征值缩放），载荷为标准坐标。</li>\n"
+"<li><strong>协方差双标图 (Covariance biplot)：</strong> 载荷为主坐标，得分为标准坐标。</li>\n"
+"</ul>\n"
+"<p><strong>高级选项</strong>：</p>\n"
+"<ul>\n"
+"<li><strong>标准化载荷：</strong> 对载荷进行归一化处理，使其平方和等于 1（而非特征值）。</li>\n"
+"<li><strong>标准化得分：</strong> 对得分进行归一化处理，使其方差等于 1（而非特征值）。</li>\n"
+"<li><strong>旋转特征向量：</strong> 对特征向量（标准载荷）而非主载荷进行旋转（如方差最大化旋转等），这是 STATA "
+"的处理方式。</li>\n"
+"</ul>\n"
+"<p>示例文件见：打开 > 数据库 > vijPlots > Iris</p>"
+
+#: R/mrfrequencies.b.R
+msgid ""
+"<p>This module computes frequencies for multiple response questions, also "
+"known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>此模块用于计算多重响应问题的二维频数，也称为“多选题” (Check All That Apply, CATA)。</p>\n"
+"<p>问题可以编码为：</p>\n"
+"<ul>\n"
+"<li>对应每个可能答案的若干个 <strong>dummy (or indicator) variables</strong>，使用 "
+"0/1、1/2、Y/N；</li>\n"
+"<li>包含已勾选答案的单个 <strong>multi-valued "
+"variable</strong>，各答案之间用符号（通常为“,”或“;”）隔开。</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+
+#: R/mrcrosstabs.b.R
+msgid ""
+"<p>This module computes two-way frequencies for multiple response questions, "
+"also known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>本模块用于计算多重响应问题（也称为“多项选择”或 CATA 题型）的二维频数。</p>\n"
+"<p>问题可编码为：</p>\n"
+"<ul>\n"
+"<li>针对每个可能的选项，使用多个<strong>虚拟（或指示）变量</strong>（如使用 0/1、1/2、Y/N）；</li>\n"
+"<li>使用单个<strong>多值变量</strong>，其中包含已选答案，并由符号（通常为“,”或“;”）分隔。</li>\n"
+"</ul>\n"
+"<p>示例文件见：打开 > 数据库 > vijPlots > Credit Cards</p>"
+
+#: R/qqplot.b.R
+msgid ""
+"<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
+"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"Heike Hofmann. In-depth information can be found in the package "
+"documentation on CRAN site.</p>\n"
+"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
+"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
+"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
+"identity line.</p>\n"
+"<p><strong>Confidence band:</strong> Draws a confidence band around the "
+"reference line. qqplotr package provides several methods to compute the "
+"confidence band:</p>\n"
+"<ul>\n"
+"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
+"bands based on Normal confidence intervals;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
+"based on a parametric bootstrap;</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
+"Kolmogorov-Smirnov test;</li>\n"
+"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
+"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
+"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
+"simultaneous bands using the equal local levels.</li>\n"
+"</ul>\n"
+"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
+"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
+"according to the reference line. This procedure may help reducing visual "
+"bias caused by the orthogonal distances from the points to the reference "
+"line.</p>\n"
+"<p><strong>Parameter values:</strong> The distribution parameters can be "
+"estimated from data using:</p>\n"
+"<ul>\n"
+"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
+"should work with all distributions but \"t\" and \"uniform\";</li>\n"
+"<li><strong>Method of Moments</strong> for moment based parameters : it "
+"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
+"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
+"</ul>\n"
+"<p>or entered by user:</p>\n"
+"<ul>\n"
+"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
+"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
+"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
+"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
+"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
+"(Uniform).</li>\n"
+"</ul>\n"
+"</p>"
+msgstr ""
+"<p>此模块使用由 Alexandre Almeida、Adam Loy 和 Heike Hofmann 开发的 <a href = "
+"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
+"软件包</a>。深入信息请参阅 CRAN 网站上的软件包文档。</p>\n"
+"<p><strong>参考线：</strong> 绘制<em>等值线</em> (y = x) 或常用的 <em>Q-Q 线</em>（截取 "
+"Q<sub>0.25</sub> 和 Q<sub>0.75</sub> 两个分位数）。P-P 图仅支持等值线。</p>\n"
+"<p><strong>置信带：</strong> 围绕参考线绘制置信带。qqplotr 软件包提供了几种计算置信带的方法：</p>\n"
+"<ul>\n"
+"<li><strong><em>逐点 (Pointwise)</em></strong> 基于正态置信区间构建逐点置信带；</li>\n"
+"<li><strong><em>自助法 (Bootstrap)</em></strong> 基于参数化自助法创建逐点置信带；</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> 置信带基于 Kolmogorov-Smirnov "
+"检验；</li>\n"
+"<li><strong><em>尾部敏感 (Tail-Sensitive)</em></strong> 构建尾部敏感置信带，但仅适用于正态 Q-Q "
+"图；</li>\n"
+"<li><strong><em>等局部水平 (ELL)</em></strong> 使用等局部水平构建同步置信带。</li>\n"
+"</ul>\n"
+"<p>P-P 图仅支持 “ELL” 和 “Bootstrap” 方法。</p>\n"
+"<p><strong>去趋势图 (Detrended plot)：</strong> "
+"根据参考线对对象进行<em>去趋势</em>处理。此步骤有助于减少由点到参考线的正交距离引起的视觉偏差。</p>\n"
+"<p><strong>参数值：</strong> 分布参数可以从数据中估计，使用：</p>\n"
+"<ul>\n"
+"<li><strong>最大似然法 (Maximum Likelihood Method)</strong>（使用 MASS 软件包）：适用于除 “t” "
+"和 “均匀分布 (uniform)” 以外的所有分布；</li>\n"
+"<li><strong>矩估计法 (Method of Moments)</strong> 用于基于矩的参数：适用于 “正态 "
+"(normal)”、“对数正态 (log-normal)”、“Beta”、“指数 (Exponential)”、“Gamma”、“逻辑 "
+"(Logistic)” 和 “均匀 (Uniform)” 分布；</li>\n"
+"</ul>\n"
+"<p>或由用户输入：</p>\n"
+"<ul>\n"
+"<li><strong>参数 1：</strong> 均值 (正态)、对数均值 (对数正态)、形状参数 1 (Beta)、位置 (柯西、逻辑)、自由度 "
+"(卡方、Student t)、自由度 1 (F)、率 (指数)、形状 (Gamma、威布尔) 以及最小值 (均匀)；</li>\n"
+"<li><strong>参数 2：</strong> 标准差 (正态)、对数标准差 (对数正态)、形状参数 2 (Beta)、尺度 "
+"(柯西、逻辑)、自由度 2 (F)、率 (Gamma、威布尔) 以及最大值 (均匀)。</li>\n"
+"</ul>\n"
+"</p>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -379,6 +730,14 @@ msgstr "自动"
 msgid "Axes"
 msgstr "坐标轴"
 
+#: R/corresp.b.R
+msgid "Axis numbers cannot be equal."
+msgstr "坐标轴序号不能相同。"
+
+#: R/corresp.b.R
+msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
+msgstr "坐标轴序号必须小于或等于维度总数（{nDim}）。"
+
 #: corresp/ui[7].label
 #: mrfrequencies/ui[5].label
 msgid "Axis Titles"
@@ -419,6 +778,10 @@ msgstr "Benzécri 校正"
 #: qqplot/options/distrib/beta.title
 msgid "Beta"
 msgstr "β"
+
+#: R/qqplot.b.R
+msgid "Beta distribution requires data between 0 and 1."
+msgstr "Beta 分布要求数据介于 0 到 1 之间。"
 
 #: likertplot/options/adjustMethod/BH.title
 msgid "BH"
@@ -687,6 +1050,15 @@ msgstr "边框"
 msgid "Bottom"
 msgstr "底部"
 
+#: histogram/options/binBoundary.title
+msgctxt "boundary"
+msgid "Position"
+msgstr "位置"
+
+#: boxplot/ui[2][0][1][0].label
+msgid "Box Elements"
+msgstr "箱图组件"
+
 #: package/analyses/boxplot.title
 #: package/analyses/boxplot.menuTitle
 #: boxplot/options.title
@@ -740,6 +1112,14 @@ msgstr "按分组"
 #: likertplot/ui[4][0][1][0]/groupBy_variable.label
 msgid "By variable"
 msgstr "按变量"
+
+#: R/likertplot.b.R
+msgid "Cannot convert text variables to integers"
+msgstr "无法将文本变量转换为整数"
+
+#: R/likertplot.b.R
+msgid "Cannot tidy up text variables"
+msgstr "无法整理文本变量"
 
 #: areachart/ui[4][2].label
 #: barplot/ui[7][2].label
@@ -982,9 +1362,17 @@ msgstr "柱状图"
 msgid "Column plot"
 msgstr "柱状图"
 
+#: R/corresp.b.R
+msgid "Column Points for {cols}"
+msgstr "针对{cols} 的列点"
+
 #: corresp/options/normalization/colprincipal.title
 msgid "Column principal"
 msgstr "列主坐标"
+
+#: R/corresp.b.R
+msgid "Column principal normalization"
+msgstr "列主成分归一化"
 
 #: corresp/results/colProfiles.title
 msgid "Column Profiles"
@@ -1008,6 +1396,14 @@ msgstr "列 (群)"
 #: likertplot/results/comp.title
 msgid "Comparison Tests"
 msgstr "比较检定"
+
+#: R/likertplot.b.R
+msgid "Comparison tests cannot be computed with empty (N=0) groups"
+msgstr "无法对空分组（样本量 N=0）进行比较检验"
+
+#: R/likertplot.b.R
+msgid "Comparison tests require numeric variables"
+msgstr "比较检验要求使用数值型变量"
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
@@ -1148,6 +1544,14 @@ msgstr "交叉表"
 #: R/mrcrosstabs.b.R
 msgid "Crosstab (% by row)"
 msgstr "交叉表（行百分比）"
+
+#: R/mrcrosstabs.b.R
+msgid "Crosstab (% of cases)"
+msgstr "交叉表（占个案的 %）"
+
+#: R/mrcrosstabs.b.R
+msgid "Crosstab (% of responses)"
+msgstr "交叉表（占响应次数的 %）"
 
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
@@ -1324,6 +1728,12 @@ msgstr "显示格式"
 msgid "Distribution"
 msgstr "分布"
 
+#: R/qqplot.b.R
+#: qqplot/options/distrib/norm.title
+msgctxt "distribution"
+msgid "Normal"
+msgstr "正态"
+
 #: piechart/options/donut.title
 msgid "Donut chart"
 msgstr "环形图"
@@ -1380,6 +1790,15 @@ msgstr "特征值"
 msgid "Eigenvalues"
 msgstr "特征值"
 
+#: principal/ui[4][0][0][1].label
+#: scatterplot/ui[2][0][0][0].label
+msgid "Element Sizes"
+msgstr "元素大小"
+
+#: scatterplot/ui[2].label
+msgid "Element Sizes & Facets"
+msgstr "要素尺寸与维度分面"
+
 #: qqplot/options/methodQQ/ell.title
 #: qqplot/options/methodPP/ell.title
 msgid "Equal Local Levels"
@@ -1404,9 +1823,17 @@ msgstr "欧式日期格式 (日-月-年)"
 msgid "Exponential"
 msgstr "指数型"
 
+#: R/qqplot.b.R
+msgid "Exponential distribution requires non-negative (≥0) data."
+msgstr "Exponential 分布要求非负 (≥0) 数据。"
+
 #: principal/results/summaryTable.columns.superTitle
 msgid "Extraction Sums of Squared Loadings"
 msgstr "提取载荷平方和"
+
+#: R/qqplot.b.R
+msgid "F"
+msgstr "F"
 
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
@@ -1690,6 +2117,11 @@ msgstr "分组"
 msgid "Group (Overlapped)"
 msgstr "分组（重叠）"
 
+#: raincloud/options/groupOne.title
+#: raincloud/ui[0][1].label
+msgid "Group (Side-by-side)"
+msgstr "分组（并列）"
+
 #: piechart/options/labels/group+count.title
 msgid "Group + Count"
 msgstr "分组 + 计数"
@@ -1707,6 +2139,11 @@ msgstr "分组依据"
 #: mrcrosstabs/options/bartype/dodge2.title
 msgid "Grouped"
 msgstr "分组"
+
+#: barplot/options/barType/dodge.title
+#: mrcrosstabs/options/bartype/dodge.title
+msgid "Grouped (tight)"
+msgstr "分组（紧凑）"
 
 #: histogram/options/grouping.title
 #: histogram/options/groupingN.title
@@ -1776,6 +2213,17 @@ msgstr "水平图"
 #: qqplot/ui[2][1][0]/refLine[0]/refType_identity.label
 msgid "Identity line"
 msgstr "恒等线"
+
+#: likertplot/options/ignoreNA.title
+msgid "Ignore missing groups"
+msgstr "忽略缺失分组"
+
+#: areachart/options/ignoreNA.title
+#: barplot/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
+msgid "Ignore missing values"
+msgstr "忽略缺失值"
 
 #: multcorresp/options/ggrepel.title
 msgid "Improve label display"
@@ -2324,6 +2772,10 @@ msgstr "Likert"
 msgid "Likert Plot"
 msgstr "Likert 图"
 
+#: R/likertplot.b.R
+msgid "Likert Plot requires ordinal (or numeric) variables"
+msgstr "Likert 图要求使用定序（或数值型）变量"
+
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
 msgid "Likert Variables"
@@ -2396,10 +2848,9 @@ msgid ""
 "(and changelog) is available at <a "
 "href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>."
 msgstr ""
-"主要统计图表（直方图、箱线图、点图、条形图、折线图、云雨图等）提供丰富配置选"
-"项，并支持李克特量表图、多选题条形图、主成分分析（PCA）以及（多重）对应分析。"
-"项目源码（及更新日志）请访问 GitHub：<a href=\"https://github.com/vjalby/"
-"vijPlots\" target=\"_blank\">https://github.com/vjalby/vijPlots</a>。"
+"主要统计图表（直方图、箱线图、点图、条形图、折线图、云雨图等）提供丰富配置选项，并支持李克特量表图、多选题条形图、主成分分析（PCA）以及（多重）对应分析"
+"。项目源码（及更新日志）请访问 GitHub：<a href=\"https://github.com/vjalby/vijPlots\" "
+"target=\"_blank\">https://github.com/vjalby/vijPlots</a>。"
 
 #: likertplot/options/showMannU.title
 msgid "Mann-Whitney U"
@@ -2473,6 +2924,10 @@ msgstr "质量"
 msgid "Max"
 msgstr "最大"
 
+#: R/lollipop.b.R
+msgid "Maximum of {var}"
+msgstr "{var} 的最大值"
+
 #: qqplot/options/paramEstMethod/mle.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mle.label
 msgid "Maximum-likelihood (MLE)"
@@ -2483,6 +2938,14 @@ msgstr "极大似然估计 (MLE)"
 msgid "May"
 msgstr "五月"
 
+#: R/multcorresp.b.R
+msgid "MCA Principal Coordinates"
+msgstr "MCA 主坐标"
+
+#: R/multcorresp.b.R
+msgid "MCA Standard Coordinates"
+msgstr "MCA 标准坐标"
+
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 msgid "Mean"
@@ -2492,12 +2955,36 @@ msgstr "均值"
 msgid "Mean & SD"
 msgstr "均值与标准差"
 
+#: R/lollipop.b.R
+msgid "Mean of {var}"
+msgstr "{var} 的均值"
+
 #: R/likertplot.b.R
 #: likertplot/options/showMedian.title
 #: lollipop/options/yaxis/median.title
 #: lollipop/ui[2][0][0][0]/yaxis_median.label
 msgid "Median"
 msgstr "中位数"
+
+#: R/likertplot.b.R
+msgid "Median and mean require numeric variables"
+msgstr "中位数和平均值要求使用数值型变量"
+
+#: R/lollipop.b.R
+msgid "Median of {var}"
+msgstr "{var}的中位数"
+
+#: areachart/options/displayFormat/%b.title
+#: linechart/options/displayFormat/%b.title
+msgctxt "menu"
+msgid "Oct"
+msgstr "十月"
+
+#: areachart/options/displayFormat/%B.title
+#: linechart/options/displayFormat/%B.title
+msgctxt "menu"
+msgid "October"
+msgstr "十月"
 
 #: likertplot/options/adjustMethod.title
 #: multcorresp/options/method.title
@@ -2558,6 +3045,10 @@ msgstr "最小 / 最大"
 msgid "Minimum entropy"
 msgstr "最小熵"
 
+#: R/lollipop.b.R
+msgid "Minimum of {var}"
+msgstr "{var} 的最小值"
+
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
 #: mrcrosstabs/ui/mode/onevar[0][1].label
@@ -2613,6 +3104,10 @@ msgstr "名称"
 #: qqplot/options/transLog.title
 msgid "Natural log tranform"
 msgstr "自然对数变换"
+
+#: R/qqplot.b.R
+msgid "Natural Log Tranform requires positive (>0) data."
+msgstr "自然对数变换要求数据为正数 (>0)。"
 
 #: R/principal.b.R
 msgid "No rotation used."
@@ -2744,6 +3239,10 @@ msgstr "案例数："
 #: principal/options/dimNum.title
 msgid "Number of dimensions"
 msgstr "维度数量"
+
+#: R/corresp.b.R
+msgid "Number of dimensions must be less than or equal to {maxDim}."
+msgstr "维度数量必须小于或等于 {maxDim}。"
 
 #: multcorresp/options/obsColor.title
 msgid "Obs color"
@@ -3069,6 +3568,14 @@ msgstr "浅色调 1"
 msgid "Pastel 2"
 msgstr "浅色调 2"
 
+#: R/principal.b.R
+msgid "PCA Principal Coordinates"
+msgstr "PCA 主坐标"
+
+#: R/principal.b.R
+msgid "PCA Standard Coordinates"
+msgstr "PCA 标准坐标"
+
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
 #: barplot/ui[1][0][0]/yaxis_percent.label
@@ -3088,6 +3595,10 @@ msgstr "百分比"
 #: piechart/results.title
 msgid "Pie Chart"
 msgstr "饼图"
+
+#: R/piechart.b.R
+msgid "Pie charts are for educational use only. Please do not use Pie charts!"
+msgstr "饼图仅供教学参考。请勿使用饼图！"
 
 #: corresp/options/rowColor/hotpink.title
 #: corresp/options/colColor/hotpink.title
@@ -3282,6 +3793,10 @@ msgstr "主成分分析"
 #: principal/results/obsTable.notes.norm
 msgid "Principal coordinates"
 msgstr "主坐标"
+
+#: R/corresp.b.R
+msgid "Principal normalization"
+msgstr "主标准化"
 
 #: multcorresp/options/propPoint.title
 msgid "Proportional point size"
@@ -3586,6 +4101,12 @@ msgstr "回归线"
 msgid "Reverse disposition"
 msgstr "逆序排列"
 
+#: barplot/options/reverseStack.title
+#: likertplot/options/reverseLikert.title
+#: mrcrosstabs/options/reverseStack.title
+msgid "Reverse stacking order"
+msgstr "反转堆叠顺序"
+
 #: areachart/options/titleAlign/1.title
 #: areachart/options/subtitleAlign/1.title
 #: areachart/options/captionAlign/1.title
@@ -3713,9 +4234,17 @@ msgstr "行图"
 msgid "Row plot"
 msgstr "行图"
 
+#: R/corresp.b.R
+msgid "Row Points for {rows}"
+msgstr "针对 {rows} 的行点"
+
 #: corresp/options/normalization/rowprincipal.title
 msgid "Row principal"
 msgstr "行主成分"
+
+#: R/corresp.b.R
+msgid "Row principal normalization"
+msgstr "行主成分归一化"
 
 #: corresp/results/rowProfiles.title
 msgid "Row Profiles"
@@ -3954,6 +4483,11 @@ msgstr "奇异值"
 msgid "Size"
 msgstr "大小"
 
+#: linechart/ui[1][0][1].label
+#: principal/ui[4].label
+msgid "Sizes & Colors"
+msgstr "大小和颜色"
+
 #: package/datasets/Smoking.name
 msgid "Smoking"
 msgstr "吸烟"
@@ -4034,6 +4568,10 @@ msgstr "标准"
 #: R/principal.b.R
 msgid "Standard coordinates"
 msgstr "标准坐标"
+
+#: R/corresp.b.R
+msgid "Standard normalization"
+msgstr "标准归一化"
 
 #: principal/options/stdLoadings.title
 msgid "Standardize loadings (eigenvectors)"
@@ -4133,6 +4671,14 @@ msgid "Supplement"
 msgstr "附加信息"
 
 #: R/corresp.b.R
+msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "补充列号必须是数字列表（例如：1,2,9）"
+
+#: R/corresp.b.R
+msgid "Supplementary column numbers must be between 1 and {nmax}."
+msgstr "补充列号必须在 1 到 {nmax} 之间。"
+
+#: R/corresp.b.R
 #: corresp/options/supplementaryCols.title
 msgid "Supplementary columns"
 msgstr "补充列"
@@ -4140,6 +4686,14 @@ msgstr "补充列"
 #: corresp/ui[3][0].label
 msgid "Supplementary Points"
 msgstr "附加点"
+
+#: R/corresp.b.R
+msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "补充行号必须是一个数字列表，例如 1,2,9"
+
+#: R/corresp.b.R
+msgid "Supplementary row numbers must be between 1 and {nmax}."
+msgstr "补充行号必须在 1 和 {nmax} 之间。"
 
 #: R/corresp.b.R
 #: corresp/options/supplementaryRows.title
@@ -4158,6 +4712,18 @@ msgstr "补充变量"
 #: R/multcorresp.b.R
 msgid "Supplementary variables"
 msgstr "补充变量"
+
+#: R/corresp.b.R
+msgid "Symetric normalization"
+msgstr "对称归一化"
+
+#: corresp/options/normalization/symmetric.title
+msgid "Symmetric"
+msgstr "对称"
+
+#: R/corresp.b.R
+msgid "Symmetric normalization"
+msgstr "对称归一化"
 
 #: likertplot/ui[2].label
 #: likertplot/ui[2][0][0][0].label
@@ -4199,6 +4765,16 @@ msgstr "文本"
 msgid "Text Size"
 msgstr "文字大小"
 
+#: corresp/ui[6].label
+msgid "Text Size & Colors"
+msgstr "文字大小 & 颜色"
+
+#: barplot/ui[4].label
+#: boxplot/ui[3].label
+#: piechart/ui[4].label
+msgid "Text Size & Facets"
+msgstr "文字大小 & 分面"
+
 #: R/principal.b.R
 msgid ""
 "The correlation matrix is not positive definite. Computations may not be "
@@ -4209,6 +4785,10 @@ msgstr "相关矩阵不是正定矩阵。计算可能不准确。"
 msgid "The number of dimensions cannot be greater than {max}."
 msgstr "维度数量不能大于 {max}。"
 
+#: R/principal.b.R
+msgid "The number of dimensions cannot be greater than the number of variables."
+msgstr "维度数量不能超过变量总数。"
+
 #: R/qqplot.b.R
 msgid "Theoretical Probabilities"
 msgstr "理论概率"
@@ -4216,6 +4796,29 @@ msgstr "理论概率"
 #: R/qqplot.b.R
 msgid "Theoretical Quantiles"
 msgstr "理论分位数"
+
+#: areachart/options/yTicks.title
+#: barplot/options/xTicks.title
+#: barplot/options/yTicks.title
+#: boxplot/options/xTicks.title
+#: boxplot/options/yTicks.title
+#: histogram/options/xTicks.title
+#: histogram/options/yTicks.title
+#: linechart/options/yTicks.title
+#: lollipop/options/xTicks.title
+#: lollipop/options/yTicks.title
+#: mrcrosstabs/options/xTicks.title
+#: mrcrosstabs/options/yTicks.title
+#: mrfrequencies/options/xTicks.title
+#: mrfrequencies/options/yTicks.title
+#: qqplot/options/xTicks.title
+#: qqplot/options/yTicks.title
+#: raincloud/options/xTicks.title
+#: raincloud/options/yTicks.title
+#: scatterplot/options/xTicks.title
+#: scatterplot/options/yTicks.title
+msgid "Tick count"
+msgstr "刻度数量"
 
 #: likertplot/options/tidyUp.title
 msgid "Tidy up levels"
@@ -4430,11 +5033,20 @@ msgstr "总计"
 msgid "Total row"
 msgstr "行总计"
 
+#: mrcrosstabs/options/emptyAsNA.title
+#: mrfrequencies/options/emptyAsNA.title
+msgid "Treat empty values as missing"
+msgstr "将空值视为缺失值"
+
 #: likertplot/ui[4][0][0][0].label
 #: piechart/options/labType.title
 #: piechart/ui[2][0][0][0].label
 msgid "Type"
 msgstr "类型"
+
+#: R/qqplot.b.R
+msgid "Unable to estimate the distribution parameters."
+msgstr "无法估计分布参数。"
 
 #: R/principal.b.R
 msgid "Unable to use {rotation} rotation."
@@ -4709,6 +5321,10 @@ msgstr "在类别中"
 msgid "Within groups"
 msgstr "组内"
 
+#: R/qqplot.b.R
+msgid "Wrong parameter values."
+msgstr "参数值错误。"
+
 #: areachart/options/timeVar.title
 #: areachart/options/timeVar1.title
 #: areachart/ui/mode/oneVariable[0][0][0].label
@@ -4752,6 +5368,16 @@ msgstr "组内"
 #: scatterplot/ui[4][1].label
 msgid "X-Axis"
 msgstr "X 轴"
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "X-Axis and Y-Axis cannot be equal."
+msgstr "X轴和Y轴不能相同。"
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
+msgstr "X 轴和 Y 轴的数量不能超过维度总数。"
 
 #: areachart/options/isDate.title
 #: linechart/options/isDate.title
@@ -4897,661 +5523,3 @@ msgstr "黄-绿渐变色"
 #: scatterplot/options/colorPalette/YlOrRd.title
 msgid "Yellow to Red"
 msgstr "黄-红渐变色"
-
-#: R/areachart.b.R
-#: R/linechart.b.R
-msgid "{var} doesn't have a valid date format."
-msgstr "{var} 不具备有效的日期格式。"
-
-#: R/corresp.b.R
-msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "补充行号必须是一个数字列表，例如 1,2,9"
-
-#: R/corresp.b.R
-msgid "Supplementary row numbers must be between 1 and {nmax}."
-msgstr "补充行号必须在 1 和 {nmax} 之间。"
-
-#: R/corresp.b.R
-msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "补充列号必须是数字列表（例如：1,2,9）"
-
-#: R/corresp.b.R
-msgid "Supplementary column numbers must be between 1 and {nmax}."
-msgstr "补充列号必须在 1 到 {nmax} 之间。"
-
-#: R/corresp.b.R
-msgid "Number of dimensions must be less than or equal to {maxDim}."
-msgstr "维度数量必须小于或等于 {maxDim}。"
-
-#: R/corresp.b.R
-msgid ""
-"Axis numbers must be less than or equal to the number of dimensions "
-"({nDim})."
-msgstr "坐标轴序号必须小于或等于维度总数（{nDim}）。"
-
-#: R/corresp.b.R
-msgid "Axis numbers cannot be equal."
-msgstr "坐标轴序号不能相同。"
-
-#: R/corresp.b.R
-msgid "Principal normalization"
-msgstr "主标准化"
-
-#: R/corresp.b.R
-msgid "Symetric normalization"
-msgstr "对称归一化"
-
-#: R/corresp.b.R
-msgid "Row principal normalization"
-msgstr "行主成分归一化"
-
-#: R/corresp.b.R
-msgid "Column principal normalization"
-msgstr "列主成分归一化"
-
-#: R/corresp.b.R
-msgid "Standard normalization"
-msgstr "标准归一化"
-
-#: R/corresp.b.R
-msgid "Row Points for {rows}"
-msgstr "针对 {rows} 的行点"
-
-#: R/corresp.b.R
-msgid "Column Points for {cols}"
-msgstr "针对{cols} 的列点"
-
-#: R/corresp.b.R
-msgid "Symmetric normalization"
-msgstr "对称归一化"
-
-#: R/corresp.b.R
-msgid ""
-"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
-"two categorical variables. Computations are based on <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
-"using the \"Counts\" variable.</p>\n"
-"<p><strong>Supplementary row or column</strong> numbers may be entered as "
-"integer lists : 1,3,6</p>\n"
-"<p>Four normalizations (scaling of row and column scores before plotting) "
-"are avalaible :</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Row an columns scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
-"square root of eigenvalues. </li>\n"
-"<li><strong>Row Principal:</strong> Only row scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Column Principal:</strong> Only column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Standard:</strong> The raw coordinates without "
-"normalization.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
-msgstr ""
-"<p>本模块对两个分类变量进行对应分析 (Correspondence Analysis, CA)。计算基于"
-"由 F. Husson, J. Josse, S. Le, J. Mazet 开发的 <a href = \"\" "
-"target=\"_blank\">FactoMineR</a> R 包。</p>\n"
-"<p>可以使用 jamovi 内置的权重系统或“计数 (Counts)”变量对数据进行加权。</p>\n"
-"<p>补充行或列的编号可以输入为整数列表，例如：1,3,6</p>\n"
-"<p>提供四种归一化方式（绘图前对行和列得分进行缩放）：</p>\n"
-"<ul>\n"
-"<li>主标准 (Principal)： 行和列得分根据特征值进行缩放。</li>\n"
-"<li>对称标准 (Symmetric)： 行和列得分根据特征值的平方根进行缩放。</li>\n"
-"<li>行主标准 (Row Principal)： 仅对行得分根据特征值进行缩放。</li>\n"
-"<li>列主标准 (Column Principal)： 仅对列得分根据特征值进行缩放。</li>\n"
-"<li>标准 (Standard)： 未经归一化的原始坐标。</li>\n"
-"</ul>\n"
-"<p>示例文件位于：打开 > 数据库 > vijPlots > Smoking</p>"
-
-#: R/likertplot.b.R
-msgid "Likert Plot requires ordinal (or numeric) variables"
-msgstr "Likert 图要求使用定序（或数值型）变量"
-
-#: R/likertplot.b.R
-msgid "Median and mean require numeric variables"
-msgstr "中位数和平均值要求使用数值型变量"
-
-#: R/likertplot.b.R
-msgid "Comparison tests require numeric variables"
-msgstr "比较检验要求使用数值型变量"
-
-#: R/likertplot.b.R
-msgid "Cannot convert text variables to integers"
-msgstr "无法将文本变量转换为整数"
-
-#: R/likertplot.b.R
-msgid "Cannot tidy up text variables"
-msgstr "无法整理文本变量"
-
-#: R/likertplot.b.R
-msgid "Comparison tests cannot be computed with empty (N=0) groups"
-msgstr "无法对空分组（样本量 N=0）进行比较检验"
-
-#: R/likertplot.b.R
-msgid ""
-"<h3>Data & Sorting</h3>\n"
-"<ul>\n"
-"<li>Likert variables must be of ordinal measure-type. (Continuous "
-"measure-type works as well.)</li>\n"
-"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
-"must be of integer data-type.</li>\n"
-"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
-"order in table and graph (when some variables miss some levels).</li>\n"
-"<li><strong>Convert variables to integer:</strong> when checked, the level "
-"labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
-"</ul>\n"
-"<h3>Comparison Tests</h3>\n"
-"<p>When using a group variable, several tests are available:</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
-"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
-"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
-"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
-"</ul>\n"
-"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
-"p-values are already adjusted (groupwise); no other adjustment is "
-"possible.</p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
-msgstr ""
-"<h3>数据与排序</h3>\n"
-"<ul>\n"
-"<li>李克特变量必须为定序 (Ordinal) 测量类型。（连续型测量类型同样适用。）</"
-"li>\n"
-"<li>如果您计划计算均值/中位数/标准差或使用比较检验，变量必须为整数 (Integer) "
-"数据类型。</li>\n"
-"<li><strong>整理水平：</strong> 勾选后，当某些变量缺失部分等级时，系统会尝试"
-"修正表格和图形中的标签顺序。</li>\n"
-"<li><strong>将变量转换为整数：</strong> 勾选后，系统将忽略等级标签，仅使用整"
-"数值进行计算。</li>\n"
-"<li><strong>按中位数排序变量：</strong> 根据中位数对李克特变量列表进行排序"
-"。</li>\n"
-"</ul>\n"
-"<h3>比较检验</h3>\n"
-"<p>当使用分组变量时，可进行以下几种检验：</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U：</strong> 两组间比较</li>\n"
-"<li><strong>Kruskal-Wallis：</strong> n 组间比较</li>\n"
-"<li><strong>事后检验：</strong> Dunn、Conover 以及 Dwass-Steel-Critchlow-"
-"Fligner (DSCF) 两两比较检验。</li>\n"
-"</ul>\n"
-"<p>对于事后检验，可以按每个问题 (groupwise) 调整 p 值；或者对于 Mann-Whitney "
-"U、Kruskal-Wallis 及事后检验进行整体 (overall)（同时针对每个问题和组别）调整"
-"。DSCF 的 p 值已经过自动调整（按每个问题视角）；无法进行其他调整。</p>\n"
-"<p>示例文件位于：打开 > 数据库 > vijPlots > Likert</p>"
-
-#: R/lollipop.b.R
-msgid "Mean of {var}"
-msgstr "{var} 的均值"
-
-#: R/lollipop.b.R
-msgid "Median of {var}"
-msgstr "{var}的中位数"
-
-#: R/lollipop.b.R
-msgid "Minimum of {var}"
-msgstr "{var} 的最小值"
-
-#: R/lollipop.b.R
-msgid "Maximum of {var}"
-msgstr "{var} 的最大值"
-
-#: R/mrcrosstabs.b.R
-msgid "Crosstab (% of cases)"
-msgstr "交叉表（占个案的 %）"
-
-#: R/mrcrosstabs.b.R
-msgid "Crosstab (% of responses)"
-msgstr "交叉表（占响应次数的 %）"
-
-#: R/mrcrosstabs.b.R
-msgid ""
-"<p>This module computes two-way frequencies for multiple response "
-"questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>本模块用于计算多重响应问题（也称为“多项选择”或 CATA 题型）的二维频数。</p>"
-"\n"
-"<p>问题可编码为：</p>\n"
-"<ul>\n"
-"<li>针对每个可能的选项，使用多个<strong>虚拟（或指示）变量</strong>（如使用 "
-"0/1、1/2、Y/N）；</li>\n"
-"<li>使用单个<strong>多值变量</strong>，其中包含已选答案，并由符号（通常为“,”"
-"或“;”）分隔。</li>\n"
-"</ul>\n"
-"<p>示例文件见：打开 > 数据库 > vijPlots > Credit Cards</p>"
-
-#: R/mrfrequencies.b.R
-msgid ""
-"<p>This module computes frequencies for multiple response questions, also "
-"known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>此模块用于计算多重响应问题的二维频数，也称为“多选题” (Check All That "
-"Apply, CATA)。</p>\n"
-"<p>问题可以编码为：</p>\n"
-"<ul>\n"
-"<li>对应每个可能答案的若干个 <strong>dummy (or indicator) variables</strong>"
-"，使用 0/1、1/2、Y/N；</li>\n"
-"<li>包含已勾选答案的单个 <strong>multi-valued variable</strong>，各答案之间用"
-"符号（通常为“,”或“;”）隔开。</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
-msgstr "X 轴和 Y 轴的数量不能超过维度总数。"
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-msgid "X-Axis and Y-Axis cannot be equal."
-msgstr "X轴和Y轴不能相同。"
-
-#: R/multcorresp.b.R
-msgid "MCA Principal Coordinates"
-msgstr "MCA 主坐标"
-
-#: R/multcorresp.b.R
-msgid "MCA Standard Coordinates"
-msgstr "MCA 标准坐标"
-
-#: R/multcorresp.b.R
-msgid ""
-"<p>This module computes <strong>Multiple Correspondence Analysis "
-"(MCA)</strong> for several categorical variables. Computations are based on "
-"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Both classic methods are available:</p>\n"
-"<ul>\n"
-"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
-"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues "
-"are the squares of those of the indicator matrix method. </li>\n"
-"</ul>\n"
-"<p>Both methods give the same <em>standard</em> coordinates (but different "
-"<em>principal</em> coordinates).</p>\n"
-"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
-"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
-"(and inertia) of categories and observations are computed from the original "
-"eigenvalues of the Burt matrix.</p>\n"
-"<p>The <strong>Normalization</strong> options specify how the coordinates "
-"are scaled (by eigenvalues):</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Both category and observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Category principal:</strong> Only category coordinates are "
-"scaled.</li>\n"
-"<li><strong>Observation principal:</strong> Only observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Standard:</strong> Both category and observation coordinates "
-"are standard.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
-msgstr ""
-"<p>此模块对多个分类变量进行<strong>多重对应分析 (MCA)</strong>。计算基于 "
-"F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet 开发的 <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">"
-"FactoMineR<a/> 软件包。</p>\n"
-"<p>提供以下两种经典方法：</p>\n"
-"<ul>\n"
-"<li><strong>指示矩阵 (Indicator matrix)：</strong> 指示矩阵的 CA 分析</li>\n"
-"<li><strong>Burt 矩阵 (Burt matrix)：</strong> Burt 矩阵的 CA 分析。其特征值"
-"是指示矩阵法特征值的平方。</li>\n"
-"</ul>\n"
-"<p>两种方法得到相同的<em>标准 (standard)</em> 坐标（但<em>主 (principal)</"
-"em> 坐标不同）。</p>\n"
-"<p>选中时，<strong>Benzécri 和 Greenacre 校正</strong>仅应用于特征值"
-"（<strong>摘要</strong>表）。类别和观测值的坐标（及惯量）根据 Burt 矩阵的原始"
-"特征值计算。</p>\n"
-"<p><strong>标准化 (Normalization)</strong> 选项指定坐标如何缩放（按特征值）"
-"：</p>\n"
-"<ul>\n"
-"<li><strong>主坐标 (Principal)：</strong> 类别和观测值坐标均进行缩放。</li>\n"
-"<li><strong>类别主坐标 (Category principal)：</strong> 仅对类别坐标进行缩放"
-"。</li>\n"
-"<li><strong>观测值主坐标 (Observation principal)：</strong> 仅对观测值坐标进"
-"行缩放。</li>\n"
-"<li><strong>标准坐标 (Standard)：</strong> 类别和观测值坐标均为标准坐标。</"
-"li>\n"
-"</ul>\n"
-"<p>示例文件位于：Open > Data Library > vijPlots > Cars</p>"
-
-#: R/piechart.b.R
-msgid "Pie charts are for educational use only. Please do not use Pie charts!"
-msgstr "饼图仅供教学参考。请勿使用饼图！"
-
-#: R/principal.b.R
-msgid "The number of dimensions cannot be greater than the number of variables."
-msgstr "维度数量不能超过变量总数。"
-
-#: R/principal.b.R
-msgid "PCA Principal Coordinates"
-msgstr "PCA 主坐标"
-
-#: R/principal.b.R
-msgid "PCA Standard Coordinates"
-msgstr "PCA 标准坐标"
-
-#: R/principal.b.R
-msgid ""
-"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
-"for several continuous variables. Computations are based on "
-"<tt>stats::prcomp</tt> function.</p>\n"
-"<p>Although rotated components are not principal components, they are "
-"widely used. Only orthogonal rotations are available (from GPArotation "
-"package).</p>\n"
-"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
-"principal (scaled by the squareroot of eigenvalues).</p>\n"
-"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
-"eigenvalues) while loadings are standard.</li>\n"
-"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
-"are standard. </li>\n"
-"</ul>\n"
-"<p><strong>Advanced options</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Standardize loadings:</strong> loadings are normalized with "
-"sums of squared equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Standardize scores:</strong> scores are normalized with "
-"variances equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
-"applied to eigenvectors (standard loadings) instead of principal loadings "
-"(STATA way).</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
-msgstr ""
-"<p>本模块对多个连续变量进行<strong>主成分分析 (PCA)</strong>。计算基于 <tt>"
-"stats::prcomp</tt> 函数。</p>\n"
-"<p>虽然旋转后的成分不再是主成分，但其应用非常广泛。目前仅支持正交旋转（由 "
-"GPArotation 包提供）。</p>\n"
-"<p>载荷（变量坐标）和得分（观测值坐标）均为“主坐标”（按特征值的平方根缩放）"
-"。</p>\n"
-"<p>双标图遵循《双标图实践》(Michael Greenacre, 2010) 的标准：</p>\n"
-"<ul>\n"
-"<li><strong>形状双标图 (Form biplot)：</strong> 得分为主坐标（按特征值缩放）"
-"，载荷为标准坐标。</li>\n"
-"<li><strong>协方差双标图 (Covariance biplot)：</strong> 载荷为主坐标，得分为"
-"标准坐标。</li>\n"
-"</ul>\n"
-"<p><strong>高级选项</strong>：</p>\n"
-"<ul>\n"
-"<li><strong>标准化载荷：</strong> 对载荷进行归一化处理，使其平方和等于 1（而"
-"非特征值）。</li>\n"
-"<li><strong>标准化得分：</strong> 对得分进行归一化处理，使其方差等于 1（而非"
-"特征值）。</li>\n"
-"<li><strong>旋转特征向量：</strong> 对特征向量（标准载荷）而非主载荷进行旋转"
-"（如方差最大化旋转等），这是 STATA 的处理方式。</li>\n"
-"</ul>\n"
-"<p>示例文件见：打开 > 数据库 > vijPlots > Iris</p>"
-
-#: R/qqplot.b.R
-msgid "Natural Log Tranform requires positive (>0) data."
-msgstr "自然对数变换要求数据为正数 (>0)。"
-
-#: R/qqplot.b.R
-msgid "{distrib} distribution requires positive (>0) data."
-msgstr "{distrib} 分布要求数据为正数 (>0)。"
-
-#: R/qqplot.b.R
-msgid "Exponential distribution requires non-negative (≥0) data."
-msgstr "Exponential 分布要求非负 (≥0) 数据。"
-
-#: R/qqplot.b.R
-msgid "Beta distribution requires data between 0 and 1."
-msgstr "Beta 分布要求数据介于 0 到 1 之间。"
-
-#: R/qqplot.b.R
-msgid "Unable to estimate the distribution parameters."
-msgstr "无法估计分布参数。"
-
-#: R/qqplot.b.R
-msgid "Wrong parameter values."
-msgstr "参数值错误。"
-
-#: R/qqplot.b.R
-msgid "F"
-msgstr "F"
-
-#: R/qqplot.b.R
-msgid ""
-"<p>This module uses <a href = "
-"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
-"package<a/> by Alexandre Almeida, Adam Loy and Heike Hofmann. In-depth "
-"information can be found in the package documentation on CRAN site.</p>\n"
-"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
-"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
-"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
-"identity line.</p>\n"
-"<p><strong>Confidence band:</strong> Draws a confidence band around the "
-"reference line. qqplotr package provides several methods to compute the "
-"confidence band:</p>\n"
-"<ul>\n"
-"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
-"bands based on Normal confidence intervals;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
-"based on a parametric bootstrap;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
-"Kolmogorov-Smirnov test;</li>\n"
-"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
-"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
-"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
-"simultaneous bands using the equal local levels.</li>\n"
-"</ul>\n"
-"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
-"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
-"according to the reference line. This procedure may help reducing visual "
-"bias caused by the orthogonal distances from the points to the reference "
-"line.</p>\n"
-"<p><strong>Parameter values:</strong> The distribution parameters can be "
-"estimated from data using:</p>\n"
-"<ul>\n"
-"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
-"should work with all distributions but \"t\" and \"uniform\";</li>\n"
-"<li><strong>Method of Moments</strong> for moment based parameters : it "
-"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
-"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
-"</ul>\n"
-"<p>or entered by user:</p>\n"
-"<ul>\n"
-"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
-"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
-"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
-"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
-"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
-"(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
-msgstr ""
-"<p>此模块使用由 Alexandre Almeida、Adam Loy 和 Heike Hofmann 开发的 <a href "
-"= \"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
-"软件包</a>。深入信息请参阅 CRAN 网站上的软件包文档。</p>\n"
-"<p><strong>参考线：</strong> 绘制<em>等值线</em> (y = x) 或常用的 <em>Q-Q "
-"线</em>（截取 Q<sub>0.25</sub> 和 Q<sub>0.75</sub> 两个分位数）。P-P 图仅支持"
-"等值线。</p>\n"
-"<p><strong>置信带：</strong> 围绕参考线绘制置信带。qqplotr 软件包提供了几种计"
-"算置信带的方法：</p>\n"
-"<ul>\n"
-"<li><strong><em>逐点 (Pointwise)</em></strong> 基于正态置信区间构建逐点置信带"
-"；</li>\n"
-"<li><strong><em>自助法 (Bootstrap)</em></strong> 基于参数化自助法创建逐点置信"
-"带；</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> 置信带基于 Kolmogorov-"
-"Smirnov 检验；</li>\n"
-"<li><strong><em>尾部敏感 (Tail-Sensitive)</em></strong> 构建尾部敏感置信带，"
-"但仅适用于正态 Q-Q 图；</li>\n"
-"<li><strong><em>等局部水平 (ELL)</em></strong> 使用等局部水平构建同步置信带"
-"。</li>\n"
-"</ul>\n"
-"<p>P-P 图仅支持 “ELL” 和 “Bootstrap” 方法。</p>\n"
-"<p><strong>去趋势图 (Detrended plot)：</strong> 根据参考线对对象进行<em>去趋"
-"势</em>处理。此步骤有助于减少由点到参考线的正交距离引起的视觉偏差。</p>\n"
-"<p><strong>参数值：</strong> 分布参数可以从数据中估计，使用：</p>\n"
-"<ul>\n"
-"<li><strong>最大似然法 (Maximum Likelihood Method)</strong>（使用 MASS 软件包"
-"）：适用于除 “t” 和 “均匀分布 (uniform)” 以外的所有分布；</li>\n"
-"<li><strong>矩估计法 (Method of Moments)</strong> 用于基于矩的参数：适用于 “"
-"正态 (normal)”、“对数正态 (log-normal)”、“Beta”、“指数 (Exponential)”、“Gamma"
-"”、“逻辑 (Logistic)” 和 “均匀 (Uniform)” 分布；</li>\n"
-"</ul>\n"
-"<p>或由用户输入：</p>\n"
-"<ul>\n"
-"<li><strong>参数 1：</strong> 均值 (正态)、对数均值 (对数正态)、形状参数 1 "
-"(Beta)、位置 (柯西、逻辑)、自由度 (卡方、Student t)、自由度 1 (F)、率 (指数)"
-"、形状 (Gamma、威布尔) 以及最小值 (均匀)；</li>\n"
-"<li><strong>参数 2：</strong> 标准差 (正态)、对数标准差 (对数正态)、形状参数 "
-"2 (Beta)、尺度 (柯西、逻辑)、自由度 2 (F)、率 (Gamma、威布尔) 以及最大值 (均"
-"匀)。</li>\n"
-"</ul>\n"
-"</p>"
-
-#: areachart/options/ignoreNA.title
-#: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
-msgid "Ignore missing values"
-msgstr "忽略缺失值"
-
-#: areachart/options/yTicks.title
-#: barplot/options/xTicks.title
-#: barplot/options/yTicks.title
-#: boxplot/options/xTicks.title
-#: boxplot/options/yTicks.title
-#: histogram/options/xTicks.title
-#: histogram/options/yTicks.title
-#: linechart/options/yTicks.title
-#: lollipop/options/xTicks.title
-#: lollipop/options/yTicks.title
-#: mrcrosstabs/options/xTicks.title
-#: mrcrosstabs/options/yTicks.title
-#: mrfrequencies/options/xTicks.title
-#: mrfrequencies/options/yTicks.title
-#: qqplot/options/xTicks.title
-#: qqplot/options/yTicks.title
-#: raincloud/options/xTicks.title
-#: raincloud/options/yTicks.title
-#: scatterplot/options/xTicks.title
-#: scatterplot/options/yTicks.title
-msgid "Tick count"
-msgstr "刻度数量"
-
-#: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
-#: mrcrosstabs/options/reverseStack.title
-msgid "Reverse stacking order"
-msgstr "反转堆叠顺序"
-
-#: barplot/options/barType/dodge.title
-#: mrcrosstabs/options/bartype/dodge.title
-msgid "Grouped (tight)"
-msgstr "分组（紧凑）"
-
-#: barplot/ui[4].label
-#: boxplot/ui[3].label
-#: piechart/ui[4].label
-msgid "Text Size & Facets"
-msgstr "文字大小 & 分面"
-
-#: boxplot/ui[2][0][1][0].label
-msgid "Box Elements"
-msgstr "箱图组件"
-
-#: corresp/options/normalization/symmetric.title
-msgid "Symmetric"
-msgstr "对称"
-
-#: corresp/ui[6].label
-msgid "Text Size & Colors"
-msgstr "文字大小 & 颜色"
-
-#: likertplot/options/ignoreNA.title
-msgid "Ignore missing groups"
-msgstr "忽略缺失分组"
-
-#: linechart/ui[1][0][1].label
-#: principal/ui[4].label
-msgid "Sizes & Colors"
-msgstr "大小和颜色"
-
-#: mrcrosstabs/options/emptyAsNA.title
-#: mrfrequencies/options/emptyAsNA.title
-msgid "Treat empty values as missing"
-msgstr "将空值视为缺失值"
-
-#: mrcrosstabs/options/computedValues/responses.title
-#: mrfrequencies/options/showResponses.title
-#: mrfrequencies/options/yaxis/responses.title
-msgid "% of responses"
-msgstr "响应百分比"
-
-#: mrcrosstabs/options/computedValues/cases.title
-#: mrfrequencies/options/showCases.title
-#: mrfrequencies/options/yaxis/cases.title
-msgid "% of cases"
-msgstr "案例百分比"
-
-#: mrcrosstabs/options/computedValues/options.title
-msgid "% by row"
-msgstr "行百分比"
-
-#: principal/ui[4][0][0][1].label
-#: scatterplot/ui[2][0][0][0].label
-msgid "Element Sizes"
-msgstr "元素大小"
-
-#: raincloud/options/groupOne.title
-#: raincloud/ui[0][1].label
-msgid "Group (Side-by-side)"
-msgstr "分组（并列）"
-
-#: scatterplot/ui[2].label
-msgid "Element Sizes & Facets"
-msgstr "要素尺寸与维度分面"
-
-#: histogram/options/binBoundary.title
-msgctxt "boundary"
-msgid "Position"
-msgstr "位置"
-
-#: areachart/options/displayFormat/%b.title
-#: linechart/options/displayFormat/%b.title
-msgctxt "menu"
-msgid "Oct"
-msgstr "十月"
-
-#: areachart/options/displayFormat/%B.title
-#: linechart/options/displayFormat/%B.title
-msgctxt "menu"
-msgid "October"
-msgstr "十月"
-
-#: R/qqplot.b.R
-#: qqplot/options/distrib/norm.title
-msgctxt "distribution"
-msgid "Normal"
-msgstr "正态"

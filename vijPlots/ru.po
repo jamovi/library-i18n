@@ -3,8 +3,8 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-03-30 05:09+0000\n"
 "Last-Translator: Yuri Smolyakov <smolyakov@rambler.ru>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/jamovi/module-"
-"vijplots/ru/>\n"
+"Language-Team: Russian "
+"<https://hosted.weblate.org/projects/jamovi/module-vijplots/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -12,6 +12,10 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.17-dev\n"
+
+#: R/qqplot.b.R
+msgid "{distrib} distribution requires positive (>0) data."
+msgstr "{distrib} распределение требует положительных (>0) данных."
 
 #: R/qqplot.b.R
 msgid "{distribStr} {typeStr} Plot of {varStr}"
@@ -32,6 +36,11 @@ msgstr "{rotation} с нормализацией Кайзера"
 #: R/principal.b.R
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "{rotation} было использовано вращение с нормализацией Кайзера."
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "{var} doesn't have a valid date format."
+msgstr "{var} не имеет допустимого формата даты."
 
 #: barplot/options/facetNumber.title
 #: boxplot/options/facetNumber.title
@@ -55,6 +64,10 @@ msgstr "# строки/столбцы"
 msgid "% Accuracy"
 msgstr "% Точность"
 
+#: mrcrosstabs/options/computedValues/options.title
+msgid "% by row"
+msgstr "% по строкам"
+
 #: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
 msgid "% Inertia"
@@ -70,6 +83,12 @@ msgstr "% Меток"
 msgid "% of Cases"
 msgstr "% случаев"
 
+#: mrcrosstabs/options/computedValues/cases.title
+#: mrfrequencies/options/showCases.title
+#: mrfrequencies/options/yaxis/cases.title
+msgid "% of cases"
+msgstr "% случаев"
+
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -82,6 +101,12 @@ msgstr "% Инерции"
 msgid "% of Responses"
 msgstr "% ответов"
 
+#: mrcrosstabs/options/computedValues/responses.title
+#: mrfrequencies/options/showResponses.title
+#: mrfrequencies/options/yaxis/responses.title
+msgid "% of responses"
+msgstr "% ответов"
+
 #: principal/results/summaryTable.columns.title
 msgid "% of Variance"
 msgstr "% от дисперсии"
@@ -89,6 +114,393 @@ msgstr "% от дисперсии"
 #: R/mrcrosstabs.b.R
 msgid "% within"
 msgstr "% в пределах"
+
+#: R/likertplot.b.R
+msgid ""
+"<h3>Data & Sorting</h3>\n"
+"<ul>\n"
+"<li>Likert variables must be of ordinal measure-type. (Continuous "
+"measure-type works as well.)</li>\n"
+"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
+"must be of integer data-type.</li>\n"
+"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
+"order in table and graph (when some variables miss some levels).</li>\n"
+"<li><strong>Convert variables to integer:</strong> when checked, the level "
+"labels are ignored and only integer values are used.</li>\n"
+"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
+"variables by median.</li>\n"
+"</ul>\n"
+"<h3>Comparison Tests</h3>\n"
+"<p>When using a group variable, several tests are available:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
+"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
+"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
+"</ul>\n"
+"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
+"question) for post hoc tests or <strong>overall</strong> (groupwise and "
+"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
+"p-values are already adjusted (groupwise); no other adjustment is "
+"possible.</p>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
+msgstr ""
+"<h3>Данные и сортировка</h3>\n"
+"<ul>\n"
+"<li>Переменные Лайкерта должны быть измерения порядкового типа. (Измерения "
+"непрерывного типа также работают.)</li>\n"
+"<li>Если вы планируете вычислять среднее/медиану/стандартное отклонение или "
+"использовать тесты сравнения, они должны быть целочисленного типа "
+"данных.</li>\n"
+"<li><strong>Очистить уровни:</strong> когда отмечено, попытаться исправить "
+"порядок меток в таблице и графике (когда некоторые переменные пропускают "
+"некоторые уровни).</li>\n"
+"<li><strong>Преобразовать переменные в целые числа:</strong> когда отмечено, "
+"метки уровней игнорируются, и используются только целочисленные "
+"значения.</li>\n"
+"<li><strong>Сортировка переменных по медиане:</strong> упорядочивает список "
+"переменных Лайкерта по медиане.</li>\n"
+"</ul>\n"
+"<h3>Тесты сравнения</h3>\n"
+"<p>При использовании переменной группы доступны несколько тестов:</p>\n"
+"<ul>\n"
+"<li><strong>Манна-Уитни У:</strong> Сравнение двух групп</li>\n"
+"<li><strong>Крускал-Уоллис:</strong> Сравнение n групп</li>\n"
+"<li><strong>Пост-хок тесты:</strong> Тесты парных сравнений Данна, Коновера "
+"и Двасса-Стила-Критчлоу-Флингера (DSCF).</li>\n"
+"</ul>\n"
+"<p>Значения p можно скорректировать <strong>по группам</strong> (для каждого "
+"вопроса) для пост-хок тестов или <strong>в целом</strong> (по группам и "
+"вопросам) для тестов Манна-Уитни У, Крускал-Уоллис и пост-хок тестов. "
+"Значения p DSCF уже скорректированы (по группам); никаких других "
+"корректировок не возможно.</p>\n"
+"<p>Пример файла включен в Открыть > Библиотека данных > vijPlots > "
+"Лайкерт</p>"
+
+#: R/corresp.b.R
+msgid ""
+"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
+"two categorical variables. Computations are based on <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
+"using the \"Counts\" variable.</p>\n"
+"<p><strong>Supplementary row or column</strong> numbers may be entered as "
+"integer lists : 1,3,6</p>\n"
+"<p>Four normalizations (scaling of row and column scores before plotting) "
+"are avalaible :</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Row an columns scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
+"square root of eigenvalues. </li>\n"
+"<li><strong>Row Principal:</strong> Only row scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Column Principal:</strong> Only column scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Standard:</strong> The raw coordinates without "
+"normalization.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
+msgstr ""
+"<p>Этот модуль вычисляет <strong>Анализ Соответствия (CA)</strong> для двух "
+"категориальных переменных. Вычисления основаны на <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> пакете от F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Данные могут быть взвешены с помощью встроенной системы весов "
+"<em>jamovi</em> или с помощью переменной \"Количество\".</p>\n"
+"<p>Дополнительные номера строк или столбцов могут быть введены как "
+"целочисленные списки: 1,3,6</p>\n"
+"<p>Четыре нормализации (масштабирование баллов строк и столбцов перед "
+"построением) доступны:</p>\n"
+"<ul>\n"
+"<li><strong>Основная:</strong> Баллы строк и столбцов масштабируются по "
+"собственным значениям.</li>\n"
+"<li><strong>Симметричная:</strong> Баллы строк и столбцов масштабируются по "
+"квадратному корню из собственных значений.</li>\n"
+"<li><strong>Основная строка:</strong> Только баллы строк масштабируются по "
+"собственным значениям.</li>\n"
+"<li><strong>Основной столбец:</strong> Только баллы столбцов масштабируются "
+"по собственным значениям.</li>\n"
+"<li><strong>Стандартная:</strong> Необработанные координаты без "
+"нормализации.</li>\n"
+"</ul>\n"
+"<p>Пример файла включен в Открыть > Библиотека данных > vijPlots > "
+"Smoking</p>"
+
+#: R/multcorresp.b.R
+msgid ""
+"<p>This module computes <strong>Multiple Correspondence Analysis "
+"(MCA)</strong> for several categorical variables. Computations are based on "
+"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Both classic methods are available:</p>\n"
+"<ul>\n"
+"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
+"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues are "
+"the squares of those of the indicator matrix method. </li>\n"
+"</ul>\n"
+"<p>Both methods give the same <em>standard</em> coordinates (but different "
+"<em>principal</em> coordinates).</p>\n"
+"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
+"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
+"(and inertia) of categories and observations are computed from the original "
+"eigenvalues of the Burt matrix.</p>\n"
+"<p>The <strong>Normalization</strong> options specify how the coordinates "
+"are scaled (by eigenvalues):</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Both category and observation coordinates "
+"are scaled.</li>\n"
+"<li><strong>Category principal:</strong> Only category coordinates are "
+"scaled.</li>\n"
+"<li><strong>Observation principal:</strong> Only observation coordinates are "
+"scaled.</li>\n"
+"<li><strong>Standard:</strong> Both category and observation coordinates are "
+"standard.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
+msgstr ""
+"<p>Этот модуль вычисляет <strong>Многомерное Корреспонденс-Анализ "
+"(MCA)</strong> для нескольких категориальных переменных. Вычисления основаны "
+"на пакете <a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR</a> авторов F.Хассон, J.Хоссе, S.Ле, "
+"J.Мазе.</p>\n"
+"<p>Доступны оба классических метода:</p>\n"
+"<ul>\n"
+"<li><strong>Матрица показателей:</strong> CA матрицы показателей</li>\n"
+"<li><strong>Бурта матрица:</strong> CA Бурт матрицы. Свойства ей образуют "
+"квадрату свойств метода матрицы показателей. </li>\n"
+"</ul>\n"
+"<p>Оба метода дает одинаковые <em>стандартные</em> координаты (но различные "
+"<em>главные</em> координаты).</p>\n"
+"<p>При выборе, <strong>Исправления Бензекри и Гринакре</strong> применяются "
+"только к свойствам (таблица <strong>Символ</strong>). Координаты категорий и "
+"наблюдений расчетываются из исходных свойств Бурт матрицы.</p>\n"
+"<p>Варианты <strong>Нормализации</strong> задают, как координаты "
+"масштабируются (по свойствам):</p>\n"
+"<ul>\n"
+"<li><strong>Главная:</strong> Обе категории и наблюдений координаты "
+"масштабируются.</li>\n"
+"<li><strong>Категории главная:</strong> только категории координаты "
+"масштабируются.</li>\n"
+"<li><strong>Наблюдений главный:</strong> только наблюдений координаты "
+"масштабируются.</li>\n"
+"<li><strong>Стандартная:</strong> обе категории и наблюдений координаты "
+"стандартны.</li>\n"
+"</ul>\n"
+"<p>Пример файла включен в открытие > Библиотека данных > vijPlots > Cars</p>"
+
+#: R/principal.b.R
+msgid ""
+"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
+"for several continuous variables. Computations are based on "
+"<tt>stats::prcomp</tt> function.</p>\n"
+"<p>Although rotated components are not principal components, they are widely "
+"used. Only orthogonal rotations are available (from GPArotation "
+"package).</p>\n"
+"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
+"principal (scaled by the squareroot of eigenvalues).</p>\n"
+"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
+"eigenvalues) while loadings are standard.</li>\n"
+"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
+"are standard. </li>\n"
+"</ul>\n"
+"<p><strong>Advanced options</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Standardize loadings:</strong> loadings are normalized with sums "
+"of squared equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Standardize scores:</strong> scores are normalized with "
+"variances equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
+"applied to eigenvectors (standard loadings) instead of principal loadings "
+"(STATA way).</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
+msgstr ""
+"<p>Этот модуль вычисляет <strong>Принципал Компонентный Анализ "
+"(PCA)</strong> для нескольких непрерывных переменных. Вычисления основаны на "
+"функции <tt>stats::prcomp</tt>.</p>\n"
+"<p>Хотя повёрнутые компоненты не являются основными компонентами, они широко "
+"используются. Доступны только ортогональные вращения (из пакета "
+"GPArotation).</p>\n"
+"<p>Нагрузки (координаты переменных) и баллы (координаты наблюдений) являются "
+"основными (масштабируются по квадратному корню из собственных значений).</p>\n"
+"<p>Биплот следует \"Биплотам в практике\" (Майкл Гринакр, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Форма биплота:</strong> Баллы являются основными (масштабируются "
+"по собственным значениям), а нагрузки являются стандартными.</li>\n"
+"<li><strong>Ковариационный биплот:</strong> Нагрузки являются основными, а "
+"баллы являются стандартными.</li>\n"
+"</ul>\n"
+"<p><strong>Расширенные параметры</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Стандартизировать нагрузки:</strong> нагрузки нормализуются с "
+"суммами квадратов, равными 1 (вместо собственных значений)</li>\n"
+"<li><strong>Стандартизировать баллы:</strong> баллы нормализуются с "
+"дисперсиями, равными 1 (вместо собственных значений)</li>\n"
+"<li><strong>Повернуть собственный вектор:</strong> вращение (варимакс и т. "
+"д.) применяется к собственным векторам (стандартным нагрузкам) вместо "
+"основных нагрузок (способ STATA).</li>\n"
+"</ul>\n"
+"<p>Пример файла включен в Открыть > Библиотека данных > vijPlots > Iris</p>"
+
+#: R/mrfrequencies.b.R
+msgid ""
+"<p>This module computes frequencies for multiple response questions, also "
+"known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>Этот модуль вычисляет частоты для вопросов с несколькими ответами, также "
+"известных как \"Выберите все, что применимо\" (CATA) вопросы.</p>\n"
+"<p>Вопросы могут быть закодированы как:</p>\n"
+"<ul>\n"
+"<li>несколько <strong>фантомных (или индикаторных) переменных</strong>, "
+"использующих 0/1, 1/2, Y/N для каждого возможного ответа;</li>\n"
+"<li>одна <strong>многоценная переменная</strong>, содержащая выбранные "
+"ответы, разделенные символом (обычно \",\" или \";\").</li>\n"
+"</ul>\n"
+"<p>Пример файла включен в Открыть > Библиотека данных > vijPlots > Credit "
+"Cards</p>"
+
+#: R/mrcrosstabs.b.R
+msgid ""
+"<p>This module computes two-way frequencies for multiple response questions, "
+"also known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>Этот модуль вычисляет двухмерные частоты для многократных вопросов, также "
+"известных как \"Отметь все, которое применимо\" (CATA-вопросы).</p>\n"
+"<p>Вопросы могут быть закодированы по-следующему:</p>\n"
+"<ul>\n"
+"<li>несколько <strong>символических (или показательных) переменных</strong> "
+"используя 0/1, 1/2, Y/N для каждого возможного ответа;</li>\n"
+"<li>один <strong>многозначный переменнуй</strong>, содержащий отмеченные "
+"ответы, разделенные знаком (обычно \",\" или \";\").</li>\n"
+"</ul>\n"
+"<p>Пример файла включен в открытие > Библиотека данных > vijPlots > Credit "
+"Cards</p>"
+
+#: R/qqplot.b.R
+msgid ""
+"<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
+"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"Heike Hofmann. In-depth information can be found in the package "
+"documentation on CRAN site.</p>\n"
+"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
+"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
+"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
+"identity line.</p>\n"
+"<p><strong>Confidence band:</strong> Draws a confidence band around the "
+"reference line. qqplotr package provides several methods to compute the "
+"confidence band:</p>\n"
+"<ul>\n"
+"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
+"bands based on Normal confidence intervals;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
+"based on a parametric bootstrap;</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
+"Kolmogorov-Smirnov test;</li>\n"
+"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
+"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
+"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
+"simultaneous bands using the equal local levels.</li>\n"
+"</ul>\n"
+"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
+"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
+"according to the reference line. This procedure may help reducing visual "
+"bias caused by the orthogonal distances from the points to the reference "
+"line.</p>\n"
+"<p><strong>Parameter values:</strong> The distribution parameters can be "
+"estimated from data using:</p>\n"
+"<ul>\n"
+"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
+"should work with all distributions but \"t\" and \"uniform\";</li>\n"
+"<li><strong>Method of Moments</strong> for moment based parameters : it "
+"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
+"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
+"</ul>\n"
+"<p>or entered by user:</p>\n"
+"<ul>\n"
+"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
+"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
+"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
+"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
+"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
+"(Uniform).</li>\n"
+"</ul>\n"
+"</p>"
+msgstr ""
+"<p>Этот модуль использует пакет <a href = "
+"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
+"package<a/> от Alexandre Almeida, Adam Loy и Heike Hofmann. Подробная "
+"информация можно найти в документации пакета на сайте CRAN.</p>\n"
+"<p><strong>Линия ссылки:</strong> Рисует либо <em>линию тождества</em> (y = "
+"x), либо часто используемую <em>QQ-линию</em>, которая пересекает две "
+"квантили данных (Q<sub>0,25</sub> и Q<sub>0,75</sub>). График P-P "
+"поддерживает только линию тождества.</p>\n"
+"<p><strong>Полоса доверия:</strong> Рисует полосу доверия вокруг линии "
+"ссылки. Пакет qqplotr предоставляет несколько методов для расчета полосы "
+"доверия:</p>\n"
+"<ul>\n"
+"<li><strong><em>Точечная</em></strong> строит точечные полосы доверия на "
+"основе интервалов доверия нормального распределения;</li>\n"
+"<li><strong><em>Бутстрэп</em></strong> создает точечные полосы доверия на "
+"основе параметрического бутстрэпа;</li>\n"
+"<li><strong><em>Колмогоров-Смирнов</em></strong> полоса основана на тесте "
+"Колмогоров-Смирнов;</li>\n"
+"<li><strong><em>Чувствительная к хвостам</em></strong> строит полосу "
+"доверия, чувствительную к хвостам, но реализована только для нормальных "
+"QQ-плот;</li>\n"
+"<li><strong><em>Равные локальные уровни (ELL)</em></strong> строит "
+"одновременные полосы с использованием равных локальных уровней.</li>\n"
+"</ul>\n"
+"<p>Графики P-P поддерживают только методы «ELL» и «Бутстрэп».</p>\n"
+"<p><strong>Детрендированный график:</strong> Объекты <em>детрендируются</em> "
+"согласно линии ссылки. Этот процесс может помочь уменьшить визуальный偏, "
+"вызванный ортогональными расстояниями от точек до линии ссылки.</p>\n"
+"<p><strong>Значения параметров:</strong> Параметры распределения можно "
+"оценить из данных с помощью:</p>\n"
+"<ul>\n"
+"<li><strong>Метод максимального правдоподобия</strong> (с использованием "
+"пакета MASS): он должен работать со всеми распределениями, кроме «t» и "
+"«равномерного»;</li>\n"
+"<li><strong>Метод моментов</strong> для параметров, основанных на моментах: "
+"он должен работать с распределениями «нормальное», «лог-нормальное», «Бета», "
+"«Экспоненциальное», «Гамма», «Логистическое» и «Равномерное»;</li>\n"
+"</ul>\n"
+"<p>или введены пользователем:</p>\n"
+"<ul>\n"
+"<li><strong>Параметр 1:</strong> среднее (Нормальное), среднелог "
+"(Лог-нормальное), форма1 (Бета), положение (Коши, Логистическое), степень "
+"свободы (Хи-квадрат, Стюдент), степень свободы1 (F), скорость "
+"(Экспоненциальное), форма (Гамма, Вейбулла) и мин (Равномерное);</li>\n"
+"<li><strong>Параметр 2:</strong> стандартное отклонение (нормальное), "
+"стандартное отклонение лог (лог-нормальное), форма2 (Бета), масштаб (Коши, "
+"Логистическое), степень свободы2 (F), скорость (Гамма, Вейбулла) и макс "
+"(Равномерное).</li>\n"
+"</ul>\n"
+"</p>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -189,9 +601,7 @@ msgstr "Демонстрационный набор данных для граф
 
 #: package/datasets/Cars.description
 msgid "A demonstration dataset for vijPlots/Multiple Correspondence Analysis."
-msgstr ""
-"Демонстрационный набор данных для vijPlots/Множественный анализ "
-"соответствия."
+msgstr "Демонстрационный набор данных для vijPlots/Множественный анализ соответствия."
 
 #: package/datasets/CreditCards.description
 msgid "A demonstration dataset for vijPlots/Multiple Response plots."
@@ -386,6 +796,14 @@ msgstr "Авто"
 msgid "Axes"
 msgstr "Оси"
 
+#: R/corresp.b.R
+msgid "Axis numbers cannot be equal."
+msgstr "Номера осей не могут быть равны."
+
+#: R/corresp.b.R
+msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
+msgstr "Номера осей должны быть меньше или равны количеству измерений ({nDim})."
+
 #: corresp/ui[7].label
 #: mrfrequencies/ui[5].label
 msgid "Axis Titles"
@@ -426,6 +844,10 @@ msgstr "Поправка Бензекри"
 #: qqplot/options/distrib/beta.title
 msgid "Beta"
 msgstr "Бета"
+
+#: R/qqplot.b.R
+msgid "Beta distribution requires data between 0 and 1."
+msgstr "Бета распределение требует данных между 0 и 1."
 
 #: likertplot/options/adjustMethod/BH.title
 msgid "BH"
@@ -694,6 +1116,15 @@ msgstr "Граница"
 msgid "Bottom"
 msgstr "Снизу"
 
+#: histogram/options/binBoundary.title
+msgctxt "boundary"
+msgid "Position"
+msgstr "Позиция"
+
+#: boxplot/ui[2][0][1][0].label
+msgid "Box Elements"
+msgstr "Элементы бокса"
+
 #: package/analyses/boxplot.title
 #: package/analyses/boxplot.menuTitle
 #: boxplot/options.title
@@ -747,6 +1178,14 @@ msgstr "По группе"
 #: likertplot/ui[4][0][1][0]/groupBy_variable.label
 msgid "By variable"
 msgstr "По переменной"
+
+#: R/likertplot.b.R
+msgid "Cannot convert text variables to integers"
+msgstr "Невозможно преобразовать текстовые переменные в целые числа"
+
+#: R/likertplot.b.R
+msgid "Cannot tidy up text variables"
+msgstr "Не возможно очистить текстовые переменные"
 
 #: areachart/ui[4][2].label
 #: barplot/ui[7][2].label
@@ -989,9 +1428,17 @@ msgstr "Столбчатый график"
 msgid "Column plot"
 msgstr "Столбчатый график"
 
+#: R/corresp.b.R
+msgid "Column Points for {cols}"
+msgstr "Указатели столбцов для {cols}"
+
 #: corresp/options/normalization/colprincipal.title
 msgid "Column principal"
 msgstr "Столбец главной компоненты"
+
+#: R/corresp.b.R
+msgid "Column principal normalization"
+msgstr "Главная нормализация столбца"
 
 #: corresp/results/colProfiles.title
 msgid "Column Profiles"
@@ -1015,6 +1462,14 @@ msgstr "Столбцы (группы)"
 #: likertplot/results/comp.title
 msgid "Comparison Tests"
 msgstr "Сравнительные тесты"
+
+#: R/likertplot.b.R
+msgid "Comparison tests cannot be computed with empty (N=0) groups"
+msgstr "Тесты сравнения не могут быть вычислены с пустыми (N=0) группами"
+
+#: R/likertplot.b.R
+msgid "Comparison tests require numeric variables"
+msgstr "Тесты сравнения требуют числовых переменных"
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
@@ -1155,6 +1610,14 @@ msgstr "Кросс-таблица"
 #: R/mrcrosstabs.b.R
 msgid "Crosstab (% by row)"
 msgstr "Кросс-таблица (% по строке)"
+
+#: R/mrcrosstabs.b.R
+msgid "Crosstab (% of cases)"
+msgstr "Кросс-таблица (% случаев)"
+
+#: R/mrcrosstabs.b.R
+msgid "Crosstab (% of responses)"
+msgstr "Кросстабуляция (% от ответов)"
 
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
@@ -1331,6 +1794,12 @@ msgstr "Формат отображения"
 msgid "Distribution"
 msgstr "Распределение"
 
+#: R/qqplot.b.R
+#: qqplot/options/distrib/norm.title
+msgctxt "distribution"
+msgid "Normal"
+msgstr "Нормальная"
+
 #: piechart/options/donut.title
 msgid "Donut chart"
 msgstr "Кольцевая диаграмма"
@@ -1387,6 +1856,15 @@ msgstr "Собственное значение"
 msgid "Eigenvalues"
 msgstr "Собственные значения"
 
+#: principal/ui[4][0][0][1].label
+#: scatterplot/ui[2][0][0][0].label
+msgid "Element Sizes"
+msgstr "Размеры элемента"
+
+#: scatterplot/ui[2].label
+msgid "Element Sizes & Facets"
+msgstr "Размеры и фасеты элемента"
+
 #: qqplot/options/methodQQ/ell.title
 #: qqplot/options/methodPP/ell.title
 msgid "Equal Local Levels"
@@ -1411,9 +1889,17 @@ msgstr "ЕС (Д-М-Г)"
 msgid "Exponential"
 msgstr "Экспоненциальный"
 
+#: R/qqplot.b.R
+msgid "Exponential distribution requires non-negative (≥0) data."
+msgstr "Экспоненциальное распределение требует неотрицательных (≥ 0) данных."
+
 #: principal/results/summaryTable.columns.superTitle
 msgid "Extraction Sums of Squared Loadings"
 msgstr "Извлечение сумм квадратов нагрузок"
+
+#: R/qqplot.b.R
+msgid "F"
+msgstr "F"
 
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
@@ -1697,6 +2183,11 @@ msgstr "Группа"
 msgid "Group (Overlapped)"
 msgstr "Группа (перекрывающаяся)"
 
+#: raincloud/options/groupOne.title
+#: raincloud/ui[0][1].label
+msgid "Group (Side-by-side)"
+msgstr "Группа (Рядом)"
+
 #: piechart/options/labels/group+count.title
 msgid "Group + Count"
 msgstr "Группа + счет"
@@ -1714,6 +2205,11 @@ msgstr "Группировать по"
 #: mrcrosstabs/options/bartype/dodge2.title
 msgid "Grouped"
 msgstr "Сгруппировано"
+
+#: barplot/options/barType/dodge.title
+#: mrcrosstabs/options/bartype/dodge.title
+msgid "Grouped (tight)"
+msgstr "Группированные (тесные)"
 
 #: histogram/options/grouping.title
 #: histogram/options/groupingN.title
@@ -1783,6 +2279,17 @@ msgstr "Горизонтальный график"
 #: qqplot/ui[2][1][0]/refLine[0]/refType_identity.label
 msgid "Identity line"
 msgstr "Идентификационная линия"
+
+#: likertplot/options/ignoreNA.title
+msgid "Ignore missing groups"
+msgstr "Игнорировать пропущенные группы"
+
+#: areachart/options/ignoreNA.title
+#: barplot/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
+msgid "Ignore missing values"
+msgstr "Игнорировать пропущенные значения"
 
 #: multcorresp/options/ggrepel.title
 msgid "Improve label display"
@@ -2331,6 +2838,10 @@ msgstr "Лайкерт"
 msgid "Likert Plot"
 msgstr "График Лайкерта"
 
+#: R/likertplot.b.R
+msgid "Likert Plot requires ordinal (or numeric) variables"
+msgstr "Диаграмма Ликерта требует порядковых (или непрерывных) переменных"
+
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
 msgid "Likert Variables"
@@ -2403,12 +2914,12 @@ msgid ""
 "(and changelog) is available at <a "
 "href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>."
 msgstr ""
-"Основные статистические диаграммы (гистограмма, коробчатая диаграмма, "
-"точка, гистограмма, линия, дождевое облако…) со множеством опций, а также "
-"графиком Лайкерта, гистограммой множественных ответов, анализом главных "
-"компонент и (множественным) анализом соответствий. Исходный код проекта (и "
-"журнал изменений) доступен на <a "
-"href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>."
+"Основные статистические диаграммы (гистограмма, коробчатая диаграмма, точка, "
+"гистограмма, линия, дождевое облако…) со множеством опций, а также графиком "
+"Лайкерта, гистограммой множественных ответов, анализом главных компонент и "
+"(множественным) анализом соответствий. Исходный код проекта (и журнал "
+"изменений) доступен на <a href=\"https://github.com/vjalby/vijPlots\" "
+"target=\"_blank\">Github</a>."
 
 #: likertplot/options/showMannU.title
 msgid "Mann-Whitney U"
@@ -2482,6 +2993,10 @@ msgstr "Масса"
 msgid "Max"
 msgstr "Макс"
 
+#: R/lollipop.b.R
+msgid "Maximum of {var}"
+msgstr "Максимум {var}"
+
 #: qqplot/options/paramEstMethod/mle.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mle.label
 msgid "Maximum-likelihood (MLE)"
@@ -2492,6 +3007,14 @@ msgstr "Максимальное правдоподобие (MLE)"
 msgid "May"
 msgstr "Май"
 
+#: R/multcorresp.b.R
+msgid "MCA Principal Coordinates"
+msgstr "Главные координаты МОС"
+
+#: R/multcorresp.b.R
+msgid "MCA Standard Coordinates"
+msgstr "Стандартные координаты МОС"
+
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 msgid "Mean"
@@ -2501,12 +3024,36 @@ msgstr "Среднее"
 msgid "Mean & SD"
 msgstr "Среднее и стандартное отклонение"
 
+#: R/lollipop.b.R
+msgid "Mean of {var}"
+msgstr "Среднее значение {var}"
+
 #: R/likertplot.b.R
 #: likertplot/options/showMedian.title
 #: lollipop/options/yaxis/median.title
 #: lollipop/ui[2][0][0][0]/yaxis_median.label
 msgid "Median"
 msgstr "Медиана"
+
+#: R/likertplot.b.R
+msgid "Median and mean require numeric variables"
+msgstr "Медиана и среднее требуют числовых переменных"
+
+#: R/lollipop.b.R
+msgid "Median of {var}"
+msgstr "Медиана {var}"
+
+#: areachart/options/displayFormat/%b.title
+#: linechart/options/displayFormat/%b.title
+msgctxt "menu"
+msgid "Oct"
+msgstr "Окт"
+
+#: areachart/options/displayFormat/%B.title
+#: linechart/options/displayFormat/%B.title
+msgctxt "menu"
+msgid "October"
+msgstr "Октябрь"
 
 #: likertplot/options/adjustMethod.title
 #: multcorresp/options/method.title
@@ -2567,6 +3114,10 @@ msgstr "Мин / Макс"
 msgid "Minimum entropy"
 msgstr "Минимальная энтропия"
 
+#: R/lollipop.b.R
+msgid "Minimum of {var}"
+msgstr "Минимум {var}"
+
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
 #: mrcrosstabs/ui/mode/onevar[0][1].label
@@ -2622,6 +3173,10 @@ msgstr "Имя"
 #: qqplot/options/transLog.title
 msgid "Natural log tranform"
 msgstr "Преобразование по натуральному логарифму"
+
+#: R/qqplot.b.R
+msgid "Natural Log Tranform requires positive (>0) data."
+msgstr "Преобразование натурального логарифма требует положительных (>0) данных."
 
 #: R/principal.b.R
 msgid "No rotation used."
@@ -2753,6 +3308,10 @@ msgstr "Количество случаев:"
 #: principal/options/dimNum.title
 msgid "Number of dimensions"
 msgstr "Количество измерений"
+
+#: R/corresp.b.R
+msgid "Number of dimensions must be less than or equal to {maxDim}."
+msgstr "Количество размерностей должно быть меньше или равно {maxDim}."
 
 #: multcorresp/options/obsColor.title
 msgid "Obs color"
@@ -3078,6 +3637,14 @@ msgstr "Пастель 1"
 msgid "Pastel 2"
 msgstr "Пастель 2"
 
+#: R/principal.b.R
+msgid "PCA Principal Coordinates"
+msgstr "Главные координаты МГК (PCA)"
+
+#: R/principal.b.R
+msgid "PCA Standard Coordinates"
+msgstr "Стандартные координаты МГК (PCA)"
+
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
 #: barplot/ui[1][0][0]/yaxis_percent.label
@@ -3097,6 +3664,12 @@ msgstr "Проценты"
 #: piechart/results.title
 msgid "Pie Chart"
 msgstr "Круговая диаграмма"
+
+#: R/piechart.b.R
+msgid "Pie charts are for educational use only. Please do not use Pie charts!"
+msgstr ""
+"Круговые диаграммы предназначены только для образовательного использования. "
+"Пожалуйста, не используйте круговые диаграммы!"
 
 #: corresp/options/rowColor/hotpink.title
 #: corresp/options/colColor/hotpink.title
@@ -3291,6 +3864,10 @@ msgstr "Анализ главных компонент"
 #: principal/results/obsTable.notes.norm
 msgid "Principal coordinates"
 msgstr "Главные координаты"
+
+#: R/corresp.b.R
+msgid "Principal normalization"
+msgstr "Главная нормализация"
 
 #: multcorresp/options/propPoint.title
 msgid "Proportional point size"
@@ -3595,6 +4172,12 @@ msgstr "Линия регрессии"
 msgid "Reverse disposition"
 msgstr "Обратное расположение"
 
+#: barplot/options/reverseStack.title
+#: likertplot/options/reverseLikert.title
+#: mrcrosstabs/options/reverseStack.title
+msgid "Reverse stacking order"
+msgstr "Обратить порядок стека"
+
 #: areachart/options/titleAlign/1.title
 #: areachart/options/subtitleAlign/1.title
 #: areachart/options/captionAlign/1.title
@@ -3722,9 +4305,17 @@ msgstr "Строковый график"
 msgid "Row plot"
 msgstr "Строковый график"
 
+#: R/corresp.b.R
+msgid "Row Points for {rows}"
+msgstr "Указатели строк для {rows}"
+
 #: corresp/options/normalization/rowprincipal.title
 msgid "Row principal"
 msgstr "Строка главной"
+
+#: R/corresp.b.R
+msgid "Row principal normalization"
+msgstr "Главная нормализация строки"
 
 #: corresp/results/rowProfiles.title
 msgid "Row Profiles"
@@ -3963,6 +4554,11 @@ msgstr "Единственное значение"
 msgid "Size"
 msgstr "Размер"
 
+#: linechart/ui[1][0][1].label
+#: principal/ui[4].label
+msgid "Sizes & Colors"
+msgstr "Размеры и цвета"
+
 #: package/datasets/Smoking.name
 msgid "Smoking"
 msgstr "Курение"
@@ -4043,6 +4639,10 @@ msgstr "Стандартный"
 #: R/principal.b.R
 msgid "Standard coordinates"
 msgstr "Стандартные координаты"
+
+#: R/corresp.b.R
+msgid "Standard normalization"
+msgstr "Стандартная нормализация"
 
 #: principal/options/stdLoadings.title
 msgid "Standardize loadings (eigenvectors)"
@@ -4142,6 +4742,14 @@ msgid "Supplement"
 msgstr "Добавка"
 
 #: R/corresp.b.R
+msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "Дополнительные номера столбцов должна быть списком чисел, например 1,2,9"
+
+#: R/corresp.b.R
+msgid "Supplementary column numbers must be between 1 and {nmax}."
+msgstr "Дополнительные номера столбцов должны быть между 1 и {nmax}."
+
+#: R/corresp.b.R
 #: corresp/options/supplementaryCols.title
 msgid "Supplementary columns"
 msgstr "Дополнительные столбцы"
@@ -4149,6 +4757,14 @@ msgstr "Дополнительные столбцы"
 #: corresp/ui[3][0].label
 msgid "Supplementary Points"
 msgstr "Дополнительные пункты"
+
+#: R/corresp.b.R
+msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "Дополнительные номера строк должны быть списком чисел, например 1,2,9"
+
+#: R/corresp.b.R
+msgid "Supplementary row numbers must be between 1 and {nmax}."
+msgstr "Дополнительные номера строк должны быть между 1 и {nmax}."
 
 #: R/corresp.b.R
 #: corresp/options/supplementaryRows.title
@@ -4167,6 +4783,18 @@ msgstr "Дополнительные переменные"
 #: R/multcorresp.b.R
 msgid "Supplementary variables"
 msgstr "Дополнительные переменные"
+
+#: R/corresp.b.R
+msgid "Symetric normalization"
+msgstr "Симметрическая нормализация"
+
+#: corresp/options/normalization/symmetric.title
+msgid "Symmetric"
+msgstr "Симметричная"
+
+#: R/corresp.b.R
+msgid "Symmetric normalization"
+msgstr "Симметричная нормализация"
 
 #: likertplot/ui[2].label
 #: likertplot/ui[2][0][0][0].label
@@ -4208,6 +4836,16 @@ msgstr "Текст"
 msgid "Text Size"
 msgstr "Размер текста"
 
+#: corresp/ui[6].label
+msgid "Text Size & Colors"
+msgstr "Размер и цвет текста"
+
+#: barplot/ui[4].label
+#: boxplot/ui[3].label
+#: piechart/ui[4].label
+msgid "Text Size & Facets"
+msgstr "Размер текста и фасеты"
+
 #: R/principal.b.R
 msgid ""
 "The correlation matrix is not positive definite. Computations may not be "
@@ -4220,6 +4858,10 @@ msgstr ""
 msgid "The number of dimensions cannot be greater than {max}."
 msgstr "Количество измерений не может превышать {max}."
 
+#: R/principal.b.R
+msgid "The number of dimensions cannot be greater than the number of variables."
+msgstr "Количество измерений не может быть больше количества переменных."
+
 #: R/qqplot.b.R
 msgid "Theoretical Probabilities"
 msgstr "Теоретические вероятности"
@@ -4227,6 +4869,29 @@ msgstr "Теоретические вероятности"
 #: R/qqplot.b.R
 msgid "Theoretical Quantiles"
 msgstr "Теоретические квантили"
+
+#: areachart/options/yTicks.title
+#: barplot/options/xTicks.title
+#: barplot/options/yTicks.title
+#: boxplot/options/xTicks.title
+#: boxplot/options/yTicks.title
+#: histogram/options/xTicks.title
+#: histogram/options/yTicks.title
+#: linechart/options/yTicks.title
+#: lollipop/options/xTicks.title
+#: lollipop/options/yTicks.title
+#: mrcrosstabs/options/xTicks.title
+#: mrcrosstabs/options/yTicks.title
+#: mrfrequencies/options/xTicks.title
+#: mrfrequencies/options/yTicks.title
+#: qqplot/options/xTicks.title
+#: qqplot/options/yTicks.title
+#: raincloud/options/xTicks.title
+#: raincloud/options/yTicks.title
+#: scatterplot/options/xTicks.title
+#: scatterplot/options/yTicks.title
+msgid "Tick count"
+msgstr "Количество тиков"
 
 #: likertplot/options/tidyUp.title
 msgid "Tidy up levels"
@@ -4441,11 +5106,20 @@ msgstr "Общий"
 msgid "Total row"
 msgstr "Итого строка"
 
+#: mrcrosstabs/options/emptyAsNA.title
+#: mrfrequencies/options/emptyAsNA.title
+msgid "Treat empty values as missing"
+msgstr "Рассматривать пустые значения как пропущенные"
+
 #: likertplot/ui[4][0][0][0].label
 #: piechart/options/labType.title
 #: piechart/ui[2][0][0][0].label
 msgid "Type"
 msgstr "Тип"
+
+#: R/qqplot.b.R
+msgid "Unable to estimate the distribution parameters."
+msgstr "Не возможно оценить параметры распределения."
 
 #: R/principal.b.R
 msgid "Unable to use {rotation} rotation."
@@ -4720,6 +5394,10 @@ msgstr "Внутри категорий"
 msgid "Within groups"
 msgstr "Внутри групп"
 
+#: R/qqplot.b.R
+msgid "Wrong parameter values."
+msgstr "Неправильные значения параметров."
+
 #: areachart/options/timeVar.title
 #: areachart/options/timeVar1.title
 #: areachart/ui/mode/oneVariable[0][0][0].label
@@ -4763,6 +5441,16 @@ msgstr "Внутри групп"
 #: scatterplot/ui[4][1].label
 msgid "X-Axis"
 msgstr "Ось X"
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "X-Axis and Y-Axis cannot be equal."
+msgstr "Ось X и ось Y не могут быть равны."
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
+msgstr "Оси X и Y не могут быть больше числа размерностей."
 
 #: areachart/options/isDate.title
 #: linechart/options/isDate.title
@@ -4908,697 +5596,3 @@ msgstr "От желтого к зеленому"
 #: scatterplot/options/colorPalette/YlOrRd.title
 msgid "Yellow to Red"
 msgstr "Желтый к красному"
-
-#: R/areachart.b.R
-#: R/linechart.b.R
-msgid "{var} doesn't have a valid date format."
-msgstr "{var} не имеет допустимого формата даты."
-
-#: R/corresp.b.R
-msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "Дополнительные номера строк должны быть списком чисел, например 1,2,9"
-
-#: R/corresp.b.R
-msgid "Supplementary row numbers must be between 1 and {nmax}."
-msgstr "Дополнительные номера строк должны быть между 1 и {nmax}."
-
-#: R/corresp.b.R
-msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
-msgstr ""
-"Дополнительные номера столбцов должна быть списком чисел, например 1,2,9"
-
-#: R/corresp.b.R
-msgid "Supplementary column numbers must be between 1 and {nmax}."
-msgstr "Дополнительные номера столбцов должны быть между 1 и {nmax}."
-
-#: R/corresp.b.R
-msgid "Number of dimensions must be less than or equal to {maxDim}."
-msgstr "Количество размерностей должно быть меньше или равно {maxDim}."
-
-#: R/corresp.b.R
-msgid ""
-"Axis numbers must be less than or equal to the number of dimensions "
-"({nDim})."
-msgstr "Номера осей должны быть меньше или равны количеству измерений ({nDim})."
-
-#: R/corresp.b.R
-msgid "Axis numbers cannot be equal."
-msgstr "Номера осей не могут быть равны."
-
-#: R/corresp.b.R
-msgid "Principal normalization"
-msgstr "Главная нормализация"
-
-#: R/corresp.b.R
-msgid "Symetric normalization"
-msgstr "Симметрическая нормализация"
-
-#: R/corresp.b.R
-msgid "Row principal normalization"
-msgstr "Главная нормализация строки"
-
-#: R/corresp.b.R
-msgid "Column principal normalization"
-msgstr "Главная нормализация столбца"
-
-#: R/corresp.b.R
-msgid "Standard normalization"
-msgstr "Стандартная нормализация"
-
-#: R/corresp.b.R
-msgid "Row Points for {rows}"
-msgstr "Указатели строк для {rows}"
-
-#: R/corresp.b.R
-msgid "Column Points for {cols}"
-msgstr "Указатели столбцов для {cols}"
-
-#: R/corresp.b.R
-msgid "Symmetric normalization"
-msgstr "Симметричная нормализация"
-
-#: R/corresp.b.R
-msgid ""
-"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
-"two categorical variables. Computations are based on <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
-"using the \"Counts\" variable.</p>\n"
-"<p><strong>Supplementary row or column</strong> numbers may be entered as "
-"integer lists : 1,3,6</p>\n"
-"<p>Four normalizations (scaling of row and column scores before plotting) "
-"are avalaible :</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Row an columns scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
-"square root of eigenvalues. </li>\n"
-"<li><strong>Row Principal:</strong> Only row scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Column Principal:</strong> Only column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Standard:</strong> The raw coordinates without "
-"normalization.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
-msgstr ""
-"<p>Этот модуль вычисляет <strong>Анализ Соответствия (CA)</strong> для двух "
-"категориальных переменных. Вычисления основаны на <a href = \"https://CRAN.R-"
-"project.org/package=FactoMineR\" target=\"_blank\">FactoMineR<a/> пакете от "
-"F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Данные могут быть взвешены с помощью встроенной системы весов <em>jamovi</"
-"em> или с помощью переменной \"Количество\".</p>\n"
-"<p>Дополнительные номера строк или столбцов могут быть введены как "
-"целочисленные списки: 1,3,6</p>\n"
-"<p>Четыре нормализации (масштабирование баллов строк и столбцов перед "
-"построением) доступны:</p>\n"
-"<ul>\n"
-"<li><strong>Основная:</strong> Баллы строк и столбцов масштабируются по "
-"собственным значениям.</li>\n"
-"<li><strong>Симметричная:</strong> Баллы строк и столбцов масштабируются по "
-"квадратному корню из собственных значений.</li>\n"
-"<li><strong>Основная строка:</strong> Только баллы строк масштабируются по "
-"собственным значениям.</li>\n"
-"<li><strong>Основной столбец:</strong> Только баллы столбцов масштабируются "
-"по собственным значениям.</li>\n"
-"<li><strong>Стандартная:</strong> Необработанные координаты без "
-"нормализации.</li>\n"
-"</ul>\n"
-"<p>Пример файла включен в Открыть > Библиотека данных > vijPlots > Smoking</"
-"p>"
-
-#: R/likertplot.b.R
-msgid "Likert Plot requires ordinal (or numeric) variables"
-msgstr "Диаграмма Ликерта требует порядковых (или непрерывных) переменных"
-
-#: R/likertplot.b.R
-msgid "Median and mean require numeric variables"
-msgstr "Медиана и среднее требуют числовых переменных"
-
-#: R/likertplot.b.R
-msgid "Comparison tests require numeric variables"
-msgstr "Тесты сравнения требуют числовых переменных"
-
-#: R/likertplot.b.R
-msgid "Cannot convert text variables to integers"
-msgstr "Невозможно преобразовать текстовые переменные в целые числа"
-
-#: R/likertplot.b.R
-msgid "Cannot tidy up text variables"
-msgstr "Не возможно очистить текстовые переменные"
-
-#: R/likertplot.b.R
-msgid "Comparison tests cannot be computed with empty (N=0) groups"
-msgstr "Тесты сравнения не могут быть вычислены с пустыми (N=0) группами"
-
-#: R/likertplot.b.R
-msgid ""
-"<h3>Data & Sorting</h3>\n"
-"<ul>\n"
-"<li>Likert variables must be of ordinal measure-type. (Continuous "
-"measure-type works as well.)</li>\n"
-"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
-"must be of integer data-type.</li>\n"
-"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
-"order in table and graph (when some variables miss some levels).</li>\n"
-"<li><strong>Convert variables to integer:</strong> when checked, the level "
-"labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
-"</ul>\n"
-"<h3>Comparison Tests</h3>\n"
-"<p>When using a group variable, several tests are available:</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
-"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
-"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
-"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
-"</ul>\n"
-"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
-"p-values are already adjusted (groupwise); no other adjustment is "
-"possible.</p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
-msgstr ""
-"<h3>Данные и сортировка</h3>\n"
-"<ul>\n"
-"<li>Переменные Лайкерта должны быть измерения порядкового типа. (Измерения "
-"непрерывного типа также работают.)</li>\n"
-"<li>Если вы планируете вычислять среднее/медиану/стандартное отклонение или "
-"использовать тесты сравнения, они должны быть целочисленного типа данных.</"
-"li>\n"
-"<li><strong>Очистить уровни:</strong> когда отмечено, попытаться исправить "
-"порядок меток в таблице и графике (когда некоторые переменные пропускают "
-"некоторые уровни).</li>\n"
-"<li><strong>Преобразовать переменные в целые числа:</strong> когда отмечено, "
-"метки уровней игнорируются, и используются только целочисленные значения.</"
-"li>\n"
-"<li><strong>Сортировка переменных по медиане:</strong> упорядочивает список "
-"переменных Лайкерта по медиане.</li>\n"
-"</ul>\n"
-"<h3>Тесты сравнения</h3>\n"
-"<p>При использовании переменной группы доступны несколько тестов:</p>\n"
-"<ul>\n"
-"<li><strong>Манна-Уитни У:</strong> Сравнение двух групп</li>\n"
-"<li><strong>Крускал-Уоллис:</strong> Сравнение n групп</li>\n"
-"<li><strong>Пост-хок тесты:</strong> Тесты парных сравнений Данна, Коновера "
-"и Двасса-Стила-Критчлоу-Флингера (DSCF).</li>\n"
-"</ul>\n"
-"<p>Значения p можно скорректировать <strong>по группам</strong> (для каждого "
-"вопроса) для пост-хок тестов или <strong>в целом</strong> (по группам и "
-"вопросам) для тестов Манна-Уитни У, Крускал-Уоллис и пост-хок тестов. "
-"Значения p DSCF уже скорректированы (по группам); никаких других "
-"корректировок не возможно.</p>\n"
-"<p>Пример файла включен в Открыть > Библиотека данных > vijPlots > Лайкерт</"
-"p>"
-
-#: R/lollipop.b.R
-msgid "Mean of {var}"
-msgstr "Среднее значение {var}"
-
-#: R/lollipop.b.R
-msgid "Median of {var}"
-msgstr "Медиана {var}"
-
-#: R/lollipop.b.R
-msgid "Minimum of {var}"
-msgstr "Минимум {var}"
-
-#: R/lollipop.b.R
-msgid "Maximum of {var}"
-msgstr "Максимум {var}"
-
-#: R/mrcrosstabs.b.R
-msgid "Crosstab (% of cases)"
-msgstr "Кросс-таблица (% случаев)"
-
-#: R/mrcrosstabs.b.R
-msgid "Crosstab (% of responses)"
-msgstr "Кросстабуляция (% от ответов)"
-
-#: R/mrcrosstabs.b.R
-msgid ""
-"<p>This module computes two-way frequencies for multiple response "
-"questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>Этот модуль вычисляет двухмерные частоты для многократных вопросов, также "
-"известных как \"Отметь все, которое применимо\" (CATA-вопросы).</p>\n"
-"<p>Вопросы могут быть закодированы по-следующему:</p>\n"
-"<ul>\n"
-"<li>несколько <strong>символических (или показательных) переменных</strong> "
-"используя 0/1, 1/2, Y/N для каждого возможного ответа;</li>\n"
-"<li>один <strong>многозначный переменнуй</strong>, содержащий отмеченные "
-"ответы, разделенные знаком (обычно \",\" или \";\").</li>\n"
-"</ul>\n"
-"<p>Пример файла включен в открытие > Библиотека данных > vijPlots > Credit "
-"Cards</p>"
-
-#: R/mrfrequencies.b.R
-msgid ""
-"<p>This module computes frequencies for multiple response questions, also "
-"known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>Этот модуль вычисляет частоты для вопросов с несколькими ответами, также "
-"известных как \"Выберите все, что применимо\" (CATA) вопросы.</p>\n"
-"<p>Вопросы могут быть закодированы как:</p>\n"
-"<ul>\n"
-"<li>несколько <strong>фантомных (или индикаторных) переменных</strong>, "
-"использующих 0/1, 1/2, Y/N для каждого возможного ответа;</li>\n"
-"<li>одна <strong>многоценная переменная</strong>, содержащая выбранные "
-"ответы, разделенные символом (обычно \",\" или \";\").</li>\n"
-"</ul>\n"
-"<p>Пример файла включен в Открыть > Библиотека данных > vijPlots > Credit "
-"Cards</p>"
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
-msgstr "Оси X и Y не могут быть больше числа размерностей."
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-msgid "X-Axis and Y-Axis cannot be equal."
-msgstr "Ось X и ось Y не могут быть равны."
-
-#: R/multcorresp.b.R
-msgid "MCA Principal Coordinates"
-msgstr "Главные координаты МОС"
-
-#: R/multcorresp.b.R
-msgid "MCA Standard Coordinates"
-msgstr "Стандартные координаты МОС"
-
-#: R/multcorresp.b.R
-msgid ""
-"<p>This module computes <strong>Multiple Correspondence Analysis "
-"(MCA)</strong> for several categorical variables. Computations are based on "
-"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Both classic methods are available:</p>\n"
-"<ul>\n"
-"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
-"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues "
-"are the squares of those of the indicator matrix method. </li>\n"
-"</ul>\n"
-"<p>Both methods give the same <em>standard</em> coordinates (but different "
-"<em>principal</em> coordinates).</p>\n"
-"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
-"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
-"(and inertia) of categories and observations are computed from the original "
-"eigenvalues of the Burt matrix.</p>\n"
-"<p>The <strong>Normalization</strong> options specify how the coordinates "
-"are scaled (by eigenvalues):</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Both category and observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Category principal:</strong> Only category coordinates are "
-"scaled.</li>\n"
-"<li><strong>Observation principal:</strong> Only observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Standard:</strong> Both category and observation coordinates "
-"are standard.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
-msgstr ""
-"<p>Этот модуль вычисляет <strong>Многомерное Корреспонденс-Анализ (MCA)</"
-"strong> для нескольких категориальных переменных. Вычисления основаны на "
-"пакете <a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR</a> авторов F.Хассон, J.Хоссе, S.Ле, J.Мазе.</p>"
-"\n"
-"<p>Доступны оба классических метода:</p>\n"
-"<ul>\n"
-"<li><strong>Матрица показателей:</strong> CA матрицы показателей</li>\n"
-"<li><strong>Бурта матрица:</strong> CA Бурт матрицы. Свойства ей образуют "
-"квадрату свойств метода матрицы показателей. </li>\n"
-"</ul>\n"
-"<p>Оба метода дает одинаковые <em>стандартные</em> координаты (но различные "
-"<em>главные</em> координаты).</p>\n"
-"<p>При выборе, <strong>Исправления Бензекри и Гринакре</strong> применяются "
-"только к свойствам (таблица <strong>Символ</strong>). Координаты категорий и "
-"наблюдений расчетываются из исходных свойств Бурт матрицы.</p>\n"
-"<p>Варианты <strong>Нормализации</strong> задают, как координаты "
-"масштабируются (по свойствам):</p>\n"
-"<ul>\n"
-"<li><strong>Главная:</strong> Обе категории и наблюдений координаты "
-"масштабируются.</li>\n"
-"<li><strong>Категории главная:</strong> только категории координаты "
-"масштабируются.</li>\n"
-"<li><strong>Наблюдений главный:</strong> только наблюдений координаты "
-"масштабируются.</li>\n"
-"<li><strong>Стандартная:</strong> обе категории и наблюдений координаты "
-"стандартны.</li>\n"
-"</ul>\n"
-"<p>Пример файла включен в открытие > Библиотека данных > vijPlots > Cars</p>"
-
-#: R/piechart.b.R
-msgid "Pie charts are for educational use only. Please do not use Pie charts!"
-msgstr ""
-"Круговые диаграммы предназначены только для образовательного использования. "
-"Пожалуйста, не используйте круговые диаграммы!"
-
-#: R/principal.b.R
-msgid "The number of dimensions cannot be greater than the number of variables."
-msgstr "Количество измерений не может быть больше количества переменных."
-
-#: R/principal.b.R
-msgid "PCA Principal Coordinates"
-msgstr "Главные координаты МГК (PCA)"
-
-#: R/principal.b.R
-msgid "PCA Standard Coordinates"
-msgstr "Стандартные координаты МГК (PCA)"
-
-#: R/principal.b.R
-msgid ""
-"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
-"for several continuous variables. Computations are based on "
-"<tt>stats::prcomp</tt> function.</p>\n"
-"<p>Although rotated components are not principal components, they are "
-"widely used. Only orthogonal rotations are available (from GPArotation "
-"package).</p>\n"
-"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
-"principal (scaled by the squareroot of eigenvalues).</p>\n"
-"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
-"eigenvalues) while loadings are standard.</li>\n"
-"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
-"are standard. </li>\n"
-"</ul>\n"
-"<p><strong>Advanced options</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Standardize loadings:</strong> loadings are normalized with "
-"sums of squared equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Standardize scores:</strong> scores are normalized with "
-"variances equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
-"applied to eigenvectors (standard loadings) instead of principal loadings "
-"(STATA way).</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
-msgstr ""
-"<p>Этот модуль вычисляет <strong>Принципал Компонентный Анализ (PCA)</"
-"strong> для нескольких непрерывных переменных. Вычисления основаны на "
-"функции <tt>stats::prcomp</tt>.</p>\n"
-"<p>Хотя повёрнутые компоненты не являются основными компонентами, они широко "
-"используются. Доступны только ортогональные вращения (из пакета GPArotation)"
-".</p>\n"
-"<p>Нагрузки (координаты переменных) и баллы (координаты наблюдений) являются "
-"основными (масштабируются по квадратному корню из собственных значений).</p>"
-"\n"
-"<p>Биплот следует \"Биплотам в практике\" (Майкл Гринакр, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Форма биплота:</strong> Баллы являются основными (масштабируются "
-"по собственным значениям), а нагрузки являются стандартными.</li>\n"
-"<li><strong>Ковариационный биплот:</strong> Нагрузки являются основными, а "
-"баллы являются стандартными.</li>\n"
-"</ul>\n"
-"<p><strong>Расширенные параметры</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Стандартизировать нагрузки:</strong> нагрузки нормализуются с "
-"суммами квадратов, равными 1 (вместо собственных значений)</li>\n"
-"<li><strong>Стандартизировать баллы:</strong> баллы нормализуются с "
-"дисперсиями, равными 1 (вместо собственных значений)</li>\n"
-"<li><strong>Повернуть собственный вектор:</strong> вращение (варимакс и т. "
-"д.) применяется к собственным векторам (стандартным нагрузкам) вместо "
-"основных нагрузок (способ STATA).</li>\n"
-"</ul>\n"
-"<p>Пример файла включен в Открыть > Библиотека данных > vijPlots > Iris</p>"
-
-#: R/qqplot.b.R
-msgid "Natural Log Tranform requires positive (>0) data."
-msgstr ""
-"Преобразование натурального логарифма требует положительных (>0) данных."
-
-#: R/qqplot.b.R
-msgid "{distrib} distribution requires positive (>0) data."
-msgstr "{distrib} распределение требует положительных (>0) данных."
-
-#: R/qqplot.b.R
-msgid "Exponential distribution requires non-negative (≥0) data."
-msgstr "Экспоненциальное распределение требует неотрицательных (≥ 0) данных."
-
-#: R/qqplot.b.R
-msgid "Beta distribution requires data between 0 and 1."
-msgstr "Бета распределение требует данных между 0 и 1."
-
-#: R/qqplot.b.R
-msgid "Unable to estimate the distribution parameters."
-msgstr "Не возможно оценить параметры распределения."
-
-#: R/qqplot.b.R
-msgid "Wrong parameter values."
-msgstr "Неправильные значения параметров."
-
-#: R/qqplot.b.R
-msgid "F"
-msgstr "F"
-
-#: R/qqplot.b.R
-msgid ""
-"<p>This module uses <a href = "
-"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
-"package<a/> by Alexandre Almeida, Adam Loy and Heike Hofmann. In-depth "
-"information can be found in the package documentation on CRAN site.</p>\n"
-"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
-"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
-"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
-"identity line.</p>\n"
-"<p><strong>Confidence band:</strong> Draws a confidence band around the "
-"reference line. qqplotr package provides several methods to compute the "
-"confidence band:</p>\n"
-"<ul>\n"
-"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
-"bands based on Normal confidence intervals;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
-"based on a parametric bootstrap;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
-"Kolmogorov-Smirnov test;</li>\n"
-"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
-"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
-"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
-"simultaneous bands using the equal local levels.</li>\n"
-"</ul>\n"
-"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
-"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
-"according to the reference line. This procedure may help reducing visual "
-"bias caused by the orthogonal distances from the points to the reference "
-"line.</p>\n"
-"<p><strong>Parameter values:</strong> The distribution parameters can be "
-"estimated from data using:</p>\n"
-"<ul>\n"
-"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
-"should work with all distributions but \"t\" and \"uniform\";</li>\n"
-"<li><strong>Method of Moments</strong> for moment based parameters : it "
-"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
-"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
-"</ul>\n"
-"<p>or entered by user:</p>\n"
-"<ul>\n"
-"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
-"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
-"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
-"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
-"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
-"(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
-msgstr ""
-"<p>Этот модуль использует пакет <a href = \"https://CRAN.R-project.org/"
-"package=qqplotr\" target=\"_blank\">qqplotr R package<a/> от Alexandre "
-"Almeida, Adam Loy и Heike Hofmann. Подробная информация можно найти в "
-"документации пакета на сайте CRAN.</p>\n"
-"<p><strong>Линия ссылки:</strong> Рисует либо <em>линию тождества</em> (y = "
-"x), либо часто используемую <em>QQ-линию</em>, которая пересекает две "
-"квантили данных (Q<sub>0,25</sub> и Q<sub>0,75</sub>). График P-P "
-"поддерживает только линию тождества.</p>\n"
-"<p><strong>Полоса доверия:</strong> Рисует полосу доверия вокруг линии "
-"ссылки. Пакет qqplotr предоставляет несколько методов для расчета полосы "
-"доверия:</p>\n"
-"<ul>\n"
-"<li><strong><em>Точечная</em></strong> строит точечные полосы доверия на "
-"основе интервалов доверия нормального распределения;</li>\n"
-"<li><strong><em>Бутстрэп</em></strong> создает точечные полосы доверия на "
-"основе параметрического бутстрэпа;</li>\n"
-"<li><strong><em>Колмогоров-Смирнов</em></strong> полоса основана на тесте "
-"Колмогоров-Смирнов;</li>\n"
-"<li><strong><em>Чувствительная к хвостам</em></strong> строит полосу "
-"доверия, чувствительную к хвостам, но реализована только для нормальных QQ-"
-"плот;</li>\n"
-"<li><strong><em>Равные локальные уровни (ELL)</em></strong> строит "
-"одновременные полосы с использованием равных локальных уровней.</li>\n"
-"</ul>\n"
-"<p>Графики P-P поддерживают только методы «ELL» и «Бутстрэп».</p>\n"
-"<p><strong>Детрендированный график:</strong> Объекты <em>детрендируются</em> "
-"согласно линии ссылки. Этот процесс может помочь уменьшить визуальный偏, "
-"вызванный ортогональными расстояниями от точек до линии ссылки.</p>\n"
-"<p><strong>Значения параметров:</strong> Параметры распределения можно "
-"оценить из данных с помощью:</p>\n"
-"<ul>\n"
-"<li><strong>Метод максимального правдоподобия</strong> (с использованием "
-"пакета MASS): он должен работать со всеми распределениями, кроме «t» и «"
-"равномерного»;</li>\n"
-"<li><strong>Метод моментов</strong> для параметров, основанных на моментах: "
-"он должен работать с распределениями «нормальное», «лог-нормальное», «Бета», "
-"«Экспоненциальное», «Гамма», «Логистическое» и «Равномерное»;</li>\n"
-"</ul>\n"
-"<p>или введены пользователем:</p>\n"
-"<ul>\n"
-"<li><strong>Параметр 1:</strong> среднее (Нормальное), среднелог (Лог-"
-"нормальное), форма1 (Бета), положение (Коши, Логистическое), степень свободы "
-"(Хи-квадрат, Стюдент), степень свободы1 (F), скорость (Экспоненциальное), "
-"форма (Гамма, Вейбулла) и мин (Равномерное);</li>\n"
-"<li><strong>Параметр 2:</strong> стандартное отклонение (нормальное), "
-"стандартное отклонение лог (лог-нормальное), форма2 (Бета), масштаб (Коши, "
-"Логистическое), степень свободы2 (F), скорость (Гамма, Вейбулла) и макс "
-"(Равномерное).</li>\n"
-"</ul>\n"
-"</p>"
-
-#: areachart/options/ignoreNA.title
-#: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
-msgid "Ignore missing values"
-msgstr "Игнорировать пропущенные значения"
-
-#: areachart/options/yTicks.title
-#: barplot/options/xTicks.title
-#: barplot/options/yTicks.title
-#: boxplot/options/xTicks.title
-#: boxplot/options/yTicks.title
-#: histogram/options/xTicks.title
-#: histogram/options/yTicks.title
-#: linechart/options/yTicks.title
-#: lollipop/options/xTicks.title
-#: lollipop/options/yTicks.title
-#: mrcrosstabs/options/xTicks.title
-#: mrcrosstabs/options/yTicks.title
-#: mrfrequencies/options/xTicks.title
-#: mrfrequencies/options/yTicks.title
-#: qqplot/options/xTicks.title
-#: qqplot/options/yTicks.title
-#: raincloud/options/xTicks.title
-#: raincloud/options/yTicks.title
-#: scatterplot/options/xTicks.title
-#: scatterplot/options/yTicks.title
-msgid "Tick count"
-msgstr "Количество тиков"
-
-#: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
-#: mrcrosstabs/options/reverseStack.title
-msgid "Reverse stacking order"
-msgstr "Обратить порядок стека"
-
-#: barplot/options/barType/dodge.title
-#: mrcrosstabs/options/bartype/dodge.title
-msgid "Grouped (tight)"
-msgstr "Группированные (тесные)"
-
-#: barplot/ui[4].label
-#: boxplot/ui[3].label
-#: piechart/ui[4].label
-msgid "Text Size & Facets"
-msgstr "Размер текста и фасеты"
-
-#: boxplot/ui[2][0][1][0].label
-msgid "Box Elements"
-msgstr "Элементы бокса"
-
-#: corresp/options/normalization/symmetric.title
-msgid "Symmetric"
-msgstr "Симметричная"
-
-#: corresp/ui[6].label
-msgid "Text Size & Colors"
-msgstr "Размер и цвет текста"
-
-#: likertplot/options/ignoreNA.title
-msgid "Ignore missing groups"
-msgstr "Игнорировать пропущенные группы"
-
-#: linechart/ui[1][0][1].label
-#: principal/ui[4].label
-msgid "Sizes & Colors"
-msgstr "Размеры и цвета"
-
-#: mrcrosstabs/options/emptyAsNA.title
-#: mrfrequencies/options/emptyAsNA.title
-msgid "Treat empty values as missing"
-msgstr "Рассматривать пустые значения как пропущенные"
-
-#: mrcrosstabs/options/computedValues/responses.title
-#: mrfrequencies/options/showResponses.title
-#: mrfrequencies/options/yaxis/responses.title
-msgid "% of responses"
-msgstr "% ответов"
-
-#: mrcrosstabs/options/computedValues/cases.title
-#: mrfrequencies/options/showCases.title
-#: mrfrequencies/options/yaxis/cases.title
-msgid "% of cases"
-msgstr "% случаев"
-
-#: mrcrosstabs/options/computedValues/options.title
-msgid "% by row"
-msgstr "% по строкам"
-
-#: principal/ui[4][0][0][1].label
-#: scatterplot/ui[2][0][0][0].label
-msgid "Element Sizes"
-msgstr "Размеры элемента"
-
-#: raincloud/options/groupOne.title
-#: raincloud/ui[0][1].label
-msgid "Group (Side-by-side)"
-msgstr "Группа (Рядом)"
-
-#: scatterplot/ui[2].label
-msgid "Element Sizes & Facets"
-msgstr "Размеры и фасеты элемента"
-
-#: histogram/options/binBoundary.title
-msgctxt "boundary"
-msgid "Position"
-msgstr "Позиция"
-
-#: areachart/options/displayFormat/%b.title
-#: linechart/options/displayFormat/%b.title
-msgctxt "menu"
-msgid "Oct"
-msgstr "Окт"
-
-#: areachart/options/displayFormat/%B.title
-#: linechart/options/displayFormat/%B.title
-msgctxt "menu"
-msgid "October"
-msgstr "Октябрь"
-
-#: R/qqplot.b.R
-#: qqplot/options/distrib/norm.title
-msgctxt "distribution"
-msgid "Normal"
-msgstr "Нормальная"

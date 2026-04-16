@@ -10,6 +10,11 @@ msgstr ""
 
 #: R/qqplot.b.R
 #, fuzzy
+msgid "{distrib} distribution requires positive (>0) data."
+msgstr "Η κατανομή {distrib} απαιτεί θετικά (>0) δεδομένα."
+
+#: R/qqplot.b.R
+#, fuzzy
 msgid "{distribStr} {typeStr} Plot of {varStr}"
 msgstr "{distribStr} {typeStr} Πλέγμα {varStr}"
 
@@ -32,6 +37,12 @@ msgstr "{rotation} περιστροφή με κανονικοποίηση Kaiser
 #, fuzzy
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "{rotation} περιστροφή με κανονικοποίηση Kaiser"
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+#, fuzzy
+msgid "{var} doesn't have a valid date format."
+msgstr "Το {var} δεν έχει έγκυρο μορφότυπο ημερομηνίας."
 
 #: barplot/options/facetNumber.title
 #: boxplot/options/facetNumber.title
@@ -57,6 +68,11 @@ msgstr "Αριθμός γραμμών/στηλών"
 msgid "% Accuracy"
 msgstr "% Ακρίβεια"
 
+#: mrcrosstabs/options/computedValues/options.title
+#, fuzzy
+msgid "% by row"
+msgstr "% ανά σειρά"
+
 #: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
 #, fuzzy
@@ -75,6 +91,13 @@ msgstr "% Ετικέτες"
 msgid "% of Cases"
 msgstr "% των Περιπτώσεων"
 
+#: mrcrosstabs/options/computedValues/cases.title
+#: mrfrequencies/options/showCases.title
+#: mrfrequencies/options/yaxis/cases.title
+#, fuzzy
+msgid "% of cases"
+msgstr "% των περιπτώσεων"
+
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -89,6 +112,13 @@ msgstr "% της Ανεπάρκειας"
 msgid "% of Responses"
 msgstr "% των Απαντήσεων"
 
+#: mrcrosstabs/options/computedValues/responses.title
+#: mrfrequencies/options/showResponses.title
+#: mrfrequencies/options/yaxis/responses.title
+#, fuzzy
+msgid "% of responses"
+msgstr "% των απαντήσεων"
+
 #: principal/results/summaryTable.columns.title
 #, fuzzy
 msgid "% of Variance"
@@ -98,6 +128,412 @@ msgstr "% Διακύμανσης"
 #, fuzzy
 msgid "% within"
 msgstr "% μέσα"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid ""
+"<h3>Data & Sorting</h3>\n"
+"<ul>\n"
+"<li>Likert variables must be of ordinal measure-type. (Continuous "
+"measure-type works as well.)</li>\n"
+"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
+"must be of integer data-type.</li>\n"
+"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
+"order in table and graph (when some variables miss some levels).</li>\n"
+"<li><strong>Convert variables to integer:</strong> when checked, the level "
+"labels are ignored and only integer values are used.</li>\n"
+"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
+"variables by median.</li>\n"
+"</ul>\n"
+"<h3>Comparison Tests</h3>\n"
+"<p>When using a group variable, several tests are available:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
+"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
+"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
+"</ul>\n"
+"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
+"question) for post hoc tests or <strong>overall</strong> (groupwise and "
+"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
+"p-values are already adjusted (groupwise); no other adjustment is "
+"possible.</p>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
+msgstr ""
+"<h3>Δεδομένα & Ταξινόμηση</h3>\n"
+"<ul>\n"
+"<li>Οι μεταβλητές Likert πρέπει να είναι του τύπου ordinal measure-type. (Ο "
+"συνεχής measure-type λειτουργεί επίσης.)</li>\n"
+"<li>Εάν σκοπεύετε να υπολογίσετε τον μέσο/μεσό/τυπική απόκλιση ή να "
+"χρησιμοποιήσετε tests σύγκρισης, πρέπει να είναι του τύπου integer "
+"data-type.</li>\n"
+"<li><strong>Ευθυγράμμιση επιπέδων:</strong> όταν είναι ενεργοποιημένο, "
+"προσπαθεί να διορθώσει τη σειρά των ετικετών στα πίνακα και γραφήματα (όταν "
+"κάποιες μεταβλητές λείπουν κάποια επίπεδα).</li>\n"
+"<li><strong>Μετατροπή μεταβλητών σε ακέραιους:</strong> όταν είναι "
+"ενεργοποιημένο, οι ετικέτες των επιπέδων αγνοούνται και χρησιμοποιούνται "
+"μόνο οι ακέραιες τιμές.</li>\n"
+"<li><strong>Ταξινόμηση μεταβλητών με βάση το μέσο:</strong> διατάσσει τη "
+"λίστα των μεταβλητών Likert με βάση το μέσο.</li>\n"
+"</ul>\n"
+"<h3>Tests Σύγκρισης</h3>\n"
+"<p>Όταν χρησιμοποιείται μια μεταβλητή ομάδας, υπάρχουν διαθέσιμα διάφορα "
+"tests:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> σύγκριση δύο ομάδων</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> σύγκριση n ομάδων</li>\n"
+"<li><strong>Tests Post Hoc:</strong> Dunn, Conover και "
+"Dwass-Steel-Critchlow-Fligner (DSCF) tests σύγκρισης ζευγαριών.</li>\n"
+"</ul>\n"
+"<p>Οι τιμές p μπορούν να điều chỉnhούν <strong>ομαδικά</strong> (για κάθε "
+"ερώτηση) για tests post hoc ή <strong>ολικά</strong> (ομαδικά και "
+"ερωτηματικά) για MannWithney U, Kruskal-Wallis και tests post hoc. Οι τιμές "
+"p DSCF είναι ήδη điều chỉnhμένες (ομαδικά); δεν είναι δυνατή keine άλλη "
+"διόρθωση.</p>\n"
+"<p>Ένα δείγμα αρχείου περιλαμβάνεται στο Open > Data Library > vijPlots > "
+"Likert</p>"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
+"two categorical variables. Computations are based on <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
+"using the \"Counts\" variable.</p>\n"
+"<p><strong>Supplementary row or column</strong> numbers may be entered as "
+"integer lists : 1,3,6</p>\n"
+"<p>Four normalizations (scaling of row and column scores before plotting) "
+"are avalaible :</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Row an columns scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
+"square root of eigenvalues. </li>\n"
+"<li><strong>Row Principal:</strong> Only row scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Column Principal:</strong> Only column scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Standard:</strong> The raw coordinates without "
+"normalization.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
+msgstr ""
+"<p>Αυτό το μονάδα υπολογίζει <strong>Ανάλυση Αντιστοιχίας (CA)</strong> για "
+"δύο κατηγορικές μεταβλητές. Οι υπολογισμοί βασίζονται στο <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> πακέτο από F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Τα δεδομένα possono να ζυγιστούν χρησιμοποιώντας το εσωτερικό σύστημα "
+"βαρύτητας του jamovi ή χρησιμοποιώντας την μεταβλητή \"Μετρήσεις\".</p>\n"
+"<p>Οι <strong>Συμπληρωματικοί αριθμοί γραμμής ή στήλης</strong> μπορούν να "
+"εισαχθούν ως λίστες ακέραιων: 1,3,6</p>\n"
+"<p>Διαθέσιμες είναι τέσσερις κανονικοποιήσεις (κλίμακα βαθμολογίας σειράς "
+"και στήλης πριν από την απεικόνιση) :</p>\n"
+"<ul>\n"
+"<li><strong>Κύρια:</strong> Οι βαθμολογίες σειράς και στήλης κλιμακώνονται "
+"από τις ιδιοτιμές.</li>\n"
+"<li><strong>Συμμετρική:</strong> Οι βαθμολογίες σειράς και στήλης "
+"κλιμακώνονται από την τετραγωνική ρίζα των ιδιοτιμών. </li>\n"
+"<li><strong>Κύρια σειρά:</strong> Μόνο οι βαθμολογίες σειράς κλιμακώνονται "
+"από τις ιδιοτιμές.</li>\n"
+"<li><strong>Κύρια στήλη:</strong> Μόνο οι βαθμολογίες στήλης κλιμακώνονται "
+"από τις ιδιοτιμές.</li>\n"
+"<li><strong>Τυπική:</strong> Οι ακατέργαστες συντεταγμένες χωρίς "
+"κανονικοποίηση.</li>\n"
+"</ul>\n"
+"<p>Ένα δείγμα αρχείου περιλαμβάνεται στο Άνοιγμα > Βιβλιοθήκη Δεδομένων > "
+"vijPlots > Smoking</p>"
+
+#: R/multcorresp.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes <strong>Multiple Correspondence Analysis "
+"(MCA)</strong> for several categorical variables. Computations are based on "
+"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Both classic methods are available:</p>\n"
+"<ul>\n"
+"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
+"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues are "
+"the squares of those of the indicator matrix method. </li>\n"
+"</ul>\n"
+"<p>Both methods give the same <em>standard</em> coordinates (but different "
+"<em>principal</em> coordinates).</p>\n"
+"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
+"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
+"(and inertia) of categories and observations are computed from the original "
+"eigenvalues of the Burt matrix.</p>\n"
+"<p>The <strong>Normalization</strong> options specify how the coordinates "
+"are scaled (by eigenvalues):</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Both category and observation coordinates "
+"are scaled.</li>\n"
+"<li><strong>Category principal:</strong> Only category coordinates are "
+"scaled.</li>\n"
+"<li><strong>Observation principal:</strong> Only observation coordinates are "
+"scaled.</li>\n"
+"<li><strong>Standard:</strong> Both category and observation coordinates are "
+"standard.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
+msgstr ""
+"<p>Αυτό το μονάδα υπολογίζει <strong>Πολυπλή Ανάλυση Αντιστοιχίας "
+"(MCA)</strong> για πολλές κατηγορικές μεταβλητές. Οι υπολογισμοί βασίζονται "
+"στο <a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> πακέτο από F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Διαθέσιμες είναι και οι δύο κλασικές μεθόδοι:</p>\n"
+"<ul>\n"
+"<li><strong>Ματρίца δεικτών:</strong> CA της ματρίτσας δεικτών</li>\n"
+"<li><strong>Ματρίца Burt:</strong> CA της ματρίτσας Burt. Οι ιδιοτιμές είναι "
+"τα τετράγωνα των ιδιοτιμών της μεθόδου ματρίτσας δεικτών. </li>\n"
+"</ul>\n"
+"<p>Και οι δύο μεθόδοι δίνουν τις ίδιες <em>τυπικές</em> συντεταγμένες (αλλά "
+"διαφορετικές <em>κύριες</em> συντεταγμένες).</p>\n"
+"<p>Όταν επιλεγεί, <strong>διορθώσεις Benzecri και Greenacre</strong> "
+"εφαρμόζονται μόνο στις ιδιοτιμές (<strong>Πίνακας Σύνοψης</strong>). Οι "
+"συντεταγμένες (και η αδράνεια) των κατηγοριών και των παρατηρήσεων "
+"υπολογίζονται από τις αρχικές ιδιοτιμές της ματρίτσας Burt.</p>\n"
+"<p>Οι <strong>Επιλογές κανονικοποίησης</strong> ορίζουν πώς οι συντεταγμένες "
+"κλιμακώνονται (από τις ιδιοτιμές):</p>\n"
+"<ul>\n"
+"<li><strong>Κύρια:</strong> Και οι συντεταγμένες κατηγορίας και οι "
+"συντεταγμένες παρατήρησης κλιμακώνονται.</li>\n"
+"<li><strong>Κύρια κατηγορία:</strong> Μόνο οι συντεταγμένες κατηγορίας "
+"κλιμακώνονται.</li>\n"
+"<li><strong>Κύρια παρατήρηση:</strong> Μόνο οι συντεταγμένες παρατήρησης "
+"κλιμακώνονται.</li>\n"
+"<li><strong>Τυπική:</strong> Και οι συντεταγμένες κατηγορίας και οι "
+"συντεταγμένες παρατήρησης είναι τυπικές.</li>\n"
+"</ul>\n"
+"<p>Ένα δείγμα αρχείου περιλαμβάνεται στο Άνοιγμα > Βιβλιοθήκη Δεδομένων > "
+"vijPlots > Cars</p>"
+
+#: R/principal.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
+"for several continuous variables. Computations are based on "
+"<tt>stats::prcomp</tt> function.</p>\n"
+"<p>Although rotated components are not principal components, they are widely "
+"used. Only orthogonal rotations are available (from GPArotation "
+"package).</p>\n"
+"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
+"principal (scaled by the squareroot of eigenvalues).</p>\n"
+"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
+"eigenvalues) while loadings are standard.</li>\n"
+"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
+"are standard. </li>\n"
+"</ul>\n"
+"<p><strong>Advanced options</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Standardize loadings:</strong> loadings are normalized with sums "
+"of squared equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Standardize scores:</strong> scores are normalized with "
+"variances equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
+"applied to eigenvectors (standard loadings) instead of principal loadings "
+"(STATA way).</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
+msgstr ""
+"<p>Αυτό το module υπολογίζει <strong>Πρωτεύουσα Ανάλυση Συστατικών "
+"(PCA)</strong> για πολλές συνεχείς μεταβλητές. Οι υπολογισμοί βασίζονται στη "
+"συνάρτηση <tt>stats::prcomp</tt>.</p>\n"
+"<p>Хотя οι περιστραμμένοι συστατικοί δεν είναι πρωτεύοντες συστατικοί, "
+"χρησιμοποιούνται ευρέως. Διατίθενται μόνο ορθογώνιες περιστροφές (από το "
+"πακέτο GPArotation).</p>\n"
+"<p>Οι φορτώσεις (συντεταγμένες μεταβλητών) και οι βαθμοί (συντεταγμένες "
+"παρατηρήσεων) είναι πρωτεύοντες (κλιμακωτοί από την τετραγωνική ρίζα των "
+"ιδιοτιμών).</p>\n"
+"<p>Η διπλή προβολή ακολουθεί την \"Διπλή Προβολή στην Πράξη\" (Michael "
+"Greenacre, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Διπλή προβολή:</strong> Οι βαθμοί είναι πρωτεύοντες (κλιμακωτοί "
+"από τις ιδιοτιμές) ενώ οι φορτώσεις είναι τυποποιημένες.</li>\n"
+"<li><strong>Διπλή προβολή συσχετίσεων:</strong> Οι φορτώσεις είναι "
+"πρωτεύοντες ενώ οι βαθμοί είναι τυποποιημένοι.</li>\n"
+"</ul>\n"
+"<p><strong>Προηγμένα επιλογές:</strong></p>\n"
+"<ul>\n"
+"<li><strong>Τυποποίηση φορτίσεων:</strong> οι φορτώσεις είναι "
+"κανονικοποιημένες με άθροισμα των τετραγώνων ίσο με 1 (αντί για "
+"ιδιοτιμές)</li>\n"
+"<li><strong>Τυποποίηση βαθμών:</strong> οι βαθμοί είναι κανονικοποιημένοι με "
+"διασπορά ίση με 1 (αντί για ιδιοτιμές)</li>\n"
+"<li><strong>Περιστροφή ιδιοδιανυσμάτων:</strong> η περιστροφή (varimax, "
+"κ.λπ.) εφαρμόζεται στα ιδιοδιανύσματα (τυποποιημένες φορτώσεις) αντί για τις "
+"πρωτεύουσες φορτώσεις (τρόπος STATA).</li>\n"
+"</ul>\n"
+"<p>Ένα δείγμα αρχείου περιλαμβάνεται στο Open > Data Library > vijPlots > "
+"Iris</p>"
+
+#: R/mrfrequencies.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes frequencies for multiple response questions, also "
+"known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>Αυτό το μοντέλο υπολογίζει τις συχνότητες για πολλαπλές απαντήσεις "
+"ερωτημάτων, επίσης γνωστές ως \"Επιλέξτε Όλα τα Ισχύοντα\" (CATA) "
+"ερωτήσεις.</p>\n"
+"<p>Τα ερωτήματα μπορεί να κωδικοποιηθούν ως:</p>\n"
+"<ul>\n"
+"<li>πολλές <strong>dummy (ή δείκτες) μεταβλητές</strong> χρησιμοποιώντας "
+"0/1, 1/2, Y/N για κάθε πιθανή απάντηση;</li>\n"
+"<li>μια <strong>πολυτιμική μεταβλητή</strong> που περιέχει τις επιλεγμένες "
+"απαντήσεις,分割μένες από ένα σύμβολο (συνήθως \",\" ή \";\").</li>\n"
+"</ul>\n"
+"<p>Ένα δείγμα αρχείου περιλαμβάνεται στο Άνοιγμα > Βιβλιοθήκη Δεδομένων > "
+"vijPlots > Πιστωτικές Κάρτες</p>"
+
+#: R/mrcrosstabs.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes two-way frequencies for multiple response questions, "
+"also known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>Αυτό το μοντέλο υπολογίζει τις συχνότητες για πολλαπλές απαντήσεις "
+"ερωτημάτων, επίσης γνωστές ως \"Επιλέξτε Όλα τα Ισχύοντα\" (CATA) "
+"ερωτήσεις.</p>\n"
+"<p>Τα ερωτήματα μπορεί να κωδικοποιηθούν ως:</p>\n"
+"<ul>\n"
+"<li>πολλές <strong>dummy (ή δείκτες) μεταβλητές</strong> χρησιμοποιώντας "
+"0/1, 1/2, Y/N για κάθε πιθανή απάντηση;</li>\n"
+"<li>μια <strong>πολυτιμική μεταβλητή</strong> που περιέχει τις επιλεγμένες "
+"απαντήσεις,分割μένες από ένα σύμβολο (συνήθως \",\" ή \";\").</li>\n"
+"</ul>\n"
+"<p>Ένα δείγμα αρχείου περιλαμβάνεται στο Άνοιγμα > Βιβλιοθήκη Δεδομένων > "
+"vijPlots > Πιστωτικές Κάρτες</p>"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid ""
+"<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
+"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"Heike Hofmann. In-depth information can be found in the package "
+"documentation on CRAN site.</p>\n"
+"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
+"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
+"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
+"identity line.</p>\n"
+"<p><strong>Confidence band:</strong> Draws a confidence band around the "
+"reference line. qqplotr package provides several methods to compute the "
+"confidence band:</p>\n"
+"<ul>\n"
+"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
+"bands based on Normal confidence intervals;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
+"based on a parametric bootstrap;</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
+"Kolmogorov-Smirnov test;</li>\n"
+"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
+"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
+"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
+"simultaneous bands using the equal local levels.</li>\n"
+"</ul>\n"
+"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
+"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
+"according to the reference line. This procedure may help reducing visual "
+"bias caused by the orthogonal distances from the points to the reference "
+"line.</p>\n"
+"<p><strong>Parameter values:</strong> The distribution parameters can be "
+"estimated from data using:</p>\n"
+"<ul>\n"
+"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
+"should work with all distributions but \"t\" and \"uniform\";</li>\n"
+"<li><strong>Method of Moments</strong> for moment based parameters : it "
+"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
+"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
+"</ul>\n"
+"<p>or entered by user:</p>\n"
+"<ul>\n"
+"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
+"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
+"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
+"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
+"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
+"(Uniform).</li>\n"
+"</ul>\n"
+"</p>"
+msgstr ""
+"<p>Αυτό το μοντέλο χρησιμοποιεί το <a href = "
+"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">πακέτο "
+"qqplotr R</a> από τον Alexandre Almeida, Adam Loy και Heike Hofmann. "
+"Αναλυτικές πληροφορίες μπορούν να βρεθούν στη τεκμηρίωση του πακέτου στον "
+"ιστότοπο του CRAN.</p>\n"
+"<p><strong>Γραμμή αναφοράς:</strong> Σχεδιάζει είτε τη <em>γραμμή "
+"ταυτότητας</em> (y = x) είτε τη συνήθως χρησιμοποιούμενη <em>Γραμμή Q-Q</em> "
+"που διασχίζει δύο quantiles δεδομένων (Q<sub>0.25</sub> και "
+"Q<sub>0.75</sub>). Το γράφημα P-P υποστηρίζει μόνο τη γραμμή ταυτότητας.</p>\n"
+"<p><strong>Ζώνη εμπιστοσύνης:</strong> Σχεδιάζει μια ζώνη εμπιστοσύνης γύρω "
+"από τη γραμμή αναφοράς. Το πακέτο qqplotr παρέχει πολλές μεθόδους για τον "
+"υπολογισμό της ζώνης εμπιστοσύνης:</p>\n"
+"<ul>\n"
+"<li><strong><em>Σημείο προς σημείο</em></strong> κατασκευάζει ζώνες "
+"εμπιστοσύνης σημείο προς σημείο με βάση τα διαστήματα εμπιστοσύνης του "
+"Κανονικού;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> δημιουργεί ζώνες εμπιστοσύνης σημείο "
+"προς σημείο με βάση μια παραμετρική bootstrap;</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> ζώνη βασίζεται στο τεστ "
+"Kolmogorov-Smirnov;</li>\n"
+"<li><strong><em>Αισθητική στα άκρα</em></strong> κατασκευάζει αισθητικές "
+"ζώνες εμπιστοσύνης, αλλά έχει εφαρμοστεί μόνο για γραφήματα Q-Q "
+"Κανονικού;</li>\n"
+"<li><strong><em>Ισότιμες τοπικές στάθμες (ELL)</em></strong> κατασκευάζει "
+"συγχρονισμένες ζώνες χρησιμοποιώντας τις ισότιμες τοπικές στάθμες.</li>\n"
+"</ul>\n"
+"<p>Τα γραφήματα P-P υποστηρίζουν μόνο τις μεθόδους \"ELL\" και "
+"\"Bootstrap\".</p>\n"
+"<p><strong>Γραφήματα χωρίς τάση:</strong> Τα αντικείμενα <em>απαλλαγμένα από "
+"τάση</em> σύμφωνα με τη γραμμή αναφοράς. Αυτή η διαδικασία μπορεί να "
+"βοηθήσει στη μείωση της οπτικής προκατάληψης που προκαλείται από τις "
+"ορθογώνιες αποστάσεις από τα σημεία στη γραμμή αναφοράς.</p>\n"
+"<p><strong>Τιμές παραμέτρων:</strong> Οι παράμετροι κατανομής μπορούν να "
+"εκτιμηθούν από τα δεδομένα χρησιμοποιώντας:</p>\n"
+"<ul>\n"
+"<li><strong>Μέθοδος Μέγιστης Πιθανοότητας</strong> (χρησιμοποιώντας το "
+"πακέτο MASS): πρέπει να λειτουργήσει με όλες τις κατανομές εκτός από \"t\" "
+"και \"ομοιόμορφη\";</li>\n"
+"<li><strong>Μέθοδος Ροπών</strong> για παράμετρους που βασίζονται σε ροπές: "
+"πρέπει να λειτουργήσει με τις κατανομές \"κανονική\", \"log-κανονική\", "
+"\"Βήτα\", \"Εξponential\", \"Γάμμα\", \"Λογιστική\" και \"Ομοιόμορφη\";</li>\n"
+"</ul>\n"
+"<p>ή εισαχθεί από τον χρήστη:</p>\n"
+"<ul>\n"
+"<li><strong>Παράμετρος 1:</strong> μέσο (Κανονική), meanlog (Log-κανονική), "
+"shape1 (Βήτα), θέση (Cauchy, Λογιστική), df (Χι-τετράγωνο, Φοιτητής), df1 "
+"(F), ρυθμός (Εξponential), σχήμα (Γάμμα, Weibull) και ελάχιστο "
+"(Ομοιόμορφη);</li>\n"
+"<li><strong>Παράμετρος 2:</strong> τυπική απόκλιση (κανονική), sdlog "
+"(Log-κανονική), shape2 (Βήτα), κλίμακα (Cauchy, Λογιστική), df2 (F), ρυθμός "
+"(Γάμμα, Weibull) και μέγιστο (Ομοιόμορφη).</li>\n"
+"</ul>\n"
+"</p>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -435,6 +871,18 @@ msgstr "Αυτόματη"
 msgid "Axes"
 msgstr "Άξονες"
 
+#: R/corresp.b.R
+#, fuzzy
+msgid "Axis numbers cannot be equal."
+msgstr "Οι αριθμοί αξόνων δεν μπορούν να είναι ίσοι."
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
+msgstr ""
+"Οι αριθμοί αξόνων πρέπει να είναι μικρότεροι ή ίσοι με τον αριθμό των "
+"διαστάσεων ({nDim})."
+
 #: corresp/ui[7].label
 #: mrfrequencies/ui[5].label
 #, fuzzy
@@ -483,6 +931,11 @@ msgstr "Διόρθωση Benzécri"
 #, fuzzy
 msgid "Beta"
 msgstr "Βήτα"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Beta distribution requires data between 0 and 1."
+msgstr "Η κατανομή Beta απαιτεί δεδομένα μεταξύ 0 και 1."
 
 #: likertplot/options/adjustMethod/BH.title
 #, fuzzy
@@ -767,6 +1220,17 @@ msgstr "Περίγραμμα"
 msgid "Bottom"
 msgstr "Κάτω"
 
+#: histogram/options/binBoundary.title
+#, fuzzy
+msgctxt "boundary"
+msgid "Position"
+msgstr "Θέση"
+
+#: boxplot/ui[2][0][1][0].label
+#, fuzzy
+msgid "Box Elements"
+msgstr "Στοιχεία κουτιού"
+
 #: package/analyses/boxplot.title
 #: package/analyses/boxplot.menuTitle
 #: boxplot/options.title
@@ -827,6 +1291,16 @@ msgstr "Κατά ομάδα"
 #, fuzzy
 msgid "By variable"
 msgstr "Κατά μεταβλητή"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Cannot convert text variables to integers"
+msgstr "Δεν είναι δυνατό να μετατραπούν οι μεταβλητές κειμένου σε ακέραιους αριθμούς"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Cannot tidy up text variables"
+msgstr "Αδυναμία διόρθωσης των μεταβλητών κειμένου"
 
 #: areachart/ui[4][2].label
 #: barplot/ui[7][2].label
@@ -1094,10 +1568,20 @@ msgstr "Σχεδιασμός Στήλης"
 msgid "Column plot"
 msgstr "Γραφική παράσταση στήλης"
 
+#: R/corresp.b.R
+#, fuzzy
+msgid "Column Points for {cols}"
+msgstr "Σημεία στηλών για {cols}"
+
 #: corresp/options/normalization/colprincipal.title
 #, fuzzy
 msgid "Column principal"
 msgstr "Στήλη πρωτεύουσα"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Column principal normalization"
+msgstr "Κύρια κανονικοποίηση στηλών"
 
 #: corresp/results/colProfiles.title
 #, fuzzy
@@ -1126,6 +1610,16 @@ msgstr "Στήλες (Ομάδες)"
 #, fuzzy
 msgid "Comparison Tests"
 msgstr "Εργασίες σύγκρισης"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Comparison tests cannot be computed with empty (N=0) groups"
+msgstr "Οι δοκιμές σύγκρισης δεν μπορούν να υπολογιστούν με κενές (N=0) ομάδες"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Comparison tests require numeric variables"
+msgstr "Οι tests σύγκρισης απαιτούν αριθμητικές μεταβλητές"
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
@@ -1292,6 +1786,16 @@ msgstr "Crosstab"
 #, fuzzy
 msgid "Crosstab (% by row)"
 msgstr "Crosstab (% ανά σειρά)"
+
+#: R/mrcrosstabs.b.R
+#, fuzzy
+msgid "Crosstab (% of cases)"
+msgstr "Πίνακας συσχέτισης (% των περιπτώσεων)"
+
+#: R/mrcrosstabs.b.R
+#, fuzzy
+msgid "Crosstab (% of responses)"
+msgstr "Διπλό πίνακας (% των απαντήσεων)"
 
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
@@ -1493,6 +1997,13 @@ msgstr "Μορφή εμφάνισης"
 msgid "Distribution"
 msgstr "Κατανομή"
 
+#: R/qqplot.b.R
+#: qqplot/options/distrib/norm.title
+#, fuzzy
+msgctxt "distribution"
+msgid "Normal"
+msgstr "Κανονικό"
+
 #: piechart/options/donut.title
 #, fuzzy
 msgid "Donut chart"
@@ -1562,6 +2073,17 @@ msgstr "Ιδιοτιμή"
 msgid "Eigenvalues"
 msgstr "Ιδιοτιμές"
 
+#: principal/ui[4][0][0][1].label
+#: scatterplot/ui[2][0][0][0].label
+#, fuzzy
+msgid "Element Sizes"
+msgstr "Μέγεθος στοιχείων"
+
+#: scatterplot/ui[2].label
+#, fuzzy
+msgid "Element Sizes & Facets"
+msgstr "Μέγεθος Στοιχείων & Πρόσωπα"
+
 #: qqplot/options/methodQQ/ell.title
 #: qqplot/options/methodPP/ell.title
 #, fuzzy
@@ -1591,10 +2113,20 @@ msgstr "ΕΕ (Η-Μ-Ε)"
 msgid "Exponential"
 msgstr "Εξονεντικός"
 
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Exponential distribution requires non-negative (≥0) data."
+msgstr "Η εκθετική κατανομή απαιτεί μη αρνητικά (≥0) δεδομένα."
+
 #: principal/results/summaryTable.columns.superTitle
 #, fuzzy
 msgid "Extraction Sums of Squared Loadings"
 msgstr "Άθροιση Τετραγωνικών Φορτίων"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "F"
+msgstr "F"
 
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
@@ -1908,6 +2440,12 @@ msgstr "Ομάδα"
 msgid "Group (Overlapped)"
 msgstr "Ομάδα (Επικαλυπτόμενη)"
 
+#: raincloud/options/groupOne.title
+#: raincloud/ui[0][1].label
+#, fuzzy
+msgid "Group (Side-by-side)"
+msgstr "Ομάδα (Παράπλευρη)"
+
 #: piechart/options/labels/group+count.title
 #, fuzzy
 msgid "Group + Count"
@@ -1929,6 +2467,12 @@ msgstr "Ομαδοποίηση"
 #, fuzzy
 msgid "Grouped"
 msgstr "Ομαδοποιημένο"
+
+#: barplot/options/barType/dodge.title
+#: mrcrosstabs/options/bartype/dodge.title
+#, fuzzy
+msgid "Grouped (tight)"
+msgstr "Ομαδοποιημένα (σφιχτά)"
 
 #: histogram/options/grouping.title
 #: histogram/options/groupingN.title
@@ -2010,6 +2554,19 @@ msgstr "Οριζόντιο πλάνο"
 #, fuzzy
 msgid "Identity line"
 msgstr "Γραμμή ταυτότητας"
+
+#: likertplot/options/ignoreNA.title
+#, fuzzy
+msgid "Ignore missing groups"
+msgstr "Παράλεψη λείπων ομάδων"
+
+#: areachart/options/ignoreNA.title
+#: barplot/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
+#, fuzzy
+msgid "Ignore missing values"
+msgstr "Παράλεψη λείπων τιμών"
 
 #: multcorresp/options/ggrepel.title
 #, fuzzy
@@ -2612,6 +3169,11 @@ msgstr "Likert"
 msgid "Likert Plot"
 msgstr "Γραφικός Λίκερτ"
 
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Likert Plot requires ordinal (or numeric) variables"
+msgstr "Το γράφημα Likert απαιτεί ταξινομημένες (ή αριθμητικές) μεταβλητές"
+
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
 #, fuzzy
@@ -2782,6 +3344,11 @@ msgstr "Μάζα"
 msgid "Max"
 msgstr "Μέγιστο"
 
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Maximum of {var}"
+msgstr "Μέγιστο του {var}"
+
 #: qqplot/options/paramEstMethod/mle.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mle.label
 #, fuzzy
@@ -2794,6 +3361,16 @@ msgstr "Μέγιστη πιθανότητα (MLE)"
 msgid "May"
 msgstr "Μάιος"
 
+#: R/multcorresp.b.R
+#, fuzzy
+msgid "MCA Principal Coordinates"
+msgstr "Κύριες συντεταγμένες MCA"
+
+#: R/multcorresp.b.R
+#, fuzzy
+msgid "MCA Standard Coordinates"
+msgstr "Τυποποιημένες συντεταγμένες MCA"
+
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 #, fuzzy
@@ -2805,6 +3382,11 @@ msgstr "Μέσος όρος"
 msgid "Mean & SD"
 msgstr "Μέσος όρος & Τυπική απόκλιση"
 
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Mean of {var}"
+msgstr "Μέσο του {var}"
+
 #: R/likertplot.b.R
 #: likertplot/options/showMedian.title
 #: lollipop/options/yaxis/median.title
@@ -2812,6 +3394,30 @@ msgstr "Μέσος όρος & Τυπική απόκλιση"
 #, fuzzy
 msgid "Median"
 msgstr "Μέσος"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Median and mean require numeric variables"
+msgstr "Το μέσο και η μέση τιμή απαιτούν αριθμητικές μεταβλητές"
+
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Median of {var}"
+msgstr "Μέσο του {var}"
+
+#: areachart/options/displayFormat/%b.title
+#: linechart/options/displayFormat/%b.title
+#, fuzzy
+msgctxt "menu"
+msgid "Oct"
+msgstr "Οκτ"
+
+#: areachart/options/displayFormat/%B.title
+#: linechart/options/displayFormat/%B.title
+#, fuzzy
+msgctxt "menu"
+msgid "October"
+msgstr "Οκτώβριος"
 
 #: likertplot/options/adjustMethod.title
 #: multcorresp/options/method.title
@@ -2879,6 +3485,11 @@ msgstr "Ελάχιστο / Μέγιστο"
 msgid "Minimum entropy"
 msgstr "Ελάχιστη εντροπία"
 
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Minimum of {var}"
+msgstr "Ελάχιστο {var}"
+
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
 #: mrcrosstabs/ui/mode/onevar[0][1].label
@@ -2943,6 +3554,11 @@ msgstr "Όνομα"
 #, fuzzy
 msgid "Natural log tranform"
 msgstr "Φυσική λογαριθμική μετατροπή"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Natural Log Tranform requires positive (>0) data."
+msgstr "Η μεταφορά φυσικού λογαρίθμου απαιτεί θετικά (>0) δεδομένα."
 
 #: R/principal.b.R
 #, fuzzy
@@ -3087,6 +3703,11 @@ msgstr "Αριθμός περιπτώσεων:"
 #, fuzzy
 msgid "Number of dimensions"
 msgstr "Αριθμός διαστάσεων"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Number of dimensions must be less than or equal to {maxDim}."
+msgstr "Ο αριθμός των διαστάσεων πρέπει να είναι μικρότερος ή ίσος με {maxDim}."
 
 #: multcorresp/options/obsColor.title
 #, fuzzy
@@ -3459,6 +4080,16 @@ msgstr "Pastel 1"
 msgid "Pastel 2"
 msgstr "Pastel 2"
 
+#: R/principal.b.R
+#, fuzzy
+msgid "PCA Principal Coordinates"
+msgstr "Πρωτεύουσες Συντεταγμένες PCA"
+
+#: R/principal.b.R
+#, fuzzy
+msgid "PCA Standard Coordinates"
+msgstr "Τυποποιημένες συντεταγμένες PCA"
+
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
 #: barplot/ui[1][0][0]/yaxis_percent.label
@@ -3481,6 +4112,13 @@ msgstr "Ποσοστά"
 #, fuzzy
 msgid "Pie Chart"
 msgstr "Γραφική παράσταση πίτας"
+
+#: R/piechart.b.R
+#, fuzzy
+msgid "Pie charts are for educational use only. Please do not use Pie charts!"
+msgstr ""
+"Τα γράφηματα πίτας είναι μόνο για εκπαιδευτική χρήση. Παρακαλώ μην "
+"χρησιμοποιείτε γράφηματα πίτας!"
 
 #: corresp/options/rowColor/hotpink.title
 #: corresp/options/colColor/hotpink.title
@@ -3697,6 +4335,11 @@ msgstr "Ανάλυση κύριας συνιστώσας"
 #, fuzzy
 msgid "Principal coordinates"
 msgstr "Κύριες συντεταγμένες"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Principal normalization"
+msgstr "Πρωτεύουσα κανονικοποίηση"
 
 #: multcorresp/options/propPoint.title
 #, fuzzy
@@ -4031,6 +4674,13 @@ msgstr "Γραμμή παλινδρόμησης"
 msgid "Reverse disposition"
 msgstr "Αναστροφή διαθέσεων"
 
+#: barplot/options/reverseStack.title
+#: likertplot/options/reverseLikert.title
+#: mrcrosstabs/options/reverseStack.title
+#, fuzzy
+msgid "Reverse stacking order"
+msgstr "Αντιστροφή σειράς στοίβας"
+
 #: areachart/options/titleAlign/1.title
 #: areachart/options/subtitleAlign/1.title
 #: areachart/options/captionAlign/1.title
@@ -4167,10 +4817,20 @@ msgstr "Γράφημα Σειράς"
 msgid "Row plot"
 msgstr "Πλάνο γραμμής"
 
+#: R/corresp.b.R
+#, fuzzy
+msgid "Row Points for {rows}"
+msgstr "Σημεία σειρών για {rows}"
+
 #: corresp/options/normalization/rowprincipal.title
 #, fuzzy
 msgid "Row principal"
 msgstr "Κύρια γραμμή"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Row principal normalization"
+msgstr "Κύρια κανονικοποίηση σειράς"
 
 #: corresp/results/rowProfiles.title
 #, fuzzy
@@ -4445,6 +5105,12 @@ msgstr "Μοναδική Τιμή"
 msgid "Size"
 msgstr "Μέγεθος"
 
+#: linechart/ui[1][0][1].label
+#: principal/ui[4].label
+#, fuzzy
+msgid "Sizes & Colors"
+msgstr "Μέγεθος & Χρώματα"
+
 #: package/datasets/Smoking.name
 #, fuzzy
 msgid "Smoking"
@@ -4537,6 +5203,11 @@ msgstr "Τυπική"
 #, fuzzy
 msgid "Standard coordinates"
 msgstr "Σταθερές συντεταγμένες"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Standard normalization"
+msgstr "Τυποποιημένη κανονικοποίηση"
 
 #: principal/options/stdLoadings.title
 #, fuzzy
@@ -4655,6 +5326,18 @@ msgid "Supplement"
 msgstr "Συμπλήρωμα"
 
 #: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
+msgstr ""
+"Τα συμπληρωματικά αριθμοί στηλών πρέπει να είναι μια λίστα αριθμών, π.χ. "
+"1,2,9"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary column numbers must be between 1 and {nmax}."
+msgstr "Οι αριθμοί στηλών συμπληρώματος πρέπει να είναι μεταξύ 1 και {nmax}."
+
+#: R/corresp.b.R
 #: corresp/options/supplementaryCols.title
 #, fuzzy
 msgid "Supplementary columns"
@@ -4664,6 +5347,16 @@ msgstr "Συμπληρωματικές στήλες"
 #, fuzzy
 msgid "Supplementary Points"
 msgstr "Επιπλέον Σημεία"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "Οι輔ρητες αριθμοί σειράς πρέπει να είναι μια λίστα αριθμών, π.χ. 1,2,9"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary row numbers must be between 1 and {nmax}."
+msgstr "Οι輔ρητες αριθμοί σειράς πρέπει να είναι μεταξύ 1 και {nmax}."
 
 #: R/corresp.b.R
 #: corresp/options/supplementaryRows.title
@@ -4686,6 +5379,21 @@ msgstr "Δευτερεύουσες μεταβλητές"
 #, fuzzy
 msgid "Supplementary variables"
 msgstr "Επικουρικές μεταβλητές"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Symetric normalization"
+msgstr "Συμμετρική κανονικοποίηση"
+
+#: corresp/options/normalization/symmetric.title
+#, fuzzy
+msgid "Symmetric"
+msgstr "Συμμετρική"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Symmetric normalization"
+msgstr "Συμμετρική κανονικοποίηση"
 
 #: likertplot/ui[2].label
 #: likertplot/ui[2][0][0][0].label
@@ -4733,6 +5441,18 @@ msgstr "Κείμενο"
 msgid "Text Size"
 msgstr "Μέγεθος κειμένου"
 
+#: corresp/ui[6].label
+#, fuzzy
+msgid "Text Size & Colors"
+msgstr "Μέγεθος Κειμένου & Χρώματα"
+
+#: barplot/ui[4].label
+#: boxplot/ui[3].label
+#: piechart/ui[4].label
+#, fuzzy
+msgid "Text Size & Facets"
+msgstr "Μέγεθος κειμένου & Πρόσωπα"
+
 #: R/principal.b.R
 #, fuzzy
 msgid ""
@@ -4747,6 +5467,13 @@ msgstr ""
 msgid "The number of dimensions cannot be greater than {max}."
 msgstr "Ο αριθμός των διαστάσεων δεν μπορεί να είναι μεγαλύτερος από {max}."
 
+#: R/principal.b.R
+#, fuzzy
+msgid "The number of dimensions cannot be greater than the number of variables."
+msgstr ""
+"Ο αριθμός των διαστάσεων δεν μπορεί να είναι μεγαλύτερος από τον αριθμό των "
+"μεταβλητών."
+
 #: R/qqplot.b.R
 #, fuzzy
 msgid "Theoretical Probabilities"
@@ -4756,6 +5483,30 @@ msgstr "Θεωρητικές πιθανότητες"
 #, fuzzy
 msgid "Theoretical Quantiles"
 msgstr "Θεωρητικές Τέταρτες"
+
+#: areachart/options/yTicks.title
+#: barplot/options/xTicks.title
+#: barplot/options/yTicks.title
+#: boxplot/options/xTicks.title
+#: boxplot/options/yTicks.title
+#: histogram/options/xTicks.title
+#: histogram/options/yTicks.title
+#: linechart/options/yTicks.title
+#: lollipop/options/xTicks.title
+#: lollipop/options/yTicks.title
+#: mrcrosstabs/options/xTicks.title
+#: mrcrosstabs/options/yTicks.title
+#: mrfrequencies/options/xTicks.title
+#: mrfrequencies/options/yTicks.title
+#: qqplot/options/xTicks.title
+#: qqplot/options/yTicks.title
+#: raincloud/options/xTicks.title
+#: raincloud/options/yTicks.title
+#: scatterplot/options/xTicks.title
+#: scatterplot/options/yTicks.title
+#, fuzzy
+msgid "Tick count"
+msgstr "Αριθμός τιμών"
 
 #: likertplot/options/tidyUp.title
 #, fuzzy
@@ -4986,12 +5737,23 @@ msgstr "Σύνολο"
 msgid "Total row"
 msgstr "Σύνολο γραμμής"
 
+#: mrcrosstabs/options/emptyAsNA.title
+#: mrfrequencies/options/emptyAsNA.title
+#, fuzzy
+msgid "Treat empty values as missing"
+msgstr "Να αντιμετωπίζονται οι κενές τιμές ως λείπουσες"
+
 #: likertplot/ui[4][0][0][0].label
 #: piechart/options/labType.title
 #: piechart/ui[2][0][0][0].label
 #, fuzzy
 msgid "Type"
 msgstr "Τύπος"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Unable to estimate the distribution parameters."
+msgstr "Αδυναμία εκτίμησης των παραμέτρων κατανομής."
 
 #: R/principal.b.R
 #, fuzzy
@@ -5296,6 +6058,11 @@ msgstr "Εντός κατηγοριών"
 msgid "Within groups"
 msgstr "Εντός ομάδων"
 
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Wrong parameter values."
+msgstr "Λάθος τιμές παραμέτρων."
+
 #: areachart/options/timeVar.title
 #: areachart/options/timeVar1.title
 #: areachart/ui/mode/oneVariable[0][0][0].label
@@ -5340,6 +6107,20 @@ msgstr "Εντός ομάδων"
 #, fuzzy
 msgid "X-Axis"
 msgstr "Άξονας X"
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+#, fuzzy
+msgid "X-Axis and Y-Axis cannot be equal."
+msgstr "Οι άξονες X και Y δεν μπορούν να είναι ίσοι."
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+#, fuzzy
+msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
+msgstr ""
+"Οι άξονες X και Y δεν μπορούν να είναι μεγαλύτεροι από τον αριθμό των "
+"διαστάσεων."
 
 #: areachart/options/isDate.title
 #: linechart/options/isDate.title
@@ -5494,788 +6275,3 @@ msgstr "Κίτρινο σε Πράσινο"
 #, fuzzy
 msgid "Yellow to Red"
 msgstr "Κίτρινο σε Κόκκινο"
-
-#: R/areachart.b.R
-#: R/linechart.b.R
-#, fuzzy
-msgid "{var} doesn't have a valid date format."
-msgstr "Το {var} δεν έχει έγκυρο μορφότυπο ημερομηνίας."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "Οι輔ρητες αριθμοί σειράς πρέπει να είναι μια λίστα αριθμών, π.χ. 1,2,9"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary row numbers must be between 1 and {nmax}."
-msgstr "Οι輔ρητες αριθμοί σειράς πρέπει να είναι μεταξύ 1 και {nmax}."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
-msgstr ""
-"Τα συμπληρωματικά αριθμοί στηλών πρέπει να είναι μια λίστα αριθμών, π.χ. "
-"1,2,9"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary column numbers must be between 1 and {nmax}."
-msgstr "Οι αριθμοί στηλών συμπληρώματος πρέπει να είναι μεταξύ 1 και {nmax}."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Number of dimensions must be less than or equal to {maxDim}."
-msgstr "Ο αριθμός των διαστάσεων πρέπει να είναι μικρότερος ή ίσος με {maxDim}."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid ""
-"Axis numbers must be less than or equal to the number of dimensions "
-"({nDim})."
-msgstr ""
-"Οι αριθμοί αξόνων πρέπει να είναι μικρότεροι ή ίσοι με τον αριθμό των "
-"διαστάσεων ({nDim})."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Axis numbers cannot be equal."
-msgstr "Οι αριθμοί αξόνων δεν μπορούν να είναι ίσοι."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Principal normalization"
-msgstr "Πρωτεύουσα κανονικοποίηση"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Symetric normalization"
-msgstr "Συμμετρική κανονικοποίηση"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Row principal normalization"
-msgstr "Κύρια κανονικοποίηση σειράς"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Column principal normalization"
-msgstr "Κύρια κανονικοποίηση στηλών"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Standard normalization"
-msgstr "Τυποποιημένη κανονικοποίηση"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Row Points for {rows}"
-msgstr "Σημεία σειρών για {rows}"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Column Points for {cols}"
-msgstr "Σημεία στηλών για {cols}"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Symmetric normalization"
-msgstr "Συμμετρική κανονικοποίηση"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
-"two categorical variables. Computations are based on <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
-"using the \"Counts\" variable.</p>\n"
-"<p><strong>Supplementary row or column</strong> numbers may be entered as "
-"integer lists : 1,3,6</p>\n"
-"<p>Four normalizations (scaling of row and column scores before plotting) "
-"are avalaible :</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Row an columns scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
-"square root of eigenvalues. </li>\n"
-"<li><strong>Row Principal:</strong> Only row scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Column Principal:</strong> Only column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Standard:</strong> The raw coordinates without "
-"normalization.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
-msgstr ""
-"<p>Αυτό το μονάδα υπολογίζει <strong>Ανάλυση Αντιστοιχίας (CA)</strong> για "
-"δύο κατηγορικές μεταβλητές. Οι υπολογισμοί βασίζονται στο <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> πακέτο από F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Τα δεδομένα possono να ζυγιστούν χρησιμοποιώντας το εσωτερικό σύστημα "
-"βαρύτητας του jamovi ή χρησιμοποιώντας την μεταβλητή \"Μετρήσεις\".</p>\n"
-"<p>Οι <strong>Συμπληρωματικοί αριθμοί γραμμής ή στήλης</strong> μπορούν να "
-"εισαχθούν ως λίστες ακέραιων: 1,3,6</p>\n"
-"<p>Διαθέσιμες είναι τέσσερις κανονικοποιήσεις (κλίμακα βαθμολογίας σειράς "
-"και στήλης πριν από την απεικόνιση) :</p>\n"
-"<ul>\n"
-"<li><strong>Κύρια:</strong> Οι βαθμολογίες σειράς και στήλης κλιμακώνονται "
-"από τις ιδιοτιμές.</li>\n"
-"<li><strong>Συμμετρική:</strong> Οι βαθμολογίες σειράς και στήλης "
-"κλιμακώνονται από την τετραγωνική ρίζα των ιδιοτιμών. </li>\n"
-"<li><strong>Κύρια σειρά:</strong> Μόνο οι βαθμολογίες σειράς κλιμακώνονται "
-"από τις ιδιοτιμές.</li>\n"
-"<li><strong>Κύρια στήλη:</strong> Μόνο οι βαθμολογίες στήλης κλιμακώνονται "
-"από τις ιδιοτιμές.</li>\n"
-"<li><strong>Τυπική:</strong> Οι ακατέργαστες συντεταγμένες χωρίς "
-"κανονικοποίηση.</li>\n"
-"</ul>\n"
-"<p>Ένα δείγμα αρχείου περιλαμβάνεται στο Άνοιγμα > Βιβλιοθήκη Δεδομένων > "
-"vijPlots > Smoking</p>"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Likert Plot requires ordinal (or numeric) variables"
-msgstr "Το γράφημα Likert απαιτεί ταξινομημένες (ή αριθμητικές) μεταβλητές"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Median and mean require numeric variables"
-msgstr "Το μέσο και η μέση τιμή απαιτούν αριθμητικές μεταβλητές"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Comparison tests require numeric variables"
-msgstr "Οι tests σύγκρισης απαιτούν αριθμητικές μεταβλητές"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Cannot convert text variables to integers"
-msgstr "Δεν είναι δυνατό να μετατραπούν οι μεταβλητές κειμένου σε ακέραιους αριθμούς"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Cannot tidy up text variables"
-msgstr "Αδυναμία διόρθωσης των μεταβλητών κειμένου"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Comparison tests cannot be computed with empty (N=0) groups"
-msgstr "Οι δοκιμές σύγκρισης δεν μπορούν να υπολογιστούν με κενές (N=0) ομάδες"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid ""
-"<h3>Data & Sorting</h3>\n"
-"<ul>\n"
-"<li>Likert variables must be of ordinal measure-type. (Continuous "
-"measure-type works as well.)</li>\n"
-"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
-"must be of integer data-type.</li>\n"
-"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
-"order in table and graph (when some variables miss some levels).</li>\n"
-"<li><strong>Convert variables to integer:</strong> when checked, the level "
-"labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
-"</ul>\n"
-"<h3>Comparison Tests</h3>\n"
-"<p>When using a group variable, several tests are available:</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
-"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
-"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
-"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
-"</ul>\n"
-"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
-"p-values are already adjusted (groupwise); no other adjustment is "
-"possible.</p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
-msgstr ""
-"<h3>Δεδομένα & Ταξινόμηση</h3>\n"
-"<ul>\n"
-"<li>Οι μεταβλητές Likert πρέπει να είναι του τύπου ordinal measure-type. (Ο "
-"συνεχής measure-type λειτουργεί επίσης.)</li>\n"
-"<li>Εάν σκοπεύετε να υπολογίσετε τον μέσο/μεσό/τυπική απόκλιση ή να "
-"χρησιμοποιήσετε tests σύγκρισης, πρέπει να είναι του τύπου integer "
-"data-type.</li>\n"
-"<li><strong>Ευθυγράμμιση επιπέδων:</strong> όταν είναι ενεργοποιημένο, "
-"προσπαθεί να διορθώσει τη σειρά των ετικετών στα πίνακα και γραφήματα (όταν "
-"κάποιες μεταβλητές λείπουν κάποια επίπεδα).</li>\n"
-"<li><strong>Μετατροπή μεταβλητών σε ακέραιους:</strong> όταν είναι "
-"ενεργοποιημένο, οι ετικέτες των επιπέδων αγνοούνται και χρησιμοποιούνται "
-"μόνο οι ακέραιες τιμές.</li>\n"
-"<li><strong>Ταξινόμηση μεταβλητών με βάση το μέσο:</strong> διατάσσει τη "
-"λίστα των μεταβλητών Likert με βάση το μέσο.</li>\n"
-"</ul>\n"
-"<h3>Tests Σύγκρισης</h3>\n"
-"<p>Όταν χρησιμοποιείται μια μεταβλητή ομάδας, υπάρχουν διαθέσιμα διάφορα "
-"tests:</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U:</strong> σύγκριση δύο ομάδων</li>\n"
-"<li><strong>Kruskal-Wallis:</strong> σύγκριση n ομάδων</li>\n"
-"<li><strong>Tests Post Hoc:</strong> Dunn, Conover και "
-"Dwass-Steel-Critchlow-Fligner (DSCF) tests σύγκρισης ζευγαριών.</li>\n"
-"</ul>\n"
-"<p>Οι τιμές p μπορούν να điều chỉnhούν <strong>ομαδικά</strong> (για κάθε "
-"ερώτηση) για tests post hoc ή <strong>ολικά</strong> (ομαδικά και "
-"ερωτηματικά) για MannWithney U, Kruskal-Wallis και tests post hoc. Οι τιμές "
-"p DSCF είναι ήδη điều chỉnhμένες (ομαδικά); δεν είναι δυνατή keine άλλη "
-"διόρθωση.</p>\n"
-"<p>Ένα δείγμα αρχείου περιλαμβάνεται στο Open > Data Library > vijPlots > "
-"Likert</p>"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Mean of {var}"
-msgstr "Μέσο του {var}"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Median of {var}"
-msgstr "Μέσο του {var}"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Minimum of {var}"
-msgstr "Ελάχιστο {var}"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Maximum of {var}"
-msgstr "Μέγιστο του {var}"
-
-#: R/mrcrosstabs.b.R
-#, fuzzy
-msgid "Crosstab (% of cases)"
-msgstr "Πίνακας συσχέτισης (% των περιπτώσεων)"
-
-#: R/mrcrosstabs.b.R
-#, fuzzy
-msgid "Crosstab (% of responses)"
-msgstr "Διπλό πίνακας (% των απαντήσεων)"
-
-#: R/mrcrosstabs.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes two-way frequencies for multiple response "
-"questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>Αυτό το μοντέλο υπολογίζει τις συχνότητες για πολλαπλές απαντήσεις "
-"ερωτημάτων, επίσης γνωστές ως \"Επιλέξτε Όλα τα Ισχύοντα\" (CATA) "
-"ερωτήσεις.</p>\n"
-"<p>Τα ερωτήματα μπορεί να κωδικοποιηθούν ως:</p>\n"
-"<ul>\n"
-"<li>πολλές <strong>dummy (ή δείκτες) μεταβλητές</strong> χρησιμοποιώντας "
-"0/1, 1/2, Y/N για κάθε πιθανή απάντηση;</li>\n"
-"<li>μια <strong>πολυτιμική μεταβλητή</strong> που περιέχει τις επιλεγμένες "
-"απαντήσεις,分割μένες από ένα σύμβολο (συνήθως \",\" ή \";\").</li>\n"
-"</ul>\n"
-"<p>Ένα δείγμα αρχείου περιλαμβάνεται στο Άνοιγμα > Βιβλιοθήκη Δεδομένων > "
-"vijPlots > Πιστωτικές Κάρτες</p>"
-
-#: R/mrfrequencies.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes frequencies for multiple response questions, also "
-"known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>Αυτό το μοντέλο υπολογίζει τις συχνότητες για πολλαπλές απαντήσεις "
-"ερωτημάτων, επίσης γνωστές ως \"Επιλέξτε Όλα τα Ισχύοντα\" (CATA) "
-"ερωτήσεις.</p>\n"
-"<p>Τα ερωτήματα μπορεί να κωδικοποιηθούν ως:</p>\n"
-"<ul>\n"
-"<li>πολλές <strong>dummy (ή δείκτες) μεταβλητές</strong> χρησιμοποιώντας "
-"0/1, 1/2, Y/N για κάθε πιθανή απάντηση;</li>\n"
-"<li>μια <strong>πολυτιμική μεταβλητή</strong> που περιέχει τις επιλεγμένες "
-"απαντήσεις,分割μένες από ένα σύμβολο (συνήθως \",\" ή \";\").</li>\n"
-"</ul>\n"
-"<p>Ένα δείγμα αρχείου περιλαμβάνεται στο Άνοιγμα > Βιβλιοθήκη Δεδομένων > "
-"vijPlots > Πιστωτικές Κάρτες</p>"
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-#, fuzzy
-msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
-msgstr ""
-"Οι άξονες X και Y δεν μπορούν να είναι μεγαλύτεροι από τον αριθμό των "
-"διαστάσεων."
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-#, fuzzy
-msgid "X-Axis and Y-Axis cannot be equal."
-msgstr "Οι άξονες X και Y δεν μπορούν να είναι ίσοι."
-
-#: R/multcorresp.b.R
-#, fuzzy
-msgid "MCA Principal Coordinates"
-msgstr "Κύριες συντεταγμένες MCA"
-
-#: R/multcorresp.b.R
-#, fuzzy
-msgid "MCA Standard Coordinates"
-msgstr "Τυποποιημένες συντεταγμένες MCA"
-
-#: R/multcorresp.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes <strong>Multiple Correspondence Analysis "
-"(MCA)</strong> for several categorical variables. Computations are based on "
-"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Both classic methods are available:</p>\n"
-"<ul>\n"
-"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
-"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues "
-"are the squares of those of the indicator matrix method. </li>\n"
-"</ul>\n"
-"<p>Both methods give the same <em>standard</em> coordinates (but different "
-"<em>principal</em> coordinates).</p>\n"
-"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
-"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
-"(and inertia) of categories and observations are computed from the original "
-"eigenvalues of the Burt matrix.</p>\n"
-"<p>The <strong>Normalization</strong> options specify how the coordinates "
-"are scaled (by eigenvalues):</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Both category and observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Category principal:</strong> Only category coordinates are "
-"scaled.</li>\n"
-"<li><strong>Observation principal:</strong> Only observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Standard:</strong> Both category and observation coordinates "
-"are standard.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
-msgstr ""
-"<p>Αυτό το μονάδα υπολογίζει <strong>Πολυπλή Ανάλυση Αντιστοιχίας "
-"(MCA)</strong> για πολλές κατηγορικές μεταβλητές. Οι υπολογισμοί βασίζονται "
-"στο <a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> πακέτο από F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Διαθέσιμες είναι και οι δύο κλασικές μεθόδοι:</p>\n"
-"<ul>\n"
-"<li><strong>Ματρίца δεικτών:</strong> CA της ματρίτσας δεικτών</li>\n"
-"<li><strong>Ματρίца Burt:</strong> CA της ματρίτσας Burt. Οι ιδιοτιμές "
-"είναι τα τετράγωνα των ιδιοτιμών της μεθόδου ματρίτσας δεικτών. </li>\n"
-"</ul>\n"
-"<p>Και οι δύο μεθόδοι δίνουν τις ίδιες <em>τυπικές</em> συντεταγμένες (αλλά "
-"διαφορετικές <em>κύριες</em> συντεταγμένες).</p>\n"
-"<p>Όταν επιλεγεί, <strong>διορθώσεις Benzecri και Greenacre</strong> "
-"εφαρμόζονται μόνο στις ιδιοτιμές (<strong>Πίνακας Σύνοψης</strong>). Οι "
-"συντεταγμένες (και η αδράνεια) των κατηγοριών και των παρατηρήσεων "
-"υπολογίζονται από τις αρχικές ιδιοτιμές της ματρίτσας Burt.</p>\n"
-"<p>Οι <strong>Επιλογές κανονικοποίησης</strong> ορίζουν πώς οι "
-"συντεταγμένες κλιμακώνονται (από τις ιδιοτιμές):</p>\n"
-"<ul>\n"
-"<li><strong>Κύρια:</strong> Και οι συντεταγμένες κατηγορίας και οι "
-"συντεταγμένες παρατήρησης κλιμακώνονται.</li>\n"
-"<li><strong>Κύρια κατηγορία:</strong> Μόνο οι συντεταγμένες κατηγορίας "
-"κλιμακώνονται.</li>\n"
-"<li><strong>Κύρια παρατήρηση:</strong> Μόνο οι συντεταγμένες παρατήρησης "
-"κλιμακώνονται.</li>\n"
-"<li><strong>Τυπική:</strong> Και οι συντεταγμένες κατηγορίας και οι "
-"συντεταγμένες παρατήρησης είναι τυπικές.</li>\n"
-"</ul>\n"
-"<p>Ένα δείγμα αρχείου περιλαμβάνεται στο Άνοιγμα > Βιβλιοθήκη Δεδομένων > "
-"vijPlots > Cars</p>"
-
-#: R/piechart.b.R
-#, fuzzy
-msgid "Pie charts are for educational use only. Please do not use Pie charts!"
-msgstr ""
-"Τα γράφηματα πίτας είναι μόνο για εκπαιδευτική χρήση. Παρακαλώ μην "
-"χρησιμοποιείτε γράφηματα πίτας!"
-
-#: R/principal.b.R
-#, fuzzy
-msgid "The number of dimensions cannot be greater than the number of variables."
-msgstr ""
-"Ο αριθμός των διαστάσεων δεν μπορεί να είναι μεγαλύτερος από τον αριθμό των "
-"μεταβλητών."
-
-#: R/principal.b.R
-#, fuzzy
-msgid "PCA Principal Coordinates"
-msgstr "Πρωτεύουσες Συντεταγμένες PCA"
-
-#: R/principal.b.R
-#, fuzzy
-msgid "PCA Standard Coordinates"
-msgstr "Τυποποιημένες συντεταγμένες PCA"
-
-#: R/principal.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
-"for several continuous variables. Computations are based on "
-"<tt>stats::prcomp</tt> function.</p>\n"
-"<p>Although rotated components are not principal components, they are "
-"widely used. Only orthogonal rotations are available (from GPArotation "
-"package).</p>\n"
-"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
-"principal (scaled by the squareroot of eigenvalues).</p>\n"
-"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
-"eigenvalues) while loadings are standard.</li>\n"
-"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
-"are standard. </li>\n"
-"</ul>\n"
-"<p><strong>Advanced options</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Standardize loadings:</strong> loadings are normalized with "
-"sums of squared equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Standardize scores:</strong> scores are normalized with "
-"variances equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
-"applied to eigenvectors (standard loadings) instead of principal loadings "
-"(STATA way).</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
-msgstr ""
-"<p>Αυτό το module υπολογίζει <strong>Πρωτεύουσα Ανάλυση Συστατικών "
-"(PCA)</strong> για πολλές συνεχείς μεταβλητές. Οι υπολογισμοί βασίζονται "
-"στη συνάρτηση <tt>stats::prcomp</tt>.</p>\n"
-"<p>Хотя οι περιστραμμένοι συστατικοί δεν είναι πρωτεύοντες συστατικοί, "
-"χρησιμοποιούνται ευρέως. Διατίθενται μόνο ορθογώνιες περιστροφές (από το "
-"πακέτο GPArotation).</p>\n"
-"<p>Οι φορτώσεις (συντεταγμένες μεταβλητών) και οι βαθμοί (συντεταγμένες "
-"παρατηρήσεων) είναι πρωτεύοντες (κλιμακωτοί από την τετραγωνική ρίζα των "
-"ιδιοτιμών).</p>\n"
-"<p>Η διπλή προβολή ακολουθεί την \"Διπλή Προβολή στην Πράξη\" (Michael "
-"Greenacre, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Διπλή προβολή:</strong> Οι βαθμοί είναι πρωτεύοντες (κλιμακωτοί "
-"από τις ιδιοτιμές) ενώ οι φορτώσεις είναι τυποποιημένες.</li>\n"
-"<li><strong>Διπλή προβολή συσχετίσεων:</strong> Οι φορτώσεις είναι "
-"πρωτεύοντες ενώ οι βαθμοί είναι τυποποιημένοι.</li>\n"
-"</ul>\n"
-"<p><strong>Προηγμένα επιλογές:</strong></p>\n"
-"<ul>\n"
-"<li><strong>Τυποποίηση φορτίσεων:</strong> οι φορτώσεις είναι "
-"κανονικοποιημένες με άθροισμα των τετραγώνων ίσο με 1 (αντί για "
-"ιδιοτιμές)</li>\n"
-"<li><strong>Τυποποίηση βαθμών:</strong> οι βαθμοί είναι κανονικοποιημένοι "
-"με διασπορά ίση με 1 (αντί για ιδιοτιμές)</li>\n"
-"<li><strong>Περιστροφή ιδιοδιανυσμάτων:</strong> η περιστροφή (varimax, "
-"κ.λπ.) εφαρμόζεται στα ιδιοδιανύσματα (τυποποιημένες φορτώσεις) αντί για "
-"τις πρωτεύουσες φορτώσεις (τρόπος STATA).</li>\n"
-"</ul>\n"
-"<p>Ένα δείγμα αρχείου περιλαμβάνεται στο Open > Data Library > vijPlots > "
-"Iris</p>"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Natural Log Tranform requires positive (>0) data."
-msgstr "Η μεταφορά φυσικού λογαρίθμου απαιτεί θετικά (>0) δεδομένα."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "{distrib} distribution requires positive (>0) data."
-msgstr "Η κατανομή {distrib} απαιτεί θετικά (>0) δεδομένα."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Exponential distribution requires non-negative (≥0) data."
-msgstr "Η εκθετική κατανομή απαιτεί μη αρνητικά (≥0) δεδομένα."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Beta distribution requires data between 0 and 1."
-msgstr "Η κατανομή Beta απαιτεί δεδομένα μεταξύ 0 και 1."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Unable to estimate the distribution parameters."
-msgstr "Αδυναμία εκτίμησης των παραμέτρων κατανομής."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Wrong parameter values."
-msgstr "Λάθος τιμές παραμέτρων."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "F"
-msgstr "F"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid ""
-"<p>This module uses <a href = "
-"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
-"package<a/> by Alexandre Almeida, Adam Loy and Heike Hofmann. In-depth "
-"information can be found in the package documentation on CRAN site.</p>\n"
-"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
-"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
-"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
-"identity line.</p>\n"
-"<p><strong>Confidence band:</strong> Draws a confidence band around the "
-"reference line. qqplotr package provides several methods to compute the "
-"confidence band:</p>\n"
-"<ul>\n"
-"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
-"bands based on Normal confidence intervals;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
-"based on a parametric bootstrap;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
-"Kolmogorov-Smirnov test;</li>\n"
-"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
-"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
-"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
-"simultaneous bands using the equal local levels.</li>\n"
-"</ul>\n"
-"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
-"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
-"according to the reference line. This procedure may help reducing visual "
-"bias caused by the orthogonal distances from the points to the reference "
-"line.</p>\n"
-"<p><strong>Parameter values:</strong> The distribution parameters can be "
-"estimated from data using:</p>\n"
-"<ul>\n"
-"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
-"should work with all distributions but \"t\" and \"uniform\";</li>\n"
-"<li><strong>Method of Moments</strong> for moment based parameters : it "
-"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
-"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
-"</ul>\n"
-"<p>or entered by user:</p>\n"
-"<ul>\n"
-"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
-"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
-"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
-"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
-"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
-"(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
-msgstr ""
-"<p>Αυτό το μοντέλο χρησιμοποιεί το <a href = "
-"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">πακέτο "
-"qqplotr R</a> από τον Alexandre Almeida, Adam Loy και Heike Hofmann. "
-"Αναλυτικές πληροφορίες μπορούν να βρεθούν στη τεκμηρίωση του πακέτου στον "
-"ιστότοπο του CRAN.</p>\n"
-"<p><strong>Γραμμή αναφοράς:</strong> Σχεδιάζει είτε τη <em>γραμμή "
-"ταυτότητας</em> (y = x) είτε τη συνήθως χρησιμοποιούμενη <em>Γραμμή "
-"Q-Q</em> που διασχίζει δύο quantiles δεδομένων (Q<sub>0.25</sub> και "
-"Q<sub>0.75</sub>). Το γράφημα P-P υποστηρίζει μόνο τη γραμμή "
-"ταυτότητας.</p>\n"
-"<p><strong>Ζώνη εμπιστοσύνης:</strong> Σχεδιάζει μια ζώνη εμπιστοσύνης γύρω "
-"από τη γραμμή αναφοράς. Το πακέτο qqplotr παρέχει πολλές μεθόδους για τον "
-"υπολογισμό της ζώνης εμπιστοσύνης:</p>\n"
-"<ul>\n"
-"<li><strong><em>Σημείο προς σημείο</em></strong> κατασκευάζει ζώνες "
-"εμπιστοσύνης σημείο προς σημείο με βάση τα διαστήματα εμπιστοσύνης του "
-"Κανονικού;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> δημιουργεί ζώνες εμπιστοσύνης "
-"σημείο προς σημείο με βάση μια παραμετρική bootstrap;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> ζώνη βασίζεται στο τεστ "
-"Kolmogorov-Smirnov;</li>\n"
-"<li><strong><em>Αισθητική στα άκρα</em></strong> κατασκευάζει αισθητικές "
-"ζώνες εμπιστοσύνης, αλλά έχει εφαρμοστεί μόνο για γραφήματα Q-Q "
-"Κανονικού;</li>\n"
-"<li><strong><em>Ισότιμες τοπικές στάθμες (ELL)</em></strong> κατασκευάζει "
-"συγχρονισμένες ζώνες χρησιμοποιώντας τις ισότιμες τοπικές στάθμες.</li>\n"
-"</ul>\n"
-"<p>Τα γραφήματα P-P υποστηρίζουν μόνο τις μεθόδους \"ELL\" και "
-"\"Bootstrap\".</p>\n"
-"<p><strong>Γραφήματα χωρίς τάση:</strong> Τα αντικείμενα <em>απαλλαγμένα "
-"από τάση</em> σύμφωνα με τη γραμμή αναφοράς. Αυτή η διαδικασία μπορεί να "
-"βοηθήσει στη μείωση της οπτικής προκατάληψης που προκαλείται από τις "
-"ορθογώνιες αποστάσεις από τα σημεία στη γραμμή αναφοράς.</p>\n"
-"<p><strong>Τιμές παραμέτρων:</strong> Οι παράμετροι κατανομής μπορούν να "
-"εκτιμηθούν από τα δεδομένα χρησιμοποιώντας:</p>\n"
-"<ul>\n"
-"<li><strong>Μέθοδος Μέγιστης Πιθανοότητας</strong> (χρησιμοποιώντας το "
-"πακέτο MASS): πρέπει να λειτουργήσει με όλες τις κατανομές εκτός από \"t\" "
-"και \"ομοιόμορφη\";</li>\n"
-"<li><strong>Μέθοδος Ροπών</strong> για παράμετρους που βασίζονται σε ροπές: "
-"πρέπει να λειτουργήσει με τις κατανομές \"κανονική\", \"log-κανονική\", "
-"\"Βήτα\", \"Εξponential\", \"Γάμμα\", \"Λογιστική\" και "
-"\"Ομοιόμορφη\";</li>\n"
-"</ul>\n"
-"<p>ή εισαχθεί από τον χρήστη:</p>\n"
-"<ul>\n"
-"<li><strong>Παράμετρος 1:</strong> μέσο (Κανονική), meanlog (Log-κανονική), "
-"shape1 (Βήτα), θέση (Cauchy, Λογιστική), df (Χι-τετράγωνο, Φοιτητής), df1 "
-"(F), ρυθμός (Εξponential), σχήμα (Γάμμα, Weibull) και ελάχιστο "
-"(Ομοιόμορφη);</li>\n"
-"<li><strong>Παράμετρος 2:</strong> τυπική απόκλιση (κανονική), sdlog "
-"(Log-κανονική), shape2 (Βήτα), κλίμακα (Cauchy, Λογιστική), df2 (F), ρυθμός "
-"(Γάμμα, Weibull) και μέγιστο (Ομοιόμορφη).</li>\n"
-"</ul>\n"
-"</p>"
-
-#: areachart/options/ignoreNA.title
-#: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
-#, fuzzy
-msgid "Ignore missing values"
-msgstr "Παράλεψη λείπων τιμών"
-
-#: areachart/options/yTicks.title
-#: barplot/options/xTicks.title
-#: barplot/options/yTicks.title
-#: boxplot/options/xTicks.title
-#: boxplot/options/yTicks.title
-#: histogram/options/xTicks.title
-#: histogram/options/yTicks.title
-#: linechart/options/yTicks.title
-#: lollipop/options/xTicks.title
-#: lollipop/options/yTicks.title
-#: mrcrosstabs/options/xTicks.title
-#: mrcrosstabs/options/yTicks.title
-#: mrfrequencies/options/xTicks.title
-#: mrfrequencies/options/yTicks.title
-#: qqplot/options/xTicks.title
-#: qqplot/options/yTicks.title
-#: raincloud/options/xTicks.title
-#: raincloud/options/yTicks.title
-#: scatterplot/options/xTicks.title
-#: scatterplot/options/yTicks.title
-#, fuzzy
-msgid "Tick count"
-msgstr "Αριθμός τιμών"
-
-#: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
-#: mrcrosstabs/options/reverseStack.title
-#, fuzzy
-msgid "Reverse stacking order"
-msgstr "Αντιστροφή σειράς στοίβας"
-
-#: barplot/options/barType/dodge.title
-#: mrcrosstabs/options/bartype/dodge.title
-#, fuzzy
-msgid "Grouped (tight)"
-msgstr "Ομαδοποιημένα (σφιχτά)"
-
-#: barplot/ui[4].label
-#: boxplot/ui[3].label
-#: piechart/ui[4].label
-#, fuzzy
-msgid "Text Size & Facets"
-msgstr "Μέγεθος κειμένου & Πρόσωπα"
-
-#: boxplot/ui[2][0][1][0].label
-#, fuzzy
-msgid "Box Elements"
-msgstr "Στοιχεία κουτιού"
-
-#: corresp/options/normalization/symmetric.title
-#, fuzzy
-msgid "Symmetric"
-msgstr "Συμμετρική"
-
-#: corresp/ui[6].label
-#, fuzzy
-msgid "Text Size & Colors"
-msgstr "Μέγεθος Κειμένου & Χρώματα"
-
-#: likertplot/options/ignoreNA.title
-#, fuzzy
-msgid "Ignore missing groups"
-msgstr "Παράλεψη λείπων ομάδων"
-
-#: linechart/ui[1][0][1].label
-#: principal/ui[4].label
-#, fuzzy
-msgid "Sizes & Colors"
-msgstr "Μέγεθος & Χρώματα"
-
-#: mrcrosstabs/options/emptyAsNA.title
-#: mrfrequencies/options/emptyAsNA.title
-#, fuzzy
-msgid "Treat empty values as missing"
-msgstr "Να αντιμετωπίζονται οι κενές τιμές ως λείπουσες"
-
-#: mrcrosstabs/options/computedValues/responses.title
-#: mrfrequencies/options/showResponses.title
-#: mrfrequencies/options/yaxis/responses.title
-#, fuzzy
-msgid "% of responses"
-msgstr "% των απαντήσεων"
-
-#: mrcrosstabs/options/computedValues/cases.title
-#: mrfrequencies/options/showCases.title
-#: mrfrequencies/options/yaxis/cases.title
-#, fuzzy
-msgid "% of cases"
-msgstr "% των περιπτώσεων"
-
-#: mrcrosstabs/options/computedValues/options.title
-#, fuzzy
-msgid "% by row"
-msgstr "% ανά σειρά"
-
-#: principal/ui[4][0][0][1].label
-#: scatterplot/ui[2][0][0][0].label
-#, fuzzy
-msgid "Element Sizes"
-msgstr "Μέγεθος στοιχείων"
-
-#: raincloud/options/groupOne.title
-#: raincloud/ui[0][1].label
-#, fuzzy
-msgid "Group (Side-by-side)"
-msgstr "Ομάδα (Παράπλευρη)"
-
-#: scatterplot/ui[2].label
-#, fuzzy
-msgid "Element Sizes & Facets"
-msgstr "Μέγεθος Στοιχείων & Πρόσωπα"
-
-#: histogram/options/binBoundary.title
-#, fuzzy
-msgctxt "boundary"
-msgid "Position"
-msgstr "Θέση"
-
-#: areachart/options/displayFormat/%b.title
-#: linechart/options/displayFormat/%b.title
-#, fuzzy
-msgctxt "menu"
-msgid "Oct"
-msgstr "Οκτ"
-
-#: areachart/options/displayFormat/%B.title
-#: linechart/options/displayFormat/%B.title
-#, fuzzy
-msgctxt "menu"
-msgid "October"
-msgstr "Οκτώβριος"
-
-#: R/qqplot.b.R
-#: qqplot/options/distrib/norm.title
-#, fuzzy
-msgctxt "distribution"
-msgid "Normal"
-msgstr "Κανονικό"

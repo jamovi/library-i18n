@@ -13,6 +13,11 @@ msgstr ""
 "X-Generator: Weblate 5.16.1-dev\n"
 
 #: R/qqplot.b.R
+#, fuzzy
+msgid "{distrib} distribution requires positive (>0) data."
+msgstr "{distrib} 등록 수는 오험 (>0) 어그래"
+
+#: R/qqplot.b.R
 msgid "{distribStr} {typeStr} Plot of {varStr}"
 msgstr "{distribStr} {typeStr} 구성의"
 
@@ -31,6 +36,12 @@ msgstr "{rotation} 백튀 을 지뮥드 어디르드"
 #: R/principal.b.R
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "{rotation} 백튀 을 지뮥드 어디르드는 어디르드."
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+#, fuzzy
+msgid "{var} doesn't have a valid date format."
+msgstr "{var}에는 유효한 날짜 형식이 없습니다."
 
 #: barplot/options/facetNumber.title
 #: boxplot/options/facetNumber.title
@@ -54,6 +65,11 @@ msgstr "# 의 행들/열들"
 msgid "% Accuracy"
 msgstr "% 정확합다"
 
+#: mrcrosstabs/options/computedValues/options.title
+#, fuzzy
+msgid "% by row"
+msgstr "어는 원 위"
+
 #: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
 msgid "% Inertia"
@@ -69,6 +85,13 @@ msgstr "% 모드"
 msgid "% of Cases"
 msgstr "% 의경우들"
 
+#: mrcrosstabs/options/computedValues/cases.title
+#: mrfrequencies/options/showCases.title
+#: mrfrequencies/options/yaxis/cases.title
+#, fuzzy
+msgid "% of cases"
+msgstr "사례의 %"
+
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -81,6 +104,13 @@ msgstr "% 의관성들"
 msgid "% of Responses"
 msgstr "응답의 %"
 
+#: mrcrosstabs/options/computedValues/responses.title
+#: mrfrequencies/options/showResponses.title
+#: mrfrequencies/options/yaxis/responses.title
+#, fuzzy
+msgid "% of responses"
+msgstr "어는 사원"
+
 #: principal/results/summaryTable.columns.title
 msgid "% of Variance"
 msgstr "분산의 백분율"
@@ -88,6 +118,344 @@ msgstr "분산의 백분율"
 #: R/mrcrosstabs.b.R
 msgid "% within"
 msgstr "% 원루"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid ""
+"<h3>Data & Sorting</h3>\n"
+"<ul>\n"
+"<li>Likert variables must be of ordinal measure-type. (Continuous "
+"measure-type works as well.)</li>\n"
+"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
+"must be of integer data-type.</li>\n"
+"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
+"order in table and graph (when some variables miss some levels).</li>\n"
+"<li><strong>Convert variables to integer:</strong> when checked, the level "
+"labels are ignored and only integer values are used.</li>\n"
+"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
+"variables by median.</li>\n"
+"</ul>\n"
+"<h3>Comparison Tests</h3>\n"
+"<p>When using a group variable, several tests are available:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
+"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
+"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
+"</ul>\n"
+"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
+"question) for post hoc tests or <strong>overall</strong> (groupwise and "
+"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
+"p-values are already adjusted (groupwise); no other adjustment is "
+"possible.</p>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
+msgstr ""
+"<h3>파크 & 소녀</h3>\n"
+"<ul>\n"
+"<li>Likert 어는 오험 지 어그래 지 어그래 (Continuous 지 어그래 없습니다).<br>\n"
+"</li>\n"
+"<li>사원 정백 해당 사원 정백 해당 어그래 사원 정백 하는 어는 일반호 어그래 지 어그래 수는.<br>\n"
+"</li>\n"
+"<li><strong>지 어그래 지함:</strong> 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 지 어그래 지함 수 "
+"없음.<br>\n"
+"</li>\n"
+"<li><strong>어는 어그래 소녀:</strong> 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 지 어그래 지함 수 "
+"없음.<br>\n"
+"</li>\n"
+"<li><strong>어는 지 어그래 소녀:</strong> 어는 어그래 지 어그래 수는 어는 지 어그래 지 어그래 수는 없음.<br>\n"
+"</li>\n"
+"</ul>\n"
+"<h3>모드 소녀</h3>\n"
+"<p>사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는 어 사원 정백 해당 사원 "
+"정백 하는 어는 일반호 어그래 지 어그래 수는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는.<br>\n"
+"</p>\n"
+"<p>사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 "
+"어그래 수는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는 어 사원 정백 해당 사원 정백 하는 어는 일반호 "
+"어그래 지 어그래 수는 어 사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는 어 "
+"사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는 어 사원 정백 해당 사원 정백 "
+"하는 어 사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는 어 사원 정백 해당 사원 "
+"정백 하는 어 사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는.<br>\n"
+"</p>\n"
+"<p>이 어 사원 정백 하는 Open > Data Library > vijPlots > Likert</p>"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
+"two categorical variables. Computations are based on <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
+"using the \"Counts\" variable.</p>\n"
+"<p><strong>Supplementary row or column</strong> numbers may be entered as "
+"integer lists : 1,3,6</p>\n"
+"<p>Four normalizations (scaling of row and column scores before plotting) "
+"are avalaible :</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Row an columns scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
+"square root of eigenvalues. </li>\n"
+"<li><strong>Row Principal:</strong> Only row scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Column Principal:</strong> Only column scores are scaled by "
+"eigenvalues.</li>\n"
+"<li><strong>Standard:</strong> The raw coordinates without "
+"normalization.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
+msgstr ""
+"<p>이 모듈은 두 범주형 변수에 대한 <strong>상관성 분석(CA)</strong>을 계산합니다. 계산은 "
+"F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet이 만든 <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> 패키지에 기반합니다.</p>\n"
+"<p>데이터는 <em>jamovi</em> 내장 가중치 시스템 또는 \"개수\" 변수를 사용하여 가중될 수 있습니다.</p>\n"
+"<p><strong>보조 행 또는 열</strong> 번호는 정수 목록으로 입력할 수 있습니다: 1,3,6</p>\n"
+"<p>네 가지 정규화(플로팅 전 행 및 열 점수를 스케일링)가 사용할 수 있습니다.</p>\n"
+"<ul>\n"
+"<li><strong>주요:</strong> 행 및 열 점수는 고유값으로 스케일링됩니다.</li>\n"
+"<li><strong>대칭:</strong> 행 및 열 점수는 고유값의 제곱근으로 스케일링됩니다.</li>\n"
+"<li><strong>행 주요:</strong> 행 점수만 고유값으로 스케일링됩니다.</li>\n"
+"<li><strong>열 주요:</strong> 열 점수만 고유값으로 스케일링됩니다.</li>\n"
+"<li><strong>표준:</strong> 정규화 없이 원시 좌표입니다.</li>\n"
+"</ul>\n"
+"<p>샘플 파일은 열기 > 데이터 라이브러리 > vijPlots > 흡연에서 찾을 수 있습니다.</p>"
+
+#: R/multcorresp.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes <strong>Multiple Correspondence Analysis "
+"(MCA)</strong> for several categorical variables. Computations are based on "
+"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
+"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"<p>Both classic methods are available:</p>\n"
+"<ul>\n"
+"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
+"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues are "
+"the squares of those of the indicator matrix method. </li>\n"
+"</ul>\n"
+"<p>Both methods give the same <em>standard</em> coordinates (but different "
+"<em>principal</em> coordinates).</p>\n"
+"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
+"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
+"(and inertia) of categories and observations are computed from the original "
+"eigenvalues of the Burt matrix.</p>\n"
+"<p>The <strong>Normalization</strong> options specify how the coordinates "
+"are scaled (by eigenvalues):</p>\n"
+"<ul>\n"
+"<li><strong>Principal:</strong> Both category and observation coordinates "
+"are scaled.</li>\n"
+"<li><strong>Category principal:</strong> Only category coordinates are "
+"scaled.</li>\n"
+"<li><strong>Observation principal:</strong> Only observation coordinates are "
+"scaled.</li>\n"
+"<li><strong>Standard:</strong> Both category and observation coordinates are "
+"standard.</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
+msgstr ""
+"<p>이 모듈은 여러 범주형 변수에 대해 <strong>다중 상관성 분석 (MCA)</strong>을 계산합니다. 계산은 "
+"F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet에 의해 작성된 <a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> 패키지를 기반으로 합니다.</p>\n"
+"<p>클래식 방법은 두 가지 모두 사용할 수 있습니다:</p>\n"
+"<ul>\n"
+"<li><strong>지표 행렬:</strong> 지표 행렬의 CA</li>\n"
+"<li><strong>버트 행렬:</strong> 버트 행렬의 CA. 고유값은 지표 행렬 방법의 제곱입니다. </li>\n"
+"</ul>\n"
+"<p>두 방법은 동일한 <em>표준</em> 좌표(하지만 다른 <em>주성분</em> 좌표)를 제공합니다.</p>\n"
+"<p>선택된 경우 <strong>벤제크리 및 그린에이커 보정</strong>은 고유값에만 적용됩니다 (<strong>요약</strong> "
+"표). 범주 및 관측값의 좌표(및 관성)는 버트 행렬의 원래 고유값에서 계산됩니다.</p>\n"
+"<p><strong>정규화</strong> 옵션은 좌표가 어떻게 스케일링되는지(고유값으로) 지정합니다:</p>\n"
+"<ul>\n"
+"<li><strong>주성분:</strong> 범주 및 관측값 좌표가 모두 스케일링됩니다.</li>\n"
+"<li><strong>범주 주성분:</strong> 범주 좌표만 스케일링됩니다.</li>\n"
+"<li><strong>관측값 주성분:</strong> 관측값 좌표만 스케일링됩니다.</li>\n"
+"<li><strong>표준:</strong> 범주 및 관측값 좌표가 모두 표준입니다.</li>\n"
+"</ul>\n"
+"<p>샘플 파일은 열기 > 데이터 라이브러리 > vijPlots > 자동차에 포함되어 있습니다.</p>"
+
+#: R/principal.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
+"for several continuous variables. Computations are based on "
+"<tt>stats::prcomp</tt> function.</p>\n"
+"<p>Although rotated components are not principal components, they are widely "
+"used. Only orthogonal rotations are available (from GPArotation "
+"package).</p>\n"
+"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
+"principal (scaled by the squareroot of eigenvalues).</p>\n"
+"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
+"<ul>\n"
+"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
+"eigenvalues) while loadings are standard.</li>\n"
+"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
+"are standard. </li>\n"
+"</ul>\n"
+"<p><strong>Advanced options</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>Standardize loadings:</strong> loadings are normalized with sums "
+"of squared equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Standardize scores:</strong> scores are normalized with "
+"variances equal to 1 (instead of eigenvalues)</li>\n"
+"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
+"applied to eigenvectors (standard loadings) instead of principal loadings "
+"(STATA way).</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
+msgstr ""
+"<p>이 모듈은 여러 연속 변수에 대해 <strong>주성분 분석 (PCA)</strong>을 계산합니다. 계산은 "
+"<tt>stats::prcomp</tt> 함수를 기반으로 합니다.</p>\n"
+"<p>회전된 구성 요소는 주성분이 아니지만 널리 사용됩니다. 직교 회전만 사용할 수 있습니다(GPArotation 패키지에서).</p>\n"
+"<p>로딩(변수 좌표)과 스코어(관측 좌표)는 주성분(이진값의 제곱근으로 스케일링)입니다.</p>\n"
+"<p>바이플롯은 \"Biplots in Practice\"(Michael Greenacre, 2010)를 따릅니다:</p>\n"
+"<ul>\n"
+"<li><strong>형태 바이플롯:</strong> 스코어는 주성분(이진값으로 스케일링)이고 로딩은 표준입니다.</li>\n"
+"<li><strong>공분산 바이플롯:</strong> 로딩은 주성분이고 스코어는 표준입니다. </li>\n"
+"</ul>\n"
+"<p><strong>고급 옵션</strong>:</p>\n"
+"<ul>\n"
+"<li><strong>로딩 표준화:</strong> 로딩은 합제곱이 1(이진값 대신)으로 동일한 값으로 정규화됩니다</li>\n"
+"<li><strong>스코어 표준화:</strong> 스코어는 분산이 1(이진값 대신)으로 동일한 값으로 정규화됩니다</li>\n"
+"<li><strong>고유 벡터 회전:</strong> 회전(바리맥스 등)은 주성분 로딩(STATA 방식) 대신 표준 로딩(고유 벡터)에 "
+"적용됩니다.</li>\n"
+"</ul>\n"
+"<p>샘플 파일은 열기 > 데이터 라이브러리 > vijPlots > 아이리스에 포함되어 있습니다.</p>"
+
+#: R/mrfrequencies.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes frequencies for multiple response questions, also "
+"known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>이 모듈은 여러 응답 질문(즉, \"체크 모든 항목 적용\"(CATA) 질문)에 대한 빈도를 계산합니다.</p>\n"
+"<p>질문은 다음과 같이 코딩될 수 있습니다:</p>\n"
+"<ul>\n"
+"<li>각 가능한 답변에 대한 0/1, 1/2, Y/N을 사용하는 여러 <strong>더미(또는 지표) 변수</strong>;</li>\n"
+"<li>확인된 답변으로 구분된 기호(일반적으로 \",\" 또는 \";\")를 포함하는 단일 <strong>다중 값 "
+"변수</strong>.</li>\n"
+"</ul>\n"
+"<p>샘플 파일은 열기 > 데이터 라이브러리 > vijPlots > 신용 카드에 포함되어 있습니다.</p>"
+
+#: R/mrcrosstabs.b.R
+#, fuzzy
+msgid ""
+"<p>This module computes two-way frequencies for multiple response questions, "
+"also known as \"Check All That Apply\" (CATA) questions.</p>\n"
+"<p>Questions may be coded as:</p>\n"
+"<ul>\n"
+"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
+"Y/N for each possible answer;</li>\n"
+"<li>a single <strong>multi-valued variable</strong> containing the checked "
+"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
+"</ul>\n"
+"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
+"Cards</p>"
+msgstr ""
+"<p>을 테는 모드 소녀 해당 사원 정백하는 어는 신피론 정백 해당 사원 정백하는.</p>\n"
+"<p>사원는 해당 사원 정백 하는 어는 이 해당 사원 정백 해당 어그래를 사원 정백하는.</p>\n"
+"<p>사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 해당 어그래 사원 정백 하는.</p>\n"
+"<p>이 어 사원 정백 하는 Open > Data Library > vijPlots > Credit Cards</p>"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid ""
+"<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
+"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"Heike Hofmann. In-depth information can be found in the package "
+"documentation on CRAN site.</p>\n"
+"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
+"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
+"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
+"identity line.</p>\n"
+"<p><strong>Confidence band:</strong> Draws a confidence band around the "
+"reference line. qqplotr package provides several methods to compute the "
+"confidence band:</p>\n"
+"<ul>\n"
+"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
+"bands based on Normal confidence intervals;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
+"based on a parametric bootstrap;</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
+"Kolmogorov-Smirnov test;</li>\n"
+"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
+"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
+"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
+"simultaneous bands using the equal local levels.</li>\n"
+"</ul>\n"
+"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
+"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
+"according to the reference line. This procedure may help reducing visual "
+"bias caused by the orthogonal distances from the points to the reference "
+"line.</p>\n"
+"<p><strong>Parameter values:</strong> The distribution parameters can be "
+"estimated from data using:</p>\n"
+"<ul>\n"
+"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
+"should work with all distributions but \"t\" and \"uniform\";</li>\n"
+"<li><strong>Method of Moments</strong> for moment based parameters : it "
+"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
+"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
+"</ul>\n"
+"<p>or entered by user:</p>\n"
+"<ul>\n"
+"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
+"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
+"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
+"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
+"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
+"(Uniform).</li>\n"
+"</ul>\n"
+"</p>"
+msgstr ""
+"<p>이 모듈은 Alexandre Almeida, Adam Loy 및 Heike Hofmann이 만든 <a href = "
+"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
+"패키지<a/>를 사용합니다. 자세한 정보는 CRAN 사이트의 패키지 문서에서 찾을 수 있습니다.</p>\n"
+"<p><strong>기준선:</strong> 동일선(y = x) 또는 두 데이터 분위수(Q<sub>0.25</sub> 및 "
+"Q<sub>0.75</sub>)를 가로지르는 일반적으로 사용되는 Q-Q 선을 그립니다. P-P 플롯은 동일선만 지원합니다.</p>\n"
+"<p><strong>신뢰 구간:</strong> 기준선 주변에 신뢰 구간을 그립니다. qqplotr 패키지는 신뢰 구간을 계산하는 여러 "
+"방법을 제공합니다:</p>\n"
+"<ul>\n"
+"<li><strong><em>점별</em></strong>는 정상 신뢰 구간을 기반으로 점별 신뢰 구간을 구성합니다.</li>\n"
+"<li><strong><em>부트스트래핑</em></strong>은 매개변수 부트스트래핑을 기반으로 점별 신뢰 구간을 "
+"생성합니다.</li>\n"
+"<li><strong><em>콜모고로프-스미르노프</em></strong> 밴드는 콜모고로프-스미르노프 테스트를 기반으로 "
+"합니다.</li>\n"
+"<li><strong><em>꼬리 감도</em></strong>는 정상 Q-Q 플롯에 대해서만 구현된 꼬리 감도 신뢰 구간을 "
+"구성합니다.</li>\n"
+"<li><strong><em>동일 로컬 레벨(ELL)</em></strong>은 동일 로컬 레벨을 사용하여 동시 구간을 "
+"구성합니다.</li>\n"
+"</ul>\n"
+"<p>P-P 플롯은 \"ELL\" 및 \"부트스트래핑\" 방법만 지원합니다.</p>\n"
+"<p><strong>추세 제거 플롯:</strong> 개체는 기준선에 따라 <em>추세 제거</em>됩니다. 이 절차는 기준선에서 "
+"점까지의 직교 거리에 의한 시각적 편향을 줄이는 데 도움이 될 수 있습니다.</p>\n"
+"<p><strong>매개변수 값:</strong> 분포 매개변수는 다음을 사용하여 데이터에서 추정할 수 있습니다:</p>\n"
+"<ul>\n"
+"<li><strong>최대 가능도 방법</strong>(MASS 패키지 사용): \"t\" 및 \"일IFORM\" 분포를 제외한 모든 "
+"분포에서 작동해야 합니다.</li>\n"
+"<li><strong>모멘트 방법</strong>은 모멘트 기반 매개변수에 대해: \"정상\", \"로그-정상\", \"베타\", "
+"\"지수\", \"감마\", \"로지스틱\" 및 \"일IFORM\" 분포에서 작동해야 합니다.</li>\n"
+"</ul>\n"
+"<p>또는 사용자에 의해 입력될 수 있습니다:</p>\n"
+"<ul>\n"
+"<li><strong>매개변수 1:</strong> 평균(정상), meanlog(로그-정상), shape1(베타), 위치(코시, "
+"로지스틱), 자유도(카이제곱, 학생), df1(F), 비율(지수), shape(감마, 와이블) 및 최소(일IFORM)</li>\n"
+"<li><strong>매개변수 2:</strong> 표준편차(정상), sdlog(로그-정상), shape2(베타), 규모(코시, "
+"로지스틱), df2(F), 비율(감마, 와이블) 및 최대(일IFORM)</li>\n"
+"</ul>\n"
+"</p>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -379,6 +747,16 @@ msgstr "오후"
 msgid "Axes"
 msgstr "도끼들"
 
+#: R/corresp.b.R
+#, fuzzy
+msgid "Axis numbers cannot be equal."
+msgstr "위 수는 어는 지 어그래 수는 없음."
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
+msgstr "축 번호는 차원 수({nDim})보다 작거나 같아야 합니다."
+
 #: corresp/ui[7].label
 #: mrfrequencies/ui[5].label
 msgid "Axis Titles"
@@ -419,6 +797,11 @@ msgstr "Benzécri 바로잡음"
 #: qqplot/options/distrib/beta.title
 msgid "Beta"
 msgstr "임시부버전"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Beta distribution requires data between 0 and 1."
+msgstr "백해 등록 수는 0 백 1 지 어그래"
 
 #: likertplot/options/adjustMethod/BH.title
 msgid "BH"
@@ -687,6 +1070,16 @@ msgstr "국경"
 msgid "Bottom"
 msgstr "아래쪽"
 
+#: histogram/options/binBoundary.title
+msgctxt "boundary"
+msgid "Position"
+msgstr "종드"
+
+#: boxplot/ui[2][0][1][0].label
+#, fuzzy
+msgid "Box Elements"
+msgstr "박스 요소"
+
 #: package/analyses/boxplot.title
 #: package/analyses/boxplot.menuTitle
 #: boxplot/options.title
@@ -740,6 +1133,16 @@ msgstr "구성원들에 의함"
 #: likertplot/ui[4][0][1][0]/groupBy_variable.label
 msgid "By variable"
 msgstr "변수에의함"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Cannot convert text variables to integers"
+msgstr "텍스트 변수를 정수로 변환할 수 없습니다."
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Cannot tidy up text variables"
+msgstr "파크 어그래 지함 수 없음."
 
 #: areachart/ui[4][2].label
 #: barplot/ui[7][2].label
@@ -982,9 +1385,19 @@ msgstr "열구성"
 msgid "Column plot"
 msgstr "총대 신레드"
 
+#: R/corresp.b.R
+#, fuzzy
+msgid "Column Points for {cols}"
+msgstr "위 수는 지 어그래 {cols}"
+
 #: corresp/options/normalization/colprincipal.title
 msgid "Column principal"
 msgstr "열 원칙적"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Column principal normalization"
+msgstr "위 정백 느료"
 
 #: corresp/results/colProfiles.title
 msgid "Column Profiles"
@@ -1008,6 +1421,16 @@ msgstr "열들(구성원들)"
 #: likertplot/results/comp.title
 msgid "Comparison Tests"
 msgstr "비교 시험들"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Comparison tests cannot be computed with empty (N=0) groups"
+msgstr "비교 테스트는 빈 그룹(N=0)으로 계산할 수 없습니다"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Comparison tests require numeric variables"
+msgstr "모드 소녀를 정해 수는 일반호 어그래"
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
@@ -1149,6 +1572,16 @@ msgstr "총대드"
 #: R/mrcrosstabs.b.R
 msgid "Crosstab (% by row)"
 msgstr "거쳐가는 창 (% 의해 행)"
+
+#: R/mrcrosstabs.b.R
+#, fuzzy
+msgid "Crosstab (% of cases)"
+msgstr "교차 표(%의 사례)"
+
+#: R/mrcrosstabs.b.R
+#, fuzzy
+msgid "Crosstab (% of responses)"
+msgstr "교차 표(%의 응답)"
 
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
@@ -1326,6 +1759,13 @@ msgstr "보이기 형식"
 msgid "Distribution"
 msgstr "배포"
 
+#: R/qqplot.b.R
+#: qqplot/options/distrib/norm.title
+#, fuzzy
+msgctxt "distribution"
+msgid "Normal"
+msgstr "정상"
+
 #: piechart/options/donut.title
 msgid "Donut chart"
 msgstr "구멍뚫린빵 목록"
@@ -1385,6 +1825,17 @@ msgstr "아이젠값"
 msgid "Eigenvalues"
 msgstr "아이젠값들"
 
+#: principal/ui[4][0][0][1].label
+#: scatterplot/ui[2][0][0][0].label
+#, fuzzy
+msgid "Element Sizes"
+msgstr "이름 수는"
+
+#: scatterplot/ui[2].label
+#, fuzzy
+msgid "Element Sizes & Facets"
+msgstr "요소 크기 및 фас엣"
+
 #: qqplot/options/methodQQ/ell.title
 #: qqplot/options/methodPP/ell.title
 msgid "Equal Local Levels"
@@ -1409,9 +1860,19 @@ msgstr "(D-M-Y)"
 msgid "Exponential"
 msgstr "영화드립어"
 
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Exponential distribution requires non-negative (≥0) data."
+msgstr "에드 등록 수는 백해 지 어그래 (≥0)"
+
 #: principal/results/summaryTable.columns.superTitle
 msgid "Extraction Sums of Squared Loadings"
 msgstr "추출 생략의 제곱된 짐들"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "F"
+msgstr "F"
 
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
@@ -1695,6 +2156,12 @@ msgstr "구성원들"
 msgid "Group (Overlapped)"
 msgstr "구성원들 (내가 덮었어요)"
 
+#: raincloud/options/groupOne.title
+#: raincloud/ui[0][1].label
+#, fuzzy
+msgid "Group (Side-by-side)"
+msgstr "일반호 (Side-by-side)"
+
 #: piechart/options/labels/group+count.title
 msgid "Group + Count"
 msgstr "일 + 수는"
@@ -1712,6 +2179,12 @@ msgstr "구성원들에 의함"
 #: mrcrosstabs/options/bartype/dodge2.title
 msgid "Grouped"
 msgstr "구성원들되었다"
+
+#: barplot/options/barType/dodge.title
+#: mrcrosstabs/options/bartype/dodge.title
+#, fuzzy
+msgid "Grouped (tight)"
+msgstr "일반호 (tight)"
 
 #: histogram/options/grouping.title
 #: histogram/options/groupingN.title
@@ -1792,6 +2265,19 @@ msgstr "수평 플롯"
 #, fuzzy
 msgid "Identity line"
 msgstr ""
+
+#: likertplot/options/ignoreNA.title
+#, fuzzy
+msgid "Ignore missing groups"
+msgstr "모드 증함 소녀"
+
+#: areachart/options/ignoreNA.title
+#: barplot/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
+#, fuzzy
+msgid "Ignore missing values"
+msgstr "모드 어그래 소녀"
 
 #: multcorresp/options/ggrepel.title
 #, fuzzy
@@ -2394,6 +2880,11 @@ msgstr "Likert"
 msgid "Likert Plot"
 msgstr "라이커트 플롯"
 
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Likert Plot requires ordinal (or numeric) variables"
+msgstr "Likert 파크 어는 오험 (or 일반호) 어그래"
+
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
 #, fuzzy
@@ -2561,6 +3052,11 @@ msgstr "백단"
 msgid "Max"
 msgstr "Max"
 
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Maximum of {var}"
+msgstr "최대 {var}"
+
 #: qqplot/options/paramEstMethod/mle.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mle.label
 #, fuzzy
@@ -2573,6 +3069,16 @@ msgstr "Maximum-likelihood (MLE)"
 msgid "May"
 msgstr ""
 
+#: R/multcorresp.b.R
+#, fuzzy
+msgid "MCA Principal Coordinates"
+msgstr "MCA 정보 코드"
+
+#: R/multcorresp.b.R
+#, fuzzy
+msgid "MCA Standard Coordinates"
+msgstr "MCA 정백 코드"
+
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 #, fuzzy
@@ -2584,6 +3090,11 @@ msgstr "모드"
 msgid "Mean & SD"
 msgstr ""
 
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Mean of {var}"
+msgstr "{var}의 평균"
+
 #: R/likertplot.b.R
 #: likertplot/options/showMedian.title
 #: lollipop/options/yaxis/median.title
@@ -2591,6 +3102,30 @@ msgstr ""
 #, fuzzy
 msgid "Median"
 msgstr "중위수"
+
+#: R/likertplot.b.R
+#, fuzzy
+msgid "Median and mean require numeric variables"
+msgstr "정해 리 원 리해 수는 일반호 어그래"
+
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Median of {var}"
+msgstr "Median of {var}"
+
+#: areachart/options/displayFormat/%b.title
+#: linechart/options/displayFormat/%b.title
+#, fuzzy
+msgctxt "menu"
+msgid "Oct"
+msgstr "Oct"
+
+#: areachart/options/displayFormat/%B.title
+#: linechart/options/displayFormat/%B.title
+#, fuzzy
+msgctxt "menu"
+msgid "October"
+msgstr "10월"
 
 #: likertplot/options/adjustMethod.title
 #: multcorresp/options/method.title
@@ -2658,6 +3193,11 @@ msgstr "Min / Max"
 msgid "Minimum entropy"
 msgstr "Minimum entropy"
 
+#: R/lollipop.b.R
+#, fuzzy
+msgid "Minimum of {var}"
+msgstr "Minimum of {var}"
+
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
 #: mrcrosstabs/ui/mode/onevar[0][1].label
@@ -2722,6 +3262,11 @@ msgstr ""
 #, fuzzy
 msgid "Natural log tranform"
 msgstr "자연 로그 변환"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Natural Log Tranform requires positive (>0) data."
+msgstr "자연 로그 변환에는 양수 (>0) 데이터가 필요합니다."
 
 #: R/principal.b.R
 #, fuzzy
@@ -2866,6 +3411,11 @@ msgstr ":"
 #, fuzzy
 msgid "Number of dimensions"
 msgstr "Number of dimensions"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Number of dimensions must be less than or equal to {maxDim}."
+msgstr "정백 지함 수는 일반호 어그래 지함는 {maxDim} 지 어그래 지함는 수는 없음."
 
 #: multcorresp/options/obsColor.title
 #, fuzzy
@@ -3238,6 +3788,16 @@ msgstr "파스텔 1"
 msgid "Pastel 2"
 msgstr "2"
 
+#: R/principal.b.R
+#, fuzzy
+msgid "PCA Principal Coordinates"
+msgstr "PCA 주성분 좌표"
+
+#: R/principal.b.R
+#, fuzzy
+msgid "PCA Standard Coordinates"
+msgstr "PCA 정보 코드"
+
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
 #: barplot/ui[1][0][0]/yaxis_percent.label
@@ -3260,6 +3820,11 @@ msgstr "백단드"
 #, fuzzy
 msgid "Pie Chart"
 msgstr " "
+
+#: R/piechart.b.R
+#, fuzzy
+msgid "Pie charts are for educational use only. Please do not use Pie charts!"
+msgstr "파이 차트는 교육용으로만 사용됩니다. 파이 차트를 사용하지 마십시오!"
 
 #: corresp/options/rowColor/hotpink.title
 #: corresp/options/colColor/hotpink.title
@@ -3475,6 +4040,11 @@ msgstr ""
 #, fuzzy
 msgid "Principal coordinates"
 msgstr "도르 총대 수는 코드"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Principal normalization"
+msgstr "정백 느료"
 
 #: multcorresp/options/propPoint.title
 #, fuzzy
@@ -3809,6 +4379,13 @@ msgstr "Regression Line"
 msgid "Reverse disposition"
 msgstr ""
 
+#: barplot/options/reverseStack.title
+#: likertplot/options/reverseLikert.title
+#: mrcrosstabs/options/reverseStack.title
+#, fuzzy
+msgid "Reverse stacking order"
+msgstr "색 소녀 번호 지함"
+
 #: areachart/options/titleAlign/1.title
 #: areachart/options/subtitleAlign/1.title
 #: areachart/options/captionAlign/1.title
@@ -3945,10 +4522,20 @@ msgstr ""
 msgid "Row plot"
 msgstr "주 드립"
 
+#: R/corresp.b.R
+#, fuzzy
+msgid "Row Points for {rows}"
+msgstr "{rows}의 행 점"
+
 #: corresp/options/normalization/rowprincipal.title
 #, fuzzy
 msgid "Row principal"
 msgstr "Row principal"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Row principal normalization"
+msgstr "위 정백 느료"
 
 #: corresp/results/rowProfiles.title
 #, fuzzy
@@ -4223,6 +4810,12 @@ msgstr "특이값"
 msgid "Size"
 msgstr ""
 
+#: linechart/ui[1][0][1].label
+#: principal/ui[4].label
+#, fuzzy
+msgid "Sizes & Colors"
+msgstr "크기 및 색상"
+
 #: package/datasets/Smoking.name
 #, fuzzy
 msgid "Smoking"
@@ -4315,6 +4908,11 @@ msgstr ""
 #, fuzzy
 msgid "Standard coordinates"
 msgstr "Standard coordinates"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Standard normalization"
+msgstr "정백 느료"
 
 #: principal/options/stdLoadings.title
 #, fuzzy
@@ -4433,6 +5031,16 @@ msgid "Supplement"
 msgstr "Supplement"
 
 #: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "발등 위 수는 수 없음 지 어그래 수 없음 1,2,9"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary column numbers must be between 1 and {nmax}."
+msgstr "보조 열 번호는 {nmax} 사이여야 합니다."
+
+#: R/corresp.b.R
 #: corresp/options/supplementaryCols.title
 #, fuzzy
 msgid "Supplementary columns"
@@ -4442,6 +5050,16 @@ msgstr "Supplementary columns"
 #, fuzzy
 msgid "Supplementary Points"
 msgstr " "
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
+msgstr "보충 행 번호는 숫자 목록이어야 합니다. 예: 1,2,9"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Supplementary row numbers must be between 1 and {nmax}."
+msgstr "발등 위 수는 수 없음 {nmax} 지 어그래 수는."
 
 #: R/corresp.b.R
 #: corresp/options/supplementaryRows.title
@@ -4464,6 +5082,21 @@ msgstr "보충 변수"
 #, fuzzy
 msgid "Supplementary variables"
 msgstr ""
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Symetric normalization"
+msgstr "대칭 정규화"
+
+#: corresp/options/normalization/symmetric.title
+#, fuzzy
+msgid "Symmetric"
+msgstr "신피론"
+
+#: R/corresp.b.R
+#, fuzzy
+msgid "Symmetric normalization"
+msgstr "대칭 정규화"
 
 #: likertplot/ui[2].label
 #: likertplot/ui[2][0][0][0].label
@@ -4511,6 +5144,18 @@ msgstr ""
 msgid "Text Size"
 msgstr "Text Size"
 
+#: corresp/ui[6].label
+#, fuzzy
+msgid "Text Size & Colors"
+msgstr "텍스트 크기 및 색상"
+
+#: barplot/ui[4].label
+#: boxplot/ui[3].label
+#: piechart/ui[4].label
+#, fuzzy
+msgid "Text Size & Facets"
+msgstr "파크 수는 & 피론"
+
 #: R/principal.b.R
 #, fuzzy
 msgid ""
@@ -4525,6 +5170,11 @@ msgstr ""
 msgid "The number of dimensions cannot be greater than {max}."
 msgstr "The number of dimensions cannot be greater than {max}."
 
+#: R/principal.b.R
+#, fuzzy
+msgid "The number of dimensions cannot be greater than the number of variables."
+msgstr "정백 지함 수는 일반호 어그래 지함는 일반호 어그래 지함는 수는 없음."
+
 #: R/qqplot.b.R
 #, fuzzy
 msgid "Theoretical Probabilities"
@@ -4534,6 +5184,30 @@ msgstr ""
 #, fuzzy
 msgid "Theoretical Quantiles"
 msgstr "Theoretical Quantiles"
+
+#: areachart/options/yTicks.title
+#: barplot/options/xTicks.title
+#: barplot/options/yTicks.title
+#: boxplot/options/xTicks.title
+#: boxplot/options/yTicks.title
+#: histogram/options/xTicks.title
+#: histogram/options/yTicks.title
+#: linechart/options/yTicks.title
+#: lollipop/options/xTicks.title
+#: lollipop/options/yTicks.title
+#: mrcrosstabs/options/xTicks.title
+#: mrcrosstabs/options/yTicks.title
+#: mrfrequencies/options/xTicks.title
+#: mrfrequencies/options/yTicks.title
+#: qqplot/options/xTicks.title
+#: qqplot/options/yTicks.title
+#: raincloud/options/xTicks.title
+#: raincloud/options/yTicks.title
+#: scatterplot/options/xTicks.title
+#: scatterplot/options/yTicks.title
+#, fuzzy
+msgid "Tick count"
+msgstr "틱 수"
 
 #: likertplot/options/tidyUp.title
 #, fuzzy
@@ -4764,12 +5438,23 @@ msgstr "전돌"
 msgid "Total row"
 msgstr ""
 
+#: mrcrosstabs/options/emptyAsNA.title
+#: mrfrequencies/options/emptyAsNA.title
+#, fuzzy
+msgid "Treat empty values as missing"
+msgstr "빈 값을 缺失으로 처리"
+
 #: likertplot/ui[4][0][0][0].label
 #: piechart/options/labType.title
 #: piechart/ui[2][0][0][0].label
 #, fuzzy
 msgid "Type"
 msgstr "분드"
+
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Unable to estimate the distribution parameters."
+msgstr "등록 정백 버드 지함 수 없음."
 
 #: R/principal.b.R
 #, fuzzy
@@ -5074,6 +5759,11 @@ msgstr "Within categories"
 msgid "Within groups"
 msgstr ""
 
+#: R/qqplot.b.R
+#, fuzzy
+msgid "Wrong parameter values."
+msgstr "잘못된 매개변수 값"
+
 #: areachart/options/timeVar.title
 #: areachart/options/timeVar1.title
 #: areachart/ui/mode/oneVariable[0][0][0].label
@@ -5118,6 +5808,18 @@ msgstr ""
 #, fuzzy
 msgid "X-Axis"
 msgstr "X-"
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+#, fuzzy
+msgid "X-Axis and Y-Axis cannot be equal."
+msgstr "X축과 Y축을 같게 할 수 없습니다."
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
+#, fuzzy
+msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
+msgstr "X축과 Y축은 차원 수보다 커질 수 없습니다."
 
 #: areachart/options/isDate.title
 #: linechart/options/isDate.title
@@ -5272,707 +5974,3 @@ msgstr "노랑에서 초록까지"
 #, fuzzy
 msgid "Yellow to Red"
 msgstr " "
-
-#: R/areachart.b.R
-#: R/linechart.b.R
-#, fuzzy
-msgid "{var} doesn't have a valid date format."
-msgstr "{var}에는 유효한 날짜 형식이 없습니다."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary row numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "보충 행 번호는 숫자 목록이어야 합니다. 예: 1,2,9"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary row numbers must be between 1 and {nmax}."
-msgstr "발등 위 수는 수 없음 {nmax} 지 어그래 수는."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
-msgstr "발등 위 수는 수 없음 지 어그래 수 없음 1,2,9"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Supplementary column numbers must be between 1 and {nmax}."
-msgstr "보조 열 번호는 {nmax} 사이여야 합니다."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Number of dimensions must be less than or equal to {maxDim}."
-msgstr "정백 지함 수는 일반호 어그래 지함는 {maxDim} 지 어그래 지함는 수는 없음."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid ""
-"Axis numbers must be less than or equal to the number of dimensions "
-"({nDim})."
-msgstr "축 번호는 차원 수({nDim})보다 작거나 같아야 합니다."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Axis numbers cannot be equal."
-msgstr "위 수는 어는 지 어그래 수는 없음."
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Principal normalization"
-msgstr "정백 느료"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Symetric normalization"
-msgstr "대칭 정규화"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Row principal normalization"
-msgstr "위 정백 느료"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Column principal normalization"
-msgstr "위 정백 느료"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Standard normalization"
-msgstr "정백 느료"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Row Points for {rows}"
-msgstr "{rows}의 행 점"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Column Points for {cols}"
-msgstr "위 수는 지 어그래 {cols}"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid "Symmetric normalization"
-msgstr "대칭 정규화"
-
-#: R/corresp.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
-"two categorical variables. Computations are based on <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
-"using the \"Counts\" variable.</p>\n"
-"<p><strong>Supplementary row or column</strong> numbers may be entered as "
-"integer lists : 1,3,6</p>\n"
-"<p>Four normalizations (scaling of row and column scores before plotting) "
-"are avalaible :</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Row an columns scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
-"square root of eigenvalues. </li>\n"
-"<li><strong>Row Principal:</strong> Only row scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Column Principal:</strong> Only column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Standard:</strong> The raw coordinates without "
-"normalization.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
-msgstr ""
-"<p>이 모듈은 두 범주형 변수에 대한 <strong>상관성 분석(CA)</strong>을 계산합니다. 계산은 "
-"F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet이 만든 <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> 패키지에 기반합니다.</p>\n"
-"<p>데이터는 <em>jamovi</em> 내장 가중치 시스템 또는 \"개수\" 변수를 사용하여 가중될 수 있습니다.</p>\n"
-"<p><strong>보조 행 또는 열</strong> 번호는 정수 목록으로 입력할 수 있습니다: 1,3,6</p>\n"
-"<p>네 가지 정규화(플로팅 전 행 및 열 점수를 스케일링)가 사용할 수 있습니다.</p>\n"
-"<ul>\n"
-"<li><strong>주요:</strong> 행 및 열 점수는 고유값으로 스케일링됩니다.</li>\n"
-"<li><strong>대칭:</strong> 행 및 열 점수는 고유값의 제곱근으로 스케일링됩니다.</li>\n"
-"<li><strong>행 주요:</strong> 행 점수만 고유값으로 스케일링됩니다.</li>\n"
-"<li><strong>열 주요:</strong> 열 점수만 고유값으로 스케일링됩니다.</li>\n"
-"<li><strong>표준:</strong> 정규화 없이 원시 좌표입니다.</li>\n"
-"</ul>\n"
-"<p>샘플 파일은 열기 > 데이터 라이브러리 > vijPlots > 흡연에서 찾을 수 있습니다.</p>"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Likert Plot requires ordinal (or numeric) variables"
-msgstr "Likert 파크 어는 오험 (or 일반호) 어그래"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Median and mean require numeric variables"
-msgstr "정해 리 원 리해 수는 일반호 어그래"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Comparison tests require numeric variables"
-msgstr "모드 소녀를 정해 수는 일반호 어그래"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Cannot convert text variables to integers"
-msgstr "텍스트 변수를 정수로 변환할 수 없습니다."
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Cannot tidy up text variables"
-msgstr "파크 어그래 지함 수 없음."
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid "Comparison tests cannot be computed with empty (N=0) groups"
-msgstr "비교 테스트는 빈 그룹(N=0)으로 계산할 수 없습니다"
-
-#: R/likertplot.b.R
-#, fuzzy
-msgid ""
-"<h3>Data & Sorting</h3>\n"
-"<ul>\n"
-"<li>Likert variables must be of ordinal measure-type. (Continuous "
-"measure-type works as well.)</li>\n"
-"<li>If you plan to compute mean/median/sd or to use comparison tests, they "
-"must be of integer data-type.</li>\n"
-"<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
-"order in table and graph (when some variables miss some levels).</li>\n"
-"<li><strong>Convert variables to integer:</strong> when checked, the level "
-"labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
-"</ul>\n"
-"<h3>Comparison Tests</h3>\n"
-"<p>When using a group variable, several tests are available:</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
-"<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
-"<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
-"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
-"</ul>\n"
-"<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
-"p-values are already adjusted (groupwise); no other adjustment is "
-"possible.</p>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
-msgstr ""
-"<h3>파크 & 소녀</h3>\n"
-"<ul>\n"
-"<li>Likert 어는 오험 지 어그래 지 어그래 (Continuous 지 어그래 없습니다).<br>\n"
-"</li>\n"
-"<li>사원 정백 해당 사원 정백 해당 어그래 사원 정백 하는 어는 일반호 어그래 지 어그래 수는.<br>\n"
-"</li>\n"
-"<li><strong>지 어그래 지함:</strong> 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 지 어그래 지함 수 "
-"없음.<br>\n"
-"</li>\n"
-"<li><strong>어는 어그래 소녀:</strong> 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 지 어그래 지함 수 "
-"없음.<br>\n"
-"</li>\n"
-"<li><strong>어는 지 어그래 소녀:</strong> 어는 어그래 지 어그래 수는 어는 지 어그래 지 어그래 수는 없음.<br>\n"
-"</li>\n"
-"</ul>\n"
-"<h3>모드 소녀</h3>\n"
-"<p>사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는 어 사원 정백 해당 사원 "
-"정백 하는 어는 일반호 어그래 지 어그래 수는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는.<br>\n"
-"</p>\n"
-"<p>사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 "
-"어그래 수는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는 어 사원 정백 해당 사원 정백 하는 어는 일반호 "
-"어그래 지 어그래 수는 어 사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는 어 "
-"사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는 어 사원 정백 해당 사원 정백 "
-"하는 어 사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는 어 사원 정백 해당 "
-"사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 하는 어는 일반호 어그래 지 어그래 수는.<br>\n"
-"</p>\n"
-"<p>이 어 사원 정백 하는 Open > Data Library > vijPlots > Likert</p>"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Mean of {var}"
-msgstr "{var}의 평균"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Median of {var}"
-msgstr "Median of {var}"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Minimum of {var}"
-msgstr "Minimum of {var}"
-
-#: R/lollipop.b.R
-#, fuzzy
-msgid "Maximum of {var}"
-msgstr "최대 {var}"
-
-#: R/mrcrosstabs.b.R
-#, fuzzy
-msgid "Crosstab (% of cases)"
-msgstr "교차 표(%의 사례)"
-
-#: R/mrcrosstabs.b.R
-#, fuzzy
-msgid "Crosstab (% of responses)"
-msgstr "교차 표(%의 응답)"
-
-#: R/mrcrosstabs.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes two-way frequencies for multiple response "
-"questions, also known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>을 테는 모드 소녀 해당 사원 정백하는 어는 신피론 정백 해당 사원 정백하는.</p>\n"
-"<p>사원는 해당 사원 정백 하는 어는 이 해당 사원 정백 해당 어그래를 사원 정백하는.</p>\n"
-"<p>사원 정백 해당 사원 정백 하는 어 사원 정백 해당 사원 정백 해당 어그래 사원 정백 하는.</p>\n"
-"<p>이 어 사원 정백 하는 Open > Data Library > vijPlots > Credit Cards</p>"
-
-#: R/mrfrequencies.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes frequencies for multiple response questions, also "
-"known as \"Check All That Apply\" (CATA) questions.</p>\n"
-"<p>Questions may be coded as:</p>\n"
-"<ul>\n"
-"<li>several <strong>dummy (or indicator) variables</strong> using 0/1, 1/2, "
-"Y/N for each possible answer;</li>\n"
-"<li>a single <strong>multi-valued variable</strong> containing the checked "
-"answers, separated by a symbol (usually \",\" or \";\").</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Credit "
-"Cards</p>"
-msgstr ""
-"<p>이 모듈은 여러 응답 질문(즉, \"체크 모든 항목 적용\"(CATA) 질문)에 대한 빈도를 계산합니다.</p>\n"
-"<p>질문은 다음과 같이 코딩될 수 있습니다:</p>\n"
-"<ul>\n"
-"<li>각 가능한 답변에 대한 0/1, 1/2, Y/N을 사용하는 여러 <strong>더미(또는 지표) 변수</strong>;</li>\n"
-"<li>확인된 답변으로 구분된 기호(일반적으로 \",\" 또는 \";\")를 포함하는 단일 <strong>다중 값 "
-"변수</strong>.</li>\n"
-"</ul>\n"
-"<p>샘플 파일은 열기 > 데이터 라이브러리 > vijPlots > 신용 카드에 포함되어 있습니다.</p>"
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-#, fuzzy
-msgid "X-Axis and Y-Axis cannot be greater than the number of dimensions."
-msgstr "X축과 Y축은 차원 수보다 커질 수 없습니다."
-
-#: R/multcorresp.b.R
-#: R/principal.b.R
-#, fuzzy
-msgid "X-Axis and Y-Axis cannot be equal."
-msgstr "X축과 Y축을 같게 할 수 없습니다."
-
-#: R/multcorresp.b.R
-#, fuzzy
-msgid "MCA Principal Coordinates"
-msgstr "MCA 정보 코드"
-
-#: R/multcorresp.b.R
-#, fuzzy
-msgid "MCA Standard Coordinates"
-msgstr "MCA 정백 코드"
-
-#: R/multcorresp.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes <strong>Multiple Correspondence Analysis "
-"(MCA)</strong> for several categorical variables. Computations are based on "
-"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Both classic methods are available:</p>\n"
-"<ul>\n"
-"<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
-"<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues "
-"are the squares of those of the indicator matrix method. </li>\n"
-"</ul>\n"
-"<p>Both methods give the same <em>standard</em> coordinates (but different "
-"<em>principal</em> coordinates).</p>\n"
-"<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
-"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
-"(and inertia) of categories and observations are computed from the original "
-"eigenvalues of the Burt matrix.</p>\n"
-"<p>The <strong>Normalization</strong> options specify how the coordinates "
-"are scaled (by eigenvalues):</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Both category and observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Category principal:</strong> Only category coordinates are "
-"scaled.</li>\n"
-"<li><strong>Observation principal:</strong> Only observation coordinates "
-"are scaled.</li>\n"
-"<li><strong>Standard:</strong> Both category and observation coordinates "
-"are standard.</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
-msgstr ""
-"<p>이 모듈은 여러 범주형 변수에 대해 <strong>다중 상관성 분석 (MCA)</strong>을 계산합니다. 계산은 "
-"F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet에 의해 작성된 <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> 패키지를 기반으로 합니다.</p>\n"
-"<p>클래식 방법은 두 가지 모두 사용할 수 있습니다:</p>\n"
-"<ul>\n"
-"<li><strong>지표 행렬:</strong> 지표 행렬의 CA</li>\n"
-"<li><strong>버트 행렬:</strong> 버트 행렬의 CA. 고유값은 지표 행렬 방법의 제곱입니다. </li>\n"
-"</ul>\n"
-"<p>두 방법은 동일한 <em>표준</em> 좌표(하지만 다른 <em>주성분</em> 좌표)를 제공합니다.</p>\n"
-"<p>선택된 경우 <strong>벤제크리 및 그린에이커 보정</strong>은 고유값에만 적용됩니다 "
-"(<strong>요약</strong> 표). 범주 및 관측값의 좌표(및 관성)는 버트 행렬의 원래 고유값에서 계산됩니다.</p>\n"
-"<p><strong>정규화</strong> 옵션은 좌표가 어떻게 스케일링되는지(고유값으로) 지정합니다:</p>\n"
-"<ul>\n"
-"<li><strong>주성분:</strong> 범주 및 관측값 좌표가 모두 스케일링됩니다.</li>\n"
-"<li><strong>범주 주성분:</strong> 범주 좌표만 스케일링됩니다.</li>\n"
-"<li><strong>관측값 주성분:</strong> 관측값 좌표만 스케일링됩니다.</li>\n"
-"<li><strong>표준:</strong> 범주 및 관측값 좌표가 모두 표준입니다.</li>\n"
-"</ul>\n"
-"<p>샘플 파일은 열기 > 데이터 라이브러리 > vijPlots > 자동차에 포함되어 있습니다.</p>"
-
-#: R/piechart.b.R
-#, fuzzy
-msgid "Pie charts are for educational use only. Please do not use Pie charts!"
-msgstr "파이 차트는 교육용으로만 사용됩니다. 파이 차트를 사용하지 마십시오!"
-
-#: R/principal.b.R
-#, fuzzy
-msgid "The number of dimensions cannot be greater than the number of variables."
-msgstr "정백 지함 수는 일반호 어그래 지함는 일반호 어그래 지함는 수는 없음."
-
-#: R/principal.b.R
-#, fuzzy
-msgid "PCA Principal Coordinates"
-msgstr "PCA 주성분 좌표"
-
-#: R/principal.b.R
-#, fuzzy
-msgid "PCA Standard Coordinates"
-msgstr "PCA 정보 코드"
-
-#: R/principal.b.R
-#, fuzzy
-msgid ""
-"<p>This module computes <strong>Principal Component Analysis (PCA)</strong> "
-"for several continuous variables. Computations are based on "
-"<tt>stats::prcomp</tt> function.</p>\n"
-"<p>Although rotated components are not principal components, they are "
-"widely used. Only orthogonal rotations are available (from GPArotation "
-"package).</p>\n"
-"<p>Loadings (variable coordinates) and scores (observation coordinates) are "
-"principal (scaled by the squareroot of eigenvalues).</p>\n"
-"<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
-"eigenvalues) while loadings are standard.</li>\n"
-"<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
-"are standard. </li>\n"
-"</ul>\n"
-"<p><strong>Advanced options</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Standardize loadings:</strong> loadings are normalized with "
-"sums of squared equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Standardize scores:</strong> scores are normalized with "
-"variances equal to 1 (instead of eigenvalues)</li>\n"
-"<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
-"applied to eigenvectors (standard loadings) instead of principal loadings "
-"(STATA way).</li>\n"
-"</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
-msgstr ""
-"<p>이 모듈은 여러 연속 변수에 대해 <strong>주성분 분석 (PCA)</strong>을 계산합니다. 계산은 "
-"<tt>stats::prcomp</tt> 함수를 기반으로 합니다.</p>\n"
-"<p>회전된 구성 요소는 주성분이 아니지만 널리 사용됩니다. 직교 회전만 사용할 수 있습니다(GPArotation 패키지에서).</p>\n"
-"<p>로딩(변수 좌표)과 스코어(관측 좌표)는 주성분(이진값의 제곱근으로 스케일링)입니다.</p>\n"
-"<p>바이플롯은 \"Biplots in Practice\"(Michael Greenacre, 2010)를 따릅니다:</p>\n"
-"<ul>\n"
-"<li><strong>형태 바이플롯:</strong> 스코어는 주성분(이진값으로 스케일링)이고 로딩은 표준입니다.</li>\n"
-"<li><strong>공분산 바이플롯:</strong> 로딩은 주성분이고 스코어는 표준입니다. </li>\n"
-"</ul>\n"
-"<p><strong>고급 옵션</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>로딩 표준화:</strong> 로딩은 합제곱이 1(이진값 대신)으로 동일한 값으로 정규화됩니다</li>\n"
-"<li><strong>스코어 표준화:</strong> 스코어는 분산이 1(이진값 대신)으로 동일한 값으로 정규화됩니다</li>\n"
-"<li><strong>고유 벡터 회전:</strong> 회전(바리맥스 등)은 주성분 로딩(STATA 방식) 대신 표준 로딩(고유 "
-"벡터)에 적용됩니다.</li>\n"
-"</ul>\n"
-"<p>샘플 파일은 열기 > 데이터 라이브러리 > vijPlots > 아이리스에 포함되어 있습니다.</p>"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Natural Log Tranform requires positive (>0) data."
-msgstr "자연 로그 변환에는 양수 (>0) 데이터가 필요합니다."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "{distrib} distribution requires positive (>0) data."
-msgstr "{distrib} 등록 수는 오험 (>0) 어그래"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Exponential distribution requires non-negative (≥0) data."
-msgstr "에드 등록 수는 백해 지 어그래 (≥0)"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Beta distribution requires data between 0 and 1."
-msgstr "백해 등록 수는 0 백 1 지 어그래"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Unable to estimate the distribution parameters."
-msgstr "등록 정백 버드 지함 수 없음."
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "Wrong parameter values."
-msgstr "잘못된 매개변수 값"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid "F"
-msgstr "F"
-
-#: R/qqplot.b.R
-#, fuzzy
-msgid ""
-"<p>This module uses <a href = "
-"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
-"package<a/> by Alexandre Almeida, Adam Loy and Heike Hofmann. In-depth "
-"information can be found in the package documentation on CRAN site.</p>\n"
-"<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
-"(y = x) or the commonly-used <em>Q-Q line</em> that intercepts two data "
-"quantiles (Q<sub>0.25</sub> and Q<sub>0.75</sub>). P-P plot only supports "
-"identity line.</p>\n"
-"<p><strong>Confidence band:</strong> Draws a confidence band around the "
-"reference line. qqplotr package provides several methods to compute the "
-"confidence band:</p>\n"
-"<ul>\n"
-"<li><strong><em>Pointwise</em></strong> constructs pointwise confidence "
-"bands based on Normal confidence intervals;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> creates pointwise confidence bands "
-"based on a parametric bootstrap;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> band is based on the "
-"Kolmogorov-Smirnov test;</li>\n"
-"<li><strong><em>Tail-Sensitive</em></strong> constructs a tail-sensitive "
-"confidence bands but is only implemented for Normal Q-Q plots;</li>\n"
-"<li><strong><em>Equal Local Levels (ELL)</em></strong> constructs "
-"simultaneous bands using the equal local levels.</li>\n"
-"</ul>\n"
-"<p>P-P plots only support \"ELL\" and \"Bootstrap\" methods.</p>\n"
-"<p><strong>Detrended plot:</strong> The objects are <em>detrended</em> "
-"according to the reference line. This procedure may help reducing visual "
-"bias caused by the orthogonal distances from the points to the reference "
-"line.</p>\n"
-"<p><strong>Parameter values:</strong> The distribution parameters can be "
-"estimated from data using:</p>\n"
-"<ul>\n"
-"<li><strong>Maximum Likelihood Method</strong> (using MASS package) : it "
-"should work with all distributions but \"t\" and \"uniform\";</li>\n"
-"<li><strong>Method of Moments</strong> for moment based parameters : it "
-"should work with \"normal\", \"log-normal\", \"Beta\", \"Exponential\", "
-"\"Gamma\", \"Logistic\" and \"Uniform\" distributions;</li>\n"
-"</ul>\n"
-"<p>or entered by user:</p>\n"
-"<ul>\n"
-"<li><strong>Parameter 1:</strong> mean (Normal), meanlog (Log-normal), "
-"shape1 (Beta), location (Cauchy, Logistic), df (Chi-squared, Student), df1 "
-"(F), rate (Exponential), shape (Gamma, Weibull) and min (Uniform);</li>\n"
-"<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
-"(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
-"(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
-msgstr ""
-"<p>이 모듈은 Alexandre Almeida, Adam Loy 및 Heike Hofmann이 만든 <a href = "
-"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
-"패키지<a/>를 사용합니다. 자세한 정보는 CRAN 사이트의 패키지 문서에서 찾을 수 있습니다.</p>\n"
-"<p><strong>기준선:</strong> 동일선(y = x) 또는 두 데이터 분위수(Q<sub>0.25</sub> 및 "
-"Q<sub>0.75</sub>)를 가로지르는 일반적으로 사용되는 Q-Q 선을 그립니다. P-P 플롯은 동일선만 지원합니다.</p>\n"
-"<p><strong>신뢰 구간:</strong> 기준선 주변에 신뢰 구간을 그립니다. qqplotr 패키지는 신뢰 구간을 계산하는 여러 "
-"방법을 제공합니다:</p>\n"
-"<ul>\n"
-"<li><strong><em>점별</em></strong>는 정상 신뢰 구간을 기반으로 점별 신뢰 구간을 구성합니다.</li>\n"
-"<li><strong><em>부트스트래핑</em></strong>은 매개변수 부트스트래핑을 기반으로 점별 신뢰 구간을 "
-"생성합니다.</li>\n"
-"<li><strong><em>콜모고로프-스미르노프</em></strong> 밴드는 콜모고로프-스미르노프 테스트를 기반으로 "
-"합니다.</li>\n"
-"<li><strong><em>꼬리 감도</em></strong>는 정상 Q-Q 플롯에 대해서만 구현된 꼬리 감도 신뢰 구간을 "
-"구성합니다.</li>\n"
-"<li><strong><em>동일 로컬 레벨(ELL)</em></strong>은 동일 로컬 레벨을 사용하여 동시 구간을 "
-"구성합니다.</li>\n"
-"</ul>\n"
-"<p>P-P 플롯은 \"ELL\" 및 \"부트스트래핑\" 방법만 지원합니다.</p>\n"
-"<p><strong>추세 제거 플롯:</strong> 개체는 기준선에 따라 <em>추세 제거</em>됩니다. 이 절차는 기준선에서 "
-"점까지의 직교 거리에 의한 시각적 편향을 줄이는 데 도움이 될 수 있습니다.</p>\n"
-"<p><strong>매개변수 값:</strong> 분포 매개변수는 다음을 사용하여 데이터에서 추정할 수 있습니다:</p>\n"
-"<ul>\n"
-"<li><strong>최대 가능도 방법</strong>(MASS 패키지 사용): \"t\" 및 \"일IFORM\" 분포를 제외한 모든 "
-"분포에서 작동해야 합니다.</li>\n"
-"<li><strong>모멘트 방법</strong>은 모멘트 기반 매개변수에 대해: \"정상\", \"로그-정상\", \"베타\", "
-"\"지수\", \"감마\", \"로지스틱\" 및 \"일IFORM\" 분포에서 작동해야 합니다.</li>\n"
-"</ul>\n"
-"<p>또는 사용자에 의해 입력될 수 있습니다:</p>\n"
-"<ul>\n"
-"<li><strong>매개변수 1:</strong> 평균(정상), meanlog(로그-정상), shape1(베타), 위치(코시, "
-"로지스틱), 자유도(카이제곱, 학생), df1(F), 비율(지수), shape(감마, 와이블) 및 최소(일IFORM)</li>\n"
-"<li><strong>매개변수 2:</strong> 표준편차(정상), sdlog(로그-정상), shape2(베타), 규모(코시, "
-"로지스틱), df2(F), 비율(감마, 와이블) 및 최대(일IFORM)</li>\n"
-"</ul>\n"
-"</p>"
-
-#: areachart/options/ignoreNA.title
-#: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
-#, fuzzy
-msgid "Ignore missing values"
-msgstr "모드 어그래 소녀"
-
-#: areachart/options/yTicks.title
-#: barplot/options/xTicks.title
-#: barplot/options/yTicks.title
-#: boxplot/options/xTicks.title
-#: boxplot/options/yTicks.title
-#: histogram/options/xTicks.title
-#: histogram/options/yTicks.title
-#: linechart/options/yTicks.title
-#: lollipop/options/xTicks.title
-#: lollipop/options/yTicks.title
-#: mrcrosstabs/options/xTicks.title
-#: mrcrosstabs/options/yTicks.title
-#: mrfrequencies/options/xTicks.title
-#: mrfrequencies/options/yTicks.title
-#: qqplot/options/xTicks.title
-#: qqplot/options/yTicks.title
-#: raincloud/options/xTicks.title
-#: raincloud/options/yTicks.title
-#: scatterplot/options/xTicks.title
-#: scatterplot/options/yTicks.title
-#, fuzzy
-msgid "Tick count"
-msgstr "틱 수"
-
-#: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
-#: mrcrosstabs/options/reverseStack.title
-#, fuzzy
-msgid "Reverse stacking order"
-msgstr "색 소녀 번호 지함"
-
-#: barplot/options/barType/dodge.title
-#: mrcrosstabs/options/bartype/dodge.title
-#, fuzzy
-msgid "Grouped (tight)"
-msgstr "일반호 (tight)"
-
-#: barplot/ui[4].label
-#: boxplot/ui[3].label
-#: piechart/ui[4].label
-#, fuzzy
-msgid "Text Size & Facets"
-msgstr "파크 수는 & 피론"
-
-#: boxplot/ui[2][0][1][0].label
-#, fuzzy
-msgid "Box Elements"
-msgstr "박스 요소"
-
-#: corresp/options/normalization/symmetric.title
-#, fuzzy
-msgid "Symmetric"
-msgstr "신피론"
-
-#: corresp/ui[6].label
-#, fuzzy
-msgid "Text Size & Colors"
-msgstr "텍스트 크기 및 색상"
-
-#: likertplot/options/ignoreNA.title
-#, fuzzy
-msgid "Ignore missing groups"
-msgstr "모드 증함 소녀"
-
-#: linechart/ui[1][0][1].label
-#: principal/ui[4].label
-#, fuzzy
-msgid "Sizes & Colors"
-msgstr "크기 및 색상"
-
-#: mrcrosstabs/options/emptyAsNA.title
-#: mrfrequencies/options/emptyAsNA.title
-#, fuzzy
-msgid "Treat empty values as missing"
-msgstr "빈 값을 缺失으로 처리"
-
-#: mrcrosstabs/options/computedValues/responses.title
-#: mrfrequencies/options/showResponses.title
-#: mrfrequencies/options/yaxis/responses.title
-#, fuzzy
-msgid "% of responses"
-msgstr "어는 사원"
-
-#: mrcrosstabs/options/computedValues/cases.title
-#: mrfrequencies/options/showCases.title
-#: mrfrequencies/options/yaxis/cases.title
-#, fuzzy
-msgid "% of cases"
-msgstr "사례의 %"
-
-#: mrcrosstabs/options/computedValues/options.title
-#, fuzzy
-msgid "% by row"
-msgstr "어는 원 위"
-
-#: principal/ui[4][0][0][1].label
-#: scatterplot/ui[2][0][0][0].label
-#, fuzzy
-msgid "Element Sizes"
-msgstr "이름 수는"
-
-#: raincloud/options/groupOne.title
-#: raincloud/ui[0][1].label
-#, fuzzy
-msgid "Group (Side-by-side)"
-msgstr "일반호 (Side-by-side)"
-
-#: scatterplot/ui[2].label
-#, fuzzy
-msgid "Element Sizes & Facets"
-msgstr "요소 크기 및 фас엣"
-
-#: histogram/options/binBoundary.title
-msgctxt "boundary"
-msgid "Position"
-msgstr "종드"
-
-#: areachart/options/displayFormat/%b.title
-#: linechart/options/displayFormat/%b.title
-#, fuzzy
-msgctxt "menu"
-msgid "Oct"
-msgstr "Oct"
-
-#: areachart/options/displayFormat/%B.title
-#: linechart/options/displayFormat/%B.title
-#, fuzzy
-msgctxt "menu"
-msgid "October"
-msgstr "10월"
-
-#: R/qqplot.b.R
-#: qqplot/options/distrib/norm.title
-#, fuzzy
-msgctxt "distribution"
-msgid "Normal"
-msgstr "정상"
