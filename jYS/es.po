@@ -3,8 +3,8 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-05-23 09:35+0000\n"
 "Last-Translator: José Ángel Iranzo Sanz <joseani@unizar.es>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/jamovi/module-"
-"jys/es/>\n"
+"Language-Team: Spanish "
+"<https://hosted.weblate.org/projects/jamovi/module-jys/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -35,10 +35,6 @@ msgstr "{varType} con valores imputados"
 #: R/mout.b.R
 msgid "{varType} without outliers"
 msgstr "{varType} sin valores extremos"
-
-#: R/mcor.b.R
-msgid "* p < .05, ** p < .01, *** p < .001, one-tailed"
-msgstr "* p < 0,05 ; ** p < 0,01 ; *** p < 0,001, una cola"
 
 #: R/mmf.b.R
 msgid "**connection of a variable's observed data"
@@ -89,9 +85,15 @@ msgstr "0 - auto"
 msgid "0 ="
 msgstr "0 ="
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
+#: mMLP/options/roc_x/1spec.title
 msgid "1 - Specificity"
 msgstr "1 - Especificidad"
+
+#: mMLP/options/hidden_structure.default
+msgid "10,5"
+msgstr ""
 
 #: R/mroc.b.R
 msgid "100 - Specificity (%)"
@@ -125,6 +127,14 @@ msgstr "Resultados del análisis de Potencia A Priori"
 msgid "Accent"
 msgstr "Acento"
 
+#: R/mmlp.b.R
+msgid "Actual"
+msgstr ""
+
+#: mMLP/results/matrixTable.columns.title
+msgid "Actual \\ Predicted"
+msgstr ""
+
 #: mCOR/options/clustMet.title
 msgid "Agglomeration method"
 msgstr "Método de aglomeración"
@@ -153,9 +163,18 @@ msgstr "una formación de varias MAR"
 msgid "Angular order eigenvectors"
 msgstr "Vectores propios de orden angular"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/anova.title
+msgid "ANOVA / ANCOVA (F-Test)"
+msgstr ""
+
 #: mCOR/options/clustMet/average.title
 msgid "Average Linkage (UPGMA)"
 msgstr "Enlace Promedio (UPGMA)"
+
+#: mMLP/ui[3]/show_roc/roc_unit.label
+msgid "Axis Units"
+msgstr ""
 
 #: R/mui.b.R
 msgid "Balance"
@@ -164,6 +183,11 @@ msgstr "Balance"
 #: R/mui.b.R
 msgid "Balance - balance between correct and incorrect classified (TP+TN)/(FP+FN)"
 msgstr "Balance - balance clasificado entre correcto e incorrecto (TP+TN)/(FP+FN)"
+
+#: mPWR/options/base_prob.title
+#: mPWR/ui[1]/base_prob.label
+msgid "Base probability"
+msgstr ""
 
 #: package/datasets/BCModelsROCEstimation.name
 msgid "BC Models ROC Estimation"
@@ -238,6 +262,11 @@ msgstr "Enlace centroide (UPGMC)"
 msgid "CHD Models ROC Estimation"
 msgstr "Estimación ROC de modelos CHD"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/chisq.title
+msgid "Chi-square Goodness-of-Fit / Independence (Chi-square Test)"
+msgstr ""
+
 #: mCOR/results/matrix.columns.content
 msgid "CI Lower"
 msgstr "CI Inferior"
@@ -258,6 +287,10 @@ msgstr "Ancho de CI"
 #: mCOR/options/plotMetL/circle.title
 msgid "Circle"
 msgstr "Círculo"
+
+#: R/mmlp.b.R
+msgid "Classification Accuracy"
+msgstr ""
 
 #: mMF/results/estim/mars.title
 msgid "Classify missing at random (MAR)"
@@ -322,6 +355,7 @@ msgstr ""
 "la afección, elegido al azar, tenga una clasificación correcta más alta que "
 "un paciente sin la afección, elegido al azar"
 
+#: mMLP/results/text.title
 #: mROC/results/text.title
 msgid "Conditions"
 msgstr "Condiciones"
@@ -339,6 +373,11 @@ msgstr "Intervalo de confianza (solo Pearson)"
 #: mCOR/options/ciWidth.title
 msgid "Confidence interval width"
 msgstr "Ancho del intervalo de confianza"
+
+#: mMLP/options/show_matrix.title
+#: mMLP/results/matrixTable.title
+msgid "Confusion Matrix"
+msgstr ""
 
 #: mCOR/options/hyp/corr.title
 msgid "Correlated"
@@ -389,6 +428,24 @@ msgstr "Correlaciones"
 msgid "Correlations between variables"
 msgstr "Correlaciones entre variables"
 
+#: mMLP/options/covs.title
+#: mMLP/ui[0][1].label
+msgid "Covariates (Continuous Predictors)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Cross-Entropy Loss"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Cross-Validation"
+msgstr ""
+
+#: mMLP/options/cv_folds.title
+#: mMLP/ui[2]/cv_folds.label
+msgid "Cross-Validation Folds (K)"
+msgstr ""
+
 #: mMF/results/estim/mcar.columns.title
 msgid "D²"
 msgstr "D²"
@@ -397,6 +454,10 @@ msgstr "D²"
 msgid "Dark2"
 msgstr "Oscuro2"
 
+#: mMLP/options/roc_unit/decimal.title
+msgid "Decimal (0 to 1)"
+msgstr ""
+
 #: R/mui.b.R
 msgid "decision"
 msgstr "decisión"
@@ -404,6 +465,16 @@ msgstr "decisión"
 #: mMF/results/estim/mcar.columns.title
 msgid "Degree of Freedom (df)"
 msgstr "Grado de Libertad (df)"
+
+#: mPWR/options/df_chisq.title
+#: mPWR/ui[1]/df_chisq.label
+msgid "Degrees of freedom"
+msgstr ""
+
+#: mMLP/options/dep.title
+#: mMLP/ui[0][0].label
+msgid "Dependent Variable (Target)"
+msgstr ""
 
 #: mPWR/options/design.title
 msgid "Design"
@@ -444,8 +515,24 @@ msgid "Effect size measure: Cohen's d"
 msgstr "Medida de magnitud del efecto: d de Cohen"
 
 #: R/mpwr.b.R
+msgid "Effect size measure: Cohen's w"
+msgstr ""
+
+#: R/mpwr.b.R
 msgid "Effect size measure: correlation coefficient (r)"
 msgstr "Medida de magnitud del efecto: coeficiente de correlación (r)"
+
+#: R/mpwr.b.R
+msgid "Effect size measure: Eta-squared (η²)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "Effect size measure: Odds Ratio"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "Effect size measure: R-squared change (f²)"
+msgstr ""
 
 #: mCOR/options/plotMetU/ellipse.title
 #: mCOR/options/plotMetL/ellipse.title
@@ -460,6 +547,10 @@ msgstr "Tabla de datos vacía"
 #: mCOR/options/plotMetL/empty.title
 msgid "Emtpy"
 msgstr "Vacío"
+
+#: R/mmlp.b.R
+msgid "Error during neural network fitting: "
+msgstr ""
 
 #: mMF/results/imput/errors.title
 msgid "Estimated out-of-bag (OOB) imputation error"
@@ -478,6 +569,15 @@ msgstr "Explicativa"
 #: R/mmf.b.R
 msgid "Explanatory - variable corresponding to MAR with minimal p<sub>value</sub>."
 msgstr "Explicativa - variable correspondiendo con MAR con minimal p<sub>valor</sub>."
+
+#: R/mmlp.b.R
+msgid "F1-Score"
+msgstr ""
+
+#: mMLP/options/factors.title
+#: mMLP/ui[0][2].label
+msgid "Factors (Categorical Predictors)"
+msgstr ""
 
 #: mCOR/options/plotOrder/FPC.title
 msgid "First principal component"
@@ -529,6 +629,27 @@ msgstr "Demostración de Clasificación Salud/Enfermo ROC"
 msgid "HI ROC classification"
 msgstr "Clasificación ROC HI"
 
+#: mMLP/options/activation.title
+#: mMLP/ui[1]/activation.label
+msgid "Hidden Activation Function"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Hidden Layer"
+msgstr ""
+
+#: mMLP/options/hidden_structure.title
+msgid "Hidden Layer Structure"
+msgstr ""
+
+#: mMLP/ui[1]/hidden_structure.label
+msgid "Hidden Layer Structure (e.g., 8 or 10,5)"
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "Hidden Layers"
+msgstr ""
+
 #: mCOR/options/hclust.title
 msgid "Hierarchical clustering"
 msgstr "Racimo jerárquico"
@@ -540,6 +661,23 @@ msgstr "Árbol racimo jerárquico"
 #: mCOR/options/adjust/hochberg.title
 msgid "Hochberg (1988)"
 msgstr "Hochberg (1988)"
+
+#: mMLP/results/infoTable.columns.title
+msgid "Hold-out Accuracy (%)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Hold-out Validation (AUC = "
+msgstr ""
+
+#: mMLP/options/partition/holdout.title
+msgid "Hold-out Validation Split"
+msgstr ""
+
+#: mMLP/options/val_split.title
+#: mMLP/ui[2]/val_split.label
+msgid "Hold-out Validation Split (%)"
+msgstr ""
 
 #: mCOR/options/adjust/holm.title
 msgid "Holm (1979)"
@@ -556,6 +694,11 @@ msgstr "Hipótesis"
 #: package/datasets/Outliersidentificationandremoval.description
 msgid "Identification, analysis and removal of data outliers by groups"
 msgstr "Identificación, análisis y retirada de datos atípicos por grupos"
+
+#: R/mmlp.b.R
+#: mMLP/options/out_activation/identity.title
+msgid "Identity (Linear)"
+msgstr ""
 
 #: R/mmf.b.R
 msgid ""
@@ -619,6 +762,15 @@ msgstr "Trama influx-outflux para patrones de datos ausentes"
 msgid "Influx*"
 msgstr "Influx*"
 
+#: mMLP/options/rang.title
+#: mMLP/ui[1]/rang.label
+msgid "Initial Weights Range"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Input Layer"
+msgstr ""
+
 #: mCOR/options/clustMat.title
 #: mCOR/results/rplots.title
 msgid "Intercluster Matrices"
@@ -643,6 +795,12 @@ msgstr "Método de determinación de intervalo"
 msgid "Intervals Estimation"
 msgstr "Estimación de Intervalos"
 
+#: R/mmlp.b.R
+msgid ""
+"Invalid Hidden Layer Structure. Please enter comma-separated positive "
+"integers (e.g., 8 or 10,5)."
+msgstr ""
+
 #: mOUT/options/fence.title
 msgid "IQR fence height"
 msgstr "Altura de la valla IQR"
@@ -657,8 +815,10 @@ msgstr "Vallas de IQR Tukey"
 #: package/analyses/mOUT.menuGroup
 #: package/analyses/mUI.menuGroup
 #: package/analyses/mPWR.menuSubgroup
+#: package/analyses/mMLP.menuGroup
 #: mCOR/options.menuGroup
 #: mMF/options.menuGroup
+#: mMLP/options.menuGroup
 #: mOUT/options.menuGroup
 #: mPWR/options.menuSubgroup
 #: mROC/options.menuGroup
@@ -670,6 +830,18 @@ msgstr "jYS"
 msgid "jYS Extended Functions"
 msgstr "Funciones jYS Extendidas"
 
+#: mMLP/options/partition/kfold.title
+msgid "K-Fold Cross-Validation"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "K-Fold Cross-Validation (AUC = "
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "K-Fold CV Accuracy (%)"
+msgstr ""
+
 #: mCOR/options/method/kendall.title
 msgid "Kendall (τ)"
 msgstr "Kendall (τ)"
@@ -678,6 +850,10 @@ msgstr "Kendall (τ)"
 #: mCOR/results/matrix.columns.content
 msgid "Kendall Tau"
 msgstr "Tau de Kendall"
+
+#: mMLP/options/show_curve.title
+msgid "Learning Curve"
+msgstr ""
 
 #: mROC/options/legacy.title
 msgid "Legacy format of Specificity axis"
@@ -695,9 +871,19 @@ msgstr "Nivel"
 msgid "Line width"
 msgstr "Anchura de línea"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/linear.title
+msgid "Linear Regression (F-Test)"
+msgstr ""
+
 #: mPWR/results/text.title
 msgid "Log / Errors"
 msgstr "Errores / Registro"
+
+#: R/mpwr.b.R
+#: mPWR/options/design/logistic.title
+msgid "Logistic Regression (Wald Z-Test)"
+msgstr ""
 
 #: R/mout.b.R
 msgid "Lower fence"
@@ -758,6 +944,16 @@ msgstr "Marcar significancia *<0.05, **<0.01, ***<0.001"
 msgid "Matrix #{i}"
 msgstr "Matriz #{i}"
 
+#: mMLP/results/infoTable.columns.title
+msgid "Max Iterations"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/options/maxit.title
+#: mMLP/ui[1]/maxit.label
+msgid "Max Iterations (Epochs)"
+msgstr ""
+
 #: mMF/options/maxiter.title
 msgid "Maximum number of iterations"
 msgstr "Número máximo de iteraciones"
@@ -794,6 +990,14 @@ msgstr "Enlace McQuitty (WPGMA)"
 msgid "Mean"
 msgstr "Media"
 
+#: mMLP/results/importanceTable.columns.title
+msgid "Mean Decrease in Accuracy"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Mean Decrease in Accuracy (%)"
+msgstr ""
+
 #: R/mout.b.R
 msgid "Median"
 msgstr "Mediana"
@@ -807,6 +1011,10 @@ msgstr "Enlace mediano"
 #: mUI/ui[1][3].label
 msgid "Method"
 msgstr "Método"
+
+#: mMLP/results/statsTable.columns.title
+msgid "Metric"
+msgstr ""
 
 #: mPWR/options/es.title
 #: mPWR/ui[1]/es.label
@@ -876,6 +1084,35 @@ msgstr "missRanger (2021)"
 msgid "Mixed Densities"
 msgstr "Densidades Mezcladas"
 
+#: package/analyses/mMLP.title
+#: package/analyses/mMLP.menuTitle
+#: mMLP/options.title
+#: mMLP/options.menuTitle
+#: mMLP/ui.title
+#: mMLP/results.title
+msgid "MLP Classifier"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "MLP Classifier Learning Curve"
+msgstr ""
+
+#: mMLP/results/curvePlot.title
+msgid "MLP Learning Curve"
+msgstr ""
+
+#: mMLP/results/topoPlot.title
+msgid "MLP Network Topology"
+msgstr ""
+
+#: mMLP/results/infoTable.title
+msgid "Model Information & Accuracy"
+msgstr ""
+
+#: mMLP/ui[1].label
+msgid "Model Parameters"
+msgstr ""
+
 #: mOUT/options/outlcheck/mZS.title
 msgid "Modified Z-score (Hampel filter)"
 msgstr "Puntuación-Z modificada (filtro Hampel)"
@@ -942,6 +1179,34 @@ msgstr "N1"
 msgid "N2"
 msgstr "N2"
 
+#: mMLP/results/matrixTable.columns.title
+msgid "Negative Class"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Negative Predictive Value (NPV)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Negative Weight"
+msgstr ""
+
+#: mMLP/options/show_topo.title
+msgid "Network Topology / Architecture Diagram"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Neural Network Architecture"
+msgstr ""
+
+#: package/datasets/NeuralNetworkClassification.name
+msgid "Neural Network Classification"
+msgstr ""
+
+#: package/datasets/NeuralNetworkClassification.description
+msgid "Neural Network Classifier (multilayer perceptron) demonstration"
+msgstr ""
+
 #: mUI/options/model/none.title
 msgid "Non-parametric"
 msgstr "No paramétrico"
@@ -974,6 +1239,16 @@ msgid ""
 msgstr ""
 "Valores no ausentes del número de candidato para muestra desde el "
 "significado de pasos predictivos coincididos. 0 para evitar este paso"
+
+#: mPWR/options/k_covariates.title
+#: mPWR/ui[1]/k_covariates.label
+msgid "Number of covariates"
+msgstr ""
+
+#: mPWR/options/factor_levels.title
+#: mPWR/ui[1]/factor_levels.label
+msgid "Number of factor levels/groups"
+msgstr ""
 
 #: R/mmf.b.R
 msgid "Number of missing entries"
@@ -1015,6 +1290,7 @@ msgstr "Correlación para Una Muestra (Pearson)"
 msgid "One Sample Correlation (Spearman)"
 msgstr "Correlación para Una Muestra (Spearman)"
 
+#: R/mcor.b.R
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/one.sided.title
 msgid "one-tailed"
@@ -1067,9 +1343,22 @@ msgstr "Índices de valores atípicos"
 msgid "Outliers removal"
 msgstr "Eliminación de valores atípicos"
 
+#: mMLP/options/out_activation.title
+#: mMLP/ui[1]/out_activation.label
+msgid "Output Activation Function"
+msgstr ""
+
 #: mOUT/ui[1][1].label
 msgid "Output information"
 msgstr "Información de salida"
+
+#: R/mmlp.b.R
+msgid "Output Layer"
+msgstr ""
+
+#: mMLP/ui[3].label
+msgid "Outputs & Evaluation"
+msgstr ""
 
 #: mCOR/options/pval.title
 #: mCOR/results/matrix.columns.content
@@ -1096,6 +1385,11 @@ msgstr "Muestras Emparejadas (Student)"
 msgid "Paired Samples (Wilcoxon)"
 msgstr "Muestras Emparejadas (Wilcoxon)"
 
+#: mMLP/options/partition.title
+#: mMLP/ui[2]/partition.label
+msgid "Partition Method"
+msgstr ""
+
 #: mROC/options/palBrewer/Pastel1.title
 msgid "Pastel1"
 msgstr "Pastel1"
@@ -1121,6 +1415,18 @@ msgstr "r de Pearson"
 msgid "per pattern"
 msgstr "por patrón"
 
+#: mMLP/options/roc_unit/percent.title
+msgid "Percentage (%)"
+msgstr ""
+
+#: mMLP/results/statsTable.title
+msgid "Performance Statistics"
+msgstr ""
+
+#: mMLP/options/show_imp.title
+msgid "Permutation Importance"
+msgstr ""
+
 #: mMF/results/imput/errors.columns.title
 msgid "PFC"
 msgstr "PFC"
@@ -1135,6 +1441,14 @@ msgstr ""
 #: mCOR/options/plotMetL/pie.title
 msgid "Pie"
 msgstr "Tarta"
+
+#: R/mmlp.b.R
+msgid "Please select a dependent variable (target)."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Please select at least one predictor variable (factor or covariate)."
+msgstr ""
 
 #: mUI/options/isTGR.title
 msgid "Plot"
@@ -1162,6 +1476,14 @@ msgstr "Gráficos"
 #: mROC/options/polygon.title
 msgid "Polygon"
 msgstr "Polígono"
+
+#: mMLP/results/matrixTable.columns.title
+msgid "Positive Class"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Positive Weight"
+msgstr ""
 
 #: R/mpwr.b.R
 #: package/analyses/mPWR.menuGroup
@@ -1202,15 +1524,34 @@ msgstr "Curva de Potencia (Potencia según N)"
 msgid "PPV - Positive Predictive Value of the positive class TP/(TN+FN)"
 msgstr "PPV - Valor predictivo positivo de la clase positiva TP/(TN+FN)"
 
+#: R/mmlp.b.R
+msgid "Precision"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Predicted"
+msgstr ""
+
 #: mMF/options/pmmk.title
 msgid "Predictive Mean Matching (PMM) steps"
 msgstr "Pasos del método de coincidencia predictiva de medias (PMM)"
 
+#: R/mmlp.b.R
+#: mMLP/results/importanceTable.columns.title
 #: mUI/results/stat/uistat.columns.title
 #: mUI/results/stat/mcistat.columns.title
 #: mUI/results/stat/intstat.columns.title
 msgid "Predictor"
 msgstr "Predictor"
+
+#: R/mmlp.b.R
+#: mMLP/results/importanceTable.title
+msgid "Predictor Importance"
+msgstr ""
+
+#: mMLP/results/importancePlot.title
+msgid "Predictor Importance Chart"
+msgstr ""
 
 #: mROC/options/vars.title
 #: mROC/ui[0][0].label
@@ -1245,6 +1586,15 @@ msgstr "Propósito del Cálculo"
 msgid "PVU - proportion of variance unexplained 1-R² (for Continuous variables);"
 msgstr "PVU - proporción de varianza no explicada 1-R² (para Variables Continuas);"
 
+#: mPWR/options/r2_predictor.title
+#: mPWR/ui[1]/r2_predictor.label
+msgid "R² of predictor X with other covariates"
+msgstr ""
+
+#: mMLP/results/importanceTable.columns.title
+msgid "Rank"
+msgstr ""
+
 #: mUI/options/refval.title
 msgid "Reference level"
 msgstr "Nivel referencial"
@@ -1252,6 +1602,10 @@ msgstr "Nivel referencial"
 #: mPWR/ui[1]/n_ratio.label
 msgid "Relative size of group 2 to group 1"
 msgstr "Tamaño relativo del grupo 2 respecto al grupo 1"
+
+#: mMLP/options/activation/relu.title
+msgid "ReLU"
+msgstr ""
 
 #: mOUT/options/remOut.title
 #: mOUT/results/remOut.title
@@ -1273,6 +1627,19 @@ msgstr "Derecha"
 #: mMF/options/seed.title
 msgid "RNG seed value"
 msgstr "Valor semillero RNG"
+
+#: mMLP/options/show_roc.title
+msgid "ROC Analysis"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/results/rocPlot.title
+msgid "ROC Analysis Comparison"
+msgstr ""
+
+#: mMLP/options/roc_unit.title
+msgid "ROC Axis Units"
+msgstr ""
 
 #: mROC/options/sepROC.title
 #: mROC/results/plots.title
@@ -1309,6 +1676,10 @@ msgstr "Estimación ROC para demostración de modelos logísticos binomiales"
 msgid "ROC graphs"
 msgstr "Grafos ROC"
 
+#: mMLP/options/roc_x.title
+msgid "ROC X-axis Coordinate"
+msgstr ""
+
 #: R/mpwr.b.R
 msgid "Sample Size (N)"
 msgstr "Tamaño de Muestra (N)"
@@ -1342,6 +1713,7 @@ msgstr "Se - sensibilidad de las clasificaciones positivas y negativas TP/(TP+FN
 msgid "Select group"
 msgstr "Seleccionar grupo"
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
 msgid "Sensitivity"
@@ -1350,6 +1722,10 @@ msgstr "Sensibilidad"
 #: R/mroc.b.R
 msgid "Sensitivity (%)"
 msgstr "Sensibilidad (%)"
+
+#: R/mmlp.b.R
+msgid "Sensitivity / Recall"
+msgstr ""
 
 #: mUI/options/uiSe.title
 msgid "Sensitivity inside UI <"
@@ -1376,6 +1752,12 @@ msgstr "Conjunto3"
 msgid "Shade"
 msgstr "Matiz"
 
+#: R/mmlp.b.R
+#: mMLP/options/activation/sigmoid.title
+#: mMLP/options/out_activation/sigmoid.title
+msgid "Sigmoid"
+msgstr ""
+
 #: mCOR/options/signif.title
 msgid "Significance"
 msgstr "Significado"
@@ -1396,6 +1778,11 @@ msgstr "Títulos Inclinados"
 msgid "SNPV - standardized negative predictive value of the negative class"
 msgstr "SNPV - valor predictivo negativo estandarizado de la clase negativa"
 
+#: mMLP/options/activation/softmax.title
+#: mMLP/options/out_activation/softmax.title
+msgid "Softmax"
+msgstr ""
+
 #: R/mui.b.R
 msgid "Sp - specificity of the positive and negative classifications TN/(TN+FN)"
 msgstr "Sp - especificidad de las clasificaciones positivas y negativas TN/(TN+FN)"
@@ -1409,8 +1796,10 @@ msgstr "Spearman (ρ)"
 msgid "Spearman's Rho"
 msgstr "Rho de Spearman"
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
+#: mMLP/options/roc_x/spec.title
 msgid "Specificity"
 msgstr "Especificidad"
 
@@ -1466,9 +1855,18 @@ msgstr "Tablas"
 msgid "Tails"
 msgstr "Colas"
 
+#: mMLP/options/activation/tanh.title
+msgid "Tanh"
+msgstr ""
+
 #: mOUT/options/norm.title
 msgid "Test for normality"
 msgstr "Prueba de normalidad"
+
+#: mPWR/options/k_tested.title
+#: mPWR/ui[1]/k_tested.label
+msgid "Tested predictors"
+msgstr ""
 
 #: R/mpwr.b.R
 msgid "The 'pwrss' package is not installed. Please install it in R."
@@ -1488,6 +1886,14 @@ msgstr ""
 "clasificación ROC sólo se puede realizar en variables clasificadoras con dos "
 "niveles."
 
+#: R/mmlp.b.R
+msgid "The dataset has too few complete cases to train the neural network."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "The dependent variable must have exactly 2 levels (binary classification)."
+msgstr ""
+
 #: package/datasets/UncertainInterval(UI).description
 msgid "Three-Way threshold determination in test results"
 msgstr "Determinación del umbral de tres vías en los resultados de las pruebas"
@@ -1506,6 +1912,24 @@ msgstr "Umbral en Youden"
 msgid "Total number of missing entries {}"
 msgstr "Número total de {} apuntes ausentes"
 
+#: mPWR/options/k_total.title
+#: mPWR/ui[1]/k_total.label
+msgid "Total predictors"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/results/statsTable.columns.title
+msgid "Training"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Training (AUC = "
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "Training Accuracy (%)"
+msgstr ""
+
 #: R/mpwr.b.R
 msgid "two one-tailed"
 msgstr "dos una-cola"
@@ -1520,13 +1944,10 @@ msgstr "Curvas ROC de dos grafos"
 msgid "two-tailed"
 msgstr "dos-colas"
 
+#: mPWR/options/plot_err.title
 #: mPWR/results/plot.title
 msgid "Type 1 and Type 2 Error Plots"
 msgstr "Gráficos de Error de Tipo 1 y Tipo 2"
-
-#: mPWR/options/plot_err.title
-msgid "Type 1 and Type 2 error plots"
-msgstr "gráficos de error de Tipo 1 y Tipo 2"
 
 #: R/mui.b.R
 msgid "UI"
@@ -1595,6 +2016,15 @@ msgstr "Umbral superior"
 msgid "User Defined"
 msgstr "Definido por el Usuario"
 
+#: R/mmlp.b.R
+#: mMLP/results/statsTable.columns.title
+msgid "Validation"
+msgstr ""
+
+#: mMLP/ui[2].label
+msgid "Validation Settings"
+msgstr ""
+
 #: mMF/results/estim/mars.columns.title
 #: mMF/results/imput/errors.columns.title
 #: mOUT/results/stat/outstat.columns.title
@@ -1635,6 +2065,22 @@ msgstr "Enlace D2 de Ward"
 msgid "Ward´s Linkage"
 msgstr "Enlace de Ward"
 
+#: mMLP/results/infoTable.columns.title
+msgid "Weight Decay"
+msgstr ""
+
+#: mMLP/ui[1]/decay.label
+msgid "Weight Decay (L2 Regularization)"
+msgstr ""
+
+#: mMLP/options/decay.title
+msgid "Weight Decay (Regularization)"
+msgstr ""
+
+#: mROC/options/cmpDeLong/w05.title
+msgid "With 0.5"
+msgstr ""
+
 #: mROC/options/cmpDeLong/wcontr.title
 msgid "With control"
 msgstr "Con control"
@@ -1646,6 +2092,10 @@ msgstr "con datos ausentes sobre otras variables"
 #: R/mmf.b.R
 msgid "with observed data on other variables"
 msgstr "con datos observados sobre otras variables"
+
+#: mMLP/ui[3]/show_roc/roc_x.label
+msgid "X-axis Coordinate"
+msgstr ""
 
 #: mROC/options/theBest/bestY.title
 msgid "Youden Best"

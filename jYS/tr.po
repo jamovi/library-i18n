@@ -3,8 +3,8 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-05-12 16:14+0000\n"
 "Last-Translator: Kehribar <103407696+dpentx@users.noreply.github.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/jamovi/module-"
-"jys/tr/>\n"
+"Language-Team: Turkish "
+"<https://hosted.weblate.org/projects/jamovi/module-jys/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -36,10 +36,6 @@ msgstr "{varType} ile doldurulmuş değerler"
 #: R/mout.b.R
 msgid "{varType} without outliers"
 msgstr "{varType} aykırı değerler olmadan"
-
-#: R/mcor.b.R
-msgid "* p < .05, ** p < .01, *** p < .001, one-tailed"
-msgstr "* p < .05, ** p < .01, *** p < .001, tek yönlü"
 
 #: R/mmf.b.R
 msgid "**connection of a variable's observed data"
@@ -89,9 +85,15 @@ msgstr "0 - otomatik"
 msgid "0 ="
 msgstr "0 ="
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
+#: mMLP/options/roc_x/1spec.title
 msgid "1 - Specificity"
 msgstr "1 - Özgüllük"
+
+#: mMLP/options/hidden_structure.default
+msgid "10,5"
+msgstr ""
 
 #: R/mroc.b.R
 msgid "100 - Specificity (%)"
@@ -129,6 +131,14 @@ msgstr "Aralık"
 msgid "Accent"
 msgstr "Vurgu"
 
+#: R/mmlp.b.R
+msgid "Actual"
+msgstr ""
+
+#: mMLP/results/matrixTable.columns.title
+msgid "Actual \\ Predicted"
+msgstr ""
+
 #: mCOR/options/clustMet.title
 msgid "Agglomeration method"
 msgstr "Kümeleme yöntemi"
@@ -158,9 +168,18 @@ msgstr "MAR'ların bir dizisi"
 msgid "Angular order eigenvectors"
 msgstr "Açısal sıra özvektörleri"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/anova.title
+msgid "ANOVA / ANCOVA (F-Test)"
+msgstr ""
+
 #: mCOR/options/clustMet/average.title
 msgid "Average Linkage (UPGMA)"
 msgstr "Ortalama Bağlantı (UPGMA)"
+
+#: mMLP/ui[3]/show_roc/roc_unit.label
+msgid "Axis Units"
+msgstr ""
 
 #: R/mui.b.R
 #, fuzzy
@@ -171,6 +190,11 @@ msgstr "Denge"
 #, fuzzy
 msgid "Balance - balance between correct and incorrect classified (TP+TN)/(FP+FN)"
 msgstr "Denge - doğru ve yanlış sınıflandırma arasındaki denge (TP+TN)/(FP+FN)"
+
+#: mPWR/options/base_prob.title
+#: mPWR/ui[1]/base_prob.label
+msgid "Base probability"
+msgstr ""
 
 #: package/datasets/BCModelsROCEstimation.name
 msgid "BC Models ROC Estimation"
@@ -247,6 +271,11 @@ msgstr "Ağırlık Merkezi Bağlantısı (UPGMC)"
 msgid "CHD Models ROC Estimation"
 msgstr "CHD Modelleri ROC Tahmini"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/chisq.title
+msgid "Chi-square Goodness-of-Fit / Independence (Chi-square Test)"
+msgstr ""
+
 #: mCOR/results/matrix.columns.content
 msgid "CI Lower"
 msgstr "GA Alt"
@@ -267,6 +296,10 @@ msgstr "GA genişliği"
 #: mCOR/options/plotMetL/circle.title
 msgid "Circle"
 msgstr "Daire"
+
+#: R/mmlp.b.R
+msgid "Classification Accuracy"
+msgstr ""
 
 #: mMF/results/estim/mars.title
 msgid "Classify missing at random (MAR)"
@@ -332,6 +365,7 @@ msgstr ""
 "Uyum - C-İstatistiği veya AUC. Rastgele seçilen bir hasta ile durumun "
 "bulunduğu bir hasta arasındaki doğru sıralama olasılığı"
 
+#: mMLP/results/text.title
 #: mROC/results/text.title
 msgid "Conditions"
 msgstr "Koşullar"
@@ -349,6 +383,11 @@ msgstr "Güven aralığı (sadece Pearson)"
 #: mCOR/options/ciWidth.title
 msgid "Confidence interval width"
 msgstr "Güven aralığı genişliği"
+
+#: mMLP/options/show_matrix.title
+#: mMLP/results/matrixTable.title
+msgid "Confusion Matrix"
+msgstr ""
 
 #: mCOR/options/hyp/corr.title
 msgid "Correlated"
@@ -399,6 +438,24 @@ msgstr "Korelasyonlar"
 msgid "Correlations between variables"
 msgstr "Değişkenler arası korelasyonlar"
 
+#: mMLP/options/covs.title
+#: mMLP/ui[0][1].label
+msgid "Covariates (Continuous Predictors)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Cross-Entropy Loss"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Cross-Validation"
+msgstr ""
+
+#: mMLP/options/cv_folds.title
+#: mMLP/ui[2]/cv_folds.label
+msgid "Cross-Validation Folds (K)"
+msgstr ""
+
 #: mMF/results/estim/mcar.columns.title
 msgid "D²"
 msgstr "D²"
@@ -406,6 +463,10 @@ msgstr "D²"
 #: mROC/options/palBrewer/Dark2.title
 msgid "Dark2"
 msgstr "Karanlık2"
+
+#: mMLP/options/roc_unit/decimal.title
+msgid "Decimal (0 to 1)"
+msgstr ""
 
 #: R/mui.b.R
 #, fuzzy
@@ -417,6 +478,16 @@ msgstr "karar"
 #| msgid "Degree of<br>Freedom (df)"
 msgid "Degree of Freedom (df)"
 msgstr "Serbestlik<br>Derecesi (sd)"
+
+#: mPWR/options/df_chisq.title
+#: mPWR/ui[1]/df_chisq.label
+msgid "Degrees of freedom"
+msgstr ""
+
+#: mMLP/options/dep.title
+#: mMLP/ui[0][0].label
+msgid "Dependent Variable (Target)"
+msgstr ""
 
 #: mPWR/options/design.title
 #, fuzzy
@@ -464,9 +535,25 @@ msgid "Effect size measure: Cohen's d"
 msgstr "Etki büyüklüğü ölçüsü: Cohen'in d'si"
 
 #: R/mpwr.b.R
+msgid "Effect size measure: Cohen's w"
+msgstr ""
+
+#: R/mpwr.b.R
 #, fuzzy
 msgid "Effect size measure: correlation coefficient (r)"
 msgstr "Etki büyülülüğü ölçümü: korelasyon katsayısı (r)"
+
+#: R/mpwr.b.R
+msgid "Effect size measure: Eta-squared (η²)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "Effect size measure: Odds Ratio"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "Effect size measure: R-squared change (f²)"
+msgstr ""
 
 #: mCOR/options/plotMetU/ellipse.title
 #: mCOR/options/plotMetL/ellipse.title
@@ -481,6 +568,10 @@ msgstr "Boş veri tablosu"
 #: mCOR/options/plotMetL/empty.title
 msgid "Emtpy"
 msgstr "Boş"
+
+#: R/mmlp.b.R
+msgid "Error during neural network fitting: "
+msgstr ""
 
 #: mMF/results/imput/errors.title
 msgid "Estimated out-of-bag (OOB) imputation error"
@@ -499,6 +590,15 @@ msgstr "Açıklayıcı"
 #: R/mmf.b.R
 msgid "Explanatory - variable corresponding to MAR with minimal p<sub>value</sub>."
 msgstr "Açıklayıcı - minimal p<sub>değeri</sub> ile MAR'a karşılık gelen değişken."
+
+#: R/mmlp.b.R
+msgid "F1-Score"
+msgstr ""
+
+#: mMLP/options/factors.title
+#: mMLP/ui[0][2].label
+msgid "Factors (Categorical Predictors)"
+msgstr ""
 
 #: mCOR/options/plotOrder/FPC.title
 msgid "First principal component"
@@ -549,6 +649,27 @@ msgstr "Sağlıklı/Hasta ROC Sınıflandırması demonstrasyonu"
 msgid "HI ROC classification"
 msgstr "HI ROC sınıflandırması"
 
+#: mMLP/options/activation.title
+#: mMLP/ui[1]/activation.label
+msgid "Hidden Activation Function"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Hidden Layer"
+msgstr ""
+
+#: mMLP/options/hidden_structure.title
+msgid "Hidden Layer Structure"
+msgstr ""
+
+#: mMLP/ui[1]/hidden_structure.label
+msgid "Hidden Layer Structure (e.g., 8 or 10,5)"
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "Hidden Layers"
+msgstr ""
+
 #: mCOR/options/hclust.title
 msgid "Hierarchical clustering"
 msgstr "Hiyerarşik kümeleme"
@@ -560,6 +681,23 @@ msgstr "Hiyerarşik kümeleme ağacı"
 #: mCOR/options/adjust/hochberg.title
 msgid "Hochberg (1988)"
 msgstr "Hochberg (1988)"
+
+#: mMLP/results/infoTable.columns.title
+msgid "Hold-out Accuracy (%)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Hold-out Validation (AUC = "
+msgstr ""
+
+#: mMLP/options/partition/holdout.title
+msgid "Hold-out Validation Split"
+msgstr ""
+
+#: mMLP/options/val_split.title
+#: mMLP/ui[2]/val_split.label
+msgid "Hold-out Validation Split (%)"
+msgstr ""
 
 #: mCOR/options/adjust/holm.title
 msgid "Holm (1979)"
@@ -576,6 +714,11 @@ msgstr "Hipotez"
 #: package/datasets/Outliersidentificationandremoval.description
 msgid "Identification, analysis and removal of data outliers by groups"
 msgstr "Gruplara göre veri aykırı değerlerinin tanımlanması, analizi ve kaldırılması"
+
+#: R/mmlp.b.R
+#: mMLP/options/out_activation/identity.title
+msgid "Identity (Linear)"
+msgstr ""
 
 #: R/mmf.b.R
 msgid ""
@@ -641,6 +784,15 @@ msgstr "Eksik veri desenleri için giriş-çıkış grafiği"
 msgid "Influx*"
 msgstr "Giriş*"
 
+#: mMLP/options/rang.title
+#: mMLP/ui[1]/rang.label
+msgid "Initial Weights Range"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Input Layer"
+msgstr ""
+
 #: mCOR/options/clustMat.title
 #: mCOR/results/rplots.title
 msgid "Intercluster Matrices"
@@ -671,6 +823,12 @@ msgstr "Kümeleme yöntemi"
 msgid "Intervals Estimation"
 msgstr "Eksik Değerler Tahmini"
 
+#: R/mmlp.b.R
+msgid ""
+"Invalid Hidden Layer Structure. Please enter comma-separated positive "
+"integers (e.g., 8 or 10,5)."
+msgstr ""
+
 #: mOUT/options/fence.title
 msgid "IQR fence height"
 msgstr "IQR sınır yüksekliği"
@@ -685,8 +843,10 @@ msgstr "IQR Tukey sınırları"
 #: package/analyses/mOUT.menuGroup
 #: package/analyses/mUI.menuGroup
 #: package/analyses/mPWR.menuSubgroup
+#: package/analyses/mMLP.menuGroup
 #: mCOR/options.menuGroup
 #: mMF/options.menuGroup
+#: mMLP/options.menuGroup
 #: mOUT/options.menuGroup
 #: mPWR/options.menuSubgroup
 #: mROC/options.menuGroup
@@ -698,6 +858,18 @@ msgstr "jYS"
 msgid "jYS Extended Functions"
 msgstr "jYS Genişletilmiş Fonksiyonlar"
 
+#: mMLP/options/partition/kfold.title
+msgid "K-Fold Cross-Validation"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "K-Fold Cross-Validation (AUC = "
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "K-Fold CV Accuracy (%)"
+msgstr ""
+
 #: mCOR/options/method/kendall.title
 msgid "Kendall (τ)"
 msgstr "Kendall (τ)"
@@ -706,6 +878,10 @@ msgstr "Kendall (τ)"
 #: mCOR/results/matrix.columns.content
 msgid "Kendall Tau"
 msgstr "Kendall Tau"
+
+#: mMLP/options/show_curve.title
+msgid "Learning Curve"
+msgstr ""
 
 #: mROC/options/legacy.title
 msgid "Legacy format of Specificity axis"
@@ -724,10 +900,20 @@ msgstr "Seviye"
 msgid "Line width"
 msgstr "Çizgi genişliği"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/linear.title
+msgid "Linear Regression (F-Test)"
+msgstr ""
+
 #: mPWR/results/text.title
 #, fuzzy
 msgid "Log / Errors"
 msgstr "Günlük / Hatalar"
+
+#: R/mpwr.b.R
+#: mPWR/options/design/logistic.title
+msgid "Logistic Regression (Wald Z-Test)"
+msgstr ""
 
 #: R/mout.b.R
 msgid "Lower fence"
@@ -789,6 +975,16 @@ msgstr "Anlamlılık işareti *<0.05, **<0.01, ***<0.001"
 msgid "Matrix #{i}"
 msgstr "Matris #{i}"
 
+#: mMLP/results/infoTable.columns.title
+msgid "Max Iterations"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/options/maxit.title
+#: mMLP/ui[1]/maxit.label
+msgid "Max Iterations (Epochs)"
+msgstr ""
+
 #: mMF/options/maxiter.title
 msgid "Maximum number of iterations"
 msgstr "Maksimum yineleme sayısı"
@@ -827,6 +1023,14 @@ msgstr "McQuitty Bağlantısı (WPGMA)"
 msgid "Mean"
 msgstr "Ortalama"
 
+#: mMLP/results/importanceTable.columns.title
+msgid "Mean Decrease in Accuracy"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Mean Decrease in Accuracy (%)"
+msgstr ""
+
 #: R/mout.b.R
 msgid "Median"
 msgstr "Medyan"
@@ -840,6 +1044,10 @@ msgstr "Medyan Bağlantı"
 #: mUI/ui[1][3].label
 msgid "Method"
 msgstr "Yöntem"
+
+#: mMLP/results/statsTable.columns.title
+msgid "Metric"
+msgstr ""
 
 #: mPWR/options/es.title
 #: mPWR/ui[1]/es.label
@@ -911,6 +1119,35 @@ msgstr "missRanger (2021)"
 #, fuzzy
 msgid "Mixed Densities"
 msgstr "Karma Yoğunlar"
+
+#: package/analyses/mMLP.title
+#: package/analyses/mMLP.menuTitle
+#: mMLP/options.title
+#: mMLP/options.menuTitle
+#: mMLP/ui.title
+#: mMLP/results.title
+msgid "MLP Classifier"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "MLP Classifier Learning Curve"
+msgstr ""
+
+#: mMLP/results/curvePlot.title
+msgid "MLP Learning Curve"
+msgstr ""
+
+#: mMLP/results/topoPlot.title
+msgid "MLP Network Topology"
+msgstr ""
+
+#: mMLP/results/infoTable.title
+msgid "Model Information & Accuracy"
+msgstr ""
+
+#: mMLP/ui[1].label
+msgid "Model Parameters"
+msgstr ""
 
 #: mOUT/options/outlcheck/mZS.title
 msgid "Modified Z-score (Hampel filter)"
@@ -991,6 +1228,34 @@ msgstr "N"
 msgid "N2"
 msgstr "N"
 
+#: mMLP/results/matrixTable.columns.title
+msgid "Negative Class"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Negative Predictive Value (NPV)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Negative Weight"
+msgstr ""
+
+#: mMLP/options/show_topo.title
+msgid "Network Topology / Architecture Diagram"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Neural Network Architecture"
+msgstr ""
+
+#: package/datasets/NeuralNetworkClassification.name
+msgid "Neural Network Classification"
+msgstr ""
+
+#: package/datasets/NeuralNetworkClassification.description
+msgid "Neural Network Classifier (multilayer perceptron) demonstration"
+msgstr ""
+
 #: mUI/options/model/none.title
 #, fuzzy
 msgid "Non-parametric"
@@ -1027,6 +1292,16 @@ msgid ""
 msgstr ""
 "Tahmini ortalama eşleştirme adımlarında örneklem alınacak aday eksik olmayan "
 "değerlerin sayısı. Bu adımdan kaçınmak için 0"
+
+#: mPWR/options/k_covariates.title
+#: mPWR/ui[1]/k_covariates.label
+msgid "Number of covariates"
+msgstr ""
+
+#: mPWR/options/factor_levels.title
+#: mPWR/ui[1]/factor_levels.label
+msgid "Number of factor levels/groups"
+msgstr ""
 
 #: R/mmf.b.R
 msgid "Number of missing entries"
@@ -1072,6 +1347,7 @@ msgstr "Tek Örnek Korelasyon (Pearson)"
 msgid "One Sample Correlation (Spearman)"
 msgstr "Tek Örnek Korelasyon (Spearman)"
 
+#: R/mcor.b.R
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/one.sided.title
 #, fuzzy
@@ -1127,9 +1403,22 @@ msgstr "Aykırı değer indeksleri"
 msgid "Outliers removal"
 msgstr "Aykırı değer kaldırma"
 
+#: mMLP/options/out_activation.title
+#: mMLP/ui[1]/out_activation.label
+msgid "Output Activation Function"
+msgstr ""
+
 #: mOUT/ui[1][1].label
 msgid "Output information"
 msgstr "Çıktı bilgisi"
+
+#: R/mmlp.b.R
+msgid "Output Layer"
+msgstr ""
+
+#: mMLP/ui[3].label
+msgid "Outputs & Evaluation"
+msgstr ""
 
 #: mCOR/options/pval.title
 #: mCOR/results/matrix.columns.content
@@ -1158,6 +1447,11 @@ msgstr "Çift Örnekler (Student)"
 msgid "Paired Samples (Wilcoxon)"
 msgstr "Çift Örnekler (Wilcoxon)"
 
+#: mMLP/options/partition.title
+#: mMLP/ui[2]/partition.label
+msgid "Partition Method"
+msgstr ""
+
 #: mROC/options/palBrewer/Pastel1.title
 msgid "Pastel1"
 msgstr "Pastel1"
@@ -1183,6 +1477,18 @@ msgstr "Pearson'ın r'si"
 msgid "per pattern"
 msgstr "desen başına"
 
+#: mMLP/options/roc_unit/percent.title
+msgid "Percentage (%)"
+msgstr ""
+
+#: mMLP/results/statsTable.title
+msgid "Performance Statistics"
+msgstr ""
+
+#: mMLP/options/show_imp.title
+msgid "Permutation Importance"
+msgstr ""
+
 #: mMF/results/imput/errors.columns.title
 msgid "PFC"
 msgstr "PFC"
@@ -1195,6 +1501,14 @@ msgstr "PFC - yanlış sınıflandırılan oranı (Nominal ve Sıralı değişke
 #: mCOR/options/plotMetL/pie.title
 msgid "Pie"
 msgstr "Pasta"
+
+#: R/mmlp.b.R
+msgid "Please select a dependent variable (target)."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Please select at least one predictor variable (factor or covariate)."
+msgstr ""
 
 #: mUI/options/isTGR.title
 msgid "Plot"
@@ -1222,6 +1536,14 @@ msgstr "Grafikler"
 #: mROC/options/polygon.title
 msgid "Polygon"
 msgstr "Poligon"
+
+#: mMLP/results/matrixTable.columns.title
+msgid "Positive Class"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Positive Weight"
+msgstr ""
 
 #: R/mpwr.b.R
 #: package/analyses/mPWR.menuGroup
@@ -1269,10 +1591,20 @@ msgstr "Güç Eğrisi (N'ye Göre Güç)"
 msgid "PPV - Positive Predictive Value of the positive class TP/(TN+FN)"
 msgstr "PPV - Pozitif Sınıflandırma Değeri TP/(TN+FN)"
 
+#: R/mmlp.b.R
+msgid "Precision"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Predicted"
+msgstr ""
+
 #: mMF/options/pmmk.title
 msgid "Predictive Mean Matching (PMM) steps"
 msgstr "Tahmini Ortalama Eşleştirme (PMM) adımları"
 
+#: R/mmlp.b.R
+#: mMLP/results/importanceTable.columns.title
 #: mUI/results/stat/uistat.columns.title
 #: mUI/results/stat/mcistat.columns.title
 #: mUI/results/stat/intstat.columns.title
@@ -1280,6 +1612,15 @@ msgstr "Tahmini Ortalama Eşleştirme (PMM) adımları"
 #| msgid "Predictors"
 msgid "Predictor"
 msgstr "Yordayıcılar"
+
+#: R/mmlp.b.R
+#: mMLP/results/importanceTable.title
+msgid "Predictor Importance"
+msgstr ""
+
+#: mMLP/results/importancePlot.title
+msgid "Predictor Importance Chart"
+msgstr ""
 
 #: mROC/options/vars.title
 #: mROC/ui[0][0].label
@@ -1319,6 +1660,15 @@ msgstr "Hesaplama Amacı"
 msgid "PVU - proportion of variance unexplained 1-R² (for Continuous variables);"
 msgstr "PVU - açıklanmayan varyans oranı 1-R² (Sürekli değişkenler için);"
 
+#: mPWR/options/r2_predictor.title
+#: mPWR/ui[1]/r2_predictor.label
+msgid "R² of predictor X with other covariates"
+msgstr ""
+
+#: mMLP/results/importanceTable.columns.title
+msgid "Rank"
+msgstr ""
+
 #: mUI/options/refval.title
 #, fuzzy
 msgid "Reference level"
@@ -1328,6 +1678,10 @@ msgstr "Referans dönemi"
 #, fuzzy
 msgid "Relative size of group 2 to group 1"
 msgstr "1. gruba göre 2. grubun göreli boyutu"
+
+#: mMLP/options/activation/relu.title
+msgid "ReLU"
+msgstr ""
 
 #: mOUT/options/remOut.title
 #: mOUT/results/remOut.title
@@ -1349,6 +1703,19 @@ msgstr "Sağ"
 #: mMF/options/seed.title
 msgid "RNG seed value"
 msgstr "RNG seed değeri"
+
+#: mMLP/options/show_roc.title
+msgid "ROC Analysis"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/results/rocPlot.title
+msgid "ROC Analysis Comparison"
+msgstr ""
+
+#: mMLP/options/roc_unit.title
+msgid "ROC Axis Units"
+msgstr ""
 
 #: mROC/options/sepROC.title
 #: mROC/results/plots.title
@@ -1386,6 +1753,10 @@ msgstr "Binom lojistik modelleri için ROC tahmini demonstrasyonu"
 #: mROC/ui[1].label
 msgid "ROC graphs"
 msgstr "ROC grafikleri"
+
+#: mMLP/options/roc_x.title
+msgid "ROC X-axis Coordinate"
+msgstr ""
 
 #: R/mpwr.b.R
 #, fuzzy
@@ -1425,6 +1796,7 @@ msgstr "Se - pozitif ve negatif sınıflandırmaların duyarlılığı TP/(TP+FN
 msgid "Select group"
 msgstr "Grup seç"
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
 msgid "Sensitivity"
@@ -1433,6 +1805,10 @@ msgstr "Duyarlılık"
 #: R/mroc.b.R
 msgid "Sensitivity (%)"
 msgstr "Duyarlılık (%)"
+
+#: R/mmlp.b.R
+msgid "Sensitivity / Recall"
+msgstr ""
 
 #: mUI/options/uiSe.title
 #, fuzzy
@@ -1463,6 +1839,12 @@ msgstr "Set3"
 msgid "Shade"
 msgstr "Gölge"
 
+#: R/mmlp.b.R
+#: mMLP/options/activation/sigmoid.title
+#: mMLP/options/out_activation/sigmoid.title
+msgid "Sigmoid"
+msgstr ""
+
 #: mCOR/options/signif.title
 msgid "Significance"
 msgstr "Anlamlılık"
@@ -1484,6 +1866,11 @@ msgstr "Eğik Başlıklar"
 msgid "SNPV - standardized negative predictive value of the negative class"
 msgstr "SNPV - Standart Negatif Sınıflandırma Değeri"
 
+#: mMLP/options/activation/softmax.title
+#: mMLP/options/out_activation/softmax.title
+msgid "Softmax"
+msgstr ""
+
 #: R/mui.b.R
 #, fuzzy
 msgid "Sp - specificity of the positive and negative classifications TN/(TN+FN)"
@@ -1498,8 +1885,10 @@ msgstr "Spearman (ρ)"
 msgid "Spearman's Rho"
 msgstr "Spearman's Rho"
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
+#: mMLP/options/roc_x/spec.title
 msgid "Specificity"
 msgstr "Özgüllük"
 
@@ -1560,9 +1949,18 @@ msgstr "Tablolar"
 msgid "Tails"
 msgstr "Kuyruk"
 
+#: mMLP/options/activation/tanh.title
+msgid "Tanh"
+msgstr ""
+
 #: mOUT/options/norm.title
 msgid "Test for normality"
 msgstr "Normallik testi"
+
+#: mPWR/options/k_tested.title
+#: mPWR/ui[1]/k_tested.label
+msgid "Tested predictors"
+msgstr ""
 
 #: R/mpwr.b.R
 #, fuzzy
@@ -1582,6 +1980,14 @@ msgstr ""
 "Sınıflandırma değişkeni '{}' tam olarak iki seviyeye sahip değil; ROC "
 "sınıflandırması yalnızca iki seviyeli sınıflandırma değişkenlerinde "
 "yapılabilir."
+
+#: R/mmlp.b.R
+msgid "The dataset has too few complete cases to train the neural network."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "The dependent variable must have exactly 2 levels (binary classification)."
+msgstr ""
 
 #: package/datasets/UncertainInterval(UI).description
 #, fuzzy
@@ -1604,6 +2010,24 @@ msgstr "Z-skoru için eşik"
 msgid "Total number of missing entries {}"
 msgstr "Toplam eksik giriş sayısı {}"
 
+#: mPWR/options/k_total.title
+#: mPWR/ui[1]/k_total.label
+msgid "Total predictors"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/results/statsTable.columns.title
+msgid "Training"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Training (AUC = "
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "Training Accuracy (%)"
+msgstr ""
+
 #: R/mpwr.b.R
 #, fuzzy
 msgid "two one-tailed"
@@ -1621,15 +2045,11 @@ msgstr "İki Grafik ROC Eğrileri"
 msgid "two-tailed"
 msgstr "iki kuyruklu"
 
+#: mPWR/options/plot_err.title
 #: mPWR/results/plot.title
 #, fuzzy
 msgid "Type 1 and Type 2 Error Plots"
 msgstr "Tip 1 ve Tip 2 Hata Grafikleri"
-
-#: mPWR/options/plot_err.title
-#, fuzzy
-msgid "Type 1 and Type 2 error plots"
-msgstr "Tip 1 ve Tip 2 hata grafikleri"
 
 #: R/mui.b.R
 #, fuzzy
@@ -1709,6 +2129,15 @@ msgstr "Üst eşik"
 msgid "User Defined"
 msgstr "Kullanıcı Tanımlı"
 
+#: R/mmlp.b.R
+#: mMLP/results/statsTable.columns.title
+msgid "Validation"
+msgstr ""
+
+#: mMLP/ui[2].label
+msgid "Validation Settings"
+msgstr ""
+
 #: mMF/results/estim/mars.columns.title
 #: mMF/results/imput/errors.columns.title
 #: mOUT/results/stat/outstat.columns.title
@@ -1750,6 +2179,22 @@ msgstr "Ward'ın D2 Bağlantısı"
 msgid "Ward´s Linkage"
 msgstr "Ward'ın Bağlantısı"
 
+#: mMLP/results/infoTable.columns.title
+msgid "Weight Decay"
+msgstr ""
+
+#: mMLP/ui[1]/decay.label
+msgid "Weight Decay (L2 Regularization)"
+msgstr ""
+
+#: mMLP/options/decay.title
+msgid "Weight Decay (Regularization)"
+msgstr ""
+
+#: mROC/options/cmpDeLong/w05.title
+msgid "With 0.5"
+msgstr ""
+
 #: mROC/options/cmpDeLong/wcontr.title
 msgid "With control"
 msgstr "Kontrol ile"
@@ -1761,6 +2206,10 @@ msgstr "diğer değişkenlerde eksik veri ile"
 #: R/mmf.b.R
 msgid "with observed data on other variables"
 msgstr "diğer değişkenlerde gözlemlenmiş veri ile"
+
+#: mMLP/ui[3]/show_roc/roc_x.label
+msgid "X-axis Coordinate"
+msgstr ""
 
 #: mROC/options/theBest/bestY.title
 msgid "Youden Best"

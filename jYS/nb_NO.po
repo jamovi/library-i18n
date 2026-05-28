@@ -42,11 +42,6 @@ msgstr "{varType} med imputerte verdier"
 msgid "{varType} without outliers"
 msgstr "{varType} uten outliers"
 
-#: R/mcor.b.R
-#, fuzzy
-msgid "* p < .05, ** p < .01, *** p < .001, one-tailed"
-msgstr "* p < .05, ** p < .01, *** p < .001, en-halet"
-
 #: R/mmf.b.R
 #, fuzzy
 msgid "**connection of a variable's observed data"
@@ -104,10 +99,16 @@ msgstr "0 - auto"
 msgid "0 ="
 msgstr "0 ="
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
+#: mMLP/options/roc_x/1spec.title
 #, fuzzy
 msgid "1 - Specificity"
 msgstr "1 - Spesifisitet"
+
+#: mMLP/options/hidden_structure.default
+msgid "10,5"
+msgstr ""
 
 #: R/mroc.b.R
 #, fuzzy
@@ -148,6 +149,14 @@ msgstr "A priori effektstørrelseanalyse resultater"
 msgid "Accent"
 msgstr "Aksept"
 
+#: R/mmlp.b.R
+msgid "Actual"
+msgstr ""
+
+#: mMLP/results/matrixTable.columns.title
+msgid "Actual \\ Predicted"
+msgstr ""
+
 #: mCOR/options/clustMet.title
 #, fuzzy
 msgid "Agglomeration method"
@@ -183,10 +192,19 @@ msgstr "en rekke MAR"
 msgid "Angular order eigenvectors"
 msgstr "Eigenvectorer i angular rekkefølge"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/anova.title
+msgid "ANOVA / ANCOVA (F-Test)"
+msgstr ""
+
 #: mCOR/options/clustMet/average.title
 #, fuzzy
 msgid "Average Linkage (UPGMA)"
 msgstr "Gjennomsnitts kobling (UPGMA)"
+
+#: mMLP/ui[3]/show_roc/roc_unit.label
+msgid "Axis Units"
+msgstr ""
 
 #: R/mui.b.R
 #, fuzzy
@@ -197,6 +215,11 @@ msgstr "Balanser"
 #, fuzzy
 msgid "Balance - balance between correct and incorrect classified (TP+TN)/(FP+FN)"
 msgstr "Balanser - balanse mellom korrekte og feil klassifiserte (TP+TN)/(FP+FN)"
+
+#: mPWR/options/base_prob.title
+#: mPWR/ui[1]/base_prob.label
+msgid "Base probability"
+msgstr ""
 
 #: package/datasets/BCModelsROCEstimation.name
 #, fuzzy
@@ -288,6 +311,11 @@ msgstr "Sentroidlenking (UPGMC)"
 msgid "CHD Models ROC Estimation"
 msgstr "CHD-modell ROC-estimering"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/chisq.title
+msgid "Chi-square Goodness-of-Fit / Independence (Chi-square Test)"
+msgstr ""
+
 #: mCOR/results/matrix.columns.content
 #, fuzzy
 msgid "CI Lower"
@@ -312,6 +340,10 @@ msgstr "CI bredde"
 #, fuzzy
 msgid "Circle"
 msgstr "Sirkel"
+
+#: R/mmlp.b.R
+msgid "Classification Accuracy"
+msgstr ""
 
 #: mMF/results/estim/mars.title
 #, fuzzy
@@ -389,6 +421,7 @@ msgstr ""
 "valgt pasient med tilstanden er riktig rangert høyere enn en tilfeldig valgt "
 "pasient uten tilstanden"
 
+#: mMLP/results/text.title
 #: mROC/results/text.title
 #, fuzzy
 msgid "Conditions"
@@ -409,6 +442,11 @@ msgstr "Konfidensintervall (Pearson kun)"
 #, fuzzy
 msgid "Confidence interval width"
 msgstr "Konfidensintervallbredde"
+
+#: mMLP/options/show_matrix.title
+#: mMLP/results/matrixTable.title
+msgid "Confusion Matrix"
+msgstr ""
 
 #: mCOR/options/hyp/corr.title
 #, fuzzy
@@ -469,6 +507,24 @@ msgstr "Korrelasjoner"
 msgid "Correlations between variables"
 msgstr "Korrelasjoner mellom variabler"
 
+#: mMLP/options/covs.title
+#: mMLP/ui[0][1].label
+msgid "Covariates (Continuous Predictors)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Cross-Entropy Loss"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Cross-Validation"
+msgstr ""
+
+#: mMLP/options/cv_folds.title
+#: mMLP/ui[2]/cv_folds.label
+msgid "Cross-Validation Folds (K)"
+msgstr ""
+
 #: mMF/results/estim/mcar.columns.title
 #, fuzzy
 msgid "D²"
@@ -479,6 +535,10 @@ msgstr "D²"
 msgid "Dark2"
 msgstr "Dark2"
 
+#: mMLP/options/roc_unit/decimal.title
+msgid "Decimal (0 to 1)"
+msgstr ""
+
 #: R/mui.b.R
 #, fuzzy
 msgid "decision"
@@ -488,6 +548,16 @@ msgstr "beslutning"
 #, fuzzy
 msgid "Degree of Freedom (df)"
 msgstr "Frighetssgrad (df)"
+
+#: mPWR/options/df_chisq.title
+#: mPWR/ui[1]/df_chisq.label
+msgid "Degrees of freedom"
+msgstr ""
+
+#: mMLP/options/dep.title
+#: mMLP/ui[0][0].label
+msgid "Dependent Variable (Target)"
+msgstr ""
 
 #: mPWR/options/design.title
 #, fuzzy
@@ -537,9 +607,25 @@ msgid "Effect size measure: Cohen's d"
 msgstr "Effektstørrelse: Cohens d"
 
 #: R/mpwr.b.R
+msgid "Effect size measure: Cohen's w"
+msgstr ""
+
+#: R/mpwr.b.R
 #, fuzzy
 msgid "Effect size measure: correlation coefficient (r)"
 msgstr "Effektstørrelsesmål: korrelasjonskoeffisient (r)"
+
+#: R/mpwr.b.R
+msgid "Effect size measure: Eta-squared (η²)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "Effect size measure: Odds Ratio"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "Effect size measure: R-squared change (f²)"
+msgstr ""
 
 #: mCOR/options/plotMetU/ellipse.title
 #: mCOR/options/plotMetL/ellipse.title
@@ -557,6 +643,10 @@ msgstr "Tom datatabell"
 #, fuzzy
 msgid "Emtpy"
 msgstr "Tom"
+
+#: R/mmlp.b.R
+msgid "Error during neural network fitting: "
+msgstr ""
 
 #: mMF/results/imput/errors.title
 #, fuzzy
@@ -579,6 +669,15 @@ msgstr "Forklarende"
 #, fuzzy
 msgid "Explanatory - variable corresponding to MAR with minimal p<sub>value</sub>."
 msgstr "Forklarende - variabel som svarer til MAR med minimal p-verdi."
+
+#: R/mmlp.b.R
+msgid "F1-Score"
+msgstr ""
+
+#: mMLP/options/factors.title
+#: mMLP/ui[0][2].label
+msgid "Factors (Categorical Predictors)"
+msgstr ""
 
 #: mCOR/options/plotOrder/FPC.title
 #, fuzzy
@@ -638,6 +737,27 @@ msgstr "Frisk/Syk ROC-klassifikasjonsdemonstrasjon"
 msgid "HI ROC classification"
 msgstr "HI ROC-klassifisering"
 
+#: mMLP/options/activation.title
+#: mMLP/ui[1]/activation.label
+msgid "Hidden Activation Function"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Hidden Layer"
+msgstr ""
+
+#: mMLP/options/hidden_structure.title
+msgid "Hidden Layer Structure"
+msgstr ""
+
+#: mMLP/ui[1]/hidden_structure.label
+msgid "Hidden Layer Structure (e.g., 8 or 10,5)"
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "Hidden Layers"
+msgstr ""
+
 #: mCOR/options/hclust.title
 #, fuzzy
 msgid "Hierarchical clustering"
@@ -652,6 +772,23 @@ msgstr "Hierarkisk klustering-tre"
 #, fuzzy
 msgid "Hochberg (1988)"
 msgstr "Hochberg (1988)"
+
+#: mMLP/results/infoTable.columns.title
+msgid "Hold-out Accuracy (%)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Hold-out Validation (AUC = "
+msgstr ""
+
+#: mMLP/options/partition/holdout.title
+msgid "Hold-out Validation Split"
+msgstr ""
+
+#: mMLP/options/val_split.title
+#: mMLP/ui[2]/val_split.label
+msgid "Hold-out Validation Split (%)"
+msgstr ""
 
 #: mCOR/options/adjust/holm.title
 #, fuzzy
@@ -674,6 +811,11 @@ msgid "Identification, analysis and removal of data outliers by groups"
 msgstr ""
 "Identifisering, analyse og fjerning av datapunkter som ligger langt unna "
 "gjennomsnittet, etter grupper"
+
+#: R/mmlp.b.R
+#: mMLP/options/out_activation/identity.title
+msgid "Identity (Linear)"
+msgstr ""
 
 #: R/mmf.b.R
 #, fuzzy
@@ -749,6 +891,15 @@ msgstr "Inn- og utflyttingsgraf for mønster av manglende data"
 msgid "Influx*"
 msgstr "Influx*"
 
+#: mMLP/options/rang.title
+#: mMLP/ui[1]/rang.label
+msgid "Initial Weights Range"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Input Layer"
+msgstr ""
+
 #: mCOR/options/clustMat.title
 #: mCOR/results/rplots.title
 #, fuzzy
@@ -778,6 +929,12 @@ msgstr "Intervallbestemmelsesmetode"
 msgid "Intervals Estimation"
 msgstr "Intervall-estimat"
 
+#: R/mmlp.b.R
+msgid ""
+"Invalid Hidden Layer Structure. Please enter comma-separated positive "
+"integers (e.g., 8 or 10,5)."
+msgstr ""
+
 #: mOUT/options/fence.title
 #, fuzzy
 msgid "IQR fence height"
@@ -794,8 +951,10 @@ msgstr "IQR Tukeys gjerder"
 #: package/analyses/mOUT.menuGroup
 #: package/analyses/mUI.menuGroup
 #: package/analyses/mPWR.menuSubgroup
+#: package/analyses/mMLP.menuGroup
 #: mCOR/options.menuGroup
 #: mMF/options.menuGroup
+#: mMLP/options.menuGroup
 #: mOUT/options.menuGroup
 #: mPWR/options.menuSubgroup
 #: mROC/options.menuGroup
@@ -809,6 +968,18 @@ msgstr "jYS"
 msgid "jYS Extended Functions"
 msgstr "jYS Utvidede funksjoner"
 
+#: mMLP/options/partition/kfold.title
+msgid "K-Fold Cross-Validation"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "K-Fold Cross-Validation (AUC = "
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "K-Fold CV Accuracy (%)"
+msgstr ""
+
 #: mCOR/options/method/kendall.title
 #, fuzzy
 msgid "Kendall (τ)"
@@ -819,6 +990,10 @@ msgstr "Kendall (τ)"
 #, fuzzy
 msgid "Kendall Tau"
 msgstr "Kendall Tau"
+
+#: mMLP/options/show_curve.title
+msgid "Learning Curve"
+msgstr ""
 
 #: mROC/options/legacy.title
 #, fuzzy
@@ -840,10 +1015,20 @@ msgstr "Nivå"
 msgid "Line width"
 msgstr "Linje bredde"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/linear.title
+msgid "Linear Regression (F-Test)"
+msgstr ""
+
 #: mPWR/results/text.title
 #, fuzzy
 msgid "Log / Errors"
 msgstr "Logg / Feil"
+
+#: R/mpwr.b.R
+#: mPWR/options/design/logistic.title
+msgid "Logistic Regression (Wald Z-Test)"
+msgstr ""
 
 #: R/mout.b.R
 #, fuzzy
@@ -912,6 +1097,16 @@ msgstr "Merk signifikans *<0,05, **<0,01, ***<0,001"
 msgid "Matrix #{i}"
 msgstr "Matrise #{i}"
 
+#: mMLP/results/infoTable.columns.title
+msgid "Max Iterations"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/options/maxit.title
+#: mMLP/ui[1]/maxit.label
+msgid "Max Iterations (Epochs)"
+msgstr ""
+
 #: mMF/options/maxiter.title
 #, fuzzy
 msgid "Maximum number of iterations"
@@ -955,6 +1150,14 @@ msgstr "McQuitty-tilkobling (WPGMA)"
 msgid "Mean"
 msgstr "Gjennomsnitt"
 
+#: mMLP/results/importanceTable.columns.title
+msgid "Mean Decrease in Accuracy"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Mean Decrease in Accuracy (%)"
+msgstr ""
+
 #: R/mout.b.R
 #, fuzzy
 msgid "Median"
@@ -971,6 +1174,10 @@ msgstr "Median-tilkobling"
 #, fuzzy
 msgid "Method"
 msgstr "Metode"
+
+#: mMLP/results/statsTable.columns.title
+msgid "Metric"
+msgstr ""
 
 #: mPWR/options/es.title
 #: mPWR/ui[1]/es.label
@@ -1051,6 +1258,35 @@ msgstr "missRanger (2021)"
 #, fuzzy
 msgid "Mixed Densities"
 msgstr "Blandede tettheter"
+
+#: package/analyses/mMLP.title
+#: package/analyses/mMLP.menuTitle
+#: mMLP/options.title
+#: mMLP/options.menuTitle
+#: mMLP/ui.title
+#: mMLP/results.title
+msgid "MLP Classifier"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "MLP Classifier Learning Curve"
+msgstr ""
+
+#: mMLP/results/curvePlot.title
+msgid "MLP Learning Curve"
+msgstr ""
+
+#: mMLP/results/topoPlot.title
+msgid "MLP Network Topology"
+msgstr ""
+
+#: mMLP/results/infoTable.title
+msgid "Model Information & Accuracy"
+msgstr ""
+
+#: mMLP/ui[1].label
+msgid "Model Parameters"
+msgstr ""
 
 #: mOUT/options/outlcheck/mZS.title
 #, fuzzy
@@ -1133,6 +1369,34 @@ msgstr "N1"
 msgid "N2"
 msgstr "N2"
 
+#: mMLP/results/matrixTable.columns.title
+msgid "Negative Class"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Negative Predictive Value (NPV)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Negative Weight"
+msgstr ""
+
+#: mMLP/options/show_topo.title
+msgid "Network Topology / Architecture Diagram"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Neural Network Architecture"
+msgstr ""
+
+#: package/datasets/NeuralNetworkClassification.name
+msgid "Neural Network Classification"
+msgstr ""
+
+#: package/datasets/NeuralNetworkClassification.description
+msgid "Neural Network Classifier (multilayer perceptron) demonstration"
+msgstr ""
+
 #: mUI/options/model/none.title
 #, fuzzy
 msgid "Non-parametric"
@@ -1171,6 +1435,16 @@ msgid ""
 msgstr ""
 "Antall kandidater for ikke-manglende verdier som skal prøves i de prediktive "
 "gjennomsnitts-sammenlignings-trinnene. 0 for å unngå dette trinnet"
+
+#: mPWR/options/k_covariates.title
+#: mPWR/ui[1]/k_covariates.label
+msgid "Number of covariates"
+msgstr ""
+
+#: mPWR/options/factor_levels.title
+#: mPWR/ui[1]/factor_levels.label
+msgid "Number of factor levels/groups"
+msgstr ""
 
 #: R/mmf.b.R
 #, fuzzy
@@ -1221,6 +1495,7 @@ msgstr "En prøve korrelasjon (Pearson)"
 msgid "One Sample Correlation (Spearman)"
 msgstr "En Sample Korrelasjon (Spearman)"
 
+#: R/mcor.b.R
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/one.sided.title
 #, fuzzy
@@ -1285,10 +1560,23 @@ msgstr "Outsider indekser"
 msgid "Outliers removal"
 msgstr "Outlier fjerning"
 
+#: mMLP/options/out_activation.title
+#: mMLP/ui[1]/out_activation.label
+msgid "Output Activation Function"
+msgstr ""
+
 #: mOUT/ui[1][1].label
 #, fuzzy
 msgid "Output information"
 msgstr "Utdatainformasjon"
+
+#: R/mmlp.b.R
+msgid "Output Layer"
+msgstr ""
+
+#: mMLP/ui[3].label
+msgid "Outputs & Evaluation"
+msgstr ""
 
 #: mCOR/options/pval.title
 #: mCOR/results/matrix.columns.content
@@ -1319,6 +1607,11 @@ msgstr "Parprøver (Student)"
 #, fuzzy
 msgid "Paired Samples (Wilcoxon)"
 msgstr "Parret prøver (Wilcoxon)"
+
+#: mMLP/options/partition.title
+#: mMLP/ui[2]/partition.label
+msgid "Partition Method"
+msgstr ""
 
 #: mROC/options/palBrewer/Pastel1.title
 #, fuzzy
@@ -1351,6 +1644,18 @@ msgstr "Pearsons r"
 msgid "per pattern"
 msgstr "per mønster"
 
+#: mMLP/options/roc_unit/percent.title
+msgid "Percentage (%)"
+msgstr ""
+
+#: mMLP/results/statsTable.title
+msgid "Performance Statistics"
+msgstr ""
+
+#: mMLP/options/show_imp.title
+msgid "Permutation Importance"
+msgstr ""
+
 #: mMF/results/imput/errors.columns.title
 #, fuzzy
 msgid "PFC"
@@ -1366,6 +1671,14 @@ msgstr "PFC - proporsjon feil klassifisert (for nominelle og ordinale variabler)
 #, fuzzy
 msgid "Pie"
 msgstr "Pai"
+
+#: R/mmlp.b.R
+msgid "Please select a dependent variable (target)."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Please select at least one predictor variable (factor or covariate)."
+msgstr ""
 
 #: mUI/options/isTGR.title
 #, fuzzy
@@ -1399,6 +1712,14 @@ msgstr "Plott"
 #, fuzzy
 msgid "Polygon"
 msgstr "Polygon"
+
+#: mMLP/results/matrixTable.columns.title
+msgid "Positive Class"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Positive Weight"
+msgstr ""
 
 #: R/mpwr.b.R
 #: package/analyses/mPWR.menuGroup
@@ -1446,17 +1767,36 @@ msgstr "Effektkurve (Effekt etter N)"
 msgid "PPV - Positive Predictive Value of the positive class TP/(TN+FN)"
 msgstr "PPV - positiv prediktiv verdi for den positive klassen TP/(TN+FN)"
 
+#: R/mmlp.b.R
+msgid "Precision"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Predicted"
+msgstr ""
+
 #: mMF/options/pmmk.title
 #, fuzzy
 msgid "Predictive Mean Matching (PMM) steps"
 msgstr "Prediktiv gjennomsnittsavrunding (PMM) trinn"
 
+#: R/mmlp.b.R
+#: mMLP/results/importanceTable.columns.title
 #: mUI/results/stat/uistat.columns.title
 #: mUI/results/stat/mcistat.columns.title
 #: mUI/results/stat/intstat.columns.title
 #, fuzzy
 msgid "Predictor"
 msgstr "Prediktor"
+
+#: R/mmlp.b.R
+#: mMLP/results/importanceTable.title
+msgid "Predictor Importance"
+msgstr ""
+
+#: mMLP/results/importancePlot.title
+msgid "Predictor Importance Chart"
+msgstr ""
 
 #: mROC/options/vars.title
 #: mROC/ui[0][0].label
@@ -1500,6 +1840,15 @@ msgstr ""
 "PVU - andel av varians som ikke er forklart 1-R² (for kontinuerlige "
 "variabler);"
 
+#: mPWR/options/r2_predictor.title
+#: mPWR/ui[1]/r2_predictor.label
+msgid "R² of predictor X with other covariates"
+msgstr ""
+
+#: mMLP/results/importanceTable.columns.title
+msgid "Rank"
+msgstr ""
+
 #: mUI/options/refval.title
 #, fuzzy
 msgid "Reference level"
@@ -1509,6 +1858,10 @@ msgstr "Referanse­nivå"
 #, fuzzy
 msgid "Relative size of group 2 to group 1"
 msgstr "Relativ storrelse på gruppe 2 i forhold til gruppe 1"
+
+#: mMLP/options/activation/relu.title
+msgid "ReLU"
+msgstr ""
 
 #: mOUT/options/remOut.title
 #: mOUT/results/remOut.title
@@ -1535,6 +1888,19 @@ msgstr "Høyre"
 #, fuzzy
 msgid "RNG seed value"
 msgstr "Tilfeldig tallgenereringsverdi"
+
+#: mMLP/options/show_roc.title
+msgid "ROC Analysis"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/results/rocPlot.title
+msgid "ROC Analysis Comparison"
+msgstr ""
+
+#: mMLP/options/roc_unit.title
+msgid "ROC Axis Units"
+msgstr ""
 
 #: mROC/options/sepROC.title
 #: mROC/results/plots.title
@@ -1578,6 +1944,10 @@ msgstr "ROC-estimering for binomiale logistiske modeller demonstrasjon"
 msgid "ROC graphs"
 msgstr "ROC-graf"
 
+#: mMLP/options/roc_x.title
+msgid "ROC X-axis Coordinate"
+msgstr ""
+
 #: R/mpwr.b.R
 #, fuzzy
 msgid "Sample Size (N)"
@@ -1619,6 +1989,7 @@ msgstr "Se - sensitivitet for positive og negative klassifiseringer TP/(TP+FN)"
 msgid "Select group"
 msgstr "Velg gruppe"
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
 #, fuzzy
@@ -1629,6 +2000,10 @@ msgstr "Sensitivitet"
 #, fuzzy
 msgid "Sensitivity (%)"
 msgstr "Sensitivitet (%)"
+
+#: R/mmlp.b.R
+msgid "Sensitivity / Recall"
+msgstr ""
 
 #: mUI/options/uiSe.title
 #, fuzzy
@@ -1661,6 +2036,12 @@ msgstr "Set3"
 msgid "Shade"
 msgstr "Skygge"
 
+#: R/mmlp.b.R
+#: mMLP/options/activation/sigmoid.title
+#: mMLP/options/out_activation/sigmoid.title
+msgid "Sigmoid"
+msgstr ""
+
 #: mCOR/options/signif.title
 #, fuzzy
 msgid "Significance"
@@ -1686,6 +2067,11 @@ msgstr "Skjev titler"
 msgid "SNPV - standardized negative predictive value of the negative class"
 msgstr "SNPV - standardisert negativ prediktiv verdi for negativ klasse"
 
+#: mMLP/options/activation/softmax.title
+#: mMLP/options/out_activation/softmax.title
+msgid "Softmax"
+msgstr ""
+
 #: R/mui.b.R
 #, fuzzy
 msgid "Sp - specificity of the positive and negative classifications TN/(TN+FN)"
@@ -1702,8 +2088,10 @@ msgstr "Spearman (ρ)"
 msgid "Spearman's Rho"
 msgstr "Spearman's Rho"
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
+#: mMLP/options/roc_x/spec.title
 #, fuzzy
 msgid "Specificity"
 msgstr "Spesifisitet"
@@ -1770,10 +2158,19 @@ msgstr "Tabeller"
 msgid "Tails"
 msgstr "Haler"
 
+#: mMLP/options/activation/tanh.title
+msgid "Tanh"
+msgstr ""
+
 #: mOUT/options/norm.title
 #, fuzzy
 msgid "Test for normality"
 msgstr "Test for normalitet"
+
+#: mPWR/options/k_tested.title
+#: mPWR/ui[1]/k_tested.label
+msgid "Tested predictors"
+msgstr ""
 
 #: R/mpwr.b.R
 #, fuzzy
@@ -1794,6 +2191,14 @@ msgid ""
 msgstr ""
 "Klassifiseringsvariabelen '{}' har ikke nøyaktig to nivåer; "
 "ROC-klassifisering kan bare utføres på klassifiseringsvariable med to nivåer."
+
+#: R/mmlp.b.R
+msgid "The dataset has too few complete cases to train the neural network."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "The dependent variable must have exactly 2 levels (binary classification)."
+msgstr ""
 
 #: package/datasets/UncertainInterval(UI).description
 #, fuzzy
@@ -1817,6 +2222,24 @@ msgstr "Grenseverdi basert på Youden"
 msgid "Total number of missing entries {}"
 msgstr "Totalt antall manglende innføringer {}"
 
+#: mPWR/options/k_total.title
+#: mPWR/ui[1]/k_total.label
+msgid "Total predictors"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/results/statsTable.columns.title
+msgid "Training"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Training (AUC = "
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "Training Accuracy (%)"
+msgstr ""
+
 #: R/mpwr.b.R
 #, fuzzy
 msgid "two one-tailed"
@@ -1834,15 +2257,11 @@ msgstr "To-graf ROC-kurver"
 msgid "two-tailed"
 msgstr "to-halvdel"
 
+#: mPWR/options/plot_err.title
 #: mPWR/results/plot.title
 #, fuzzy
 msgid "Type 1 and Type 2 Error Plots"
 msgstr "Type 1 og Type 2 Feil Ploter"
-
-#: mPWR/options/plot_err.title
-#, fuzzy
-msgid "Type 1 and Type 2 error plots"
-msgstr "Type 1 og Type 2 feilplott"
 
 #: R/mui.b.R
 #, fuzzy
@@ -1923,6 +2342,15 @@ msgstr "Øvre terskel"
 msgid "User Defined"
 msgstr "Brukerdefinert"
 
+#: R/mmlp.b.R
+#: mMLP/results/statsTable.columns.title
+msgid "Validation"
+msgstr ""
+
+#: mMLP/ui[2].label
+msgid "Validation Settings"
+msgstr ""
+
 #: mMF/results/estim/mars.columns.title
 #: mMF/results/imput/errors.columns.title
 #: mOUT/results/stat/outstat.columns.title
@@ -1971,6 +2399,22 @@ msgstr "Ward's D2-lenking"
 msgid "Ward´s Linkage"
 msgstr "Ward´s kobling"
 
+#: mMLP/results/infoTable.columns.title
+msgid "Weight Decay"
+msgstr ""
+
+#: mMLP/ui[1]/decay.label
+msgid "Weight Decay (L2 Regularization)"
+msgstr ""
+
+#: mMLP/options/decay.title
+msgid "Weight Decay (Regularization)"
+msgstr ""
+
+#: mROC/options/cmpDeLong/w05.title
+msgid "With 0.5"
+msgstr ""
+
 #: mROC/options/cmpDeLong/wcontr.title
 #, fuzzy
 msgid "With control"
@@ -1985,6 +2429,10 @@ msgstr "med manglende data på andre variabler"
 #, fuzzy
 msgid "with observed data on other variables"
 msgstr "med observert data på andre variabler"
+
+#: mMLP/ui[3]/show_roc/roc_x.label
+msgid "X-axis Coordinate"
+msgstr ""
 
 #: mROC/options/theBest/bestY.title
 #, fuzzy

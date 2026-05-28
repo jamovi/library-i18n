@@ -3,8 +3,8 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-05-28 00:30+0000\n"
 "Last-Translator: Viljami Salmela <viljami.salmela@gmail.com>\n"
-"Language-Team: Finnish <https://hosted.weblate.org/projects/jamovi/module-"
-"jys/fi/>\n"
+"Language-Team: Finnish "
+"<https://hosted.weblate.org/projects/jamovi/module-jys/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -41,11 +41,6 @@ msgstr "{varType} imputoiduilla arvoilla"
 #, fuzzy
 msgid "{varType} without outliers"
 msgstr "{varType} ilman poikkeamia"
-
-#: R/mcor.b.R
-#, fuzzy
-msgid "* p < .05, ** p < .01, *** p < .001, one-tailed"
-msgstr "* p < .05, ** p < .01, *** p < .001, yksipuolinen"
 
 #: R/mmf.b.R
 #, fuzzy
@@ -102,10 +97,16 @@ msgstr "0 - auto"
 msgid "0 ="
 msgstr "0 ="
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
+#: mMLP/options/roc_x/1spec.title
 #, fuzzy
 msgid "1 - Specificity"
 msgstr "1 - Spesifisyyden prosentti"
+
+#: mMLP/options/hidden_structure.default
+msgid "10,5"
+msgstr ""
 
 #: R/mroc.b.R
 #, fuzzy
@@ -146,6 +147,14 @@ msgstr "A priori -voiman analyysin tulokset"
 msgid "Accent"
 msgstr "Korostus"
 
+#: R/mmlp.b.R
+msgid "Actual"
+msgstr ""
+
+#: mMLP/results/matrixTable.columns.title
+msgid "Actual \\ Predicted"
+msgstr ""
+
 #: mCOR/options/clustMet.title
 #, fuzzy
 msgid "Agglomeration method"
@@ -181,10 +190,19 @@ msgstr "MAR-taulukko"
 msgid "Angular order eigenvectors"
 msgstr "Kulman järjestysominaisvektorit"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/anova.title
+msgid "ANOVA / ANCOVA (F-Test)"
+msgstr ""
+
 #: mCOR/options/clustMet/average.title
 #, fuzzy
 msgid "Average Linkage (UPGMA)"
 msgstr "Keskiarvo Linkage (UPGMA)"
+
+#: mMLP/ui[3]/show_roc/roc_unit.label
+msgid "Axis Units"
+msgstr ""
 
 #: R/mui.b.R
 #, fuzzy
@@ -195,6 +213,11 @@ msgstr "Tasapaino"
 #, fuzzy
 msgid "Balance - balance between correct and incorrect classified (TP+TN)/(FP+FN)"
 msgstr "Tasapaino - tasapaino oikein ja väärin luokitelluista (TP+TN)/(FP+FN)"
+
+#: mPWR/options/base_prob.title
+#: mPWR/ui[1]/base_prob.label
+msgid "Base probability"
+msgstr ""
 
 #: package/datasets/BCModelsROCEstimation.name
 #, fuzzy
@@ -286,6 +309,11 @@ msgstr "Sentroidiyhdistäminen (UPGMC)"
 msgid "CHD Models ROC Estimation"
 msgstr "CHD-mallien ROC-estimointi"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/chisq.title
+msgid "Chi-square Goodness-of-Fit / Independence (Chi-square Test)"
+msgstr ""
+
 #: mCOR/results/matrix.columns.content
 #, fuzzy
 msgid "CI Lower"
@@ -311,6 +339,10 @@ msgstr "CI leveys"
 #, fuzzy
 msgid "Circle"
 msgstr "Ympyrä"
+
+#: R/mmlp.b.R
+msgid "Classification Accuracy"
+msgstr ""
 
 #: mMF/results/estim/mars.title
 #, fuzzy
@@ -388,6 +420,7 @@ msgstr ""
 "valittu potilas, jolla on tila, on oikein sijoitettu korkeammaksi kuin "
 "satunnaisesti valittu potilas, jolla ei ole kyseistä tilaa"
 
+#: mMLP/results/text.title
 #: mROC/results/text.title
 #, fuzzy
 msgid "Conditions"
@@ -409,6 +442,11 @@ msgstr "Luottamusväli (vain Pearson)"
 #, fuzzy
 msgid "Confidence interval width"
 msgstr "Luottamusvälin leveys"
+
+#: mMLP/options/show_matrix.title
+#: mMLP/results/matrixTable.title
+msgid "Confusion Matrix"
+msgstr ""
 
 #: mCOR/options/hyp/corr.title
 #, fuzzy
@@ -469,6 +507,24 @@ msgstr "Korrelaatiot"
 msgid "Correlations between variables"
 msgstr "Muuttujien korrelaatiot"
 
+#: mMLP/options/covs.title
+#: mMLP/ui[0][1].label
+msgid "Covariates (Continuous Predictors)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Cross-Entropy Loss"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Cross-Validation"
+msgstr ""
+
+#: mMLP/options/cv_folds.title
+#: mMLP/ui[2]/cv_folds.label
+msgid "Cross-Validation Folds (K)"
+msgstr ""
+
 #: mMF/results/estim/mcar.columns.title
 #, fuzzy
 msgid "D²"
@@ -479,6 +535,10 @@ msgstr "D²"
 msgid "Dark2"
 msgstr "Dark2"
 
+#: mMLP/options/roc_unit/decimal.title
+msgid "Decimal (0 to 1)"
+msgstr ""
+
 #: R/mui.b.R
 #, fuzzy
 msgid "decision"
@@ -488,6 +548,16 @@ msgstr "päätös"
 #, fuzzy
 msgid "Degree of Freedom (df)"
 msgstr "Vapausaste (df)"
+
+#: mPWR/options/df_chisq.title
+#: mPWR/ui[1]/df_chisq.label
+msgid "Degrees of freedom"
+msgstr ""
+
+#: mMLP/options/dep.title
+#: mMLP/ui[0][0].label
+msgid "Dependent Variable (Target)"
+msgstr ""
 
 #: mPWR/options/design.title
 #, fuzzy
@@ -537,9 +607,25 @@ msgid "Effect size measure: Cohen's d"
 msgstr "Efektin koko: Cohenin d"
 
 #: R/mpwr.b.R
+msgid "Effect size measure: Cohen's w"
+msgstr ""
+
+#: R/mpwr.b.R
 #, fuzzy
 msgid "Effect size measure: correlation coefficient (r)"
 msgstr "Efektin koko: korrelaatiokerroin (r)"
+
+#: R/mpwr.b.R
+msgid "Effect size measure: Eta-squared (η²)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "Effect size measure: Odds Ratio"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "Effect size measure: R-squared change (f²)"
+msgstr ""
 
 #: mCOR/options/plotMetU/ellipse.title
 #: mCOR/options/plotMetL/ellipse.title
@@ -557,6 +643,10 @@ msgstr "Tyhjä tietotaulu"
 #, fuzzy
 msgid "Emtpy"
 msgstr "Tyhjä"
+
+#: R/mmlp.b.R
+msgid "Error during neural network fitting: "
+msgstr ""
 
 #: mMF/results/imput/errors.title
 #, fuzzy
@@ -579,6 +669,15 @@ msgstr "Selittävä"
 #, fuzzy
 msgid "Explanatory - variable corresponding to MAR with minimal p<sub>value</sub>."
 msgstr "Selitettävä - muuttuja, joka vastaa MAR:ia pienimmällä p-arvolla."
+
+#: R/mmlp.b.R
+msgid "F1-Score"
+msgstr ""
+
+#: mMLP/options/factors.title
+#: mMLP/ui[0][2].label
+msgid "Factors (Categorical Predictors)"
+msgstr ""
 
 #: mCOR/options/plotOrder/FPC.title
 #, fuzzy
@@ -638,6 +737,27 @@ msgstr "Terveyden/ sairauden ROC-luokittelu esittely"
 msgid "HI ROC classification"
 msgstr "HI ROC -luokittelu"
 
+#: mMLP/options/activation.title
+#: mMLP/ui[1]/activation.label
+msgid "Hidden Activation Function"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Hidden Layer"
+msgstr ""
+
+#: mMLP/options/hidden_structure.title
+msgid "Hidden Layer Structure"
+msgstr ""
+
+#: mMLP/ui[1]/hidden_structure.label
+msgid "Hidden Layer Structure (e.g., 8 or 10,5)"
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "Hidden Layers"
+msgstr ""
+
 #: mCOR/options/hclust.title
 #, fuzzy
 msgid "Hierarchical clustering"
@@ -652,6 +772,23 @@ msgstr "Hierarkkinen klusterointipuu"
 #, fuzzy
 msgid "Hochberg (1988)"
 msgstr "Hochberg (1988)"
+
+#: mMLP/results/infoTable.columns.title
+msgid "Hold-out Accuracy (%)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Hold-out Validation (AUC = "
+msgstr ""
+
+#: mMLP/options/partition/holdout.title
+msgid "Hold-out Validation Split"
+msgstr ""
+
+#: mMLP/options/val_split.title
+#: mMLP/ui[2]/val_split.label
+msgid "Hold-out Validation Split (%)"
+msgstr ""
 
 #: mCOR/options/adjust/holm.title
 #, fuzzy
@@ -672,6 +809,11 @@ msgstr "Hypoteesi"
 #, fuzzy
 msgid "Identification, analysis and removal of data outliers by groups"
 msgstr "Tunnistus, analyysi ja poistaminen datan poikkeamista ryhmittäin"
+
+#: R/mmlp.b.R
+#: mMLP/options/out_activation/identity.title
+msgid "Identity (Linear)"
+msgstr ""
 
 #: R/mmf.b.R
 #, fuzzy
@@ -747,6 +889,15 @@ msgstr "Influx-outflux -kaavio puuttuvien tietojen kuvioista"
 msgid "Influx*"
 msgstr "Influx*"
 
+#: mMLP/options/rang.title
+#: mMLP/ui[1]/rang.label
+msgid "Initial Weights Range"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Input Layer"
+msgstr ""
+
 #: mCOR/options/clustMat.title
 #: mCOR/results/rplots.title
 #, fuzzy
@@ -776,6 +927,12 @@ msgstr "Välinmääritysmenetelmä"
 msgid "Intervals Estimation"
 msgstr "Välien estimaatio"
 
+#: R/mmlp.b.R
+msgid ""
+"Invalid Hidden Layer Structure. Please enter comma-separated positive "
+"integers (e.g., 8 or 10,5)."
+msgstr ""
+
 #: mOUT/options/fence.title
 #, fuzzy
 msgid "IQR fence height"
@@ -792,8 +949,10 @@ msgstr "IQR Tukeyn aitaukset"
 #: package/analyses/mOUT.menuGroup
 #: package/analyses/mUI.menuGroup
 #: package/analyses/mPWR.menuSubgroup
+#: package/analyses/mMLP.menuGroup
 #: mCOR/options.menuGroup
 #: mMF/options.menuGroup
+#: mMLP/options.menuGroup
 #: mOUT/options.menuGroup
 #: mPWR/options.menuSubgroup
 #: mROC/options.menuGroup
@@ -807,6 +966,18 @@ msgstr "jYS"
 msgid "jYS Extended Functions"
 msgstr "jYS:n laajennetut toiminnot"
 
+#: mMLP/options/partition/kfold.title
+msgid "K-Fold Cross-Validation"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "K-Fold Cross-Validation (AUC = "
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "K-Fold CV Accuracy (%)"
+msgstr ""
+
 #: mCOR/options/method/kendall.title
 #, fuzzy
 msgid "Kendall (τ)"
@@ -817,6 +988,10 @@ msgstr "Kendall (τ)"
 #, fuzzy
 msgid "Kendall Tau"
 msgstr "Kendall Tau"
+
+#: mMLP/options/show_curve.title
+msgid "Learning Curve"
+msgstr ""
 
 #: mROC/options/legacy.title
 #, fuzzy
@@ -838,10 +1013,20 @@ msgstr "Taso"
 msgid "Line width"
 msgstr "Viivan leveys"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/linear.title
+msgid "Linear Regression (F-Test)"
+msgstr ""
+
 #: mPWR/results/text.title
 #, fuzzy
 msgid "Log / Errors"
 msgstr "Loki / Virheet"
+
+#: R/mpwr.b.R
+#: mPWR/options/design/logistic.title
+msgid "Logistic Regression (Wald Z-Test)"
+msgstr ""
 
 #: R/mout.b.R
 #, fuzzy
@@ -910,6 +1095,16 @@ msgstr "Merkitse merkittävyys *<0,05, **<0,01, ***<0,001"
 msgid "Matrix #{i}"
 msgstr "Matriisi #{i}"
 
+#: mMLP/results/infoTable.columns.title
+msgid "Max Iterations"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/options/maxit.title
+#: mMLP/ui[1]/maxit.label
+msgid "Max Iterations (Epochs)"
+msgstr ""
+
 #: mMF/options/maxiter.title
 #, fuzzy
 msgid "Maximum number of iterations"
@@ -956,6 +1151,14 @@ msgstr "McQuitty-yhdistäminen (WPGMA)"
 msgid "Mean"
 msgstr "Keskiarvo"
 
+#: mMLP/results/importanceTable.columns.title
+msgid "Mean Decrease in Accuracy"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Mean Decrease in Accuracy (%)"
+msgstr ""
+
 #: R/mout.b.R
 #, fuzzy
 msgid "Median"
@@ -972,6 +1175,10 @@ msgstr "Mediaani Linkage"
 #, fuzzy
 msgid "Method"
 msgstr "Menetelmä"
+
+#: mMLP/results/statsTable.columns.title
+msgid "Metric"
+msgstr ""
 
 #: mPWR/options/es.title
 #: mPWR/ui[1]/es.label
@@ -1052,6 +1259,35 @@ msgstr "missRanger (2021)"
 #, fuzzy
 msgid "Mixed Densities"
 msgstr "Sekaisin tiheydet"
+
+#: package/analyses/mMLP.title
+#: package/analyses/mMLP.menuTitle
+#: mMLP/options.title
+#: mMLP/options.menuTitle
+#: mMLP/ui.title
+#: mMLP/results.title
+msgid "MLP Classifier"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "MLP Classifier Learning Curve"
+msgstr ""
+
+#: mMLP/results/curvePlot.title
+msgid "MLP Learning Curve"
+msgstr ""
+
+#: mMLP/results/topoPlot.title
+msgid "MLP Network Topology"
+msgstr ""
+
+#: mMLP/results/infoTable.title
+msgid "Model Information & Accuracy"
+msgstr ""
+
+#: mMLP/ui[1].label
+msgid "Model Parameters"
+msgstr ""
 
 #: mOUT/options/outlcheck/mZS.title
 #, fuzzy
@@ -1134,6 +1370,34 @@ msgstr "N1"
 msgid "N2"
 msgstr "N2"
 
+#: mMLP/results/matrixTable.columns.title
+msgid "Negative Class"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Negative Predictive Value (NPV)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Negative Weight"
+msgstr ""
+
+#: mMLP/options/show_topo.title
+msgid "Network Topology / Architecture Diagram"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Neural Network Architecture"
+msgstr ""
+
+#: package/datasets/NeuralNetworkClassification.name
+msgid "Neural Network Classification"
+msgstr ""
+
+#: package/datasets/NeuralNetworkClassification.description
+msgid "Neural Network Classifier (multilayer perceptron) demonstration"
+msgstr ""
+
 #: mUI/options/model/none.title
 #, fuzzy
 msgid "Non-parametric"
@@ -1172,6 +1436,16 @@ msgid ""
 msgstr ""
 "Ehdokaspuuttuvien arvojen määrä otoksista ennustavassa "
 "keskiarvotarkastelussa. 0 välttääkseen tämän vaiheen"
+
+#: mPWR/options/k_covariates.title
+#: mPWR/ui[1]/k_covariates.label
+msgid "Number of covariates"
+msgstr ""
+
+#: mPWR/options/factor_levels.title
+#: mPWR/ui[1]/factor_levels.label
+msgid "Number of factor levels/groups"
+msgstr ""
 
 #: R/mmf.b.R
 #, fuzzy
@@ -1222,6 +1496,7 @@ msgstr "Yhden otoksen korrelaatio (Pearson)"
 msgid "One Sample Correlation (Spearman)"
 msgstr "Yhden otoksen korrelaatio (Spearman)"
 
+#: R/mcor.b.R
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/one.sided.title
 #, fuzzy
@@ -1286,10 +1561,23 @@ msgstr "Poikkeamien indeksit"
 msgid "Outliers removal"
 msgstr "Poikkeamien poisto"
 
+#: mMLP/options/out_activation.title
+#: mMLP/ui[1]/out_activation.label
+msgid "Output Activation Function"
+msgstr ""
+
 #: mOUT/ui[1][1].label
 #, fuzzy
 msgid "Output information"
 msgstr "Tulostiedot"
+
+#: R/mmlp.b.R
+msgid "Output Layer"
+msgstr ""
+
+#: mMLP/ui[3].label
+msgid "Outputs & Evaluation"
+msgstr ""
 
 #: mCOR/options/pval.title
 #: mCOR/results/matrix.columns.content
@@ -1320,6 +1608,11 @@ msgstr "Parittaiset otokset (Student)"
 #, fuzzy
 msgid "Paired Samples (Wilcoxon)"
 msgstr "Parittaiset otokset (Wilcoxon)"
+
+#: mMLP/options/partition.title
+#: mMLP/ui[2]/partition.label
+msgid "Partition Method"
+msgstr ""
 
 #: mROC/options/palBrewer/Pastel1.title
 #, fuzzy
@@ -1352,6 +1645,18 @@ msgstr "Pearsonin r"
 msgid "per pattern"
 msgstr "kuva kohti"
 
+#: mMLP/options/roc_unit/percent.title
+msgid "Percentage (%)"
+msgstr ""
+
+#: mMLP/results/statsTable.title
+msgid "Performance Statistics"
+msgstr ""
+
+#: mMLP/options/show_imp.title
+msgid "Permutation Importance"
+msgstr ""
+
 #: mMF/results/imput/errors.columns.title
 #, fuzzy
 msgid "PFC"
@@ -1367,6 +1672,14 @@ msgstr "PFC - väärin luokiteltujen osuus (nimi- ja järjestysmuuttujat);"
 #, fuzzy
 msgid "Pie"
 msgstr "Pie"
+
+#: R/mmlp.b.R
+msgid "Please select a dependent variable (target)."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Please select at least one predictor variable (factor or covariate)."
+msgstr ""
 
 #: mUI/options/isTGR.title
 #, fuzzy
@@ -1400,6 +1713,14 @@ msgstr "Kaaviot"
 #, fuzzy
 msgid "Polygon"
 msgstr "Monikulmio"
+
+#: mMLP/results/matrixTable.columns.title
+msgid "Positive Class"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Positive Weight"
+msgstr ""
 
 #: R/mpwr.b.R
 #: package/analyses/mPWR.menuGroup
@@ -1446,17 +1767,36 @@ msgstr "Voimakkuuskäyrä (Voimakkuus N:n mukaan)"
 msgid "PPV - Positive Predictive Value of the positive class TP/(TN+FN)"
 msgstr "PPV - positiivisen luokan positiivinen ennustearvo TP/(TN+FN)"
 
+#: R/mmlp.b.R
+msgid "Precision"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Predicted"
+msgstr ""
+
 #: mMF/options/pmmk.title
 #, fuzzy
 msgid "Predictive Mean Matching (PMM) steps"
 msgstr "Ennustevälinen vastine (PMM) vaiheet"
 
+#: R/mmlp.b.R
+#: mMLP/results/importanceTable.columns.title
 #: mUI/results/stat/uistat.columns.title
 #: mUI/results/stat/mcistat.columns.title
 #: mUI/results/stat/intstat.columns.title
 #, fuzzy
 msgid "Predictor"
 msgstr "Ennustaja"
+
+#: R/mmlp.b.R
+#: mMLP/results/importanceTable.title
+msgid "Predictor Importance"
+msgstr ""
+
+#: mMLP/results/importancePlot.title
+msgid "Predictor Importance Chart"
+msgstr ""
 
 #: mROC/options/vars.title
 #: mROC/ui[0][0].label
@@ -1498,6 +1838,15 @@ msgstr "Laskelman tarkoitus"
 msgid "PVU - proportion of variance unexplained 1-R² (for Continuous variables);"
 msgstr "PVU - selittämätön varianssin osuus 1-R² (jatkuville muuttujilla);"
 
+#: mPWR/options/r2_predictor.title
+#: mPWR/ui[1]/r2_predictor.label
+msgid "R² of predictor X with other covariates"
+msgstr ""
+
+#: mMLP/results/importanceTable.columns.title
+msgid "Rank"
+msgstr ""
+
 #: mUI/options/refval.title
 #, fuzzy
 msgid "Reference level"
@@ -1507,6 +1856,10 @@ msgstr "Viiteaste"
 #, fuzzy
 msgid "Relative size of group 2 to group 1"
 msgstr "Ryhmän 2 suhteellinen koko ryhmään 1 nähden"
+
+#: mMLP/options/activation/relu.title
+msgid "ReLU"
+msgstr ""
 
 #: mOUT/options/remOut.title
 #: mOUT/results/remOut.title
@@ -1533,6 +1886,19 @@ msgstr "Oikea"
 #, fuzzy
 msgid "RNG seed value"
 msgstr "Satunnaislukuavain"
+
+#: mMLP/options/show_roc.title
+msgid "ROC Analysis"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/results/rocPlot.title
+msgid "ROC Analysis Comparison"
+msgstr ""
+
+#: mMLP/options/roc_unit.title
+msgid "ROC Axis Units"
+msgstr ""
 
 #: mROC/options/sepROC.title
 #: mROC/results/plots.title
@@ -1576,6 +1942,10 @@ msgstr "ROC-arvio binominaalisille logistisille malleille, esittely"
 msgid "ROC graphs"
 msgstr "ROC-kuvaajat"
 
+#: mMLP/options/roc_x.title
+msgid "ROC X-axis Coordinate"
+msgstr ""
+
 #: R/mpwr.b.R
 #, fuzzy
 msgid "Sample Size (N)"
@@ -1617,6 +1987,7 @@ msgstr "Se - positiivisen ja negatiivisen luokittelun herkkyyden TP/(TP+FN)"
 msgid "Select group"
 msgstr "Valitse ryhmä"
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
 #, fuzzy
@@ -1627,6 +1998,10 @@ msgstr "Herkillisyys"
 #, fuzzy
 msgid "Sensitivity (%)"
 msgstr "Herkillisyys (%)"
+
+#: R/mmlp.b.R
+msgid "Sensitivity / Recall"
+msgstr ""
 
 #: mUI/options/uiSe.title
 #, fuzzy
@@ -1659,6 +2034,12 @@ msgstr "Asetus3"
 msgid "Shade"
 msgstr "Vari"
 
+#: R/mmlp.b.R
+#: mMLP/options/activation/sigmoid.title
+#: mMLP/options/out_activation/sigmoid.title
+msgid "Sigmoid"
+msgstr ""
+
 #: mCOR/options/signif.title
 #, fuzzy
 msgid "Significance"
@@ -1684,6 +2065,11 @@ msgstr "Vinot nimet"
 msgid "SNPV - standardized negative predictive value of the negative class"
 msgstr "SNPV - standardoitu negatiivinen ennustearvo negatiiviselle luokalle"
 
+#: mMLP/options/activation/softmax.title
+#: mMLP/options/out_activation/softmax.title
+msgid "Softmax"
+msgstr ""
+
 #: R/mui.b.R
 #, fuzzy
 msgid "Sp - specificity of the positive and negative classifications TN/(TN+FN)"
@@ -1700,8 +2086,10 @@ msgstr "Spearman (ρ)"
 msgid "Spearman's Rho"
 msgstr "Spearmanin rho"
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
+#: mMLP/options/roc_x/spec.title
 #, fuzzy
 msgid "Specificity"
 msgstr "Spesifisyys"
@@ -1768,10 +2156,19 @@ msgstr "Taulukot"
 msgid "Tails"
 msgstr "Hännät"
 
+#: mMLP/options/activation/tanh.title
+msgid "Tanh"
+msgstr ""
+
 #: mOUT/options/norm.title
 #, fuzzy
 msgid "Test for normality"
 msgstr "Testi normaaliuteudelle"
+
+#: mPWR/options/k_tested.title
+#: mPWR/ui[1]/k_tested.label
+msgid "Tested predictors"
+msgstr ""
 
 #: R/mpwr.b.R
 #, fuzzy
@@ -1792,6 +2189,14 @@ msgid ""
 msgstr ""
 "Luokittelumuuttuja '{}' ei ole tasan kaksi tasoa; ROC-luokittelu voidaan "
 "suorittaa vain luokittelumuuttujilla, joilla on kaksi tasoa."
+
+#: R/mmlp.b.R
+msgid "The dataset has too few complete cases to train the neural network."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "The dependent variable must have exactly 2 levels (binary classification)."
+msgstr ""
 
 #: package/datasets/UncertainInterval(UI).description
 #, fuzzy
@@ -1815,6 +2220,24 @@ msgstr "Kynnysarvo Youdenilla"
 msgid "Total number of missing entries {}"
 msgstr "Puuttuvien merkintöjen kokonaismäärä {}"
 
+#: mPWR/options/k_total.title
+#: mPWR/ui[1]/k_total.label
+msgid "Total predictors"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/results/statsTable.columns.title
+msgid "Training"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Training (AUC = "
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "Training Accuracy (%)"
+msgstr ""
+
 #: R/mpwr.b.R
 #, fuzzy
 msgid "two one-tailed"
@@ -1832,15 +2255,11 @@ msgstr "Kaksi kaaviokuvaus ROC-käyrät"
 msgid "two-tailed"
 msgstr "kaksisuuntainen"
 
+#: mPWR/options/plot_err.title
 #: mPWR/results/plot.title
 #, fuzzy
 msgid "Type 1 and Type 2 Error Plots"
 msgstr "Tyyppi 1 ja tyyppi 2 virhepiirtokset"
-
-#: mPWR/options/plot_err.title
-#, fuzzy
-msgid "Type 1 and Type 2 error plots"
-msgstr "Tyyppi 1 ja tyyppi 2 virheiden kuvaajat"
 
 #: R/mui.b.R
 #, fuzzy
@@ -1921,6 +2340,15 @@ msgstr "Ylempi kynnysarvo"
 msgid "User Defined"
 msgstr "Käyttäjän määrittelemä"
 
+#: R/mmlp.b.R
+#: mMLP/results/statsTable.columns.title
+msgid "Validation"
+msgstr ""
+
+#: mMLP/ui[2].label
+msgid "Validation Settings"
+msgstr ""
+
 #: mMF/results/estim/mars.columns.title
 #: mMF/results/imput/errors.columns.title
 #: mOUT/results/stat/outstat.columns.title
@@ -1970,6 +2398,22 @@ msgstr "Ward'in D2 Linkage"
 msgid "Ward´s Linkage"
 msgstr "Ward'in Linkage"
 
+#: mMLP/results/infoTable.columns.title
+msgid "Weight Decay"
+msgstr ""
+
+#: mMLP/ui[1]/decay.label
+msgid "Weight Decay (L2 Regularization)"
+msgstr ""
+
+#: mMLP/options/decay.title
+msgid "Weight Decay (Regularization)"
+msgstr ""
+
+#: mROC/options/cmpDeLong/w05.title
+msgid "With 0.5"
+msgstr ""
+
 #: mROC/options/cmpDeLong/wcontr.title
 #, fuzzy
 msgid "With control"
@@ -1984,6 +2428,10 @@ msgstr "muilla muuttujilla puuttuvilla tiedoilla"
 #, fuzzy
 msgid "with observed data on other variables"
 msgstr "havaittujen tietojen kanssa muilla muuttujilla"
+
+#: mMLP/ui[3]/show_roc/roc_x.label
+msgid "X-axis Coordinate"
+msgstr ""
 
 #: mROC/options/theBest/bestY.title
 #, fuzzy

@@ -40,11 +40,6 @@ msgstr "{varType} импутталған мәндермен"
 msgid "{varType} without outliers"
 msgstr "{varType} шеткейлерсіз"
 
-#: R/mcor.b.R
-#, fuzzy
-msgid "* p < .05, ** p < .01, *** p < .001, one-tailed"
-msgstr "* p < .05, ** p < .01, *** p < .001, біржақты"
-
 #: R/mmf.b.R
 #, fuzzy
 msgid "**connection of a variable's observed data"
@@ -100,10 +95,16 @@ msgstr "0 - автокорреляция"
 msgid "0 ="
 msgstr "0 ="
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
+#: mMLP/options/roc_x/1spec.title
 #, fuzzy
 msgid "1 - Specificity"
 msgstr "1 - спецификалықтық"
+
+#: mMLP/options/hidden_structure.default
+msgid "10,5"
+msgstr ""
 
 #: R/mroc.b.R
 #, fuzzy
@@ -144,6 +145,14 @@ msgstr "Априорная қуаттылық анализ нәтижелері"
 msgid "Accent"
 msgstr "Акцент"
 
+#: R/mmlp.b.R
+msgid "Actual"
+msgstr ""
+
+#: mMLP/results/matrixTable.columns.title
+msgid "Actual \\ Predicted"
+msgstr ""
+
 #: mCOR/options/clustMet.title
 #, fuzzy
 msgid "Agglomeration method"
@@ -179,10 +188,19 @@ msgstr "MAR-лар массиві"
 msgid "Angular order eigenvectors"
 msgstr "Бұрыштық реттегіш векторлар"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/anova.title
+msgid "ANOVA / ANCOVA (F-Test)"
+msgstr ""
+
 #: mCOR/options/clustMet/average.title
 #, fuzzy
 msgid "Average Linkage (UPGMA)"
 msgstr "Орташа байланыс (UPGMA)"
+
+#: mMLP/ui[3]/show_roc/roc_unit.label
+msgid "Axis Units"
+msgstr ""
 
 #: R/mui.b.R
 #, fuzzy
@@ -195,6 +213,11 @@ msgid "Balance - balance between correct and incorrect classified (TP+TN)/(FP+FN
 msgstr ""
 "Баланс - дұрыс және бұрыс классификацияланған (TP+TN)/(FP+FN) арасындағы "
 "баланс"
+
+#: mPWR/options/base_prob.title
+#: mPWR/ui[1]/base_prob.label
+msgid "Base probability"
+msgstr ""
 
 #: package/datasets/BCModelsROCEstimation.name
 #, fuzzy
@@ -286,6 +309,11 @@ msgstr "Центроид байланысы (UPGMC)"
 msgid "CHD Models ROC Estimation"
 msgstr "CHD Моделдерінің ROC Бағалауы"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/chisq.title
+msgid "Chi-square Goodness-of-Fit / Independence (Chi-square Test)"
+msgstr ""
+
 #: mCOR/results/matrix.columns.content
 #, fuzzy
 msgid "CI Lower"
@@ -311,6 +339,10 @@ msgstr "Сенімділік аймағының ені"
 #, fuzzy
 msgid "Circle"
 msgstr "Шеңбер"
+
+#: R/mmlp.b.R
+msgid "Classification Accuracy"
+msgstr ""
 
 #: mMF/results/estim/mars.title
 #, fuzzy
@@ -387,6 +419,7 @@ msgstr ""
 "Конкорданс - C-статистикасы немесе AUC. Бір жағдайдағы нақылған пациентті "
 "дұрыс бағалап, жағдайдағы емес пациенттен жоғары қою ықтималдығы"
 
+#: mMLP/results/text.title
 #: mROC/results/text.title
 #, fuzzy
 msgid "Conditions"
@@ -408,6 +441,11 @@ msgstr "Сенімділік интервалы (Пірсон үшін)"
 #, fuzzy
 msgid "Confidence interval width"
 msgstr "Сенімділік интервалының ені"
+
+#: mMLP/options/show_matrix.title
+#: mMLP/results/matrixTable.title
+msgid "Confusion Matrix"
+msgstr ""
 
 #: mCOR/options/hyp/corr.title
 #, fuzzy
@@ -468,6 +506,24 @@ msgstr "Корреляциялар"
 msgid "Correlations between variables"
 msgstr "Ауыспалықтар арасындағы корреляциялар"
 
+#: mMLP/options/covs.title
+#: mMLP/ui[0][1].label
+msgid "Covariates (Continuous Predictors)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Cross-Entropy Loss"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Cross-Validation"
+msgstr ""
+
+#: mMLP/options/cv_folds.title
+#: mMLP/ui[2]/cv_folds.label
+msgid "Cross-Validation Folds (K)"
+msgstr ""
+
 #: mMF/results/estim/mcar.columns.title
 #, fuzzy
 msgid "D²"
@@ -478,6 +534,10 @@ msgstr "D²"
 msgid "Dark2"
 msgstr "Dark2"
 
+#: mMLP/options/roc_unit/decimal.title
+msgid "Decimal (0 to 1)"
+msgstr ""
+
 #: R/mui.b.R
 #, fuzzy
 msgid "decision"
@@ -487,6 +547,16 @@ msgstr "шешім"
 #, fuzzy
 msgid "Degree of Freedom (df)"
 msgstr "Еркіндік дәрежесі (df)"
+
+#: mPWR/options/df_chisq.title
+#: mPWR/ui[1]/df_chisq.label
+msgid "Degrees of freedom"
+msgstr ""
+
+#: mMLP/options/dep.title
+#: mMLP/ui[0][0].label
+msgid "Dependent Variable (Target)"
+msgstr ""
 
 #: mPWR/options/design.title
 #, fuzzy
@@ -536,9 +606,25 @@ msgid "Effect size measure: Cohen's d"
 msgstr "Әсер көлемін өлшеу: Коэнның d"
 
 #: R/mpwr.b.R
+msgid "Effect size measure: Cohen's w"
+msgstr ""
+
+#: R/mpwr.b.R
 #, fuzzy
 msgid "Effect size measure: correlation coefficient (r)"
 msgstr "Эффект өлшемі: корреляция коэффициенті (r)"
+
+#: R/mpwr.b.R
+msgid "Effect size measure: Eta-squared (η²)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "Effect size measure: Odds Ratio"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "Effect size measure: R-squared change (f²)"
+msgstr ""
 
 #: mCOR/options/plotMetU/ellipse.title
 #: mCOR/options/plotMetL/ellipse.title
@@ -556,6 +642,10 @@ msgstr "Бос мәліметтер кестесі"
 #, fuzzy
 msgid "Emtpy"
 msgstr "Бос"
+
+#: R/mmlp.b.R
+msgid "Error during neural network fitting: "
+msgstr ""
 
 #: mMF/results/imput/errors.title
 #, fuzzy
@@ -578,6 +668,15 @@ msgstr "Түсіндіретін"
 #, fuzzy
 msgid "Explanatory - variable corresponding to MAR with minimal p<sub>value</sub>."
 msgstr "Түсіндіретін - MAR-ға сәйкес кіші p<sub>мәні</sub> бар айнымалы"
+
+#: R/mmlp.b.R
+msgid "F1-Score"
+msgstr ""
+
+#: mMLP/options/factors.title
+#: mMLP/ui[0][2].label
+msgid "Factors (Categorical Predictors)"
+msgstr ""
 
 #: mCOR/options/plotOrder/FPC.title
 #, fuzzy
@@ -637,6 +736,27 @@ msgstr "Денсаулық/науқас ROC бөлуінің демонстра�
 msgid "HI ROC classification"
 msgstr "HI ROC бөлу"
 
+#: mMLP/options/activation.title
+#: mMLP/ui[1]/activation.label
+msgid "Hidden Activation Function"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Hidden Layer"
+msgstr ""
+
+#: mMLP/options/hidden_structure.title
+msgid "Hidden Layer Structure"
+msgstr ""
+
+#: mMLP/ui[1]/hidden_structure.label
+msgid "Hidden Layer Structure (e.g., 8 or 10,5)"
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "Hidden Layers"
+msgstr ""
+
 #: mCOR/options/hclust.title
 #, fuzzy
 msgid "Hierarchical clustering"
@@ -651,6 +771,23 @@ msgstr "Иерархиялық кластерлеу ағашы"
 #, fuzzy
 msgid "Hochberg (1988)"
 msgstr "Hochberg (1988)"
+
+#: mMLP/results/infoTable.columns.title
+msgid "Hold-out Accuracy (%)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Hold-out Validation (AUC = "
+msgstr ""
+
+#: mMLP/options/partition/holdout.title
+msgid "Hold-out Validation Split"
+msgstr ""
+
+#: mMLP/options/val_split.title
+#: mMLP/ui[2]/val_split.label
+msgid "Hold-out Validation Split (%)"
+msgstr ""
 
 #: mCOR/options/adjust/holm.title
 #, fuzzy
@@ -671,6 +808,11 @@ msgstr "Гипотеза"
 #, fuzzy
 msgid "Identification, analysis and removal of data outliers by groups"
 msgstr "Топтар бойынша деректер аномалиясының табу, талдау және аластетулері"
+
+#: R/mmlp.b.R
+#: mMLP/options/out_activation/identity.title
+msgid "Identity (Linear)"
+msgstr ""
 
 #: R/mmf.b.R
 #, fuzzy
@@ -747,6 +889,15 @@ msgstr "Жоқтау деректерінің үлгісіне сәйкес ин
 msgid "Influx*"
 msgstr "Influx*"
 
+#: mMLP/options/rang.title
+#: mMLP/ui[1]/rang.label
+msgid "Initial Weights Range"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Input Layer"
+msgstr ""
+
 #: mCOR/options/clustMat.title
 #: mCOR/results/rplots.title
 #, fuzzy
@@ -776,6 +927,12 @@ msgstr "Интервалды анықтау әдісі"
 msgid "Intervals Estimation"
 msgstr "Интервалдар бағалауы"
 
+#: R/mmlp.b.R
+msgid ""
+"Invalid Hidden Layer Structure. Please enter comma-separated positive "
+"integers (e.g., 8 or 10,5)."
+msgstr ""
+
 #: mOUT/options/fence.title
 #, fuzzy
 msgid "IQR fence height"
@@ -792,8 +949,10 @@ msgstr "IQR Тьюки шеткейлері"
 #: package/analyses/mOUT.menuGroup
 #: package/analyses/mUI.menuGroup
 #: package/analyses/mPWR.menuSubgroup
+#: package/analyses/mMLP.menuGroup
 #: mCOR/options.menuGroup
 #: mMF/options.menuGroup
+#: mMLP/options.menuGroup
 #: mOUT/options.menuGroup
 #: mPWR/options.menuSubgroup
 #: mROC/options.menuGroup
@@ -807,6 +966,18 @@ msgstr "jYS"
 msgid "jYS Extended Functions"
 msgstr "jYS Кеңейтілген Функциялары"
 
+#: mMLP/options/partition/kfold.title
+msgid "K-Fold Cross-Validation"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "K-Fold Cross-Validation (AUC = "
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "K-Fold CV Accuracy (%)"
+msgstr ""
+
 #: mCOR/options/method/kendall.title
 #, fuzzy
 msgid "Kendall (τ)"
@@ -817,6 +988,10 @@ msgstr "Кендалл (τ)"
 #, fuzzy
 msgid "Kendall Tau"
 msgstr "Кендалл ТAU"
+
+#: mMLP/options/show_curve.title
+msgid "Learning Curve"
+msgstr ""
 
 #: mROC/options/legacy.title
 #, fuzzy
@@ -838,10 +1013,20 @@ msgstr "Деңгей"
 msgid "Line width"
 msgstr "Жолдың ені"
 
+#: R/mpwr.b.R
+#: mPWR/options/design/linear.title
+msgid "Linear Regression (F-Test)"
+msgstr ""
+
 #: mPWR/results/text.title
 #, fuzzy
 msgid "Log / Errors"
 msgstr "Журнал/Қателіктер"
+
+#: R/mpwr.b.R
+#: mPWR/options/design/logistic.title
+msgid "Logistic Regression (Wald Z-Test)"
+msgstr ""
 
 #: R/mout.b.R
 #, fuzzy
@@ -910,6 +1095,16 @@ msgstr "Маңыздылықты белгілеу *<0,05, **<0,01, ***<0,001"
 msgid "Matrix #{i}"
 msgstr "Матрица #{i}"
 
+#: mMLP/results/infoTable.columns.title
+msgid "Max Iterations"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/options/maxit.title
+#: mMLP/ui[1]/maxit.label
+msgid "Max Iterations (Epochs)"
+msgstr ""
+
 #: mMF/options/maxiter.title
 #, fuzzy
 msgid "Maximum number of iterations"
@@ -956,6 +1151,14 @@ msgstr "Маккуитти байланысы (WPGMA)"
 msgid "Mean"
 msgstr "Орташа"
 
+#: mMLP/results/importanceTable.columns.title
+msgid "Mean Decrease in Accuracy"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Mean Decrease in Accuracy (%)"
+msgstr ""
+
 #: R/mout.b.R
 #, fuzzy
 msgid "Median"
@@ -972,6 +1175,10 @@ msgstr "Медиана сілтемесі"
 #, fuzzy
 msgid "Method"
 msgstr "Әдіс"
+
+#: mMLP/results/statsTable.columns.title
+msgid "Metric"
+msgstr ""
 
 #: mPWR/options/es.title
 #: mPWR/ui[1]/es.label
@@ -1052,6 +1259,35 @@ msgstr "missRanger (2021)"
 #, fuzzy
 msgid "Mixed Densities"
 msgstr "Аралас тығыздықтар"
+
+#: package/analyses/mMLP.title
+#: package/analyses/mMLP.menuTitle
+#: mMLP/options.title
+#: mMLP/options.menuTitle
+#: mMLP/ui.title
+#: mMLP/results.title
+msgid "MLP Classifier"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "MLP Classifier Learning Curve"
+msgstr ""
+
+#: mMLP/results/curvePlot.title
+msgid "MLP Learning Curve"
+msgstr ""
+
+#: mMLP/results/topoPlot.title
+msgid "MLP Network Topology"
+msgstr ""
+
+#: mMLP/results/infoTable.title
+msgid "Model Information & Accuracy"
+msgstr ""
+
+#: mMLP/ui[1].label
+msgid "Model Parameters"
+msgstr ""
 
 #: mOUT/options/outlcheck/mZS.title
 #, fuzzy
@@ -1134,6 +1370,34 @@ msgstr "N1"
 msgid "N2"
 msgstr "N2"
 
+#: mMLP/results/matrixTable.columns.title
+msgid "Negative Class"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Negative Predictive Value (NPV)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Negative Weight"
+msgstr ""
+
+#: mMLP/options/show_topo.title
+msgid "Network Topology / Architecture Diagram"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Neural Network Architecture"
+msgstr ""
+
+#: package/datasets/NeuralNetworkClassification.name
+msgid "Neural Network Classification"
+msgstr ""
+
+#: package/datasets/NeuralNetworkClassification.description
+msgid "Neural Network Classifier (multilayer perceptron) demonstration"
+msgstr ""
+
 #: mUI/options/model/none.title
 #, fuzzy
 msgid "Non-parametric"
@@ -1172,6 +1436,16 @@ msgid ""
 msgstr ""
 "Прогноздық орташа сәйкестіруде жетіспейтін мәндерді үлгілеу үшін кандидаттар "
 "саны. Бұл қадамды болдырмау үшін 0"
+
+#: mPWR/options/k_covariates.title
+#: mPWR/ui[1]/k_covariates.label
+msgid "Number of covariates"
+msgstr ""
+
+#: mPWR/options/factor_levels.title
+#: mPWR/ui[1]/factor_levels.label
+msgid "Number of factor levels/groups"
+msgstr ""
 
 #: R/mmf.b.R
 #, fuzzy
@@ -1222,6 +1496,7 @@ msgstr "Бір үлгі корреляциясы (Пірсон)"
 msgid "One Sample Correlation (Spearman)"
 msgstr "Бір үлгілі корреляция (Спирмен)"
 
+#: R/mcor.b.R
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/one.sided.title
 #, fuzzy
@@ -1286,10 +1561,23 @@ msgstr "Аномалия индексі"
 msgid "Outliers removal"
 msgstr "Шеткейлерді алып тастау"
 
+#: mMLP/options/out_activation.title
+#: mMLP/ui[1]/out_activation.label
+msgid "Output Activation Function"
+msgstr ""
+
 #: mOUT/ui[1][1].label
 #, fuzzy
 msgid "Output information"
 msgstr "Шығыс ақпарат"
+
+#: R/mmlp.b.R
+msgid "Output Layer"
+msgstr ""
+
+#: mMLP/ui[3].label
+msgid "Outputs & Evaluation"
+msgstr ""
 
 #: mCOR/options/pval.title
 #: mCOR/results/matrix.columns.content
@@ -1320,6 +1608,11 @@ msgstr "Жұпталған үлгілер (Стюдент)"
 #, fuzzy
 msgid "Paired Samples (Wilcoxon)"
 msgstr "Жұптық үлгілер (Вилкоксон)"
+
+#: mMLP/options/partition.title
+#: mMLP/ui[2]/partition.label
+msgid "Partition Method"
+msgstr ""
 
 #: mROC/options/palBrewer/Pastel1.title
 #, fuzzy
@@ -1352,6 +1645,18 @@ msgstr "Пирсонның r"
 msgid "per pattern"
 msgstr "әр үлгі бойынша"
 
+#: mMLP/options/roc_unit/percent.title
+msgid "Percentage (%)"
+msgstr ""
+
+#: mMLP/results/statsTable.title
+msgid "Performance Statistics"
+msgstr ""
+
+#: mMLP/options/show_imp.title
+msgid "Permutation Importance"
+msgstr ""
+
 #: mMF/results/imput/errors.columns.title
 #, fuzzy
 msgid "PFC"
@@ -1369,6 +1674,14 @@ msgstr ""
 #, fuzzy
 msgid "Pie"
 msgstr "Пирог"
+
+#: R/mmlp.b.R
+msgid "Please select a dependent variable (target)."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Please select at least one predictor variable (factor or covariate)."
+msgstr ""
 
 #: mUI/options/isTGR.title
 #, fuzzy
@@ -1402,6 +1715,14 @@ msgstr "Графиктер"
 #, fuzzy
 msgid "Polygon"
 msgstr "Полигон"
+
+#: mMLP/results/matrixTable.columns.title
+msgid "Positive Class"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Positive Weight"
+msgstr ""
 
 #: R/mpwr.b.R
 #: package/analyses/mPWR.menuGroup
@@ -1448,17 +1769,36 @@ msgstr "Қуаттылық графігі (N бойынша қуаттылық)"
 msgid "PPV - Positive Predictive Value of the positive class TP/(TN+FN)"
 msgstr "PPV - оң классқа тиесілі оң байланысты болжау мәні TP/(TN+FN)"
 
+#: R/mmlp.b.R
+msgid "Precision"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Predicted"
+msgstr ""
+
 #: mMF/options/pmmk.title
 #, fuzzy
 msgid "Predictive Mean Matching (PMM) steps"
 msgstr "Бағдарламалық сәйкестендіру (PMM) қадамдары"
 
+#: R/mmlp.b.R
+#: mMLP/results/importanceTable.columns.title
 #: mUI/results/stat/uistat.columns.title
 #: mUI/results/stat/mcistat.columns.title
 #: mUI/results/stat/intstat.columns.title
 #, fuzzy
 msgid "Predictor"
 msgstr "Бағдарлама"
+
+#: R/mmlp.b.R
+#: mMLP/results/importanceTable.title
+msgid "Predictor Importance"
+msgstr ""
+
+#: mMLP/results/importancePlot.title
+msgid "Predictor Importance Chart"
+msgstr ""
 
 #: mROC/options/vars.title
 #: mROC/ui[0][0].label
@@ -1500,6 +1840,15 @@ msgstr "Есептеудің мақсаты"
 msgid "PVU - proportion of variance unexplained 1-R² (for Continuous variables);"
 msgstr "PVU - түсіндірілмеген дисперсияның пайызы 1-R² (сандық айнымалылар үшін);"
 
+#: mPWR/options/r2_predictor.title
+#: mPWR/ui[1]/r2_predictor.label
+msgid "R² of predictor X with other covariates"
+msgstr ""
+
+#: mMLP/results/importanceTable.columns.title
+msgid "Rank"
+msgstr ""
+
 #: mUI/options/refval.title
 #, fuzzy
 msgid "Reference level"
@@ -1509,6 +1858,10 @@ msgstr "Сілтеме деңгейі"
 #, fuzzy
 msgid "Relative size of group 2 to group 1"
 msgstr "2-ші топтың 1-ші топқа салыстырмалы үлесі"
+
+#: mMLP/options/activation/relu.title
+msgid "ReLU"
+msgstr ""
 
 #: mOUT/options/remOut.title
 #: mOUT/results/remOut.title
@@ -1535,6 +1888,19 @@ msgstr "Оң"
 #, fuzzy
 msgid "RNG seed value"
 msgstr "RNG түйіндік мәні"
+
+#: mMLP/options/show_roc.title
+msgid "ROC Analysis"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/results/rocPlot.title
+msgid "ROC Analysis Comparison"
+msgstr ""
+
+#: mMLP/options/roc_unit.title
+msgid "ROC Axis Units"
+msgstr ""
 
 #: mROC/options/sepROC.title
 #: mROC/results/plots.title
@@ -1578,6 +1944,10 @@ msgstr "Биномиалды логистикалық моделдердің ROC
 msgid "ROC graphs"
 msgstr "ROC графиктері"
 
+#: mMLP/options/roc_x.title
+msgid "ROC X-axis Coordinate"
+msgstr ""
+
 #: R/mpwr.b.R
 #, fuzzy
 msgid "Sample Size (N)"
@@ -1619,6 +1989,7 @@ msgstr "Se - оң және теріс бағалаулардың сезімта�
 msgid "Select group"
 msgstr "Топты таңдау"
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
 #, fuzzy
@@ -1629,6 +2000,10 @@ msgstr "Сезімталдық"
 #, fuzzy
 msgid "Sensitivity (%)"
 msgstr "Сезімталдық (%)"
+
+#: R/mmlp.b.R
+msgid "Sensitivity / Recall"
+msgstr ""
 
 #: mUI/options/uiSe.title
 #, fuzzy
@@ -1661,6 +2036,12 @@ msgstr "Set3"
 msgid "Shade"
 msgstr "Көлеңке"
 
+#: R/mmlp.b.R
+#: mMLP/options/activation/sigmoid.title
+#: mMLP/options/out_activation/sigmoid.title
+msgid "Sigmoid"
+msgstr ""
+
 #: mCOR/options/signif.title
 #, fuzzy
 msgid "Significance"
@@ -1686,6 +2067,11 @@ msgstr "Шыңдалған тақырыптар"
 msgid "SNPV - standardized negative predictive value of the negative class"
 msgstr "SNPV - теріс классқа жататын стандартталған теріс байланыс мәні"
 
+#: mMLP/options/activation/softmax.title
+#: mMLP/options/out_activation/softmax.title
+msgid "Softmax"
+msgstr ""
+
 #: R/mui.b.R
 #, fuzzy
 msgid "Sp - specificity of the positive and negative classifications TN/(TN+FN)"
@@ -1702,8 +2088,10 @@ msgstr "Спирмен (ρ)"
 msgid "Spearman's Rho"
 msgstr "Спирменнің Rho"
 
+#: R/mmlp.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
+#: mMLP/options/roc_x/spec.title
 #, fuzzy
 msgid "Specificity"
 msgstr "Спецификалық"
@@ -1770,10 +2158,19 @@ msgstr "Кестелер"
 msgid "Tails"
 msgstr "Құйрықтар"
 
+#: mMLP/options/activation/tanh.title
+msgid "Tanh"
+msgstr ""
+
 #: mOUT/options/norm.title
 #, fuzzy
 msgid "Test for normality"
 msgstr "Нормальдыққа тест"
+
+#: mPWR/options/k_tested.title
+#: mPWR/ui[1]/k_tested.label
+msgid "Tested predictors"
+msgstr ""
 
 #: R/mpwr.b.R
 #, fuzzy
@@ -1794,6 +2191,14 @@ msgid ""
 msgstr ""
 "Бөлудің айнымдылығы '{}' дәл қарапайым екі деңгейге ие емес; ROC бөлуін тек "
 "екі деңгейге ие айнымдылықтарға қолдануға болады."
+
+#: R/mmlp.b.R
+msgid "The dataset has too few complete cases to train the neural network."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "The dependent variable must have exactly 2 levels (binary classification)."
+msgstr ""
 
 #: package/datasets/UncertainInterval(UI).description
 #, fuzzy
@@ -1817,6 +2222,24 @@ msgstr "Йоденге деген шекара"
 msgid "Total number of missing entries {}"
 msgstr "Жетіспейтін кірме мәндерінің жалпы саны {}"
 
+#: mPWR/options/k_total.title
+#: mPWR/ui[1]/k_total.label
+msgid "Total predictors"
+msgstr ""
+
+#: R/mmlp.b.R
+#: mMLP/results/statsTable.columns.title
+msgid "Training"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "Training (AUC = "
+msgstr ""
+
+#: mMLP/results/infoTable.columns.title
+msgid "Training Accuracy (%)"
+msgstr ""
+
 #: R/mpwr.b.R
 #, fuzzy
 msgid "two one-tailed"
@@ -1834,15 +2257,11 @@ msgstr "Екі-графикалық ROC-графиктер"
 msgid "two-tailed"
 msgstr "екі қыры"
 
+#: mPWR/options/plot_err.title
 #: mPWR/results/plot.title
 #, fuzzy
 msgid "Type 1 and Type 2 Error Plots"
 msgstr "1 және 2 типтегі қателіктердің графиктері"
-
-#: mPWR/options/plot_err.title
-#, fuzzy
-msgid "Type 1 and Type 2 error plots"
-msgstr "1-ші және 2-ші түрдің қателік графиктері"
 
 #: R/mui.b.R
 #, fuzzy
@@ -1923,6 +2342,15 @@ msgstr "Жоғарғы икемдеу"
 msgid "User Defined"
 msgstr "Пайдаланушы анықтаған"
 
+#: R/mmlp.b.R
+#: mMLP/results/statsTable.columns.title
+msgid "Validation"
+msgstr ""
+
+#: mMLP/ui[2].label
+msgid "Validation Settings"
+msgstr ""
+
 #: mMF/results/estim/mars.columns.title
 #: mMF/results/imput/errors.columns.title
 #: mOUT/results/stat/outstat.columns.title
@@ -1972,6 +2400,22 @@ msgstr "Уордтың D2 байланысы"
 msgid "Ward´s Linkage"
 msgstr "Уордтың байланысы"
 
+#: mMLP/results/infoTable.columns.title
+msgid "Weight Decay"
+msgstr ""
+
+#: mMLP/ui[1]/decay.label
+msgid "Weight Decay (L2 Regularization)"
+msgstr ""
+
+#: mMLP/options/decay.title
+msgid "Weight Decay (Regularization)"
+msgstr ""
+
+#: mROC/options/cmpDeLong/w05.title
+msgid "With 0.5"
+msgstr ""
+
 #: mROC/options/cmpDeLong/wcontr.title
 #, fuzzy
 msgid "With control"
@@ -1986,6 +2430,10 @@ msgstr "басқа айнымалылардағы жоқтау деректер�
 #, fuzzy
 msgid "with observed data on other variables"
 msgstr "басқа ауыспалықтарға байланысты бақылаулармен"
+
+#: mMLP/ui[3]/show_roc/roc_x.label
+msgid "X-axis Coordinate"
+msgstr ""
 
 #: mROC/options/theBest/bestY.title
 #, fuzzy
