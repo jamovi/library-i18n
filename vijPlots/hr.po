@@ -37,11 +37,24 @@ msgstr "okretanje od {rotation} s Kaiserovom normalizacijom"
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "Korišteno je okretanje od {rotation} s Kaiserovom normalizacijom."
 
+#: R/barchart.b.R
+msgid "{var} (Mean ± {level}%  CI)"
+msgstr ""
+
+#: R/barchart.b.R
+msgid "{var} (Mean ± SD)"
+msgstr ""
+
+#: R/barchart.b.R
+msgid "{var} (Mean ± SE)"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "{var} doesn't have a valid date format."
 msgstr "{var} nema važeći format datuma."
 
+#: barchart/options/facetNumber.title
 #: barplot/options/facetNumber.title
 #: boxplot/options/facetNumber.title
 #: histogram/options/facetNumber.title
@@ -50,6 +63,10 @@ msgstr "{var} nema važeći format datuma."
 #: scatterplot/options/facetNumber.title
 msgid "# of rows/columns"
 msgstr "Broj redaka/stupaca"
+
+#: barchart/ui[3][0][0]/errorBars_ci/ciLevel.suffix
+msgid "%"
+msgstr ""
 
 #: barplot/options/accuracy.title
 #: barplot/ui[2][0][2][0].label
@@ -183,8 +200,13 @@ msgid ""
 "\"https://CRAN.R-project.org/package=FactoMineR\" "
 "target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
 "S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
-"using the \"Counts\" variable.</p>\n"
+"<p>The data can be</p>\n"
+"<ul>\n"
+"<li>an <strong>Observation table</strong> (raw data), possibly weighted "
+"using <em>jamovi</em> built-in weight system or using the \"Counts\" "
+"variable</li>\n"
+"<li>or a <strong>Contingency table</strong></li>\n"
+"</ul>\n"
 "<p><strong>Supplementary row or column</strong> numbers may be entered as "
 "integer lists : 1,3,6</p>\n"
 "<p>Four normalizations (scaling of row and column scores before plotting) "
@@ -203,31 +225,6 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
 msgstr ""
-"<p>Ovaj modul izračunava <strong>analizu korespondencije (CA)</strong> za "
-"dvije kategorije varijabli. Izračuni se temelje na <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> paketu autora F.&nbsp;Husson, "
-"J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Podaci mogu biti težinski pomoću <em>jamovi</em> ugrađenog sustava za "
-"težinsko ili pomoću \"Counts\" varijable.</p>\n"
-"<p><strong>Dodatni brojevi redaka ili stupaca</strong> mogu se unijeti kao "
-"popis cijelih brojeva: 1,3,6</p>\n"
-"<p>Četiri normalizacije (skaliranje redaka i stupaca prije crtanja) su "
-"dostupne:</p>\n"
-"<ul>\n"
-"<li><strong>Glavni:</strong> Redak i stupac bodova skalirani su eigen "
-"vrijednostima.</li>\n"
-"<li><strong>Simetrični:</strong> Redak i stupac bodova skalirani su "
-"kvadratnim korijenom eigen vrijednosti. </li>\n"
-"<li><strong>Glavni redak:</strong> Samo redak bodova skalirani su eigen "
-"vrijednostima.</li>\n"
-"<li><strong>Glavni stupac:</strong> Samo stupac bodova skalirani su eigen "
-"vrijednostima.</li>\n"
-"<li><strong>Standardno:</strong> Neobrađene koordinate bez "
-"normalizacije.</li>\n"
-"</ul>\n"
-"<p>Uzorak datoteke je uključen u Otvori > Bibiloteka podataka > vijPlots > "
-"Smoking</p>"
 
 #: R/multcorresp.b.R
 msgid ""
@@ -619,6 +616,7 @@ msgid "A demonstration dataset for vijPlots/Time Serie plots."
 msgstr "Demonstracijski skup podataka za vijPlots/Dijagrami vremenske serije."
 
 #: areachart/options/colorPalette/Accent.title
+#: barchart/options/colorPalette/Accent.title
 #: barplot/options/colorPalette/Accent.title
 #: boxplot/options/colorPalette/Accent.title
 #: histogram/options/colorPalette/Accent.title
@@ -657,6 +655,9 @@ msgstr "Napredne opcije"
 #: areachart/options/titleAlign.title
 #: areachart/options/subtitleAlign.title
 #: areachart/options/captionAlign.title
+#: barchart/options/titleAlign.title
+#: barchart/options/subtitleAlign.title
+#: barchart/options/captionAlign.title
 #: barplot/options/titleAlign.title
 #: barplot/options/subtitleAlign.title
 #: barplot/options/captionAlign.title
@@ -748,6 +749,9 @@ msgstr "Kolovoz"
 
 #: areachart/options/dateFormat/auto.title
 #: areachart/options/yAxisRangeType/auto.title
+#: barchart/options/textColor/auto.title
+#: barchart/options/yAxisRangeType/auto.title
+#: barchart/options/xAxisRangeType/auto.title
 #: barplot/options/textColor/auto.title
 #: barplot/options/yAxisRangeType/auto.title
 #: barplot/options/xAxisRangeType/auto.title
@@ -777,6 +781,7 @@ msgid "Auto"
 msgstr "Automatski"
 
 #: areachart/ui[2].label
+#: barchart/ui[6].label
 #: barplot/ui[5].label
 #: boxplot/ui[4].label
 #: histogram/ui[5].label
@@ -799,10 +804,18 @@ msgstr "Brojevi osi ne mogu biti jednaki."
 msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
 msgstr "Brojevi osi moraju biti manji ili jednaki broju dimenzija ({nDim})."
 
-#: corresp/ui[7].label
+#: corresp/ui[6].label
 #: mrfrequencies/ui[5].label
 msgid "Axis Titles"
 msgstr "Naslovi osi"
+
+#: package/analyses/barchart.title
+#: package/analyses/barchart.menuTitle
+#: barchart/options.title
+#: barchart/ui.title
+#: barchart/results.title
+msgid "Bar Chart"
+msgstr ""
 
 #: package/analyses/barplot.title
 #: package/analyses/barplot.menuTitle
@@ -812,6 +825,8 @@ msgstr "Naslovi osi"
 msgid "Bar Plot"
 msgstr "Stupčani dijagram"
 
+#: barchart/options/barType.title
+#: barchart/ui[1][1][0].label
 #: barplot/options/barType.title
 #: barplot/ui[1][1][0].label
 #: mrcrosstabs/options/bartype.title
@@ -880,6 +895,8 @@ msgstr "Biplot dijagram"
 msgid "Biplot Type"
 msgstr "Vrsta biplot dijagrama"
 
+#: barchart/options/borderColor/black.title
+#: barchart/options/textColor/black.title
 #: barplot/options/borderColor/black.title
 #: barplot/options/textColor/black.title
 #: corresp/options/supColor/black.title
@@ -915,6 +932,7 @@ msgid "Blue"
 msgstr "Plava"
 
 #: areachart/options/colorPalette/BuGn.title
+#: barchart/options/colorPalette/BuGn.title
 #: barplot/options/colorPalette/BuGn.title
 #: boxplot/options/colorPalette/BuGn.title
 #: histogram/options/colorPalette/BuGn.title
@@ -931,6 +949,7 @@ msgid "Blue to Green"
 msgstr "Plava u zelenu"
 
 #: areachart/options/colorPalette/BuPu.title
+#: barchart/options/colorPalette/BuPu.title
 #: barplot/options/colorPalette/BuPu.title
 #: boxplot/options/colorPalette/BuPu.title
 #: histogram/options/colorPalette/BuPu.title
@@ -947,6 +966,7 @@ msgid "Blue to Purple"
 msgstr "Plava u ljubičastu"
 
 #: areachart/options/colorPalette/Blues.title
+#: barchart/options/colorPalette/Blues.title
 #: barplot/options/colorPalette/Blues.title
 #: boxplot/options/colorPalette/Blues.title
 #: histogram/options/colorPalette/Blues.title
@@ -965,6 +985,9 @@ msgstr "Plave"
 #: areachart/options/titleFontFace/bold.title
 #: areachart/options/subtitleFontFace/bold.title
 #: areachart/options/captionFontFace/bold.title
+#: barchart/options/titleFontFace/bold.title
+#: barchart/options/subtitleFontFace/bold.title
+#: barchart/options/captionFontFace/bold.title
 #: barplot/options/titleFontFace/bold.title
 #: barplot/options/subtitleFontFace/bold.title
 #: barplot/options/captionFontFace/bold.title
@@ -1016,6 +1039,9 @@ msgstr "Podebljano"
 #: areachart/options/titleFontFace/bold.italic.title
 #: areachart/options/subtitleFontFace/bold.italic.title
 #: areachart/options/captionFontFace/bold.italic.title
+#: barchart/options/titleFontFace/bold.italic.title
+#: barchart/options/subtitleFontFace/bold.italic.title
+#: barchart/options/captionFontFace/bold.italic.title
 #: barplot/options/titleFontFace/bold.italic.title
 #: barplot/options/subtitleFontFace/bold.italic.title
 #: barplot/options/captionFontFace/bold.italic.title
@@ -1073,6 +1099,7 @@ msgstr "Bonferroni"
 msgid "Boostrap"
 msgstr "Boostrap (ponovno uzorkovanje)"
 
+#: barchart/options/borderColor.title
 #: barplot/options/borderColor.title
 #: histogram/options/borderColor.title
 #: mrcrosstabs/options/borderColor.title
@@ -1083,6 +1110,8 @@ msgstr "Rub"
 
 #: areachart/options/legendPosition/bottom.title
 #: areachart/options/yAxisPosition/0.title
+#: barchart/options/legendPosition/bottom.title
+#: barchart/options/yAxisPosition/0.title
 #: barplot/options/legendPosition/bottom.title
 #: barplot/options/yAxisPosition/0.title
 #: boxplot/options/legendPosition/bottom.title
@@ -1138,6 +1167,7 @@ msgid "Brown"
 msgstr "Smeđa"
 
 #: areachart/options/colorPalette/BrBG.title
+#: barchart/options/colorPalette/BrBG.title
 #: barplot/options/colorPalette/BrBG.title
 #: boxplot/options/colorPalette/BrBG.title
 #: histogram/options/colorPalette/BrBG.title
@@ -1183,6 +1213,7 @@ msgid "Cannot tidy up text variables"
 msgstr "Nije moguće urediti varijable teksta"
 
 #: areachart/ui[4][2].label
+#: barchart/ui[8][2].label
 #: barplot/ui[7][2].label
 #: boxplot/ui[6][2].label
 #: histogram/ui[7][2].label
@@ -1198,13 +1229,13 @@ msgstr "Nije moguće urediti varijable teksta"
 msgid "Caption"
 msgstr "Opis"
 
-#: corresp/ui[8][2][1][0].label
+#: corresp/ui[7][2][1][0].label
 #: multcorresp/ui[8][2][1][0].label
 #: principal/ui[6][2][1][0].label
 msgid "Caption Style"
 msgstr "Stil opisa"
 
-#: corresp/ui[8][2][0][0].label
+#: corresp/ui[7][2][0][0].label
 #: multcorresp/ui[8][2][0][0].label
 #: principal/ui[6][2][0][0].label
 msgid "Caption Text"
@@ -1270,6 +1301,11 @@ msgstr "Cauchy"
 #: areachart/options/captionAlign/0.5.title
 #: areachart/options/xAxisPosition/0.5.title
 #: areachart/options/yAxisPosition/0.5.title
+#: barchart/options/titleAlign/0.5.title
+#: barchart/options/subtitleAlign/0.5.title
+#: barchart/options/captionAlign/0.5.title
+#: barchart/options/xAxisPosition/0.5.title
+#: barchart/options/yAxisPosition/0.5.title
 #: barplot/options/titleAlign/0.5.title
 #: barplot/options/subtitleAlign/0.5.title
 #: barplot/options/captionAlign/0.5.title
@@ -1354,6 +1390,7 @@ msgstr "Centrirano"
 msgid "Chi-squared"
 msgstr "Hi kvadrat"
 
+#: barchart/options/colorNo.title
 #: barplot/options/colorNo.title
 #: boxplot/options/colorNo.title
 #: mrfrequencies/options/colorNo.title
@@ -1361,6 +1398,7 @@ msgstr "Hi kvadrat"
 msgid "Color Number"
 msgstr "Broj boje"
 
+#: barchart/ui[4][0][1][0].label
 #: barplot/ui[3][0][1][0].label
 #: mrcrosstabs/ui[3][0][1][0].label
 #: mrfrequencies/ui[3][0][1][0].label
@@ -1370,6 +1408,7 @@ msgstr "Broj boje"
 msgid "Color Options"
 msgstr "Opcije boja"
 
+#: barchart/ui[4][0][0][0].label
 #: barplot/ui[3][0][0][0].label
 #: boxplot/ui[2][0][0][0].label
 #: histogram/options/colorPalette.title
@@ -1381,8 +1420,9 @@ msgstr "Opcije boja"
 msgid "Color Palette"
 msgstr "Paleta boja"
 
+#: barchart/ui[4].label
 #: barplot/ui[3].label
-#: corresp/ui[6][0][1][0].label
+#: corresp/ui[5][0][1][0].label
 #: histogram/ui[3].label
 #: lollipop/ui[3][0][0][0].label
 #: mrcrosstabs/ui[3].label
@@ -1396,6 +1436,8 @@ msgstr "Boje"
 msgid "Colors & Options"
 msgstr "Boje i opcije"
 
+#: barchart/options/facetBy/column.title
+#: barchart/ui[5][0][0][0][0]/facetBy_column.label
 #: barplot/options/facetBy/column.title
 #: barplot/ui[4][0][1][0][0]/facetBy_column.label
 #: boxplot/options/facetBy/column.title
@@ -1443,8 +1485,15 @@ msgstr "Profili stupaca"
 msgid "Column Summary"
 msgstr "Sažetak stupca"
 
+#: corresp/options/columnTitle.title
+msgid "Column title"
+msgstr ""
+
 #: corresp/options/cols.title
-#: corresp/ui[0][1].label
+#: corresp/options/columns.title
+#: corresp/options/columnTitle.default
+#: corresp/ui/mode/obsTable[0][0][1].label
+#: corresp/ui/mode/contTable[0][0][0].label
 msgid "Columns"
 msgstr "Stupci"
 
@@ -1483,6 +1532,7 @@ msgstr "Zona pouzdanosti"
 msgid "Confidence Band Methods"
 msgstr "Metode zone pouzdanosti"
 
+#: barchart/options/errorBars/ci.title
 #: scatterplot/options/lineSE.title
 msgid "Confidence interval"
 msgstr "Interval pouzdanosti"
@@ -1500,6 +1550,7 @@ msgstr "Conover"
 msgid "Conover's Pairwise Comparisons"
 msgstr "Conoverove parne usporedbe"
 
+#: corresp/options/mode/contTable.title
 #: corresp/results/contingency.title
 msgid "Contingency Table"
 msgstr "Tablica kontingencije"
@@ -1512,8 +1563,10 @@ msgstr "Tablica kontingencije"
 #: package/analyses/boxplot.menuSubgroup
 #: package/analyses/raincloud.menuSubgroup
 #: package/analyses/scatterplot.menuSubgroup
+#: package/analyses/barchart.menuSubgroup
 #: package/analyses/lollipop.menuSubgroup
 #: package/analyses/qqplot.menuSubgroup
+#: barchart/options.menuSubgroup
 #: boxplot/options.menuSubgroup
 #: histogram/options.menuSubgroup
 #: lollipop/options.menuSubgroup
@@ -1575,7 +1628,7 @@ msgid "Counts"
 msgstr "Brojanja"
 
 #: corresp/options/counts.title
-#: corresp/ui[0][2].label
+#: corresp/ui/mode/obsTable[0][0][2].label
 msgid "Counts (optional)"
 msgstr "Brojanja (opcionalno)"
 
@@ -1622,6 +1675,7 @@ msgid "Cumulative %"
 msgstr "Kumulativni postotak"
 
 #: areachart/options/colorPalette/Dark2.title
+#: barchart/options/colorPalette/Dark2.title
 #: barplot/options/colorPalette/Dark2.title
 #: boxplot/options/colorPalette/Dark2.title
 #: histogram/options/colorPalette/Dark2.title
@@ -1668,6 +1722,12 @@ msgstr "Pro"
 msgid "December"
 msgstr "Prosinac"
 
+#: barchart/options/decimalPrecision.title
+msgid "Decimal precision"
+msgstr ""
+
+#: barchart/options/order/decreasing.title
+#: barchart/ui[1][2][0]/order_decreasing.label
 #: barplot/options/order/decreasing.title
 #: barplot/ui[1][2][0]/order_decreasing.label
 #: boxplot/options/order/decreasing.title
@@ -1738,6 +1798,7 @@ msgid "df"
 msgstr "df"
 
 #: areachart/options/colorPalette/dichromat::Categorical.12.title
+#: barchart/options/colorPalette/dichromat::Categorical.12.title
 #: barplot/options/colorPalette/dichromat::Categorical.12.title
 #: boxplot/options/colorPalette/dichromat::Categorical.12.title
 #: histogram/options/colorPalette/dichromat::Categorical.12.title
@@ -1869,6 +1930,16 @@ msgstr "Jednake lokalne razine"
 msgid "Equamax"
 msgstr "Equamax"
 
+#: barchart/ui[3][1][0].label
+msgid "Error Bar Size"
+msgstr ""
+
+#: barchart/options/errorBars.title
+#: barchart/ui[3].label
+#: barchart/ui[3][0][0].label
+msgid "Error Bars"
+msgstr ""
+
 #: qqplot/options/paramMethod/paraEstimate.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat.label
 msgid "Estimate parameters from data"
@@ -1892,10 +1963,9 @@ msgstr "Eksponencijalna distribucija zahtijeva nenegativne (≥0) podatke."
 msgid "Extraction Sums of Squared Loadings"
 msgstr "Zbrojevi ekstrakcije kvadratnih opterećenja"
 
-#: R/qqplot.b.R
-msgid "F"
-msgstr "F"
-
+#: barchart/options/facet.title
+#: barchart/options/facetBy.title
+#: barchart/ui[0][3].label
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
 #: barplot/ui[0][2].label
@@ -1913,6 +1983,8 @@ msgstr "F"
 msgid "Facet"
 msgstr "Poddijagram"
 
+#: barchart/ui[5].label
+#: barchart/ui[5][0][0][0].label
 #: barplot/ui[4][0][1][0].label
 #: boxplot/options/facetBy.title
 #: boxplot/ui[3][0][1][0].label
@@ -1949,6 +2021,9 @@ msgstr "Ispuna"
 #: areachart/options/titleFontFace.title
 #: areachart/options/subtitleFontFace.title
 #: areachart/options/captionFontFace.title
+#: barchart/options/titleFontFace.title
+#: barchart/options/subtitleFontFace.title
+#: barchart/options/captionFontFace.title
 #: barplot/options/titleFontFace.title
 #: barplot/options/subtitleFontFace.title
 #: barplot/options/captionFontFace.title
@@ -2060,6 +2135,7 @@ msgstr "Vrsta učestalosti"
 msgid "Gamma"
 msgstr "Gamma"
 
+#: barchart/options/borderColor/gray.title
 #: barplot/options/borderColor/gray.title
 #: corresp/options/supColor/darkgray.title
 #: histogram/options/fillColor/#999999.title
@@ -2088,6 +2164,7 @@ msgid "Green"
 msgstr "Zelena"
 
 #: areachart/options/colorPalette/GnBu.title
+#: barchart/options/colorPalette/GnBu.title
 #: barplot/options/colorPalette/GnBu.title
 #: boxplot/options/colorPalette/GnBu.title
 #: histogram/options/colorPalette/GnBu.title
@@ -2116,6 +2193,7 @@ msgid "Greenacre's corrected inertia ="
 msgstr "Greenacreova korigirana inercija ="
 
 #: areachart/options/colorPalette/Greens.title
+#: barchart/options/colorPalette/Greens.title
 #: barplot/options/colorPalette/Greens.title
 #: boxplot/options/colorPalette/Greens.title
 #: histogram/options/colorPalette/Greens.title
@@ -2136,6 +2214,7 @@ msgid "Grey"
 msgstr "Siva"
 
 #: areachart/options/colorPalette/Greys.title
+#: barchart/options/colorPalette/Greys.title
 #: barplot/options/colorPalette/Greys.title
 #: boxplot/options/colorPalette/Greys.title
 #: histogram/options/colorPalette/Greys.title
@@ -2153,6 +2232,8 @@ msgstr "Sive"
 
 #: areachart/options/group.title
 #: areachart/ui/mode/oneVariable[0][0][2].label
+#: barchart/options/group.title
+#: barchart/ui[0][2].label
 #: barplot/options/columns.title
 #: barplot/ui[0][1].label
 #: boxplot/options/group.title
@@ -2195,12 +2276,14 @@ msgstr "Grupa i postotak"
 msgid "Group By"
 msgstr "Grupiraj po"
 
+#: barchart/options/barType/dodge2.title
 #: barplot/options/barType/dodge2.title
 #: histogram/options/grouping/dodge.title
 #: mrcrosstabs/options/bartype/dodge2.title
 msgid "Grouped"
 msgstr "Grupirano"
 
+#: barchart/options/barType/dodge.title
 #: barplot/options/barType/dodge.title
 #: mrcrosstabs/options/bartype/dodge.title
 msgid "Grouped (tight)"
@@ -2261,6 +2344,7 @@ msgstr "Prelamanje vodoravnih oznaka"
 msgid "Horizontal line at"
 msgstr "Vodoravna linija pri"
 
+#: barchart/options/horizontal.title
 #: barplot/options/horizontal.title
 #: boxplot/options/horizontal.title
 #: lollipop/options/horizontal.title
@@ -2275,6 +2359,7 @@ msgstr "Vodoravni dijagram"
 msgid "Identity line"
 msgstr "Linija identiteta"
 
+#: barchart/options/ignoreNA.title
 #: likertplot/options/ignoreNA.title
 msgid "Ignore missing groups"
 msgstr "Zanemari nedostajuće grupe"
@@ -2290,6 +2375,8 @@ msgstr "Zanemari nedostajuće vrijednosti"
 msgid "Improve label display"
 msgstr "Poboljšaj prikaz oznaka"
 
+#: barchart/options/order/increasing.title
+#: barchart/ui[1][2][0]/order_increasing.label
 #: barplot/options/order/increasing.title
 #: barplot/ui[1][2][0]/order_increasing.label
 #: boxplot/options/order/increasing.title
@@ -2340,6 +2427,9 @@ msgstr "ISO (Y-M-D)"
 #: areachart/options/titleFontFace/italic.title
 #: areachart/options/subtitleFontFace/italic.title
 #: areachart/options/captionFontFace/italic.title
+#: barchart/options/titleFontFace/italic.title
+#: barchart/options/subtitleFontFace/italic.title
+#: barchart/options/captionFontFace/italic.title
 #: barplot/options/titleFontFace/italic.title
 #: barplot/options/subtitleFontFace/italic.title
 #: barplot/options/captionFontFace/italic.title
@@ -2408,6 +2498,7 @@ msgid "jmv Blue"
 msgstr "jmv plava"
 
 #: areachart/options/colorPalette/jmv.title
+#: barchart/options/colorPalette/jmv.title
 #: barplot/options/colorPalette/jmv.title
 #: boxplot/options/colorPalette/jmv.title
 #: histogram/options/colorPalette/jmv.title
@@ -2507,6 +2598,7 @@ msgstr "Kruskal-Wallis"
 msgid "Kruskal-Wallis Tests"
 msgstr "Kruskal-Wallis testovi"
 
+#: barchart/options/textColor.title
 #: barplot/options/textColor.title
 #: barplot/options/labelFontSize.title
 #: boxplot/options/label.title
@@ -2537,6 +2629,8 @@ msgstr "Boja oznake"
 
 #: areachart/options/yAxisLabelFontSize.title
 #: areachart/options/xAxisLabelFontSize.title
+#: barchart/options/yAxisLabelFontSize.title
+#: barchart/options/xAxisLabelFontSize.title
 #: barplot/options/yAxisLabelFontSize.title
 #: barplot/options/xAxisLabelFontSize.title
 #: boxplot/options/yAxisLabelFontSize.title
@@ -2577,6 +2671,8 @@ msgstr "Položaj oznake"
 
 #: areachart/options/yAxisLabelRotation.title
 #: areachart/options/xAxisLabelRotation.title
+#: barchart/options/yAxisLabelRotation.title
+#: barchart/options/xAxisLabelRotation.title
 #: barplot/options/yAxisLabelRotation.title
 #: barplot/options/xAxisLabelRotation.title
 #: boxplot/options/yAxisLabelRotation.title
@@ -2619,6 +2715,11 @@ msgstr "Oznake"
 #: areachart/options/captionAlign/0.title
 #: areachart/options/legendPosition/left.title
 #: areachart/options/xAxisPosition/0.title
+#: barchart/options/titleAlign/0.title
+#: barchart/options/subtitleAlign/0.title
+#: barchart/options/captionAlign/0.title
+#: barchart/options/legendPosition/left.title
+#: barchart/options/xAxisPosition/0.title
 #: barplot/options/titleAlign/0.title
 #: barplot/options/subtitleAlign/0.title
 #: barplot/options/captionAlign/0.title
@@ -2693,6 +2794,7 @@ msgid "Left"
 msgstr "Lijevo"
 
 #: areachart/ui[3][0].label
+#: barchart/ui[7][0].label
 #: barplot/ui[6][0].label
 #: boxplot/ui[5][0].label
 #: histogram/ui[6][0].label
@@ -2710,6 +2812,7 @@ msgid "Legend"
 msgstr "Legenda"
 
 #: areachart/ui[3].label
+#: barchart/ui[7].label
 #: barplot/ui[6].label
 #: boxplot/ui[5].label
 #: histogram/ui[6].label
@@ -2729,6 +2832,7 @@ msgid "Legend Title"
 msgstr "Naslov legende"
 
 #: areachart/options/colorPalette/custom::lemovice.title
+#: barchart/options/colorPalette/custom::lemovice.title
 #: barplot/options/colorPalette/custom::lemovice.title
 #: boxplot/options/colorPalette/custom::lemovice.title
 #: histogram/options/colorPalette/custom::lemovice.title
@@ -2744,6 +2848,7 @@ msgstr "Naslov legende"
 msgid "Lémovice"
 msgstr "Lémovice"
 
+#: barchart/options/ciLevel.title
 #: multcorresp/results/categories.columns.title
 msgid "Level"
 msgstr "Level"
@@ -2860,6 +2965,7 @@ msgstr "Linija"
 msgid "Line Chart"
 msgstr "Linijski dijagram"
 
+#: barchart/options/errorBarLineSize.title
 #: histogram/options/densityLineSize.title
 #: histogram/options/normalCurveLineSize.title
 msgid "Line size"
@@ -2925,6 +3031,8 @@ msgid "Mann-Whitney U Tests"
 msgstr "Mann-Whitney U testovi"
 
 #: areachart/options/yAxisRangeType/manual.title
+#: barchart/options/yAxisRangeType/manual.title
+#: barchart/options/xAxisRangeType/manual.title
 #: barplot/options/yAxisRangeType/manual.title
 #: barplot/options/xAxisRangeType/manual.title
 #: boxplot/options/yAxisRangeType/manual.title
@@ -2964,6 +3072,10 @@ msgid "Mass"
 msgstr "Masa"
 
 #: areachart/options/yAxisRangeMax.title
+#: barchart/options/yaxis/max.title
+#: barchart/options/yAxisRangeMax.title
+#: barchart/options/xAxisRangeMax.title
+#: barchart/ui[1][0][0][0]/yaxis_max.label
 #: barplot/options/yAxisRangeMax.title
 #: barplot/options/xAxisRangeMax.title
 #: boxplot/options/yAxisRangeMax.title
@@ -2988,6 +3100,7 @@ msgstr "Masa"
 msgid "Max"
 msgstr "Maks."
 
+#: R/barchart.b.R
 #: R/lollipop.b.R
 msgid "Maximum of {var}"
 msgstr "Maksimum od {var}"
@@ -3010,6 +3123,8 @@ msgstr "MCA glavne koordinate"
 msgid "MCA Standard Coordinates"
 msgstr "MCA standardne koordinate"
 
+#: barchart/options/yaxis/mean.title
+#: barchart/ui[1][0][0][0]/yaxis_mean.label
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 msgid "Mean"
@@ -3019,11 +3134,14 @@ msgstr "Srednja vrijednost"
 msgid "Mean & SD"
 msgstr "Srednja vrijednost i standardna devijacija"
 
+#: R/barchart.b.R
 #: R/lollipop.b.R
 msgid "Mean of {var}"
 msgstr "Prosječna vrijednost od {var}"
 
 #: R/likertplot.b.R
+#: barchart/options/yaxis/median.title
+#: barchart/ui[1][0][0][0]/yaxis_median.label
 #: likertplot/options/showMedian.title
 #: lollipop/options/yaxis/median.title
 #: lollipop/ui[2][0][0][0]/yaxis_median.label
@@ -3034,6 +3152,7 @@ msgstr "Medijan"
 msgid "Median and mean require numeric variables"
 msgstr "Medijan i prosjek zahtijevaju numeričke varijable"
 
+#: R/barchart.b.R
 #: R/lollipop.b.R
 msgid "Median of {var}"
 msgstr "Medijan od {var}"
@@ -3076,6 +3195,10 @@ msgid "Middle"
 msgstr "Sredina"
 
 #: areachart/options/yAxisRangeMin.title
+#: barchart/options/yaxis/min.title
+#: barchart/options/yAxisRangeMin.title
+#: barchart/options/xAxisRangeMin.title
+#: barchart/ui[1][0][0][0]/yaxis_min.label
 #: barplot/options/yAxisRangeMin.title
 #: barplot/options/xAxisRangeMin.title
 #: boxplot/options/yAxisRangeMin.title
@@ -3109,6 +3232,7 @@ msgstr "Min. / Maks."
 msgid "Minimum entropy"
 msgstr "Minimalna entropija"
 
+#: R/barchart.b.R
 #: R/lollipop.b.R
 msgid "Minimum of {var}"
 msgstr "Minimum od {var}"
@@ -3177,6 +3301,10 @@ msgstr "Prirodna logaritamska transformacija zahtijeva pozitivne (>0) podatke."
 msgid "No rotation used."
 msgstr "Okretanje nije korišteno."
 
+#: barchart/options/order/none.title
+#: barchart/options/errorBars/none.title
+#: barchart/options/borderColor/none.title
+#: barchart/ui[1][2][0]/order_none.label
 #: barplot/options/order/none.title
 #: barplot/options/borderColor/none.title
 #: barplot/ui[1][2][0]/order_none.label
@@ -3207,6 +3335,9 @@ msgstr "Bez"
 #: areachart/options/titleFontFace/plain.title
 #: areachart/options/subtitleFontFace/plain.title
 #: areachart/options/captionFontFace/plain.title
+#: barchart/options/titleFontFace/plain.title
+#: barchart/options/subtitleFontFace/plain.title
+#: barchart/options/captionFontFace/plain.title
 #: barplot/options/titleFontFace/plain.title
 #: barplot/options/subtitleFontFace/plain.title
 #: barplot/options/captionFontFace/plain.title
@@ -3260,7 +3391,7 @@ msgid "Normal Curve"
 msgstr "Normalna krivulja"
 
 #: corresp/options/normalization.title
-#: corresp/ui[4][0].label
+#: corresp/ui[3][0].label
 #: multcorresp/options/normalization.title
 #: multcorresp/ui[4][0].label
 #: principal/ui[7][0][0][0].label
@@ -3349,6 +3480,10 @@ msgstr "Koordinate glavnog opažanja"
 msgid "Observation Summary"
 msgstr "Sažetak opažanja"
 
+#: corresp/options/mode/obsTable.title
+msgid "Observation Table"
+msgstr ""
+
 #: multcorresp/options/showObservations.title
 #: multcorresp/options/showObservationPlot.title
 #: principal/options/showObservations.title
@@ -3396,6 +3531,7 @@ msgstr "Odmak"
 msgid "One variable"
 msgstr "Jedna varijabla"
 
+#: barchart/ui[4][0][0][0]/singleColor/colorNo.suffix
 #: barplot/ui[3][0][0][0]/singleColor/colorNo.suffix
 #: boxplot/ui[2][0][0][0]/singleColor/colorNo.suffix
 #: mrfrequencies/ui[3][0][0][0][1]/colorNo.suffix
@@ -3438,6 +3574,7 @@ msgid "Orange"
 msgstr "Narančasta"
 
 #: areachart/options/colorPalette/PuOr.title
+#: barchart/options/colorPalette/PuOr.title
 #: barplot/options/colorPalette/PuOr.title
 #: boxplot/options/colorPalette/PuOr.title
 #: histogram/options/colorPalette/PuOr.title
@@ -3455,6 +3592,7 @@ msgid "Orange and Purple"
 msgstr "Narančasta i ljubičasta"
 
 #: areachart/options/colorPalette/OrRd.title
+#: barchart/options/colorPalette/OrRd.title
 #: barplot/options/colorPalette/OrRd.title
 #: boxplot/options/colorPalette/OrRd.title
 #: histogram/options/colorPalette/OrRd.title
@@ -3471,6 +3609,7 @@ msgid "Orange to Red"
 msgstr "Narančasta u crvenu"
 
 #: areachart/options/colorPalette/Oranges.title
+#: barchart/options/colorPalette/Oranges.title
 #: barplot/options/colorPalette/Oranges.title
 #: boxplot/options/colorPalette/Oranges.title
 #: histogram/options/colorPalette/Oranges.title
@@ -3539,6 +3678,7 @@ msgid "p-values are adjusted using {method} method."
 msgstr "p-vrijednosti se podešavaju metodom {method}."
 
 #: areachart/options/colorPalette/Paired.title
+#: barchart/options/colorPalette/Paired.title
 #: barplot/options/colorPalette/Paired.title
 #: boxplot/options/colorPalette/Paired.title
 #: histogram/options/colorPalette/Paired.title
@@ -3559,6 +3699,7 @@ msgid "Pairwise Comparisons"
 msgstr "Usporedbe parova"
 
 #: areachart/options/colorPalette.title
+#: barchart/options/colorPalette.title
 #: barplot/options/colorPalette.title
 #: boxplot/options/colorPalette.title
 #: likertplot/options/plotColor.title
@@ -3601,6 +3742,7 @@ msgid "Parsimax"
 msgstr "Parsimax"
 
 #: areachart/options/colorPalette/Pastel1.title
+#: barchart/options/colorPalette/Pastel1.title
 #: barplot/options/colorPalette/Pastel1.title
 #: boxplot/options/colorPalette/Pastel1.title
 #: histogram/options/colorPalette/Pastel1.title
@@ -3617,6 +3759,7 @@ msgid "Pastel 1"
 msgstr "Pastel 1"
 
 #: areachart/options/colorPalette/Pastel2.title
+#: barchart/options/colorPalette/Pastel2.title
 #: barplot/options/colorPalette/Pastel2.title
 #: boxplot/options/colorPalette/Pastel2.title
 #: histogram/options/colorPalette/Pastel2.title
@@ -3678,6 +3821,7 @@ msgid "Pink"
 msgstr "Ružičasta"
 
 #: areachart/options/colorPalette/PiYG.title
+#: barchart/options/colorPalette/PiYG.title
 #: barplot/options/colorPalette/PiYG.title
 #: boxplot/options/colorPalette/PiYG.title
 #: histogram/options/colorPalette/PiYG.title
@@ -3710,6 +3854,8 @@ msgid "Plot Colors"
 msgstr "Boje dijagrama"
 
 #: areachart/ui[1][0][0].label
+#: barchart/ui[2].label
+#: barchart/ui[2][0][0][0].label
 #: barplot/ui[2].label
 #: barplot/ui[2][0][0][0].label
 #: boxplot/ui[1][0][0].label
@@ -3727,6 +3873,7 @@ msgid "Plot Options"
 msgstr "Opcije dijagrama"
 
 #: areachart/ui[4].label
+#: barchart/ui[8].label
 #: barplot/ui[7].label
 #: boxplot/ui[6].label
 #: histogram/ui[7].label
@@ -3742,7 +3889,7 @@ msgstr "Opcije dijagrama"
 msgid "Plot Titles"
 msgstr "Naslovi dijagrama"
 
-#: corresp/ui[8].label
+#: corresp/ui[7].label
 #: multcorresp/ui[8].label
 #: principal/ui[6].label
 msgid "Plot Titles & Subtitles"
@@ -3754,7 +3901,7 @@ msgstr "Naslovi i podnaslovi dijagrama"
 msgid "Plot Type"
 msgstr "Vrsta dijagrama"
 
-#: corresp/ui[5][1][0].label
+#: corresp/ui[4][1][0].label
 #: mrcrosstabs/results/plot.title
 #: multcorresp/ui[5][1][0].label
 #: principal/ui[3][1][0].label
@@ -3786,6 +3933,9 @@ msgstr "Točkasto"
 #: areachart/options/legendPosition.title
 #: areachart/options/xAxisPosition.title
 #: areachart/options/yAxisPosition.title
+#: barchart/options/legendPosition.title
+#: barchart/options/xAxisPosition.title
+#: barchart/options/yAxisPosition.title
 #: barplot/options/legendPosition.title
 #: barplot/options/xAxisPosition.title
 #: barplot/options/yAxisPosition.title
@@ -3880,6 +4030,7 @@ msgid "Purple"
 msgstr "Ljubičasta"
 
 #: areachart/options/colorPalette/PRGn.title
+#: barchart/options/colorPalette/PRGn.title
 #: barplot/options/colorPalette/PRGn.title
 #: boxplot/options/colorPalette/PRGn.title
 #: histogram/options/colorPalette/PRGn.title
@@ -3897,6 +4048,7 @@ msgid "Purple and Green"
 msgstr "Ljubičasta i zelena"
 
 #: areachart/options/colorPalette/PuBu.title
+#: barchart/options/colorPalette/PuBu.title
 #: barplot/options/colorPalette/PuBu.title
 #: boxplot/options/colorPalette/PuBu.title
 #: histogram/options/colorPalette/PuBu.title
@@ -3913,6 +4065,7 @@ msgid "Purple to Blue"
 msgstr "Ljubičasta u plavu"
 
 #: areachart/options/colorPalette/PuBuGn.title
+#: barchart/options/colorPalette/PuBuGn.title
 #: barplot/options/colorPalette/PuBuGn.title
 #: boxplot/options/colorPalette/PuBuGn.title
 #: histogram/options/colorPalette/PuBuGn.title
@@ -3929,6 +4082,7 @@ msgid "Purple to Green"
 msgstr "Ljubičasta u zelenu"
 
 #: areachart/options/colorPalette/PuRd.title
+#: barchart/options/colorPalette/PuRd.title
 #: barplot/options/colorPalette/PuRd.title
 #: boxplot/options/colorPalette/PuRd.title
 #: histogram/options/colorPalette/PuRd.title
@@ -3945,6 +4099,7 @@ msgid "Purple to Red"
 msgstr "Ljubičasta u crvenu"
 
 #: areachart/options/colorPalette/Purples.title
+#: barchart/options/colorPalette/Purples.title
 #: barplot/options/colorPalette/Purples.title
 #: boxplot/options/colorPalette/Purples.title
 #: histogram/options/colorPalette/Purples.title
@@ -4010,6 +4165,8 @@ msgid "Raincloud Plot"
 msgstr "Raincloud dijagram"
 
 #: areachart/ui[2][0][1][1].label
+#: barchart/ui[6][0][0][1].label
+#: barchart/ui[6][0][1][1].label
 #: barplot/ui[5][0][0][1].label
 #: barplot/ui[5][0][1][1].label
 #: boxplot/ui[4][0][0][1].label
@@ -4032,6 +4189,7 @@ msgstr "Raincloud dijagram"
 msgid "Range"
 msgstr "Raspon"
 
+#: barchart/options/textColor/red.title
 #: corresp/options/rowColor/red.title
 #: corresp/options/colColor/red.title
 #: histogram/options/fillColor/#E41A1C.title
@@ -4045,6 +4203,7 @@ msgid "Red"
 msgstr "Crvena"
 
 #: areachart/options/colorPalette/RdBu.title
+#: barchart/options/colorPalette/RdBu.title
 #: barplot/options/colorPalette/RdBu.title
 #: boxplot/options/colorPalette/RdBu.title
 #: histogram/options/colorPalette/RdBu.title
@@ -4062,6 +4221,7 @@ msgid "Red and Blue"
 msgstr "Crvena i plava"
 
 #: areachart/options/colorPalette/RdGy.title
+#: barchart/options/colorPalette/RdGy.title
 #: barplot/options/colorPalette/RdGy.title
 #: boxplot/options/colorPalette/RdGy.title
 #: histogram/options/colorPalette/RdGy.title
@@ -4079,6 +4239,7 @@ msgid "Red and Gray"
 msgstr "Crvena i siva"
 
 #: areachart/options/colorPalette/RdPu.title
+#: barchart/options/colorPalette/RdPu.title
 #: barplot/options/colorPalette/RdPu.title
 #: boxplot/options/colorPalette/RdPu.title
 #: histogram/options/colorPalette/RdPu.title
@@ -4103,6 +4264,7 @@ msgid "Red, Yellow and Green"
 msgstr "Crvena, žuta i zelena"
 
 #: areachart/options/colorPalette/RdYlBu.title
+#: barchart/options/colorPalette/RdYlBu.title
 #: barplot/options/colorPalette/RdYlBu.title
 #: boxplot/options/colorPalette/RdYlBu.title
 #: histogram/options/colorPalette/RdYlBu.title
@@ -4119,6 +4281,7 @@ msgid "Red, Yellow, Blue"
 msgstr "Crvena, žuta, plava"
 
 #: areachart/options/colorPalette/RdYlGn.title
+#: barchart/options/colorPalette/RdYlGn.title
 #: barplot/options/colorPalette/RdYlGn.title
 #: boxplot/options/colorPalette/RdYlGn.title
 #: histogram/options/colorPalette/RdYlGn.title
@@ -4135,6 +4298,7 @@ msgid "Red, Yellow, Green"
 msgstr "Crvena, žuta, zelena"
 
 #: areachart/options/colorPalette/Reds.title
+#: barchart/options/colorPalette/Reds.title
 #: barplot/options/colorPalette/Reds.title
 #: boxplot/options/colorPalette/Reds.title
 #: histogram/options/colorPalette/Reds.title
@@ -4167,6 +4331,7 @@ msgstr "Linija regresije"
 msgid "Reverse disposition"
 msgstr "Obrnuta dispozicija"
 
+#: barchart/options/reverseStack.title
 #: barplot/options/reverseStack.title
 #: likertplot/options/reverseLikert.title
 #: mrcrosstabs/options/reverseStack.title
@@ -4178,6 +4343,11 @@ msgstr "Obrni redoslijed"
 #: areachart/options/captionAlign/1.title
 #: areachart/options/legendPosition/right.title
 #: areachart/options/xAxisPosition/1.title
+#: barchart/options/titleAlign/1.title
+#: barchart/options/subtitleAlign/1.title
+#: barchart/options/captionAlign/1.title
+#: barchart/options/legendPosition/right.title
+#: barchart/options/xAxisPosition/1.title
 #: barplot/options/titleAlign/1.title
 #: barplot/options/subtitleAlign/1.title
 #: barplot/options/captionAlign/1.title
@@ -4261,6 +4431,8 @@ msgstr "Okreni svojstvene vektore"
 msgid "Rotation"
 msgstr "Okretanje"
 
+#: barchart/options/facetBy/row.title
+#: barchart/ui[5][0][0][0][0]/facetBy_row.label
 #: barplot/options/facetBy/row.title
 #: barplot/ui[4][0][1][0][0]/facetBy_row.label
 #: boxplot/options/facetBy/row.title
@@ -4288,6 +4460,11 @@ msgstr "Profili redaka i stupaca"
 #: corresp/options/showSummaries.title
 msgid "Row and column summaries"
 msgstr "Sažeci redaka i stupaca"
+
+#: corresp/options/rowLabels.title
+#: corresp/ui/mode/contTable[0][0][1].label
+msgid "Row Labels"
+msgstr ""
 
 #: corresp/results/rowplot.title
 msgid "Row Plot"
@@ -4321,7 +4498,7 @@ msgid "Row Summary"
 msgstr "Sažetak retka"
 
 #: corresp/options/rows.title
-#: corresp/ui[0][0].label
+#: corresp/ui/mode/obsTable[0][0][0].label
 msgid "Rows"
 msgstr "Redci"
 
@@ -4400,6 +4577,7 @@ msgid "September"
 msgstr "Rujan"
 
 #: areachart/options/colorPalette/Set1.title
+#: barchart/options/colorPalette/Set1.title
 #: barplot/options/colorPalette/Set1.title
 #: boxplot/options/colorPalette/Set1.title
 #: histogram/options/colorPalette/Set1.title
@@ -4416,6 +4594,7 @@ msgid "Set 1"
 msgstr "Skup 1"
 
 #: areachart/options/colorPalette/Set2.title
+#: barchart/options/colorPalette/Set2.title
 #: barplot/options/colorPalette/Set2.title
 #: boxplot/options/colorPalette/Set2.title
 #: histogram/options/colorPalette/Set2.title
@@ -4432,6 +4611,7 @@ msgid "Set 2"
 msgstr "Skup 2"
 
 #: areachart/options/colorPalette/Set3.title
+#: barchart/options/colorPalette/Set3.title
 #: barplot/options/colorPalette/Set3.title
 #: boxplot/options/colorPalette/Set3.title
 #: histogram/options/colorPalette/Set3.title
@@ -4497,6 +4677,10 @@ msgstr "Prikaži točke s nedostajućom grupom/oznakom"
 msgid "Show totals (Centered only)"
 msgstr "Prikaži ukupne iznose (samo u centru)"
 
+#: barchart/options/showLabels.title
+msgid "Show value labels"
+msgstr ""
+
 #: scatterplot/options/singleColor.title
 msgid "Single"
 msgstr "Jedna"
@@ -4508,6 +4692,9 @@ msgstr "Jedna vrijednost"
 #: areachart/options/legendFontSize.title
 #: areachart/options/xAxisFontSize.title
 #: areachart/options/yAxisFontSize.title
+#: barchart/options/legendFontSize.title
+#: barchart/options/xAxisFontSize.title
+#: barchart/options/yAxisFontSize.title
 #: barplot/options/legendFontSize.title
 #: barplot/options/xAxisFontSize.title
 #: barplot/options/yAxisFontSize.title
@@ -4562,7 +4749,7 @@ msgstr "Pušenje"
 msgid "Smooth"
 msgstr "Zaglađeno"
 
-#: corresp/ui[2][0].label
+#: corresp/ui[1][0].label
 #: multcorresp/ui[2][0].label
 #: principal/ui[2][0][0].label
 msgid "Solution"
@@ -4573,6 +4760,8 @@ msgstr "Rješenje"
 msgid "Sort Variables by Median"
 msgstr "Razvrstaj varijable po medijanu"
 
+#: barchart/options/order.title
+#: barchart/ui[1][2][0].label
 #: barplot/options/order.title
 #: barplot/ui[1][2][0].label
 #: lollipop/options/order.title
@@ -4590,6 +4779,7 @@ msgid "Sorting (by median)"
 msgstr "Razvrstavanje (po medijanu)"
 
 #: areachart/options/colorPalette/Spectral.title
+#: barchart/options/colorPalette/Spectral.title
 #: barplot/options/colorPalette/Spectral.title
 #: boxplot/options/colorPalette/Spectral.title
 #: histogram/options/colorPalette/Spectral.title
@@ -4611,6 +4801,7 @@ msgid "SS Loadings"
 msgstr "SS opterećenja"
 
 #: areachart/options/position/stack.title
+#: barchart/options/barType/stack.title
 #: barplot/options/barType/stack.title
 #: histogram/options/grouping/stack.title
 #: histogram/options/groupingN/stack.title
@@ -4634,6 +4825,14 @@ msgstr "Standardno"
 #: R/principal.b.R
 msgid "Standard coordinates"
 msgstr "Standardne koordinate"
+
+#: barchart/options/errorBars/sd.title
+msgid "Standard deviation"
+msgstr ""
+
+#: barchart/options/errorBars/se.title
+msgid "Standard error"
+msgstr ""
 
 #: R/corresp.b.R
 msgid "Standard normalization"
@@ -4671,6 +4870,7 @@ msgstr "Standardizirane vrijednosti"
 msgid "Staple width"
 msgstr "Širina spojnice"
 
+#: barchart/ui[1][0][0].label
 #: principal/results/kmoTable.columns.title
 msgid "Statistic"
 msgstr "Statistika"
@@ -4685,6 +4885,7 @@ msgid "Student"
 msgstr "Student"
 
 #: areachart/ui[4][1].label
+#: barchart/ui[8][1].label
 #: barplot/ui[7][1].label
 #: boxplot/ui[6][1].label
 #: histogram/ui[7][1].label
@@ -4700,17 +4901,26 @@ msgstr "Student"
 msgid "Subtitle"
 msgstr "Podnaslov"
 
-#: corresp/ui[8][1][1][0].label
+#: corresp/ui[7][1][1][0].label
 #: multcorresp/ui[8][1][1][0].label
 #: principal/ui[6][1][1][0].label
 msgid "Subtitle Style"
 msgstr "Stil podnaslova"
 
-#: corresp/ui[8][1][0][0].label
+#: corresp/ui[7][1][0][0].label
 #: multcorresp/ui[8][1][0][0].label
 #: principal/ui[6][1][0][0].label
 msgid "Subtitle Text"
 msgstr "Tekst podnaslova"
+
+#: barchart/options/yaxis/sum.title
+#: barchart/ui[1][0][0][0]/yaxis_sum.label
+msgid "Sum"
+msgstr ""
+
+#: R/barchart.b.R
+msgid "Sum of {var}"
+msgstr ""
 
 #: corresp/results/eigenvalues.title
 #: multcorresp/options/showSummary.title
@@ -4749,7 +4959,7 @@ msgstr "Dodatni brojevi stupaca moraju biti između 1 i {nmax}."
 msgid "Supplementary columns"
 msgstr "Dodatni stupci"
 
-#: corresp/ui[3][0].label
+#: corresp/ui[2][0].label
 msgid "Supplementary Points"
 msgstr "Dodatne točke"
 
@@ -4798,7 +5008,7 @@ msgstr "Simetrična normalizacija"
 msgid "Table"
 msgstr "Tablica"
 
-#: corresp/ui[5][0][0].label
+#: corresp/ui[4][0][0].label
 #: multcorresp/ui[5][0][0].label
 #: principal/ui[3][0][0].label
 msgid "Tables"
@@ -4820,7 +5030,7 @@ msgstr "Tekst"
 
 #: barplot/ui[4][0][0][0].label
 #: boxplot/ui[3][0][0][0].label
-#: corresp/ui[6][0][0][0].label
+#: corresp/ui[5][0][0][0].label
 #: likertplot/ui[5].label
 #: likertplot/ui[5][0][0][0].label
 #: mrcrosstabs/ui[2][0][2][1].label
@@ -4831,7 +5041,11 @@ msgstr "Tekst"
 msgid "Text Size"
 msgstr "Veličina teksta"
 
-#: corresp/ui[6].label
+#: barchart/options/labelTextSize.title
+msgid "Text size"
+msgstr ""
+
+#: corresp/ui[5].label
 msgid "Text Size & Colors"
 msgstr "Veličina teksta i boje"
 
@@ -4864,6 +5078,8 @@ msgid "Theoretical Quantiles"
 msgstr "Teorijski kvantili"
 
 #: areachart/options/yTicks.title
+#: barchart/options/xTicks.title
+#: barchart/options/yTicks.title
 #: barplot/options/xTicks.title
 #: barplot/options/yTicks.title
 #: boxplot/options/xTicks.title
@@ -4891,6 +5107,7 @@ msgid "Tidy up levels"
 msgstr "Uredi razine"
 
 #: areachart/options/colorPalette/tidy::alger.title
+#: barchart/options/colorPalette/tidy::alger.title
 #: barplot/options/colorPalette/tidy::alger.title
 #: boxplot/options/colorPalette/tidy::alger.title
 #: histogram/options/colorPalette/tidy::alger.title
@@ -4907,6 +5124,7 @@ msgid "Tidy:Alger"
 msgstr "Uredi:Alger"
 
 #: areachart/options/colorPalette/tidy::apple.title
+#: barchart/options/colorPalette/tidy::apple.title
 #: barplot/options/colorPalette/tidy::apple.title
 #: boxplot/options/colorPalette/tidy::apple.title
 #: histogram/options/colorPalette/tidy::apple.title
@@ -4923,6 +5141,7 @@ msgid "Tidy:Apple"
 msgstr "Uredi:Apple"
 
 #: areachart/options/colorPalette/tidy::candy.title
+#: barchart/options/colorPalette/tidy::candy.title
 #: barplot/options/colorPalette/tidy::candy.title
 #: boxplot/options/colorPalette/tidy::candy.title
 #: histogram/options/colorPalette/tidy::candy.title
@@ -4939,6 +5158,7 @@ msgid "Tidy:Candy"
 msgstr "Uredi:Candy"
 
 #: areachart/options/colorPalette/tidy::friendly.title
+#: barchart/options/colorPalette/tidy::friendly.title
 #: barplot/options/colorPalette/tidy::friendly.title
 #: boxplot/options/colorPalette/tidy::friendly.title
 #: histogram/options/colorPalette/tidy::friendly.title
@@ -4955,6 +5175,7 @@ msgid "Tidy:Friendly"
 msgstr "Uredi:Friendly"
 
 #: areachart/options/colorPalette/tidy::ibm.title
+#: barchart/options/colorPalette/tidy::ibm.title
 #: barplot/options/colorPalette/tidy::ibm.title
 #: boxplot/options/colorPalette/tidy::ibm.title
 #: histogram/options/colorPalette/tidy::ibm.title
@@ -4971,6 +5192,7 @@ msgid "Tidy:Ibm"
 msgstr "Uredi:Ibm"
 
 #: areachart/options/colorPalette/tidy::metro.title
+#: barchart/options/colorPalette/tidy::metro.title
 #: barplot/options/colorPalette/tidy::metro.title
 #: boxplot/options/colorPalette/tidy::metro.title
 #: histogram/options/colorPalette/tidy::metro.title
@@ -4987,6 +5209,7 @@ msgid "Tidy:Metro"
 msgstr "Uredi:Metro"
 
 #: areachart/options/colorPalette/tidy::rainbow.title
+#: barchart/options/colorPalette/tidy::rainbow.title
 #: barplot/options/colorPalette/tidy::rainbow.title
 #: boxplot/options/colorPalette/tidy::rainbow.title
 #: histogram/options/colorPalette/tidy::rainbow.title
@@ -5003,6 +5226,7 @@ msgid "Tidy:Rainbow"
 msgstr "Uredi:Rainbow"
 
 #: areachart/options/colorPalette/tidy::seaside.title
+#: barchart/options/colorPalette/tidy::seaside.title
 #: barplot/options/colorPalette/tidy::seaside.title
 #: boxplot/options/colorPalette/tidy::seaside.title
 #: histogram/options/colorPalette/tidy::seaside.title
@@ -5027,6 +5251,7 @@ msgid "Time Series"
 msgstr "Vremenske serije"
 
 #: areachart/ui[4][0].label
+#: barchart/ui[8][0].label
 #: barplot/ui[7][0].label
 #: boxplot/ui[6][0].label
 #: histogram/ui[7][0].label
@@ -5042,13 +5267,13 @@ msgstr "Vremenske serije"
 msgid "Title"
 msgstr "Naslov"
 
-#: corresp/ui[8][0][1][0].label
+#: corresp/ui[7][0][1][0].label
 #: multcorresp/ui[8][0][1][0].label
 #: principal/ui[6][0][1][0].label
 msgid "Title Style"
 msgstr "Stil naslova"
 
-#: corresp/ui[8][0][0][0].label
+#: corresp/ui[7][0][0][0].label
 #: multcorresp/ui[8][0][0][0].label
 #: principal/ui[6][0][0][0].label
 msgid "Title Text"
@@ -5056,6 +5281,8 @@ msgstr "Tekst naslova"
 
 #: areachart/options/legendPosition/top.title
 #: areachart/options/yAxisPosition/1.title
+#: barchart/options/legendPosition/top.title
+#: barchart/options/yAxisPosition/1.title
 #: barplot/options/labelPosition/top.title
 #: barplot/options/legendPosition/top.title
 #: barplot/options/yAxisPosition/1.title
@@ -5132,6 +5359,11 @@ msgstr "US (M-D-Y)"
 msgid "Use boldface"
 msgstr "Koristi podebljani font"
 
+#: barchart/options/bootstrap.title
+msgid "Use bootstrap"
+msgstr ""
+
+#: barchart/options/singleColor.title
 #: barplot/options/singleColor.title
 #: boxplot/ui[2][0][0][0]/singleColor.label
 #: mrfrequencies/options/singleColor.title
@@ -5155,6 +5387,10 @@ msgstr "Koristi istu boju za varijable"
 msgid "Use variable's description as name"
 msgstr "Koristi opis varijable kao ime"
 
+#: barchart/ui[2][0][1][0].label
+msgid "Value Labels"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 #: lollipop/options/yaxis/identity.title
@@ -5166,6 +5402,8 @@ msgstr "Vrijednosti"
 
 #: areachart/options/var.title
 #: areachart/ui/mode/oneVariable[0][0][1].label
+#: barchart/options/yVar.title
+#: barchart/ui[0][0].label
 #: histogram/options/aVar.title
 #: histogram/ui[0][0].label
 #: lollipop/options/aVar.title
@@ -5239,6 +5477,7 @@ msgstr "Okomita crta pri"
 #: package/analyses/mrfrequencies.menuGroup
 #: package/analyses/mrcrosstabs.menuGroup
 #: package/analyses/scatterplot.menuGroup
+#: package/analyses/barchart.menuGroup
 #: package/analyses/lollipop.menuGroup
 #: package/analyses/linechart.menuGroup
 #: package/analyses/areachart.menuGroup
@@ -5248,6 +5487,7 @@ msgstr "Okomita crta pri"
 #: package/analyses/multcorresp.menuGroup
 #: package/datasets/vijPlots.name
 #: areachart/options.menuGroup
+#: barchart/options.menuGroup
 #: barplot/options.menuGroup
 #: boxplot/options.menuGroup
 #: corresp/options.menuGroup
@@ -5271,6 +5511,7 @@ msgid "vijPlots: Yet Another jamovi Plotting Module"
 msgstr "vijPlots: Još jedan jamovi modul za iscrtavanje dijagrama"
 
 #: areachart/options/colorPalette/viridis::inferno.title
+#: barchart/options/colorPalette/viridis::inferno.title
 #: barplot/options/colorPalette/viridis::inferno.title
 #: boxplot/options/colorPalette/viridis::inferno.title
 #: histogram/options/colorPalette/viridis::inferno.title
@@ -5287,6 +5528,7 @@ msgid "Viridis:Inferno"
 msgstr "Viridis:Inferno"
 
 #: areachart/options/colorPalette/viridis::magma.title
+#: barchart/options/colorPalette/viridis::magma.title
 #: barplot/options/colorPalette/viridis::magma.title
 #: boxplot/options/colorPalette/viridis::magma.title
 #: histogram/options/colorPalette/viridis::magma.title
@@ -5303,6 +5545,7 @@ msgid "Viridis:Magma"
 msgstr "Viridis:Magma"
 
 #: areachart/options/colorPalette/viridis::plasma.title
+#: barchart/options/colorPalette/viridis::plasma.title
 #: barplot/options/colorPalette/viridis::plasma.title
 #: boxplot/options/colorPalette/viridis::plasma.title
 #: histogram/options/colorPalette/viridis::plasma.title
@@ -5319,6 +5562,7 @@ msgid "Viridis:Plasma"
 msgstr "Viridis:Plasma"
 
 #: areachart/options/colorPalette/viridis::turbo.title
+#: barchart/options/colorPalette/viridis::turbo.title
 #: barplot/options/colorPalette/viridis::turbo.title
 #: boxplot/options/colorPalette/viridis::turbo.title
 #: histogram/options/colorPalette/viridis::turbo.title
@@ -5335,6 +5579,7 @@ msgid "Viridis:Turbo"
 msgstr "Viridis:Turbo"
 
 #: areachart/options/colorPalette/viridis::viridis.title
+#: barchart/options/colorPalette/viridis::viridis.title
 #: barplot/options/colorPalette/viridis::viridis.title
 #: boxplot/options/colorPalette/viridis::viridis.title
 #: histogram/options/colorPalette/viridis::viridis.title
@@ -5355,6 +5600,8 @@ msgstr "Viridis:Viridis"
 msgid "Weibull"
 msgstr "Weibull"
 
+#: barchart/options/borderColor/white.title
+#: barchart/options/textColor/white.title
 #: barplot/options/borderColor/white.title
 #: barplot/options/textColor/white.title
 #: corresp/options/supColor/white.title
@@ -5373,6 +5620,7 @@ msgstr "Weibull"
 msgid "White"
 msgstr "Bijela"
 
+#: barchart/options/errorBarWidth.title
 #: histogram/options/binWidth.title
 msgid "Width"
 msgstr "Širina"
@@ -5398,12 +5646,16 @@ msgstr "Krive vrijednosti parametara."
 #: areachart/ui[1][1][0].label
 #: areachart/ui[2][0][0][0].label
 #: areachart/ui[3][1].label
+#: barchart/options/xVar.title
+#: barchart/ui[0][1].label
+#: barchart/ui[6][0][0][0].label
+#: barchart/ui[7][1].label
 #: barplot/ui[5][0][0][0].label
 #: barplot/ui[6][1].label
 #: boxplot/ui[4][0][0][0].label
 #: boxplot/ui[5][1].label
 #: corresp/options/xaxis.title
-#: corresp/ui[7][0].label
+#: corresp/ui[6][0].label
 #: histogram/ui[5][0][0][0].label
 #: histogram/ui[6][1].label
 #: likertplot/ui[6][0][0][0].label
@@ -5450,6 +5702,7 @@ msgstr "X-os i Y-os ne mogu biti veće od broja dimenzija."
 msgid "X-Axis is a date"
 msgstr "Os X je datum"
 
+#: barchart/options/xAxisRangeType.title
 #: barplot/options/xAxisRangeType.title
 #: boxplot/options/xAxisRangeType.title
 #: histogram/options/xAxisRangeType.title
@@ -5464,6 +5717,9 @@ msgstr "Raspon osi X"
 
 #: areachart/ui[2][0][1][0].label
 #: areachart/ui[3][2].label
+#: barchart/options/yaxis.title
+#: barchart/ui[6][0][1][0].label
+#: barchart/ui[7][2].label
 #: barplot/options/yaxis.title
 #: barplot/ui[1][0][0].label
 #: barplot/ui[5][0][1][0].label
@@ -5471,7 +5727,7 @@ msgstr "Raspon osi X"
 #: boxplot/ui[4][0][1][0].label
 #: boxplot/ui[5][2].label
 #: corresp/options/yaxis.title
-#: corresp/ui[7][1].label
+#: corresp/ui[6][1].label
 #: histogram/ui[1][0][0].label
 #: histogram/ui[5][0][1][0].label
 #: histogram/ui[6][2].label
@@ -5503,6 +5759,7 @@ msgid "Y-Axis"
 msgstr "Os Y"
 
 #: areachart/options/yAxisRangeType.title
+#: barchart/options/yAxisRangeType.title
 #: barplot/options/yAxisRangeType.title
 #: boxplot/options/yAxisRangeType.title
 #: histogram/options/yAxisRangeType.title
@@ -5527,6 +5784,7 @@ msgid "Yellow"
 msgstr "Žuta"
 
 #: areachart/options/colorPalette/YlGnBu.title
+#: barchart/options/colorPalette/YlGnBu.title
 #: barplot/options/colorPalette/YlGnBu.title
 #: boxplot/options/colorPalette/YlGnBu.title
 #: histogram/options/colorPalette/YlGnBu.title
@@ -5543,6 +5801,7 @@ msgid "Yellow to Blue"
 msgstr "Žuta u plavu"
 
 #: areachart/options/colorPalette/YlOrBr.title
+#: barchart/options/colorPalette/YlOrBr.title
 #: barplot/options/colorPalette/YlOrBr.title
 #: boxplot/options/colorPalette/YlOrBr.title
 #: histogram/options/colorPalette/YlOrBr.title
@@ -5559,6 +5818,7 @@ msgid "Yellow to Brown"
 msgstr "Žuta u smeđu"
 
 #: areachart/options/colorPalette/YlGn.title
+#: barchart/options/colorPalette/YlGn.title
 #: barplot/options/colorPalette/YlGn.title
 #: boxplot/options/colorPalette/YlGn.title
 #: histogram/options/colorPalette/YlGn.title
@@ -5575,6 +5835,7 @@ msgid "Yellow to Green"
 msgstr "Žuta u zelena"
 
 #: areachart/options/colorPalette/YlOrRd.title
+#: barchart/options/colorPalette/YlOrRd.title
 #: barplot/options/colorPalette/YlOrRd.title
 #: boxplot/options/colorPalette/YlOrRd.title
 #: histogram/options/colorPalette/YlOrRd.title

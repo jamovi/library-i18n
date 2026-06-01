@@ -43,12 +43,25 @@ msgstr "{rotation} סיבוב עם נורמליזציה של Kaiser"
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "{rotation} סיבוב עם תקינות Kaiser שימש."
 
+#: R/barchart.b.R
+msgid "{var} (Mean ± {level}%  CI)"
+msgstr ""
+
+#: R/barchart.b.R
+msgid "{var} (Mean ± SD)"
+msgstr ""
+
+#: R/barchart.b.R
+msgid "{var} (Mean ± SE)"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 #, fuzzy
 msgid "{var} doesn't have a valid date format."
 msgstr "{var} אינו מכיל פורמט תאריך תקף."
 
+#: barchart/options/facetNumber.title
 #: barplot/options/facetNumber.title
 #: boxplot/options/facetNumber.title
 #: histogram/options/facetNumber.title
@@ -58,6 +71,10 @@ msgstr "{var} אינו מכיל פורמט תאריך תקף."
 #, fuzzy
 msgid "# of rows/columns"
 msgstr "מספר שורות/עמודות"
+
+#: barchart/ui[3][0][0]/errorBars_ci/ciLevel.suffix
+msgid "%"
+msgstr ""
 
 #: barplot/options/accuracy.title
 #: barplot/ui[2][0][2][0].label
@@ -193,15 +210,19 @@ msgstr ""
 "<p>קובץ דוגמה כלול ב- Open > Data Library > vijPlots > Likert</p>"
 
 #: R/corresp.b.R
-#, fuzzy
 msgid ""
 "<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
 "two categorical variables. Computations are based on <a href = "
 "\"https://CRAN.R-project.org/package=FactoMineR\" "
 "target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
 "S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
-"using the \"Counts\" variable.</p>\n"
+"<p>The data can be</p>\n"
+"<ul>\n"
+"<li>an <strong>Observation table</strong> (raw data), possibly weighted "
+"using <em>jamovi</em> built-in weight system or using the \"Counts\" "
+"variable</li>\n"
+"<li>or a <strong>Contingency table</strong></li>\n"
+"</ul>\n"
 "<p><strong>Supplementary row or column</strong> numbers may be entered as "
 "integer lists : 1,3,6</p>\n"
 "<p>Four normalizations (scaling of row and column scores before plotting) "
@@ -220,28 +241,6 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
 msgstr ""
-"<p>מודול זה מחשב <strong>ניתוח שוואי (CA)</strong> עבור שני משתנים קטגוריים. "
-"החישובים מתבססים על <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> חבילה על ידי F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>הנתונים יכולים להיות מוכללים באמצעות מערכת המשקלות המובנית של "
-"<em>jamovi</em> או באמצעות משתנה \"ספירות\".</p>\n"
-"<p><strong>מספרי שורה או עמודה נלווים</strong> יכולים להיכנס כרשימות "
-"מספריות: 1,3,6</p>\n"
-"<p>ארבע תקינות (גלילה של ציוני שורה ועמודה לפני עליה לגרף) זמינות :</p>\n"
-"<ul>\n"
-"<li><strong>עיקרי:</strong> ציוני שורות ועמודות מוסקלים על ידי ערכים "
-"עצמיים.</li>\n"
-"<li><strong>סימטרי:</strong> ציוני שורות ועמודות מוסקלים על ידי שורש הריבועי "
-"של ערכים עצמיים. </li>\n"
-"<li><strong>שורה עיקרית:</strong> רק ציוני שורות מוסקלים על ידי ערכים "
-"עצמיים.</li>\n"
-"<li><strong>עמודה עיקרית:</strong> רק ציוני עמודות מוסקלים על ידי ערכים "
-"עצמיים.</li>\n"
-"<li><strong>סטנדרטי:</strong> הקואורדינטות הגולמיות ללא תקינות.</li>\n"
-"</ul>\n"
-"<p>קובץ דוגמה כלול ב- Open > Data Library > vijPlots > Smoking</p>"
 
 #: R/multcorresp.b.R
 #, fuzzy
@@ -649,6 +648,7 @@ msgid "A demonstration dataset for vijPlots/Time Serie plots."
 msgstr "סט נתונים הדגמה ל vijPlots/ Time Serie plots."
 
 #: areachart/options/colorPalette/Accent.title
+#: barchart/options/colorPalette/Accent.title
 #: barplot/options/colorPalette/Accent.title
 #: boxplot/options/colorPalette/Accent.title
 #: histogram/options/colorPalette/Accent.title
@@ -693,6 +693,9 @@ msgstr "אפשרויות מתקדמות"
 #: areachart/options/titleAlign.title
 #: areachart/options/subtitleAlign.title
 #: areachart/options/captionAlign.title
+#: barchart/options/titleAlign.title
+#: barchart/options/subtitleAlign.title
+#: barchart/options/captionAlign.title
 #: barplot/options/titleAlign.title
 #: barplot/options/subtitleAlign.title
 #: barplot/options/captionAlign.title
@@ -793,6 +796,9 @@ msgstr "אוגוסט"
 
 #: areachart/options/dateFormat/auto.title
 #: areachart/options/yAxisRangeType/auto.title
+#: barchart/options/textColor/auto.title
+#: barchart/options/yAxisRangeType/auto.title
+#: barchart/options/xAxisRangeType/auto.title
 #: barplot/options/textColor/auto.title
 #: barplot/options/yAxisRangeType/auto.title
 #: barplot/options/xAxisRangeType/auto.title
@@ -823,6 +829,7 @@ msgid "Auto"
 msgstr "אוטומטי"
 
 #: areachart/ui[2].label
+#: barchart/ui[6].label
 #: barplot/ui[5].label
 #: boxplot/ui[4].label
 #: histogram/ui[5].label
@@ -848,11 +855,19 @@ msgstr "מספרי ציר לא יכולים להיות שווים."
 msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
 msgstr "מספרי ציר חייבים להיות קטנים או שווים למספר הממדים ({nDim})."
 
-#: corresp/ui[7].label
+#: corresp/ui[6].label
 #: mrfrequencies/ui[5].label
 #, fuzzy
 msgid "Axis Titles"
 msgstr "כותרות ציר"
+
+#: package/analyses/barchart.title
+#: package/analyses/barchart.menuTitle
+#: barchart/options.title
+#: barchart/ui.title
+#: barchart/results.title
+msgid "Bar Chart"
+msgstr ""
 
 #: package/analyses/barplot.title
 #: package/analyses/barplot.menuTitle
@@ -863,6 +878,8 @@ msgstr "כותרות ציר"
 msgid "Bar Plot"
 msgstr "תרשים עמודה"
 
+#: barchart/options/barType.title
+#: barchart/ui[1][1][0].label
 #: barplot/options/barType.title
 #: barplot/ui[1][1][0].label
 #: mrcrosstabs/options/bartype.title
@@ -943,6 +960,8 @@ msgstr "ביופלוט"
 msgid "Biplot Type"
 msgstr "סוג ביופלוט"
 
+#: barchart/options/borderColor/black.title
+#: barchart/options/textColor/black.title
 #: barplot/options/borderColor/black.title
 #: barplot/options/textColor/black.title
 #: corresp/options/supColor/black.title
@@ -980,6 +999,7 @@ msgid "Blue"
 msgstr "כחול"
 
 #: areachart/options/colorPalette/BuGn.title
+#: barchart/options/colorPalette/BuGn.title
 #: barplot/options/colorPalette/BuGn.title
 #: boxplot/options/colorPalette/BuGn.title
 #: histogram/options/colorPalette/BuGn.title
@@ -997,6 +1017,7 @@ msgid "Blue to Green"
 msgstr "כחול לירוק"
 
 #: areachart/options/colorPalette/BuPu.title
+#: barchart/options/colorPalette/BuPu.title
 #: barplot/options/colorPalette/BuPu.title
 #: boxplot/options/colorPalette/BuPu.title
 #: histogram/options/colorPalette/BuPu.title
@@ -1014,6 +1035,7 @@ msgid "Blue to Purple"
 msgstr "כחול לסגול"
 
 #: areachart/options/colorPalette/Blues.title
+#: barchart/options/colorPalette/Blues.title
 #: barplot/options/colorPalette/Blues.title
 #: boxplot/options/colorPalette/Blues.title
 #: histogram/options/colorPalette/Blues.title
@@ -1033,6 +1055,9 @@ msgstr "כחולים"
 #: areachart/options/titleFontFace/bold.title
 #: areachart/options/subtitleFontFace/bold.title
 #: areachart/options/captionFontFace/bold.title
+#: barchart/options/titleFontFace/bold.title
+#: barchart/options/subtitleFontFace/bold.title
+#: barchart/options/captionFontFace/bold.title
 #: barplot/options/titleFontFace/bold.title
 #: barplot/options/subtitleFontFace/bold.title
 #: barplot/options/captionFontFace/bold.title
@@ -1084,6 +1109,9 @@ msgstr "הבלטה"
 #: areachart/options/titleFontFace/bold.italic.title
 #: areachart/options/subtitleFontFace/bold.italic.title
 #: areachart/options/captionFontFace/bold.italic.title
+#: barchart/options/titleFontFace/bold.italic.title
+#: barchart/options/subtitleFontFace/bold.italic.title
+#: barchart/options/captionFontFace/bold.italic.title
 #: barplot/options/titleFontFace/bold.italic.title
 #: barplot/options/subtitleFontFace/bold.italic.title
 #: barplot/options/captionFontFace/bold.italic.title
@@ -1143,6 +1171,7 @@ msgstr "בונפרוני"
 msgid "Boostrap"
 msgstr "בוטסטראפ"
 
+#: barchart/options/borderColor.title
 #: barplot/options/borderColor.title
 #: histogram/options/borderColor.title
 #: mrcrosstabs/options/borderColor.title
@@ -1154,6 +1183,8 @@ msgstr "גבול"
 
 #: areachart/options/legendPosition/bottom.title
 #: areachart/options/yAxisPosition/0.title
+#: barchart/options/legendPosition/bottom.title
+#: barchart/options/yAxisPosition/0.title
 #: barplot/options/legendPosition/bottom.title
 #: barplot/options/yAxisPosition/0.title
 #: boxplot/options/legendPosition/bottom.title
@@ -1214,6 +1245,7 @@ msgid "Brown"
 msgstr "חום"
 
 #: areachart/options/colorPalette/BrBG.title
+#: barchart/options/colorPalette/BrBG.title
 #: barplot/options/colorPalette/BrBG.title
 #: boxplot/options/colorPalette/BrBG.title
 #: histogram/options/colorPalette/BrBG.title
@@ -1266,6 +1298,7 @@ msgid "Cannot tidy up text variables"
 msgstr "לא ניתן לטפל במשתנים טקסטואליים"
 
 #: areachart/ui[4][2].label
+#: barchart/ui[8][2].label
 #: barplot/ui[7][2].label
 #: boxplot/ui[6][2].label
 #: histogram/ui[7][2].label
@@ -1282,14 +1315,14 @@ msgstr "לא ניתן לטפל במשתנים טקסטואליים"
 msgid "Caption"
 msgstr "כותרת"
 
-#: corresp/ui[8][2][1][0].label
+#: corresp/ui[7][2][1][0].label
 #: multcorresp/ui[8][2][1][0].label
 #: principal/ui[6][2][1][0].label
 #, fuzzy
 msgid "Caption Style"
 msgstr "סגנון כותרת"
 
-#: corresp/ui[8][2][0][0].label
+#: corresp/ui[7][2][0][0].label
 #: multcorresp/ui[8][2][0][0].label
 #: principal/ui[6][2][0][0].label
 #, fuzzy
@@ -1367,6 +1400,11 @@ msgstr "קושי"
 #: areachart/options/captionAlign/0.5.title
 #: areachart/options/xAxisPosition/0.5.title
 #: areachart/options/yAxisPosition/0.5.title
+#: barchart/options/titleAlign/0.5.title
+#: barchart/options/subtitleAlign/0.5.title
+#: barchart/options/captionAlign/0.5.title
+#: barchart/options/xAxisPosition/0.5.title
+#: barchart/options/yAxisPosition/0.5.title
 #: barplot/options/titleAlign/0.5.title
 #: barplot/options/subtitleAlign/0.5.title
 #: barplot/options/captionAlign/0.5.title
@@ -1454,6 +1492,7 @@ msgstr "מרכז"
 msgid "Chi-squared"
 msgstr "כי בריבוע"
 
+#: barchart/options/colorNo.title
 #: barplot/options/colorNo.title
 #: boxplot/options/colorNo.title
 #: mrfrequencies/options/colorNo.title
@@ -1462,6 +1501,7 @@ msgstr "כי בריבוע"
 msgid "Color Number"
 msgstr "מספר צבע"
 
+#: barchart/ui[4][0][1][0].label
 #: barplot/ui[3][0][1][0].label
 #: mrcrosstabs/ui[3][0][1][0].label
 #: mrfrequencies/ui[3][0][1][0].label
@@ -1472,6 +1512,7 @@ msgstr "מספר צבע"
 msgid "Color Options"
 msgstr "אפשרויות צבע"
 
+#: barchart/ui[4][0][0][0].label
 #: barplot/ui[3][0][0][0].label
 #: boxplot/ui[2][0][0][0].label
 #: histogram/options/colorPalette.title
@@ -1484,8 +1525,9 @@ msgstr "אפשרויות צבע"
 msgid "Color Palette"
 msgstr "סרגל צבעים"
 
+#: barchart/ui[4].label
 #: barplot/ui[3].label
-#: corresp/ui[6][0][1][0].label
+#: corresp/ui[5][0][1][0].label
 #: histogram/ui[3].label
 #: lollipop/ui[3][0][0][0].label
 #: mrcrosstabs/ui[3].label
@@ -1501,6 +1543,8 @@ msgstr "צבעים"
 msgid "Colors & Options"
 msgstr "צבעים ואפשרויות"
 
+#: barchart/options/facetBy/column.title
+#: barchart/ui[5][0][0][0][0]/facetBy_column.label
 #: barplot/options/facetBy/column.title
 #: barplot/ui[4][0][1][0][0]/facetBy_column.label
 #: boxplot/options/facetBy/column.title
@@ -1556,8 +1600,15 @@ msgstr "פרופילי עמודות"
 msgid "Column Summary"
 msgstr "סיכום עמודה"
 
+#: corresp/options/columnTitle.title
+msgid "Column title"
+msgstr ""
+
 #: corresp/options/cols.title
-#: corresp/ui[0][1].label
+#: corresp/options/columns.title
+#: corresp/options/columnTitle.default
+#: corresp/ui/mode/obsTable[0][0][1].label
+#: corresp/ui/mode/contTable[0][0][0].label
 #, fuzzy
 msgid "Columns"
 msgstr "טורים"
@@ -1605,6 +1656,7 @@ msgstr "פס ביטחון"
 msgid "Confidence Band Methods"
 msgstr "שיטות תקציב הבטחה"
 
+#: barchart/options/errorBars/ci.title
 #: scatterplot/options/lineSE.title
 #, fuzzy
 msgid "Confidence interval"
@@ -1626,6 +1678,7 @@ msgstr "Conover"
 msgid "Conover's Pairwise Comparisons"
 msgstr "השווא של קונוער"
 
+#: corresp/options/mode/contTable.title
 #: corresp/results/contingency.title
 #, fuzzy
 msgid "Contingency Table"
@@ -1640,8 +1693,10 @@ msgstr "טבלת תלות"
 #: package/analyses/boxplot.menuSubgroup
 #: package/analyses/raincloud.menuSubgroup
 #: package/analyses/scatterplot.menuSubgroup
+#: package/analyses/barchart.menuSubgroup
 #: package/analyses/lollipop.menuSubgroup
 #: package/analyses/qqplot.menuSubgroup
+#: barchart/options.menuSubgroup
 #: boxplot/options.menuSubgroup
 #: histogram/options.menuSubgroup
 #: lollipop/options.menuSubgroup
@@ -1712,7 +1767,7 @@ msgid "Counts"
 msgstr "ספירות"
 
 #: corresp/options/counts.title
-#: corresp/ui[0][2].label
+#: corresp/ui/mode/obsTable[0][0][2].label
 #, fuzzy
 msgid "Counts (optional)"
 msgstr "ספירה (אופציונלי)"
@@ -1769,6 +1824,7 @@ msgid "Cumulative %"
 msgstr "אחוז מצטבר"
 
 #: areachart/options/colorPalette/Dark2.title
+#: barchart/options/colorPalette/Dark2.title
 #: barplot/options/colorPalette/Dark2.title
 #: boxplot/options/colorPalette/Dark2.title
 #: histogram/options/colorPalette/Dark2.title
@@ -1823,6 +1879,12 @@ msgstr "דצ"
 msgid "December"
 msgstr "דצמבר"
 
+#: barchart/options/decimalPrecision.title
+msgid "Decimal precision"
+msgstr ""
+
+#: barchart/options/order/decreasing.title
+#: barchart/ui[1][2][0]/order_decreasing.label
 #: barplot/options/order/decreasing.title
 #: barplot/ui[1][2][0]/order_decreasing.label
 #: boxplot/options/order/decreasing.title
@@ -1901,6 +1963,7 @@ msgid "df"
 msgstr "דפ"
 
 #: areachart/options/colorPalette/dichromat::Categorical.12.title
+#: barchart/options/colorPalette/dichromat::Categorical.12.title
 #: barplot/options/colorPalette/dichromat::Categorical.12.title
 #: boxplot/options/colorPalette/dichromat::Categorical.12.title
 #: histogram/options/colorPalette/dichromat::Categorical.12.title
@@ -2057,6 +2120,16 @@ msgstr "רמות מקומיות שוות"
 msgid "Equamax"
 msgstr "Equamax"
 
+#: barchart/ui[3][1][0].label
+msgid "Error Bar Size"
+msgstr ""
+
+#: barchart/options/errorBars.title
+#: barchart/ui[3].label
+#: barchart/ui[3][0][0].label
+msgid "Error Bars"
+msgstr ""
+
 #: qqplot/options/paramMethod/paraEstimate.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat.label
 #, fuzzy
@@ -2085,11 +2158,9 @@ msgstr "התפלגות מעריכית דורשת נתונים לא-שליליי�
 msgid "Extraction Sums of Squared Loadings"
 msgstr "סכומים של ערכים מועלים"
 
-#: R/qqplot.b.R
-#, fuzzy
-msgid "F"
-msgstr "F"
-
+#: barchart/options/facet.title
+#: barchart/options/facetBy.title
+#: barchart/ui[0][3].label
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
 #: barplot/ui[0][2].label
@@ -2108,6 +2179,8 @@ msgstr "F"
 msgid "Facet"
 msgstr "פנים"
 
+#: barchart/ui[5].label
+#: barchart/ui[5][0][0][0].label
 #: barplot/ui[4][0][1][0].label
 #: boxplot/options/facetBy.title
 #: boxplot/ui[3][0][1][0].label
@@ -2149,6 +2222,9 @@ msgstr "מילוי"
 #: areachart/options/titleFontFace.title
 #: areachart/options/subtitleFontFace.title
 #: areachart/options/captionFontFace.title
+#: barchart/options/titleFontFace.title
+#: barchart/options/subtitleFontFace.title
+#: barchart/options/captionFontFace.title
 #: barplot/options/titleFontFace.title
 #: barplot/options/subtitleFontFace.title
 #: barplot/options/captionFontFace.title
@@ -2272,6 +2348,7 @@ msgstr "סוג תדירות"
 msgid "Gamma"
 msgstr "גאמא"
 
+#: barchart/options/borderColor/gray.title
 #: barplot/options/borderColor/gray.title
 #: corresp/options/supColor/darkgray.title
 #: histogram/options/fillColor/#999999.title
@@ -2302,6 +2379,7 @@ msgid "Green"
 msgstr "ירוק"
 
 #: areachart/options/colorPalette/GnBu.title
+#: barchart/options/colorPalette/GnBu.title
 #: barplot/options/colorPalette/GnBu.title
 #: boxplot/options/colorPalette/GnBu.title
 #: histogram/options/colorPalette/GnBu.title
@@ -2334,6 +2412,7 @@ msgid "Greenacre's corrected inertia ="
 msgstr "אינרציה מתוקנת של Greenacre ="
 
 #: areachart/options/colorPalette/Greens.title
+#: barchart/options/colorPalette/Greens.title
 #: barplot/options/colorPalette/Greens.title
 #: boxplot/options/colorPalette/Greens.title
 #: histogram/options/colorPalette/Greens.title
@@ -2356,6 +2435,7 @@ msgid "Grey"
 msgstr "אפור"
 
 #: areachart/options/colorPalette/Greys.title
+#: barchart/options/colorPalette/Greys.title
 #: barplot/options/colorPalette/Greys.title
 #: boxplot/options/colorPalette/Greys.title
 #: histogram/options/colorPalette/Greys.title
@@ -2374,6 +2454,8 @@ msgstr "אפורים"
 
 #: areachart/options/group.title
 #: areachart/ui/mode/oneVariable[0][0][2].label
+#: barchart/options/group.title
+#: barchart/ui[0][2].label
 #: barplot/options/columns.title
 #: barplot/ui[0][1].label
 #: boxplot/options/group.title
@@ -2422,6 +2504,7 @@ msgstr "קבוצה + אחוז"
 msgid "Group By"
 msgstr "קבוצה לפי"
 
+#: barchart/options/barType/dodge2.title
 #: barplot/options/barType/dodge2.title
 #: histogram/options/grouping/dodge.title
 #: mrcrosstabs/options/bartype/dodge2.title
@@ -2429,6 +2512,7 @@ msgstr "קבוצה לפי"
 msgid "Grouped"
 msgstr "קבוצתי"
 
+#: barchart/options/barType/dodge.title
 #: barplot/options/barType/dodge.title
 #: mrcrosstabs/options/bartype/dodge.title
 #, fuzzy
@@ -2500,6 +2584,7 @@ msgstr "עטיפת תווית אופקית"
 msgid "Horizontal line at"
 msgstr "קו אופקי ב"
 
+#: barchart/options/horizontal.title
 #: barplot/options/horizontal.title
 #: boxplot/options/horizontal.title
 #: lollipop/options/horizontal.title
@@ -2516,6 +2601,7 @@ msgstr "גרף אופקי"
 msgid "Identity line"
 msgstr "קו זהות"
 
+#: barchart/options/ignoreNA.title
 #: likertplot/options/ignoreNA.title
 #, fuzzy
 msgid "Ignore missing groups"
@@ -2534,6 +2620,8 @@ msgstr "התעלם מערכים חסרים"
 msgid "Improve label display"
 msgstr "שפר את התצוגה של התוויות"
 
+#: barchart/options/order/increasing.title
+#: barchart/ui[1][2][0]/order_increasing.label
 #: barplot/options/order/increasing.title
 #: barplot/ui[1][2][0]/order_increasing.label
 #: boxplot/options/order/increasing.title
@@ -2592,6 +2680,9 @@ msgstr "ISO (Y-M-D)"
 #: areachart/options/titleFontFace/italic.title
 #: areachart/options/subtitleFontFace/italic.title
 #: areachart/options/captionFontFace/italic.title
+#: barchart/options/titleFontFace/italic.title
+#: barchart/options/subtitleFontFace/italic.title
+#: barchart/options/captionFontFace/italic.title
 #: barplot/options/titleFontFace/italic.title
 #: barplot/options/subtitleFontFace/italic.title
 #: barplot/options/captionFontFace/italic.title
@@ -2663,6 +2754,7 @@ msgid "jmv Blue"
 msgstr "jmv כחול"
 
 #: areachart/options/colorPalette/jmv.title
+#: barchart/options/colorPalette/jmv.title
 #: barplot/options/colorPalette/jmv.title
 #: boxplot/options/colorPalette/jmv.title
 #: histogram/options/colorPalette/jmv.title
@@ -2778,6 +2870,7 @@ msgstr "קרוסקל-וואליס"
 msgid "Kruskal-Wallis Tests"
 msgstr "מבחני קרוסקל-וואליס"
 
+#: barchart/options/textColor.title
 #: barplot/options/textColor.title
 #: barplot/options/labelFontSize.title
 #: boxplot/options/label.title
@@ -2810,6 +2903,8 @@ msgstr "צבע תווית"
 
 #: areachart/options/yAxisLabelFontSize.title
 #: areachart/options/xAxisLabelFontSize.title
+#: barchart/options/yAxisLabelFontSize.title
+#: barchart/options/xAxisLabelFontSize.title
 #: barplot/options/yAxisLabelFontSize.title
 #: barplot/options/xAxisLabelFontSize.title
 #: boxplot/options/yAxisLabelFontSize.title
@@ -2853,6 +2948,8 @@ msgstr "מיקום תווית"
 
 #: areachart/options/yAxisLabelRotation.title
 #: areachart/options/xAxisLabelRotation.title
+#: barchart/options/yAxisLabelRotation.title
+#: barchart/options/xAxisLabelRotation.title
 #: barplot/options/yAxisLabelRotation.title
 #: barplot/options/xAxisLabelRotation.title
 #: boxplot/options/yAxisLabelRotation.title
@@ -2898,6 +2995,11 @@ msgstr "תוויות"
 #: areachart/options/captionAlign/0.title
 #: areachart/options/legendPosition/left.title
 #: areachart/options/xAxisPosition/0.title
+#: barchart/options/titleAlign/0.title
+#: barchart/options/subtitleAlign/0.title
+#: barchart/options/captionAlign/0.title
+#: barchart/options/legendPosition/left.title
+#: barchart/options/xAxisPosition/0.title
 #: barplot/options/titleAlign/0.title
 #: barplot/options/subtitleAlign/0.title
 #: barplot/options/captionAlign/0.title
@@ -2973,6 +3075,7 @@ msgid "Left"
 msgstr "שמאל"
 
 #: areachart/ui[3][0].label
+#: barchart/ui[7][0].label
 #: barplot/ui[6][0].label
 #: boxplot/ui[5][0].label
 #: histogram/ui[6][0].label
@@ -2991,6 +3094,7 @@ msgid "Legend"
 msgstr "אגדה"
 
 #: areachart/ui[3].label
+#: barchart/ui[7].label
 #: barplot/ui[6].label
 #: boxplot/ui[5].label
 #: histogram/ui[6].label
@@ -3012,6 +3116,7 @@ msgid "Legend Title"
 msgstr "כותרת אגד"
 
 #: areachart/options/colorPalette/custom::lemovice.title
+#: barchart/options/colorPalette/custom::lemovice.title
 #: barplot/options/colorPalette/custom::lemovice.title
 #: boxplot/options/colorPalette/custom::lemovice.title
 #: histogram/options/colorPalette/custom::lemovice.title
@@ -3028,6 +3133,7 @@ msgstr "כותרת אגד"
 msgid "Lémovice"
 msgstr "למוביצה"
 
+#: barchart/options/ciLevel.title
 #: multcorresp/results/categories.columns.title
 #, fuzzy
 msgid "Level"
@@ -3161,6 +3267,7 @@ msgstr "קו"
 msgid "Line Chart"
 msgstr "גרף קווים"
 
+#: barchart/options/errorBarLineSize.title
 #: histogram/options/densityLineSize.title
 #: histogram/options/normalCurveLineSize.title
 #, fuzzy
@@ -3236,6 +3343,8 @@ msgid "Mann-Whitney U Tests"
 msgstr "מבחני מאן-ויטני U"
 
 #: areachart/options/yAxisRangeType/manual.title
+#: barchart/options/yAxisRangeType/manual.title
+#: barchart/options/xAxisRangeType/manual.title
 #: barplot/options/yAxisRangeType/manual.title
 #: barplot/options/xAxisRangeType/manual.title
 #: boxplot/options/yAxisRangeType/manual.title
@@ -3279,6 +3388,10 @@ msgid "Mass"
 msgstr "מסה"
 
 #: areachart/options/yAxisRangeMax.title
+#: barchart/options/yaxis/max.title
+#: barchart/options/yAxisRangeMax.title
+#: barchart/options/xAxisRangeMax.title
+#: barchart/ui[1][0][0][0]/yaxis_max.label
 #: barplot/options/yAxisRangeMax.title
 #: barplot/options/xAxisRangeMax.title
 #: boxplot/options/yAxisRangeMax.title
@@ -3304,6 +3417,7 @@ msgstr "מסה"
 msgid "Max"
 msgstr "מקסימום"
 
+#: R/barchart.b.R
 #: R/lollipop.b.R
 #, fuzzy
 msgid "Maximum of {var}"
@@ -3331,6 +3445,8 @@ msgstr "קואורדינטות עיקריות MCA"
 msgid "MCA Standard Coordinates"
 msgstr "קואורדינטות MCA סטנדרטיות"
 
+#: barchart/options/yaxis/mean.title
+#: barchart/ui[1][0][0][0]/yaxis_mean.label
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 #, fuzzy
@@ -3342,12 +3458,15 @@ msgstr "ממוצע"
 msgid "Mean & SD"
 msgstr "ממוצע & סטיית תקן"
 
+#: R/barchart.b.R
 #: R/lollipop.b.R
 #, fuzzy
 msgid "Mean of {var}"
 msgstr "ממוצע של {var}"
 
 #: R/likertplot.b.R
+#: barchart/options/yaxis/median.title
+#: barchart/ui[1][0][0][0]/yaxis_median.label
 #: likertplot/options/showMedian.title
 #: lollipop/options/yaxis/median.title
 #: lollipop/ui[2][0][0][0]/yaxis_median.label
@@ -3360,6 +3479,7 @@ msgstr "חציון"
 msgid "Median and mean require numeric variables"
 msgstr "חציון וממוצע דורשים משתנים מספריים"
 
+#: R/barchart.b.R
 #: R/lollipop.b.R
 #, fuzzy
 msgid "Median of {var}"
@@ -3409,6 +3529,10 @@ msgid "Middle"
 msgstr "אמצע"
 
 #: areachart/options/yAxisRangeMin.title
+#: barchart/options/yaxis/min.title
+#: barchart/options/yAxisRangeMin.title
+#: barchart/options/xAxisRangeMin.title
+#: barchart/ui[1][0][0][0]/yaxis_min.label
 #: barplot/options/yAxisRangeMin.title
 #: barplot/options/xAxisRangeMin.title
 #: boxplot/options/yAxisRangeMin.title
@@ -3445,6 +3569,7 @@ msgstr "מינימום / מקסימום"
 msgid "Minimum entropy"
 msgstr "אנטרופיה מינימלית"
 
+#: R/barchart.b.R
 #: R/lollipop.b.R
 #, fuzzy
 msgid "Minimum of {var}"
@@ -3525,6 +3650,10 @@ msgstr "טרנספורמציית לוגריתם טבעי דורשת נתונים
 msgid "No rotation used."
 msgstr "לא בוצע סיבוב."
 
+#: barchart/options/order/none.title
+#: barchart/options/errorBars/none.title
+#: barchart/options/borderColor/none.title
+#: barchart/ui[1][2][0]/order_none.label
 #: barplot/options/order/none.title
 #: barplot/options/borderColor/none.title
 #: barplot/ui[1][2][0]/order_none.label
@@ -3556,6 +3685,9 @@ msgstr "אף אחד"
 #: areachart/options/titleFontFace/plain.title
 #: areachart/options/subtitleFontFace/plain.title
 #: areachart/options/captionFontFace/plain.title
+#: barchart/options/titleFontFace/plain.title
+#: barchart/options/subtitleFontFace/plain.title
+#: barchart/options/captionFontFace/plain.title
 #: barplot/options/titleFontFace/plain.title
 #: barplot/options/subtitleFontFace/plain.title
 #: barplot/options/captionFontFace/plain.title
@@ -3611,7 +3743,7 @@ msgid "Normal Curve"
 msgstr "עקומת נורמל"
 
 #: corresp/options/normalization.title
-#: corresp/ui[4][0].label
+#: corresp/ui[3][0].label
 #: multcorresp/options/normalization.title
 #: multcorresp/ui[4][0].label
 #: principal/ui[7][0][0][0].label
@@ -3718,6 +3850,10 @@ msgstr "קואורדינטות ראשיות של תצפיות"
 msgid "Observation Summary"
 msgstr "סיכום תצפיות"
 
+#: corresp/options/mode/obsTable.title
+msgid "Observation Table"
+msgstr ""
+
 #: multcorresp/options/showObservations.title
 #: multcorresp/options/showObservationPlot.title
 #: principal/options/showObservations.title
@@ -3774,6 +3910,7 @@ msgstr "אופסט"
 msgid "One variable"
 msgstr "משתנה אחד"
 
+#: barchart/ui[4][0][0][0]/singleColor/colorNo.suffix
 #: barplot/ui[3][0][0][0]/singleColor/colorNo.suffix
 #: boxplot/ui[2][0][0][0]/singleColor/colorNo.suffix
 #: mrfrequencies/ui[3][0][0][0][1]/colorNo.suffix
@@ -3821,6 +3958,7 @@ msgid "Orange"
 msgstr "כתום"
 
 #: areachart/options/colorPalette/PuOr.title
+#: barchart/options/colorPalette/PuOr.title
 #: barplot/options/colorPalette/PuOr.title
 #: boxplot/options/colorPalette/PuOr.title
 #: histogram/options/colorPalette/PuOr.title
@@ -3839,6 +3977,7 @@ msgid "Orange and Purple"
 msgstr "כתום וסגול"
 
 #: areachart/options/colorPalette/OrRd.title
+#: barchart/options/colorPalette/OrRd.title
 #: barplot/options/colorPalette/OrRd.title
 #: boxplot/options/colorPalette/OrRd.title
 #: histogram/options/colorPalette/OrRd.title
@@ -3856,6 +3995,7 @@ msgid "Orange to Red"
 msgstr "טקרח לעבר"
 
 #: areachart/options/colorPalette/Oranges.title
+#: barchart/options/colorPalette/Oranges.title
 #: barplot/options/colorPalette/Oranges.title
 #: boxplot/options/colorPalette/Oranges.title
 #: histogram/options/colorPalette/Oranges.title
@@ -3936,6 +4076,7 @@ msgid "p-values are adjusted using {method} method."
 msgstr "ערכי p מותאמים באמצעות {method} שיטה."
 
 #: areachart/options/colorPalette/Paired.title
+#: barchart/options/colorPalette/Paired.title
 #: barplot/options/colorPalette/Paired.title
 #: boxplot/options/colorPalette/Paired.title
 #: histogram/options/colorPalette/Paired.title
@@ -3958,6 +4099,7 @@ msgid "Pairwise Comparisons"
 msgstr "השוואות זוגיות"
 
 #: areachart/options/colorPalette.title
+#: barchart/options/colorPalette.title
 #: barplot/options/colorPalette.title
 #: boxplot/options/colorPalette.title
 #: likertplot/options/plotColor.title
@@ -4007,6 +4149,7 @@ msgid "Parsimax"
 msgstr "Parsimax"
 
 #: areachart/options/colorPalette/Pastel1.title
+#: barchart/options/colorPalette/Pastel1.title
 #: barplot/options/colorPalette/Pastel1.title
 #: boxplot/options/colorPalette/Pastel1.title
 #: histogram/options/colorPalette/Pastel1.title
@@ -4024,6 +4167,7 @@ msgid "Pastel 1"
 msgstr "Pastel 1"
 
 #: areachart/options/colorPalette/Pastel2.title
+#: barchart/options/colorPalette/Pastel2.title
 #: barplot/options/colorPalette/Pastel2.title
 #: boxplot/options/colorPalette/Pastel2.title
 #: histogram/options/colorPalette/Pastel2.title
@@ -4091,6 +4235,7 @@ msgid "Pink"
 msgstr "ורוד"
 
 #: areachart/options/colorPalette/PiYG.title
+#: barchart/options/colorPalette/PiYG.title
 #: barplot/options/colorPalette/PiYG.title
 #: boxplot/options/colorPalette/PiYG.title
 #: histogram/options/colorPalette/PiYG.title
@@ -4126,6 +4271,8 @@ msgid "Plot Colors"
 msgstr "צבעי גרף"
 
 #: areachart/ui[1][0][0].label
+#: barchart/ui[2].label
+#: barchart/ui[2][0][0][0].label
 #: barplot/ui[2].label
 #: barplot/ui[2][0][0][0].label
 #: boxplot/ui[1][0][0].label
@@ -4144,6 +4291,7 @@ msgid "Plot Options"
 msgstr "אפשרויות גרף"
 
 #: areachart/ui[4].label
+#: barchart/ui[8].label
 #: barplot/ui[7].label
 #: boxplot/ui[6].label
 #: histogram/ui[7].label
@@ -4160,7 +4308,7 @@ msgstr "אפשרויות גרף"
 msgid "Plot Titles"
 msgstr "כרות טעמות"
 
-#: corresp/ui[8].label
+#: corresp/ui[7].label
 #: multcorresp/ui[8].label
 #: principal/ui[6].label
 #, fuzzy
@@ -4174,7 +4322,7 @@ msgstr "כותרות וכותרות משנה של גרף"
 msgid "Plot Type"
 msgstr "סוג טעמות"
 
-#: corresp/ui[5][1][0].label
+#: corresp/ui[4][1][0].label
 #: mrcrosstabs/results/plot.title
 #: multcorresp/ui[5][1][0].label
 #: principal/ui[3][1][0].label
@@ -4212,6 +4360,9 @@ msgstr "נקוד נקודי"
 #: areachart/options/legendPosition.title
 #: areachart/options/xAxisPosition.title
 #: areachart/options/yAxisPosition.title
+#: barchart/options/legendPosition.title
+#: barchart/options/xAxisPosition.title
+#: barchart/options/yAxisPosition.title
 #: barplot/options/legendPosition.title
 #: barplot/options/xAxisPosition.title
 #: barplot/options/yAxisPosition.title
@@ -4316,6 +4467,7 @@ msgid "Purple"
 msgstr "סגול"
 
 #: areachart/options/colorPalette/PRGn.title
+#: barchart/options/colorPalette/PRGn.title
 #: barplot/options/colorPalette/PRGn.title
 #: boxplot/options/colorPalette/PRGn.title
 #: histogram/options/colorPalette/PRGn.title
@@ -4334,6 +4486,7 @@ msgid "Purple and Green"
 msgstr "סגול וירוק"
 
 #: areachart/options/colorPalette/PuBu.title
+#: barchart/options/colorPalette/PuBu.title
 #: barplot/options/colorPalette/PuBu.title
 #: boxplot/options/colorPalette/PuBu.title
 #: histogram/options/colorPalette/PuBu.title
@@ -4351,6 +4504,7 @@ msgid "Purple to Blue"
 msgstr "סגול לכחול"
 
 #: areachart/options/colorPalette/PuBuGn.title
+#: barchart/options/colorPalette/PuBuGn.title
 #: barplot/options/colorPalette/PuBuGn.title
 #: boxplot/options/colorPalette/PuBuGn.title
 #: histogram/options/colorPalette/PuBuGn.title
@@ -4368,6 +4522,7 @@ msgid "Purple to Green"
 msgstr "סגול לירוק"
 
 #: areachart/options/colorPalette/PuRd.title
+#: barchart/options/colorPalette/PuRd.title
 #: barplot/options/colorPalette/PuRd.title
 #: boxplot/options/colorPalette/PuRd.title
 #: histogram/options/colorPalette/PuRd.title
@@ -4385,6 +4540,7 @@ msgid "Purple to Red"
 msgstr "סגול לאדום"
 
 #: areachart/options/colorPalette/Purples.title
+#: barchart/options/colorPalette/Purples.title
 #: barplot/options/colorPalette/Purples.title
 #: boxplot/options/colorPalette/Purples.title
 #: histogram/options/colorPalette/Purples.title
@@ -4460,6 +4616,8 @@ msgid "Raincloud Plot"
 msgstr "גרף ענן גשם"
 
 #: areachart/ui[2][0][1][1].label
+#: barchart/ui[6][0][0][1].label
+#: barchart/ui[6][0][1][1].label
 #: barplot/ui[5][0][0][1].label
 #: barplot/ui[5][0][1][1].label
 #: boxplot/ui[4][0][0][1].label
@@ -4483,6 +4641,7 @@ msgstr "גרף ענן גשם"
 msgid "Range"
 msgstr "טווח"
 
+#: barchart/options/textColor/red.title
 #: corresp/options/rowColor/red.title
 #: corresp/options/colColor/red.title
 #: histogram/options/fillColor/#E41A1C.title
@@ -4497,6 +4656,7 @@ msgid "Red"
 msgstr "אדום"
 
 #: areachart/options/colorPalette/RdBu.title
+#: barchart/options/colorPalette/RdBu.title
 #: barplot/options/colorPalette/RdBu.title
 #: boxplot/options/colorPalette/RdBu.title
 #: histogram/options/colorPalette/RdBu.title
@@ -4515,6 +4675,7 @@ msgid "Red and Blue"
 msgstr "אדום וכחול"
 
 #: areachart/options/colorPalette/RdGy.title
+#: barchart/options/colorPalette/RdGy.title
 #: barplot/options/colorPalette/RdGy.title
 #: boxplot/options/colorPalette/RdGy.title
 #: histogram/options/colorPalette/RdGy.title
@@ -4533,6 +4694,7 @@ msgid "Red and Gray"
 msgstr "אדום ואפור"
 
 #: areachart/options/colorPalette/RdPu.title
+#: barchart/options/colorPalette/RdPu.title
 #: barplot/options/colorPalette/RdPu.title
 #: boxplot/options/colorPalette/RdPu.title
 #: histogram/options/colorPalette/RdPu.title
@@ -4560,6 +4722,7 @@ msgid "Red, Yellow and Green"
 msgstr "אדום, צהוב וירוק"
 
 #: areachart/options/colorPalette/RdYlBu.title
+#: barchart/options/colorPalette/RdYlBu.title
 #: barplot/options/colorPalette/RdYlBu.title
 #: boxplot/options/colorPalette/RdYlBu.title
 #: histogram/options/colorPalette/RdYlBu.title
@@ -4577,6 +4740,7 @@ msgid "Red, Yellow, Blue"
 msgstr "אדום, צהוב, כחול"
 
 #: areachart/options/colorPalette/RdYlGn.title
+#: barchart/options/colorPalette/RdYlGn.title
 #: barplot/options/colorPalette/RdYlGn.title
 #: boxplot/options/colorPalette/RdYlGn.title
 #: histogram/options/colorPalette/RdYlGn.title
@@ -4594,6 +4758,7 @@ msgid "Red, Yellow, Green"
 msgstr "אדום, צהוב, ירוק"
 
 #: areachart/options/colorPalette/Reds.title
+#: barchart/options/colorPalette/Reds.title
 #: barplot/options/colorPalette/Reds.title
 #: boxplot/options/colorPalette/Reds.title
 #: histogram/options/colorPalette/Reds.title
@@ -4631,6 +4796,7 @@ msgstr "קו ריצה"
 msgid "Reverse disposition"
 msgstr "הפוך סידור"
 
+#: barchart/options/reverseStack.title
 #: barplot/options/reverseStack.title
 #: likertplot/options/reverseLikert.title
 #: mrcrosstabs/options/reverseStack.title
@@ -4643,6 +4809,11 @@ msgstr "סדר מערכות הפוך"
 #: areachart/options/captionAlign/1.title
 #: areachart/options/legendPosition/right.title
 #: areachart/options/xAxisPosition/1.title
+#: barchart/options/titleAlign/1.title
+#: barchart/options/subtitleAlign/1.title
+#: barchart/options/captionAlign/1.title
+#: barchart/options/legendPosition/right.title
+#: barchart/options/xAxisPosition/1.title
 #: barplot/options/titleAlign/1.title
 #: barplot/options/subtitleAlign/1.title
 #: barplot/options/captionAlign/1.title
@@ -4729,6 +4900,8 @@ msgstr "סיבוב וקטורים עקרוניים"
 msgid "Rotation"
 msgstr "סיבוִ"
 
+#: barchart/options/facetBy/row.title
+#: barchart/ui[5][0][0][0][0]/facetBy_row.label
 #: barplot/options/facetBy/row.title
 #: barplot/ui[4][0][1][0][0]/facetBy_row.label
 #: boxplot/options/facetBy/row.title
@@ -4760,6 +4933,11 @@ msgstr "פרופילי שורות ועמודות"
 #, fuzzy
 msgid "Row and column summaries"
 msgstr "סיכום שורות ועמודות"
+
+#: corresp/options/rowLabels.title
+#: corresp/ui/mode/contTable[0][0][1].label
+msgid "Row Labels"
+msgstr ""
 
 #: corresp/results/rowplot.title
 #, fuzzy
@@ -4800,7 +4978,7 @@ msgid "Row Summary"
 msgstr "סיכום שורה"
 
 #: corresp/options/rows.title
-#: corresp/ui[0][0].label
+#: corresp/ui/mode/obsTable[0][0][0].label
 #, fuzzy
 msgid "Rows"
 msgstr "שורות"
@@ -4895,6 +5073,7 @@ msgid "September"
 msgstr "ספטמבר"
 
 #: areachart/options/colorPalette/Set1.title
+#: barchart/options/colorPalette/Set1.title
 #: barplot/options/colorPalette/Set1.title
 #: boxplot/options/colorPalette/Set1.title
 #: histogram/options/colorPalette/Set1.title
@@ -4912,6 +5091,7 @@ msgid "Set 1"
 msgstr "קבוצ 1"
 
 #: areachart/options/colorPalette/Set2.title
+#: barchart/options/colorPalette/Set2.title
 #: barplot/options/colorPalette/Set2.title
 #: boxplot/options/colorPalette/Set2.title
 #: histogram/options/colorPalette/Set2.title
@@ -4929,6 +5109,7 @@ msgid "Set 2"
 msgstr "סט 2"
 
 #: areachart/options/colorPalette/Set3.title
+#: barchart/options/colorPalette/Set3.title
 #: barplot/options/colorPalette/Set3.title
 #: boxplot/options/colorPalette/Set3.title
 #: histogram/options/colorPalette/Set3.title
@@ -5007,6 +5188,10 @@ msgstr "הצגת נקודות עם קבוצה/תווית חסרה"
 msgid "Show totals (Centered only)"
 msgstr "הצג סכומים (רק מרכזיים)"
 
+#: barchart/options/showLabels.title
+msgid "Show value labels"
+msgstr ""
+
 #: scatterplot/options/singleColor.title
 #, fuzzy
 msgid "Single"
@@ -5020,6 +5205,9 @@ msgstr "ערך יחיד"
 #: areachart/options/legendFontSize.title
 #: areachart/options/xAxisFontSize.title
 #: areachart/options/yAxisFontSize.title
+#: barchart/options/legendFontSize.title
+#: barchart/options/xAxisFontSize.title
+#: barchart/options/yAxisFontSize.title
 #: barplot/options/legendFontSize.title
 #: barplot/options/xAxisFontSize.title
 #: barplot/options/yAxisFontSize.title
@@ -5078,7 +5266,7 @@ msgstr "עישון"
 msgid "Smooth"
 msgstr "חלק"
 
-#: corresp/ui[2][0].label
+#: corresp/ui[1][0].label
 #: multcorresp/ui[2][0].label
 #: principal/ui[2][0][0].label
 #, fuzzy
@@ -5091,6 +5279,8 @@ msgstr "פתרון"
 msgid "Sort Variables by Median"
 msgstr "מיון משתנים לפי ממוצע"
 
+#: barchart/options/order.title
+#: barchart/ui[1][2][0].label
 #: barplot/options/order.title
 #: barplot/ui[1][2][0].label
 #: lollipop/options/order.title
@@ -5110,6 +5300,7 @@ msgid "Sorting (by median)"
 msgstr "מיון (לפי ממוצע)"
 
 #: areachart/options/colorPalette/Spectral.title
+#: barchart/options/colorPalette/Spectral.title
 #: barplot/options/colorPalette/Spectral.title
 #: boxplot/options/colorPalette/Spectral.title
 #: histogram/options/colorPalette/Spectral.title
@@ -5133,6 +5324,7 @@ msgid "SS Loadings"
 msgstr "SS Loadings"
 
 #: areachart/options/position/stack.title
+#: barchart/options/barType/stack.title
 #: barplot/options/barType/stack.title
 #: histogram/options/grouping/stack.title
 #: histogram/options/groupingN/stack.title
@@ -5160,6 +5352,14 @@ msgstr "סטנדרטי"
 #, fuzzy
 msgid "Standard coordinates"
 msgstr "קואורדינטות סטנדרטיות"
+
+#: barchart/options/errorBars/sd.title
+msgid "Standard deviation"
+msgstr ""
+
+#: barchart/options/errorBars/se.title
+msgid "Standard error"
+msgstr ""
 
 #: R/corresp.b.R
 #, fuzzy
@@ -5206,6 +5406,7 @@ msgstr "ערכים מתוקנים"
 msgid "Staple width"
 msgstr "רוחב קיפול"
 
+#: barchart/ui[1][0][0].label
 #: principal/results/kmoTable.columns.title
 #, fuzzy
 msgid "Statistic"
@@ -5223,6 +5424,7 @@ msgid "Student"
 msgstr "סטודנט"
 
 #: areachart/ui[4][1].label
+#: barchart/ui[8][1].label
 #: barplot/ui[7][1].label
 #: boxplot/ui[6][1].label
 #: histogram/ui[7][1].label
@@ -5239,19 +5441,28 @@ msgstr "סטודנט"
 msgid "Subtitle"
 msgstr "כותרת משנה"
 
-#: corresp/ui[8][1][1][0].label
+#: corresp/ui[7][1][1][0].label
 #: multcorresp/ui[8][1][1][0].label
 #: principal/ui[6][1][1][0].label
 #, fuzzy
 msgid "Subtitle Style"
 msgstr "סגנון כותרת משנה"
 
-#: corresp/ui[8][1][0][0].label
+#: corresp/ui[7][1][0][0].label
 #: multcorresp/ui[8][1][0][0].label
 #: principal/ui[6][1][0][0].label
 #, fuzzy
 msgid "Subtitle Text"
 msgstr "טקסט כותרת משנה"
+
+#: barchart/options/yaxis/sum.title
+#: barchart/ui[1][0][0][0]/yaxis_sum.label
+msgid "Sum"
+msgstr ""
+
+#: R/barchart.b.R
+msgid "Sum of {var}"
+msgstr ""
 
 #: corresp/results/eigenvalues.title
 #: multcorresp/options/showSummary.title
@@ -5298,7 +5509,7 @@ msgstr "מספרי עמודות משלימות חייבים להיות בין 1 
 msgid "Supplementary columns"
 msgstr "טורות נלוווים"
 
-#: corresp/ui[3][0].label
+#: corresp/ui[2][0].label
 #, fuzzy
 msgid "Supplementary Points"
 msgstr "נקודות נוספות"
@@ -5358,7 +5569,7 @@ msgstr "תקינות סימטרית"
 msgid "Table"
 msgstr "טבלה"
 
-#: corresp/ui[5][0][0].label
+#: corresp/ui[4][0][0].label
 #: multcorresp/ui[5][0][0].label
 #: principal/ui[3][0][0].label
 #, fuzzy
@@ -5384,7 +5595,7 @@ msgstr "טקסט"
 
 #: barplot/ui[4][0][0][0].label
 #: boxplot/ui[3][0][0][0].label
-#: corresp/ui[6][0][0][0].label
+#: corresp/ui[5][0][0][0].label
 #: likertplot/ui[5].label
 #: likertplot/ui[5][0][0][0].label
 #: mrcrosstabs/ui[2][0][2][1].label
@@ -5396,7 +5607,11 @@ msgstr "טקסט"
 msgid "Text Size"
 msgstr "גוד הטקסט"
 
-#: corresp/ui[6].label
+#: barchart/options/labelTextSize.title
+msgid "Text size"
+msgstr ""
+
+#: corresp/ui[5].label
 #, fuzzy
 msgid "Text Size & Colors"
 msgstr "גודל טקסט וצבעים"
@@ -5436,6 +5651,8 @@ msgid "Theoretical Quantiles"
 msgstr "קוונטילים תאורטיים"
 
 #: areachart/options/yTicks.title
+#: barchart/options/xTicks.title
+#: barchart/options/yTicks.title
 #: barplot/options/xTicks.title
 #: barplot/options/yTicks.title
 #: boxplot/options/xTicks.title
@@ -5465,6 +5682,7 @@ msgid "Tidy up levels"
 msgstr "נקה רמות"
 
 #: areachart/options/colorPalette/tidy::alger.title
+#: barchart/options/colorPalette/tidy::alger.title
 #: barplot/options/colorPalette/tidy::alger.title
 #: boxplot/options/colorPalette/tidy::alger.title
 #: histogram/options/colorPalette/tidy::alger.title
@@ -5482,6 +5700,7 @@ msgid "Tidy:Alger"
 msgstr "Tidy:Alger"
 
 #: areachart/options/colorPalette/tidy::apple.title
+#: barchart/options/colorPalette/tidy::apple.title
 #: barplot/options/colorPalette/tidy::apple.title
 #: boxplot/options/colorPalette/tidy::apple.title
 #: histogram/options/colorPalette/tidy::apple.title
@@ -5499,6 +5718,7 @@ msgid "Tidy:Apple"
 msgstr "Tidy:Apple"
 
 #: areachart/options/colorPalette/tidy::candy.title
+#: barchart/options/colorPalette/tidy::candy.title
 #: barplot/options/colorPalette/tidy::candy.title
 #: boxplot/options/colorPalette/tidy::candy.title
 #: histogram/options/colorPalette/tidy::candy.title
@@ -5516,6 +5736,7 @@ msgid "Tidy:Candy"
 msgstr "Tidy:Candy"
 
 #: areachart/options/colorPalette/tidy::friendly.title
+#: barchart/options/colorPalette/tidy::friendly.title
 #: barplot/options/colorPalette/tidy::friendly.title
 #: boxplot/options/colorPalette/tidy::friendly.title
 #: histogram/options/colorPalette/tidy::friendly.title
@@ -5533,6 +5754,7 @@ msgid "Tidy:Friendly"
 msgstr "Tidy:ידידותי"
 
 #: areachart/options/colorPalette/tidy::ibm.title
+#: barchart/options/colorPalette/tidy::ibm.title
 #: barplot/options/colorPalette/tidy::ibm.title
 #: boxplot/options/colorPalette/tidy::ibm.title
 #: histogram/options/colorPalette/tidy::ibm.title
@@ -5550,6 +5772,7 @@ msgid "Tidy:Ibm"
 msgstr "Tidy:Ibm"
 
 #: areachart/options/colorPalette/tidy::metro.title
+#: barchart/options/colorPalette/tidy::metro.title
 #: barplot/options/colorPalette/tidy::metro.title
 #: boxplot/options/colorPalette/tidy::metro.title
 #: histogram/options/colorPalette/tidy::metro.title
@@ -5567,6 +5790,7 @@ msgid "Tidy:Metro"
 msgstr "Tidy:Metro"
 
 #: areachart/options/colorPalette/tidy::rainbow.title
+#: barchart/options/colorPalette/tidy::rainbow.title
 #: barplot/options/colorPalette/tidy::rainbow.title
 #: boxplot/options/colorPalette/tidy::rainbow.title
 #: histogram/options/colorPalette/tidy::rainbow.title
@@ -5584,6 +5808,7 @@ msgid "Tidy:Rainbow"
 msgstr "Tidy:Rainbow"
 
 #: areachart/options/colorPalette/tidy::seaside.title
+#: barchart/options/colorPalette/tidy::seaside.title
 #: barplot/options/colorPalette/tidy::seaside.title
 #: boxplot/options/colorPalette/tidy::seaside.title
 #: histogram/options/colorPalette/tidy::seaside.title
@@ -5610,6 +5835,7 @@ msgid "Time Series"
 msgstr "סדרת זמן"
 
 #: areachart/ui[4][0].label
+#: barchart/ui[8][0].label
 #: barplot/ui[7][0].label
 #: boxplot/ui[6][0].label
 #: histogram/ui[7][0].label
@@ -5626,14 +5852,14 @@ msgstr "סדרת זמן"
 msgid "Title"
 msgstr "כותרת"
 
-#: corresp/ui[8][0][1][0].label
+#: corresp/ui[7][0][1][0].label
 #: multcorresp/ui[8][0][1][0].label
 #: principal/ui[6][0][1][0].label
 #, fuzzy
 msgid "Title Style"
 msgstr "סגנון כותרת"
 
-#: corresp/ui[8][0][0][0].label
+#: corresp/ui[7][0][0][0].label
 #: multcorresp/ui[8][0][0][0].label
 #: principal/ui[6][0][0][0].label
 #, fuzzy
@@ -5642,6 +5868,8 @@ msgstr "טקסט כותרת"
 
 #: areachart/options/legendPosition/top.title
 #: areachart/options/yAxisPosition/1.title
+#: barchart/options/legendPosition/top.title
+#: barchart/options/yAxisPosition/1.title
 #: barplot/options/labelPosition/top.title
 #: barplot/options/legendPosition/top.title
 #: barplot/options/yAxisPosition/1.title
@@ -5728,6 +5956,11 @@ msgstr "US (M-D-Y)"
 msgid "Use boldface"
 msgstr "השתמש בפונט מודגש"
 
+#: barchart/options/bootstrap.title
+msgid "Use bootstrap"
+msgstr ""
+
+#: barchart/options/singleColor.title
 #: barplot/options/singleColor.title
 #: boxplot/ui[2][0][0][0]/singleColor.label
 #: mrfrequencies/options/singleColor.title
@@ -5755,6 +5988,10 @@ msgstr "השתמש באותו צבע למשתנים"
 msgid "Use variable's description as name"
 msgstr "השתמש בתיאור המשתנה כשם"
 
+#: barchart/ui[2][0][1][0].label
+msgid "Value Labels"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 #: lollipop/options/yaxis/identity.title
@@ -5767,6 +6004,8 @@ msgstr "ערכים"
 
 #: areachart/options/var.title
 #: areachart/ui/mode/oneVariable[0][0][1].label
+#: barchart/options/yVar.title
+#: barchart/ui[0][0].label
 #: histogram/options/aVar.title
 #: histogram/ui[0][0].label
 #: lollipop/options/aVar.title
@@ -5849,6 +6088,7 @@ msgstr "קו אנכי ב"
 #: package/analyses/mrfrequencies.menuGroup
 #: package/analyses/mrcrosstabs.menuGroup
 #: package/analyses/scatterplot.menuGroup
+#: package/analyses/barchart.menuGroup
 #: package/analyses/lollipop.menuGroup
 #: package/analyses/linechart.menuGroup
 #: package/analyses/areachart.menuGroup
@@ -5858,6 +6098,7 @@ msgstr "קו אנכי ב"
 #: package/analyses/multcorresp.menuGroup
 #: package/datasets/vijPlots.name
 #: areachart/options.menuGroup
+#: barchart/options.menuGroup
 #: barplot/options.menuGroup
 #: boxplot/options.menuGroup
 #: corresp/options.menuGroup
@@ -5883,6 +6124,7 @@ msgid "vijPlots: Yet Another jamovi Plotting Module"
 msgstr "vijPlots: עוד מודול גרפי של jamovi"
 
 #: areachart/options/colorPalette/viridis::inferno.title
+#: barchart/options/colorPalette/viridis::inferno.title
 #: barplot/options/colorPalette/viridis::inferno.title
 #: boxplot/options/colorPalette/viridis::inferno.title
 #: histogram/options/colorPalette/viridis::inferno.title
@@ -5900,6 +6142,7 @@ msgid "Viridis:Inferno"
 msgstr "Viridis:Inferno"
 
 #: areachart/options/colorPalette/viridis::magma.title
+#: barchart/options/colorPalette/viridis::magma.title
 #: barplot/options/colorPalette/viridis::magma.title
 #: boxplot/options/colorPalette/viridis::magma.title
 #: histogram/options/colorPalette/viridis::magma.title
@@ -5917,6 +6160,7 @@ msgid "Viridis:Magma"
 msgstr "Viridis:Magma"
 
 #: areachart/options/colorPalette/viridis::plasma.title
+#: barchart/options/colorPalette/viridis::plasma.title
 #: barplot/options/colorPalette/viridis::plasma.title
 #: boxplot/options/colorPalette/viridis::plasma.title
 #: histogram/options/colorPalette/viridis::plasma.title
@@ -5934,6 +6178,7 @@ msgid "Viridis:Plasma"
 msgstr "Viridis:Plasma"
 
 #: areachart/options/colorPalette/viridis::turbo.title
+#: barchart/options/colorPalette/viridis::turbo.title
 #: barplot/options/colorPalette/viridis::turbo.title
 #: boxplot/options/colorPalette/viridis::turbo.title
 #: histogram/options/colorPalette/viridis::turbo.title
@@ -5951,6 +6196,7 @@ msgid "Viridis:Turbo"
 msgstr "Viridis:Turbo"
 
 #: areachart/options/colorPalette/viridis::viridis.title
+#: barchart/options/colorPalette/viridis::viridis.title
 #: barplot/options/colorPalette/viridis::viridis.title
 #: boxplot/options/colorPalette/viridis::viridis.title
 #: histogram/options/colorPalette/viridis::viridis.title
@@ -5973,6 +6219,8 @@ msgstr "Viridis:Viridis"
 msgid "Weibull"
 msgstr "ווייבול"
 
+#: barchart/options/borderColor/white.title
+#: barchart/options/textColor/white.title
 #: barplot/options/borderColor/white.title
 #: barplot/options/textColor/white.title
 #: corresp/options/supColor/white.title
@@ -5992,6 +6240,7 @@ msgstr "ווייבול"
 msgid "White"
 msgstr "לבן"
 
+#: barchart/options/errorBarWidth.title
 #: histogram/options/binWidth.title
 #, fuzzy
 msgid "Width"
@@ -6021,12 +6270,16 @@ msgstr "ערכי פרמטרים שגויים."
 #: areachart/ui[1][1][0].label
 #: areachart/ui[2][0][0][0].label
 #: areachart/ui[3][1].label
+#: barchart/options/xVar.title
+#: barchart/ui[0][1].label
+#: barchart/ui[6][0][0][0].label
+#: barchart/ui[7][1].label
 #: barplot/ui[5][0][0][0].label
 #: barplot/ui[6][1].label
 #: boxplot/ui[4][0][0][0].label
 #: boxplot/ui[5][1].label
 #: corresp/options/xaxis.title
-#: corresp/ui[7][0].label
+#: corresp/ui[6][0].label
 #: histogram/ui[5][0][0][0].label
 #: histogram/ui[6][1].label
 #: likertplot/ui[6][0][0][0].label
@@ -6077,6 +6330,7 @@ msgstr "ציר X וציר Y אינם יכולים להיות גדולים יות
 msgid "X-Axis is a date"
 msgstr "ציר X הוא תאריך"
 
+#: barchart/options/xAxisRangeType.title
 #: barplot/options/xAxisRangeType.title
 #: boxplot/options/xAxisRangeType.title
 #: histogram/options/xAxisRangeType.title
@@ -6092,6 +6346,9 @@ msgstr "טווח ציר X"
 
 #: areachart/ui[2][0][1][0].label
 #: areachart/ui[3][2].label
+#: barchart/options/yaxis.title
+#: barchart/ui[6][0][1][0].label
+#: barchart/ui[7][2].label
 #: barplot/options/yaxis.title
 #: barplot/ui[1][0][0].label
 #: barplot/ui[5][0][1][0].label
@@ -6099,7 +6356,7 @@ msgstr "טווח ציר X"
 #: boxplot/ui[4][0][1][0].label
 #: boxplot/ui[5][2].label
 #: corresp/options/yaxis.title
-#: corresp/ui[7][1].label
+#: corresp/ui[6][1].label
 #: histogram/ui[1][0][0].label
 #: histogram/ui[5][0][1][0].label
 #: histogram/ui[6][2].label
@@ -6132,6 +6389,7 @@ msgid "Y-Axis"
 msgstr "ציר Y"
 
 #: areachart/options/yAxisRangeType.title
+#: barchart/options/yAxisRangeType.title
 #: barplot/options/yAxisRangeType.title
 #: boxplot/options/yAxisRangeType.title
 #: histogram/options/yAxisRangeType.title
@@ -6158,6 +6416,7 @@ msgid "Yellow"
 msgstr "צהוב"
 
 #: areachart/options/colorPalette/YlGnBu.title
+#: barchart/options/colorPalette/YlGnBu.title
 #: barplot/options/colorPalette/YlGnBu.title
 #: boxplot/options/colorPalette/YlGnBu.title
 #: histogram/options/colorPalette/YlGnBu.title
@@ -6175,6 +6434,7 @@ msgid "Yellow to Blue"
 msgstr "צהוב לכחול"
 
 #: areachart/options/colorPalette/YlOrBr.title
+#: barchart/options/colorPalette/YlOrBr.title
 #: barplot/options/colorPalette/YlOrBr.title
 #: boxplot/options/colorPalette/YlOrBr.title
 #: histogram/options/colorPalette/YlOrBr.title
@@ -6192,6 +6452,7 @@ msgid "Yellow to Brown"
 msgstr "צהוב לחום"
 
 #: areachart/options/colorPalette/YlGn.title
+#: barchart/options/colorPalette/YlGn.title
 #: barplot/options/colorPalette/YlGn.title
 #: boxplot/options/colorPalette/YlGn.title
 #: histogram/options/colorPalette/YlGn.title
@@ -6209,6 +6470,7 @@ msgid "Yellow to Green"
 msgstr "ירוק לירוק"
 
 #: areachart/options/colorPalette/YlOrRd.title
+#: barchart/options/colorPalette/YlOrRd.title
 #: barplot/options/colorPalette/YlOrRd.title
 #: boxplot/options/colorPalette/YlOrRd.title
 #: histogram/options/colorPalette/YlOrRd.title

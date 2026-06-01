@@ -37,12 +37,25 @@ msgstr "{rotation} 백튀 을 지뮥드 어디르드"
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "{rotation} 백튀 을 지뮥드 어디르드는 어디르드."
 
+#: R/barchart.b.R
+msgid "{var} (Mean ± {level}%  CI)"
+msgstr ""
+
+#: R/barchart.b.R
+msgid "{var} (Mean ± SD)"
+msgstr ""
+
+#: R/barchart.b.R
+msgid "{var} (Mean ± SE)"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 #, fuzzy
 msgid "{var} doesn't have a valid date format."
 msgstr "{var}에는 유효한 날짜 형식이 없습니다."
 
+#: barchart/options/facetNumber.title
 #: barplot/options/facetNumber.title
 #: boxplot/options/facetNumber.title
 #: histogram/options/facetNumber.title
@@ -51,6 +64,10 @@ msgstr "{var}에는 유효한 날짜 형식이 없습니다."
 #: scatterplot/options/facetNumber.title
 msgid "# of rows/columns"
 msgstr "# 의 행들/열들"
+
+#: barchart/ui[3][0][0]/errorBars_ci/ciLevel.suffix
+msgid "%"
+msgstr ""
 
 #: barplot/options/accuracy.title
 #: barplot/ui[2][0][2][0].label
@@ -179,15 +196,19 @@ msgstr ""
 "<p>이 어 사원 정백 하는 Open > Data Library > vijPlots > Likert</p>"
 
 #: R/corresp.b.R
-#, fuzzy
 msgid ""
 "<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
 "two categorical variables. Computations are based on <a href = "
 "\"https://CRAN.R-project.org/package=FactoMineR\" "
 "target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
 "S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data may be weighted using <em>jamovi</em> built-in weight system or "
-"using the \"Counts\" variable.</p>\n"
+"<p>The data can be</p>\n"
+"<ul>\n"
+"<li>an <strong>Observation table</strong> (raw data), possibly weighted "
+"using <em>jamovi</em> built-in weight system or using the \"Counts\" "
+"variable</li>\n"
+"<li>or a <strong>Contingency table</strong></li>\n"
+"</ul>\n"
 "<p><strong>Supplementary row or column</strong> numbers may be entered as "
 "integer lists : 1,3,6</p>\n"
 "<p>Four normalizations (scaling of row and column scores before plotting) "
@@ -206,21 +227,6 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
 msgstr ""
-"<p>이 모듈은 두 범주형 변수에 대한 <strong>상관성 분석(CA)</strong>을 계산합니다. 계산은 "
-"F.&nbsp;Husson, J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet이 만든 <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> 패키지에 기반합니다.</p>\n"
-"<p>데이터는 <em>jamovi</em> 내장 가중치 시스템 또는 \"개수\" 변수를 사용하여 가중될 수 있습니다.</p>\n"
-"<p><strong>보조 행 또는 열</strong> 번호는 정수 목록으로 입력할 수 있습니다: 1,3,6</p>\n"
-"<p>네 가지 정규화(플로팅 전 행 및 열 점수를 스케일링)가 사용할 수 있습니다.</p>\n"
-"<ul>\n"
-"<li><strong>주요:</strong> 행 및 열 점수는 고유값으로 스케일링됩니다.</li>\n"
-"<li><strong>대칭:</strong> 행 및 열 점수는 고유값의 제곱근으로 스케일링됩니다.</li>\n"
-"<li><strong>행 주요:</strong> 행 점수만 고유값으로 스케일링됩니다.</li>\n"
-"<li><strong>열 주요:</strong> 열 점수만 고유값으로 스케일링됩니다.</li>\n"
-"<li><strong>표준:</strong> 정규화 없이 원시 좌표입니다.</li>\n"
-"</ul>\n"
-"<p>샘플 파일은 열기 > 데이터 라이브러리 > vijPlots > 흡연에서 찾을 수 있습니다.</p>"
 
 #: R/multcorresp.b.R
 #, fuzzy
@@ -575,6 +581,7 @@ msgid "A demonstration dataset for vijPlots/Time Serie plots."
 msgstr "ㅁㄴㅇㄹ구성들/시간 시리에 구성을 위한 증명 자료모음집 하나."
 
 #: areachart/options/colorPalette/Accent.title
+#: barchart/options/colorPalette/Accent.title
 #: barplot/options/colorPalette/Accent.title
 #: boxplot/options/colorPalette/Accent.title
 #: histogram/options/colorPalette/Accent.title
@@ -613,6 +620,9 @@ msgstr "중도 선택"
 #: areachart/options/titleAlign.title
 #: areachart/options/subtitleAlign.title
 #: areachart/options/captionAlign.title
+#: barchart/options/titleAlign.title
+#: barchart/options/subtitleAlign.title
+#: barchart/options/captionAlign.title
 #: barplot/options/titleAlign.title
 #: barplot/options/subtitleAlign.title
 #: barplot/options/captionAlign.title
@@ -704,6 +714,9 @@ msgstr "8월"
 
 #: areachart/options/dateFormat/auto.title
 #: areachart/options/yAxisRangeType/auto.title
+#: barchart/options/textColor/auto.title
+#: barchart/options/yAxisRangeType/auto.title
+#: barchart/options/xAxisRangeType/auto.title
 #: barplot/options/textColor/auto.title
 #: barplot/options/yAxisRangeType/auto.title
 #: barplot/options/xAxisRangeType/auto.title
@@ -733,6 +746,7 @@ msgid "Auto"
 msgstr "오후"
 
 #: areachart/ui[2].label
+#: barchart/ui[6].label
 #: barplot/ui[5].label
 #: boxplot/ui[4].label
 #: histogram/ui[5].label
@@ -757,10 +771,18 @@ msgstr "위 수는 어는 지 어그래 수는 없음."
 msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
 msgstr "축 번호는 차원 수({nDim})보다 작거나 같아야 합니다."
 
-#: corresp/ui[7].label
+#: corresp/ui[6].label
 #: mrfrequencies/ui[5].label
 msgid "Axis Titles"
 msgstr "축 제목"
+
+#: package/analyses/barchart.title
+#: package/analyses/barchart.menuTitle
+#: barchart/options.title
+#: barchart/ui.title
+#: barchart/results.title
+msgid "Bar Chart"
+msgstr ""
 
 #: package/analyses/barplot.title
 #: package/analyses/barplot.menuTitle
@@ -770,6 +792,8 @@ msgstr "축 제목"
 msgid "Bar Plot"
 msgstr "막대기 구성"
 
+#: barchart/options/barType.title
+#: barchart/ui[1][1][0].label
 #: barplot/options/barType.title
 #: barplot/ui[1][1][0].label
 #: mrcrosstabs/options/bartype.title
@@ -839,6 +863,8 @@ msgstr "이중구성"
 msgid "Biplot Type"
 msgstr "이중구성 유형"
 
+#: barchart/options/borderColor/black.title
+#: barchart/options/textColor/black.title
 #: barplot/options/borderColor/black.title
 #: barplot/options/textColor/black.title
 #: corresp/options/supColor/black.title
@@ -874,6 +900,7 @@ msgid "Blue"
 msgstr "파랑"
 
 #: areachart/options/colorPalette/BuGn.title
+#: barchart/options/colorPalette/BuGn.title
 #: barplot/options/colorPalette/BuGn.title
 #: boxplot/options/colorPalette/BuGn.title
 #: histogram/options/colorPalette/BuGn.title
@@ -890,6 +917,7 @@ msgid "Blue to Green"
 msgstr "부드 연 원래"
 
 #: areachart/options/colorPalette/BuPu.title
+#: barchart/options/colorPalette/BuPu.title
 #: barplot/options/colorPalette/BuPu.title
 #: boxplot/options/colorPalette/BuPu.title
 #: histogram/options/colorPalette/BuPu.title
@@ -906,6 +934,7 @@ msgid "Blue to Purple"
 msgstr "보라를 위한 파랑"
 
 #: areachart/options/colorPalette/Blues.title
+#: barchart/options/colorPalette/Blues.title
 #: barplot/options/colorPalette/Blues.title
 #: boxplot/options/colorPalette/Blues.title
 #: histogram/options/colorPalette/Blues.title
@@ -924,6 +953,9 @@ msgstr "블루"
 #: areachart/options/titleFontFace/bold.title
 #: areachart/options/subtitleFontFace/bold.title
 #: areachart/options/captionFontFace/bold.title
+#: barchart/options/titleFontFace/bold.title
+#: barchart/options/subtitleFontFace/bold.title
+#: barchart/options/captionFontFace/bold.title
 #: barplot/options/titleFontFace/bold.title
 #: barplot/options/subtitleFontFace/bold.title
 #: barplot/options/captionFontFace/bold.title
@@ -975,6 +1007,9 @@ msgstr "대담한"
 #: areachart/options/titleFontFace/bold.italic.title
 #: areachart/options/subtitleFontFace/bold.italic.title
 #: areachart/options/captionFontFace/bold.italic.title
+#: barchart/options/titleFontFace/bold.italic.title
+#: barchart/options/subtitleFontFace/bold.italic.title
+#: barchart/options/captionFontFace/bold.italic.title
 #: barplot/options/titleFontFace/bold.italic.title
 #: barplot/options/subtitleFontFace/bold.italic.title
 #: barplot/options/captionFontFace/bold.italic.title
@@ -1032,6 +1067,7 @@ msgstr "백분론"
 msgid "Boostrap"
 msgstr "가속함정"
 
+#: barchart/options/borderColor.title
 #: barplot/options/borderColor.title
 #: histogram/options/borderColor.title
 #: mrcrosstabs/options/borderColor.title
@@ -1042,6 +1078,8 @@ msgstr "국경"
 
 #: areachart/options/legendPosition/bottom.title
 #: areachart/options/yAxisPosition/0.title
+#: barchart/options/legendPosition/bottom.title
+#: barchart/options/yAxisPosition/0.title
 #: barplot/options/legendPosition/bottom.title
 #: barplot/options/yAxisPosition/0.title
 #: boxplot/options/legendPosition/bottom.title
@@ -1098,6 +1136,7 @@ msgid "Brown"
 msgstr "갈색"
 
 #: areachart/options/colorPalette/BrBG.title
+#: barchart/options/colorPalette/BrBG.title
 #: barplot/options/colorPalette/BrBG.title
 #: boxplot/options/colorPalette/BrBG.title
 #: histogram/options/colorPalette/BrBG.title
@@ -1145,6 +1184,7 @@ msgid "Cannot tidy up text variables"
 msgstr "파크 어그래 지함 수 없음."
 
 #: areachart/ui[4][2].label
+#: barchart/ui[8][2].label
 #: barplot/ui[7][2].label
 #: boxplot/ui[6][2].label
 #: histogram/ui[7][2].label
@@ -1160,13 +1200,13 @@ msgstr "파크 어그래 지함 수 없음."
 msgid "Caption"
 msgstr "자료"
 
-#: corresp/ui[8][2][1][0].label
+#: corresp/ui[7][2][1][0].label
 #: multcorresp/ui[8][2][1][0].label
 #: principal/ui[6][2][1][0].label
 msgid "Caption Style"
 msgstr "제목 스타일"
 
-#: corresp/ui[8][2][0][0].label
+#: corresp/ui[7][2][0][0].label
 #: multcorresp/ui[8][2][0][0].label
 #: principal/ui[6][2][0][0].label
 msgid "Caption Text"
@@ -1232,6 +1272,11 @@ msgstr "카우치"
 #: areachart/options/captionAlign/0.5.title
 #: areachart/options/xAxisPosition/0.5.title
 #: areachart/options/yAxisPosition/0.5.title
+#: barchart/options/titleAlign/0.5.title
+#: barchart/options/subtitleAlign/0.5.title
+#: barchart/options/captionAlign/0.5.title
+#: barchart/options/xAxisPosition/0.5.title
+#: barchart/options/yAxisPosition/0.5.title
 #: barplot/options/titleAlign/0.5.title
 #: barplot/options/subtitleAlign/0.5.title
 #: barplot/options/captionAlign/0.5.title
@@ -1316,6 +1361,7 @@ msgstr "주목됨"
 msgid "Chi-squared"
 msgstr "치-사각형됨"
 
+#: barchart/options/colorNo.title
 #: barplot/options/colorNo.title
 #: boxplot/options/colorNo.title
 #: mrfrequencies/options/colorNo.title
@@ -1323,6 +1369,7 @@ msgstr "치-사각형됨"
 msgid "Color Number"
 msgstr "색숫자"
 
+#: barchart/ui[4][0][1][0].label
 #: barplot/ui[3][0][1][0].label
 #: mrcrosstabs/ui[3][0][1][0].label
 #: mrfrequencies/ui[3][0][1][0].label
@@ -1332,6 +1379,7 @@ msgstr "색숫자"
 msgid "Color Options"
 msgstr "색선택사항들"
 
+#: barchart/ui[4][0][0][0].label
 #: barplot/ui[3][0][0][0].label
 #: boxplot/ui[2][0][0][0].label
 #: histogram/options/colorPalette.title
@@ -1343,8 +1391,9 @@ msgstr "색선택사항들"
 msgid "Color Palette"
 msgstr "색상 판때기"
 
+#: barchart/ui[4].label
 #: barplot/ui[3].label
-#: corresp/ui[6][0][1][0].label
+#: corresp/ui[5][0][1][0].label
 #: histogram/ui[3].label
 #: lollipop/ui[3][0][0][0].label
 #: mrcrosstabs/ui[3].label
@@ -1358,6 +1407,8 @@ msgstr "색깔들"
 msgid "Colors & Options"
 msgstr "색깔들과 선택사항들"
 
+#: barchart/options/facetBy/column.title
+#: barchart/ui[5][0][0][0][0]/facetBy_column.label
 #: barplot/options/facetBy/column.title
 #: barplot/ui[4][0][1][0][0]/facetBy_column.label
 #: boxplot/options/facetBy/column.title
@@ -1407,8 +1458,15 @@ msgstr "열 모습"
 msgid "Column Summary"
 msgstr "열생략"
 
+#: corresp/options/columnTitle.title
+msgid "Column title"
+msgstr ""
+
 #: corresp/options/cols.title
-#: corresp/ui[0][1].label
+#: corresp/options/columns.title
+#: corresp/options/columnTitle.default
+#: corresp/ui/mode/obsTable[0][0][1].label
+#: corresp/ui/mode/contTable[0][0][0].label
 msgid "Columns"
 msgstr "열들"
 
@@ -1449,6 +1507,7 @@ msgstr "자신감 줄기"
 msgid "Confidence Band Methods"
 msgstr "자심감 줄기 방법들"
 
+#: barchart/options/errorBars/ci.title
 #: scatterplot/options/lineSE.title
 msgid "Confidence interval"
 msgstr "자신감 간격"
@@ -1466,6 +1525,7 @@ msgstr "코래"
 msgid "Conover's Pairwise Comparisons"
 msgstr "코노바르의 짝적 비교들"
 
+#: corresp/options/mode/contTable.title
 #: corresp/results/contingency.title
 msgid "Contingency Table"
 msgstr "총대 드립"
@@ -1478,8 +1538,10 @@ msgstr "총대 드립"
 #: package/analyses/boxplot.menuSubgroup
 #: package/analyses/raincloud.menuSubgroup
 #: package/analyses/scatterplot.menuSubgroup
+#: package/analyses/barchart.menuSubgroup
 #: package/analyses/lollipop.menuSubgroup
 #: package/analyses/qqplot.menuSubgroup
+#: barchart/options.menuSubgroup
 #: boxplot/options.menuSubgroup
 #: histogram/options.menuSubgroup
 #: lollipop/options.menuSubgroup
@@ -1541,7 +1603,7 @@ msgid "Counts"
 msgstr "개수들"
 
 #: corresp/options/counts.title
-#: corresp/ui[0][2].label
+#: corresp/ui/mode/obsTable[0][0][2].label
 msgid "Counts (optional)"
 msgstr "개수들 (선택사항적임)"
 
@@ -1591,6 +1653,7 @@ msgid "Cumulative %"
 msgstr "누적 %"
 
 #: areachart/options/colorPalette/Dark2.title
+#: barchart/options/colorPalette/Dark2.title
 #: barplot/options/colorPalette/Dark2.title
 #: boxplot/options/colorPalette/Dark2.title
 #: histogram/options/colorPalette/Dark2.title
@@ -1638,6 +1701,12 @@ msgstr "12"
 msgid "December"
 msgstr "12월"
 
+#: barchart/options/decimalPrecision.title
+msgid "Decimal precision"
+msgstr ""
+
+#: barchart/options/order/decreasing.title
+#: barchart/ui[1][2][0]/order_decreasing.label
 #: barplot/options/order/decreasing.title
 #: barplot/ui[1][2][0]/order_decreasing.label
 #: boxplot/options/order/decreasing.title
@@ -1708,6 +1777,7 @@ msgid "df"
 msgstr "디 애프"
 
 #: areachart/options/colorPalette/dichromat::Categorical.12.title
+#: barchart/options/colorPalette/dichromat::Categorical.12.title
 #: barplot/options/colorPalette/dichromat::Categorical.12.title
 #: boxplot/options/colorPalette/dichromat::Categorical.12.title
 #: histogram/options/colorPalette/dichromat::Categorical.12.title
@@ -1845,6 +1915,16 @@ msgstr "동일한 로컬 수준"
 msgid "Equamax"
 msgstr "이큐아막수"
 
+#: barchart/ui[3][1][0].label
+msgid "Error Bar Size"
+msgstr ""
+
+#: barchart/options/errorBars.title
+#: barchart/ui[3].label
+#: barchart/ui[3][0][0].label
+msgid "Error Bars"
+msgstr ""
+
 #: qqplot/options/paramMethod/paraEstimate.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat.label
 msgid "Estimate parameters from data"
@@ -1869,11 +1949,9 @@ msgstr "에드 등록 수는 백해 지 어그래 (≥0)"
 msgid "Extraction Sums of Squared Loadings"
 msgstr "추출 생략의 제곱된 짐들"
 
-#: R/qqplot.b.R
-#, fuzzy
-msgid "F"
-msgstr "F"
-
+#: barchart/options/facet.title
+#: barchart/options/facetBy.title
+#: barchart/ui[0][3].label
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
 #: barplot/ui[0][2].label
@@ -1891,6 +1969,8 @@ msgstr "F"
 msgid "Facet"
 msgstr "얼굴티"
 
+#: barchart/ui[5].label
+#: barchart/ui[5][0][0][0].label
 #: barplot/ui[4][0][1][0].label
 #: boxplot/options/facetBy.title
 #: boxplot/ui[3][0][1][0].label
@@ -1927,6 +2007,9 @@ msgstr "채우기"
 #: areachart/options/titleFontFace.title
 #: areachart/options/subtitleFontFace.title
 #: areachart/options/captionFontFace.title
+#: barchart/options/titleFontFace.title
+#: barchart/options/subtitleFontFace.title
+#: barchart/options/captionFontFace.title
 #: barplot/options/titleFontFace.title
 #: barplot/options/subtitleFontFace.title
 #: barplot/options/captionFontFace.title
@@ -2038,6 +2121,7 @@ msgstr "빈도 유형"
 msgid "Gamma"
 msgstr "감마"
 
+#: barchart/options/borderColor/gray.title
 #: barplot/options/borderColor/gray.title
 #: corresp/options/supColor/darkgray.title
 #: histogram/options/fillColor/#999999.title
@@ -2066,6 +2150,7 @@ msgid "Green"
 msgstr "원래"
 
 #: areachart/options/colorPalette/GnBu.title
+#: barchart/options/colorPalette/GnBu.title
 #: barplot/options/colorPalette/GnBu.title
 #: boxplot/options/colorPalette/GnBu.title
 #: histogram/options/colorPalette/GnBu.title
@@ -2094,6 +2179,7 @@ msgid "Greenacre's corrected inertia ="
 msgstr "그린에이커의 교정 관성 ="
 
 #: areachart/options/colorPalette/Greens.title
+#: barchart/options/colorPalette/Greens.title
 #: barplot/options/colorPalette/Greens.title
 #: boxplot/options/colorPalette/Greens.title
 #: histogram/options/colorPalette/Greens.title
@@ -2114,6 +2200,7 @@ msgid "Grey"
 msgstr "회백색의 색"
 
 #: areachart/options/colorPalette/Greys.title
+#: barchart/options/colorPalette/Greys.title
 #: barplot/options/colorPalette/Greys.title
 #: boxplot/options/colorPalette/Greys.title
 #: histogram/options/colorPalette/Greys.title
@@ -2131,6 +2218,8 @@ msgstr "기대드"
 
 #: areachart/options/group.title
 #: areachart/ui/mode/oneVariable[0][0][2].label
+#: barchart/options/group.title
+#: barchart/ui[0][2].label
 #: barplot/options/columns.title
 #: barplot/ui[0][1].label
 #: boxplot/options/group.title
@@ -2174,12 +2263,14 @@ msgstr "구성원들 + 백분율"
 msgid "Group By"
 msgstr "구성원들에 의함"
 
+#: barchart/options/barType/dodge2.title
 #: barplot/options/barType/dodge2.title
 #: histogram/options/grouping/dodge.title
 #: mrcrosstabs/options/bartype/dodge2.title
 msgid "Grouped"
 msgstr "구성원들되었다"
 
+#: barchart/options/barType/dodge.title
 #: barplot/options/barType/dodge.title
 #: mrcrosstabs/options/bartype/dodge.title
 #, fuzzy
@@ -2250,6 +2341,7 @@ msgstr "수평 레이블 래핑"
 msgid "Horizontal line at"
 msgstr "수평선 위치"
 
+#: barchart/options/horizontal.title
 #: barplot/options/horizontal.title
 #: boxplot/options/horizontal.title
 #: lollipop/options/horizontal.title
@@ -2266,6 +2358,7 @@ msgstr "수평 플롯"
 msgid "Identity line"
 msgstr ""
 
+#: barchart/options/ignoreNA.title
 #: likertplot/options/ignoreNA.title
 #, fuzzy
 msgid "Ignore missing groups"
@@ -2284,6 +2377,8 @@ msgstr "모드 어그래 소녀"
 msgid "Improve label display"
 msgstr "Improve label display"
 
+#: barchart/options/order/increasing.title
+#: barchart/ui[1][2][0]/order_increasing.label
 #: barplot/options/order/increasing.title
 #: barplot/ui[1][2][0]/order_increasing.label
 #: boxplot/options/order/increasing.title
@@ -2342,6 +2437,9 @@ msgstr "(Y-M-D)"
 #: areachart/options/titleFontFace/italic.title
 #: areachart/options/subtitleFontFace/italic.title
 #: areachart/options/captionFontFace/italic.title
+#: barchart/options/titleFontFace/italic.title
+#: barchart/options/subtitleFontFace/italic.title
+#: barchart/options/captionFontFace/italic.title
 #: barplot/options/titleFontFace/italic.title
 #: barplot/options/subtitleFontFace/italic.title
 #: barplot/options/captionFontFace/italic.title
@@ -2414,6 +2512,7 @@ msgid "jmv Blue"
 msgstr "jmv Blue"
 
 #: areachart/options/colorPalette/jmv.title
+#: barchart/options/colorPalette/jmv.title
 #: barplot/options/colorPalette/jmv.title
 #: boxplot/options/colorPalette/jmv.title
 #: histogram/options/colorPalette/jmv.title
@@ -2529,6 +2628,7 @@ msgstr ""
 msgid "Kruskal-Wallis Tests"
 msgstr "Kruskal-Wallis 총대"
 
+#: barchart/options/textColor.title
 #: barplot/options/textColor.title
 #: barplot/options/labelFontSize.title
 #: boxplot/options/label.title
@@ -2561,6 +2661,8 @@ msgstr "라벨 색상"
 
 #: areachart/options/yAxisLabelFontSize.title
 #: areachart/options/xAxisLabelFontSize.title
+#: barchart/options/yAxisLabelFontSize.title
+#: barchart/options/xAxisLabelFontSize.title
 #: barplot/options/yAxisLabelFontSize.title
 #: barplot/options/xAxisLabelFontSize.title
 #: boxplot/options/yAxisLabelFontSize.title
@@ -2604,6 +2706,8 @@ msgstr "레이블 위치"
 
 #: areachart/options/yAxisLabelRotation.title
 #: areachart/options/xAxisLabelRotation.title
+#: barchart/options/yAxisLabelRotation.title
+#: barchart/options/xAxisLabelRotation.title
 #: barplot/options/yAxisLabelRotation.title
 #: barplot/options/xAxisLabelRotation.title
 #: boxplot/options/yAxisLabelRotation.title
@@ -2649,6 +2753,11 @@ msgstr "라벨"
 #: areachart/options/captionAlign/0.title
 #: areachart/options/legendPosition/left.title
 #: areachart/options/xAxisPosition/0.title
+#: barchart/options/titleAlign/0.title
+#: barchart/options/subtitleAlign/0.title
+#: barchart/options/captionAlign/0.title
+#: barchart/options/legendPosition/left.title
+#: barchart/options/xAxisPosition/0.title
 #: barplot/options/titleAlign/0.title
 #: barplot/options/subtitleAlign/0.title
 #: barplot/options/captionAlign/0.title
@@ -2724,6 +2833,7 @@ msgid "Left"
 msgstr " "
 
 #: areachart/ui[3][0].label
+#: barchart/ui[7][0].label
 #: barplot/ui[6][0].label
 #: boxplot/ui[5][0].label
 #: histogram/ui[6][0].label
@@ -2742,6 +2852,7 @@ msgid "Legend"
 msgstr ""
 
 #: areachart/ui[3].label
+#: barchart/ui[7].label
 #: barplot/ui[6].label
 #: boxplot/ui[5].label
 #: histogram/ui[6].label
@@ -2763,6 +2874,7 @@ msgid "Legend Title"
 msgstr "Legend Title"
 
 #: areachart/options/colorPalette/custom::lemovice.title
+#: barchart/options/colorPalette/custom::lemovice.title
 #: barplot/options/colorPalette/custom::lemovice.title
 #: boxplot/options/colorPalette/custom::lemovice.title
 #: histogram/options/colorPalette/custom::lemovice.title
@@ -2779,6 +2891,7 @@ msgstr "Legend Title"
 msgid "Lémovice"
 msgstr "레린리스"
 
+#: barchart/options/ciLevel.title
 #: multcorresp/results/categories.columns.title
 #, fuzzy
 msgid "Level"
@@ -2912,6 +3025,7 @@ msgstr " "
 msgid "Line Chart"
 msgstr "선 차트"
 
+#: barchart/options/errorBarLineSize.title
 #: histogram/options/densityLineSize.title
 #: histogram/options/normalCurveLineSize.title
 #, fuzzy
@@ -2984,6 +3098,8 @@ msgid "Mann-Whitney U Tests"
 msgstr "Mann-Whitney U Tests"
 
 #: areachart/options/yAxisRangeType/manual.title
+#: barchart/options/yAxisRangeType/manual.title
+#: barchart/options/xAxisRangeType/manual.title
 #: barplot/options/yAxisRangeType/manual.title
 #: barplot/options/xAxisRangeType/manual.title
 #: boxplot/options/yAxisRangeType/manual.title
@@ -3027,6 +3143,10 @@ msgid "Mass"
 msgstr "백단"
 
 #: areachart/options/yAxisRangeMax.title
+#: barchart/options/yaxis/max.title
+#: barchart/options/yAxisRangeMax.title
+#: barchart/options/xAxisRangeMax.title
+#: barchart/ui[1][0][0][0]/yaxis_max.label
 #: barplot/options/yAxisRangeMax.title
 #: barplot/options/xAxisRangeMax.title
 #: boxplot/options/yAxisRangeMax.title
@@ -3052,6 +3172,7 @@ msgstr "백단"
 msgid "Max"
 msgstr "Max"
 
+#: R/barchart.b.R
 #: R/lollipop.b.R
 #, fuzzy
 msgid "Maximum of {var}"
@@ -3079,6 +3200,8 @@ msgstr "MCA 정보 코드"
 msgid "MCA Standard Coordinates"
 msgstr "MCA 정백 코드"
 
+#: barchart/options/yaxis/mean.title
+#: barchart/ui[1][0][0][0]/yaxis_mean.label
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 #, fuzzy
@@ -3090,12 +3213,15 @@ msgstr "모드"
 msgid "Mean & SD"
 msgstr ""
 
+#: R/barchart.b.R
 #: R/lollipop.b.R
 #, fuzzy
 msgid "Mean of {var}"
 msgstr "{var}의 평균"
 
 #: R/likertplot.b.R
+#: barchart/options/yaxis/median.title
+#: barchart/ui[1][0][0][0]/yaxis_median.label
 #: likertplot/options/showMedian.title
 #: lollipop/options/yaxis/median.title
 #: lollipop/ui[2][0][0][0]/yaxis_median.label
@@ -3108,6 +3234,7 @@ msgstr "중위수"
 msgid "Median and mean require numeric variables"
 msgstr "정해 리 원 리해 수는 일반호 어그래"
 
+#: R/barchart.b.R
 #: R/lollipop.b.R
 #, fuzzy
 msgid "Median of {var}"
@@ -3157,6 +3284,10 @@ msgid "Middle"
 msgstr "중간"
 
 #: areachart/options/yAxisRangeMin.title
+#: barchart/options/yaxis/min.title
+#: barchart/options/yAxisRangeMin.title
+#: barchart/options/xAxisRangeMin.title
+#: barchart/ui[1][0][0][0]/yaxis_min.label
 #: barplot/options/yAxisRangeMin.title
 #: barplot/options/xAxisRangeMin.title
 #: boxplot/options/yAxisRangeMin.title
@@ -3193,6 +3324,7 @@ msgstr "Min / Max"
 msgid "Minimum entropy"
 msgstr "Minimum entropy"
 
+#: R/barchart.b.R
 #: R/lollipop.b.R
 #, fuzzy
 msgid "Minimum of {var}"
@@ -3273,6 +3405,10 @@ msgstr "자연 로그 변환에는 양수 (>0) 데이터가 필요합니다."
 msgid "No rotation used."
 msgstr " ."
 
+#: barchart/options/order/none.title
+#: barchart/options/errorBars/none.title
+#: barchart/options/borderColor/none.title
+#: barchart/ui[1][2][0]/order_none.label
 #: barplot/options/order/none.title
 #: barplot/options/borderColor/none.title
 #: barplot/ui[1][2][0]/order_none.label
@@ -3304,6 +3440,9 @@ msgstr "었단"
 #: areachart/options/titleFontFace/plain.title
 #: areachart/options/subtitleFontFace/plain.title
 #: areachart/options/captionFontFace/plain.title
+#: barchart/options/titleFontFace/plain.title
+#: barchart/options/subtitleFontFace/plain.title
+#: barchart/options/captionFontFace/plain.title
 #: barplot/options/titleFontFace/plain.title
 #: barplot/options/subtitleFontFace/plain.title
 #: barplot/options/captionFontFace/plain.title
@@ -3359,7 +3498,7 @@ msgid "Normal Curve"
 msgstr "정규곡선"
 
 #: corresp/options/normalization.title
-#: corresp/ui[4][0].label
+#: corresp/ui[3][0].label
 #: multcorresp/options/normalization.title
 #: multcorresp/ui[4][0].label
 #: principal/ui[7][0][0][0].label
@@ -3466,6 +3605,10 @@ msgstr "Observation principal coordinates"
 msgid "Observation Summary"
 msgstr "관측 요약"
 
+#: corresp/options/mode/obsTable.title
+msgid "Observation Table"
+msgstr ""
+
 #: multcorresp/options/showObservations.title
 #: multcorresp/options/showObservationPlot.title
 #: principal/options/showObservations.title
@@ -3522,6 +3665,7 @@ msgstr "총대"
 msgid "One variable"
 msgstr ""
 
+#: barchart/ui[4][0][0][0]/singleColor/colorNo.suffix
 #: barplot/ui[3][0][0][0]/singleColor/colorNo.suffix
 #: boxplot/ui[2][0][0][0]/singleColor/colorNo.suffix
 #: mrfrequencies/ui[3][0][0][0][1]/colorNo.suffix
@@ -3569,6 +3713,7 @@ msgid "Orange"
 msgstr "오렌지색"
 
 #: areachart/options/colorPalette/PuOr.title
+#: barchart/options/colorPalette/PuOr.title
 #: barplot/options/colorPalette/PuOr.title
 #: boxplot/options/colorPalette/PuOr.title
 #: histogram/options/colorPalette/PuOr.title
@@ -3587,6 +3732,7 @@ msgid "Orange and Purple"
 msgstr "Orange and Purple"
 
 #: areachart/options/colorPalette/OrRd.title
+#: barchart/options/colorPalette/OrRd.title
 #: barplot/options/colorPalette/OrRd.title
 #: boxplot/options/colorPalette/OrRd.title
 #: histogram/options/colorPalette/OrRd.title
@@ -3604,6 +3750,7 @@ msgid "Orange to Red"
 msgstr "Orange to Red"
 
 #: areachart/options/colorPalette/Oranges.title
+#: barchart/options/colorPalette/Oranges.title
 #: barplot/options/colorPalette/Oranges.title
 #: boxplot/options/colorPalette/Oranges.title
 #: histogram/options/colorPalette/Oranges.title
@@ -3684,6 +3831,7 @@ msgid "p-values are adjusted using {method} method."
 msgstr "p-values are adjusted using {method} method."
 
 #: areachart/options/colorPalette/Paired.title
+#: barchart/options/colorPalette/Paired.title
 #: barplot/options/colorPalette/Paired.title
 #: boxplot/options/colorPalette/Paired.title
 #: histogram/options/colorPalette/Paired.title
@@ -3706,6 +3854,7 @@ msgid "Pairwise Comparisons"
 msgstr "Pairwise Comparisons"
 
 #: areachart/options/colorPalette.title
+#: barchart/options/colorPalette.title
 #: barplot/options/colorPalette.title
 #: boxplot/options/colorPalette.title
 #: likertplot/options/plotColor.title
@@ -3755,6 +3904,7 @@ msgid "Parsimax"
 msgstr "파스미맥스"
 
 #: areachart/options/colorPalette/Pastel1.title
+#: barchart/options/colorPalette/Pastel1.title
 #: barplot/options/colorPalette/Pastel1.title
 #: boxplot/options/colorPalette/Pastel1.title
 #: histogram/options/colorPalette/Pastel1.title
@@ -3772,6 +3922,7 @@ msgid "Pastel 1"
 msgstr "파스텔 1"
 
 #: areachart/options/colorPalette/Pastel2.title
+#: barchart/options/colorPalette/Pastel2.title
 #: barplot/options/colorPalette/Pastel2.title
 #: boxplot/options/colorPalette/Pastel2.title
 #: histogram/options/colorPalette/Pastel2.title
@@ -3839,6 +3990,7 @@ msgid "Pink"
 msgstr ""
 
 #: areachart/options/colorPalette/PiYG.title
+#: barchart/options/colorPalette/PiYG.title
 #: barplot/options/colorPalette/PiYG.title
 #: boxplot/options/colorPalette/PiYG.title
 #: histogram/options/colorPalette/PiYG.title
@@ -3874,6 +4026,8 @@ msgid "Plot Colors"
 msgstr "플롯 색상"
 
 #: areachart/ui[1][0][0].label
+#: barchart/ui[2].label
+#: barchart/ui[2][0][0][0].label
 #: barplot/ui[2].label
 #: barplot/ui[2][0][0][0].label
 #: boxplot/ui[1][0][0].label
@@ -3892,6 +4046,7 @@ msgid "Plot Options"
 msgstr "Plot Options"
 
 #: areachart/ui[4].label
+#: barchart/ui[8].label
 #: barplot/ui[7].label
 #: boxplot/ui[6].label
 #: histogram/ui[7].label
@@ -3908,7 +4063,7 @@ msgstr "Plot Options"
 msgid "Plot Titles"
 msgstr "Plot Titles"
 
-#: corresp/ui[8].label
+#: corresp/ui[7].label
 #: multcorresp/ui[8].label
 #: principal/ui[6].label
 #, fuzzy
@@ -3922,7 +4077,7 @@ msgstr ""
 msgid "Plot Type"
 msgstr "Plot Type"
 
-#: corresp/ui[5][1][0].label
+#: corresp/ui[4][1][0].label
 #: mrcrosstabs/results/plot.title
 #: multcorresp/ui[5][1][0].label
 #: principal/ui[3][1][0].label
@@ -3960,6 +4115,9 @@ msgstr " "
 #: areachart/options/legendPosition.title
 #: areachart/options/xAxisPosition.title
 #: areachart/options/yAxisPosition.title
+#: barchart/options/legendPosition.title
+#: barchart/options/xAxisPosition.title
+#: barchart/options/yAxisPosition.title
 #: barplot/options/legendPosition.title
 #: barplot/options/xAxisPosition.title
 #: barplot/options/yAxisPosition.title
@@ -4064,6 +4222,7 @@ msgid "Purple"
 msgstr "디로"
 
 #: areachart/options/colorPalette/PRGn.title
+#: barchart/options/colorPalette/PRGn.title
 #: barplot/options/colorPalette/PRGn.title
 #: boxplot/options/colorPalette/PRGn.title
 #: histogram/options/colorPalette/PRGn.title
@@ -4082,6 +4241,7 @@ msgid "Purple and Green"
 msgstr "Purple and Green"
 
 #: areachart/options/colorPalette/PuBu.title
+#: barchart/options/colorPalette/PuBu.title
 #: barplot/options/colorPalette/PuBu.title
 #: boxplot/options/colorPalette/PuBu.title
 #: histogram/options/colorPalette/PuBu.title
@@ -4099,6 +4259,7 @@ msgid "Purple to Blue"
 msgstr "보라에서 파랑까지"
 
 #: areachart/options/colorPalette/PuBuGn.title
+#: barchart/options/colorPalette/PuBuGn.title
 #: barplot/options/colorPalette/PuBuGn.title
 #: boxplot/options/colorPalette/PuBuGn.title
 #: histogram/options/colorPalette/PuBuGn.title
@@ -4116,6 +4277,7 @@ msgid "Purple to Green"
 msgstr ""
 
 #: areachart/options/colorPalette/PuRd.title
+#: barchart/options/colorPalette/PuRd.title
 #: barplot/options/colorPalette/PuRd.title
 #: boxplot/options/colorPalette/PuRd.title
 #: histogram/options/colorPalette/PuRd.title
@@ -4133,6 +4295,7 @@ msgid "Purple to Red"
 msgstr " "
 
 #: areachart/options/colorPalette/Purples.title
+#: barchart/options/colorPalette/Purples.title
 #: barplot/options/colorPalette/Purples.title
 #: boxplot/options/colorPalette/Purples.title
 #: histogram/options/colorPalette/Purples.title
@@ -4208,6 +4371,8 @@ msgid "Raincloud Plot"
 msgstr " "
 
 #: areachart/ui[2][0][1][1].label
+#: barchart/ui[6][0][0][1].label
+#: barchart/ui[6][0][1][1].label
 #: barplot/ui[5][0][0][1].label
 #: barplot/ui[5][0][1][1].label
 #: boxplot/ui[4][0][0][1].label
@@ -4231,6 +4396,7 @@ msgstr " "
 msgid "Range"
 msgstr "범위"
 
+#: barchart/options/textColor/red.title
 #: corresp/options/rowColor/red.title
 #: corresp/options/colColor/red.title
 #: histogram/options/fillColor/#E41A1C.title
@@ -4245,6 +4411,7 @@ msgid "Red"
 msgstr "빨강"
 
 #: areachart/options/colorPalette/RdBu.title
+#: barchart/options/colorPalette/RdBu.title
 #: barplot/options/colorPalette/RdBu.title
 #: boxplot/options/colorPalette/RdBu.title
 #: histogram/options/colorPalette/RdBu.title
@@ -4263,6 +4430,7 @@ msgid "Red and Blue"
 msgstr "빨강과 파랑"
 
 #: areachart/options/colorPalette/RdGy.title
+#: barchart/options/colorPalette/RdGy.title
 #: barplot/options/colorPalette/RdGy.title
 #: boxplot/options/colorPalette/RdGy.title
 #: histogram/options/colorPalette/RdGy.title
@@ -4281,6 +4449,7 @@ msgid "Red and Gray"
 msgstr "Red and Gray"
 
 #: areachart/options/colorPalette/RdPu.title
+#: barchart/options/colorPalette/RdPu.title
 #: barplot/options/colorPalette/RdPu.title
 #: boxplot/options/colorPalette/RdPu.title
 #: histogram/options/colorPalette/RdPu.title
@@ -4308,6 +4477,7 @@ msgid "Red, Yellow and Green"
 msgstr "빨강, 노랑, 초록"
 
 #: areachart/options/colorPalette/RdYlBu.title
+#: barchart/options/colorPalette/RdYlBu.title
 #: barplot/options/colorPalette/RdYlBu.title
 #: boxplot/options/colorPalette/RdYlBu.title
 #: histogram/options/colorPalette/RdYlBu.title
@@ -4325,6 +4495,7 @@ msgid "Red, Yellow, Blue"
 msgstr "대, 윘대, 데드"
 
 #: areachart/options/colorPalette/RdYlGn.title
+#: barchart/options/colorPalette/RdYlGn.title
 #: barplot/options/colorPalette/RdYlGn.title
 #: boxplot/options/colorPalette/RdYlGn.title
 #: histogram/options/colorPalette/RdYlGn.title
@@ -4342,6 +4513,7 @@ msgid "Red, Yellow, Green"
 msgstr "Red, Yellow, Green"
 
 #: areachart/options/colorPalette/Reds.title
+#: barchart/options/colorPalette/Reds.title
 #: barplot/options/colorPalette/Reds.title
 #: boxplot/options/colorPalette/Reds.title
 #: histogram/options/colorPalette/Reds.title
@@ -4379,6 +4551,7 @@ msgstr "Regression Line"
 msgid "Reverse disposition"
 msgstr ""
 
+#: barchart/options/reverseStack.title
 #: barplot/options/reverseStack.title
 #: likertplot/options/reverseLikert.title
 #: mrcrosstabs/options/reverseStack.title
@@ -4391,6 +4564,11 @@ msgstr "색 소녀 번호 지함"
 #: areachart/options/captionAlign/1.title
 #: areachart/options/legendPosition/right.title
 #: areachart/options/xAxisPosition/1.title
+#: barchart/options/titleAlign/1.title
+#: barchart/options/subtitleAlign/1.title
+#: barchart/options/captionAlign/1.title
+#: barchart/options/legendPosition/right.title
+#: barchart/options/xAxisPosition/1.title
 #: barplot/options/titleAlign/1.title
 #: barplot/options/subtitleAlign/1.title
 #: barplot/options/captionAlign/1.title
@@ -4477,6 +4655,8 @@ msgstr "여디로 분류"
 msgid "Rotation"
 msgstr "백튀"
 
+#: barchart/options/facetBy/row.title
+#: barchart/ui[5][0][0][0][0]/facetBy_row.label
 #: barplot/options/facetBy/row.title
 #: barplot/ui[4][0][1][0][0]/facetBy_row.label
 #: boxplot/options/facetBy/row.title
@@ -4508,6 +4688,11 @@ msgstr "Row and column profiles"
 #, fuzzy
 msgid "Row and column summaries"
 msgstr "Row and column summaries"
+
+#: corresp/options/rowLabels.title
+#: corresp/ui/mode/contTable[0][0][1].label
+msgid "Row Labels"
+msgstr ""
 
 #: corresp/results/rowplot.title
 #, fuzzy
@@ -4548,7 +4733,7 @@ msgid "Row Summary"
 msgstr "Row Summary"
 
 #: corresp/options/rows.title
-#: corresp/ui[0][0].label
+#: corresp/ui/mode/obsTable[0][0][0].label
 #, fuzzy
 msgid "Rows"
 msgstr "행"
@@ -4643,6 +4828,7 @@ msgid "September"
 msgstr "수환"
 
 #: areachart/options/colorPalette/Set1.title
+#: barchart/options/colorPalette/Set1.title
 #: barplot/options/colorPalette/Set1.title
 #: boxplot/options/colorPalette/Set1.title
 #: histogram/options/colorPalette/Set1.title
@@ -4660,6 +4846,7 @@ msgid "Set 1"
 msgstr "1주"
 
 #: areachart/options/colorPalette/Set2.title
+#: barchart/options/colorPalette/Set2.title
 #: barplot/options/colorPalette/Set2.title
 #: boxplot/options/colorPalette/Set2.title
 #: histogram/options/colorPalette/Set2.title
@@ -4677,6 +4864,7 @@ msgid "Set 2"
 msgstr "2주"
 
 #: areachart/options/colorPalette/Set3.title
+#: barchart/options/colorPalette/Set3.title
 #: barplot/options/colorPalette/Set3.title
 #: boxplot/options/colorPalette/Set3.title
 #: histogram/options/colorPalette/Set3.title
@@ -4755,6 +4943,10 @@ msgstr "누락된 그룹/라벨이 있는 점 표시"
 msgid "Show totals (Centered only)"
 msgstr "Show totals (Centered only)"
 
+#: barchart/options/showLabels.title
+msgid "Show value labels"
+msgstr ""
+
 #: scatterplot/options/singleColor.title
 #, fuzzy
 msgid "Single"
@@ -4768,6 +4960,9 @@ msgstr "특이값"
 #: areachart/options/legendFontSize.title
 #: areachart/options/xAxisFontSize.title
 #: areachart/options/yAxisFontSize.title
+#: barchart/options/legendFontSize.title
+#: barchart/options/xAxisFontSize.title
+#: barchart/options/yAxisFontSize.title
 #: barplot/options/legendFontSize.title
 #: barplot/options/xAxisFontSize.title
 #: barplot/options/yAxisFontSize.title
@@ -4826,7 +5021,7 @@ msgstr "Smoking"
 msgid "Smooth"
 msgstr ""
 
-#: corresp/ui[2][0].label
+#: corresp/ui[1][0].label
 #: multcorresp/ui[2][0].label
 #: principal/ui[2][0][0].label
 #, fuzzy
@@ -4839,6 +5034,8 @@ msgstr ""
 msgid "Sort Variables by Median"
 msgstr "Sort Variables by Median"
 
+#: barchart/options/order.title
+#: barchart/ui[1][2][0].label
 #: barplot/options/order.title
 #: barplot/ui[1][2][0].label
 #: lollipop/options/order.title
@@ -4858,6 +5055,7 @@ msgid "Sorting (by median)"
 msgstr "수스트 (어디르드 수스트)"
 
 #: areachart/options/colorPalette/Spectral.title
+#: barchart/options/colorPalette/Spectral.title
 #: barplot/options/colorPalette/Spectral.title
 #: boxplot/options/colorPalette/Spectral.title
 #: histogram/options/colorPalette/Spectral.title
@@ -4881,6 +5079,7 @@ msgid "SS Loadings"
 msgstr "SS 등록는드"
 
 #: areachart/options/position/stack.title
+#: barchart/options/barType/stack.title
 #: barplot/options/barType/stack.title
 #: histogram/options/grouping/stack.title
 #: histogram/options/groupingN/stack.title
@@ -4908,6 +5107,14 @@ msgstr ""
 #, fuzzy
 msgid "Standard coordinates"
 msgstr "Standard coordinates"
+
+#: barchart/options/errorBars/sd.title
+msgid "Standard deviation"
+msgstr ""
+
+#: barchart/options/errorBars/se.title
+msgid "Standard error"
+msgstr ""
 
 #: R/corresp.b.R
 #, fuzzy
@@ -4954,6 +5161,7 @@ msgstr "표준화된 값"
 msgid "Staple width"
 msgstr "Staple width"
 
+#: barchart/ui[1][0][0].label
 #: principal/results/kmoTable.columns.title
 #, fuzzy
 msgid "Statistic"
@@ -4971,6 +5179,7 @@ msgid "Student"
 msgstr "Student"
 
 #: areachart/ui[4][1].label
+#: barchart/ui[8][1].label
 #: barplot/ui[7][1].label
 #: boxplot/ui[6][1].label
 #: histogram/ui[7][1].label
@@ -4987,19 +5196,28 @@ msgstr "Student"
 msgid "Subtitle"
 msgstr "신레드"
 
-#: corresp/ui[8][1][1][0].label
+#: corresp/ui[7][1][1][0].label
 #: multcorresp/ui[8][1][1][0].label
 #: principal/ui[6][1][1][0].label
 #, fuzzy
 msgid "Subtitle Style"
 msgstr ""
 
-#: corresp/ui[8][1][0][0].label
+#: corresp/ui[7][1][0][0].label
 #: multcorresp/ui[8][1][0][0].label
 #: principal/ui[6][1][0][0].label
 #, fuzzy
 msgid "Subtitle Text"
 msgstr "서브타이틀 텍스트"
+
+#: barchart/options/yaxis/sum.title
+#: barchart/ui[1][0][0][0]/yaxis_sum.label
+msgid "Sum"
+msgstr ""
+
+#: R/barchart.b.R
+msgid "Sum of {var}"
+msgstr ""
 
 #: corresp/results/eigenvalues.title
 #: multcorresp/options/showSummary.title
@@ -5046,7 +5264,7 @@ msgstr "보조 열 번호는 {nmax} 사이여야 합니다."
 msgid "Supplementary columns"
 msgstr "Supplementary columns"
 
-#: corresp/ui[3][0].label
+#: corresp/ui[2][0].label
 #, fuzzy
 msgid "Supplementary Points"
 msgstr " "
@@ -5106,7 +5324,7 @@ msgstr "대칭 정규화"
 msgid "Table"
 msgstr ""
 
-#: corresp/ui[5][0][0].label
+#: corresp/ui[4][0][0].label
 #: multcorresp/ui[5][0][0].label
 #: principal/ui[3][0][0].label
 #, fuzzy
@@ -5132,7 +5350,7 @@ msgstr ""
 
 #: barplot/ui[4][0][0][0].label
 #: boxplot/ui[3][0][0][0].label
-#: corresp/ui[6][0][0][0].label
+#: corresp/ui[5][0][0][0].label
 #: likertplot/ui[5].label
 #: likertplot/ui[5][0][0][0].label
 #: mrcrosstabs/ui[2][0][2][1].label
@@ -5144,7 +5362,11 @@ msgstr ""
 msgid "Text Size"
 msgstr "Text Size"
 
-#: corresp/ui[6].label
+#: barchart/options/labelTextSize.title
+msgid "Text size"
+msgstr ""
+
+#: corresp/ui[5].label
 #, fuzzy
 msgid "Text Size & Colors"
 msgstr "텍스트 크기 및 색상"
@@ -5186,6 +5408,8 @@ msgid "Theoretical Quantiles"
 msgstr "Theoretical Quantiles"
 
 #: areachart/options/yTicks.title
+#: barchart/options/xTicks.title
+#: barchart/options/yTicks.title
 #: barplot/options/xTicks.title
 #: barplot/options/yTicks.title
 #: boxplot/options/xTicks.title
@@ -5215,6 +5439,7 @@ msgid "Tidy up levels"
 msgstr "었다 총 신행"
 
 #: areachart/options/colorPalette/tidy::alger.title
+#: barchart/options/colorPalette/tidy::alger.title
 #: barplot/options/colorPalette/tidy::alger.title
 #: boxplot/options/colorPalette/tidy::alger.title
 #: histogram/options/colorPalette/tidy::alger.title
@@ -5232,6 +5457,7 @@ msgid "Tidy:Alger"
 msgstr "Tidy:Alger"
 
 #: areachart/options/colorPalette/tidy::apple.title
+#: barchart/options/colorPalette/tidy::apple.title
 #: barplot/options/colorPalette/tidy::apple.title
 #: boxplot/options/colorPalette/tidy::apple.title
 #: histogram/options/colorPalette/tidy::apple.title
@@ -5249,6 +5475,7 @@ msgid "Tidy:Apple"
 msgstr "Tidy:Apple"
 
 #: areachart/options/colorPalette/tidy::candy.title
+#: barchart/options/colorPalette/tidy::candy.title
 #: barplot/options/colorPalette/tidy::candy.title
 #: boxplot/options/colorPalette/tidy::candy.title
 #: histogram/options/colorPalette/tidy::candy.title
@@ -5266,6 +5493,7 @@ msgid "Tidy:Candy"
 msgstr "Tidy:Candy"
 
 #: areachart/options/colorPalette/tidy::friendly.title
+#: barchart/options/colorPalette/tidy::friendly.title
 #: barplot/options/colorPalette/tidy::friendly.title
 #: boxplot/options/colorPalette/tidy::friendly.title
 #: histogram/options/colorPalette/tidy::friendly.title
@@ -5283,6 +5511,7 @@ msgid "Tidy:Friendly"
 msgstr ":"
 
 #: areachart/options/colorPalette/tidy::ibm.title
+#: barchart/options/colorPalette/tidy::ibm.title
 #: barplot/options/colorPalette/tidy::ibm.title
 #: boxplot/options/colorPalette/tidy::ibm.title
 #: histogram/options/colorPalette/tidy::ibm.title
@@ -5300,6 +5529,7 @@ msgid "Tidy:Ibm"
 msgstr "Tidy:Ibm"
 
 #: areachart/options/colorPalette/tidy::metro.title
+#: barchart/options/colorPalette/tidy::metro.title
 #: barplot/options/colorPalette/tidy::metro.title
 #: boxplot/options/colorPalette/tidy::metro.title
 #: histogram/options/colorPalette/tidy::metro.title
@@ -5317,6 +5547,7 @@ msgid "Tidy:Metro"
 msgstr "정리:Metro"
 
 #: areachart/options/colorPalette/tidy::rainbow.title
+#: barchart/options/colorPalette/tidy::rainbow.title
 #: barplot/options/colorPalette/tidy::rainbow.title
 #: boxplot/options/colorPalette/tidy::rainbow.title
 #: histogram/options/colorPalette/tidy::rainbow.title
@@ -5334,6 +5565,7 @@ msgid "Tidy:Rainbow"
 msgstr "Tidy:Rainbow"
 
 #: areachart/options/colorPalette/tidy::seaside.title
+#: barchart/options/colorPalette/tidy::seaside.title
 #: barplot/options/colorPalette/tidy::seaside.title
 #: boxplot/options/colorPalette/tidy::seaside.title
 #: histogram/options/colorPalette/tidy::seaside.title
@@ -5360,6 +5592,7 @@ msgid "Time Series"
 msgstr " "
 
 #: areachart/ui[4][0].label
+#: barchart/ui[8][0].label
 #: barplot/ui[7][0].label
 #: boxplot/ui[6][0].label
 #: histogram/ui[7][0].label
@@ -5376,14 +5609,14 @@ msgstr " "
 msgid "Title"
 msgstr "제목"
 
-#: corresp/ui[8][0][1][0].label
+#: corresp/ui[7][0][1][0].label
 #: multcorresp/ui[8][0][1][0].label
 #: principal/ui[6][0][1][0].label
 #, fuzzy
 msgid "Title Style"
 msgstr " "
 
-#: corresp/ui[8][0][0][0].label
+#: corresp/ui[7][0][0][0].label
 #: multcorresp/ui[8][0][0][0].label
 #: principal/ui[6][0][0][0].label
 #, fuzzy
@@ -5392,6 +5625,8 @@ msgstr "제목 텍스트"
 
 #: areachart/options/legendPosition/top.title
 #: areachart/options/yAxisPosition/1.title
+#: barchart/options/legendPosition/top.title
+#: barchart/options/yAxisPosition/1.title
 #: barplot/options/labelPosition/top.title
 #: barplot/options/legendPosition/top.title
 #: barplot/options/yAxisPosition/1.title
@@ -5478,6 +5713,11 @@ msgstr "(M-D-Y)"
 msgid "Use boldface"
 msgstr "Use boldface"
 
+#: barchart/options/bootstrap.title
+msgid "Use bootstrap"
+msgstr ""
+
+#: barchart/options/singleColor.title
 #: barplot/options/singleColor.title
 #: boxplot/ui[2][0][0][0]/singleColor.label
 #: mrfrequencies/options/singleColor.title
@@ -5505,6 +5745,10 @@ msgstr ""
 msgid "Use variable's description as name"
 msgstr ""
 
+#: barchart/ui[2][0][1][0].label
+msgid "Value Labels"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 #: lollipop/options/yaxis/identity.title
@@ -5517,6 +5761,8 @@ msgstr "Values"
 
 #: areachart/options/var.title
 #: areachart/ui/mode/oneVariable[0][0][1].label
+#: barchart/options/yVar.title
+#: barchart/ui[0][0].label
 #: histogram/options/aVar.title
 #: histogram/ui[0][0].label
 #: lollipop/options/aVar.title
@@ -5599,6 +5845,7 @@ msgstr "수직선 위치"
 #: package/analyses/mrfrequencies.menuGroup
 #: package/analyses/mrcrosstabs.menuGroup
 #: package/analyses/scatterplot.menuGroup
+#: package/analyses/barchart.menuGroup
 #: package/analyses/lollipop.menuGroup
 #: package/analyses/linechart.menuGroup
 #: package/analyses/areachart.menuGroup
@@ -5608,6 +5855,7 @@ msgstr "수직선 위치"
 #: package/analyses/multcorresp.menuGroup
 #: package/datasets/vijPlots.name
 #: areachart/options.menuGroup
+#: barchart/options.menuGroup
 #: barplot/options.menuGroup
 #: boxplot/options.menuGroup
 #: corresp/options.menuGroup
@@ -5633,6 +5881,7 @@ msgid "vijPlots: Yet Another jamovi Plotting Module"
 msgstr "vijPlots: Yet Another jamovi Plotting Module"
 
 #: areachart/options/colorPalette/viridis::inferno.title
+#: barchart/options/colorPalette/viridis::inferno.title
 #: barplot/options/colorPalette/viridis::inferno.title
 #: boxplot/options/colorPalette/viridis::inferno.title
 #: histogram/options/colorPalette/viridis::inferno.title
@@ -5650,6 +5899,7 @@ msgid "Viridis:Inferno"
 msgstr "Viridis:Inferno"
 
 #: areachart/options/colorPalette/viridis::magma.title
+#: barchart/options/colorPalette/viridis::magma.title
 #: barplot/options/colorPalette/viridis::magma.title
 #: boxplot/options/colorPalette/viridis::magma.title
 #: histogram/options/colorPalette/viridis::magma.title
@@ -5667,6 +5917,7 @@ msgid "Viridis:Magma"
 msgstr "Viridis:Magma"
 
 #: areachart/options/colorPalette/viridis::plasma.title
+#: barchart/options/colorPalette/viridis::plasma.title
 #: barplot/options/colorPalette/viridis::plasma.title
 #: boxplot/options/colorPalette/viridis::plasma.title
 #: histogram/options/colorPalette/viridis::plasma.title
@@ -5684,6 +5935,7 @@ msgid "Viridis:Plasma"
 msgstr "Viridis:Plasma"
 
 #: areachart/options/colorPalette/viridis::turbo.title
+#: barchart/options/colorPalette/viridis::turbo.title
 #: barplot/options/colorPalette/viridis::turbo.title
 #: boxplot/options/colorPalette/viridis::turbo.title
 #: histogram/options/colorPalette/viridis::turbo.title
@@ -5701,6 +5953,7 @@ msgid "Viridis:Turbo"
 msgstr ":"
 
 #: areachart/options/colorPalette/viridis::viridis.title
+#: barchart/options/colorPalette/viridis::viridis.title
 #: barplot/options/colorPalette/viridis::viridis.title
 #: boxplot/options/colorPalette/viridis::viridis.title
 #: histogram/options/colorPalette/viridis::viridis.title
@@ -5723,6 +5976,8 @@ msgstr "비리디스:비리디스"
 msgid "Weibull"
 msgstr "Weibull"
 
+#: barchart/options/borderColor/white.title
+#: barchart/options/textColor/white.title
 #: barplot/options/borderColor/white.title
 #: barplot/options/textColor/white.title
 #: corresp/options/supColor/white.title
@@ -5742,6 +5997,7 @@ msgstr "Weibull"
 msgid "White"
 msgstr "White"
 
+#: barchart/options/errorBarWidth.title
 #: histogram/options/binWidth.title
 #, fuzzy
 msgid "Width"
@@ -5771,12 +6027,16 @@ msgstr "잘못된 매개변수 값"
 #: areachart/ui[1][1][0].label
 #: areachart/ui[2][0][0][0].label
 #: areachart/ui[3][1].label
+#: barchart/options/xVar.title
+#: barchart/ui[0][1].label
+#: barchart/ui[6][0][0][0].label
+#: barchart/ui[7][1].label
 #: barplot/ui[5][0][0][0].label
 #: barplot/ui[6][1].label
 #: boxplot/ui[4][0][0][0].label
 #: boxplot/ui[5][1].label
 #: corresp/options/xaxis.title
-#: corresp/ui[7][0].label
+#: corresp/ui[6][0].label
 #: histogram/ui[5][0][0][0].label
 #: histogram/ui[6][1].label
 #: likertplot/ui[6][0][0][0].label
@@ -5827,6 +6087,7 @@ msgstr "X축과 Y축은 차원 수보다 커질 수 없습니다."
 msgid "X-Axis is a date"
 msgstr "X-Axis is a date"
 
+#: barchart/options/xAxisRangeType.title
 #: barplot/options/xAxisRangeType.title
 #: boxplot/options/xAxisRangeType.title
 #: histogram/options/xAxisRangeType.title
@@ -5842,6 +6103,9 @@ msgstr "X-주 벑하"
 
 #: areachart/ui[2][0][1][0].label
 #: areachart/ui[3][2].label
+#: barchart/options/yaxis.title
+#: barchart/ui[6][0][1][0].label
+#: barchart/ui[7][2].label
 #: barplot/options/yaxis.title
 #: barplot/ui[1][0][0].label
 #: barplot/ui[5][0][1][0].label
@@ -5849,7 +6113,7 @@ msgstr "X-주 벑하"
 #: boxplot/ui[4][0][1][0].label
 #: boxplot/ui[5][2].label
 #: corresp/options/yaxis.title
-#: corresp/ui[7][1].label
+#: corresp/ui[6][1].label
 #: histogram/ui[1][0][0].label
 #: histogram/ui[5][0][1][0].label
 #: histogram/ui[6][2].label
@@ -5882,6 +6146,7 @@ msgid "Y-Axis"
 msgstr "Y"
 
 #: areachart/options/yAxisRangeType.title
+#: barchart/options/yAxisRangeType.title
 #: barplot/options/yAxisRangeType.title
 #: boxplot/options/yAxisRangeType.title
 #: histogram/options/yAxisRangeType.title
@@ -5908,6 +6173,7 @@ msgid "Yellow"
 msgstr ""
 
 #: areachart/options/colorPalette/YlGnBu.title
+#: barchart/options/colorPalette/YlGnBu.title
 #: barplot/options/colorPalette/YlGnBu.title
 #: boxplot/options/colorPalette/YlGnBu.title
 #: histogram/options/colorPalette/YlGnBu.title
@@ -5925,6 +6191,7 @@ msgid "Yellow to Blue"
 msgstr ""
 
 #: areachart/options/colorPalette/YlOrBr.title
+#: barchart/options/colorPalette/YlOrBr.title
 #: barplot/options/colorPalette/YlOrBr.title
 #: boxplot/options/colorPalette/YlOrBr.title
 #: histogram/options/colorPalette/YlOrBr.title
@@ -5942,6 +6209,7 @@ msgid "Yellow to Brown"
 msgstr " "
 
 #: areachart/options/colorPalette/YlGn.title
+#: barchart/options/colorPalette/YlGn.title
 #: barplot/options/colorPalette/YlGn.title
 #: boxplot/options/colorPalette/YlGn.title
 #: histogram/options/colorPalette/YlGn.title
@@ -5959,6 +6227,7 @@ msgid "Yellow to Green"
 msgstr "노랑에서 초록까지"
 
 #: areachart/options/colorPalette/YlOrRd.title
+#: barchart/options/colorPalette/YlOrRd.title
 #: barplot/options/colorPalette/YlOrRd.title
 #: boxplot/options/colorPalette/YlOrRd.title
 #: histogram/options/colorPalette/YlOrRd.title
