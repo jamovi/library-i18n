@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-06-09 11:01+0000\n"
-"Last-Translator: José Ángel Iranzo Sanz <joseani@unizar.es>\n"
+"Last-Translator: Miguel L <miguellb@unizar.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jamovi/module-"
 "jys/es/>\n"
 "Language: es\n"
@@ -445,7 +445,6 @@ msgstr "Validación cruzada"
 
 #: mMLP/options/cv_folds.title
 #: mMLP/ui[2]/cv_folds.label
-#, fuzzy
 msgid "Cross-Validation Folds (K)"
 msgstr "Pliegues de validación cruzada (K)"
 
@@ -728,7 +727,7 @@ msgstr "Predictor del modelo de imputación"
 
 #: mMF/results/imputeOV.title
 msgid "Imputed misses"
-msgstr "Ausencia de imputados"
+msgstr "Valores perdidos imputados"
 
 #: mROC/options/perc.title
 msgid "In percent"
@@ -1053,15 +1052,15 @@ msgstr "missForest (2012)"
 
 #: R/mmf.b.R
 msgid "missing"
-msgstr "ausentando"
+msgstr "perdido"
 
 #: mMF/results/estim/plot.title
 msgid "Missing data patterns"
-msgstr "Ausentando patrones de datos"
+msgstr "Patrones de valores perdidos"
 
 #: mMF/results/estim/mcar.columns.title
 msgid "Missing Patterns"
-msgstr "Ausentando Patrones"
+msgstr "Patrones de valores perdidos"
 
 #: mMF/ui[1].label
 #: mMF/results/estim.title
@@ -1251,8 +1250,8 @@ msgid ""
 "Number of candidate non-missing values to sample from in the predictive mean "
 "matching steps. 0 to avoid this step"
 msgstr ""
-"Valores no ausentes del número de candidato para muestra desde el "
-"significado de pasos predictivos coincididos. 0 para evitar este paso"
+"Número de valores candidatos no perdidos entre los que muestrear en los "
+"pasos de emparejamiento por media predictiva. Use 0 para omitir este paso"
 
 #: mPWR/options/k_covariates.title
 #: mPWR/ui[1]/k_covariates.label
@@ -1266,11 +1265,11 @@ msgstr "Número de niveles del factor / grupos"
 
 #: R/mmf.b.R
 msgid "Number of missing entries"
-msgstr "Número de apuntes ausentes"
+msgstr "Número de valores perdidos"
 
 #: R/mmf.b.R
 msgid "Number of missing entries per variable"
-msgstr "Número de apuntes ausentes por variable"
+msgstr "Número de valores perdidos por variable"
 
 #: mMF/options/npat.title
 msgid "Number of patterns"
@@ -1278,7 +1277,7 @@ msgstr "Número de patrones"
 
 #: mMF/options/ntree.title
 msgid "Number of trees to grow in each forest"
-msgstr "Número de árboles para crecer en cada bosque"
+msgstr "Número de árboles en cada bosque"
 
 #: R/mmf.b.R
 msgid "observed"
@@ -1410,7 +1409,7 @@ msgstr "Pastel1"
 
 #: R/mmf.b.R
 msgid "Pattern frequency"
-msgstr "Frecuencia de patrón"
+msgstr "Frecuencia del patrón"
 
 #: mCOR/options/method/pearson.title
 msgid "Pearson (r)"
@@ -1450,7 +1449,7 @@ msgstr "PFC"
 #: R/mmf.b.R
 msgid "PFC - proportion of falsely classified (for Nominal and Ordinal variables);"
 msgstr ""
-"PFC - proporción de clasificados falsamente (para variables nominales y "
+"PFC - proporción de clasificaciones erróneas (para variables nominales y "
 "ordinales);"
 
 #: mCOR/options/plotMetU/pie.title
@@ -1524,22 +1523,21 @@ msgid ""
 "Power calculation for Spearman's correlation is a penalized asymptotic "
 "approximation based on Fisher's Z-transformation (ARE = 0.912)."
 msgstr ""
-"El cálculo de la Potencia para la correlación de Spearman es una "
-"aproximación asintótica penalizada basada en la transformación Z de Fisher "
-"(ARE = 0,912)."
+"El cálculo de potencia para la correlación de Spearman es una aproximación "
+"asintótica penalizada basada en la transformación Z de Fisher (ARE = 0,912)."
 
 #: R/mpwr.b.R
 #: mPWR/results/powerCurve.title
 msgid "Power Curve"
-msgstr "Curva de Potencia"
+msgstr "Curva de potencia"
 
 #: mPWR/options/power_curve.title
 msgid "Power Curve (Power by N)"
-msgstr "Curva de Potencia (Potencia según N)"
+msgstr "Curva de potencia (potencia según N)"
 
 #: R/mui.b.R
 msgid "PPV - Positive Predictive Value of the positive class TP/(TN+FN)"
-msgstr "PPV - Valor predictivo positivo de la clase positiva TP/(TN+FN)"
+msgstr "PPV - valor predictivo positivo de la clase positiva TP/(TN+FN)"
 
 #: R/mmlp.b.R
 msgid "Precision"
@@ -1551,7 +1549,7 @@ msgstr "Predicho"
 
 #: mMF/options/pmmk.title
 msgid "Predictive Mean Matching (PMM) steps"
-msgstr "Pasos del método de coincidencia predictiva de medias (PMM)"
+msgstr "Pasos de emparejamiento por media predictiva (PMM)"
 
 #: R/mmlp.b.R
 #: mMLP/results/importanceTable.columns.title
@@ -1585,7 +1583,7 @@ msgstr "Prevalencia"
 #: mUI/options/isProp.title
 #: mUI/results/stat/intstat.title
 msgid "Proportions of Intervals"
-msgstr "Proporciones de Intervalos"
+msgstr "Proporciones de intervalos"
 
 #: mUI/options/decision.title
 #: mUI/results/decision.title
@@ -1602,7 +1600,8 @@ msgstr "Propósito del cálculo"
 
 #: R/mmf.b.R
 msgid "PVU - proportion of variance unexplained 1-R² (for Continuous variables);"
-msgstr "PVU - proporción de varianza no explicada 1-R² (para Variables Continuas);"
+msgstr ""
+"PVU - proporción de varianza no explicada, 1-R² (para variables continuas);"
 
 #: mPWR/options/r2_predictor.title
 #: mPWR/ui[1]/r2_predictor.label
@@ -1615,7 +1614,7 @@ msgstr "Rango"
 
 #: mUI/options/refval.title
 msgid "Reference level"
-msgstr "Nivel referencial"
+msgstr "Nivel de referencia"
 
 #: mPWR/ui[1]/n_ratio.label
 msgid "Relative size of group 2 to group 1"
@@ -1721,7 +1720,7 @@ msgstr "Posición escalada"
 
 #: package/datasets/SDIROCclassification.name
 msgid "SDI ROC classification"
-msgstr "Clasificación ROC DSI"
+msgstr "Clasificación ROC SDI"
 
 #: R/mui.b.R
 msgid "Se - sensitivity of the positive and negative classifications TP/(TP+FN)"
@@ -1771,7 +1770,7 @@ msgstr "Conjunto3"
 #: mCOR/options/plotMetU/shade.title
 #: mCOR/options/plotMetL/shade.title
 msgid "Shade"
-msgstr "Matiz"
+msgstr "Sombra"
 
 #: R/mmlp.b.R
 #: mMLP/options/activation/sigmoid.title
@@ -1785,15 +1784,16 @@ msgstr "Significado"
 
 #: R/mcor.b.R
 msgid "Simultaneous multiple correlation comparisons using {n} method"
-msgstr "Comparaciones simultáneas de correlación múltiple utilizando método {n}"
+msgstr ""
+"Comparaciones múltiples simultáneas de correlaciones usando el método {n}"
 
 #: mCOR/options/clustMet/single.title
 msgid "Single Linkage"
-msgstr "Enlace Único"
+msgstr "Enlace simple"
 
 #: mMF/options/anghead.title
 msgid "Slanted Titles"
-msgstr "Títulos Inclinados"
+msgstr "Títulos inclinados"
 
 #: R/mui.b.R
 msgid "SNPV - standardized negative predictive value of the negative class"
@@ -1845,7 +1845,7 @@ msgstr ""
 
 #: mROC/options/splitROC.title
 msgid "Split curves"
-msgstr "Curvas desglosadas"
+msgstr "Dividir curvas"
 
 #: mROC/results/splots.title
 msgid "Splitted ROC by predictors"
@@ -1858,7 +1858,7 @@ msgstr "SPPV - valor predictivo positivo estandarizado de la clase positiva"
 #: mCOR/options/plotMetU/square.title
 #: mCOR/options/plotMetL/square.title
 msgid "Square"
-msgstr "Cuadro"
+msgstr "Cuadrado"
 
 #: mROC/options/cmpDeLong/succ.title
 msgid "Successively"
@@ -1905,7 +1905,7 @@ msgid ""
 "levels."
 msgstr ""
 "La variable clasificadora '{}' no tiene exactamente dos niveles; la "
-"clasificación ROC sólo se puede realizar en variables clasificadoras con dos "
+"clasificación ROC solo puede realizarse con variables clasificadoras de dos "
 "niveles."
 
 #: R/mmlp.b.R
@@ -1958,12 +1958,12 @@ msgstr "Precisión de entrenamiento (%)"
 
 #: R/mpwr.b.R
 msgid "two one-tailed"
-msgstr "dos una-cola"
+msgstr "dos pruebas unilaterales"
 
 #: mUI/options/UImethod/TGR.title
 #: mUI/results/plotsTGR.title
 msgid "Two-graph ROC curves"
-msgstr "Curvas ROC de dos grafos"
+msgstr "Curvas ROC en gráfico doble"
 
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/two.sided.title
@@ -1977,11 +1977,11 @@ msgstr "Gráficos de error de tipo 1 y tipo 2"
 
 #: R/mui.b.R
 msgid "UI"
-msgstr "IU"
+msgstr "Intervalo de incertidumbre (UI)"
 
 #: package/datasets/UIforbinomiallogistismodels.name
 msgid "UI for binomial logistis models"
-msgstr "IU para modelos logísticos binomiales"
+msgstr "Intervalo de incertidumbre (UI) para modelos logísticos binomiales"
 
 #: package/analyses/mUI.title
 #: package/analyses/mUI.menuTitle
@@ -1992,31 +1992,32 @@ msgstr "IU para modelos logísticos binomiales"
 #: mUI/results.title
 #: mUI/results/stat/uistat.title
 msgid "Uncertain Interval (UI)"
-msgstr "Intervalo incierto (IU)"
+msgstr "Intervalo de incertidumbre (UI)"
 
 #: R/mui.b.R
 msgid ""
 "Uncertain Interval (UI) is placed around the point of intersection between "
 "the two distributions with and without the targeted state."
 msgstr ""
-"El intervalo incierto (IU) se coloca alrededor del punto de intersección "
-"entre las dos distribuciones con y sin el estado objetivo."
+"El intervalo de incertidumbre (UI) se sitúa alrededor del punto de "
+"intersección entre las dos distribuciones, con y sin el estado objetivo."
 
 #: package/datasets/UIforbinomiallogistismodels.description
 msgid "Uncertain Interval estimation for binomial logistis models"
-msgstr "Estimación de intervalos inciertos para modelos de logística binomial"
+msgstr ""
+"Estimación del intervalo de incertidumbre para modelos logísticos binomiales"
 
 #: R/mui.b.R
 msgid ""
 "Uncertain Interval is considered to be a range of test scores that is "
 "inconclusive and does not warrant a right decision."
 msgstr ""
-"Se considera intervalo incierto un rango de puntuaciones de pruebas que no "
-"es concluyente y no garantiza una decisión correcta."
+"El intervalo de incertidumbre se considera un rango de puntuaciones de la "
+"prueba que no es concluyente y no garantiza una decisión correcta."
 
 #: mUI/options/polygon.title
 msgid "Uncertainty interval polygon"
-msgstr "Polígono de intervalo de incertidumbre"
+msgstr "Polígono del intervalo de incertidumbre"
 
 #: package/analyses/mOUT.title
 #: package/analyses/mOUT.menuTitle
@@ -2028,7 +2029,7 @@ msgstr "Identificación y retirada de valores atípicos univariados"
 
 #: R/mout.b.R
 msgid "Upper fence"
-msgstr "Valla superior"
+msgstr "Límite superior"
 
 #: mCOR/options/plotMetU.title
 msgid "Upper part"
@@ -2040,7 +2041,7 @@ msgstr "Umbral superior"
 
 #: mPWR/results/powerTable.columns.superTitle
 msgid "User Defined"
-msgstr "Definido por el Usuario"
+msgstr "Definido por el usuario"
 
 #: R/mmlp.b.R
 #: mMLP/results/statsTable.columns.title
@@ -2067,7 +2068,7 @@ msgstr "Nombre de la variable"
 
 #: mCOR/ui[5][0]/plots/clustMan.suffix
 msgid "variable numbers by commas"
-msgstr "números de variable por comas"
+msgstr "números de variables separados por comas"
 
 #: R/mmf.b.R
 msgid "Variable to impute"
@@ -2081,7 +2082,7 @@ msgstr "Variables"
 #: mPWR/options/var_ratio.title
 #: mPWR/ui[1]/var_ratio.label
 msgid "Variance ratio (SD₁² / SD₂²)"
-msgstr "Cociente de Variancias (SD₁² / SD₂²)"
+msgstr "Cociente de varianzas (SD₁² / SD₂²)"
 
 #: mCOR/options/clustMet/ward.D2.title
 msgid "Ward´s D2 Linkage"
@@ -2116,7 +2117,7 @@ msgstr "Con control"
 
 #: R/mmf.b.R
 msgid "with missing data on other variables"
-msgstr "con datos ausentes sobre otras variables"
+msgstr "con datos perdidos en otras variables"
 
 #: R/mmf.b.R
 msgid "with observed data on other variables"
@@ -2128,11 +2129,11 @@ msgstr "Coordenada del eje X"
 
 #: mROC/options/theBest/bestY.title
 msgid "Youden Best"
-msgstr "Youden Best"
+msgstr "Mejor según Youden"
 
 #: mROC/options/theBest/bssY.title
 msgid "Youden Best (Sp, Se)"
-msgstr "Youden Best (Sp, Se)"
+msgstr "Youden Best (Esp, Sen)"
 
 #: mOUT/options/outlcheck/ZS.title
 msgid "Z-score"
