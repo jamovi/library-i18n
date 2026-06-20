@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-03-27 01:09+0000\n"
+"PO-Revision-Date: 2026-06-27 20:07+0000\n"
 "Last-Translator: SHIBATA Seiji <contact@sbtseiji.net>\n"
-"Language-Team: Japanese "
-"<https://hosted.weblate.org/projects/jamovi/module-vijplots/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/jamovi/module-"
+"vijplots/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 #: R/qqplot.b.R
 msgid "{distrib} distribution requires positive (>0) data."
@@ -37,19 +37,16 @@ msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "カイザー正規化を伴う{rotation}回転が用いられました。"
 
 #: R/barchart.b.R
-#, fuzzy
 msgid "{var} (Mean ± {level}%  CI)"
-msgstr "{var} (Mean ± {level}%  CI)"
+msgstr "{var} (平均値 ± {level}%  信頼区間)"
 
 #: R/barchart.b.R
-#, fuzzy
 msgid "{var} (Mean ± SD)"
-msgstr "{var} (Mean ± SD)"
+msgstr "{var} (平均値 ± 標準偏差)"
 
 #: R/barchart.b.R
-#, fuzzy
 msgid "{var} (Mean ± SE)"
-msgstr "{var} (Mean ± SE)"
+msgstr "{var} (平均値 ± 標準誤差)"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -67,7 +64,6 @@ msgid "# of rows/columns"
 msgstr "行/列数"
 
 #: barchart/ui[3][0][0]/errorBars_ci/ciLevel.suffix
-#, fuzzy
 msgid "%"
 msgstr "%"
 
@@ -187,7 +183,6 @@ msgstr ""
 "<p>サンプルデータは「Open > Data Library > vijPlots > Likert」から利用できます。</p>"
 
 #: R/corresp.b.R
-#, fuzzy
 msgid ""
 "<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
 "two categorical variables. Computations are based on <a href = "
@@ -219,35 +214,33 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
 msgstr ""
-"<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
-"two categorical variables. Computations are based on <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>The data can be</p>\n"
+"<p>このモジュールは、2つのカテゴリ変数に対する<strong>対応分析（CA）</strong>"
+"を実施します。計算は、F.&nbsp;Husson、J.&nbsp;Josse、S.&nbsp;Le、"
+"J.&nbsp;Mazetによるパッケージ<a href = \"https://CRAN.R-project.org/"
+"package=FactoMineR\" target=\"_blank\">FactoMineR<a/>に基づいています。</p>\n"
+"<p>データは以下のいずれかです。</p>\n"
 "<ul>\n"
-"<li>an <strong>Observation table</strong> (raw data), possibly weighted "
-"using <em>jamovi</em> built-in weight system or using the \"Counts\" "
-"variable</li>\n"
-"<li>or a <strong>Contingency table</strong></li>\n"
+"<li><strong>観測データ表</strong>（生データ）。<em>jamovi</em>の組み込み重み"
+"づけ機能、または「度数」変数を用いて重みづけできます。</li>\n"
+"<li>または<strong>分割表</strong></li>\n"
 "</ul>\n"
-"<p><strong>Supplementary row or column</strong> numbers may be entered as "
-"integer lists : 1,3,6</p>\n"
-"<p>Four normalizations (scaling of row and column scores before plotting) "
-"are available :</p>\n"
+"<p><strong>補助行または補助列</strong>の番号は、整数のリスト（例：1,3,6）で指"
+"定できます。</p>\n"
+"<p>4種類の正規化（プロット前の行・列スコアのスケーリング）が利用できます。</"
+"p>\n"
 "<ul>\n"
-"<li><strong>Principal:</strong> Row and columns scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row and columns scores are scaled by the "
-"square root of eigenvalues. </li>\n"
-"<li><strong>Row Principal:</strong> Only row scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Column Principal:</strong> Only column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Standard:</strong> The raw coordinates without "
-"normalization.</li>\n"
+"<li><strong>主成分：</strong> 行と列のスコアを固有値でスケーリングします。</"
+"li>\n"
+"<li><strong>対象：</strong> 行と列のスコアを固有値の平方根でスケーリングしま"
+"す。</li>\n"
+"<li><strong>行主成分：</strong> 行スコアのみを固有値でスケーリングします。</"
+"li>\n"
+"<li><strong>列主成分：</strong> 列スコアのみを固有値でスケーリングします。</"
+"li>\n"
+"<li><strong>標準：</strong> 正規化を行わない生座標を使用します。</li>\n"
 "</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
+"<p>サンプルファイルは、Open &gt; Data Library &gt; vijPlots &gt; Smoking に含"
+"まれています。</p>"
 
 #: R/multcorresp.b.R
 msgid ""
@@ -798,9 +791,8 @@ msgstr "軸タイトル"
 #: barchart/options.title
 #: barchart/ui.title
 #: barchart/results.title
-#, fuzzy
 msgid "Bar Chart"
-msgstr "Bar Chart"
+msgstr "棒グラフ"
 
 #: package/analyses/barplot.title
 #: package/analyses/barplot.menuTitle
@@ -1471,9 +1463,8 @@ msgid "Column Summary"
 msgstr "列の要約"
 
 #: corresp/options/columnTitle.title
-#, fuzzy
 msgid "Column title"
-msgstr "Column title"
+msgstr "列タイトル"
 
 #: corresp/options/cols.title
 #: corresp/options/columns.title
@@ -1709,9 +1700,8 @@ msgid "December"
 msgstr "12月"
 
 #: barchart/options/decimalPrecision.title
-#, fuzzy
 msgid "Decimal precision"
-msgstr "Decimal precision"
+msgstr "表示桁数"
 
 #: barchart/options/order/decreasing.title
 #: barchart/ui[1][2][0]/order_decreasing.label
@@ -1918,16 +1908,14 @@ msgid "Equamax"
 msgstr "エカマックス"
 
 #: barchart/ui[3][1][0].label
-#, fuzzy
 msgid "Error Bar Size"
-msgstr "Error Bar Size"
+msgstr "誤差線のサイズ"
 
 #: barchart/options/errorBars.title
 #: barchart/ui[3].label
 #: barchart/ui[3][0][0].label
-#, fuzzy
 msgid "Error Bars"
-msgstr "Error Bars"
+msgstr "誤差線"
 
 #: qqplot/options/paramMethod/paraEstimate.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimat.label
@@ -3468,9 +3456,8 @@ msgid "Observation Summary"
 msgstr "観測値の要約"
 
 #: corresp/options/mode/obsTable.title
-#, fuzzy
 msgid "Observation Table"
-msgstr "Observation Table"
+msgstr "観測データ表"
 
 #: multcorresp/options/showObservations.title
 #: multcorresp/options/showObservationPlot.title
@@ -4449,9 +4436,8 @@ msgstr "行・列の要約"
 
 #: corresp/options/rowLabels.title
 #: corresp/ui/mode/contTable[0][0][1].label
-#, fuzzy
 msgid "Row Labels"
-msgstr "Row Labels"
+msgstr "行ラベル"
 
 #: corresp/results/rowplot.title
 msgid "Row Plot"
@@ -4665,9 +4651,8 @@ msgid "Show totals (Centered only)"
 msgstr "合計を表示（中央寄せのみ）"
 
 #: barchart/options/showLabels.title
-#, fuzzy
 msgid "Show value labels"
-msgstr "Show value labels"
+msgstr "値ラベルを表示"
 
 #: scatterplot/options/singleColor.title
 msgid "Single"
@@ -4815,14 +4800,12 @@ msgid "Standard coordinates"
 msgstr "標準座標"
 
 #: barchart/options/errorBars/sd.title
-#, fuzzy
 msgid "Standard deviation"
-msgstr "Standard deviation"
+msgstr "標準偏差"
 
 #: barchart/options/errorBars/se.title
-#, fuzzy
 msgid "Standard error"
-msgstr "Standard error"
+msgstr "標準誤差"
 
 #: R/corresp.b.R
 msgid "Standard normalization"
@@ -4905,14 +4888,12 @@ msgstr "サブタイトル文字"
 
 #: barchart/options/yaxis/sum.title
 #: barchart/ui[1][0][0][0]/yaxis_sum.label
-#, fuzzy
 msgid "Sum"
-msgstr "Sum"
+msgstr "合計"
 
 #: R/barchart.b.R
-#, fuzzy
 msgid "Sum of {var}"
-msgstr "Sum of {var}"
+msgstr "{var} の合計"
 
 #: corresp/results/eigenvalues.title
 #: multcorresp/options/showSummary.title
@@ -5034,9 +5015,8 @@ msgid "Text Size"
 msgstr "文字サイズ"
 
 #: barchart/options/labelTextSize.title
-#, fuzzy
 msgid "Text size"
-msgstr "Text size"
+msgstr "文字サイズ"
 
 #: corresp/ui[5].label
 msgid "Text Size & Colors"
@@ -5353,9 +5333,8 @@ msgid "Use boldface"
 msgstr "太字を使用"
 
 #: barchart/options/bootstrap.title
-#, fuzzy
 msgid "Use bootstrap"
-msgstr "Use bootstrap"
+msgstr "ブートストラップを使用"
 
 #: barchart/options/singleColor.title
 #: barplot/options/singleColor.title
@@ -5382,9 +5361,8 @@ msgid "Use variable's description as name"
 msgstr "変数の説明を名前に使用"
 
 #: barchart/ui[2][0][1][0].label
-#, fuzzy
 msgid "Value Labels"
-msgstr "Value Labels"
+msgstr "値ラベル"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
