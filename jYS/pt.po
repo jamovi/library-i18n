@@ -3,8 +3,8 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-06-27 20:08+0000\n"
 "Last-Translator: Jonathon Love <jon@thon.cc>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/jamovi/module-"
-"jys/pt/>\n"
+"Language-Team: Portuguese "
+"<https://hosted.weblate.org/projects/jamovi/module-jys/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -12,9 +12,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2026.7.dev0\n"
 
+#: R/mlr.b.R
+msgid "(Intercept)"
+msgstr ""
+
 #: R/mroc.b.R
-msgid " [{prc}% CI]"
-msgstr " [IC {prc}%]"
+msgid "[{prc}% CI]"
+msgstr ""
 
 #: R/mcor.b.R
 msgid "{ciWidth}% CI Lower"
@@ -23,6 +27,10 @@ msgstr "Lim. Inf. IC {ciWidth}%"
 #: R/mcor.b.R
 msgid "{ciWidth}% CI Upper"
 msgstr "Lim. Sup. IC {ciWidth}%"
+
+#: R/mlr.b.R
+msgid "{k}-Fold CV"
+msgstr ""
 
 #: R/mui.b.R
 #, fuzzy
@@ -33,6 +41,7 @@ msgstr "Decisão proposta {varType}"
 msgid "{varType} with imputed values"
 msgstr "{varType} com valores imputados"
 
+#: R/mmout.b.R
 #: R/mout.b.R
 #, fuzzy
 #| msgid "{varType} with imputed values"
@@ -47,35 +56,411 @@ msgstr "**conexão dos dados observados de uma variável"
 msgid "*connection of a variable's missingness indicator"
 msgstr "*conexão do indicador de dados em falta de uma variável"
 
-#: R/mout.b.R
-#: R/mui.b.R
-#, fuzzy
-msgid ""
-"*p<0.05 - The hypothesis of normal distribution was rejected by the "
-"Shapiro-Wilk test"
-msgstr ""
-"*p<0.05 - A hipótese de distribuição normal foi rejeitada pelo teste de "
-"Shapiro-Wilk"
-
 #: R/mmf.b.R
 msgid "*pairwise complete observations"
 msgstr "*observações completas por pares"
 
-#: mPWR/results/powerTable.columns.title
-#, fuzzy
-msgid "&alpha;"
-msgstr "&alfa;"
-
-#: mPWR/options/alpha.title
-#: mPWR/ui[1]/alpha.label
-#, fuzzy
-msgid "&alpha; (type I error rate)"
-msgstr "&alfa; (taxa de erro do tipo I)"
-
 #: mCOR/ui[4][0]/tables/ci/ciWidth.suffix
-#: mROC/ui[1]/ciAUC/ciWidth.suffix
+#: mROC/ui[2]/ciAUC/ciWidth.suffix
+#: mSRV/ui[5]/showRoc/rocCI/rocWidth.suffix
 msgid "%"
 msgstr "%"
+
+#: R/mpca.b.R
+msgid "% of variance"
+msgstr ""
+
+#: mPCA/results/varianceTable.columns.title
+msgid "% of Variance"
+msgstr ""
+
+#: mMOUT/results/stat.columns.title
+msgid "% Outliers"
+msgstr ""
+
+#: R/mout.b.R
+#: R/mui.b.R
+msgid ""
+"<b>*p<0.05</b> - The hypothesis of normal distribution was rejected by the "
+"Shapiro-Wilk test"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Alpha (α)</b> is the significance level, representing the maximum "
+"acceptable probability of committing a Type I error (detecting a false "
+"positive difference when none actually exists)."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Balance</b> - balance between correct and incorrect classified "
+"(TP+TN)/(FP+FN)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>BETWEENNESS</b>: number of shortest paths between all pairs of nodes that "
+"pass through this node; shows its importance as a \"bridge\" or transit "
+"point."
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Calculated parameter</b>:"
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>CCR</b> - Correct Classification Rate or accuracy of the positive and "
+"negative classifications (TP+TN)/(TN+FP+FN+TP)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Centrality metrics</b> (different measures of a node's importance in the "
+"network)."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>CLOSENESS</b>: inverse of the sum of shortest path lengths to all other "
+"nodes; shows how central a node is in terms of distance."
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Clusters (k1/k2)</b> represent the required number of clusters (e.g., "
+"clinics or schools) per group. This is adjusted for similarity among "
+"subjects within the same cluster using the Intraclass Correlation "
+"Coefficient (<b>ICC</b>) and average cluster size via the Design Effect."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Concordance</b> - C-Statistic or AUC. The probability that a randomly "
+"chosen subject with the condition is correctly ranked higher than a randomly "
+"chosen subject without the condition"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "<b>Correlation method</b>: {method}"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Design</b>:"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Cohen's d"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Cohen's w"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: correlation coefficient (r)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Eta-squared (η²)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Hazard Ratio (HR)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Odds Ratio"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: R-squared change (f²)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Effect Size</b> measures the standardized magnitude of the difference or "
+"association (e.g., Cohen's d for means, or correlation coefficient). Unlike "
+"p-values, it is independent of the sample size."
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Events (N1)</b> represents the required number of target events (e.g., "
+"deaths or failures) to achieve the desired power. In survival analysis, "
+"statistical power is driven by the number of events rather than the total "
+"number of subjects."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>EXPECTED INFLUENCE</b>: sum of signed weights of connected edges; shows "
+"the node's net impact on the network, considering positive and negative "
+"relations."
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>Explanatory</b> - variable corresponding to MAR with minimal "
+"p<sub>value</sub>."
+msgstr ""
+
+#: R/mcor.b.R
+msgid "<b>Hₐ</b> is negative correlation"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "<b>Hₐ</b> is positive correlation"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Hazard Ratio (HR)</b> represents the ratio of event rates between the two "
+"groups. A Hazard Ratio of 1 indicates no difference in risk, while values "
+"further from 1 represent stronger effects."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Hazard Ratio (HR)</b> represents the ratio of the hazard rates "
+"corresponding to the conditions described by two levels of an explanatory "
+"variable (Cox, 1972). It indicates the relative risk of event occurrence per "
+"unit change in the predictor. An <b>HR > 1</b> indicates an increased hazard "
+"(higher risk of the event), while an <b>HR < 1</b> indicates a decreased "
+"hazard (protective effect). <b>Lower/Upper 95% CI</b> represent the "
+"confidence interval for the Hazard Ratio."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid ""
+"<b>Hidden Layers</b>: network architecture (hidden layer sizes, hidden / "
+"output activation functions)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid ""
+"<b>Hold-out Accuracy</b>: classification accuracy on the hold-out validation "
+"dataset."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid ""
+"<b>K-Fold CV Accuracy</b>: average classification accuracy across "
+"cross-validation folds."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Kaplan-Meier estimator</b> (Kaplan & Meier, 1958) is a non-parametric "
+"statistic used to estimate the survival function from lifetime data, "
+"accounting for censored observations. <b>Median survival</b> is the "
+"estimated time at which 50% of the subjects have experienced the event "
+"(survival probability drops to 0.5). <b>Lower/Upper 95% CI</b> represent the "
+"95% confidence interval limits for this median survival time."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Likelihood Ratio</b>, <b>Wald</b>, and <b>Score (Log-rank)</b> tests "
+"assess the global null hypothesis that all regression coefficients (beta) in "
+"the model are equal to zero. Statistically significant p-values (p < 0.05) "
+"indicate that the predictors collectively improve the model fit relative to "
+"a null model without covariates."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Log-rank (Mantel-Cox) test</b> is a non-parametric hypothesis test that "
+"compares the survival distributions of two or more independent groups. It "
+"evaluates the null hypothesis that there is no difference in survival curves "
+"between groups. <b>Chi-square</b> is the test statistic based on observed "
+"vs. expected events, and the <b>p-value</b> indicates the statistical "
+"significance of the differences under the null hypothesis."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>LR-</b> - Negative Likelihood Ratio P(-|D+))/(P(-|D-)). The probability "
+"of a person with the condition receiving a negative classification / "
+"probability of a person without the condition receiving a negative "
+"classification"
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>LR+</b> - Positive Likelihood Ratio (P(+|D+))/(P(+|D-)) The probability "
+"of a person with the condition receiving a positive classification / "
+"probability of a person without the condition receiving a positive "
+"classification"
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>MAR</b> - missing at random (if each p<sub>value</sub> is significant, "
+"there is evidence the data is MAR);"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "<b>Max Iterations</b>: maximum number of training epochs."
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>MCAR</b> - missing completely at random (if the p<sub>value</sub> is not "
+"significant, there is evidence the data is MCAR)."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Method</b>: Classical Partial Correlation (no regularization/L1 penalty). "
+"Computes the linear association between each pair of variables while "
+"controlling for all other variables in the dataset, producing a fully "
+"connected network."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Method</b>: Classical Semi-Partial Correlation (no regularization/L1 "
+"penalty). Computes the linear association between each pair of variables "
+"while controlling for all other variables in the dataset from only the "
+"second variable, yielding an asymmetric network."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Method</b>: Graphical Lasso (GLASSO) with a manual penalty parameter (rho "
+"= {rho}). GLASSO uses L1 regularization to shrink weak partial correlations "
+"to exactly zero, producing a sparse network."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Method</b>: Graphical Lasso (GLASSO) with Extended Bayesian Information "
+"Criterion (EBIC) tuning parameter selection (gamma = {gamma}). GLASSO uses "
+"L1 regularization to shrink weak partial correlations to exactly zero, "
+"producing a sparse network."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>More Certain Interval (MCI)</b> is interval outside the Uncertain "
+"Interval and divide into low and high parts."
+msgstr ""
+
+#: R/mmf.b.R
+msgid "<b>MSE</b> - mean squared error (for Continuous variables);"
+msgstr ""
+
+#: R/mmf.b.R
+msgid "<b>N</b> - number of missing values;"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>N1</b> and <b>N2</b> represent the required number of subjects in Group 1 "
+"and Group 2. The ratio of their sizes is determined by the specified "
+"allocation ratio."
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>N1</b> represents the required sample size (total number of subjects in "
+"the single group, or total number of pairs for paired comparisons)."
+msgstr ""
+
+#: R/mui.b.R
+msgid "<b>NPV</b> - Negative Predictive Value of the negative class TN/(TN+FN)"
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>PFC</b> - proportion of falsely classified (for Nominal and Ordinal "
+"variables);"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Power</b> is the probability of correctly detecting a statistically "
+"significant difference when a true difference exists in the population (1 - "
+"Type II error rate, or the probability of avoiding a false negative)."
+msgstr ""
+
+#: R/mui.b.R
+msgid "<b>PPV</b> - Positive Predictive Value of the positive class TP/(TN+FN)"
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>PVU</b> - proportion of variance unexplained 1-R² (for Continuous "
+"variables);"
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Schoenfeld residuals test</b> evaluates the proportional hazards (PH) "
+"assumption of the Cox model for each covariate individually and globally. It "
+"tests whether the effect of the covariates is constant over time. A "
+"statistically significant <b>p-value (p < 0.05)</b> indicates a violation of "
+"the PH assumption, meaning the hazard ratio changes over time."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Se</b> - sensitivity of the positive and negative classifications "
+"TP/(TP+FN)"
+msgstr ""
+
+#: R/mui.b.R
+msgid "<b>SNPV</b> - standardized negative predictive value of the negative class"
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Sp</b> - specificity of the positive and negative classifications "
+"TN/(TN+FN)"
+msgstr ""
+
+#: R/mui.b.R
+msgid "<b>SPPV</b> - standardized positive predictive value of the positive class"
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>STRENGTH</b>: sum of absolute weights of connected edges; shows how "
+"strongly a node is directly connected to its neighbors."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Time-dependent ROC</b> analysis (Heagerty et al., 2000) evaluates the "
+"predictive accuracy of continuous markers for time-to-event outcomes at a "
+"specific time point <i>t</i>, classifying patients into event-occurring or "
+"event-free states. <b>AUC</b> (Area Under the Curve) measures the "
+"discriminative ability (ranging from 0.5 to 1.0). <b>Cut-off</b> represents "
+"the optimal threshold determined by the Youden index (J = Sensitivity + "
+"Specificity - 1)."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "<b>Training Accuracy</b>: classification accuracy on the training dataset."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Uncertain Interval (UI)</b> is placed around the point of intersection "
+"between the two distributions with and without the targeted state."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Uncertain Interval</b> is considered to be a range of test scores that is "
+"inconclusive and does not warrant a right decision."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "<b>Weight Decay</b>: L2 regularization penalty parameter."
+msgstr ""
 
 #: R/mmf.b.R
 #, fuzzy
@@ -94,9 +479,18 @@ msgstr "0 - auto"
 msgid "0 ="
 msgstr "0 ="
 
+#: mMOUT/options/alpha/0.01.title
+msgid "0.01 (standard)"
+msgstr ""
+
+#: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
+#: R/msrv.b.R
+#: mLR/options/roc_x/1spec.title
 #: mMLP/options/roc_x/1spec.title
+#: mPCA/options/roc_x/1spec.title
 msgid "1 - Specificity"
 msgstr "1 - Especificidade"
 
@@ -105,6 +499,9 @@ msgstr "1 - Especificidade"
 msgid "10,5"
 msgstr "10,5"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
 msgid "100 - Specificity (%)"
 msgstr "100 - Especificidade (%)"
@@ -118,6 +515,14 @@ msgstr "3.0 (padrão)"
 #, fuzzy
 msgid "3.5 (standard)"
 msgstr "3,5 (padrão)"
+
+#: mLR/results/coeffTable.columns.title
+msgid "95% OR CI Lower"
+msgstr ""
+
+#: mLR/results/coeffTable.columns.title
+msgid "95% OR CI Upper"
+msgstr ""
 
 #: mCOR/results/matrix.description
 msgid "a correlation matrix table"
@@ -139,19 +544,25 @@ msgstr "Intervalo"
 msgid "A Priori Power Analysis Results"
 msgstr "Intervalo"
 
+#: mLR/options/palBrewer/Accent.title
+#: mMLP/options/palBrewer/Accent.title
+#: mPCA/options/palBrewer/Accent.title
 #: mROC/options/palBrewer/Accent.title
+#: mSRV/options/palBrewer/Accent.title
 msgid "Accent"
 msgstr "Acento"
 
-#: R/mmlp.b.R
-#, fuzzy
-msgid "Actual"
-msgstr "Real"
+#: mPCA/results/regTable.columns.title
+msgid "Accuracy"
+msgstr ""
 
 #: mMLP/results/matrixTable.columns.title
-#, fuzzy
-msgid "Actual \\ Predicted"
-msgstr "Real \\ Prevido"
+msgid "Actual Class"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Adjusted Rand Index (ARI)"
+msgstr ""
 
 #: mCOR/options/clustMet.title
 msgid "Agglomeration method"
@@ -178,6 +589,14 @@ msgstr "Alternativa"
 msgid "an array of MARs"
 msgstr "uma matriz de MARs"
 
+#: mPCA/ui[3].label
+msgid "Analysis by Groups"
+msgstr ""
+
+#: mSRV/options/rocTime.title
+msgid "Analysis Time Point t"
+msgstr ""
+
 #: mCOR/options/plotOrder/AOE.title
 msgid "Angular order eigenvectors"
 msgstr "Autovetores em ordem angular"
@@ -188,26 +607,49 @@ msgstr "Autovetores em ordem angular"
 msgid "ANOVA / ANCOVA (F-Test)"
 msgstr "ANOVA / ANCOVA (Teste F)"
 
+#: R/mroc.b.R
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/regTable.columns.title
+#: mPCA/results/rocTable.columns.title
+#: mROC/results/rocTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
+#: mUI/results/stat/rocTable.columns.title
+msgid "AUC"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Average (Mean)"
+msgstr ""
+
+#: mPWR/options/cluster_size.title
+#: mPWR/ui[1]/cluster_size.label
+msgid "Average cluster size (m)"
+msgstr ""
+
 #: mCOR/options/clustMet/average.title
 msgid "Average Linkage (UPGMA)"
 msgstr "Ligação média (UPGMA)"
 
+#: mLR/ui[3]/show_roc/roc_unit.label
 #: mMLP/ui[3]/show_roc/roc_unit.label
+#: mPCA/ui[3][0]/rocPlot/roc_unit.label
 #, fuzzy
 msgid "Axis Units"
 msgstr "Unidades do Eixo"
 
-#: R/mui.b.R
+#: R/mlr.b.R
+msgid "Backward (AIC)"
+msgstr ""
+
+#: mLR/options/method/backward.title
+msgid "Backward Stepwise Elimination (AIC)"
+msgstr ""
+
+#: mUI/results/stat/mcistat.columns.title
 #, fuzzy
 msgid "Balance"
 msgstr "Equilíbrio"
-
-#: R/mui.b.R
-#, fuzzy
-msgid "Balance - balance between correct and incorrect classified (TP+TN)/(FP+FN)"
-msgstr ""
-"Equilíbrio - equilíbrio entre classificações corretas e incorretas "
-"(TP+TN)/(FP+FN)"
 
 #: mPWR/options/base_prob.title
 #: mPWR/ui[1]/base_prob.label
@@ -233,6 +675,10 @@ msgstr "Benjamini-Hochberg (1995)"
 msgid "Benjamini-Yekutieli (2001)"
 msgstr "Benjamini-Yekutieli (2001)"
 
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
+msgid "Betweenness"
+msgstr ""
+
 #: mUI/options/model/binormal.title
 #, fuzzy
 msgid "Binormal"
@@ -251,6 +697,10 @@ msgstr "Demonstração de Classificação ROC Múltipla de Células Sanguíneas"
 msgid "Bonferroni (1961)"
 msgstr "Bonferroni (1961)"
 
+#: mMOUT/options/plotType/both.title
+msgid "Both Plots"
+msgstr ""
+
 #: mCOR/options/clPos/b.title
 msgid "Bottom"
 msgstr "Base"
@@ -261,6 +711,12 @@ msgstr "Base"
 msgid "Boxplots with outliers"
 msgstr "Gráficos de caixas com valores atípicos"
 
+#: mLR/options/palBrewer.title
+#: mLR/ui[3]/show_roc/palBrewer.label
+#: mMLP/options/palBrewer.title
+#: mMLP/ui[3]/show_roc/palBrewer.label
+#: mPCA/options/palBrewer.title
+#: mPCA/ui[3][0]/rocPlot/palBrewer.label
 #: mROC/options/palBrewer.title
 msgid "Brewer's qualitative palette"
 msgstr "Paleta qualitativa de Brewer"
@@ -272,22 +728,22 @@ msgstr "Cercas calculadas para valores atípicos"
 
 #: R/mpwr.b.R
 #, fuzzy
-msgid "Calculated parameter: "
-msgstr "Parâmetro calculado: "
-
-#: R/mpwr.b.R
-#, fuzzy
 msgid "Calculation error:"
 msgstr "Erro de cálculo:"
 
-#: R/mui.b.R
-#, fuzzy
+#: R/mpwr.b.R
 msgid ""
-"CCR - Correct Classification Rate or accuracy of the positive and negative "
-"classifications (TP+TN)/(TN+FP+FN+TP)"
+"Calculations for survival log-rank test are based on Schoenfeld's asymptotic "
+"approximation. N1 represents the total number of events required."
 msgstr ""
-"CCR - Taxa de classificação correta ou precisão das classificações positivas "
-"e negativas (TP+TN)/(TN+FP+FN+TP)"
+
+#: mUI/results/stat/mcistat.columns.title
+msgid "CCR"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoHubTable.title
+msgid "Centrality metrics (hub markers)"
+msgstr ""
 
 #: mCOR/options/clustMet/centroid.title
 msgid "Centroid Linkage (UPGMC)"
@@ -297,11 +753,33 @@ msgstr "Ligação por centróide (UPGMC)"
 msgid "CHD Models ROC Estimation"
 msgstr "Estimativa da Curva ROC dos Modelos CHD"
 
+#: mSRV/results/logRankTable.columns.title
+#: mSRV/results/coxSection/coxAssumpTable.columns.title
+msgid "Chi-Square"
+msgstr ""
+
+#: mMOUT/results/stat.columns.title
+msgid "Chi-Square Cut-off"
+msgstr ""
+
 #: R/mpwr.b.R
 #: mPWR/options/design/chisq.title
 #, fuzzy
 msgid "Chi-square Goodness-of-Fit / Independence (Chi-square Test)"
 msgstr "Bondade de Ajuste do Qui-Quadrado / Independência (Teste do Qui-Quadrado)"
+
+#: mMOUT/options/plotType/qq.title
+#: mMOUT/results/qqplot.title
+msgid "Chi-Square Q-Q Plot"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Chi-Square Q-Q Plot ({method})"
+msgstr ""
+
+#: mROC/results/rocTable.columns.title
+msgid "CI"
+msgstr ""
 
 #: mCOR/results/matrix.columns.content
 msgid "CI Lower"
@@ -319,10 +797,47 @@ msgstr "Lim. Sup. I.C."
 msgid "CI width"
 msgstr "Largura do intervalo de confiança"
 
+#: mSRV/options/rocWidth.title
+msgid "CI Width"
+msgstr ""
+
 #: mCOR/options/plotMetU/circle.title
 #: mCOR/options/plotMetL/circle.title
+#: mCOR/options/glassoLayout/circle.title
 msgid "Circle"
 msgstr "Circulo"
+
+#: R/mmout.b.R
+msgid "Classic Outlier"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Classical"
+msgstr ""
+
+#: mMOUT/options/method/classic.title
+msgid "Classical Mahalanobis distance"
+msgstr ""
+
+#: mCOR/options/netMethod/classic.title
+msgid "Classical Partial Correlation"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Classical Partial Correlation Network"
+msgstr ""
+
+#: mCOR/options/netMethod/semiclassic.title
+msgid "Classical Semi-Partial Correlation"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Classical Semi-Partial Correlation Network"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Classical Squared Mahalanobis Distance"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
@@ -344,6 +859,20 @@ msgstr "Classificar dados ausentes completamente aleatórios (MCAR)"
 msgid "Classifying variable"
 msgstr "Variável de Classificação"
 
+#: mLR/options/forestClip.title
+#: mLR/ui[3]/showForest/forestClip.label
+msgid "Clip very large Odds Ratios"
+msgstr ""
+
+#: mLR/options/forestClipThreshold.title
+#: mLR/ui[3]/showForest/forestClipThreshold.label
+msgid "Clipping threshold"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
+msgid "Closeness"
+msgstr ""
+
 #: mROC/options/theBest/bestC.title
 msgid "Closest Best"
 msgstr "Melhor mais próximo"
@@ -352,10 +881,31 @@ msgstr "Melhor mais próximo"
 msgid "Closest Best (Sp, Se)"
 msgstr "Melhor mais próximo (Especificidade, Sensibilidade)"
 
+#: R/mcor.b.R
+msgid "Cluster {i}"
+msgstr ""
+
+#: mPWR/options/crt.title
+#: mPWR/ui[1]/crt.label
+msgid "Cluster / Multilevel Randomized Trial (CRT/MST)"
+msgstr ""
+
 #: mCOR/options/numClust.title
 #, fuzzy
 msgid "Clusters"
 msgstr "Clusters"
+
+#: mPWR/results/powerTable.columns.title
+msgid "Clusters 1"
+msgstr ""
+
+#: mPWR/results/powerTable.columns.title
+msgid "Clusters 2"
+msgstr ""
+
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "Coefficient (Estimate)"
+msgstr ""
 
 #: mCOR/options/plotMetU/color.title
 #: mCOR/options/plotMetL/color.title
@@ -365,6 +915,37 @@ msgstr "Cor"
 #: mCOR/options/clustCol.title
 msgid "Colored Clusters"
 msgstr "Clusters coloridos"
+
+#: mLR/options/multiclass_roc_type/combined.title
+msgid "Combined"
+msgstr ""
+
+#: mMLP/options/multiclass_roc_type/combined.title
+msgid "Combined Plot (Single Axes)"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "Combined ROC - Cross-Validation"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "Combined ROC - Training"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "Combined ROC - Validation"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "comp.)"
+msgstr ""
+
+#: mLR/results/coeffTable.columns.title
+msgid "Comparison Level"
+msgstr ""
 
 #: mCOR/options/clustMet/complete.title
 msgid "Complete Linkage"
@@ -379,29 +960,34 @@ msgstr "Variáveis completas"
 msgid "Complete variables in plots"
 msgstr "Variáveis completas nos gráficos"
 
-#: R/mui.b.R
+#: mPCA/results/varianceTable.columns.title
+msgid "Component"
+msgstr ""
+
+#: mPCA/results/varianceTable.title
+msgid "Component Eigenvalues and Explained Variance"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Component Number"
+msgstr ""
+
+#: mUI/results/stat/mcistat.columns.title
 #, fuzzy
 msgid "Concordance"
 msgstr "Concordância"
-
-#: R/mui.b.R
-#, fuzzy
-msgid ""
-"Concordance - C-Statistic or AUC. The probability that a random chosen "
-"patient with the condition is correctly ranked higher than a randomly chosen "
-"patient without the condition"
-msgstr ""
-"Concordância - Estatístico C ou AUC. A probabilidade de que um paciente "
-"aleatório com a condição seja corretamente classificado acima de um paciente "
-"aleatório sem a condição"
 
 #: mMLP/results/text.title
 #: mROC/results/text.title
 msgid "Conditions"
 msgstr "Condições"
 
+#: mLR/results/text.title
+msgid "Conditions & Diagnostics"
+msgstr ""
+
 #: mROC/options/ciAUC.title
-#: mROC/ui[1]/ciAUC.label
+#: mROC/ui[2]/ciAUC.label
 msgid "Confidence interval"
 msgstr "Intervalo de confiança"
 
@@ -410,15 +996,27 @@ msgstr "Intervalo de confiança"
 msgid "Confidence interval (Pearson only)"
 msgstr "Intervalo de confiança (apenas Pearson)"
 
+#: mSRV/options/rocCI.title
+msgid "Confidence Interval (ROC)"
+msgstr ""
+
 #: mCOR/options/ciWidth.title
 msgid "Confidence interval width"
 msgstr "Largura do intervalo de confiança"
+
+#: mSRV/options/kmCI.title
+msgid "Confidence Intervals (KM)"
+msgstr ""
 
 #: mMLP/options/show_matrix.title
 #: mMLP/results/matrixTable.title
 #, fuzzy
 msgid "Confusion Matrix"
 msgstr "Matriz de Confusão"
+
+#: R/mpca.b.R
+msgid "Contingency Matrix (Clusters vs Groups):"
+msgstr ""
 
 #: mCOR/options/hyp/corr.title
 msgid "Correlated"
@@ -461,6 +1059,10 @@ msgstr "Demonstração de Clusterização de Correlação"
 msgid "Correlation matrix"
 msgstr "Matriz de Correlações"
 
+#: R/mcor.b.R
+msgid "Correlation matrix contains missing values. Cannot compute Graphical Lasso."
+msgstr ""
+
 #: mCOR/results/text.title
 msgid "Correlations"
 msgstr "Correlações"
@@ -469,11 +1071,48 @@ msgstr "Correlações"
 msgid "Correlations between variables"
 msgstr "Correlações entre variáveis"
 
+#: R/mpca.b.R
+msgid "Cos²"
+msgstr ""
+
+#: mMLP/results/matrixTable.columns.title
+msgid "Count"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Covariates"
+msgstr ""
+
+#: mLR/options/covs.title
+#: mLR/ui[0][1].label
 #: mMLP/options/covs.title
 #: mMLP/ui[0][1].label
 #, fuzzy
 msgid "Covariates (Continuous Predictors)"
 msgstr "Covariáveis (Preditores Contínuos)"
+
+#: mSRV/options/covariates.title
+#: mSRV/ui[0][3].label
+msgid "Covariates (Cox regression)"
+msgstr ""
+
+#: mSRV/results/coxSection/coxForestPlot.title
+msgid "Cox Hazard Ratios Forest Plot"
+msgstr ""
+
+#: mSRV/results/coxSection/coxFitTable.title
+msgid "Cox Model Fit Statistics"
+msgstr ""
+
+#: mSRV/options/showCox.title
+#: mSRV/ui[4].label
+#: mSRV/results/coxSection.title
+msgid "Cox Proportional Hazards Regression"
+msgstr ""
+
+#: mSRV/results/coxSection/coxCoefTable.title
+msgid "Cox Regression Coefficients"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
@@ -485,21 +1124,87 @@ msgstr "Perda de Entropia Cruzada"
 msgid "Cross-Validation"
 msgstr "Validação Cruzada"
 
+#: mLR/options/cv_folds.title
+#: mLR/ui[2]/cv_folds.label
 #: mMLP/options/cv_folds.title
 #: mMLP/ui[2]/cv_folds.label
 #, fuzzy
 msgid "Cross-Validation Folds (K)"
 msgstr "Dobras de Validação Cruzada (K)"
 
+#: mLR/options/cv_repeats.title
+msgid "Cross-Validation Repeats"
+msgstr ""
+
+#: mLR/ui[2]/cv_repeats.label
+msgid "Cross-Validation Repeats (R)"
+msgstr ""
+
+#: mPCA/results/varianceTable.columns.title
+msgid "Cumulative %"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Cumulative Hazard"
+msgstr ""
+
+#: mSRV/options/kmType/hazard.title
+msgid "Cumulative hazard"
+msgstr ""
+
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
+msgid "Curve"
+msgstr ""
+
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
+#: mROC/results/rocTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
+#: mUI/results/stat/rocTable.columns.title
+msgid "Cut-off"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "CV"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "CV Acc (%)"
+msgstr ""
+
 #: mMF/results/estim/mcar.columns.title
 msgid "D²"
 msgstr "D²"
 
+#: mLR/options/palBrewer/Dark2.title
+#: mMLP/options/palBrewer/Dark2.title
+#: mPCA/options/palBrewer/Dark2.title
 #: mROC/options/palBrewer/Dark2.title
+#: mSRV/options/palBrewer/Dark2.title
 msgid "Dark2"
 msgstr "Preto2"
 
+#: package/analyses/mMF.menuSubgroup
+#: package/analyses/mOUT.menuSubgroup
+#: package/analyses/mMOUT.menuSubgroup
+#: mMF/options.menuSubgroup
+#: mMOUT/options.menuSubgroup
+#: mOUT/options.menuSubgroup
+msgid "Data Preprocessing"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "Dataset restricted to group:"
+msgstr ""
+
+#: mLR/options/roc_unit/decimal.title
 #: mMLP/options/roc_unit/decimal.title
+#: mPCA/options/roc_unit/decimal.title
 #, fuzzy
 msgid "Decimal (0 to 1)"
 msgstr "Decimal (0 a 1)"
@@ -521,31 +1226,54 @@ msgstr "Grau de<br>Liberdade (gl)"
 msgid "Degrees of freedom"
 msgstr "Graus de Liberdade"
 
+#: mLR/options/dep.title
+#: mLR/ui[0][0].label
 #: mMLP/options/dep.title
 #: mMLP/ui[0][0].label
 #, fuzzy
 msgid "Dependent Variable (Target)"
 msgstr "Variável Dependente (Alvo)"
 
+#: R/mlr.b.R
+msgid "Dependent variable must have at least two levels."
+msgstr ""
+
 #: mPWR/options/design.title
 #, fuzzy
 msgid "Design"
 msgstr "Desenho"
 
-#: R/mpwr.b.R
-#, fuzzy
-msgid "Design: "
-msgstr "Desenho: "
+#: mSRV/results/logRankTable.columns.title
+#: mSRV/results/coxSection/coxFitTable.columns.title
+#: mSRV/results/coxSection/coxAssumpTable.columns.title
+msgid "df"
+msgstr ""
+
+#: package/analyses/mUI.menuSubgroup
+#: mUI/options.menuSubgroup
+msgid "Diagnostics"
+msgstr ""
 
 #: mUI/options/UImethod/noUI.title
 #, fuzzy
 msgid "Dichotomization (no uncertainty)"
 msgstr "Dicotomização (sem incerteza)"
 
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
 #: mROC/options/direction.title
+#: mROC/results/rocTable.columns.title
 #: mUI/results/stat/uistat.columns.title
+#: mUI/results/stat/rocTable.columns.title
 msgid "Direction"
 msgstr "Direção"
+
+#: R/mmout.b.R
+#: mMOUT/options/plotType/dd.title
+#: mMOUT/results/ddplot.title
+msgid "Distance-Distance Plot"
+msgstr ""
 
 #: mUI/options/model.title
 #, fuzzy
@@ -555,6 +1283,14 @@ msgstr "Modelo de distribuição"
 #: mROC/options/dotline.title
 msgid "Dotted line"
 msgstr "Linha pontilhada"
+
+#: mCOR/options/glassoType/ebic.title
+msgid "EBIC"
+msgstr ""
+
+#: mCOR/options/glassoGamma.title
+msgid "EBIC gamma"
+msgstr ""
 
 #: mPWR/options/calc/es.title
 #, fuzzy
@@ -567,40 +1303,39 @@ msgstr "Tamanho do efeito"
 msgid "Effect Size"
 msgstr "Tamanho do efeito"
 
-#: R/mpwr.b.R
-#, fuzzy
-msgid "Effect size measure: Cohen's d"
-msgstr "Medida do tamanho do efeito: d de Cohen"
+#: R/mpca.b.R
+#: mPCA/results/varianceTable.columns.title
+msgid "Eigenvalue"
+msgstr ""
 
-#: R/mpwr.b.R
-#, fuzzy
-msgid "Effect size measure: Cohen's w"
-msgstr "Medida do tamanho do efeito: w de Cohen"
+#: R/mpca.b.R
+msgid "Eigenvalues and Parallel Analysis"
+msgstr ""
 
-#: R/mpwr.b.R
-#, fuzzy
-msgid "Effect size measure: correlation coefficient (r)"
-msgstr "Medida do tamanho do efeito: coeficiente de correlação (r)"
+#: mLR/options/method/elastic.title
+msgid "ElasticNet (L1 + L2 Regularization)"
+msgstr ""
 
-#: R/mpwr.b.R
-#, fuzzy
-msgid "Effect size measure: Eta-squared (η²)"
-msgstr "Medida do tamanho do efeito: Eta-quadrado (η²)"
+#: R/mlr.b.R
+msgid "ElasticNet (α={alpha}, {penalty})"
+msgstr ""
 
-#: R/mpwr.b.R
-#, fuzzy
-msgid "Effect size measure: Odds Ratio"
-msgstr "Medida do tamanho do efeito: Razão de Chances"
+#: mLR/ui[1]/elastic_alpha.label
+msgid "ElasticNet Alpha (0=Ridge, 1=LASSO)"
+msgstr ""
 
-#: R/mpwr.b.R
-#, fuzzy
-msgid "Effect size measure: R-squared change (f²)"
-msgstr "Medida do tamanho do efeito: Mudança no R-quadrado (f²)"
+#: mLR/options/elastic_alpha.title
+msgid "ElasticNet Alpha (L1 Ratio)"
+msgstr ""
 
 #: mCOR/options/plotMetU/ellipse.title
 #: mCOR/options/plotMetL/ellipse.title
 msgid "Ellipse"
 msgstr "Elipse"
+
+#: R/mmout.b.R
+msgid "Empirical Squared Mahalanobis Distances"
+msgstr ""
 
 #: R/mmf.b.R
 msgid "Empty data table"
@@ -611,40 +1346,126 @@ msgstr "Tabela de dados vazia"
 msgid "Emtpy"
 msgstr "Vazio"
 
+#: R/mpwr.b.R
+#: mPWR/ui[1]/alt/equivalent.title
+msgid "equivalence"
+msgstr ""
+
+#: mPWR/options/margin.title
+#: mPWR/ui[1]/margin.label
+msgid "Equivalence / Non-Inferiority / Superiority margin"
+msgstr ""
+
 #: R/mmlp.b.R
-#, fuzzy
-msgid "Error during neural network fitting: "
-msgstr "Erro durante o ajuste da rede neural: "
+msgid "Error during neural network fitting:"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Error in Classical Partial Correlation calculation: {}"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Error in Classical Semi-Partial Correlation calculation: {}"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Error in Graphical Lasso calculation: {}"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Error occurred while calculating PCA. Please check your variables."
+msgstr ""
+
+#: mLR/results/coeffTable.columns.title
+msgid "Estimate (B)"
+msgstr ""
 
 #: mMF/results/imput/errors.title
 msgid "Estimated out-of-bag (OOB) imputation error"
 msgstr "Erro de imputação estimado fora do saco (OOB)"
+
+#: mCOR/options/netMethod.title
+msgid "Estimation method"
+msgstr ""
 
 #: mMF/options/fullmars.title
 #: mMF/results/estim/fMARtab.title
 msgid "Evaluation of MAR explainers"
 msgstr "Avaliação dos explicadores MAR"
 
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+msgid "Events"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
+msgid "Expected Influence"
+msgstr ""
+
 #: mMF/results/estim/mars.columns.title
 #: mMF/results/estim/fMARtab.template.columns.title
 msgid "Explanatory"
 msgstr "Explicativo"
 
-#: R/mmf.b.R
-msgid "Explanatory - variable corresponding to MAR with minimal p<sub>value</sub>."
+#: package/analyses/mCOR.menuSubgroup
+#: package/analyses/mPCA.menuSubgroup
+#: mCOR/options.menuSubgroup
+#: mPCA/options.menuSubgroup
+msgid "Exploratory & Factor Analysis"
 msgstr ""
-"Variável-explicativa correspondente ao MAR com valor mínimo de p<sub></sub> ."
 
 #: R/mmlp.b.R
 #, fuzzy
 msgid "F1-Score"
 msgstr "F1-Pontuação"
 
+#: mPCA/results/loadingsTable.title
+msgid "Factor Loadings"
+msgstr ""
+
+#: mPCA/options/loadingsHeatmap.title
+msgid "Factor loadings heatmap"
+msgstr ""
+
+#: mPCA/results/loadingsHeatmap.title
+msgid "Factor Loadings Heatmap"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Factor Loadings Matrix"
+msgstr ""
+
+#: mPCA/options/loadingsTable.title
+msgid "Factor loadings table"
+msgstr ""
+
+#: mLR/options/factors.title
+#: mLR/ui[0][2].label
 #: mMLP/options/factors.title
 #: mMLP/ui[0][2].label
 #, fuzzy
 msgid "Factors (Categorical Predictors)"
 msgstr "Fatores (Previsores Categóricos)"
+
+#: mLR/options/method.title
+#: mLR/ui[1]/method.label
+msgid "Feature Selection Method"
+msgstr ""
+
+#: mLR/ui[1].label
+msgid "Feature Selection Settings"
+msgstr ""
+
+#: mLR/options/group.title
+#: mLR/ui[0][3].label
+#: mPCA/options/group.title
+#: mPCA/ui[0][2].label
+msgid "Filter Variable"
+msgstr ""
+
+#: mCOR/options/group.title
+#: mCOR/ui[0][1].label
+msgid "Filtering Variable"
+msgstr ""
 
 #: mCOR/options/plotOrder/FPC.title
 msgid "First principal component"
@@ -654,41 +1475,106 @@ msgstr "Primeira componente principal"
 msgid "Flag significant correlations"
 msgstr "Sinalizar correlações significativas"
 
+#: R/mpca.b.R
+#: mPCA/results/regTable.columns.title
+msgid "Fold"
+msgstr ""
+
+#: mSRV/options/coxForest.title
+msgid "Forest Plot of Hazard Ratios"
+msgstr ""
+
+#: R/mlr.b.R
+#: mLR/results/forestPlot.title
+msgid "Forest Plot of Odds Ratios"
+msgstr ""
+
+#: mLR/options/showForest.title
+#: mLR/ui[3]/showForest.label
+msgid "Forest plot of Odds Ratios"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Forward (AIC)"
+msgstr ""
+
+#: mLR/options/method/forward.title
+msgid "Forward Stepwise Selection (AIC)"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Full dataset used in analysis"
+msgstr ""
+
 #: package.description
-#, fuzzy
-#| msgid "Graphic extensions of the functionality of popular data analysis methods: cluster tree of correlating variables, multifactor adaptive correlation matrix, multidimensional ROC classification curves, missing data estimation and imputation etc."
 msgid ""
 "Graphic extensions of the functionality of popular data analysis methods: "
 "cluster tree of correlating variables, multifactor adaptive correlation "
 "matrix, multidimensional ROC classification curves, missing data estimation "
-"and imputation, outliers identificatioon and removal etc."
+"and imputation, outliers identification and removal etc."
 msgstr ""
-"Extensões gráficas da funcionalidade de métodos populares de análise de "
-"dados: árvore de cluster de variáveis correlacionantes, matriz de correlação "
-"adaptativa multifator, curvas de classificação ROC multidimensional, "
-"estimativa de dados ausentes e imputação etc."
+
+#: mCOR/options/netMethod/glasso.title
+msgid "Graphical Lasso (GLASSO)"
+msgstr ""
 
 #: R/mout.b.R
+#: mMOUT/results/stat.columns.title
+#: mMOUT/results/oind.columns.title
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+#: mSRV/results/kmSection/kmRiskTable.columns.title
 #, fuzzy
 msgid "Group"
 msgstr "Grupo"
 
-#: mCOR/options/group.title
-#: mCOR/ui[0][1].label
+#: R/mmout.b.R
+msgid ""
+"Group '{grp}': Robust MCD covariance estimation failed (possibly due to "
+"small sample size or collinearity). Classic Mahalanobis distance was used "
+"instead."
+msgstr ""
+
+#: mSRV/ui[3].label
+msgid "Group Comparison"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Group Projection in PCA Space"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Group:"
+msgstr ""
+
+#: mMOUT/options/group.title
+#: mMOUT/ui[0][1].label
 #: mOUT/options/group.title
 #: mOUT/ui[0][1].label
+#: mPCA/options/classVar.title
+#: mPCA/ui[0][1].label
 #: mROC/options/groups.title
 #: mROC/ui[0][2].label
+#: mSRV/options/group.title
+#: mSRV/ui[0][2].label
 msgid "Grouping Variable"
 msgstr "Variável de agrupamento"
 
-#: R/mcor.b.R
-msgid "Hₐ is negative correlation"
-msgstr "Hₐ é correlação negativa"
+#: mCOR/options/glassoLayout/groups.title
+msgid "Groups"
+msgstr ""
 
-#: R/mcor.b.R
-msgid "Hₐ is positive correlation"
-msgstr "Hₐ é correlação positiva"
+#: R/mpwr.b.R
+#: R/msrv.b.R
+msgid "Hazard Ratio"
+msgstr ""
+
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "Hazard Ratio (HR)"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Hazard Ratios (95% CI)"
+msgstr ""
 
 #: package/datasets/HIROCclassification.description
 msgid "Healthy/Ill ROC Classification demonstration"
@@ -719,7 +1605,7 @@ msgstr "Estrutura da Camada Oculta"
 msgid "Hidden Layer Structure (e.g., 8 or 10,5)"
 msgstr "Estrutura da Camada Oculta (por exemplo, 8 ou 10,5)"
 
-#: mMLP/results/infoTable.columns.title
+#: R/mmlp.b.R
 #, fuzzy
 msgid "Hidden Layers"
 msgstr "Camadas Ocultas"
@@ -727,6 +1613,12 @@ msgstr "Camadas Ocultas"
 #: mCOR/options/hclust.title
 msgid "Hierarchical clustering"
 msgstr "Agrupamento hierárquico"
+
+#: R/mcor.b.R
+msgid ""
+"Hierarchical clustering cannot be computed because the correlation matrix "
+"contains missing (NA/NaN) values."
+msgstr ""
 
 #: mCOR/results/treeplot.title
 msgid "Hierarchical clustering tree"
@@ -736,21 +1628,38 @@ msgstr "Árvore de aglomerado hierárquico"
 msgid "Hochberg (1988)"
 msgstr "Hochberg (1988)"
 
-#: mMLP/results/infoTable.columns.title
+#: R/mlr.b.R
+msgid "Hold-out ({split}%)"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Hold-out Acc (%)"
+msgstr ""
+
+#: R/mmlp.b.R
 #, fuzzy
 msgid "Hold-out Accuracy (%)"
 msgstr "Precisão de Retenção (%)"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
-#, fuzzy
-msgid "Hold-out Validation (AUC = "
-msgstr "Validação de Controle (AUC = "
+msgid "Hold-out Validation"
+msgstr ""
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
+msgid "Hold-out Validation (AUC ="
+msgstr ""
+
+#: mLR/options/partition/holdout.title
 #: mMLP/options/partition/holdout.title
 #, fuzzy
 msgid "Hold-out Validation Split"
 msgstr "Divisão de Validação de Controle"
 
+#: mLR/options/val_split.title
+#: mLR/ui[2]/val_split.label
 #: mMLP/options/val_split.title
 #: mMLP/ui[2]/val_split.label
 #, fuzzy
@@ -766,6 +1675,10 @@ msgstr "Holm (1979)"
 #, fuzzy
 msgid "Hommel (1988)"
 msgstr "Hommel (1988)"
+
+#: mCOR/options/glassoHub.title
+msgid "Hub markers table"
+msgstr ""
 
 #: mCOR/options/hyp.title
 msgid "Hypothesis"
@@ -788,9 +1701,9 @@ msgid ""
 "p<sub>value</sub> in MCAR is significant then the data is MNAR (Missing Not "
 "At Random)."
 msgstr ""
-"Se pelo menos um p<sub>value</sub> MAR não é significativo, e o p<sub>value</"
-"sub> no MCAR é significativo, então os dados são MNAR (Missing Not At Random)"
-"."
+"Se pelo menos um p<sub>value</sub> MAR não é significativo, e o "
+"p<sub>value</sub> no MCAR é significativo, então os dados são MNAR (Missing "
+"Not At Random)."
 
 #: R/mmf.b.R
 msgid "imp"
@@ -831,10 +1744,19 @@ msgstr "Amostras independentes (Welch)"
 msgid "Independent Samples (Wilcoxon)"
 msgstr "Amostras independentes (Wilcoxon)"
 
+#: mMOUT/results/oind.columns.title
+msgid "Indices"
+msgstr ""
+
 #: R/mout.b.R
 #, fuzzy
 msgid "Indices (Rows)"
 msgstr "Índices (Linhas)"
+
+#: mPCA/options/biplot.title
+#: mPCA/results/biplot.title
+msgid "Influence vectors (Biplot)"
+msgstr ""
 
 #: mMF/results/estim/fplot.title
 msgid "Influx-outflux plot"
@@ -847,6 +1769,10 @@ msgstr "Gráfico de fluxo de entrada e saída para padrões de dados em falta"
 #: R/mmf.b.R
 msgid "Influx*"
 msgstr "Influxo*"
+
+#: mPCA/results/text.title
+msgid "Info"
+msgstr ""
 
 #: mMLP/options/rang.title
 #: mMLP/ui[1]/rang.label
@@ -872,7 +1798,8 @@ msgid "Intersection"
 msgstr "Direção"
 
 #: mCOR/ui[4][0]/tables/ci/ciWidth.label
-#: mROC/ui[1]/ciAUC/ciWidth.label
+#: mROC/ui[2]/ciAUC/ciWidth.label
+#: mSRV/ui[5]/showRoc/rocCI/rocWidth.label
 msgid "Interval"
 msgstr "Intervalo"
 
@@ -888,6 +1815,11 @@ msgstr "Método de aglomeração"
 #| msgid "Missing Values Estimation"
 msgid "Intervals Estimation"
 msgstr "Estimação de valores omissos"
+
+#: mPWR/options/icc.title
+#: mPWR/ui[1]/icc.label
+msgid "Intraclass correlation (ICC)"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
@@ -912,15 +1844,23 @@ msgstr "Cercas de Tukey do IQR"
 #: package/analyses/mROC.menuGroup
 #: package/analyses/mMF.menuGroup
 #: package/analyses/mOUT.menuGroup
+#: package/analyses/mMOUT.menuGroup
 #: package/analyses/mUI.menuGroup
 #: package/analyses/mPWR.menuSubgroup
 #: package/analyses/mMLP.menuGroup
+#: package/analyses/mLR.menuGroup
+#: package/analyses/mSRV.menuGroup
+#: package/analyses/mPCA.menuGroup
 #: mCOR/options.menuGroup
+#: mLR/options.menuGroup
 #: mMF/options.menuGroup
 #: mMLP/options.menuGroup
+#: mMOUT/options.menuGroup
 #: mOUT/options.menuGroup
+#: mPCA/options.menuGroup
 #: mPWR/options.menuSubgroup
 #: mROC/options.menuGroup
+#: mSRV/options.menuGroup
 #: mUI/options.menuGroup
 msgid "jYS"
 msgstr "jYS"
@@ -929,29 +1869,100 @@ msgstr "jYS"
 msgid "jYS Extended Functions"
 msgstr "Funções alargadas jYS"
 
+#: R/mmlp.b.R
+#: mLR/options/partition/kfold.title
 #: mMLP/options/partition/kfold.title
 #, fuzzy
 msgid "K-Fold Cross-Validation"
 msgstr "Validação Cruzada K-Fold"
 
 #: R/mmlp.b.R
-#, fuzzy
-msgid "K-Fold Cross-Validation (AUC = "
-msgstr "Validação Cruzada K-Fold (AUC = "
+msgid "K-Fold Cross-Validation (AUC ="
+msgstr ""
 
-#: mMLP/results/infoTable.columns.title
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "K-Fold CV"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "K-Fold CV (AUC ="
+msgstr ""
+
+#: R/mmlp.b.R
 #, fuzzy
 msgid "K-Fold CV Accuracy (%)"
 msgstr "Precisão do CV de K-Dobras (%)"
+
+#: mPCA/options/regKFold.title
+#: mPCA/ui[3][0]/regKFold.label
+msgid "K-folds for CV"
+msgstr ""
+
+#: mPCA/ui[3][0][0].label
+msgid "K-Means «Blind» Clustering"
+msgstr ""
+
+#: mPCA/results/kmeansTable.title
+msgid "K-Means «Blind» Clustering vs Real Groups"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "K-Means Cluster"
+msgstr ""
+
+#: mPCA/options/kmeansTable.title
+msgid "K-Means contingency/ARI comparison"
+msgstr ""
+
+#: mSRV/results/kmSection/kmPlot.title
+msgid "Kaplan-Meier Curve"
+msgstr ""
+
+#: mSRV/ui[2].label
+msgid "Kaplan-Meier Curves & Estimation"
+msgstr ""
+
+#: mSRV/results/kmSection/kmRiskTable.title
+msgid "Kaplan-Meier Risk-at-time Table"
+msgstr ""
+
+#: mSRV/results/kmSection.title
+msgid "Kaplan-Meier Survival Analysis"
+msgstr ""
+
+#: mSRV/options/showKm.title
+msgid "Kaplan-Meier Survival Curves"
+msgstr ""
+
+#: mSRV/results/kmSection/kmSummaryTable.title
+msgid "Kaplan-Meier Survival Summary"
+msgstr ""
 
 #: mCOR/options/method/kendall.title
 msgid "Kendall (τ)"
 msgstr "Kendall (τ)"
 
-#: mCOR/results/matrix.columns.title
-#: mCOR/results/matrix.columns.content
+#: R/mcor.b.R
 msgid "Kendall Tau"
 msgstr "Tau de Kendall"
+
+#: mLR/options/lasso_penalty/1se.title
+msgid "Lambda 1SE (Most Sparse Model)"
+msgstr ""
+
+#: mLR/options/lasso_penalty/min.title
+msgid "Lambda Min (Minimum CV Error)"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "LASSO ({penalty})"
+msgstr ""
+
+#: mLR/options/method/lasso.title
+msgid "LASSO L1 Regularization"
+msgstr ""
 
 #: mMLP/options/show_curve.title
 #, fuzzy
@@ -966,6 +1977,8 @@ msgstr "Formato antigo do eixo da especificidade"
 msgid "Legend Box"
 msgstr "Caixa de legendas"
 
+#: mSRV/options/statusEvent.title
+#: mSRV/ui[0][1]/statusEvent.label
 #: mUI/results/stat/intstat.columns.title
 #, fuzzy
 msgid "Level"
@@ -981,16 +1994,85 @@ msgstr "Largura da linha"
 msgid "Linear Regression (F-Test)"
 msgstr "Regressão Linear (Teste F)"
 
+#: R/mpca.b.R
+msgid "Loading"
+msgstr ""
+
 #: mPWR/results/text.title
 #, fuzzy
 msgid "Log / Errors"
 msgstr "Log / Erros"
+
+#: mLR/ui[3]/showForest/forestLog.label
+msgid "Log scale"
+msgstr ""
+
+#: mLR/options/forestLog.title
+msgid "Log scale for Odds Ratios"
+msgstr ""
+
+#: mSRV/results/logRankTable.title
+msgid "Log-rank Test (Group Comparison)"
+msgstr ""
+
+#: mSRV/options/showLogRank.title
+msgid "Log-rank Test for Group Comparison"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Log(OR)"
+msgstr ""
+
+#: package/analyses/mLR.title
+#: package/analyses/mLR.menuTitle
+#: mLR/options.title
+#: mLR/options.menuTitle
+#: mLR/ui.title
+#: mLR/results.title
+msgid "Logistic Regression"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/options/design/logistic.title
 #, fuzzy
 msgid "Logistic Regression (Wald Z-Test)"
 msgstr "Regressão Logística (Teste Z de Wald)"
+
+#: package/datasets/LogisticRegressionbloodcells.name
+msgid "Logistic Regression blood cells"
+msgstr ""
+
+#: package/datasets/LogisticRegressionbloodcells.description
+msgid "Logistic Regression demonstration"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Logistic Regression Model (Log-odds)"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Logistic Regression Predicted Class"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Logistic Regression Predicted Probability"
+msgstr ""
+
+#: package/analyses/mLR.description
+#: mLR/options.description.main
+msgid ""
+"Logistic Regression with feature selection. Note that cross-validation fold "
+"partitioning uses a hardcoded random seed (42) for reproducibility."
+msgstr ""
+
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "Lower 95% CI"
+msgstr ""
+
+#: mSRV/results/rocSection/rocTable.columns.title
+msgid "Lower CI"
+msgstr ""
 
 #: R/mout.b.R
 #, fuzzy
@@ -1001,44 +2083,38 @@ msgstr "Linha inferior"
 msgid "Lower part"
 msgstr "Parte inferior"
 
-#: R/mui.b.R
+#: mUI/results/stat/uistat.columns.title
 #, fuzzy
 msgid "Lower threshold"
 msgstr "Limiar inferior"
 
-#: R/mui.b.R
-#, fuzzy
-msgid ""
-"LR- - Negative Likelihood Ratio P(-|D+))/(P(-|D-)). The probability of a "
-"person with the condition receiving a negative classification / probability "
-"of a person without the condition receiving a negative classification"
+#: mUI/results/stat/mcistat.columns.title
+msgid "LR-"
 msgstr ""
-"LR- - Razão de verossimilhança negativa P(-|D+))/(P(-|D-)). A probabilidade "
-"de uma pessoa com a condição receber uma classificação negativa / "
-"probabilidade de uma pessoa sem a condição receber uma classificação negativa"
 
-#: R/mui.b.R
-#, fuzzy
-msgid ""
-"LR+ - Positive Likelihood Ratio (P(+|D+))/(P(+|D-)) The probability of a "
-"person with the condition receiving a positive classification / probability "
-"of a person without the condition receiving a positive classification"
+#: mUI/results/stat/mcistat.columns.title
+msgid "LR+"
 msgstr ""
-"LR+ - Razão de verossimilhança positiva (P(+|D+))/(P(+|D-)) A probabilidade "
-"de uma pessoa com a condição receber uma classificação positiva / "
-"probabilidade de uma pessoa sem a condição receber uma classificação positiva"
+
+#: R/mlr.b.R
+msgid "Manual"
+msgstr ""
+
+#: mLR/options/method/manual.title
+msgid "Manual (Use All Predictors)"
+msgstr ""
 
 #: mCOR/options/clustMan.title
 msgid "Manual Clusters"
 msgstr "Clusters manuais"
 
-#: R/mmf.b.R
-msgid ""
-"MAR - missing at random (if each p<sub>value</sub> is significant, there is "
-"evidence the data is MAR);"
+#: mCOR/options/glassoType/manual.title
+msgid "Manual penalty"
 msgstr ""
-"MAR - missing at random (se cada valor de p<sub></sub> for significativo, há "
-"evidências de que os dados são MAR);"
+
+#: mCOR/options/glassoRho.title
+msgid "Manual penalty (ρ)"
+msgstr ""
 
 #: mMF/results/estim/mcar.description
 #: mMF/results/estim/mars.description
@@ -1049,11 +2125,15 @@ msgstr "Tabela de classificação MAR"
 msgid "Mark significance *<0.05, **<0.01, ***<0.001"
 msgstr "Significado da marca *<0,05, **<0,01, ***<0,001"
 
+#: mLR/results/formulaHtml.title
+msgid "Mathematical Model Formula"
+msgstr ""
+
 #: R/mcor.b.R
 msgid "Matrix #{i}"
 msgstr "Matriz #{i}"
 
-#: mMLP/results/infoTable.columns.title
+#: R/mmlp.b.R
 #, fuzzy
 msgid "Max Iterations"
 msgstr "Iterações Máximas"
@@ -1073,28 +2153,17 @@ msgstr "Número máximo de iterações"
 msgid "MCAR"
 msgstr "MCAR"
 
-#: R/mmf.b.R
-msgid ""
-"MCAR - missing completely at random (if the p<sub>value</sub> is not "
-"significant, there is evidence the data is MCAR)."
-msgstr ""
-"MCAR - completamente em falta aleatoriamente (se o valor p<sub></sub> não "
-"for significativo, há indícios de que os dados são MCAR)."
-
 #: mMF/options/isMAR.title
 msgid "MCAR (Missing Completely at Random) and MAR (Missing at Random) estimation"
+msgstr "Estimativa MCAR (Missing Completely at Random) e MAR (Missing at Random)"
+
+#: R/mui.b.R
+msgid "MCI=0 ({})"
 msgstr ""
-"Estimativa MCAR (Missing Completely at Random) e MAR (Missing at Random)"
 
 #: R/mui.b.R
-#, fuzzy
-msgid "MCI=0 ("
-msgstr "MCI=0 ("
-
-#: R/mui.b.R
-#, fuzzy
-msgid "MCI=1 ("
-msgstr "MCI=1 ("
+msgid "MCI=1 ({})"
+msgstr ""
 
 #: mCOR/options/clustMet/mcquitty.title
 msgid "McQuitty Linkage (WPGMA)"
@@ -1125,16 +2194,27 @@ msgstr "Ligação mediana"
 msgid "Median Linkage"
 msgstr "Ligação mediana"
 
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+msgid "Median Survival"
+msgstr ""
+
 #: mCOR/options/method.title
+#: mMOUT/ui[1][0].label
 #: mOUT/ui[1][0].label
 #: mUI/ui[1][3].label
 msgid "Method"
 msgstr "Método"
 
+#: mLR/results/infoTable.columns.title
+#: mMLP/results/infoTable.columns.title
 #: mMLP/results/statsTable.columns.title
 #, fuzzy
 msgid "Metric"
 msgstr "Métrica"
+
+#: mPCA/results/kmeansTable.columns.title
+msgid "Metric / Cluster"
+msgstr ""
 
 #: mPWR/options/es.title
 #: mPWR/ui[1]/es.label
@@ -1225,6 +2305,14 @@ msgstr "Classificador MLP"
 msgid "MLP Classifier Learning Curve"
 msgstr "Curva de Aprendizado do Classificador MLP"
 
+#: R/mmlp.b.R
+msgid "MLP Classifier Predicted Class"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "MLP Classifier Predicted Probability"
+msgstr ""
+
 #: mMLP/results/curvePlot.title
 #, fuzzy
 msgid "MLP Learning Curve"
@@ -1234,6 +2322,21 @@ msgstr "Curva de Aprendizado MLP"
 #, fuzzy
 msgid "MLP Network Topology"
 msgstr "Topologia da Rede MLP"
+
+#: package/analyses/mMLP.description
+#: mMLP/options.description.main
+msgid ""
+"MLP Neural Network Classifier. Note that weight initialization and data "
+"partitioning use a hardcoded random seed (42) for reproducibility."
+msgstr ""
+
+#: mLR/results/coeffTable.title
+msgid "Model Coefficients (Post-Selection / Refitted Model)"
+msgstr ""
+
+#: mLR/results/infoTable.title
+msgid "Model Fit & Predictive Performance"
+msgstr ""
 
 #: mMLP/results/infoTable.title
 #, fuzzy
@@ -1257,18 +2360,20 @@ msgstr "Escore Z modificado (filtro Hampel)"
 msgid "More Certain Interval (MCI)"
 msgstr "Intervalo"
 
-#: R/mui.b.R
-#, fuzzy
-msgid ""
-"More Certain Interval (MCI) is interval outside the Uncertain Interval and "
-"divide into low and high parts."
-msgstr ""
-"O intervalo de certeza mais alto (MCI) é o intervalo fora do intervalo de "
-"incerteza e divide-se em partes baixa e alta."
-
 #: R/mmf.b.R
-msgid "MSE - mean squared error (for Continuous variables);"
-msgstr "MSE - erro quadrático médio (para variáveis contínuas);"
+msgid "MSE"
+msgstr ""
+
+#: mLR/options/multiclass_roc_type.title
+#: mLR/ui[3]/show_roc/multiclass_roc_type.label
+#: mMLP/options/multiclass_roc_type.title
+#: mMLP/ui[3]/show_roc/multiclass_roc_type.label
+msgid "Multiclass ROC Layout"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Multinomial Log-odds Equations"
+msgstr ""
 
 #: mCOR/options/adjust.title
 msgid "Multiple comparison correction"
@@ -1278,14 +2383,17 @@ msgstr "Correção de comparações múltiplas"
 msgid "Multiple imputation for missing data"
 msgstr "Imputação múltipla para dados omissos"
 
-#: R/mmf.b.R
-msgid "N - number of imputted values;"
-msgstr "N - número de valores imputados;"
+#: package/analyses/mMOUT.title
+#: package/analyses/mMOUT.menuTitle
+#: mMOUT/options.title
+#: mMOUT/ui.title
+#: mMOUT/results.title
+msgid "Multivariate outliers identification and removal"
+msgstr ""
 
-#: R/mmf.b.R
-#, fuzzy
-msgid "N - number of missing values;"
-msgstr "N - número de valores ausentes;"
+#: mSRV/results/kmSection/kmRiskTable.columns.title
+msgid "N at Risk"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/results/nEsCurve.title
@@ -1297,6 +2405,10 @@ msgstr "N por tamanho do efeito"
 #, fuzzy
 msgid "N by Effect Size Curve"
 msgstr "N por curva de tamanho do efeito"
+
+#: mSRV/results/kmSection/kmRiskTable.columns.title
+msgid "N Events"
+msgstr ""
 
 #: mPWR/ui[1]/n.label
 #, fuzzy
@@ -1323,11 +2435,6 @@ msgstr "N"
 msgid "N2"
 msgstr "N"
 
-#: mMLP/results/matrixTable.columns.title
-#, fuzzy
-msgid "Negative Class"
-msgstr "Classe Negativa"
-
 #: R/mmlp.b.R
 #, fuzzy
 msgid "Negative Predictive Value (NPV)"
@@ -1337,6 +2444,19 @@ msgstr "Valor Predutivo Negativo (VPN)"
 #, fuzzy
 msgid "Negative Weight"
 msgstr "Peso Negativo"
+
+#: R/mcor.b.R
+msgid "Network ("
+msgstr ""
+
+#: mCOR/options/glassoLayout.title
+msgid "Network layout"
+msgstr ""
+
+#: mCOR/options/glassoPlot.title
+#: mCOR/results/glassoGroup/glassoPlot.title
+msgid "Network plot"
+msgstr ""
 
 #: mMLP/options/show_topo.title
 #, fuzzy
@@ -1358,28 +2478,52 @@ msgstr "Classificação de Rede Neural"
 msgid "Neural Network Classifier (multilayer perceptron) demonstration"
 msgstr "Demonstração do Classificador de Rede Neural (perceptron multicamada)"
 
+#: R/mpca.b.R
+msgid "Noise (95th percentile)"
+msgstr ""
+
+#: R/mpwr.b.R
+#: mPWR/ui[1]/alt/non-inferior.title
+msgid "non-inferiority"
+msgstr ""
+
 #: mUI/options/model/none.title
 #, fuzzy
 msgid "Non-parametric"
 msgstr "Não paramétrico"
 
+#: R/mlr.b.R
 #: mCOR/options/adjust/none.title
 #: mCOR/options/clPos/n.title
+#: mLR/options/palBrewer/none.title
+#: mMLP/options/palBrewer/none.title
+#: mPCA/options/palBrewer/none.title
 #: mROC/options/theBest/none.title
 #: mROC/options/cmpDeLong/none.title
 #: mROC/options/palBrewer/none.title
+#: mSRV/options/palBrewer/none.title
 msgid "None"
 msgstr "Nenhum"
 
+#: R/mmout.b.R
+msgid "Normal"
+msgstr ""
+
 #: R/mout.b.R
+#: R/mui.b.R
 #, fuzzy
 msgid "Normality p-value"
 msgstr "Valor de p de normalidade"
 
-#: R/mui.b.R
-#, fuzzy
-msgid "NPV - Negative Predictive Value of the negative class TN/(TN+FN)"
-msgstr "NPV - Valor preditivo negativo da classe negativa TN/(TN+FN)"
+#: R/msrv.b.R
+msgid ""
+"Not enough events or survivors at the selected analysis time point t to "
+"perform ROC analysis."
+msgstr ""
+
+#: mUI/results/stat/mcistat.columns.title
+msgid "NPV"
+msgstr ""
 
 #: mCOR/options/plotMetU/number.title
 #: mCOR/options/plotMetL/number.title
@@ -1394,11 +2538,32 @@ msgstr ""
 "Número de valores candidatos não ausentes a amostrar nas etapas de "
 "correspondência de médias preditivas. 0 para evitar este passo"
 
+#: mPCA/options/kMeansK.title
+msgid "Number of clusters (K-Means)"
+msgstr ""
+
+#: mPCA/ui[3][0]/kMeansK.label
+msgid "Number of clusters (K)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "Number of Clusters (k1)"
+msgstr ""
+
+#: mPCA/options/npc.title
+#: mPCA/ui[1][0]/npc.label
+msgid "Number of components to retain"
+msgstr ""
+
 #: mPWR/options/k_covariates.title
 #: mPWR/ui[1]/k_covariates.label
 #, fuzzy
 msgid "Number of covariates"
 msgstr "Número de covariáveis"
+
+#: R/mpwr.b.R
+msgid "Number of Events"
+msgstr ""
 
 #: mPWR/options/factor_levels.title
 #: mPWR/ui[1]/factor_levels.label
@@ -1422,9 +2587,23 @@ msgstr "Número de padrões"
 msgid "Number of trees to grow in each forest"
 msgstr "Número de árvores para crescer em cada floresta"
 
+#: mPCA/options/scorePlot.title
+#: mPCA/results/scorePlot.title
+msgid "Object score distribution with 95% ellipses"
+msgstr ""
+
 #: R/mmf.b.R
 msgid "observed"
 msgstr "observado"
+
+#: R/mpca.b.R
+msgid "Observed Data"
+msgstr ""
+
+#: R/mlr.b.R
+#: mLR/results/coeffTable.columns.title
+msgid "Odds Ratio (OR)"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/options/design/one.sample.title
@@ -1470,10 +2649,23 @@ msgstr "Original"
 msgid "OutFlux**"
 msgstr "OutFlux**"
 
+#: R/mmout.b.R
 #: R/mout.b.R
 #, fuzzy
 msgid "outl"
 msgstr "atíp"
+
+#: R/mmout.b.R
+msgid "Outlier"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Outlier (Both)"
+msgstr ""
+
+#: mMOUT/options/method.title
+msgid "Outlier identifying method"
+msgstr ""
 
 #: mOUT/options/outfence.title
 #: mOUT/results/stat/outstat.title
@@ -1482,10 +2674,13 @@ msgid "Outliers fences"
 msgstr "Cercas de valores extremos"
 
 #: R/mout.b.R
+#: mMOUT/results/stat.columns.title
+#: mMOUT/results/oind.columns.title
 #, fuzzy
 msgid "Outliers found"
 msgstr "Outliers encontrados"
 
+#: mMOUT/ui[1].label
 #: mOUT/ui[1].label
 #: mOUT/results/stat.title
 #, fuzzy
@@ -1508,10 +2703,18 @@ msgstr "Método de identificação de outliers"
 msgid "Outliers indices"
 msgstr "Índices de outliers"
 
+#: mMOUT/results/oind.title
+msgid "Outliers indices (Rows)"
+msgstr ""
+
 #: mOUT/ui[2].label
 #, fuzzy
 msgid "Outliers removal"
 msgstr "Remoção de outliers"
+
+#: mMOUT/results/stat.title
+msgid "Outliers summary"
+msgstr ""
 
 #: mMLP/options/out_activation.title
 #: mMLP/ui[1]/out_activation.label
@@ -1529,13 +2732,20 @@ msgstr "Informações de saída"
 msgid "Output Layer"
 msgstr "Camada de Saía"
 
+#: mLR/ui[3].label
 #: mMLP/ui[3].label
 #, fuzzy
 msgid "Outputs & Evaluation"
 msgstr "Saídas & Avaliação"
 
+#: mROC/results/rocTable.columns.title
+msgid "p (DeLong)"
+msgstr ""
+
 #: mCOR/options/pval.title
 #: mCOR/results/matrix.columns.content
+#: mCOR/results/glassoGroup/glassoTable.columns.content
+#: mLR/results/coeffTable.columns.title
 msgid "p-value"
 msgstr "valor-p"
 
@@ -1546,7 +2756,23 @@ msgstr "valor-p"
 msgid "p<sub>value</sub>"
 msgstr "p<sub>value</sub>"
 
+#: R/mcor.b.R
+msgid ""
+"Packages 'glasso' and 'qgraph' are required for this analysis. Please "
+"install them."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"Packages 'ppcor' and 'qgraph' are required for this analysis. Please install "
+"them."
+msgstr ""
+
+#: mLR/options/palBrewer/Paired.title
+#: mMLP/options/palBrewer/Paired.title
+#: mPCA/options/palBrewer/Paired.title
 #: mROC/options/palBrewer/Paired.title
+#: mSRV/options/palBrewer/Paired.title
 msgid "Paired"
 msgstr "Emparelhado"
 
@@ -1562,13 +2788,34 @@ msgstr "Amostras emparelhadas (Student)"
 msgid "Paired Samples (Wilcoxon)"
 msgstr "Amostras emparelhadas (Wilcoxon)"
 
+#: mCOR/options/glassoTable.title
+#: mCOR/results/glassoGroup/glassoTable.title
+msgid "Partial correlation matrix"
+msgstr ""
+
+#: mCOR/options/glasso.title
+msgid "Partial correlation network"
+msgstr ""
+
+#: mCOR/results/glassoGroup.title
+msgid "Partial Correlation Network"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Partial Correlation Network (GLASSO)"
+msgstr ""
+
 #: mMLP/options/partition.title
 #: mMLP/ui[2]/partition.label
 #, fuzzy
 msgid "Partition Method"
 msgstr "Método de Particionamento"
 
+#: mLR/options/palBrewer/Pastel1.title
+#: mMLP/options/palBrewer/Pastel1.title
+#: mPCA/options/palBrewer/Pastel1.title
 #: mROC/options/palBrewer/Pastel1.title
+#: mSRV/options/palBrewer/Pastel1.title
 msgid "Pastel1"
 msgstr "Pastel1"
 
@@ -1576,17 +2823,43 @@ msgstr "Pastel1"
 msgid "Pattern frequency"
 msgstr "Frequência do padrão"
 
+#: R/mpca.b.R
+msgid "PC"
+msgstr ""
+
+#: mPCA/options/pcX.title
+msgid "PC for X axis"
+msgstr ""
+
+#: mPCA/ui[1][0]/pcX.label
+msgid "PC for X axis (Plot)"
+msgstr ""
+
+#: mPCA/options/pcY.title
+msgid "PC for Y axis"
+msgstr ""
+
+#: mPCA/ui[1][0]/pcY.label
+msgid "PC for Y axis (Plot)"
+msgstr ""
+
+#: package/datasets/PCAbloodcells.name
+msgid "PCA blood cells"
+msgstr ""
+
+#: mPCA/ui[1].label
+msgid "PCA Configuration"
+msgstr ""
+
 #: mCOR/options/method/pearson.title
 msgid "Pearson (r)"
 msgstr "Pearson (r)"
 
 #: R/mcor.b.R
 msgid "Pearson correlation cannot be calculated for non-numeric values"
-msgstr ""
-"A correlação de Pearson não pode ser calculada para valores não numéricos"
+msgstr "A correlação de Pearson não pode ser calculada para valores não numéricos"
 
-#: mCOR/results/matrix.columns.title
-#: mCOR/results/matrix.columns.content
+#: R/mcor.b.R
 msgid "Pearson's r"
 msgstr "R de Pearson"
 
@@ -1594,7 +2867,9 @@ msgstr "R de Pearson"
 msgid "per pattern"
 msgstr "por padrão"
 
+#: mLR/options/roc_unit/percent.title
 #: mMLP/options/roc_unit/percent.title
+#: mPCA/options/roc_unit/percent.title
 #, fuzzy
 msgid "Percentage (%)"
 msgstr "Percentagem (%)"
@@ -1603,6 +2878,10 @@ msgstr "Percentagem (%)"
 #, fuzzy
 msgid "Performance Statistics"
 msgstr "Estatísticas de Desempenho"
+
+#: R/mpca.b.R
+msgid "Permutation"
+msgstr ""
 
 #: mMLP/options/show_imp.title
 #, fuzzy
@@ -1613,26 +2892,33 @@ msgstr "Importância de Permutação"
 msgid "PFC"
 msgstr "PFC"
 
-#: R/mmf.b.R
-msgid "PFC - proportion of falsely classified (for Nominal and Ordinal variables);"
-msgstr ""
-"PFC - proporção de falsas classificações (para variáveis nominais e ordinais)"
-";"
-
 #: mCOR/options/plotMetU/pie.title
 #: mCOR/options/plotMetL/pie.title
 msgid "Pie"
 msgstr "Torta"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
 #, fuzzy
 msgid "Please select a dependent variable (target)."
 msgstr "Por favor, selecione uma variável dependente (alvo)."
 
+#: R/mmout.b.R
+msgid "Please select at least 2 variables for multivariate analysis."
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Please select at least 2 variables for PCA."
+msgstr ""
+
 #: R/mmlp.b.R
 #, fuzzy
 msgid "Please select at least one predictor variable (factor or covariate)."
 msgstr "Por favor, selecione pelo menos uma variável preditora (fator ou covariável)."
+
+#: R/mlr.b.R
+msgid "Please select at least one predictor variable."
+msgstr ""
 
 #: mUI/options/isTGR.title
 #, fuzzy
@@ -1651,8 +2937,18 @@ msgstr "Opções do gráfico"
 msgid "Plot the missing data patterns"
 msgstr "Traçar os padrões de dados em falta"
 
+#: mMOUT/options/plotType.title
+msgid "Plot type"
+msgstr ""
+
+#: mSRV/options/kmType.title
+msgid "Plot Type"
+msgstr ""
+
 #: mCOR/ui[5].label
 #: mMF/ui[1][0][1].label
+#: mMOUT/options/showPlots.title
+#: mMOUT/ui[2].label
 #: mPWR/ui[2].label
 #: mUI/ui[1][4].label
 #, fuzzy
@@ -1663,11 +2959,6 @@ msgstr "Gráficos"
 #, fuzzy
 msgid "Polygon"
 msgstr "Polígono"
-
-#: mMLP/results/matrixTable.columns.title
-#, fuzzy
-msgid "Positive Class"
-msgstr "Classe Positiva"
 
 #: R/mmlp.b.R
 #, fuzzy
@@ -1689,6 +2980,15 @@ msgstr "Lim. Inf. I.C."
 #, fuzzy
 msgid "Power by Effect Size"
 msgstr "Potência por tamanho do efeito"
+
+#: R/mpwr.b.R
+#: mPWR/results/powerEsAlphaCurve.title
+msgid "Power by Effect Size and Alpha"
+msgstr ""
+
+#: mPWR/options/power_es_alpha_curve.title
+msgid "Power by Effect Size and Alpha Curve"
+msgstr ""
 
 #: mPWR/options/power_es_curve.title
 #, fuzzy
@@ -1715,20 +3015,37 @@ msgstr "Curva de potência"
 msgid "Power Curve (Power by N)"
 msgstr "Curva de potência (potência por N)"
 
-#: R/mui.b.R
-#, fuzzy
-msgid "PPV - Positive Predictive Value of the positive class TP/(TN+FN)"
-msgstr "PPV - Valor preditivo positivo da classe positiva TP/(TN+FN)"
+#: mUI/results/stat/mcistat.columns.title
+msgid "PPV"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
 msgid "Precision"
 msgstr "Precisão"
 
+#: R/mcor.b.R
+msgid "Precision matrix diagonal elements are not all positive."
+msgstr ""
+
+#: R/mlr.b.R
 #: R/mmlp.b.R
-#, fuzzy
-msgid "Predicted"
-msgstr "Previsto"
+#: mLR/options/predClass.title
+#: mLR/results/predClass.title
+#: mMLP/options/predClass.title
+#: mMLP/results/matrixTable.columns.title
+#: mMLP/results/predClass.title
+msgid "Predicted Class"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: mLR/options/predProb.title
+#: mLR/results/predProb.title
+#: mMLP/options/predProb.title
+#: mMLP/results/predProb.title
+msgid "Predicted Probability"
+msgstr ""
 
 #: mMF/options/pmmk.title
 #, fuzzy
@@ -1736,10 +3053,14 @@ msgid "Predictive Mean Matching (PMM) steps"
 msgstr "Etapa de combinação de predições (PMM)"
 
 #: R/mmlp.b.R
+#: mLR/results/coeffTable.columns.title
 #: mMLP/results/importanceTable.columns.title
+#: mROC/results/rocTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
 #: mUI/results/stat/uistat.columns.title
 #: mUI/results/stat/mcistat.columns.title
 #: mUI/results/stat/intstat.columns.title
+#: mUI/results/stat/rocTable.columns.title
 #, fuzzy
 msgid "Predictor"
 msgstr "Preditor"
@@ -1763,10 +3084,50 @@ msgstr "Gráfico de Importância do Previsor"
 msgid "Predictors"
 msgstr "Preditores"
 
-#: R/mui.b.R
+#: mSRV/options/rocPredictors.title
+#: mSRV/ui[1][0].label
+msgid "Predictors (ROC)"
+msgstr ""
+
+#: mUI/results/stat/mcistat.columns.title
 #, fuzzy
 msgid "Prevalence"
 msgstr "Prevalência"
+
+#: R/mpca.b.R
+msgid "Principal Component"
+msgstr ""
+
+#: package/analyses/mPCA.title
+#: package/analyses/mPCA.menuTitle
+#: mPCA/options.title
+#: mPCA/ui.title
+#: mPCA/results.title
+msgid "Principal Component Analysis"
+msgstr ""
+
+#: package/datasets/PCAbloodcells.description
+msgid "Principal Component Analysis (PCA) demonstration"
+msgstr ""
+
+#: package/analyses/mPCA.description
+#: mPCA/options.description.main
+msgid ""
+"Principal Component Analysis (PCA). Note that parallel analysis and "
+"cross-validation use a hardcoded random seed (42) for reproducibility."
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Probability Model"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Probability Models"
+msgstr ""
+
+#: mSRV/results/coxSection/coxAssumpTable.title
+msgid "Proportional Hazards Assumption (Schoenfeld Residuals Test)"
+msgstr ""
 
 #: mUI/options/isProp.title
 #: mUI/results/stat/intstat.title
@@ -1792,9 +3153,28 @@ msgid "Purpose of Calculation"
 msgstr "Propósito do cálculo"
 
 #: R/mmf.b.R
-#, fuzzy
-msgid "PVU - proportion of variance unexplained 1-R² (for Continuous variables);"
-msgstr "PVU - proporção de variância não explicada 1-R² (para variáveis contínuas);"
+msgid "PVU"
+msgstr ""
+
+#: mSRV/options/palBrewer.title
+msgid "Qualitative Palette"
+msgstr ""
+
+#: mPCA/results/cos2Table.title
+msgid "Quality of representation (Cos²)"
+msgstr ""
+
+#: mPCA/options/cos2Heatmap.title
+msgid "Quality of representation (Cos²) heatmap"
+msgstr ""
+
+#: mPCA/results/cos2Heatmap.title
+msgid "Quality of representation (Cos²) Heatmap"
+msgstr ""
+
+#: mPCA/options/cos2Table.title
+msgid "Quality of representation (Cos²) table"
+msgstr ""
 
 #: mPWR/options/r2_predictor.title
 #: mPWR/ui[1]/r2_predictor.label
@@ -1807,10 +3187,55 @@ msgstr "R² do previsor X com outras covariáveis"
 msgid "Rank"
 msgstr "Classificação"
 
+#: mLR/options/refLevel.title
+#: mLR/ui[0][0]/refLevel.label
 #: mUI/options/refval.title
 #, fuzzy
 msgid "Reference level"
 msgstr "Nível de referência"
+
+#: R/mlr.b.R
+msgid "Reference level: {ref}"
+msgstr ""
+
+#: package/analyses/mROC.menuSubgroup
+#: package/analyses/mMLP.menuSubgroup
+#: package/analyses/mLR.menuSubgroup
+#: package/analyses/mSRV.menuSubgroup
+#: mLR/options.menuSubgroup
+#: mMLP/options.menuSubgroup
+#: mROC/options.menuSubgroup
+#: mSRV/options.menuSubgroup
+msgid "Regression & Classification"
+msgstr ""
+
+#: mPCA/ui[3][0][3].label
+msgid "Regression Model & Validation"
+msgstr ""
+
+#: mPCA/results/regTable.title
+msgid "Regression Model Performance (K-fold Cross-Validation)"
+msgstr ""
+
+#: mPCA/options/regTable.title
+msgid "Regression model quality with K-fold CV"
+msgstr ""
+
+#: mPCA/results/rocPlot.title
+msgid "Regression Model ROC Curve (Full Dataset)"
+msgstr ""
+
+#: mPCA/options/rocPlot.title
+msgid "Regression ROC plot"
+msgstr ""
+
+#: mLR/options/lasso_penalty.title
+msgid "Regularization Penalty Choice"
+msgstr ""
+
+#: mLR/ui[1]/lasso_penalty.label
+msgid "Regularization Penalty Optimization"
+msgstr ""
 
 #: mPWR/ui[1]/n_ratio.label
 #, fuzzy
@@ -1822,6 +3247,8 @@ msgstr "Tamanho relativo do grupo 2 em relação ao grupo 1"
 msgid "ReLU"
 msgstr "ReLU"
 
+#: mMOUT/options/remOut.title
+#: mMOUT/results/remOut.title
 #: mOUT/options/remOut.title
 #: mOUT/results/remOut.title
 #, fuzzy
@@ -1833,6 +3260,31 @@ msgstr "Remover valores extremos"
 msgid "Reorder"
 msgstr "Reorganizar"
 
+#: R/mlr.b.R
+msgid "Rep {k}-Fold CV (x{r})"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Repeated CV"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Repeated Stratified CV"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "Repeated Stratified CV (AUC ="
+msgstr ""
+
+#: mLR/options/partition/repeated_kfold.title
+msgid "Repeated Stratified K-Fold CV"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Representation Quality (Cos²)"
+msgstr ""
+
 #: mMF/options/setseed.title
 #, fuzzy
 msgid "Reproducible random number generation (RNG) results"
@@ -1842,23 +3294,53 @@ msgstr "Resultados de geração de números aleatórios reprodutíveis (RNG)"
 msgid "Right"
 msgstr "Direita"
 
-#: mMF/options/seed.title
-#, fuzzy
-msgid "RNG seed value"
-msgstr "Valor de semente de RNG"
+#: mSRV/options/kmTable.title
+msgid "Risk-at-time Table"
+msgstr ""
 
+#: R/mmout.b.R
+msgid "Robust"
+msgstr ""
+
+#: mMOUT/options/method/robust.title
+msgid "Robust Mahalanobis distance (MCD)"
+msgstr ""
+
+#: R/mmout.b.R
+msgid ""
+"Robust MCD covariance estimation failed (possibly due to small sample size "
+"or collinearity). Classic Mahalanobis distance was used instead."
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Robust Outlier"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Robust Squared Mahalanobis Distance"
+msgstr ""
+
+#: mLR/options/show_roc.title
 #: mMLP/options/show_roc.title
 #, fuzzy
 msgid "ROC Analysis"
 msgstr "Análise ROC"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
 #: mMLP/results/rocPlot.title
 #, fuzzy
 msgid "ROC Analysis Comparison"
 msgstr "Comparação da Análise ROC"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "ROC Analysis for {class}"
+msgstr ""
+
+#: mLR/options/roc_unit.title
 #: mMLP/options/roc_unit.title
+#: mPCA/options/roc_unit.title
 #, fuzzy
 msgid "ROC Axis Units"
 msgstr "Unidades do Eixo ROC"
@@ -1888,11 +3370,20 @@ msgstr "Classificação ROC"
 msgid "ROC comparison"
 msgstr "Comparação ROC"
 
+#: mLR/results/rocPlot.title
+msgid "ROC Curve Comparison"
+msgstr ""
+
 #: mUI/options/isROC.title
 #: mUI/results/plotsROC.title
 #, fuzzy
 msgid "ROC curves"
 msgstr "Curvas ROC"
+
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "ROC Curves"
+msgstr ""
 
 #: package/datasets/BCModelsROCEstimation.description
 #: package/datasets/CHDModelsROCEstimation.description
@@ -1900,12 +3391,35 @@ msgstr "Curvas ROC"
 msgid "ROC estimation for binomial logistis models demonstration"
 msgstr "Demonstração da estimação de ROC para modelos logísticos binomiais"
 
-#: mROC/ui[1].label
+#: mROC/ui[2].label
 #, fuzzy
 msgid "ROC graphs"
 msgstr "Gráficos ROC"
 
+#: mSRV/options/rocPlot.title
+msgid "ROC Plot"
+msgstr ""
+
+#: mLR/results/rocTable.title
+#: mMLP/results/rocTable.title
+#: mPCA/results/rocTable.title
+#: mUI/results/stat/rocTable.title
+msgid "ROC Quantitative Evaluation"
+msgstr ""
+
+#: mROC/results/rocTable.title
+msgid "ROC Results"
+msgstr ""
+
+#: mROC/options/showTable.title
+#: mROC/ui[1].label
+#: mROC/ui[1]/showTable.label
+msgid "ROC Tables"
+msgstr ""
+
+#: mLR/options/roc_x.title
 #: mMLP/options/roc_x.title
+#: mPCA/options/roc_x.title
 #, fuzzy
 msgid "ROC X-axis Coordinate"
 msgstr "Coordenada X da Curva ROC"
@@ -1920,30 +3434,89 @@ msgstr "Tamanho da amostra (N)"
 msgid "Sample Size (N1)"
 msgstr "Tamanho da amostra (N1)"
 
+#: R/mcor.b.R
+msgid "Sample size is too small to compute Classical Partial Correlation."
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Sample size is too small to compute Classical Semi-Partial Correlation."
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Sample size is too small to compute Graphical Lasso."
+msgstr ""
+
 #: mPWR/options/n_ratio.title
 #, fuzzy
 msgid "Sample size ratio (N<sub>2</sub>/N<sub>1</sub>)"
 msgstr "Razão de tamanho de amostra (N<sub>2</sub>/N<sub>1</sub>)"
 
+#: mLR/ui[4].label
+#: mMLP/ui[4].label
+#: mMOUT/ui[3].label
 #: mUI/ui[2].label
 #, fuzzy
 msgid "Save"
 msgstr "Salvar"
+
+#: mMOUT/options/outDist.title
+#: mMOUT/results/outDist.title
+msgid "Saved Mahalanobis distances"
+msgstr ""
+
+#: mMOUT/options/outFlag.title
+#: mMOUT/results/outFlag.title
+msgid "Saved outlier flags"
+msgstr ""
+
+#: mCOR/options/glassoPlotScale.title
+msgid "Scale node size by centrality"
+msgstr ""
 
 #: mCOR/options/clPos.title
 #, fuzzy
 msgid "Scale position"
 msgstr "Posição da escala"
 
+#: mSRV/options/showSchoenfeldPlot.title
+msgid "Schoenfeld Residuals Plot"
+msgstr ""
+
+#: mSRV/results/coxSection/schoenfeldPlots.title
+msgid "Schoenfeld Residuals Plots"
+msgstr ""
+
+#: mPCA/options/screePlot.title
+msgid "Scree plot with parallel analysis"
+msgstr ""
+
+#: mPCA/results/screePlot.title
+msgid "Scree Plot with Parallel Analysis"
+msgstr ""
+
 #: package/datasets/SDIROCclassification.name
 #, fuzzy
 msgid "SDI ROC classification"
 msgstr "Classificação ROC da SDI"
 
-#: R/mui.b.R
-#, fuzzy
-msgid "Se - sensitivity of the positive and negative classifications TP/(TP+FN)"
-msgstr "Se - sensibilidade das classificações positivas e negativas TP/(TP+FN)"
+#: mROC/results/rocTable.columns.title
+#: mUI/results/stat/mcistat.columns.title
+msgid "Se"
+msgstr ""
+
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "SE"
+msgstr ""
+
+#: mLR/options/seed.title
+#: mLR/ui[2]/seed.label
+#: mMF/options/seed.title
+#: mMLP/options/seed.title
+#: mMLP/ui[2]/seed.label
+#: mPCA/options/seed.title
+#: mPCA/ui[1][0]/seed.label
+msgid "Seed number"
+msgstr ""
 
 #: mCOR/options/selgroup.title
 #: mROC/options/selgroup.title
@@ -1951,17 +3524,45 @@ msgstr "Se - sensibilidade das classificações positivas e negativas TP/(TP+FN)
 msgid "Select group"
 msgstr "Selecionar grupo"
 
+#: mLR/options/selgroup.title
+#: mPCA/options/selgroup.title
+msgid "Select group for filtering"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Selected Factors: {factors}; Selected Covariates: {covs}"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Selection"
+msgstr ""
+
+#: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
+#: R/msrv.b.R
 #: R/mui.b.R
+#: mPCA/results/regTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
 #, fuzzy
 msgid "Sensitivity"
 msgstr "Sensibilidade"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
 #, fuzzy
 msgid "Sensitivity (%)"
 msgstr "Sensibilidade (%)"
+
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
+#: mUI/results/stat/rocTable.columns.title
+msgid "Sensitivity (Se)"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
@@ -1978,17 +3579,37 @@ msgstr "Sensibilidade dentro da UI <"
 msgid "Sensitivity outside UI >"
 msgstr "Sensibilidade fora da UI >"
 
+#: mLR/options/multiclass_roc_type/separate.title
+msgid "Separate"
+msgstr ""
+
+#: mMLP/options/multiclass_roc_type/separate.title
+msgid "Separate Plots (Class-Specific)"
+msgstr ""
+
+#: mLR/options/palBrewer/Set1.title
+#: mMLP/options/palBrewer/Set1.title
+#: mPCA/options/palBrewer/Set1.title
 #: mROC/options/palBrewer/Set1.title
+#: mSRV/options/palBrewer/Set1.title
 #, fuzzy
 msgid "Set1"
 msgstr "Conjunto1"
 
+#: mLR/options/palBrewer/Set2.title
+#: mMLP/options/palBrewer/Set2.title
+#: mPCA/options/palBrewer/Set2.title
 #: mROC/options/palBrewer/Set2.title
+#: mSRV/options/palBrewer/Set2.title
 #, fuzzy
 msgid "Set2"
 msgstr "Conjunto2"
 
+#: mLR/options/palBrewer/Set3.title
+#: mMLP/options/palBrewer/Set3.title
+#: mPCA/options/palBrewer/Set3.title
 #: mROC/options/palBrewer/Set3.title
+#: mSRV/options/palBrewer/Set3.title
 #, fuzzy
 msgid "Set3"
 msgstr "Conjunto3"
@@ -1998,6 +3619,46 @@ msgstr "Conjunto3"
 #, fuzzy
 msgid "Shade"
 msgstr "Sombreamento"
+
+#: mLR/options/show_roc_cut.title
+#: mLR/ui[3]/show_roc/show_roc_cut.label
+#: mMLP/options/show_roc_cut.title
+#: mMLP/ui[3]/show_roc/show_roc_cut.label
+#: mPCA/options/show_roc_cut.title
+#: mPCA/ui[3][0]/rocPlot/show_roc_cut.label
+#: mUI/options/show_roc_cut.title
+msgid "Show Cut-off Thresholds"
+msgstr ""
+
+#: mCOR/options/glassoLabels.title
+msgid "Show edge labels"
+msgstr ""
+
+#: mLR/ui[3]/show_formula.label
+msgid "Show Mathematical Model Formula"
+msgstr ""
+
+#: mLR/options/show_formula.title
+msgid "Show Model Formula"
+msgstr ""
+
+#: mMOUT/options/outind.title
+msgid "Show outliers indices table"
+msgstr ""
+
+#: mLR/ui[3]/show_roc.label
+msgid "Show ROC Analysis curves"
+msgstr ""
+
+#: mLR/options/show_roc_table.title
+#: mLR/ui[3]/show_roc/show_roc_table.label
+#: mMLP/options/show_roc_table.title
+#: mMLP/ui[3]/show_roc/show_roc_table.label
+#: mPCA/options/show_roc_table.title
+#: mPCA/ui[3][0]/rocPlot/show_roc_table.label
+#: mUI/options/show_roc_table.title
+msgid "Show ROC Table"
+msgstr ""
 
 #: R/mmlp.b.R
 #: mMLP/options/activation/sigmoid.title
@@ -2010,6 +3671,10 @@ msgstr "Sigmoid"
 #, fuzzy
 msgid "Significance"
 msgstr "Significância"
+
+#: mMOUT/options/alpha.title
+msgid "Significance level (alpha)"
+msgstr ""
 
 #: R/mcor.b.R
 #, fuzzy
@@ -2026,10 +3691,9 @@ msgstr "Linkagem simples"
 msgid "Slanted Titles"
 msgstr "Títulos inclinados"
 
-#: R/mui.b.R
-#, fuzzy
-msgid "SNPV - standardized negative predictive value of the negative class"
-msgstr "SNPV - valor preditivo negativo padronizado da classe negativa"
+#: mUI/results/stat/mcistat.columns.title
+msgid "SNPV"
+msgstr ""
 
 #: mMLP/options/activation/softmax.title
 #: mMLP/options/out_activation/softmax.title
@@ -2037,34 +3701,52 @@ msgstr "SNPV - valor preditivo negativo padronizado da classe negativa"
 msgid "Softmax"
 msgstr "Softmax"
 
-#: R/mui.b.R
-#, fuzzy
-msgid "Sp - specificity of the positive and negative classifications TN/(TN+FN)"
-msgstr "Sp - especificidade das classificações positivas e negativas TN/(TN+FN)"
+#: R/mpca.b.R
+msgid "Source"
+msgstr ""
+
+#: mROC/results/rocTable.columns.title
+#: mUI/results/stat/mcistat.columns.title
+msgid "Sp"
+msgstr ""
 
 #: mCOR/options/method/spearman.title
 #, fuzzy
 msgid "Spearman (ρ)"
 msgstr "Spearman (ρ)"
 
-#: mCOR/results/matrix.columns.title
-#: mCOR/results/matrix.columns.content
-#, fuzzy
-msgid "Spearman's Rho"
-msgstr "Rho de Spearman"
+#: R/mcor.b.R
+msgid "Spearman's ρ"
+msgstr ""
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
+#: mLR/options/roc_x/spec.title
 #: mMLP/options/roc_x/spec.title
+#: mPCA/options/roc_x/spec.title
+#: mPCA/results/regTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
 #, fuzzy
 msgid "Specificity"
 msgstr "Especificidade"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
 #, fuzzy
 msgid "Specificity (%)"
 msgstr "Especificidade (%)"
+
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
+#: mUI/results/stat/rocTable.columns.title
+msgid "Specificity (Sp)"
+msgstr ""
 
 #: mUI/options/uiSp.title
 #, fuzzy
@@ -2091,16 +3773,44 @@ msgstr "Curvas divididas"
 msgid "Splitted ROC by predictors"
 msgstr "ROC dividido por preditores"
 
-#: R/mui.b.R
-#, fuzzy
-msgid "SPPV - standardized positive predictive value of the positive class"
-msgstr "SPPV - valor preditivo positivo padrão da classe positiva"
+#: mUI/results/stat/mcistat.columns.title
+msgid "SPPV"
+msgstr ""
+
+#: mCOR/options/glassoLayout/spring.title
+msgid "Spring"
+msgstr ""
 
 #: mCOR/options/plotMetU/square.title
 #: mCOR/options/plotMetL/square.title
 #, fuzzy
 msgid "Square"
 msgstr "Quadrado"
+
+#: mLR/results/coeffTable.columns.title
+msgid "Standardized Beta"
+msgstr ""
+
+#: mSRV/results/coxSection/coxFitTable.columns.title
+msgid "Statistic"
+msgstr ""
+
+#: mSRV/options/status.title
+#: mSRV/ui[0][1].label
+msgid "Status / Event Variable"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Status variable must be factor, character, or numeric."
+msgstr ""
+
+#: mLR/results/coeffTable.columns.title
+msgid "Std. Error"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
+msgid "Strength"
+msgstr ""
 
 #: mROC/options/cmpDeLong/succ.title
 #, fuzzy
@@ -2112,10 +3822,54 @@ msgstr "Sucessivamente"
 msgid "Sum"
 msgstr "Soma"
 
+#: R/mpwr.b.R
+#: mPWR/ui[1]/alt/superior.title
+msgid "superiority"
+msgstr ""
+
+#: R/mpwr.b.R
+#: mPWR/options/design/survival.title
+msgid "Survival / Log-Rank Test"
+msgstr ""
+
+#: package/analyses/mSRV.title
+#: package/analyses/mSRV.menuTitle
+#: mSRV/options.title
+#: mSRV/ui.title
+#: mSRV/results.title
+msgid "Survival Analysis"
+msgstr ""
+
+#: package/datasets/SurvivalAnalysisKaggle.description
+msgid "Survival Analysis (Kaplan-Meier and Cox regression) demonstration"
+msgstr ""
+
+#: package/analyses/mSRV.description
+msgid ""
+"Survival Analysis including Kaplan-Meier curves, log-rank tests, Cox "
+"proportional hazards regression, and time-dependent ROC curves."
+msgstr ""
+
+#: package/datasets/SurvivalAnalysisKaggle.name
+msgid "Survival Analysis Kaggle"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Survival Probability"
+msgstr ""
+
+#: mSRV/options/kmType/survival.title
+msgid "Survival probability"
+msgstr ""
+
 #: mCOR/ui[4].label
 #, fuzzy
 msgid "Tables"
 msgstr "Tabelas"
+
+#: mPCA/ui[2].label
+msgid "Tables and Visualizations"
+msgstr ""
 
 #: mPWR/options/alt.title
 #: mPWR/ui[1]/alt.label
@@ -2128,10 +3882,18 @@ msgstr "Caudas"
 msgid "Tanh"
 msgstr "Tanh"
 
+#: mSRV/results/coxSection/coxFitTable.columns.title
+msgid "Test"
+msgstr ""
+
 #: mOUT/options/norm.title
 #, fuzzy
 msgid "Test for normality"
 msgstr "Teste de normalidade"
+
+#: mSRV/options/coxAssump.title
+msgid "Test Proportional Hazards Assumption"
+msgstr ""
 
 #: mPWR/options/k_tested.title
 #: mPWR/ui[1]/k_tested.label
@@ -2160,20 +3922,39 @@ msgstr ""
 "classificação ROC só pode ser realizada em variáveis de classificação com "
 "dois níveis."
 
+#: R/mcor.b.R
+msgid ""
+"The correlation matrix was not positive definite and was adjusted to the "
+"nearest positive definite matrix to calculate Graphical Lasso."
+msgstr ""
+
+#: R/mlr.b.R
+msgid ""
+"The dataset has too few complete cases to perform logistic regression "
+"(minimum 15 cases required)."
+msgstr ""
+
 #: R/mmlp.b.R
 #, fuzzy
 msgid "The dataset has too few complete cases to train the neural network."
 msgstr "O conjunto de dados tem poucos casos completos para treinar a rede neural."
 
 #: R/mmlp.b.R
-#, fuzzy
-msgid "The dependent variable must have exactly 2 levels (binary classification)."
-msgstr "A variável dependente deve ter exatamente 2 níveis (classificação binária)."
+msgid "The dependent variable must have at least 2 levels."
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Theoretical Chi-Square Quantiles"
+msgstr ""
 
 #: package/datasets/UncertainInterval(UI).description
 #, fuzzy
 msgid "Three-Way threshold determination in test results"
 msgstr "Determinação de limiar de três vias nos resultados dos testes"
+
+#: R/mpca.b.R
+msgid "Threshold (K ="
+msgstr ""
 
 #: mOUT/options/tholdZS.title
 #: mOUT/options/tholdmZS.title
@@ -2187,6 +3968,45 @@ msgstr "Limite para o escore Z"
 msgid "Threshold on Youden"
 msgstr "Limite no Youden"
 
+#: mSRV/results/kmSection/kmRiskTable.columns.title
+msgid "Time"
+msgstr ""
+
+#: mSRV/results/rocSection/rocTable.columns.title
+msgid "Time Point t"
+msgstr ""
+
+#: mSRV/options/elapsed.title
+#: mSRV/ui[0][0].label
+msgid "Time Variable (elapsed time)"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Time variable must be numeric."
+msgstr ""
+
+#: mSRV/options/showRoc.title
+#: mSRV/ui[5].label
+#: mSRV/results/rocSection.title
+msgid "Time-dependent ROC Analysis"
+msgstr ""
+
+#: mSRV/results/rocSection/rocPlot.title
+msgid "Time-dependent ROC Curves"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Time-dependent ROC Curves (t = {time})"
+msgstr ""
+
+#: mSRV/results/rocSection/rocTable.title
+msgid "Time-dependent ROC Results"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Too few observations after removing missing values (minimum 5 required)."
+msgstr ""
+
 #: R/mmf.b.R
 #, fuzzy
 msgid "Total number of missing entries {}"
@@ -2198,26 +4018,50 @@ msgstr "Número total de entradas ausentes {}"
 msgid "Total predictors"
 msgstr "Previsores Totais"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
+msgid "Train"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Train Acc (%)"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Train AUC"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
 #: mMLP/results/statsTable.columns.title
 #, fuzzy
 msgid "Training"
 msgstr "Treinamento"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
-#, fuzzy
-msgid "Training (AUC = "
-msgstr "Treinamento (AUC = "
+#: R/mpca.b.R
+msgid "Training (AUC ="
+msgstr ""
 
-#: mMLP/results/infoTable.columns.title
+#: R/mmlp.b.R
 #, fuzzy
 msgid "Training Accuracy (%)"
 msgstr "Precisão de Treinamento (%)"
+
+#: mCOR/options/glassoType.title
+msgid "Tuning parameter"
+msgstr ""
 
 #: R/mpwr.b.R
 #, fuzzy
 msgid "two one-tailed"
 msgstr "duas caudas"
+
+#: R/mpca.b.R
+msgid "Two-dimensional Variable Projection (Biplot)"
+msgstr ""
 
 #: mUI/options/UImethod/TGR.title
 #: mUI/results/plotsTGR.title
@@ -2259,28 +4103,10 @@ msgstr "UI para modelos logísticos binomiais"
 msgid "Uncertain Interval (UI)"
 msgstr "Intervalo de incerteza (UI)"
 
-#: R/mui.b.R
-#, fuzzy
-msgid ""
-"Uncertain Interval (UI) is placed around the point of intersection between "
-"the two distributions with and without the targeted state."
-msgstr ""
-"O intervalo de incerteza (UI) é colocado ao redor do ponto de intersecção "
-"entre as duas distribuições com e sem o estado visado."
-
 #: package/datasets/UIforbinomiallogistismodels.description
 #, fuzzy
 msgid "Uncertain Interval estimation for binomial logistis models"
 msgstr "Estimação de intervalo de incerteza para modelos logísticos binomiais"
-
-#: R/mui.b.R
-#, fuzzy
-msgid ""
-"Uncertain Interval is considered to be a range of test scores that is "
-"inconclusive and does not warrant a right decision."
-msgstr ""
-"O intervalo de incerteza é considerado como uma faixa de escores de teste "
-"que é inconclusiva e não justifica uma decisão correta."
 
 #: mUI/options/polygon.title
 #, fuzzy
@@ -2296,6 +4122,15 @@ msgstr "Polígono do intervalo de incerteza"
 msgid "Univariate outliers identification and removal"
 msgstr "Identificação e remoção de valores atípicos univariados"
 
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "Upper 95% CI"
+msgstr ""
+
+#: mSRV/results/rocSection/rocTable.columns.title
+msgid "Upper CI"
+msgstr ""
+
 #: R/mout.b.R
 #, fuzzy
 msgid "Upper fence"
@@ -2306,7 +4141,7 @@ msgstr "Lima superior"
 msgid "Upper part"
 msgstr "Parte superior"
 
-#: R/mui.b.R
+#: mUI/results/stat/uistat.columns.title
 #, fuzzy
 msgid "Upper threshold"
 msgstr "Limite superior"
@@ -2316,20 +4151,51 @@ msgstr "Limite superior"
 msgid "User Defined"
 msgstr "Definido pelo usuário"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "Val"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Val / CV AUC"
+msgstr ""
+
+#: R/mlr.b.R
 #: R/mmlp.b.R
 #: mMLP/results/statsTable.columns.title
 #, fuzzy
 msgid "Validation"
 msgstr "Validação"
 
+#: mLR/options/partition.title
+#: mLR/ui[2]/partition.label
+msgid "Validation Method"
+msgstr ""
+
+#: mLR/ui[2].label
 #: mMLP/ui[2].label
 #, fuzzy
 msgid "Validation Settings"
 msgstr "Configurações de Validação"
 
+#: mLR/results/infoTable.columns.title
+#: mMLP/results/infoTable.columns.title
+msgid "Value"
+msgstr ""
+
+#: mPCA/results/kmeansTable.columns.title
+msgid "Value / Match count"
+msgstr ""
+
+#: R/mpca.b.R
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
 #: mMF/results/estim/mars.columns.title
 #: mMF/results/imput/errors.columns.title
 #: mOUT/results/stat/outstat.columns.title
+#: mPCA/results/loadingsTable.columns.title
+#: mPCA/results/cos2Table.columns.title
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+#: mSRV/results/coxSection/coxAssumpTable.columns.title
 msgid "Variable"
 msgstr "Variável"
 
@@ -2353,12 +4219,19 @@ msgstr "números de variáveis separados por vírgulas"
 msgid "Variable to impute"
 msgstr "Variável a imputar"
 
+#: mMOUT/options/vars.title
+#: mMOUT/ui[0][0].label
 #: mOUT/options/vars.title
 #: mOUT/ui[0][0].label
+#: mPCA/options/vars.title
 #, fuzzy
 #| msgid "Variable"
 msgid "Variables"
 msgstr "Variável"
+
+#: mPCA/ui[0][0].label
+msgid "Variables for PCA"
+msgstr ""
 
 #: mPWR/options/var_ratio.title
 #: mPWR/ui[1]/var_ratio.label
@@ -2376,7 +4249,11 @@ msgstr "Ward´s D2 Linkage"
 msgid "Ward´s Linkage"
 msgstr "Agrupamento de Ward"
 
-#: mMLP/results/infoTable.columns.title
+#: R/mpca.b.R
+msgid "Warning: Grouping variable must have at least 2 levels."
+msgstr ""
+
+#: R/mmlp.b.R
 #, fuzzy
 msgid "Weight Decay"
 msgstr "Decaimento de Peso"
@@ -2411,7 +4288,9 @@ msgstr "com dados ausentes em outras variáveis"
 msgid "with observed data on other variables"
 msgstr "com dados observados em outras variáveis"
 
+#: mLR/ui[3]/show_roc/roc_x.label
 #: mMLP/ui[3]/show_roc/roc_x.label
+#: mPCA/ui[3][0]/rocPlot/roc_x.label
 #, fuzzy
 msgid "X-axis Coordinate"
 msgstr "Coordenada X"
@@ -2430,6 +4309,15 @@ msgstr "Melhor de Youden (Sp, Se)"
 #, fuzzy
 msgid "Z-score"
 msgstr "Escore Z"
+
+#: mLR/results/coeffTable.columns.title
+msgid "z-value"
+msgstr ""
+
+#: mPWR/options/alpha.title
+#: mPWR/ui[1]/alpha.label
+msgid "α (type I error rate)"
+msgstr ""
 
 #~ msgid "Correlation Matrix"
 #~ msgstr "Matriz de Correlações"

@@ -3,8 +3,8 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-06-27 20:08+0000\n"
 "Last-Translator: Jonathon Love <jon@thon.cc>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/jamovi/module-"
-"jys/ja/>\n"
+"Language-Team: Japanese "
+"<https://hosted.weblate.org/projects/jamovi/module-jys/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -12,9 +12,13 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2026.7.dev0\n"
 
+#: R/mlr.b.R
+msgid "(Intercept)"
+msgstr ""
+
 #: R/mroc.b.R
-msgid " [{prc}% CI]"
-msgstr " [{prc}%信頼区間]"
+msgid "[{prc}% CI]"
+msgstr ""
 
 #: R/mcor.b.R
 msgid "{ciWidth}% CI Lower"
@@ -24,6 +28,10 @@ msgstr "{ciWidth}%信頼区間下限"
 msgid "{ciWidth}% CI Upper"
 msgstr "{ciWidth}%信頼区間上限"
 
+#: R/mlr.b.R
+msgid "{k}-Fold CV"
+msgstr ""
+
 #: R/mui.b.R
 msgid "{varType} proposed decision"
 msgstr "{varType} 決定案"
@@ -32,6 +40,7 @@ msgstr "{varType} 決定案"
 msgid "{varType} with imputed values"
 msgstr "欠損値補完あり {varType}"
 
+#: R/mmout.b.R
 #: R/mout.b.R
 msgid "{varType} without outliers"
 msgstr "外れ値なし {varType}"
@@ -44,32 +53,411 @@ msgstr "** 観測データの接続"
 msgid "*connection of a variable's missingness indicator"
 msgstr "*欠損値指標の接続"
 
-#: R/mout.b.R
-#: R/mui.b.R
-msgid ""
-"*p<0.05 - The hypothesis of normal distribution was rejected by the "
-"Shapiro-Wilk test"
-msgstr ""
-"*p<0.05 ― シャピロ・ウィルク検定により、正規分布であるという仮説は棄却されま"
-"した"
-
 #: R/mmf.b.R
 msgid "*pairwise complete observations"
 msgstr "*ペアごとの完全な観測値"
 
-#: mPWR/results/powerTable.columns.title
-msgid "&alpha;"
-msgstr "&alpha;"
-
-#: mPWR/options/alpha.title
-#: mPWR/ui[1]/alpha.label
-msgid "&alpha; (type I error rate)"
-msgstr "&alpha; (タイプＩエラー率)"
-
 #: mCOR/ui[4][0]/tables/ci/ciWidth.suffix
-#: mROC/ui[1]/ciAUC/ciWidth.suffix
+#: mROC/ui[2]/ciAUC/ciWidth.suffix
+#: mSRV/ui[5]/showRoc/rocCI/rocWidth.suffix
 msgid "%"
 msgstr "%"
+
+#: R/mpca.b.R
+msgid "% of variance"
+msgstr ""
+
+#: mPCA/results/varianceTable.columns.title
+msgid "% of Variance"
+msgstr ""
+
+#: mMOUT/results/stat.columns.title
+msgid "% Outliers"
+msgstr ""
+
+#: R/mout.b.R
+#: R/mui.b.R
+msgid ""
+"<b>*p<0.05</b> - The hypothesis of normal distribution was rejected by the "
+"Shapiro-Wilk test"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Alpha (α)</b> is the significance level, representing the maximum "
+"acceptable probability of committing a Type I error (detecting a false "
+"positive difference when none actually exists)."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Balance</b> - balance between correct and incorrect classified "
+"(TP+TN)/(FP+FN)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>BETWEENNESS</b>: number of shortest paths between all pairs of nodes that "
+"pass through this node; shows its importance as a \"bridge\" or transit "
+"point."
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Calculated parameter</b>:"
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>CCR</b> - Correct Classification Rate or accuracy of the positive and "
+"negative classifications (TP+TN)/(TN+FP+FN+TP)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Centrality metrics</b> (different measures of a node's importance in the "
+"network)."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>CLOSENESS</b>: inverse of the sum of shortest path lengths to all other "
+"nodes; shows how central a node is in terms of distance."
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Clusters (k1/k2)</b> represent the required number of clusters (e.g., "
+"clinics or schools) per group. This is adjusted for similarity among "
+"subjects within the same cluster using the Intraclass Correlation "
+"Coefficient (<b>ICC</b>) and average cluster size via the Design Effect."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Concordance</b> - C-Statistic or AUC. The probability that a randomly "
+"chosen subject with the condition is correctly ranked higher than a randomly "
+"chosen subject without the condition"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "<b>Correlation method</b>: {method}"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Design</b>:"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Cohen's d"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Cohen's w"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: correlation coefficient (r)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Eta-squared (η²)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Hazard Ratio (HR)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Odds Ratio"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: R-squared change (f²)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Effect Size</b> measures the standardized magnitude of the difference or "
+"association (e.g., Cohen's d for means, or correlation coefficient). Unlike "
+"p-values, it is independent of the sample size."
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Events (N1)</b> represents the required number of target events (e.g., "
+"deaths or failures) to achieve the desired power. In survival analysis, "
+"statistical power is driven by the number of events rather than the total "
+"number of subjects."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>EXPECTED INFLUENCE</b>: sum of signed weights of connected edges; shows "
+"the node's net impact on the network, considering positive and negative "
+"relations."
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>Explanatory</b> - variable corresponding to MAR with minimal "
+"p<sub>value</sub>."
+msgstr ""
+
+#: R/mcor.b.R
+msgid "<b>Hₐ</b> is negative correlation"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "<b>Hₐ</b> is positive correlation"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Hazard Ratio (HR)</b> represents the ratio of event rates between the two "
+"groups. A Hazard Ratio of 1 indicates no difference in risk, while values "
+"further from 1 represent stronger effects."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Hazard Ratio (HR)</b> represents the ratio of the hazard rates "
+"corresponding to the conditions described by two levels of an explanatory "
+"variable (Cox, 1972). It indicates the relative risk of event occurrence per "
+"unit change in the predictor. An <b>HR > 1</b> indicates an increased hazard "
+"(higher risk of the event), while an <b>HR < 1</b> indicates a decreased "
+"hazard (protective effect). <b>Lower/Upper 95% CI</b> represent the "
+"confidence interval for the Hazard Ratio."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid ""
+"<b>Hidden Layers</b>: network architecture (hidden layer sizes, hidden / "
+"output activation functions)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid ""
+"<b>Hold-out Accuracy</b>: classification accuracy on the hold-out validation "
+"dataset."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid ""
+"<b>K-Fold CV Accuracy</b>: average classification accuracy across "
+"cross-validation folds."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Kaplan-Meier estimator</b> (Kaplan & Meier, 1958) is a non-parametric "
+"statistic used to estimate the survival function from lifetime data, "
+"accounting for censored observations. <b>Median survival</b> is the "
+"estimated time at which 50% of the subjects have experienced the event "
+"(survival probability drops to 0.5). <b>Lower/Upper 95% CI</b> represent the "
+"95% confidence interval limits for this median survival time."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Likelihood Ratio</b>, <b>Wald</b>, and <b>Score (Log-rank)</b> tests "
+"assess the global null hypothesis that all regression coefficients (beta) in "
+"the model are equal to zero. Statistically significant p-values (p < 0.05) "
+"indicate that the predictors collectively improve the model fit relative to "
+"a null model without covariates."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Log-rank (Mantel-Cox) test</b> is a non-parametric hypothesis test that "
+"compares the survival distributions of two or more independent groups. It "
+"evaluates the null hypothesis that there is no difference in survival curves "
+"between groups. <b>Chi-square</b> is the test statistic based on observed "
+"vs. expected events, and the <b>p-value</b> indicates the statistical "
+"significance of the differences under the null hypothesis."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>LR-</b> - Negative Likelihood Ratio P(-|D+))/(P(-|D-)). The probability "
+"of a person with the condition receiving a negative classification / "
+"probability of a person without the condition receiving a negative "
+"classification"
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>LR+</b> - Positive Likelihood Ratio (P(+|D+))/(P(+|D-)) The probability "
+"of a person with the condition receiving a positive classification / "
+"probability of a person without the condition receiving a positive "
+"classification"
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>MAR</b> - missing at random (if each p<sub>value</sub> is significant, "
+"there is evidence the data is MAR);"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "<b>Max Iterations</b>: maximum number of training epochs."
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>MCAR</b> - missing completely at random (if the p<sub>value</sub> is not "
+"significant, there is evidence the data is MCAR)."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Method</b>: Classical Partial Correlation (no regularization/L1 penalty). "
+"Computes the linear association between each pair of variables while "
+"controlling for all other variables in the dataset, producing a fully "
+"connected network."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Method</b>: Classical Semi-Partial Correlation (no regularization/L1 "
+"penalty). Computes the linear association between each pair of variables "
+"while controlling for all other variables in the dataset from only the "
+"second variable, yielding an asymmetric network."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Method</b>: Graphical Lasso (GLASSO) with a manual penalty parameter (rho "
+"= {rho}). GLASSO uses L1 regularization to shrink weak partial correlations "
+"to exactly zero, producing a sparse network."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Method</b>: Graphical Lasso (GLASSO) with Extended Bayesian Information "
+"Criterion (EBIC) tuning parameter selection (gamma = {gamma}). GLASSO uses "
+"L1 regularization to shrink weak partial correlations to exactly zero, "
+"producing a sparse network."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>More Certain Interval (MCI)</b> is interval outside the Uncertain "
+"Interval and divide into low and high parts."
+msgstr ""
+
+#: R/mmf.b.R
+msgid "<b>MSE</b> - mean squared error (for Continuous variables);"
+msgstr ""
+
+#: R/mmf.b.R
+msgid "<b>N</b> - number of missing values;"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>N1</b> and <b>N2</b> represent the required number of subjects in Group 1 "
+"and Group 2. The ratio of their sizes is determined by the specified "
+"allocation ratio."
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>N1</b> represents the required sample size (total number of subjects in "
+"the single group, or total number of pairs for paired comparisons)."
+msgstr ""
+
+#: R/mui.b.R
+msgid "<b>NPV</b> - Negative Predictive Value of the negative class TN/(TN+FN)"
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>PFC</b> - proportion of falsely classified (for Nominal and Ordinal "
+"variables);"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Power</b> is the probability of correctly detecting a statistically "
+"significant difference when a true difference exists in the population (1 - "
+"Type II error rate, or the probability of avoiding a false negative)."
+msgstr ""
+
+#: R/mui.b.R
+msgid "<b>PPV</b> - Positive Predictive Value of the positive class TP/(TN+FN)"
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>PVU</b> - proportion of variance unexplained 1-R² (for Continuous "
+"variables);"
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Schoenfeld residuals test</b> evaluates the proportional hazards (PH) "
+"assumption of the Cox model for each covariate individually and globally. It "
+"tests whether the effect of the covariates is constant over time. A "
+"statistically significant <b>p-value (p < 0.05)</b> indicates a violation of "
+"the PH assumption, meaning the hazard ratio changes over time."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Se</b> - sensitivity of the positive and negative classifications "
+"TP/(TP+FN)"
+msgstr ""
+
+#: R/mui.b.R
+msgid "<b>SNPV</b> - standardized negative predictive value of the negative class"
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Sp</b> - specificity of the positive and negative classifications "
+"TN/(TN+FN)"
+msgstr ""
+
+#: R/mui.b.R
+msgid "<b>SPPV</b> - standardized positive predictive value of the positive class"
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>STRENGTH</b>: sum of absolute weights of connected edges; shows how "
+"strongly a node is directly connected to its neighbors."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Time-dependent ROC</b> analysis (Heagerty et al., 2000) evaluates the "
+"predictive accuracy of continuous markers for time-to-event outcomes at a "
+"specific time point <i>t</i>, classifying patients into event-occurring or "
+"event-free states. <b>AUC</b> (Area Under the Curve) measures the "
+"discriminative ability (ranging from 0.5 to 1.0). <b>Cut-off</b> represents "
+"the optimal threshold determined by the Youden index (J = Sensitivity + "
+"Specificity - 1)."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "<b>Training Accuracy</b>: classification accuracy on the training dataset."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Uncertain Interval (UI)</b> is placed around the point of intersection "
+"between the two distributions with and without the targeted state."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Uncertain Interval</b> is considered to be a range of test scores that is "
+"inconclusive and does not warrant a right decision."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "<b>Weight Decay</b>: L2 regularization penalty parameter."
+msgstr ""
 
 #: R/mmf.b.R
 msgid "<h2>Help</h2><div>Please select complete and incomplete variables</div>"
@@ -83,9 +471,18 @@ msgstr "0 − 自動"
 msgid "0 ="
 msgstr "0 ="
 
+#: mMOUT/options/alpha/0.01.title
+msgid "0.01 (standard)"
+msgstr ""
+
+#: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
+#: R/msrv.b.R
+#: mLR/options/roc_x/1spec.title
 #: mMLP/options/roc_x/1spec.title
+#: mPCA/options/roc_x/1spec.title
 msgid "1 - Specificity"
 msgstr "1 − 特異度"
 
@@ -93,6 +490,9 @@ msgstr "1 − 特異度"
 msgid "10,5"
 msgstr "10,5"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
 msgid "100 - Specificity (%)"
 msgstr "100 − 特異度 (%)"
@@ -104,6 +504,14 @@ msgstr "3.0 （標準）"
 #: mOUT/options/tholdmZS/3.5.title
 msgid "3.5 (standard)"
 msgstr "3.5（標準）"
+
+#: mLR/results/coeffTable.columns.title
+msgid "95% OR CI Lower"
+msgstr ""
+
+#: mLR/results/coeffTable.columns.title
+msgid "95% OR CI Upper"
+msgstr ""
 
 #: mCOR/results/matrix.description
 msgid "a correlation matrix table"
@@ -121,17 +529,25 @@ msgstr "アプリオリ・パワー分析"
 msgid "A Priori Power Analysis Results"
 msgstr "アプリオリ・パワー分析結果"
 
+#: mLR/options/palBrewer/Accent.title
+#: mMLP/options/palBrewer/Accent.title
+#: mPCA/options/palBrewer/Accent.title
 #: mROC/options/palBrewer/Accent.title
+#: mSRV/options/palBrewer/Accent.title
 msgid "Accent"
 msgstr "アクセント"
 
-#: R/mmlp.b.R
-msgid "Actual"
-msgstr "実測"
+#: mPCA/results/regTable.columns.title
+msgid "Accuracy"
+msgstr ""
 
 #: mMLP/results/matrixTable.columns.title
-msgid "Actual \\ Predicted"
-msgstr "実測\\予測"
+msgid "Actual Class"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Adjusted Rand Index (ARI)"
+msgstr ""
 
 #: mCOR/options/clustMet.title
 msgid "Agglomeration method"
@@ -157,6 +573,14 @@ msgstr "対立仮説"
 msgid "an array of MARs"
 msgstr "MARの配列"
 
+#: mPCA/ui[3].label
+msgid "Analysis by Groups"
+msgstr ""
+
+#: mSRV/options/rocTime.title
+msgid "Analysis Time Point t"
+msgstr ""
+
 #: mCOR/options/plotOrder/AOE.title
 msgid "Angular order eigenvectors"
 msgstr "角順序固有ベクトル"
@@ -166,21 +590,47 @@ msgstr "角順序固有ベクトル"
 msgid "ANOVA / ANCOVA (F-Test)"
 msgstr "ANOVA / ANCOVA (F検定)"
 
+#: R/mroc.b.R
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/regTable.columns.title
+#: mPCA/results/rocTable.columns.title
+#: mROC/results/rocTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
+#: mUI/results/stat/rocTable.columns.title
+msgid "AUC"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Average (Mean)"
+msgstr ""
+
+#: mPWR/options/cluster_size.title
+#: mPWR/ui[1]/cluster_size.label
+msgid "Average cluster size (m)"
+msgstr ""
+
 #: mCOR/options/clustMet/average.title
 msgid "Average Linkage (UPGMA)"
 msgstr "平均連結法（UPGMA）"
 
+#: mLR/ui[3]/show_roc/roc_unit.label
 #: mMLP/ui[3]/show_roc/roc_unit.label
+#: mPCA/ui[3][0]/rocPlot/roc_unit.label
 msgid "Axis Units"
 msgstr "軸の単位"
 
-#: R/mui.b.R
+#: R/mlr.b.R
+msgid "Backward (AIC)"
+msgstr ""
+
+#: mLR/options/method/backward.title
+msgid "Backward Stepwise Elimination (AIC)"
+msgstr ""
+
+#: mUI/results/stat/mcistat.columns.title
 msgid "Balance"
 msgstr "バランス"
-
-#: R/mui.b.R
-msgid "Balance - balance between correct and incorrect classified (TP+TN)/(FP+FN)"
-msgstr "バランス　正・誤分類のバランス (TP+TN)/(FP+FN)"
 
 #: mPWR/options/base_prob.title
 #: mPWR/ui[1]/base_prob.label
@@ -203,6 +653,10 @@ msgstr "Benjamini-Hochberg (1995)"
 msgid "Benjamini-Yekutieli (2001)"
 msgstr "Benjamini-Yekutieli (2001)"
 
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
+msgid "Betweenness"
+msgstr ""
+
 #: mUI/options/model/binormal.title
 msgid "Binormal"
 msgstr "二変量正規分布"
@@ -219,6 +673,10 @@ msgstr "血球のマルチROC分類デモ"
 msgid "Bonferroni (1961)"
 msgstr "Bonferroni (1961)"
 
+#: mMOUT/options/plotType/both.title
+msgid "Both Plots"
+msgstr ""
+
 #: mCOR/options/clPos/b.title
 msgid "Bottom"
 msgstr "下"
@@ -228,6 +686,12 @@ msgstr "下"
 msgid "Boxplots with outliers"
 msgstr "外れ値つき箱ひげ図"
 
+#: mLR/options/palBrewer.title
+#: mLR/ui[3]/show_roc/palBrewer.label
+#: mMLP/options/palBrewer.title
+#: mMLP/ui[3]/show_roc/palBrewer.label
+#: mPCA/options/palBrewer.title
+#: mPCA/ui[3][0]/rocPlot/palBrewer.label
 #: mROC/options/palBrewer.title
 msgid "Brewer's qualitative palette"
 msgstr "カラーパレット"
@@ -237,18 +701,22 @@ msgid "Calculated fences for outliers"
 msgstr "外れ値のフェンス"
 
 #: R/mpwr.b.R
-msgid "Calculated parameter: "
-msgstr "計算済パラメタ "
-
-#: R/mpwr.b.R
 msgid "Calculation error:"
 msgstr "計算エラー："
 
-#: R/mui.b.R
+#: R/mpwr.b.R
 msgid ""
-"CCR - Correct Classification Rate or accuracy of the positive and negative "
-"classifications (TP+TN)/(TN+FP+FN+TP)"
-msgstr "CCR 　正答率、または陽性・陰性の分類精度 (TP+TN)/(TN+FP+FN+TP)"
+"Calculations for survival log-rank test are based on Schoenfeld's asymptotic "
+"approximation. N1 represents the total number of events required."
+msgstr ""
+
+#: mUI/results/stat/mcistat.columns.title
+msgid "CCR"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoHubTable.title
+msgid "Centrality metrics (hub markers)"
+msgstr ""
 
 #: mCOR/options/clustMet/centroid.title
 msgid "Centroid Linkage (UPGMC)"
@@ -258,10 +726,32 @@ msgstr "重心連結法（UPGMC）"
 msgid "CHD Models ROC Estimation"
 msgstr "CHDモデルのROC推定"
 
+#: mSRV/results/logRankTable.columns.title
+#: mSRV/results/coxSection/coxAssumpTable.columns.title
+msgid "Chi-Square"
+msgstr ""
+
+#: mMOUT/results/stat.columns.title
+msgid "Chi-Square Cut-off"
+msgstr ""
+
 #: R/mpwr.b.R
 #: mPWR/options/design/chisq.title
 msgid "Chi-square Goodness-of-Fit / Independence (Chi-square Test)"
 msgstr "χ²適合度・独立性検定"
+
+#: mMOUT/options/plotType/qq.title
+#: mMOUT/results/qqplot.title
+msgid "Chi-Square Q-Q Plot"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Chi-Square Q-Q Plot ({method})"
+msgstr ""
+
+#: mROC/results/rocTable.columns.title
+msgid "CI"
+msgstr ""
 
 #: mCOR/results/matrix.columns.content
 msgid "CI Lower"
@@ -279,10 +769,47 @@ msgstr "信頼区間上限"
 msgid "CI width"
 msgstr "信頼区間幅"
 
+#: mSRV/options/rocWidth.title
+msgid "CI Width"
+msgstr ""
+
 #: mCOR/options/plotMetU/circle.title
 #: mCOR/options/plotMetL/circle.title
+#: mCOR/options/glassoLayout/circle.title
 msgid "Circle"
 msgstr "円"
+
+#: R/mmout.b.R
+msgid "Classic Outlier"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Classical"
+msgstr ""
+
+#: mMOUT/options/method/classic.title
+msgid "Classical Mahalanobis distance"
+msgstr ""
+
+#: mCOR/options/netMethod/classic.title
+msgid "Classical Partial Correlation"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Classical Partial Correlation Network"
+msgstr ""
+
+#: mCOR/options/netMethod/semiclassic.title
+msgid "Classical Semi-Partial Correlation"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Classical Semi-Partial Correlation Network"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Classical Squared Mahalanobis Distance"
+msgstr ""
 
 #: R/mmlp.b.R
 msgid "Classification Accuracy"
@@ -303,6 +830,20 @@ msgstr "完全無作為欠損（MCAR）分類"
 msgid "Classifying variable"
 msgstr "分類変数"
 
+#: mLR/options/forestClip.title
+#: mLR/ui[3]/showForest/forestClip.label
+msgid "Clip very large Odds Ratios"
+msgstr ""
+
+#: mLR/options/forestClipThreshold.title
+#: mLR/ui[3]/showForest/forestClipThreshold.label
+msgid "Clipping threshold"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
+msgid "Closeness"
+msgstr ""
+
 #: mROC/options/theBest/bestC.title
 msgid "Closest Best"
 msgstr "左上隅から距離最短"
@@ -311,9 +852,30 @@ msgstr "左上隅から距離最短"
 msgid "Closest Best (Sp, Se)"
 msgstr "左上隅から距離最短（特異度・感度）"
 
+#: R/mcor.b.R
+msgid "Cluster {i}"
+msgstr ""
+
+#: mPWR/options/crt.title
+#: mPWR/ui[1]/crt.label
+msgid "Cluster / Multilevel Randomized Trial (CRT/MST)"
+msgstr ""
+
 #: mCOR/options/numClust.title
 msgid "Clusters"
 msgstr "クラスタ"
+
+#: mPWR/results/powerTable.columns.title
+msgid "Clusters 1"
+msgstr ""
+
+#: mPWR/results/powerTable.columns.title
+msgid "Clusters 2"
+msgstr ""
+
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "Coefficient (Estimate)"
+msgstr ""
 
 #: mCOR/options/plotMetU/color.title
 #: mCOR/options/plotMetL/color.title
@@ -323,6 +885,37 @@ msgstr "色"
 #: mCOR/options/clustCol.title
 msgid "Colored Clusters"
 msgstr "色分け"
+
+#: mLR/options/multiclass_roc_type/combined.title
+msgid "Combined"
+msgstr ""
+
+#: mMLP/options/multiclass_roc_type/combined.title
+msgid "Combined Plot (Single Axes)"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "Combined ROC - Cross-Validation"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "Combined ROC - Training"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "Combined ROC - Validation"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "comp.)"
+msgstr ""
+
+#: mLR/results/coeffTable.columns.title
+msgid "Comparison Level"
+msgstr ""
 
 #: mCOR/options/clustMet/complete.title
 msgid "Complete Linkage"
@@ -337,26 +930,33 @@ msgstr "完全変数"
 msgid "Complete variables in plots"
 msgstr "完全変数をプロット"
 
-#: R/mui.b.R
+#: mPCA/results/varianceTable.columns.title
+msgid "Component"
+msgstr ""
+
+#: mPCA/results/varianceTable.title
+msgid "Component Eigenvalues and Explained Variance"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Component Number"
+msgstr ""
+
+#: mUI/results/stat/mcistat.columns.title
 msgid "Concordance"
 msgstr "適合指数"
-
-#: R/mui.b.R
-msgid ""
-"Concordance - C-Statistic or AUC. The probability that a random chosen "
-"patient with the condition is correctly ranked higher than a randomly chosen "
-"patient without the condition"
-msgstr ""
-"適合指数　C統計量またはAUC。ランダムに選ばれた疾患を持つ患者が、ランダムに選"
-"ばれた疾患を持たない患者よりも正しく高い順位にランクされる確率"
 
 #: mMLP/results/text.title
 #: mROC/results/text.title
 msgid "Conditions"
 msgstr "条件"
 
+#: mLR/results/text.title
+msgid "Conditions & Diagnostics"
+msgstr ""
+
 #: mROC/options/ciAUC.title
-#: mROC/ui[1]/ciAUC.label
+#: mROC/ui[2]/ciAUC.label
 msgid "Confidence interval"
 msgstr "信頼区間"
 
@@ -365,14 +965,26 @@ msgstr "信頼区間"
 msgid "Confidence interval (Pearson only)"
 msgstr "信頼区間（ピアソンのみ）"
 
+#: mSRV/options/rocCI.title
+msgid "Confidence Interval (ROC)"
+msgstr ""
+
 #: mCOR/options/ciWidth.title
 msgid "Confidence interval width"
 msgstr "信頼区間幅"
+
+#: mSRV/options/kmCI.title
+msgid "Confidence Intervals (KM)"
+msgstr ""
 
 #: mMLP/options/show_matrix.title
 #: mMLP/results/matrixTable.title
 msgid "Confusion Matrix"
 msgstr "混同行列"
+
+#: R/mpca.b.R
+msgid "Contingency Matrix (Clusters vs Groups):"
+msgstr ""
 
 #: mCOR/options/hyp/corr.title
 msgid "Correlated"
@@ -415,6 +1027,10 @@ msgstr "相関クラスタリングのデモ"
 msgid "Correlation matrix"
 msgstr "相関行列"
 
+#: R/mcor.b.R
+msgid "Correlation matrix contains missing values. Cannot compute Graphical Lasso."
+msgstr ""
+
 #: mCOR/results/text.title
 msgid "Correlations"
 msgstr "相関"
@@ -423,10 +1039,47 @@ msgstr "相関"
 msgid "Correlations between variables"
 msgstr "変数間の相関"
 
+#: R/mpca.b.R
+msgid "Cos²"
+msgstr ""
+
+#: mMLP/results/matrixTable.columns.title
+msgid "Count"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Covariates"
+msgstr ""
+
+#: mLR/options/covs.title
+#: mLR/ui[0][1].label
 #: mMLP/options/covs.title
 #: mMLP/ui[0][1].label
 msgid "Covariates (Continuous Predictors)"
 msgstr "共変量（連続説明変数）"
+
+#: mSRV/options/covariates.title
+#: mSRV/ui[0][3].label
+msgid "Covariates (Cox regression)"
+msgstr ""
+
+#: mSRV/results/coxSection/coxForestPlot.title
+msgid "Cox Hazard Ratios Forest Plot"
+msgstr ""
+
+#: mSRV/results/coxSection/coxFitTable.title
+msgid "Cox Model Fit Statistics"
+msgstr ""
+
+#: mSRV/options/showCox.title
+#: mSRV/ui[4].label
+#: mSRV/results/coxSection.title
+msgid "Cox Proportional Hazards Regression"
+msgstr ""
+
+#: mSRV/results/coxSection/coxCoefTable.title
+msgid "Cox Regression Coefficients"
+msgstr ""
 
 #: R/mmlp.b.R
 msgid "Cross-Entropy Loss"
@@ -436,20 +1089,86 @@ msgstr "交差エントロピー誤差"
 msgid "Cross-Validation"
 msgstr "交差検証"
 
+#: mLR/options/cv_folds.title
+#: mLR/ui[2]/cv_folds.label
 #: mMLP/options/cv_folds.title
 #: mMLP/ui[2]/cv_folds.label
 msgid "Cross-Validation Folds (K)"
 msgstr "交差検証の分割数（K）"
 
+#: mLR/options/cv_repeats.title
+msgid "Cross-Validation Repeats"
+msgstr ""
+
+#: mLR/ui[2]/cv_repeats.label
+msgid "Cross-Validation Repeats (R)"
+msgstr ""
+
+#: mPCA/results/varianceTable.columns.title
+msgid "Cumulative %"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Cumulative Hazard"
+msgstr ""
+
+#: mSRV/options/kmType/hazard.title
+msgid "Cumulative hazard"
+msgstr ""
+
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
+msgid "Curve"
+msgstr ""
+
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
+#: mROC/results/rocTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
+#: mUI/results/stat/rocTable.columns.title
+msgid "Cut-off"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "CV"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "CV Acc (%)"
+msgstr ""
+
 #: mMF/results/estim/mcar.columns.title
 msgid "D²"
 msgstr "D²"
 
+#: mLR/options/palBrewer/Dark2.title
+#: mMLP/options/palBrewer/Dark2.title
+#: mPCA/options/palBrewer/Dark2.title
 #: mROC/options/palBrewer/Dark2.title
+#: mSRV/options/palBrewer/Dark2.title
 msgid "Dark2"
 msgstr "ダーク2"
 
+#: package/analyses/mMF.menuSubgroup
+#: package/analyses/mOUT.menuSubgroup
+#: package/analyses/mMOUT.menuSubgroup
+#: mMF/options.menuSubgroup
+#: mMOUT/options.menuSubgroup
+#: mOUT/options.menuSubgroup
+msgid "Data Preprocessing"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "Dataset restricted to group:"
+msgstr ""
+
+#: mLR/options/roc_unit/decimal.title
 #: mMLP/options/roc_unit/decimal.title
+#: mPCA/options/roc_unit/decimal.title
 msgid "Decimal (0 to 1)"
 msgstr "小数値（0から1）"
 
@@ -466,27 +1185,51 @@ msgstr "自由度 (df)"
 msgid "Degrees of freedom"
 msgstr "自由度"
 
+#: mLR/options/dep.title
+#: mLR/ui[0][0].label
 #: mMLP/options/dep.title
 #: mMLP/ui[0][0].label
 msgid "Dependent Variable (Target)"
 msgstr "従属変数（ターゲット）"
 
+#: R/mlr.b.R
+msgid "Dependent variable must have at least two levels."
+msgstr ""
+
 #: mPWR/options/design.title
 msgid "Design"
 msgstr "デザイン"
 
-#: R/mpwr.b.R
-msgid "Design: "
-msgstr "デザイン： "
+#: mSRV/results/logRankTable.columns.title
+#: mSRV/results/coxSection/coxFitTable.columns.title
+#: mSRV/results/coxSection/coxAssumpTable.columns.title
+msgid "df"
+msgstr ""
+
+#: package/analyses/mUI.menuSubgroup
+#: mUI/options.menuSubgroup
+msgid "Diagnostics"
+msgstr ""
 
 #: mUI/options/UImethod/noUI.title
 msgid "Dichotomization (no uncertainty)"
 msgstr "二分法（不確実性なし）"
 
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
 #: mROC/options/direction.title
+#: mROC/results/rocTable.columns.title
 #: mUI/results/stat/uistat.columns.title
+#: mUI/results/stat/rocTable.columns.title
 msgid "Direction"
 msgstr "向き"
+
+#: R/mmout.b.R
+#: mMOUT/options/plotType/dd.title
+#: mMOUT/results/ddplot.title
+msgid "Distance-Distance Plot"
+msgstr ""
 
 #: mUI/options/model.title
 msgid "Distribution model"
@@ -495,6 +1238,14 @@ msgstr "分布モデル"
 #: mROC/options/dotline.title
 msgid "Dotted line"
 msgstr "点線"
+
+#: mCOR/options/glassoType/ebic.title
+msgid "EBIC"
+msgstr ""
+
+#: mCOR/options/glassoGamma.title
+msgid "EBIC gamma"
+msgstr ""
 
 #: mPWR/options/calc/es.title
 msgid "Effect size"
@@ -505,34 +1256,39 @@ msgstr "効果量"
 msgid "Effect Size"
 msgstr "効果量"
 
-#: R/mpwr.b.R
-msgid "Effect size measure: Cohen's d"
-msgstr "効果量指標：コーエンのd"
+#: R/mpca.b.R
+#: mPCA/results/varianceTable.columns.title
+msgid "Eigenvalue"
+msgstr ""
 
-#: R/mpwr.b.R
-msgid "Effect size measure: Cohen's w"
-msgstr "効果量の指標：コーエンのw"
+#: R/mpca.b.R
+msgid "Eigenvalues and Parallel Analysis"
+msgstr ""
 
-#: R/mpwr.b.R
-msgid "Effect size measure: correlation coefficient (r)"
-msgstr "効果量指標：相関係数 (r)"
+#: mLR/options/method/elastic.title
+msgid "ElasticNet (L1 + L2 Regularization)"
+msgstr ""
 
-#: R/mpwr.b.R
-msgid "Effect size measure: Eta-squared (η²)"
-msgstr "効果量の指標：イータ2乗 (η²)"
+#: R/mlr.b.R
+msgid "ElasticNet (α={alpha}, {penalty})"
+msgstr ""
 
-#: R/mpwr.b.R
-msgid "Effect size measure: Odds Ratio"
-msgstr "効果量の指標：オッズ比"
+#: mLR/ui[1]/elastic_alpha.label
+msgid "ElasticNet Alpha (0=Ridge, 1=LASSO)"
+msgstr ""
 
-#: R/mpwr.b.R
-msgid "Effect size measure: R-squared change (f²)"
-msgstr "効果量の指標：R2乗変化量 (f²)"
+#: mLR/options/elastic_alpha.title
+msgid "ElasticNet Alpha (L1 Ratio)"
+msgstr ""
 
 #: mCOR/options/plotMetU/ellipse.title
 #: mCOR/options/plotMetL/ellipse.title
 msgid "Ellipse"
 msgstr "楕円"
+
+#: R/mmout.b.R
+msgid "Empirical Squared Mahalanobis Distances"
+msgstr ""
 
 #: R/mmf.b.R
 msgid "Empty data table"
@@ -543,36 +1299,124 @@ msgstr "空のデータテーブル"
 msgid "Emtpy"
 msgstr "空白"
 
+#: R/mpwr.b.R
+#: mPWR/ui[1]/alt/equivalent.title
+msgid "equivalence"
+msgstr ""
+
+#: mPWR/options/margin.title
+#: mPWR/ui[1]/margin.label
+msgid "Equivalence / Non-Inferiority / Superiority margin"
+msgstr ""
+
 #: R/mmlp.b.R
-msgid "Error during neural network fitting: "
-msgstr "ニューラルネットワーク適合（訓練）時エラー "
+msgid "Error during neural network fitting:"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Error in Classical Partial Correlation calculation: {}"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Error in Classical Semi-Partial Correlation calculation: {}"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Error in Graphical Lasso calculation: {}"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Error occurred while calculating PCA. Please check your variables."
+msgstr ""
+
+#: mLR/results/coeffTable.columns.title
+msgid "Estimate (B)"
+msgstr ""
 
 #: mMF/results/imput/errors.title
 msgid "Estimated out-of-bag (OOB) imputation error"
 msgstr "推定OOB補完誤差"
+
+#: mCOR/options/netMethod.title
+msgid "Estimation method"
+msgstr ""
 
 #: mMF/options/fullmars.title
 #: mMF/results/estim/fMARtab.title
 msgid "Evaluation of MAR explainers"
 msgstr "MAR説明モデルの評価"
 
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+msgid "Events"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
+msgid "Expected Influence"
+msgstr ""
+
 #: mMF/results/estim/mars.columns.title
 #: mMF/results/estim/fMARtab.template.columns.title
 msgid "Explanatory"
 msgstr "説明変数"
 
-#: R/mmf.b.R
-msgid "Explanatory - variable corresponding to MAR with minimal p<sub>value</sub>."
-msgstr "説明変数　最小のp<sub>値</sub> をもつMARに対応する変数です。"
+#: package/analyses/mCOR.menuSubgroup
+#: package/analyses/mPCA.menuSubgroup
+#: mCOR/options.menuSubgroup
+#: mPCA/options.menuSubgroup
+msgid "Exploratory & Factor Analysis"
+msgstr ""
 
 #: R/mmlp.b.R
 msgid "F1-Score"
 msgstr "F1値"
 
+#: mPCA/results/loadingsTable.title
+msgid "Factor Loadings"
+msgstr ""
+
+#: mPCA/options/loadingsHeatmap.title
+msgid "Factor loadings heatmap"
+msgstr ""
+
+#: mPCA/results/loadingsHeatmap.title
+msgid "Factor Loadings Heatmap"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Factor Loadings Matrix"
+msgstr ""
+
+#: mPCA/options/loadingsTable.title
+msgid "Factor loadings table"
+msgstr ""
+
+#: mLR/options/factors.title
+#: mLR/ui[0][2].label
 #: mMLP/options/factors.title
 #: mMLP/ui[0][2].label
 msgid "Factors (Categorical Predictors)"
 msgstr "因子（カテゴリカル説明変数）"
+
+#: mLR/options/method.title
+#: mLR/ui[1]/method.label
+msgid "Feature Selection Method"
+msgstr ""
+
+#: mLR/ui[1].label
+msgid "Feature Selection Settings"
+msgstr ""
+
+#: mLR/options/group.title
+#: mLR/ui[0][3].label
+#: mPCA/options/group.title
+#: mPCA/ui[0][2].label
+msgid "Filter Variable"
+msgstr ""
+
+#: mCOR/options/group.title
+#: mCOR/ui[0][1].label
+msgid "Filtering Variable"
+msgstr ""
 
 #: mCOR/options/plotOrder/FPC.title
 msgid "First principal component"
@@ -582,37 +1426,105 @@ msgstr "第1主成分"
 msgid "Flag significant correlations"
 msgstr "有意な相関に印"
 
+#: R/mpca.b.R
+#: mPCA/results/regTable.columns.title
+msgid "Fold"
+msgstr ""
+
+#: mSRV/options/coxForest.title
+msgid "Forest Plot of Hazard Ratios"
+msgstr ""
+
+#: R/mlr.b.R
+#: mLR/results/forestPlot.title
+msgid "Forest Plot of Odds Ratios"
+msgstr ""
+
+#: mLR/options/showForest.title
+#: mLR/ui[3]/showForest.label
+msgid "Forest plot of Odds Ratios"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Forward (AIC)"
+msgstr ""
+
+#: mLR/options/method/forward.title
+msgid "Forward Stepwise Selection (AIC)"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Full dataset used in analysis"
+msgstr ""
+
 #: package.description
 msgid ""
 "Graphic extensions of the functionality of popular data analysis methods: "
 "cluster tree of correlating variables, multifactor adaptive correlation "
 "matrix, multidimensional ROC classification curves, missing data estimation "
-"and imputation, outliers identificatioon and removal etc."
+"and imputation, outliers identification and removal etc."
 msgstr ""
-"代表的なデータ分析手法の機能を拡張するグラフィック機能：相関変数の"
-"クラスターツリー、多因子適応型相関行列、多次元ROC分類曲線、欠損データの推定お"
-"よび補完、外れ値の特定と除去など。"
+
+#: mCOR/options/netMethod/glasso.title
+msgid "Graphical Lasso (GLASSO)"
+msgstr ""
 
 #: R/mout.b.R
+#: mMOUT/results/stat.columns.title
+#: mMOUT/results/oind.columns.title
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+#: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "Group"
 msgstr "グループ"
 
-#: mCOR/options/group.title
-#: mCOR/ui[0][1].label
+#: R/mmout.b.R
+msgid ""
+"Group '{grp}': Robust MCD covariance estimation failed (possibly due to "
+"small sample size or collinearity). Classic Mahalanobis distance was used "
+"instead."
+msgstr ""
+
+#: mSRV/ui[3].label
+msgid "Group Comparison"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Group Projection in PCA Space"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Group:"
+msgstr ""
+
+#: mMOUT/options/group.title
+#: mMOUT/ui[0][1].label
 #: mOUT/options/group.title
 #: mOUT/ui[0][1].label
+#: mPCA/options/classVar.title
+#: mPCA/ui[0][1].label
 #: mROC/options/groups.title
 #: mROC/ui[0][2].label
+#: mSRV/options/group.title
+#: mSRV/ui[0][2].label
 msgid "Grouping Variable"
 msgstr "グループ変数"
 
-#: R/mcor.b.R
-msgid "Hₐ is negative correlation"
-msgstr "対立仮説は負の相関"
+#: mCOR/options/glassoLayout/groups.title
+msgid "Groups"
+msgstr ""
 
-#: R/mcor.b.R
-msgid "Hₐ is positive correlation"
-msgstr "対立仮説は正の相関"
+#: R/mpwr.b.R
+#: R/msrv.b.R
+msgid "Hazard Ratio"
+msgstr ""
+
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "Hazard Ratio (HR)"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Hazard Ratios (95% CI)"
+msgstr ""
 
 #: package/datasets/HIROCclassification.description
 msgid "Healthy/Ill ROC Classification demonstration"
@@ -639,13 +1551,19 @@ msgstr "隠れ層の構成"
 msgid "Hidden Layer Structure (e.g., 8 or 10,5)"
 msgstr "隠れ層の構成（例：8 または 10,5）"
 
-#: mMLP/results/infoTable.columns.title
+#: R/mmlp.b.R
 msgid "Hidden Layers"
 msgstr "隠れ層"
 
 #: mCOR/options/hclust.title
 msgid "Hierarchical clustering"
 msgstr "階層的クラスタリング"
+
+#: R/mcor.b.R
+msgid ""
+"Hierarchical clustering cannot be computed because the correlation matrix "
+"contains missing (NA/NaN) values."
+msgstr ""
 
 #: mCOR/results/treeplot.title
 msgid "Hierarchical clustering tree"
@@ -655,18 +1573,36 @@ msgstr "階層的クラスタリングツリー"
 msgid "Hochberg (1988)"
 msgstr "Hochberg (1988)"
 
-#: mMLP/results/infoTable.columns.title
+#: R/mlr.b.R
+msgid "Hold-out ({split}%)"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Hold-out Acc (%)"
+msgstr ""
+
+#: R/mmlp.b.R
 msgid "Hold-out Accuracy (%)"
 msgstr "ホールドアウト正解率（%）"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
-msgid "Hold-out Validation (AUC = "
-msgstr "ホールドアウト検証（AUC = "
+msgid "Hold-out Validation"
+msgstr ""
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
+msgid "Hold-out Validation (AUC ="
+msgstr ""
+
+#: mLR/options/partition/holdout.title
 #: mMLP/options/partition/holdout.title
 msgid "Hold-out Validation Split"
 msgstr "ホールドアウト分割比率"
 
+#: mLR/options/val_split.title
+#: mLR/ui[2]/val_split.label
 #: mMLP/options/val_split.title
 #: mMLP/ui[2]/val_split.label
 msgid "Hold-out Validation Split (%)"
@@ -679,6 +1615,10 @@ msgstr "Holm (1979)"
 #: mCOR/options/adjust/hommel.title
 msgid "Hommel (1988)"
 msgstr "Hommel (1988)"
+
+#: mCOR/options/glassoHub.title
+msgid "Hub markers table"
+msgstr ""
 
 #: mCOR/options/hyp.title
 msgid "Hypothesis"
@@ -699,8 +1639,8 @@ msgid ""
 "p<sub>value</sub> in MCAR is significant then the data is MNAR (Missing Not "
 "At Random)."
 msgstr ""
-"少なくとも1つのMARのp<sub>値</sub> が有意でなく、かつMCARのp<sub>値</sub> が"
-"有意である場合、そのデータはMNAR（非無作為欠損）となります。"
+"少なくとも1つのMARのp<sub>値</sub> が有意でなく、かつMCARのp<sub>値</sub> "
+"が有意である場合、そのデータはMNAR（非無作為欠損）となります。"
 
 #: R/mmf.b.R
 msgid "imp"
@@ -738,9 +1678,18 @@ msgstr "独立標本（ウェルチ）"
 msgid "Independent Samples (Wilcoxon)"
 msgstr "独立標本（ウィルコクソン）"
 
+#: mMOUT/results/oind.columns.title
+msgid "Indices"
+msgstr ""
+
 #: R/mout.b.R
 msgid "Indices (Rows)"
 msgstr "インデックス（行）"
+
+#: mPCA/options/biplot.title
+#: mPCA/results/biplot.title
+msgid "Influence vectors (Biplot)"
+msgstr ""
 
 #: mMF/results/estim/fplot.title
 msgid "Influx-outflux plot"
@@ -753,6 +1702,10 @@ msgstr "欠損パターンの流入・流出プロット"
 #: R/mmf.b.R
 msgid "Influx*"
 msgstr "流入*"
+
+#: mPCA/results/text.title
+msgid "Info"
+msgstr ""
 
 #: mMLP/options/rang.title
 #: mMLP/ui[1]/rang.label
@@ -774,7 +1727,8 @@ msgid "Intersection"
 msgstr "交差"
 
 #: mCOR/ui[4][0]/tables/ci/ciWidth.label
-#: mROC/ui[1]/ciAUC/ciWidth.label
+#: mROC/ui[2]/ciAUC/ciWidth.label
+#: mSRV/ui[5]/showRoc/rocCI/rocWidth.label
 msgid "Interval"
 msgstr "間隔"
 
@@ -787,13 +1741,16 @@ msgstr "区間決定法"
 msgid "Intervals Estimation"
 msgstr "区間推定"
 
+#: mPWR/options/icc.title
+#: mPWR/ui[1]/icc.label
+msgid "Intraclass correlation (ICC)"
+msgstr ""
+
 #: R/mmlp.b.R
 msgid ""
 "Invalid Hidden Layer Structure. Please enter comma-separated positive "
 "integers (e.g., 8 or 10,5)."
-msgstr ""
-"隠れ層の構成が正しくありません。正の整数をカンマ区切りで入力してください（例"
-"：8 や 10,5）。"
+msgstr "隠れ層の構成が正しくありません。正の整数をカンマ区切りで入力してください（例：8 や 10,5）。"
 
 #: mOUT/options/fence.title
 msgid "IQR fence height"
@@ -807,15 +1764,23 @@ msgstr "IQRテューキーのフェンス"
 #: package/analyses/mROC.menuGroup
 #: package/analyses/mMF.menuGroup
 #: package/analyses/mOUT.menuGroup
+#: package/analyses/mMOUT.menuGroup
 #: package/analyses/mUI.menuGroup
 #: package/analyses/mPWR.menuSubgroup
 #: package/analyses/mMLP.menuGroup
+#: package/analyses/mLR.menuGroup
+#: package/analyses/mSRV.menuGroup
+#: package/analyses/mPCA.menuGroup
 #: mCOR/options.menuGroup
+#: mLR/options.menuGroup
 #: mMF/options.menuGroup
 #: mMLP/options.menuGroup
+#: mMOUT/options.menuGroup
 #: mOUT/options.menuGroup
+#: mPCA/options.menuGroup
 #: mPWR/options.menuSubgroup
 #: mROC/options.menuGroup
+#: mSRV/options.menuGroup
 #: mUI/options.menuGroup
 msgid "jYS"
 msgstr "jYS"
@@ -824,26 +1789,98 @@ msgstr "jYS"
 msgid "jYS Extended Functions"
 msgstr "jYS拡張機能"
 
+#: R/mmlp.b.R
+#: mLR/options/partition/kfold.title
 #: mMLP/options/partition/kfold.title
 msgid "K-Fold Cross-Validation"
 msgstr "K分割交差検証"
 
 #: R/mmlp.b.R
-msgid "K-Fold Cross-Validation (AUC = "
-msgstr "K分割交差検証（AUC = "
+msgid "K-Fold Cross-Validation (AUC ="
+msgstr ""
 
-#: mMLP/results/infoTable.columns.title
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "K-Fold CV"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "K-Fold CV (AUC ="
+msgstr ""
+
+#: R/mmlp.b.R
 msgid "K-Fold CV Accuracy (%)"
 msgstr "K分割交差検証の正解率（%）"
+
+#: mPCA/options/regKFold.title
+#: mPCA/ui[3][0]/regKFold.label
+msgid "K-folds for CV"
+msgstr ""
+
+#: mPCA/ui[3][0][0].label
+msgid "K-Means «Blind» Clustering"
+msgstr ""
+
+#: mPCA/results/kmeansTable.title
+msgid "K-Means «Blind» Clustering vs Real Groups"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "K-Means Cluster"
+msgstr ""
+
+#: mPCA/options/kmeansTable.title
+msgid "K-Means contingency/ARI comparison"
+msgstr ""
+
+#: mSRV/results/kmSection/kmPlot.title
+msgid "Kaplan-Meier Curve"
+msgstr ""
+
+#: mSRV/ui[2].label
+msgid "Kaplan-Meier Curves & Estimation"
+msgstr ""
+
+#: mSRV/results/kmSection/kmRiskTable.title
+msgid "Kaplan-Meier Risk-at-time Table"
+msgstr ""
+
+#: mSRV/results/kmSection.title
+msgid "Kaplan-Meier Survival Analysis"
+msgstr ""
+
+#: mSRV/options/showKm.title
+msgid "Kaplan-Meier Survival Curves"
+msgstr ""
+
+#: mSRV/results/kmSection/kmSummaryTable.title
+msgid "Kaplan-Meier Survival Summary"
+msgstr ""
 
 #: mCOR/options/method/kendall.title
 msgid "Kendall (τ)"
 msgstr "ケンドール (τ)"
 
-#: mCOR/results/matrix.columns.title
-#: mCOR/results/matrix.columns.content
+#: R/mcor.b.R
 msgid "Kendall Tau"
 msgstr "ケンドールのタウ"
+
+#: mLR/options/lasso_penalty/1se.title
+msgid "Lambda 1SE (Most Sparse Model)"
+msgstr ""
+
+#: mLR/options/lasso_penalty/min.title
+msgid "Lambda Min (Minimum CV Error)"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "LASSO ({penalty})"
+msgstr ""
+
+#: mLR/options/method/lasso.title
+msgid "LASSO L1 Regularization"
+msgstr ""
 
 #: mMLP/options/show_curve.title
 msgid "Learning Curve"
@@ -857,6 +1894,8 @@ msgstr "従来形式の特異度軸"
 msgid "Legend Box"
 msgstr "凡例枠"
 
+#: mSRV/options/statusEvent.title
+#: mSRV/ui[0][1]/statusEvent.label
 #: mUI/results/stat/intstat.columns.title
 msgid "Level"
 msgstr "レベル"
@@ -870,14 +1909,83 @@ msgstr "線幅"
 msgid "Linear Regression (F-Test)"
 msgstr "線形回帰（F検定）"
 
+#: R/mpca.b.R
+msgid "Loading"
+msgstr ""
+
 #: mPWR/results/text.title
 msgid "Log / Errors"
 msgstr "ログ / エラー"
+
+#: mLR/ui[3]/showForest/forestLog.label
+msgid "Log scale"
+msgstr ""
+
+#: mLR/options/forestLog.title
+msgid "Log scale for Odds Ratios"
+msgstr ""
+
+#: mSRV/results/logRankTable.title
+msgid "Log-rank Test (Group Comparison)"
+msgstr ""
+
+#: mSRV/options/showLogRank.title
+msgid "Log-rank Test for Group Comparison"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Log(OR)"
+msgstr ""
+
+#: package/analyses/mLR.title
+#: package/analyses/mLR.menuTitle
+#: mLR/options.title
+#: mLR/options.menuTitle
+#: mLR/ui.title
+#: mLR/results.title
+msgid "Logistic Regression"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/options/design/logistic.title
 msgid "Logistic Regression (Wald Z-Test)"
 msgstr "ロジスティック回帰（ワルドZ検定）"
+
+#: package/datasets/LogisticRegressionbloodcells.name
+msgid "Logistic Regression blood cells"
+msgstr ""
+
+#: package/datasets/LogisticRegressionbloodcells.description
+msgid "Logistic Regression demonstration"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Logistic Regression Model (Log-odds)"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Logistic Regression Predicted Class"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Logistic Regression Predicted Probability"
+msgstr ""
+
+#: package/analyses/mLR.description
+#: mLR/options.description.main
+msgid ""
+"Logistic Regression with feature selection. Note that cross-validation fold "
+"partitioning uses a hardcoded random seed (42) for reproducibility."
+msgstr ""
+
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "Lower 95% CI"
+msgstr ""
+
+#: mSRV/results/rocSection/rocTable.columns.title
+msgid "Lower CI"
+msgstr ""
 
 #: R/mout.b.R
 msgid "Lower fence"
@@ -887,39 +1995,37 @@ msgstr "フェンス下限"
 msgid "Lower part"
 msgstr "下部"
 
-#: R/mui.b.R
+#: mUI/results/stat/uistat.columns.title
 msgid "Lower threshold"
 msgstr "下限値"
 
-#: R/mui.b.R
-msgid ""
-"LR- - Negative Likelihood Ratio P(-|D+))/(P(-|D-)). The probability of a "
-"person with the condition receiving a negative classification / probability "
-"of a person without the condition receiving a negative classification"
+#: mUI/results/stat/mcistat.columns.title
+msgid "LR-"
 msgstr ""
-"LR-（陰性尤度比） P(−｜D+) / P(−｜D−)　状態（疾患など）を有する人が「陰性」と"
-"判定される確率を、状態を有さない人が「陰性」と判定される確率で割った値"
 
-#: R/mui.b.R
-msgid ""
-"LR+ - Positive Likelihood Ratio (P(+|D+))/(P(+|D-)) The probability of a "
-"person with the condition receiving a positive classification / probability "
-"of a person without the condition receiving a positive classification"
+#: mUI/results/stat/mcistat.columns.title
+msgid "LR+"
 msgstr ""
-"LR+（陽性尤度比） P(+｜D+) / P(+｜D−)　状態（疾患など）を有する人が「陽性」と"
-"判定される確率を、状態を有さない人が「陽性」と判定される確率で割った値"
+
+#: R/mlr.b.R
+msgid "Manual"
+msgstr ""
+
+#: mLR/options/method/manual.title
+msgid "Manual (Use All Predictors)"
+msgstr ""
 
 #: mCOR/options/clustMan.title
 msgid "Manual Clusters"
 msgstr "手動クラスタ"
 
-#: R/mmf.b.R
-msgid ""
-"MAR - missing at random (if each p<sub>value</sub> is significant, there is "
-"evidence the data is MAR);"
+#: mCOR/options/glassoType/manual.title
+msgid "Manual penalty"
 msgstr ""
-"MAR　すべてのp<sub>値</sub> が有意であれば、データがMAR（無作為欠損）である証"
-"拠となります。"
+
+#: mCOR/options/glassoRho.title
+msgid "Manual penalty (ρ)"
+msgstr ""
 
 #: mMF/results/estim/mcar.description
 #: mMF/results/estim/mars.description
@@ -930,11 +2036,15 @@ msgstr "MAR分類表"
 msgid "Mark significance *<0.05, **<0.01, ***<0.001"
 msgstr "有意なものに印 *<0.05, **<0.01, ***<0.001"
 
+#: mLR/results/formulaHtml.title
+msgid "Mathematical Model Formula"
+msgstr ""
+
 #: R/mcor.b.R
 msgid "Matrix #{i}"
 msgstr "行列 #{i}"
 
-#: mMLP/results/infoTable.columns.title
+#: R/mmlp.b.R
 msgid "Max Iterations"
 msgstr "最大反復回数"
 
@@ -952,25 +2062,17 @@ msgstr "反復回数上限"
 msgid "MCAR"
 msgstr "MCAR"
 
-#: R/mmf.b.R
-msgid ""
-"MCAR - missing completely at random (if the p<sub>value</sub> is not "
-"significant, there is evidence the data is MCAR)."
-msgstr ""
-"MCAR　p<sub>値</sub> が有意でない場合、データがMCAR（完全無作為欠損）である証"
-"拠となります。"
-
 #: mMF/options/isMAR.title
 msgid "MCAR (Missing Completely at Random) and MAR (Missing at Random) estimation"
 msgstr "MCAR（完全無作為欠損）およびMAR（無作為欠損）推定"
 
 #: R/mui.b.R
-msgid "MCI=0 ("
-msgstr "MCI=0 ("
+msgid "MCI=0 ({})"
+msgstr ""
 
 #: R/mui.b.R
-msgid "MCI=1 ("
-msgstr "MCI=1 ("
+msgid "MCI=1 ({})"
+msgstr ""
 
 #: mCOR/options/clustMet/mcquitty.title
 msgid "McQuitty Linkage (WPGMA)"
@@ -996,15 +2098,26 @@ msgstr "中央値"
 msgid "Median Linkage"
 msgstr "中央値連結法"
 
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+msgid "Median Survival"
+msgstr ""
+
 #: mCOR/options/method.title
+#: mMOUT/ui[1][0].label
 #: mOUT/ui[1][0].label
 #: mUI/ui[1][3].label
 msgid "Method"
 msgstr "方法"
 
+#: mLR/results/infoTable.columns.title
+#: mMLP/results/infoTable.columns.title
 #: mMLP/results/statsTable.columns.title
 msgid "Metric"
 msgstr "指標"
+
+#: mPCA/results/kmeansTable.columns.title
+msgid "Metric / Cluster"
+msgstr ""
 
 #: mPWR/options/es.title
 #: mPWR/ui[1]/es.label
@@ -1085,6 +2198,14 @@ msgstr "多層パーセプトロン分類器"
 msgid "MLP Classifier Learning Curve"
 msgstr "多層パーセプトロン分類器の学習曲線"
 
+#: R/mmlp.b.R
+msgid "MLP Classifier Predicted Class"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "MLP Classifier Predicted Probability"
+msgstr ""
+
 #: mMLP/results/curvePlot.title
 msgid "MLP Learning Curve"
 msgstr "多層パーセプトロン学習曲線"
@@ -1092,6 +2213,21 @@ msgstr "多層パーセプトロン学習曲線"
 #: mMLP/results/topoPlot.title
 msgid "MLP Network Topology"
 msgstr "多層パーセプトロンネットワーク構造"
+
+#: package/analyses/mMLP.description
+#: mMLP/options.description.main
+msgid ""
+"MLP Neural Network Classifier. Note that weight initialization and data "
+"partitioning use a hardcoded random seed (42) for reproducibility."
+msgstr ""
+
+#: mLR/results/coeffTable.title
+msgid "Model Coefficients (Post-Selection / Refitted Model)"
+msgstr ""
+
+#: mLR/results/infoTable.title
+msgid "Model Fit & Predictive Performance"
+msgstr ""
 
 #: mMLP/results/infoTable.title
 msgid "Model Information & Accuracy"
@@ -1110,17 +2246,20 @@ msgstr "修正Z得点（ハンペル・フィルター）"
 msgid "More Certain Interval (MCI)"
 msgstr "より確実な区間（MCI）"
 
-#: R/mui.b.R
-msgid ""
-"More Certain Interval (MCI) is interval outside the Uncertain Interval and "
-"divide into low and high parts."
-msgstr ""
-"より確実な区間（MCI）は、不確実な区間（Uncertain Interval）の外側にあり、低い"
-"部分と高い部分を分割する区間を指します。"
-
 #: R/mmf.b.R
-msgid "MSE - mean squared error (for Continuous variables);"
-msgstr "MSE　平均二乗誤差（連続変数用）"
+msgid "MSE"
+msgstr ""
+
+#: mLR/options/multiclass_roc_type.title
+#: mLR/ui[3]/show_roc/multiclass_roc_type.label
+#: mMLP/options/multiclass_roc_type.title
+#: mMLP/ui[3]/show_roc/multiclass_roc_type.label
+msgid "Multiclass ROC Layout"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Multinomial Log-odds Equations"
+msgstr ""
 
 #: mCOR/options/adjust.title
 msgid "Multiple comparison correction"
@@ -1130,13 +2269,17 @@ msgstr "多重比較補正"
 msgid "Multiple imputation for missing data"
 msgstr "欠損値の多重補完"
 
-#: R/mmf.b.R
-msgid "N - number of imputted values;"
-msgstr "N　補完値の個数"
+#: package/analyses/mMOUT.title
+#: package/analyses/mMOUT.menuTitle
+#: mMOUT/options.title
+#: mMOUT/ui.title
+#: mMOUT/results.title
+msgid "Multivariate outliers identification and removal"
+msgstr ""
 
-#: R/mmf.b.R
-msgid "N - number of missing values;"
-msgstr "N　欠損値の個数"
+#: mSRV/results/kmSection/kmRiskTable.columns.title
+msgid "N at Risk"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/results/nEsCurve.title
@@ -1146,6 +2289,10 @@ msgstr "効果量ごとのN"
 #: mPWR/options/n_es_curve.title
 msgid "N by Effect Size Curve"
 msgstr "効果量ごとのN曲線"
+
+#: mSRV/results/kmSection/kmRiskTable.columns.title
+msgid "N Events"
+msgstr ""
 
 #: mPWR/ui[1]/n.label
 msgid "N for group 1"
@@ -1167,10 +2314,6 @@ msgstr "N1"
 msgid "N2"
 msgstr "N2"
 
-#: mMLP/results/matrixTable.columns.title
-msgid "Negative Class"
-msgstr "陰性クラス"
-
 #: R/mmlp.b.R
 msgid "Negative Predictive Value (NPV)"
 msgstr "陰性的中率（NPV）"
@@ -1178,6 +2321,19 @@ msgstr "陰性的中率（NPV）"
 #: R/mmlp.b.R
 msgid "Negative Weight"
 msgstr "負の重み"
+
+#: R/mcor.b.R
+msgid "Network ("
+msgstr ""
+
+#: mCOR/options/glassoLayout.title
+msgid "Network layout"
+msgstr ""
+
+#: mCOR/options/glassoPlot.title
+#: mCOR/results/glassoGroup/glassoPlot.title
+msgid "Network plot"
+msgstr ""
 
 #: mMLP/options/show_topo.title
 msgid "Network Topology / Architecture Diagram"
@@ -1195,27 +2351,50 @@ msgstr "ニューラルネットワーク分類"
 msgid "Neural Network Classifier (multilayer perceptron) demonstration"
 msgstr "ニューラルネットワーク分類器（多層パーセプトロン）のデモ"
 
+#: R/mpca.b.R
+msgid "Noise (95th percentile)"
+msgstr ""
+
+#: R/mpwr.b.R
+#: mPWR/ui[1]/alt/non-inferior.title
+msgid "non-inferiority"
+msgstr ""
+
 #: mUI/options/model/none.title
 msgid "Non-parametric"
 msgstr "ノンパラメトリック"
 
+#: R/mlr.b.R
 #: mCOR/options/adjust/none.title
 #: mCOR/options/clPos/n.title
+#: mLR/options/palBrewer/none.title
+#: mMLP/options/palBrewer/none.title
+#: mPCA/options/palBrewer/none.title
 #: mROC/options/theBest/none.title
 #: mROC/options/cmpDeLong/none.title
 #: mROC/options/palBrewer/none.title
+#: mSRV/options/palBrewer/none.title
 msgid "None"
 msgstr "なし"
 
+#: R/mmout.b.R
+msgid "Normal"
+msgstr ""
+
 #: R/mout.b.R
+#: R/mui.b.R
 msgid "Normality p-value"
 msgstr "正規性 p値"
 
-#: R/mui.b.R
-msgid "NPV - Negative Predictive Value of the negative class TN/(TN+FN)"
+#: R/msrv.b.R
+msgid ""
+"Not enough events or survivors at the selected analysis time point t to "
+"perform ROC analysis."
 msgstr ""
-"陰性予測値 (NPV)　陰性と予測された場合に、それが実際に陰性である確率 TN/"
-"(TN+FN)"
+
+#: mUI/results/stat/mcistat.columns.title
+msgid "NPV"
+msgstr ""
 
 #: mCOR/options/plotMetU/number.title
 #: mCOR/options/plotMetL/number.title
@@ -1226,14 +2405,33 @@ msgstr "数値"
 msgid ""
 "Number of candidate non-missing values to sample from in the predictive mean "
 "matching steps. 0 to avoid this step"
+msgstr "予測平均マッチング法でサンプリングする候補の非欠損値の個数（0にするとこの手順はスキップされます）"
+
+#: mPCA/options/kMeansK.title
+msgid "Number of clusters (K-Means)"
 msgstr ""
-"予測平均マッチング法でサンプリングする候補の非欠損値の個数（0にするとこの手順"
-"はスキップされます）"
+
+#: mPCA/ui[3][0]/kMeansK.label
+msgid "Number of clusters (K)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "Number of Clusters (k1)"
+msgstr ""
+
+#: mPCA/options/npc.title
+#: mPCA/ui[1][0]/npc.label
+msgid "Number of components to retain"
+msgstr ""
 
 #: mPWR/options/k_covariates.title
 #: mPWR/ui[1]/k_covariates.label
 msgid "Number of covariates"
 msgstr "共変量の数"
+
+#: R/mpwr.b.R
+msgid "Number of Events"
+msgstr ""
 
 #: mPWR/options/factor_levels.title
 #: mPWR/ui[1]/factor_levels.label
@@ -1256,9 +2454,23 @@ msgstr "パターン数"
 msgid "Number of trees to grow in each forest"
 msgstr "各フォレストで生成する木の数"
 
+#: mPCA/options/scorePlot.title
+#: mPCA/results/scorePlot.title
+msgid "Object score distribution with 95% ellipses"
+msgstr ""
+
 #: R/mmf.b.R
 msgid "observed"
 msgstr "観測値"
+
+#: R/mpca.b.R
+msgid "Observed Data"
+msgstr ""
+
+#: R/mlr.b.R
+#: mLR/results/coeffTable.columns.title
+msgid "Odds Ratio (OR)"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/options/design/one.sample.title
@@ -1298,9 +2510,22 @@ msgstr "オリジナル"
 msgid "OutFlux**"
 msgstr "流出**"
 
+#: R/mmout.b.R
 #: R/mout.b.R
 msgid "outl"
 msgstr "除去済"
+
+#: R/mmout.b.R
+msgid "Outlier"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Outlier (Both)"
+msgstr ""
+
+#: mMOUT/options/method.title
+msgid "Outlier identifying method"
+msgstr ""
 
 #: mOUT/options/outfence.title
 #: mOUT/results/stat/outstat.title
@@ -1308,9 +2533,12 @@ msgid "Outliers fences"
 msgstr "外れ値のフェンス"
 
 #: R/mout.b.R
+#: mMOUT/results/stat.columns.title
+#: mMOUT/results/oind.columns.title
 msgid "Outliers found"
 msgstr "見つかった外れ値"
 
+#: mMOUT/ui[1].label
 #: mOUT/ui[1].label
 #: mOUT/results/stat.title
 msgid "Outliers identification"
@@ -1329,9 +2557,17 @@ msgstr "外れ値の同定法"
 msgid "Outliers indices"
 msgstr "外れ値のインデックス"
 
+#: mMOUT/results/oind.title
+msgid "Outliers indices (Rows)"
+msgstr ""
+
 #: mOUT/ui[2].label
 msgid "Outliers removal"
 msgstr "外れ値の除去"
+
+#: mMOUT/results/stat.title
+msgid "Outliers summary"
+msgstr ""
 
 #: mMLP/options/out_activation.title
 #: mMLP/ui[1]/out_activation.label
@@ -1346,12 +2582,19 @@ msgstr "出力情報"
 msgid "Output Layer"
 msgstr "出力層"
 
+#: mLR/ui[3].label
 #: mMLP/ui[3].label
 msgid "Outputs & Evaluation"
 msgstr "出力と評価"
 
+#: mROC/results/rocTable.columns.title
+msgid "p (DeLong)"
+msgstr ""
+
 #: mCOR/options/pval.title
 #: mCOR/results/matrix.columns.content
+#: mCOR/results/glassoGroup/glassoTable.columns.content
+#: mLR/results/coeffTable.columns.title
 msgid "p-value"
 msgstr "p値"
 
@@ -1361,7 +2604,23 @@ msgstr "p値"
 msgid "p<sub>value</sub>"
 msgstr "p<sub>値</sub>"
 
+#: R/mcor.b.R
+msgid ""
+"Packages 'glasso' and 'qgraph' are required for this analysis. Please "
+"install them."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"Packages 'ppcor' and 'qgraph' are required for this analysis. Please install "
+"them."
+msgstr ""
+
+#: mLR/options/palBrewer/Paired.title
+#: mMLP/options/palBrewer/Paired.title
+#: mPCA/options/palBrewer/Paired.title
 #: mROC/options/palBrewer/Paired.title
+#: mSRV/options/palBrewer/Paired.title
 msgid "Paired"
 msgstr "ペア"
 
@@ -1375,18 +2634,67 @@ msgstr "対応あり（スチューデント）"
 msgid "Paired Samples (Wilcoxon)"
 msgstr "対応あり（ウィルコクソン）"
 
+#: mCOR/options/glassoTable.title
+#: mCOR/results/glassoGroup/glassoTable.title
+msgid "Partial correlation matrix"
+msgstr ""
+
+#: mCOR/options/glasso.title
+msgid "Partial correlation network"
+msgstr ""
+
+#: mCOR/results/glassoGroup.title
+msgid "Partial Correlation Network"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Partial Correlation Network (GLASSO)"
+msgstr ""
+
 #: mMLP/options/partition.title
 #: mMLP/ui[2]/partition.label
 msgid "Partition Method"
 msgstr "分割法"
 
+#: mLR/options/palBrewer/Pastel1.title
+#: mMLP/options/palBrewer/Pastel1.title
+#: mPCA/options/palBrewer/Pastel1.title
 #: mROC/options/palBrewer/Pastel1.title
+#: mSRV/options/palBrewer/Pastel1.title
 msgid "Pastel1"
 msgstr "パステル1"
 
 #: R/mmf.b.R
 msgid "Pattern frequency"
 msgstr "パターン頻度"
+
+#: R/mpca.b.R
+msgid "PC"
+msgstr ""
+
+#: mPCA/options/pcX.title
+msgid "PC for X axis"
+msgstr ""
+
+#: mPCA/ui[1][0]/pcX.label
+msgid "PC for X axis (Plot)"
+msgstr ""
+
+#: mPCA/options/pcY.title
+msgid "PC for Y axis"
+msgstr ""
+
+#: mPCA/ui[1][0]/pcY.label
+msgid "PC for Y axis (Plot)"
+msgstr ""
+
+#: package/datasets/PCAbloodcells.name
+msgid "PCA blood cells"
+msgstr ""
+
+#: mPCA/ui[1].label
+msgid "PCA Configuration"
+msgstr ""
 
 #: mCOR/options/method/pearson.title
 msgid "Pearson (r)"
@@ -1396,8 +2704,7 @@ msgstr "ピアソン (r)"
 msgid "Pearson correlation cannot be calculated for non-numeric values"
 msgstr "非数値データではピアソン相関を計算できません"
 
-#: mCOR/results/matrix.columns.title
-#: mCOR/results/matrix.columns.content
+#: R/mcor.b.R
 msgid "Pearson's r"
 msgstr "ピアソンのr"
 
@@ -1405,13 +2712,19 @@ msgstr "ピアソンのr"
 msgid "per pattern"
 msgstr "パターンごと"
 
+#: mLR/options/roc_unit/percent.title
 #: mMLP/options/roc_unit/percent.title
+#: mPCA/options/roc_unit/percent.title
 msgid "Percentage (%)"
 msgstr "パーセント (%)"
 
 #: mMLP/results/statsTable.title
 msgid "Performance Statistics"
 msgstr "予測性能の統計"
+
+#: R/mpca.b.R
+msgid "Permutation"
+msgstr ""
 
 #: mMLP/options/show_imp.title
 msgid "Permutation Importance"
@@ -1421,22 +2734,31 @@ msgstr "順列重要度"
 msgid "PFC"
 msgstr "誤分類率"
 
-#: R/mmf.b.R
-msgid "PFC - proportion of falsely classified (for Nominal and Ordinal variables);"
-msgstr "誤分類率（PFC）　名義変数および順序変数で誤分類された値の割合"
-
 #: mCOR/options/plotMetU/pie.title
 #: mCOR/options/plotMetL/pie.title
 msgid "Pie"
 msgstr "円グラフ"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
 msgid "Please select a dependent variable (target)."
 msgstr "従属変数（ターゲット）を選択してください。"
 
+#: R/mmout.b.R
+msgid "Please select at least 2 variables for multivariate analysis."
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Please select at least 2 variables for PCA."
+msgstr ""
+
 #: R/mmlp.b.R
 msgid "Please select at least one predictor variable (factor or covariate)."
 msgstr "説明変数（因子または共変量）を少なくとも1つ選択してください。"
+
+#: R/mlr.b.R
+msgid "Please select at least one predictor variable."
+msgstr ""
 
 #: mUI/options/isTGR.title
 msgid "Plot"
@@ -1454,8 +2776,18 @@ msgstr "作図オプション"
 msgid "Plot the missing data patterns"
 msgstr "欠損パターンを図示"
 
+#: mMOUT/options/plotType.title
+msgid "Plot type"
+msgstr ""
+
+#: mSRV/options/kmType.title
+msgid "Plot Type"
+msgstr ""
+
 #: mCOR/ui[5].label
 #: mMF/ui[1][0][1].label
+#: mMOUT/options/showPlots.title
+#: mMOUT/ui[2].label
 #: mPWR/ui[2].label
 #: mUI/ui[1][4].label
 msgid "Plots"
@@ -1464,10 +2796,6 @@ msgstr "プロット"
 #: mROC/options/polygon.title
 msgid "Polygon"
 msgstr "ポリゴン"
-
-#: mMLP/results/matrixTable.columns.title
-msgid "Positive Class"
-msgstr "陽性クラス"
 
 #: R/mmlp.b.R
 msgid "Positive Weight"
@@ -1486,6 +2814,15 @@ msgstr "検出力"
 msgid "Power by Effect Size"
 msgstr "効果量ごとの検出力"
 
+#: R/mpwr.b.R
+#: mPWR/results/powerEsAlphaCurve.title
+msgid "Power by Effect Size and Alpha"
+msgstr ""
+
+#: mPWR/options/power_es_alpha_curve.title
+msgid "Power by Effect Size and Alpha Curve"
+msgstr ""
+
 #: mPWR/options/power_es_curve.title
 msgid "Power by Effect Size Curve"
 msgstr "効果量曲線ごとの検出力"
@@ -1494,9 +2831,7 @@ msgstr "効果量曲線ごとの検出力"
 msgid ""
 "Power calculation for Spearman's correlation is a penalized asymptotic "
 "approximation based on Fisher's Z-transformation (ARE = 0.912)."
-msgstr ""
-"スピアマン相関係数のべき乗計算は、フィッシャーのZ変換に基づくペナルティつき漸"
-"近近似を用います（ARE = 0.912）。"
+msgstr "スピアマン相関係数のべき乗計算は、フィッシャーのZ変換に基づくペナルティつき漸近近似を用います（ARE = 0.912）。"
 
 #: R/mpwr.b.R
 #: mPWR/results/powerCurve.title
@@ -1507,29 +2842,50 @@ msgstr "検定力曲線"
 msgid "Power Curve (Power by N)"
 msgstr "「検出力曲線（サンプルサイズ別）"
 
-#: R/mui.b.R
-msgid "PPV - Positive Predictive Value of the positive class TP/(TN+FN)"
+#: mUI/results/stat/mcistat.columns.title
+msgid "PPV"
 msgstr ""
-"陽性予測値 (PPV)　陽性と予測された場合に、それが実際に陽性である確率 TP/"
-"(TN+FN)"
 
 #: R/mmlp.b.R
 msgid "Precision"
 msgstr "適合率"
 
+#: R/mcor.b.R
+msgid "Precision matrix diagonal elements are not all positive."
+msgstr ""
+
+#: R/mlr.b.R
 #: R/mmlp.b.R
-msgid "Predicted"
-msgstr "予測値"
+#: mLR/options/predClass.title
+#: mLR/results/predClass.title
+#: mMLP/options/predClass.title
+#: mMLP/results/matrixTable.columns.title
+#: mMLP/results/predClass.title
+msgid "Predicted Class"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: mLR/options/predProb.title
+#: mLR/results/predProb.title
+#: mMLP/options/predProb.title
+#: mMLP/results/predProb.title
+msgid "Predicted Probability"
+msgstr ""
 
 #: mMF/options/pmmk.title
 msgid "Predictive Mean Matching (PMM) steps"
 msgstr "予測平均マッチング（PMM）のステップ"
 
 #: R/mmlp.b.R
+#: mLR/results/coeffTable.columns.title
 #: mMLP/results/importanceTable.columns.title
+#: mROC/results/rocTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
 #: mUI/results/stat/uistat.columns.title
 #: mUI/results/stat/mcistat.columns.title
 #: mUI/results/stat/intstat.columns.title
+#: mUI/results/stat/rocTable.columns.title
 msgid "Predictor"
 msgstr "予測変数"
 
@@ -1549,9 +2905,49 @@ msgstr "予測変数の重要度チャート"
 msgid "Predictors"
 msgstr "予測変数"
 
-#: R/mui.b.R
+#: mSRV/options/rocPredictors.title
+#: mSRV/ui[1][0].label
+msgid "Predictors (ROC)"
+msgstr ""
+
+#: mUI/results/stat/mcistat.columns.title
 msgid "Prevalence"
 msgstr "有病率"
+
+#: R/mpca.b.R
+msgid "Principal Component"
+msgstr ""
+
+#: package/analyses/mPCA.title
+#: package/analyses/mPCA.menuTitle
+#: mPCA/options.title
+#: mPCA/ui.title
+#: mPCA/results.title
+msgid "Principal Component Analysis"
+msgstr ""
+
+#: package/datasets/PCAbloodcells.description
+msgid "Principal Component Analysis (PCA) demonstration"
+msgstr ""
+
+#: package/analyses/mPCA.description
+#: mPCA/options.description.main
+msgid ""
+"Principal Component Analysis (PCA). Note that parallel analysis and "
+"cross-validation use a hardcoded random seed (42) for reproducibility."
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Probability Model"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Probability Models"
+msgstr ""
+
+#: mSRV/results/coxSection/coxAssumpTable.title
+msgid "Proportional Hazards Assumption (Schoenfeld Residuals Test)"
+msgstr ""
 
 #: mUI/options/isProp.title
 #: mUI/results/stat/intstat.title
@@ -1572,8 +2968,28 @@ msgid "Purpose of Calculation"
 msgstr "計算の目的"
 
 #: R/mmf.b.R
-msgid "PVU - proportion of variance unexplained 1-R² (for Continuous variables);"
-msgstr "PVU（未説明分散比率）　連続変数に対する未説明な分散の割合（1−R²）"
+msgid "PVU"
+msgstr ""
+
+#: mSRV/options/palBrewer.title
+msgid "Qualitative Palette"
+msgstr ""
+
+#: mPCA/results/cos2Table.title
+msgid "Quality of representation (Cos²)"
+msgstr ""
+
+#: mPCA/options/cos2Heatmap.title
+msgid "Quality of representation (Cos²) heatmap"
+msgstr ""
+
+#: mPCA/results/cos2Heatmap.title
+msgid "Quality of representation (Cos²) Heatmap"
+msgstr ""
+
+#: mPCA/options/cos2Table.title
+msgid "Quality of representation (Cos²) table"
+msgstr ""
 
 #: mPWR/options/r2_predictor.title
 #: mPWR/ui[1]/r2_predictor.label
@@ -1584,9 +3000,54 @@ msgstr "他の共変量による予測変数 X の決定係数（‭R²）"
 msgid "Rank"
 msgstr "ランク"
 
+#: mLR/options/refLevel.title
+#: mLR/ui[0][0]/refLevel.label
 #: mUI/options/refval.title
 msgid "Reference level"
 msgstr "基準レベル"
+
+#: R/mlr.b.R
+msgid "Reference level: {ref}"
+msgstr ""
+
+#: package/analyses/mROC.menuSubgroup
+#: package/analyses/mMLP.menuSubgroup
+#: package/analyses/mLR.menuSubgroup
+#: package/analyses/mSRV.menuSubgroup
+#: mLR/options.menuSubgroup
+#: mMLP/options.menuSubgroup
+#: mROC/options.menuSubgroup
+#: mSRV/options.menuSubgroup
+msgid "Regression & Classification"
+msgstr ""
+
+#: mPCA/ui[3][0][3].label
+msgid "Regression Model & Validation"
+msgstr ""
+
+#: mPCA/results/regTable.title
+msgid "Regression Model Performance (K-fold Cross-Validation)"
+msgstr ""
+
+#: mPCA/options/regTable.title
+msgid "Regression model quality with K-fold CV"
+msgstr ""
+
+#: mPCA/results/rocPlot.title
+msgid "Regression Model ROC Curve (Full Dataset)"
+msgstr ""
+
+#: mPCA/options/rocPlot.title
+msgid "Regression ROC plot"
+msgstr ""
+
+#: mLR/options/lasso_penalty.title
+msgid "Regularization Penalty Choice"
+msgstr ""
+
+#: mLR/ui[1]/lasso_penalty.label
+msgid "Regularization Penalty Optimization"
+msgstr ""
 
 #: mPWR/ui[1]/n_ratio.label
 msgid "Relative size of group 2 to group 1"
@@ -1596,6 +3057,8 @@ msgstr "サイズ比（グループ2／グループ1）"
 msgid "ReLU"
 msgstr "ランプ関数"
 
+#: mMOUT/options/remOut.title
+#: mMOUT/results/remOut.title
 #: mOUT/options/remOut.title
 #: mOUT/results/remOut.title
 msgid "Remove outliers"
@@ -1605,6 +3068,31 @@ msgstr "外れ値を除去"
 msgid "Reorder"
 msgstr "並べ替え"
 
+#: R/mlr.b.R
+msgid "Rep {k}-Fold CV (x{r})"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Repeated CV"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Repeated Stratified CV"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "Repeated Stratified CV (AUC ="
+msgstr ""
+
+#: mLR/options/partition/repeated_kfold.title
+msgid "Repeated Stratified K-Fold CV"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Representation Quality (Cos²)"
+msgstr ""
+
 #: mMF/options/setseed.title
 msgid "Reproducible random number generation (RNG) results"
 msgstr "再現可能な乱数生成（RNG）の結果"
@@ -1613,20 +3101,51 @@ msgstr "再現可能な乱数生成（RNG）の結果"
 msgid "Right"
 msgstr "右"
 
-#: mMF/options/seed.title
-msgid "RNG seed value"
-msgstr "乱数シード値"
+#: mSRV/options/kmTable.title
+msgid "Risk-at-time Table"
+msgstr ""
 
+#: R/mmout.b.R
+msgid "Robust"
+msgstr ""
+
+#: mMOUT/options/method/robust.title
+msgid "Robust Mahalanobis distance (MCD)"
+msgstr ""
+
+#: R/mmout.b.R
+msgid ""
+"Robust MCD covariance estimation failed (possibly due to small sample size "
+"or collinearity). Classic Mahalanobis distance was used instead."
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Robust Outlier"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Robust Squared Mahalanobis Distance"
+msgstr ""
+
+#: mLR/options/show_roc.title
 #: mMLP/options/show_roc.title
 msgid "ROC Analysis"
 msgstr "ROC分析"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
 #: mMLP/results/rocPlot.title
 msgid "ROC Analysis Comparison"
 msgstr "ROC分析比較"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "ROC Analysis for {class}"
+msgstr ""
+
+#: mLR/options/roc_unit.title
 #: mMLP/options/roc_unit.title
+#: mPCA/options/roc_unit.title
 msgid "ROC Axis Units"
 msgstr "ROC軸単位"
 
@@ -1651,21 +3170,53 @@ msgstr "ROC分類"
 msgid "ROC comparison"
 msgstr "ROC比較"
 
+#: mLR/results/rocPlot.title
+msgid "ROC Curve Comparison"
+msgstr ""
+
 #: mUI/options/isROC.title
 #: mUI/results/plotsROC.title
 msgid "ROC curves"
 msgstr "ROC曲線"
+
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "ROC Curves"
+msgstr ""
 
 #: package/datasets/BCModelsROCEstimation.description
 #: package/datasets/CHDModelsROCEstimation.description
 msgid "ROC estimation for binomial logistis models demonstration"
 msgstr "二項ロジスティックモデルにおけるROC推定のデモ"
 
-#: mROC/ui[1].label
+#: mROC/ui[2].label
 msgid "ROC graphs"
 msgstr "ROCグラフ"
 
+#: mSRV/options/rocPlot.title
+msgid "ROC Plot"
+msgstr ""
+
+#: mLR/results/rocTable.title
+#: mMLP/results/rocTable.title
+#: mPCA/results/rocTable.title
+#: mUI/results/stat/rocTable.title
+msgid "ROC Quantitative Evaluation"
+msgstr ""
+
+#: mROC/results/rocTable.title
+msgid "ROC Results"
+msgstr ""
+
+#: mROC/options/showTable.title
+#: mROC/ui[1].label
+#: mROC/ui[1]/showTable.label
+msgid "ROC Tables"
+msgstr ""
+
+#: mLR/options/roc_x.title
 #: mMLP/options/roc_x.title
+#: mPCA/options/roc_x.title
 msgid "ROC X-axis Coordinate"
 msgstr "ROC X軸座標"
 
@@ -1677,40 +3228,128 @@ msgstr "サンプルサイズ (N)"
 msgid "Sample Size (N1)"
 msgstr "サンプルサイズ (N1)"
 
+#: R/mcor.b.R
+msgid "Sample size is too small to compute Classical Partial Correlation."
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Sample size is too small to compute Classical Semi-Partial Correlation."
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Sample size is too small to compute Graphical Lasso."
+msgstr ""
+
 #: mPWR/options/n_ratio.title
 msgid "Sample size ratio (N<sub>2</sub>/N<sub>1</sub>)"
 msgstr "サンプルサイズ 比（N<sub>2</sub>/N<sub>1</sub>）"
 
+#: mLR/ui[4].label
+#: mMLP/ui[4].label
+#: mMOUT/ui[3].label
 #: mUI/ui[2].label
 msgid "Save"
 msgstr "保存"
+
+#: mMOUT/options/outDist.title
+#: mMOUT/results/outDist.title
+msgid "Saved Mahalanobis distances"
+msgstr ""
+
+#: mMOUT/options/outFlag.title
+#: mMOUT/results/outFlag.title
+msgid "Saved outlier flags"
+msgstr ""
+
+#: mCOR/options/glassoPlotScale.title
+msgid "Scale node size by centrality"
+msgstr ""
 
 #: mCOR/options/clPos.title
 msgid "Scale position"
 msgstr "スケールの位置"
 
+#: mSRV/options/showSchoenfeldPlot.title
+msgid "Schoenfeld Residuals Plot"
+msgstr ""
+
+#: mSRV/results/coxSection/schoenfeldPlots.title
+msgid "Schoenfeld Residuals Plots"
+msgstr ""
+
+#: mPCA/options/screePlot.title
+msgid "Scree plot with parallel analysis"
+msgstr ""
+
+#: mPCA/results/screePlot.title
+msgid "Scree Plot with Parallel Analysis"
+msgstr ""
+
 #: package/datasets/SDIROCclassification.name
 msgid "SDI ROC classification"
 msgstr "SDIのROC分類"
 
-#: R/mui.b.R
-msgid "Se - sensitivity of the positive and negative classifications TP/(TP+FN)"
-msgstr "感度 (Se)　陽性のものを正しく陽性と予測する割合 TP/(TP+FN)"
+#: mROC/results/rocTable.columns.title
+#: mUI/results/stat/mcistat.columns.title
+msgid "Se"
+msgstr ""
+
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "SE"
+msgstr ""
+
+#: mLR/options/seed.title
+#: mLR/ui[2]/seed.label
+#: mMF/options/seed.title
+#: mMLP/options/seed.title
+#: mMLP/ui[2]/seed.label
+#: mPCA/options/seed.title
+#: mPCA/ui[1][0]/seed.label
+msgid "Seed number"
+msgstr ""
 
 #: mCOR/options/selgroup.title
 #: mROC/options/selgroup.title
 msgid "Select group"
 msgstr "グループ選択"
 
+#: mLR/options/selgroup.title
+#: mPCA/options/selgroup.title
+msgid "Select group for filtering"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Selected Factors: {factors}; Selected Covariates: {covs}"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Selection"
+msgstr ""
+
+#: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
+#: R/msrv.b.R
 #: R/mui.b.R
+#: mPCA/results/regTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
 msgid "Sensitivity"
 msgstr "感度"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
 msgid "Sensitivity (%)"
 msgstr "感度（％）"
+
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
+#: mUI/results/stat/rocTable.columns.title
+msgid "Sensitivity (Se)"
+msgstr ""
 
 #: R/mmlp.b.R
 msgid "Sensitivity / Recall"
@@ -1724,15 +3363,35 @@ msgstr "不確実区間内の感度"
 msgid "Sensitivity outside UI >"
 msgstr "不確実区間外の感度"
 
+#: mLR/options/multiclass_roc_type/separate.title
+msgid "Separate"
+msgstr ""
+
+#: mMLP/options/multiclass_roc_type/separate.title
+msgid "Separate Plots (Class-Specific)"
+msgstr ""
+
+#: mLR/options/palBrewer/Set1.title
+#: mMLP/options/palBrewer/Set1.title
+#: mPCA/options/palBrewer/Set1.title
 #: mROC/options/palBrewer/Set1.title
+#: mSRV/options/palBrewer/Set1.title
 msgid "Set1"
 msgstr "セット1"
 
+#: mLR/options/palBrewer/Set2.title
+#: mMLP/options/palBrewer/Set2.title
+#: mPCA/options/palBrewer/Set2.title
 #: mROC/options/palBrewer/Set2.title
+#: mSRV/options/palBrewer/Set2.title
 msgid "Set2"
 msgstr "セット2"
 
+#: mLR/options/palBrewer/Set3.title
+#: mMLP/options/palBrewer/Set3.title
+#: mPCA/options/palBrewer/Set3.title
 #: mROC/options/palBrewer/Set3.title
+#: mSRV/options/palBrewer/Set3.title
 msgid "Set3"
 msgstr "セット3"
 
@@ -1740,6 +3399,46 @@ msgstr "セット3"
 #: mCOR/options/plotMetL/shade.title
 msgid "Shade"
 msgstr "シェード"
+
+#: mLR/options/show_roc_cut.title
+#: mLR/ui[3]/show_roc/show_roc_cut.label
+#: mMLP/options/show_roc_cut.title
+#: mMLP/ui[3]/show_roc/show_roc_cut.label
+#: mPCA/options/show_roc_cut.title
+#: mPCA/ui[3][0]/rocPlot/show_roc_cut.label
+#: mUI/options/show_roc_cut.title
+msgid "Show Cut-off Thresholds"
+msgstr ""
+
+#: mCOR/options/glassoLabels.title
+msgid "Show edge labels"
+msgstr ""
+
+#: mLR/ui[3]/show_formula.label
+msgid "Show Mathematical Model Formula"
+msgstr ""
+
+#: mLR/options/show_formula.title
+msgid "Show Model Formula"
+msgstr ""
+
+#: mMOUT/options/outind.title
+msgid "Show outliers indices table"
+msgstr ""
+
+#: mLR/ui[3]/show_roc.label
+msgid "Show ROC Analysis curves"
+msgstr ""
+
+#: mLR/options/show_roc_table.title
+#: mLR/ui[3]/show_roc/show_roc_table.label
+#: mMLP/options/show_roc_table.title
+#: mMLP/ui[3]/show_roc/show_roc_table.label
+#: mPCA/options/show_roc_table.title
+#: mPCA/ui[3][0]/rocPlot/show_roc_table.label
+#: mUI/options/show_roc_table.title
+msgid "Show ROC Table"
+msgstr ""
 
 #: R/mmlp.b.R
 #: mMLP/options/activation/sigmoid.title
@@ -1750,6 +3449,10 @@ msgstr "シグモイド関数"
 #: mCOR/options/signif.title
 msgid "Significance"
 msgstr "有意性"
+
+#: mMOUT/options/alpha.title
+msgid "Significance level (alpha)"
+msgstr ""
 
 #: R/mcor.b.R
 msgid "Simultaneous multiple correlation comparisons using {n} method"
@@ -1763,38 +3466,58 @@ msgstr "最短距離法"
 msgid "Slanted Titles"
 msgstr "タイトル斜め表示"
 
-#: R/mui.b.R
-msgid "SNPV - standardized negative predictive value of the negative class"
-msgstr "SNPV　標準化陰性予測値"
+#: mUI/results/stat/mcistat.columns.title
+msgid "SNPV"
+msgstr ""
 
 #: mMLP/options/activation/softmax.title
 #: mMLP/options/out_activation/softmax.title
 msgid "Softmax"
 msgstr "ソフトマックス関数"
 
-#: R/mui.b.R
-msgid "Sp - specificity of the positive and negative classifications TN/(TN+FN)"
-msgstr "特異度 (Sp)　陰性のものを正しく陰性と予測する割合 TN/(TN+FN)"
+#: R/mpca.b.R
+msgid "Source"
+msgstr ""
+
+#: mROC/results/rocTable.columns.title
+#: mUI/results/stat/mcistat.columns.title
+msgid "Sp"
+msgstr ""
 
 #: mCOR/options/method/spearman.title
 msgid "Spearman (ρ)"
 msgstr "スピアマン (ρ)"
 
-#: mCOR/results/matrix.columns.title
-#: mCOR/results/matrix.columns.content
-msgid "Spearman's Rho"
-msgstr "スピアマンのロー"
+#: R/mcor.b.R
+msgid "Spearman's ρ"
+msgstr ""
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
+#: mLR/options/roc_x/spec.title
 #: mMLP/options/roc_x/spec.title
+#: mPCA/options/roc_x/spec.title
+#: mPCA/results/regTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
 msgid "Specificity"
 msgstr "特異性"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
 msgid "Specificity (%)"
 msgstr "特異性（％）"
+
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
+#: mUI/results/stat/rocTable.columns.title
+msgid "Specificity (Sp)"
+msgstr ""
 
 #: mUI/options/uiSp.title
 msgid "Specificity inside UI <"
@@ -1816,14 +3539,43 @@ msgstr "曲線分割"
 msgid "Splitted ROC by predictors"
 msgstr "予測変数別ROC曲線"
 
-#: R/mui.b.R
-msgid "SPPV - standardized positive predictive value of the positive class"
-msgstr "SPPV　標準化陽性予測値"
+#: mUI/results/stat/mcistat.columns.title
+msgid "SPPV"
+msgstr ""
+
+#: mCOR/options/glassoLayout/spring.title
+msgid "Spring"
+msgstr ""
 
 #: mCOR/options/plotMetU/square.title
 #: mCOR/options/plotMetL/square.title
 msgid "Square"
 msgstr "四角"
+
+#: mLR/results/coeffTable.columns.title
+msgid "Standardized Beta"
+msgstr ""
+
+#: mSRV/results/coxSection/coxFitTable.columns.title
+msgid "Statistic"
+msgstr ""
+
+#: mSRV/options/status.title
+#: mSRV/ui[0][1].label
+msgid "Status / Event Variable"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Status variable must be factor, character, or numeric."
+msgstr ""
+
+#: mLR/results/coeffTable.columns.title
+msgid "Std. Error"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
+msgid "Strength"
+msgstr ""
 
 #: mROC/options/cmpDeLong/succ.title
 msgid "Successively"
@@ -1833,9 +3585,53 @@ msgstr "逐次的"
 msgid "Sum"
 msgstr "合計"
 
+#: R/mpwr.b.R
+#: mPWR/ui[1]/alt/superior.title
+msgid "superiority"
+msgstr ""
+
+#: R/mpwr.b.R
+#: mPWR/options/design/survival.title
+msgid "Survival / Log-Rank Test"
+msgstr ""
+
+#: package/analyses/mSRV.title
+#: package/analyses/mSRV.menuTitle
+#: mSRV/options.title
+#: mSRV/ui.title
+#: mSRV/results.title
+msgid "Survival Analysis"
+msgstr ""
+
+#: package/datasets/SurvivalAnalysisKaggle.description
+msgid "Survival Analysis (Kaplan-Meier and Cox regression) demonstration"
+msgstr ""
+
+#: package/analyses/mSRV.description
+msgid ""
+"Survival Analysis including Kaplan-Meier curves, log-rank tests, Cox "
+"proportional hazards regression, and time-dependent ROC curves."
+msgstr ""
+
+#: package/datasets/SurvivalAnalysisKaggle.name
+msgid "Survival Analysis Kaggle"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Survival Probability"
+msgstr ""
+
+#: mSRV/options/kmType/survival.title
+msgid "Survival probability"
+msgstr ""
+
 #: mCOR/ui[4].label
 msgid "Tables"
 msgstr "表"
+
+#: mPCA/ui[2].label
+msgid "Tables and Visualizations"
+msgstr ""
 
 #: mPWR/options/alt.title
 #: mPWR/ui[1]/alt.label
@@ -1846,9 +3642,17 @@ msgstr "両側・片側"
 msgid "Tanh"
 msgstr "双曲線正弦関数"
 
+#: mSRV/results/coxSection/coxFitTable.columns.title
+msgid "Test"
+msgstr ""
+
 #: mOUT/options/norm.title
 msgid "Test for normality"
 msgstr "正規性の検定"
+
+#: mSRV/options/coxAssump.title
+msgid "Test Proportional Hazards Assumption"
+msgstr ""
 
 #: mPWR/options/k_tested.title
 #: mPWR/ui[1]/k_tested.label
@@ -1868,23 +3672,39 @@ msgid ""
 "The classifying variable '{}' does not have exactly two levels; ROC "
 "classification can only be performed on classifying variables with two "
 "levels."
+msgstr "分類変数 '{}' のが2水準になっていません。ROC分類は、水準数が2の分類変数に対してのみ実行できます。"
+
+#: R/mcor.b.R
+msgid ""
+"The correlation matrix was not positive definite and was adjusted to the "
+"nearest positive definite matrix to calculate Graphical Lasso."
 msgstr ""
-"分類変数 '{}' のが2水準になっていません。ROC分類は、水準数が2の分類変数に対し"
-"てのみ実行できます。"
+
+#: R/mlr.b.R
+msgid ""
+"The dataset has too few complete cases to perform logistic regression "
+"(minimum 15 cases required)."
+msgstr ""
 
 #: R/mmlp.b.R
 msgid "The dataset has too few complete cases to train the neural network."
-msgstr ""
-"データセット内の完全ケースが少なすぎるため、ニューラルネットワークの訓練がで"
-"きません。"
+msgstr "データセット内の完全ケースが少なすぎるため、ニューラルネットワークの訓練ができません。"
 
 #: R/mmlp.b.R
-msgid "The dependent variable must have exactly 2 levels (binary classification)."
-msgstr "目的変数は2水準でなければなりません（二値分類）。"
+msgid "The dependent variable must have at least 2 levels."
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Theoretical Chi-Square Quantiles"
+msgstr ""
 
 #: package/datasets/UncertainInterval(UI).description
 msgid "Three-Way threshold determination in test results"
 msgstr "テスト結果における3方向閾値決定"
+
+#: R/mpca.b.R
+msgid "Threshold (K ="
+msgstr ""
 
 #: mOUT/options/tholdZS.title
 #: mOUT/options/tholdmZS.title
@@ -1896,6 +3716,45 @@ msgstr "Z得点の閾値"
 msgid "Threshold on Youden"
 msgstr "ユーデン指数に基づく閾値"
 
+#: mSRV/results/kmSection/kmRiskTable.columns.title
+msgid "Time"
+msgstr ""
+
+#: mSRV/results/rocSection/rocTable.columns.title
+msgid "Time Point t"
+msgstr ""
+
+#: mSRV/options/elapsed.title
+#: mSRV/ui[0][0].label
+msgid "Time Variable (elapsed time)"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Time variable must be numeric."
+msgstr ""
+
+#: mSRV/options/showRoc.title
+#: mSRV/ui[5].label
+#: mSRV/results/rocSection.title
+msgid "Time-dependent ROC Analysis"
+msgstr ""
+
+#: mSRV/results/rocSection/rocPlot.title
+msgid "Time-dependent ROC Curves"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Time-dependent ROC Curves (t = {time})"
+msgstr ""
+
+#: mSRV/results/rocSection/rocTable.title
+msgid "Time-dependent ROC Results"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Too few observations after removing missing values (minimum 5 required)."
+msgstr ""
+
 #: R/mmf.b.R
 msgid "Total number of missing entries {}"
 msgstr "欠損値 {} の総数"
@@ -1905,22 +3764,47 @@ msgstr "欠損値 {} の総数"
 msgid "Total predictors"
 msgstr "総予測変数"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
+msgid "Train"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Train Acc (%)"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Train AUC"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
 #: mMLP/results/statsTable.columns.title
 msgid "Training"
 msgstr "訓練"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
-msgid "Training (AUC = "
-msgstr "訓練 (AUC = "
+#: R/mpca.b.R
+msgid "Training (AUC ="
+msgstr ""
 
-#: mMLP/results/infoTable.columns.title
+#: R/mmlp.b.R
 msgid "Training Accuracy (%)"
 msgstr "訓練正解率（%）"
+
+#: mCOR/options/glassoType.title
+msgid "Tuning parameter"
+msgstr ""
 
 #: R/mpwr.b.R
 msgid "two one-tailed"
 msgstr "両片側"
+
+#: R/mpca.b.R
+msgid "Two-dimensional Variable Projection (Biplot)"
+msgstr ""
 
 #: mUI/options/UImethod/TGR.title
 #: mUI/results/plotsTGR.title
@@ -1956,25 +3840,9 @@ msgstr "二項ロジスティックモデルのUI"
 msgid "Uncertain Interval (UI)"
 msgstr "不確実区間 (UI)"
 
-#: R/mui.b.R
-msgid ""
-"Uncertain Interval (UI) is placed around the point of intersection between "
-"the two distributions with and without the targeted state."
-msgstr ""
-"不確実な区間 (UI) は、標的状態（例：疾患）がある分布とない分布の交差点の周囲"
-"に配置される区間です。"
-
 #: package/datasets/UIforbinomiallogistismodels.description
 msgid "Uncertain Interval estimation for binomial logistis models"
 msgstr "二項ロジスティックモデルにおける「不確実区間」の推定"
-
-#: R/mui.b.R
-msgid ""
-"Uncertain Interval is considered to be a range of test scores that is "
-"inconclusive and does not warrant a right decision."
-msgstr ""
-"不確実区間は、テストスコアの範囲で、結果が決定的でなく、適切な判断を下すこと"
-"ができないと見なされる区間です。"
 
 #: mUI/options/polygon.title
 msgid "Uncertainty interval polygon"
@@ -1988,6 +3856,15 @@ msgstr "不確実区間のポリゴン"
 msgid "Univariate outliers identification and removal"
 msgstr "単変量外れ値の特定と除去"
 
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "Upper 95% CI"
+msgstr ""
+
+#: mSRV/results/rocSection/rocTable.columns.title
+msgid "Upper CI"
+msgstr ""
+
 #: R/mout.b.R
 msgid "Upper fence"
 msgstr "フェンス上限"
@@ -1996,7 +3873,7 @@ msgstr "フェンス上限"
 msgid "Upper part"
 msgstr "上部"
 
-#: R/mui.b.R
+#: mUI/results/stat/uistat.columns.title
 msgid "Upper threshold"
 msgstr "上限値"
 
@@ -2004,18 +3881,49 @@ msgstr "上限値"
 msgid "User Defined"
 msgstr "ユーザー定義"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "Val"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Val / CV AUC"
+msgstr ""
+
+#: R/mlr.b.R
 #: R/mmlp.b.R
 #: mMLP/results/statsTable.columns.title
 msgid "Validation"
 msgstr "検証"
 
+#: mLR/options/partition.title
+#: mLR/ui[2]/partition.label
+msgid "Validation Method"
+msgstr ""
+
+#: mLR/ui[2].label
 #: mMLP/ui[2].label
 msgid "Validation Settings"
 msgstr "検証設定"
 
+#: mLR/results/infoTable.columns.title
+#: mMLP/results/infoTable.columns.title
+msgid "Value"
+msgstr ""
+
+#: mPCA/results/kmeansTable.columns.title
+msgid "Value / Match count"
+msgstr ""
+
+#: R/mpca.b.R
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
 #: mMF/results/estim/mars.columns.title
 #: mMF/results/imput/errors.columns.title
 #: mOUT/results/stat/outstat.columns.title
+#: mPCA/results/loadingsTable.columns.title
+#: mPCA/results/cos2Table.columns.title
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+#: mSRV/results/coxSection/coxAssumpTable.columns.title
 msgid "Variable"
 msgstr "変数"
 
@@ -2035,10 +3943,17 @@ msgstr "変数番号をコンマ区切りで入力"
 msgid "Variable to impute"
 msgstr "補完対象変数"
 
+#: mMOUT/options/vars.title
+#: mMOUT/ui[0][0].label
 #: mOUT/options/vars.title
 #: mOUT/ui[0][0].label
+#: mPCA/options/vars.title
 msgid "Variables"
 msgstr "変数"
+
+#: mPCA/ui[0][0].label
+msgid "Variables for PCA"
+msgstr ""
 
 #: mPWR/options/var_ratio.title
 #: mPWR/ui[1]/var_ratio.label
@@ -2053,7 +3968,11 @@ msgstr "ウォード法（D2）"
 msgid "Ward´s Linkage"
 msgstr "ウォード法"
 
-#: mMLP/results/infoTable.columns.title
+#: R/mpca.b.R
+msgid "Warning: Grouping variable must have at least 2 levels."
+msgstr ""
+
+#: R/mmlp.b.R
 msgid "Weight Decay"
 msgstr "重み減衰"
 
@@ -2081,7 +4000,9 @@ msgstr "他の変数に欠損値がある場合"
 msgid "with observed data on other variables"
 msgstr "他の変数に観測データがある場合"
 
+#: mLR/ui[3]/show_roc/roc_x.label
 #: mMLP/ui[3]/show_roc/roc_x.label
+#: mPCA/ui[3][0]/rocPlot/roc_x.label
 msgid "X-axis Coordinate"
 msgstr "X軸座標"
 
@@ -2096,6 +4017,15 @@ msgstr "ユーデン指数最大（特異度・感度）"
 #: mOUT/options/outlcheck/ZS.title
 msgid "Z-score"
 msgstr "Z得点"
+
+#: mLR/results/coeffTable.columns.title
+msgid "z-value"
+msgstr ""
+
+#: mPWR/options/alpha.title
+#: mPWR/ui[1]/alpha.label
+msgid "α (type I error rate)"
+msgstr ""
 
 #, fuzzy
 #~ msgid "Continuous predictors"

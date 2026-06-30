@@ -3,8 +3,8 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-06-27 20:08+0000\n"
 "Last-Translator: Jonathon Love <jon@thon.cc>\n"
-"Language-Team: Hebrew <https://hosted.weblate.org/projects/jamovi/module-jys/"
-"he/>\n"
+"Language-Team: Hebrew "
+"<https://hosted.weblate.org/projects/jamovi/module-jys/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -13,9 +13,13 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Weblate 2026.7.dev0\n"
 
+#: R/mlr.b.R
+msgid "(Intercept)"
+msgstr ""
+
 #: R/mroc.b.R
-msgid " [{prc}% CI]"
-msgstr " [{prc}% רווח סמך]"
+msgid "[{prc}% CI]"
+msgstr ""
 
 #: R/mcor.b.R
 msgid "{ciWidth}% CI Lower"
@@ -24,6 +28,10 @@ msgstr "רווח סמך תחתון {ciWidth}%"
 #: R/mcor.b.R
 msgid "{ciWidth}% CI Upper"
 msgstr "רווח סמך עליון {ciWidth}%"
+
+#: R/mlr.b.R
+msgid "{k}-Fold CV"
+msgstr ""
 
 #: R/mui.b.R
 #, fuzzy
@@ -34,6 +42,7 @@ msgstr "{varType} הצעת החלטה"
 msgid "{varType} with imputed values"
 msgstr "{varType} עם ערכים מוחלפים"
 
+#: R/mmout.b.R
 #: R/mout.b.R
 msgid "{varType} without outliers"
 msgstr "{varType} ללא חריגות"
@@ -46,30 +55,411 @@ msgstr "**קשר הנתונים הנצפים של המשתנה"
 msgid "*connection of a variable's missingness indicator"
 msgstr "*חיבור של מחוון הנעלמות של משתנה"
 
-#: R/mout.b.R
-#: R/mui.b.R
-msgid ""
-"*p<0.05 - The hypothesis of normal distribution was rejected by the "
-"Shapiro-Wilk test"
-msgstr "*p<0.05 – השערת ההתפלגות הנורמלית נדחתה על ידי מבחן שפירו–וילק"
-
 #: R/mmf.b.R
 msgid "*pairwise complete observations"
 msgstr "*תצפיות זוגיות מושלמות"
 
-#: mPWR/results/powerTable.columns.title
-msgid "&alpha;"
-msgstr "&alpha;"
-
-#: mPWR/options/alpha.title
-#: mPWR/ui[1]/alpha.label
-msgid "&alpha; (type I error rate)"
-msgstr "&alpha; (אחוז השגיאה מהסוג הראשון)"
-
 #: mCOR/ui[4][0]/tables/ci/ciWidth.suffix
-#: mROC/ui[1]/ciAUC/ciWidth.suffix
+#: mROC/ui[2]/ciAUC/ciWidth.suffix
+#: mSRV/ui[5]/showRoc/rocCI/rocWidth.suffix
 msgid "%"
 msgstr "%"
+
+#: R/mpca.b.R
+msgid "% of variance"
+msgstr ""
+
+#: mPCA/results/varianceTable.columns.title
+msgid "% of Variance"
+msgstr ""
+
+#: mMOUT/results/stat.columns.title
+msgid "% Outliers"
+msgstr ""
+
+#: R/mout.b.R
+#: R/mui.b.R
+msgid ""
+"<b>*p<0.05</b> - The hypothesis of normal distribution was rejected by the "
+"Shapiro-Wilk test"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Alpha (α)</b> is the significance level, representing the maximum "
+"acceptable probability of committing a Type I error (detecting a false "
+"positive difference when none actually exists)."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Balance</b> - balance between correct and incorrect classified "
+"(TP+TN)/(FP+FN)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>BETWEENNESS</b>: number of shortest paths between all pairs of nodes that "
+"pass through this node; shows its importance as a \"bridge\" or transit "
+"point."
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Calculated parameter</b>:"
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>CCR</b> - Correct Classification Rate or accuracy of the positive and "
+"negative classifications (TP+TN)/(TN+FP+FN+TP)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Centrality metrics</b> (different measures of a node's importance in the "
+"network)."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>CLOSENESS</b>: inverse of the sum of shortest path lengths to all other "
+"nodes; shows how central a node is in terms of distance."
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Clusters (k1/k2)</b> represent the required number of clusters (e.g., "
+"clinics or schools) per group. This is adjusted for similarity among "
+"subjects within the same cluster using the Intraclass Correlation "
+"Coefficient (<b>ICC</b>) and average cluster size via the Design Effect."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Concordance</b> - C-Statistic or AUC. The probability that a randomly "
+"chosen subject with the condition is correctly ranked higher than a randomly "
+"chosen subject without the condition"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "<b>Correlation method</b>: {method}"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Design</b>:"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Cohen's d"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Cohen's w"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: correlation coefficient (r)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Eta-squared (η²)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Hazard Ratio (HR)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: Odds Ratio"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "<b>Effect size measure</b>: R-squared change (f²)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Effect Size</b> measures the standardized magnitude of the difference or "
+"association (e.g., Cohen's d for means, or correlation coefficient). Unlike "
+"p-values, it is independent of the sample size."
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Events (N1)</b> represents the required number of target events (e.g., "
+"deaths or failures) to achieve the desired power. In survival analysis, "
+"statistical power is driven by the number of events rather than the total "
+"number of subjects."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>EXPECTED INFLUENCE</b>: sum of signed weights of connected edges; shows "
+"the node's net impact on the network, considering positive and negative "
+"relations."
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>Explanatory</b> - variable corresponding to MAR with minimal "
+"p<sub>value</sub>."
+msgstr ""
+
+#: R/mcor.b.R
+msgid "<b>Hₐ</b> is negative correlation"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "<b>Hₐ</b> is positive correlation"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Hazard Ratio (HR)</b> represents the ratio of event rates between the two "
+"groups. A Hazard Ratio of 1 indicates no difference in risk, while values "
+"further from 1 represent stronger effects."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Hazard Ratio (HR)</b> represents the ratio of the hazard rates "
+"corresponding to the conditions described by two levels of an explanatory "
+"variable (Cox, 1972). It indicates the relative risk of event occurrence per "
+"unit change in the predictor. An <b>HR > 1</b> indicates an increased hazard "
+"(higher risk of the event), while an <b>HR < 1</b> indicates a decreased "
+"hazard (protective effect). <b>Lower/Upper 95% CI</b> represent the "
+"confidence interval for the Hazard Ratio."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid ""
+"<b>Hidden Layers</b>: network architecture (hidden layer sizes, hidden / "
+"output activation functions)"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid ""
+"<b>Hold-out Accuracy</b>: classification accuracy on the hold-out validation "
+"dataset."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid ""
+"<b>K-Fold CV Accuracy</b>: average classification accuracy across "
+"cross-validation folds."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Kaplan-Meier estimator</b> (Kaplan & Meier, 1958) is a non-parametric "
+"statistic used to estimate the survival function from lifetime data, "
+"accounting for censored observations. <b>Median survival</b> is the "
+"estimated time at which 50% of the subjects have experienced the event "
+"(survival probability drops to 0.5). <b>Lower/Upper 95% CI</b> represent the "
+"95% confidence interval limits for this median survival time."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Likelihood Ratio</b>, <b>Wald</b>, and <b>Score (Log-rank)</b> tests "
+"assess the global null hypothesis that all regression coefficients (beta) in "
+"the model are equal to zero. Statistically significant p-values (p < 0.05) "
+"indicate that the predictors collectively improve the model fit relative to "
+"a null model without covariates."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Log-rank (Mantel-Cox) test</b> is a non-parametric hypothesis test that "
+"compares the survival distributions of two or more independent groups. It "
+"evaluates the null hypothesis that there is no difference in survival curves "
+"between groups. <b>Chi-square</b> is the test statistic based on observed "
+"vs. expected events, and the <b>p-value</b> indicates the statistical "
+"significance of the differences under the null hypothesis."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>LR-</b> - Negative Likelihood Ratio P(-|D+))/(P(-|D-)). The probability "
+"of a person with the condition receiving a negative classification / "
+"probability of a person without the condition receiving a negative "
+"classification"
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>LR+</b> - Positive Likelihood Ratio (P(+|D+))/(P(+|D-)) The probability "
+"of a person with the condition receiving a positive classification / "
+"probability of a person without the condition receiving a positive "
+"classification"
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>MAR</b> - missing at random (if each p<sub>value</sub> is significant, "
+"there is evidence the data is MAR);"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "<b>Max Iterations</b>: maximum number of training epochs."
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>MCAR</b> - missing completely at random (if the p<sub>value</sub> is not "
+"significant, there is evidence the data is MCAR)."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Method</b>: Classical Partial Correlation (no regularization/L1 penalty). "
+"Computes the linear association between each pair of variables while "
+"controlling for all other variables in the dataset, producing a fully "
+"connected network."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Method</b>: Classical Semi-Partial Correlation (no regularization/L1 "
+"penalty). Computes the linear association between each pair of variables "
+"while controlling for all other variables in the dataset from only the "
+"second variable, yielding an asymmetric network."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Method</b>: Graphical Lasso (GLASSO) with a manual penalty parameter (rho "
+"= {rho}). GLASSO uses L1 regularization to shrink weak partial correlations "
+"to exactly zero, producing a sparse network."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>Method</b>: Graphical Lasso (GLASSO) with Extended Bayesian Information "
+"Criterion (EBIC) tuning parameter selection (gamma = {gamma}). GLASSO uses "
+"L1 regularization to shrink weak partial correlations to exactly zero, "
+"producing a sparse network."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>More Certain Interval (MCI)</b> is interval outside the Uncertain "
+"Interval and divide into low and high parts."
+msgstr ""
+
+#: R/mmf.b.R
+msgid "<b>MSE</b> - mean squared error (for Continuous variables);"
+msgstr ""
+
+#: R/mmf.b.R
+msgid "<b>N</b> - number of missing values;"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>N1</b> and <b>N2</b> represent the required number of subjects in Group 1 "
+"and Group 2. The ratio of their sizes is determined by the specified "
+"allocation ratio."
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>N1</b> represents the required sample size (total number of subjects in "
+"the single group, or total number of pairs for paired comparisons)."
+msgstr ""
+
+#: R/mui.b.R
+msgid "<b>NPV</b> - Negative Predictive Value of the negative class TN/(TN+FN)"
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>PFC</b> - proportion of falsely classified (for Nominal and Ordinal "
+"variables);"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"<b>Power</b> is the probability of correctly detecting a statistically "
+"significant difference when a true difference exists in the population (1 - "
+"Type II error rate, or the probability of avoiding a false negative)."
+msgstr ""
+
+#: R/mui.b.R
+msgid "<b>PPV</b> - Positive Predictive Value of the positive class TP/(TN+FN)"
+msgstr ""
+
+#: R/mmf.b.R
+msgid ""
+"<b>PVU</b> - proportion of variance unexplained 1-R² (for Continuous "
+"variables);"
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Schoenfeld residuals test</b> evaluates the proportional hazards (PH) "
+"assumption of the Cox model for each covariate individually and globally. It "
+"tests whether the effect of the covariates is constant over time. A "
+"statistically significant <b>p-value (p < 0.05)</b> indicates a violation of "
+"the PH assumption, meaning the hazard ratio changes over time."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Se</b> - sensitivity of the positive and negative classifications "
+"TP/(TP+FN)"
+msgstr ""
+
+#: R/mui.b.R
+msgid "<b>SNPV</b> - standardized negative predictive value of the negative class"
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Sp</b> - specificity of the positive and negative classifications "
+"TN/(TN+FN)"
+msgstr ""
+
+#: R/mui.b.R
+msgid "<b>SPPV</b> - standardized positive predictive value of the positive class"
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"<b>STRENGTH</b>: sum of absolute weights of connected edges; shows how "
+"strongly a node is directly connected to its neighbors."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Time-dependent ROC</b> analysis (Heagerty et al., 2000) evaluates the "
+"predictive accuracy of continuous markers for time-to-event outcomes at a "
+"specific time point <i>t</i>, classifying patients into event-occurring or "
+"event-free states. <b>AUC</b> (Area Under the Curve) measures the "
+"discriminative ability (ranging from 0.5 to 1.0). <b>Cut-off</b> represents "
+"the optimal threshold determined by the Youden index (J = Sensitivity + "
+"Specificity - 1)."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "<b>Training Accuracy</b>: classification accuracy on the training dataset."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Uncertain Interval (UI)</b> is placed around the point of intersection "
+"between the two distributions with and without the targeted state."
+msgstr ""
+
+#: R/mui.b.R
+msgid ""
+"<b>Uncertain Interval</b> is considered to be a range of test scores that is "
+"inconclusive and does not warrant a right decision."
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "<b>Weight Decay</b>: L2 regularization penalty parameter."
+msgstr ""
 
 #: R/mmf.b.R
 msgid "<h2>Help</h2><div>Please select complete and incomplete variables</div>"
@@ -83,9 +473,18 @@ msgstr "0 – אוטומטי"
 msgid "0 ="
 msgstr "0 ="
 
+#: mMOUT/options/alpha/0.01.title
+msgid "0.01 (standard)"
+msgstr ""
+
+#: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
+#: R/msrv.b.R
+#: mLR/options/roc_x/1spec.title
 #: mMLP/options/roc_x/1spec.title
+#: mPCA/options/roc_x/1spec.title
 msgid "1 - Specificity"
 msgstr "סגוליות - 1"
 
@@ -94,6 +493,9 @@ msgstr "סגוליות - 1"
 msgid "10,5"
 msgstr "10,5"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
 msgid "100 - Specificity (%)"
 msgstr "100 – סגוליות (%)"
@@ -105,6 +507,14 @@ msgstr "3.0 (standard)"
 #: mOUT/options/tholdmZS/3.5.title
 msgid "3.5 (standard)"
 msgstr "3.5 (סטנדרטי)"
+
+#: mLR/results/coeffTable.columns.title
+msgid "95% OR CI Lower"
+msgstr ""
+
+#: mLR/results/coeffTable.columns.title
+msgid "95% OR CI Upper"
+msgstr ""
 
 #: mCOR/results/matrix.description
 msgid "a correlation matrix table"
@@ -122,19 +532,25 @@ msgstr "ניתוח מקדים של העוצמה הסטטיסטית"
 msgid "A Priori Power Analysis Results"
 msgstr "תוצאות הניתוח המקדים של העוצמה הסטטיסטית"
 
+#: mLR/options/palBrewer/Accent.title
+#: mMLP/options/palBrewer/Accent.title
+#: mPCA/options/palBrewer/Accent.title
 #: mROC/options/palBrewer/Accent.title
+#: mSRV/options/palBrewer/Accent.title
 msgid "Accent"
 msgstr "מודגש"
 
-#: R/mmlp.b.R
-#, fuzzy
-msgid "Actual"
-msgstr "נתון"
+#: mPCA/results/regTable.columns.title
+msgid "Accuracy"
+msgstr ""
 
 #: mMLP/results/matrixTable.columns.title
-#, fuzzy
-msgid "Actual \\ Predicted"
-msgstr "אמיתי \\ מוערך"
+msgid "Actual Class"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Adjusted Rand Index (ARI)"
+msgstr ""
 
 #: mCOR/options/clustMet.title
 msgid "Agglomeration method"
@@ -160,6 +576,14 @@ msgstr "חלופי"
 msgid "an array of MARs"
 msgstr "מערך של חסרים באקראי"
 
+#: mPCA/ui[3].label
+msgid "Analysis by Groups"
+msgstr ""
+
+#: mSRV/options/rocTime.title
+msgid "Analysis Time Point t"
+msgstr ""
+
 #: mCOR/options/plotOrder/AOE.title
 msgid "Angular order eigenvectors"
 msgstr "וקטורים עצמיים בסדר זוויתי"
@@ -170,22 +594,48 @@ msgstr "וקטורים עצמיים בסדר זוויתי"
 msgid "ANOVA / ANCOVA (F-Test)"
 msgstr "ANOVA / ANCOVA (מבחן F)"
 
+#: R/mroc.b.R
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/regTable.columns.title
+#: mPCA/results/rocTable.columns.title
+#: mROC/results/rocTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
+#: mUI/results/stat/rocTable.columns.title
+msgid "AUC"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Average (Mean)"
+msgstr ""
+
+#: mPWR/options/cluster_size.title
+#: mPWR/ui[1]/cluster_size.label
+msgid "Average cluster size (m)"
+msgstr ""
+
 #: mCOR/options/clustMet/average.title
 msgid "Average Linkage (UPGMA)"
 msgstr "הצמדה ממוצעת (UPGMA)"
 
+#: mLR/ui[3]/show_roc/roc_unit.label
 #: mMLP/ui[3]/show_roc/roc_unit.label
+#: mPCA/ui[3][0]/rocPlot/roc_unit.label
 #, fuzzy
 msgid "Axis Units"
 msgstr "יחידות ציר"
 
-#: R/mui.b.R
+#: R/mlr.b.R
+msgid "Backward (AIC)"
+msgstr ""
+
+#: mLR/options/method/backward.title
+msgid "Backward Stepwise Elimination (AIC)"
+msgstr ""
+
+#: mUI/results/stat/mcistat.columns.title
 msgid "Balance"
 msgstr "איזון"
-
-#: R/mui.b.R
-msgid "Balance - balance between correct and incorrect classified (TP+TN)/(FP+FN)"
-msgstr "איזון – איזון בין סיווג נכון ולא נכון ‭(TP+TN)/(FP+FN)"
 
 #: mPWR/options/base_prob.title
 #: mPWR/ui[1]/base_prob.label
@@ -209,6 +659,10 @@ msgstr "בנימיני–הוכברג (1995)"
 msgid "Benjamini-Yekutieli (2001)"
 msgstr "בנימיני–יקותיאלי (2001)"
 
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
+msgid "Betweenness"
+msgstr ""
+
 #: mUI/options/model/binormal.title
 #, fuzzy
 msgid "Binormal"
@@ -226,6 +680,10 @@ msgstr "הדגמת סיווג ROC מרובה לתאי דם"
 msgid "Bonferroni (1961)"
 msgstr "בונפרוני (1961)"
 
+#: mMOUT/options/plotType/both.title
+msgid "Both Plots"
+msgstr ""
+
 #: mCOR/options/clPos/b.title
 msgid "Bottom"
 msgstr "תחתון"
@@ -235,6 +693,12 @@ msgstr "תחתון"
 msgid "Boxplots with outliers"
 msgstr "תרשימי קופסות עם חריגות"
 
+#: mLR/options/palBrewer.title
+#: mLR/ui[3]/show_roc/palBrewer.label
+#: mMLP/options/palBrewer.title
+#: mMLP/ui[3]/show_roc/palBrewer.label
+#: mPCA/options/palBrewer.title
+#: mPCA/ui[3][0]/rocPlot/palBrewer.label
 #: mROC/options/palBrewer.title
 msgid "Brewer's qualitative palette"
 msgstr "לוח הצבעים האיכותני של ברואר"
@@ -244,21 +708,22 @@ msgid "Calculated fences for outliers"
 msgstr "גדרות המחושבות לחריגות"
 
 #: R/mpwr.b.R
-msgid "Calculated parameter: "
-msgstr "פרמטר מחושב: "
-
-#: R/mpwr.b.R
 msgid "Calculation error:"
 msgstr "שגיאת החישוב:"
 
-#: R/mui.b.R
-#, fuzzy
+#: R/mpwr.b.R
 msgid ""
-"CCR - Correct Classification Rate or accuracy of the positive and negative "
-"classifications (TP+TN)/(TN+FP+FN+TP)"
+"Calculations for survival log-rank test are based on Schoenfeld's asymptotic "
+"approximation. N1 represents the total number of events required."
 msgstr ""
-"CCR – שיעור הסיווג הנכון או דיוק של הסיווגים החיוביים והשליליים "
-"(TP+TN)/(TN+FP+FN+TP)"
+
+#: mUI/results/stat/mcistat.columns.title
+msgid "CCR"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoHubTable.title
+msgid "Centrality metrics (hub markers)"
+msgstr ""
 
 #: mCOR/options/clustMet/centroid.title
 msgid "Centroid Linkage (UPGMC)"
@@ -269,11 +734,33 @@ msgstr "הצמדת המרכז (UPGMC)"
 msgid "CHD Models ROC Estimation"
 msgstr "מודלי CHD ROC הערכה"
 
+#: mSRV/results/logRankTable.columns.title
+#: mSRV/results/coxSection/coxAssumpTable.columns.title
+msgid "Chi-Square"
+msgstr ""
+
+#: mMOUT/results/stat.columns.title
+msgid "Chi-Square Cut-off"
+msgstr ""
+
 #: R/mpwr.b.R
 #: mPWR/options/design/chisq.title
 #, fuzzy
 msgid "Chi-square Goodness-of-Fit / Independence (Chi-square Test)"
 msgstr "טובות התאמה של כי בריבוע / עצמאות (מבחן כי בריבוע)"
+
+#: mMOUT/options/plotType/qq.title
+#: mMOUT/results/qqplot.title
+msgid "Chi-Square Q-Q Plot"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Chi-Square Q-Q Plot ({method})"
+msgstr ""
+
+#: mROC/results/rocTable.columns.title
+msgid "CI"
+msgstr ""
 
 #: mCOR/results/matrix.columns.content
 msgid "CI Lower"
@@ -291,10 +778,47 @@ msgstr "רווח סמך עליון"
 msgid "CI width"
 msgstr "רוחב רווח הסמך"
 
+#: mSRV/options/rocWidth.title
+msgid "CI Width"
+msgstr ""
+
 #: mCOR/options/plotMetU/circle.title
 #: mCOR/options/plotMetL/circle.title
+#: mCOR/options/glassoLayout/circle.title
 msgid "Circle"
 msgstr "עיגול"
+
+#: R/mmout.b.R
+msgid "Classic Outlier"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Classical"
+msgstr ""
+
+#: mMOUT/options/method/classic.title
+msgid "Classical Mahalanobis distance"
+msgstr ""
+
+#: mCOR/options/netMethod/classic.title
+msgid "Classical Partial Correlation"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Classical Partial Correlation Network"
+msgstr ""
+
+#: mCOR/options/netMethod/semiclassic.title
+msgid "Classical Semi-Partial Correlation"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Classical Semi-Partial Correlation Network"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Classical Squared Mahalanobis Distance"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
@@ -316,6 +840,20 @@ msgstr "סיווג החסרים לחלוטין באקראי (MCAR)"
 msgid "Classifying variable"
 msgstr "משתנה מסווג"
 
+#: mLR/options/forestClip.title
+#: mLR/ui[3]/showForest/forestClip.label
+msgid "Clip very large Odds Ratios"
+msgstr ""
+
+#: mLR/options/forestClipThreshold.title
+#: mLR/ui[3]/showForest/forestClipThreshold.label
+msgid "Clipping threshold"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
+msgid "Closeness"
+msgstr ""
+
 #: mROC/options/theBest/bestC.title
 #, fuzzy
 msgid "Closest Best"
@@ -326,9 +864,30 @@ msgstr "הטוב ביותר הקרוב"
 msgid "Closest Best (Sp, Se)"
 msgstr "הטוב ביותר הקרוב (Sp, Se)"
 
+#: R/mcor.b.R
+msgid "Cluster {i}"
+msgstr ""
+
+#: mPWR/options/crt.title
+#: mPWR/ui[1]/crt.label
+msgid "Cluster / Multilevel Randomized Trial (CRT/MST)"
+msgstr ""
+
 #: mCOR/options/numClust.title
 msgid "Clusters"
 msgstr "אשכולות"
+
+#: mPWR/results/powerTable.columns.title
+msgid "Clusters 1"
+msgstr ""
+
+#: mPWR/results/powerTable.columns.title
+msgid "Clusters 2"
+msgstr ""
+
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "Coefficient (Estimate)"
+msgstr ""
 
 #: mCOR/options/plotMetU/color.title
 #: mCOR/options/plotMetL/color.title
@@ -338,6 +897,37 @@ msgstr "צבע"
 #: mCOR/options/clustCol.title
 msgid "Colored Clusters"
 msgstr "אשכולות צבועים"
+
+#: mLR/options/multiclass_roc_type/combined.title
+msgid "Combined"
+msgstr ""
+
+#: mMLP/options/multiclass_roc_type/combined.title
+msgid "Combined Plot (Single Axes)"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "Combined ROC - Cross-Validation"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "Combined ROC - Training"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "Combined ROC - Validation"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "comp.)"
+msgstr ""
+
+#: mLR/results/coeffTable.columns.title
+msgid "Comparison Level"
+msgstr ""
 
 #: mCOR/options/clustMet/complete.title
 msgid "Complete Linkage"
@@ -352,28 +942,34 @@ msgstr "משתנים מושלמים"
 msgid "Complete variables in plots"
 msgstr "משתנים מושלמים בתרשימים"
 
-#: R/mui.b.R
+#: mPCA/results/varianceTable.columns.title
+msgid "Component"
+msgstr ""
+
+#: mPCA/results/varianceTable.title
+msgid "Component Eigenvalues and Explained Variance"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Component Number"
+msgstr ""
+
+#: mUI/results/stat/mcistat.columns.title
 #, fuzzy
 msgid "Concordance"
 msgstr "התאמה"
-
-#: R/mui.b.R
-#, fuzzy
-msgid ""
-"Concordance - C-Statistic or AUC. The probability that a random chosen "
-"patient with the condition is correctly ranked higher than a randomly chosen "
-"patient without the condition"
-msgstr ""
-"התאמה - C-סטטיסטיקה או AUC. ההסתברות שחולה אקראי עם המצב יסווג בצורה נכונה "
-"יותר מחולה אקראי ללא המצב"
 
 #: mMLP/results/text.title
 #: mROC/results/text.title
 msgid "Conditions"
 msgstr "תנאים"
 
+#: mLR/results/text.title
+msgid "Conditions & Diagnostics"
+msgstr ""
+
 #: mROC/options/ciAUC.title
-#: mROC/ui[1]/ciAUC.label
+#: mROC/ui[2]/ciAUC.label
 msgid "Confidence interval"
 msgstr "רווח סמך"
 
@@ -382,15 +978,27 @@ msgstr "רווח סמך"
 msgid "Confidence interval (Pearson only)"
 msgstr "רווח סמך (רק פירסון)"
 
+#: mSRV/options/rocCI.title
+msgid "Confidence Interval (ROC)"
+msgstr ""
+
 #: mCOR/options/ciWidth.title
 msgid "Confidence interval width"
 msgstr "רוחב רווח הסמך"
+
+#: mSRV/options/kmCI.title
+msgid "Confidence Intervals (KM)"
+msgstr ""
 
 #: mMLP/options/show_matrix.title
 #: mMLP/results/matrixTable.title
 #, fuzzy
 msgid "Confusion Matrix"
 msgstr "מטריצת בלבול"
+
+#: R/mpca.b.R
+msgid "Contingency Matrix (Clusters vs Groups):"
+msgstr ""
 
 #: mCOR/options/hyp/corr.title
 msgid "Correlated"
@@ -433,6 +1041,10 @@ msgstr "הדגמת אשכול המתאם"
 msgid "Correlation matrix"
 msgstr "מטריצת מתאמים"
 
+#: R/mcor.b.R
+msgid "Correlation matrix contains missing values. Cannot compute Graphical Lasso."
+msgstr ""
+
 #: mCOR/results/text.title
 msgid "Correlations"
 msgstr "מתאמים"
@@ -441,11 +1053,48 @@ msgstr "מתאמים"
 msgid "Correlations between variables"
 msgstr "מתאמים בין משתנים"
 
+#: R/mpca.b.R
+msgid "Cos²"
+msgstr ""
+
+#: mMLP/results/matrixTable.columns.title
+msgid "Count"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Covariates"
+msgstr ""
+
+#: mLR/options/covs.title
+#: mLR/ui[0][1].label
 #: mMLP/options/covs.title
 #: mMLP/ui[0][1].label
 #, fuzzy
 msgid "Covariates (Continuous Predictors)"
 msgstr "משתנים משפיעים (מנבאים רציפים)"
+
+#: mSRV/options/covariates.title
+#: mSRV/ui[0][3].label
+msgid "Covariates (Cox regression)"
+msgstr ""
+
+#: mSRV/results/coxSection/coxForestPlot.title
+msgid "Cox Hazard Ratios Forest Plot"
+msgstr ""
+
+#: mSRV/results/coxSection/coxFitTable.title
+msgid "Cox Model Fit Statistics"
+msgstr ""
+
+#: mSRV/options/showCox.title
+#: mSRV/ui[4].label
+#: mSRV/results/coxSection.title
+msgid "Cox Proportional Hazards Regression"
+msgstr ""
+
+#: mSRV/results/coxSection/coxCoefTable.title
+msgid "Cox Regression Coefficients"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
@@ -457,21 +1106,87 @@ msgstr "אובדן צלבי"
 msgid "Cross-Validation"
 msgstr "אימות צלבי"
 
+#: mLR/options/cv_folds.title
+#: mLR/ui[2]/cv_folds.label
 #: mMLP/options/cv_folds.title
 #: mMLP/ui[2]/cv_folds.label
 #, fuzzy
 msgid "Cross-Validation Folds (K)"
 msgstr "K-קפל של אימות צלבי"
 
+#: mLR/options/cv_repeats.title
+msgid "Cross-Validation Repeats"
+msgstr ""
+
+#: mLR/ui[2]/cv_repeats.label
+msgid "Cross-Validation Repeats (R)"
+msgstr ""
+
+#: mPCA/results/varianceTable.columns.title
+msgid "Cumulative %"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Cumulative Hazard"
+msgstr ""
+
+#: mSRV/options/kmType/hazard.title
+msgid "Cumulative hazard"
+msgstr ""
+
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
+msgid "Curve"
+msgstr ""
+
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
+#: mROC/results/rocTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
+#: mUI/results/stat/rocTable.columns.title
+msgid "Cut-off"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "CV"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "CV Acc (%)"
+msgstr ""
+
 #: mMF/results/estim/mcar.columns.title
 msgid "D²"
 msgstr "D²"
 
+#: mLR/options/palBrewer/Dark2.title
+#: mMLP/options/palBrewer/Dark2.title
+#: mPCA/options/palBrewer/Dark2.title
 #: mROC/options/palBrewer/Dark2.title
+#: mSRV/options/palBrewer/Dark2.title
 msgid "Dark2"
 msgstr "חשוך2"
 
+#: package/analyses/mMF.menuSubgroup
+#: package/analyses/mOUT.menuSubgroup
+#: package/analyses/mMOUT.menuSubgroup
+#: mMF/options.menuSubgroup
+#: mMOUT/options.menuSubgroup
+#: mOUT/options.menuSubgroup
+msgid "Data Preprocessing"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "Dataset restricted to group:"
+msgstr ""
+
+#: mLR/options/roc_unit/decimal.title
 #: mMLP/options/roc_unit/decimal.title
+#: mPCA/options/roc_unit/decimal.title
 #, fuzzy
 msgid "Decimal (0 to 1)"
 msgstr "עשרוני (0 עד 1)"
@@ -490,28 +1205,52 @@ msgstr "דרגות חופש (df)"
 msgid "Degrees of freedom"
 msgstr "דרגות חופש"
 
+#: mLR/options/dep.title
+#: mLR/ui[0][0].label
 #: mMLP/options/dep.title
 #: mMLP/ui[0][0].label
 #, fuzzy
 msgid "Dependent Variable (Target)"
 msgstr "משתנה תלות (יעד)"
 
+#: R/mlr.b.R
+msgid "Dependent variable must have at least two levels."
+msgstr ""
+
 #: mPWR/options/design.title
 msgid "Design"
 msgstr "מערך"
 
-#: R/mpwr.b.R
-msgid "Design: "
-msgstr "מערך: "
+#: mSRV/results/logRankTable.columns.title
+#: mSRV/results/coxSection/coxFitTable.columns.title
+#: mSRV/results/coxSection/coxAssumpTable.columns.title
+msgid "df"
+msgstr ""
+
+#: package/analyses/mUI.menuSubgroup
+#: mUI/options.menuSubgroup
+msgid "Diagnostics"
+msgstr ""
 
 #: mUI/options/UImethod/noUI.title
 msgid "Dichotomization (no uncertainty)"
 msgstr "דיכוטומיזציה (ללא חוסר ודאות)"
 
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
 #: mROC/options/direction.title
+#: mROC/results/rocTable.columns.title
 #: mUI/results/stat/uistat.columns.title
+#: mUI/results/stat/rocTable.columns.title
 msgid "Direction"
 msgstr "כיוון"
+
+#: R/mmout.b.R
+#: mMOUT/options/plotType/dd.title
+#: mMOUT/results/ddplot.title
+msgid "Distance-Distance Plot"
+msgstr ""
 
 #: mUI/options/model.title
 msgid "Distribution model"
@@ -520,6 +1259,14 @@ msgstr "מודל ההתפלגות"
 #: mROC/options/dotline.title
 msgid "Dotted line"
 msgstr "קו נקודות"
+
+#: mCOR/options/glassoType/ebic.title
+msgid "EBIC"
+msgstr ""
+
+#: mCOR/options/glassoGamma.title
+msgid "EBIC gamma"
+msgstr ""
 
 #: mPWR/options/calc/es.title
 msgid "Effect size"
@@ -530,38 +1277,39 @@ msgstr "גודל האפקט"
 msgid "Effect Size"
 msgstr "גודל האפקט"
 
-#: R/mpwr.b.R
-msgid "Effect size measure: Cohen's d"
-msgstr "מדד גודל האפקט: d של כהן"
+#: R/mpca.b.R
+#: mPCA/results/varianceTable.columns.title
+msgid "Eigenvalue"
+msgstr ""
 
-#: R/mpwr.b.R
-#, fuzzy
-msgid "Effect size measure: Cohen's w"
-msgstr "מדידת גודל אפקט: Cohen's w"
+#: R/mpca.b.R
+msgid "Eigenvalues and Parallel Analysis"
+msgstr ""
 
-#: R/mpwr.b.R
-msgid "Effect size measure: correlation coefficient (r)"
-msgstr "מדד גודל האפקט: מקדם המתאם (r)"
+#: mLR/options/method/elastic.title
+msgid "ElasticNet (L1 + L2 Regularization)"
+msgstr ""
 
-#: R/mpwr.b.R
-#, fuzzy
-msgid "Effect size measure: Eta-squared (η²)"
-msgstr "מדידת גודל אפקט: Eta-squared (η²)"
+#: R/mlr.b.R
+msgid "ElasticNet (α={alpha}, {penalty})"
+msgstr ""
 
-#: R/mpwr.b.R
-#, fuzzy
-msgid "Effect size measure: Odds Ratio"
-msgstr "מדידת גודל אפקט: Odds Ratio"
+#: mLR/ui[1]/elastic_alpha.label
+msgid "ElasticNet Alpha (0=Ridge, 1=LASSO)"
+msgstr ""
 
-#: R/mpwr.b.R
-#, fuzzy
-msgid "Effect size measure: R-squared change (f²)"
-msgstr "אמידת גודל האפקט: שינוי R-רבוע (f²)"
+#: mLR/options/elastic_alpha.title
+msgid "ElasticNet Alpha (L1 Ratio)"
+msgstr ""
 
 #: mCOR/options/plotMetU/ellipse.title
 #: mCOR/options/plotMetL/ellipse.title
 msgid "Ellipse"
 msgstr "אליפסה"
+
+#: R/mmout.b.R
+msgid "Empirical Squared Mahalanobis Distances"
+msgstr ""
 
 #: R/mmf.b.R
 msgid "Empty data table"
@@ -572,40 +1320,127 @@ msgstr "טבלת הנתונים הריקים"
 msgid "Emtpy"
 msgstr "ריק"
 
+#: R/mpwr.b.R
+#: mPWR/ui[1]/alt/equivalent.title
+msgid "equivalence"
+msgstr ""
+
+#: mPWR/options/margin.title
+#: mPWR/ui[1]/margin.label
+msgid "Equivalence / Non-Inferiority / Superiority margin"
+msgstr ""
+
 #: R/mmlp.b.R
-#, fuzzy
-msgid "Error during neural network fitting: "
-msgstr "שגיאה בעת התאמת רשת נוירונים: "
+msgid "Error during neural network fitting:"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Error in Classical Partial Correlation calculation: {}"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Error in Classical Semi-Partial Correlation calculation: {}"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Error in Graphical Lasso calculation: {}"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Error occurred while calculating PCA. Please check your variables."
+msgstr ""
+
+#: mLR/results/coeffTable.columns.title
+msgid "Estimate (B)"
+msgstr ""
 
 #: mMF/results/imput/errors.title
 #, fuzzy
 msgid "Estimated out-of-bag (OOB) imputation error"
 msgstr "שגיאת חישוב מחוץ לקופסה (OOB) מוערכת"
 
+#: mCOR/options/netMethod.title
+msgid "Estimation method"
+msgstr ""
+
 #: mMF/options/fullmars.title
 #: mMF/results/estim/fMARtab.title
 msgid "Evaluation of MAR explainers"
 msgstr "הערכת מסבירי החסרים באקראי"
+
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+msgid "Events"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
+msgid "Expected Influence"
+msgstr ""
 
 #: mMF/results/estim/mars.columns.title
 #: mMF/results/estim/fMARtab.template.columns.title
 msgid "Explanatory"
 msgstr "מסביר"
 
-#: R/mmf.b.R
-msgid "Explanatory - variable corresponding to MAR with minimal p<sub>value</sub>."
-msgstr "מסביר – משתנה המתכתב עם החסרים באקראי בעל ערך p מינימלי."
+#: package/analyses/mCOR.menuSubgroup
+#: package/analyses/mPCA.menuSubgroup
+#: mCOR/options.menuSubgroup
+#: mPCA/options.menuSubgroup
+msgid "Exploratory & Factor Analysis"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
 msgid "F1-Score"
 msgstr "F1-ציון"
 
+#: mPCA/results/loadingsTable.title
+msgid "Factor Loadings"
+msgstr ""
+
+#: mPCA/options/loadingsHeatmap.title
+msgid "Factor loadings heatmap"
+msgstr ""
+
+#: mPCA/results/loadingsHeatmap.title
+msgid "Factor Loadings Heatmap"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Factor Loadings Matrix"
+msgstr ""
+
+#: mPCA/options/loadingsTable.title
+msgid "Factor loadings table"
+msgstr ""
+
+#: mLR/options/factors.title
+#: mLR/ui[0][2].label
 #: mMLP/options/factors.title
 #: mMLP/ui[0][2].label
 #, fuzzy
 msgid "Factors (Categorical Predictors)"
 msgstr "גורמים (משתנים קטגוריאליים)"
+
+#: mLR/options/method.title
+#: mLR/ui[1]/method.label
+msgid "Feature Selection Method"
+msgstr ""
+
+#: mLR/ui[1].label
+msgid "Feature Selection Settings"
+msgstr ""
+
+#: mLR/options/group.title
+#: mLR/ui[0][3].label
+#: mPCA/options/group.title
+#: mPCA/ui[0][2].label
+msgid "Filter Variable"
+msgstr ""
+
+#: mCOR/options/group.title
+#: mCOR/ui[0][1].label
+msgid "Filtering Variable"
+msgstr ""
 
 #: mCOR/options/plotOrder/FPC.title
 msgid "First principal component"
@@ -615,38 +1450,105 @@ msgstr "הרכיב העיקרי הראשון"
 msgid "Flag significant correlations"
 msgstr "סימון המתאמים המובהקים"
 
+#: R/mpca.b.R
+#: mPCA/results/regTable.columns.title
+msgid "Fold"
+msgstr ""
+
+#: mSRV/options/coxForest.title
+msgid "Forest Plot of Hazard Ratios"
+msgstr ""
+
+#: R/mlr.b.R
+#: mLR/results/forestPlot.title
+msgid "Forest Plot of Odds Ratios"
+msgstr ""
+
+#: mLR/options/showForest.title
+#: mLR/ui[3]/showForest.label
+msgid "Forest plot of Odds Ratios"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Forward (AIC)"
+msgstr ""
+
+#: mLR/options/method/forward.title
+msgid "Forward Stepwise Selection (AIC)"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Full dataset used in analysis"
+msgstr ""
+
 #: package.description
-#, fuzzy
 msgid ""
 "Graphic extensions of the functionality of popular data analysis methods: "
 "cluster tree of correlating variables, multifactor adaptive correlation "
 "matrix, multidimensional ROC classification curves, missing data estimation "
-"and imputation, outliers identificatioon and removal etc."
+"and imputation, outliers identification and removal etc."
 msgstr ""
-"הרחבות גרפיות של תכונות הפונקציונליות של שיטות ניתוח נתונים פופולריות: עץ "
-"קלאסטר של משתנים מתאמים, מטריצת קורלציה אדפטיבית רב-פרמטרית, עקומות ROC "
-"רב-ממדיות, הערכת נתונים חסרים והשלמה, זיהוי והסרת חריגים וכו'"
+
+#: mCOR/options/netMethod/glasso.title
+msgid "Graphical Lasso (GLASSO)"
+msgstr ""
 
 #: R/mout.b.R
+#: mMOUT/results/stat.columns.title
+#: mMOUT/results/oind.columns.title
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+#: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "Group"
 msgstr "קבוצה"
 
-#: mCOR/options/group.title
-#: mCOR/ui[0][1].label
+#: R/mmout.b.R
+msgid ""
+"Group '{grp}': Robust MCD covariance estimation failed (possibly due to "
+"small sample size or collinearity). Classic Mahalanobis distance was used "
+"instead."
+msgstr ""
+
+#: mSRV/ui[3].label
+msgid "Group Comparison"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Group Projection in PCA Space"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Group:"
+msgstr ""
+
+#: mMOUT/options/group.title
+#: mMOUT/ui[0][1].label
 #: mOUT/options/group.title
 #: mOUT/ui[0][1].label
+#: mPCA/options/classVar.title
+#: mPCA/ui[0][1].label
 #: mROC/options/groups.title
 #: mROC/ui[0][2].label
+#: mSRV/options/group.title
+#: mSRV/ui[0][2].label
 msgid "Grouping Variable"
 msgstr "משתנה הקבצה"
 
-#: R/mcor.b.R
-msgid "Hₐ is negative correlation"
-msgstr "Hₐ הוא מתאם שלילי"
+#: mCOR/options/glassoLayout/groups.title
+msgid "Groups"
+msgstr ""
 
-#: R/mcor.b.R
-msgid "Hₐ is positive correlation"
-msgstr "Hₐ הוא מתאם חיובי"
+#: R/mpwr.b.R
+#: R/msrv.b.R
+msgid "Hazard Ratio"
+msgstr ""
+
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "Hazard Ratio (HR)"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Hazard Ratios (95% CI)"
+msgstr ""
 
 #: package/datasets/HIROCclassification.description
 msgid "Healthy/Ill ROC Classification demonstration"
@@ -677,7 +1579,7 @@ msgstr "מבנה שכבה נסתרת"
 msgid "Hidden Layer Structure (e.g., 8 or 10,5)"
 msgstr "מבנה שכבה נסתרת (לדוגמא, 8 או 10,5)"
 
-#: mMLP/results/infoTable.columns.title
+#: R/mmlp.b.R
 #, fuzzy
 msgid "Hidden Layers"
 msgstr "שכבות נסתרות"
@@ -685,6 +1587,12 @@ msgstr "שכבות נסתרות"
 #: mCOR/options/hclust.title
 msgid "Hierarchical clustering"
 msgstr "חלוקה לאשכולות בצורה מדרגית"
+
+#: R/mcor.b.R
+msgid ""
+"Hierarchical clustering cannot be computed because the correlation matrix "
+"contains missing (NA/NaN) values."
+msgstr ""
 
 #: mCOR/results/treeplot.title
 msgid "Hierarchical clustering tree"
@@ -694,21 +1602,38 @@ msgstr "עץ של חלוקה לאשכולות בצורה מדרגית"
 msgid "Hochberg (1988)"
 msgstr "הוכברג (1988)"
 
-#: mMLP/results/infoTable.columns.title
+#: R/mlr.b.R
+msgid "Hold-out ({split}%)"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Hold-out Acc (%)"
+msgstr ""
+
+#: R/mmlp.b.R
 #, fuzzy
 msgid "Hold-out Accuracy (%)"
 msgstr "דיוק אימות החזקה (%)"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
-#, fuzzy
-msgid "Hold-out Validation (AUC = "
-msgstr "אימות החזקה (AUC = "
+msgid "Hold-out Validation"
+msgstr ""
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
+msgid "Hold-out Validation (AUC ="
+msgstr ""
+
+#: mLR/options/partition/holdout.title
 #: mMLP/options/partition/holdout.title
 #, fuzzy
 msgid "Hold-out Validation Split"
 msgstr "חלוקת אימות החזקה"
 
+#: mLR/options/val_split.title
+#: mLR/ui[2]/val_split.label
 #: mMLP/options/val_split.title
 #: mMLP/ui[2]/val_split.label
 #, fuzzy
@@ -722,6 +1647,10 @@ msgstr "הולם (1979)"
 #: mCOR/options/adjust/hommel.title
 msgid "Hommel (1988)"
 msgstr "הומל (1988)"
+
+#: mCOR/options/glassoHub.title
+msgid "Hub markers table"
+msgstr ""
 
 #: mCOR/options/hyp.title
 msgid "Hypothesis"
@@ -784,9 +1713,18 @@ msgstr "מדגמים בלתי תלויים (ולץ׳)"
 msgid "Independent Samples (Wilcoxon)"
 msgstr "מדגמים בלתי תלויים (וילקוקסון)"
 
+#: mMOUT/results/oind.columns.title
+msgid "Indices"
+msgstr ""
+
 #: R/mout.b.R
 msgid "Indices (Rows)"
 msgstr "מדדים (שורות)"
+
+#: mPCA/options/biplot.title
+#: mPCA/results/biplot.title
+msgid "Influence vectors (Biplot)"
+msgstr ""
 
 #: mMF/results/estim/fplot.title
 #, fuzzy
@@ -802,6 +1740,10 @@ msgstr "גרף הזרמה-היציאה עבור דפוסי נתונים חסרי
 #, fuzzy
 msgid "Influx*"
 msgstr "Influx*"
+
+#: mPCA/results/text.title
+msgid "Info"
+msgstr ""
 
 #: mMLP/options/rang.title
 #: mMLP/ui[1]/rang.label
@@ -825,7 +1767,8 @@ msgid "Intersection"
 msgstr "חיתוך"
 
 #: mCOR/ui[4][0]/tables/ci/ciWidth.label
-#: mROC/ui[1]/ciAUC/ciWidth.label
+#: mROC/ui[2]/ciAUC/ciWidth.label
+#: mSRV/ui[5]/showRoc/rocCI/rocWidth.label
 msgid "Interval"
 msgstr "רווח"
 
@@ -837,6 +1780,11 @@ msgstr "שיטת קביעת הרווח"
 #: mUI/results/stat.title
 msgid "Intervals Estimation"
 msgstr "הערכת הרווחים"
+
+#: mPWR/options/icc.title
+#: mPWR/ui[1]/icc.label
+msgid "Intraclass correlation (ICC)"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
@@ -859,15 +1807,23 @@ msgstr "גדרות הטווח הבין רבעוני של טוקי"
 #: package/analyses/mROC.menuGroup
 #: package/analyses/mMF.menuGroup
 #: package/analyses/mOUT.menuGroup
+#: package/analyses/mMOUT.menuGroup
 #: package/analyses/mUI.menuGroup
 #: package/analyses/mPWR.menuSubgroup
 #: package/analyses/mMLP.menuGroup
+#: package/analyses/mLR.menuGroup
+#: package/analyses/mSRV.menuGroup
+#: package/analyses/mPCA.menuGroup
 #: mCOR/options.menuGroup
+#: mLR/options.menuGroup
 #: mMF/options.menuGroup
 #: mMLP/options.menuGroup
+#: mMOUT/options.menuGroup
 #: mOUT/options.menuGroup
+#: mPCA/options.menuGroup
 #: mPWR/options.menuSubgroup
 #: mROC/options.menuGroup
+#: mSRV/options.menuGroup
 #: mUI/options.menuGroup
 msgid "jYS"
 msgstr "jYS"
@@ -876,29 +1832,100 @@ msgstr "jYS"
 msgid "jYS Extended Functions"
 msgstr "פונקציות מורחבות של jYS"
 
+#: R/mmlp.b.R
+#: mLR/options/partition/kfold.title
 #: mMLP/options/partition/kfold.title
 #, fuzzy
 msgid "K-Fold Cross-Validation"
 msgstr "אימות חוצץ K-שסע"
 
 #: R/mmlp.b.R
-#, fuzzy
-msgid "K-Fold Cross-Validation (AUC = "
-msgstr "אימות חוצץ K-שסע (AUC = "
+msgid "K-Fold Cross-Validation (AUC ="
+msgstr ""
 
-#: mMLP/results/infoTable.columns.title
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "K-Fold CV"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "K-Fold CV (AUC ="
+msgstr ""
+
+#: R/mmlp.b.R
 #, fuzzy
 msgid "K-Fold CV Accuracy (%)"
 msgstr "דיוק אימות צלבי K-קפל ( %)"
+
+#: mPCA/options/regKFold.title
+#: mPCA/ui[3][0]/regKFold.label
+msgid "K-folds for CV"
+msgstr ""
+
+#: mPCA/ui[3][0][0].label
+msgid "K-Means «Blind» Clustering"
+msgstr ""
+
+#: mPCA/results/kmeansTable.title
+msgid "K-Means «Blind» Clustering vs Real Groups"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "K-Means Cluster"
+msgstr ""
+
+#: mPCA/options/kmeansTable.title
+msgid "K-Means contingency/ARI comparison"
+msgstr ""
+
+#: mSRV/results/kmSection/kmPlot.title
+msgid "Kaplan-Meier Curve"
+msgstr ""
+
+#: mSRV/ui[2].label
+msgid "Kaplan-Meier Curves & Estimation"
+msgstr ""
+
+#: mSRV/results/kmSection/kmRiskTable.title
+msgid "Kaplan-Meier Risk-at-time Table"
+msgstr ""
+
+#: mSRV/results/kmSection.title
+msgid "Kaplan-Meier Survival Analysis"
+msgstr ""
+
+#: mSRV/options/showKm.title
+msgid "Kaplan-Meier Survival Curves"
+msgstr ""
+
+#: mSRV/results/kmSection/kmSummaryTable.title
+msgid "Kaplan-Meier Survival Summary"
+msgstr ""
 
 #: mCOR/options/method/kendall.title
 msgid "Kendall (τ)"
 msgstr "קנדל (τ)"
 
-#: mCOR/results/matrix.columns.title
-#: mCOR/results/matrix.columns.content
+#: R/mcor.b.R
 msgid "Kendall Tau"
 msgstr "טאו של קנדל"
+
+#: mLR/options/lasso_penalty/1se.title
+msgid "Lambda 1SE (Most Sparse Model)"
+msgstr ""
+
+#: mLR/options/lasso_penalty/min.title
+msgid "Lambda Min (Minimum CV Error)"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "LASSO ({penalty})"
+msgstr ""
+
+#: mLR/options/method/lasso.title
+msgid "LASSO L1 Regularization"
+msgstr ""
 
 #: mMLP/options/show_curve.title
 #, fuzzy
@@ -913,6 +1940,8 @@ msgstr "ציר סגוליות של תבנית מדור קודם"
 msgid "Legend Box"
 msgstr "תיבת המקרא"
 
+#: mSRV/options/statusEvent.title
+#: mSRV/ui[0][1]/statusEvent.label
 #: mUI/results/stat/intstat.columns.title
 msgid "Level"
 msgstr "רמה"
@@ -927,16 +1956,85 @@ msgstr "רוחב הקו"
 msgid "Linear Regression (F-Test)"
 msgstr "רגרסיה ליניארית (מבחן F)"
 
+#: R/mpca.b.R
+msgid "Loading"
+msgstr ""
+
 #: mPWR/results/text.title
 #, fuzzy
 msgid "Log / Errors"
 msgstr "לוג / שגיאות"
+
+#: mLR/ui[3]/showForest/forestLog.label
+msgid "Log scale"
+msgstr ""
+
+#: mLR/options/forestLog.title
+msgid "Log scale for Odds Ratios"
+msgstr ""
+
+#: mSRV/results/logRankTable.title
+msgid "Log-rank Test (Group Comparison)"
+msgstr ""
+
+#: mSRV/options/showLogRank.title
+msgid "Log-rank Test for Group Comparison"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Log(OR)"
+msgstr ""
+
+#: package/analyses/mLR.title
+#: package/analyses/mLR.menuTitle
+#: mLR/options.title
+#: mLR/options.menuTitle
+#: mLR/ui.title
+#: mLR/results.title
+msgid "Logistic Regression"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/options/design/logistic.title
 #, fuzzy
 msgid "Logistic Regression (Wald Z-Test)"
 msgstr "רגרסיה לוגיסטית (מבחן Wald Z)"
+
+#: package/datasets/LogisticRegressionbloodcells.name
+msgid "Logistic Regression blood cells"
+msgstr ""
+
+#: package/datasets/LogisticRegressionbloodcells.description
+msgid "Logistic Regression demonstration"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Logistic Regression Model (Log-odds)"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Logistic Regression Predicted Class"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Logistic Regression Predicted Probability"
+msgstr ""
+
+#: package/analyses/mLR.description
+#: mLR/options.description.main
+msgid ""
+"Logistic Regression with feature selection. Note that cross-validation fold "
+"partitioning uses a hardcoded random seed (42) for reproducibility."
+msgstr ""
+
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "Lower 95% CI"
+msgstr ""
+
+#: mSRV/results/rocSection/rocTable.columns.title
+msgid "Lower CI"
+msgstr ""
 
 #: R/mout.b.R
 msgid "Lower fence"
@@ -946,39 +2044,37 @@ msgstr "הגדר התחתונה"
 msgid "Lower part"
 msgstr "החלק התחתון"
 
-#: R/mui.b.R
+#: mUI/results/stat/uistat.columns.title
 msgid "Lower threshold"
 msgstr "הסף התחתון"
 
-#: R/mui.b.R
-#, fuzzy
-msgid ""
-"LR- - Negative Likelihood Ratio P(-|D+))/(P(-|D-)). The probability of a "
-"person with the condition receiving a negative classification / probability "
-"of a person without the condition receiving a negative classification"
+#: mUI/results/stat/mcistat.columns.title
+msgid "LR-"
 msgstr ""
-"LR- - יחס הוסתברות שלילית P(-|D+))/(P(-|D-)). ההסתברות של אדם עם המצב לקבל "
-"סיווג שלילי / הסתברות של אדם ללא המצב לקבל סיווג שלילי"
 
-#: R/mui.b.R
-#, fuzzy
-msgid ""
-"LR+ - Positive Likelihood Ratio (P(+|D+))/(P(+|D-)) The probability of a "
-"person with the condition receiving a positive classification / probability "
-"of a person without the condition receiving a positive classification"
+#: mUI/results/stat/mcistat.columns.title
+msgid "LR+"
 msgstr ""
-"LR+ - מדד סבירות חיובי (P(+|D+))/(P(+|D-)) ההסתברות שאדם עם המצב יקבל סיווג "
-"חיובי / ההסתברות שאדם ללא המצב יקבל סיווג חיובי"
+
+#: R/mlr.b.R
+msgid "Manual"
+msgstr ""
+
+#: mLR/options/method/manual.title
+msgid "Manual (Use All Predictors)"
+msgstr ""
 
 #: mCOR/options/clustMan.title
 msgid "Manual Clusters"
 msgstr "אשכולות ידניים"
 
-#: R/mmf.b.R
-msgid ""
-"MAR - missing at random (if each p<sub>value</sub> is significant, there is "
-"evidence the data is MAR);"
-msgstr "MAR – חסרים באקראי (אם כל ערכי ה־p מובהקים זה מעיד שהנתונים הם MAR);"
+#: mCOR/options/glassoType/manual.title
+msgid "Manual penalty"
+msgstr ""
+
+#: mCOR/options/glassoRho.title
+msgid "Manual penalty (ρ)"
+msgstr ""
 
 #: mMF/results/estim/mcar.description
 #: mMF/results/estim/mars.description
@@ -989,11 +2085,15 @@ msgstr "טבלת סיווג חסרים באקראי"
 msgid "Mark significance *<0.05, **<0.01, ***<0.001"
 msgstr "סימון המובהקות *<0.05, **<0.01, ***<0.001"
 
+#: mLR/results/formulaHtml.title
+msgid "Mathematical Model Formula"
+msgstr ""
+
 #: R/mcor.b.R
 msgid "Matrix #{i}"
 msgstr "מטריצה #{i}"
 
-#: mMLP/results/infoTable.columns.title
+#: R/mmlp.b.R
 #, fuzzy
 msgid "Max Iterations"
 msgstr "מספר מקסימלי של איטרציות"
@@ -1013,25 +2113,17 @@ msgstr "כמות החזרורים המקסימלית"
 msgid "MCAR"
 msgstr "חסרים לחלוטין באקראי"
 
-#: R/mmf.b.R
-msgid ""
-"MCAR - missing completely at random (if the p<sub>value</sub> is not "
-"significant, there is evidence the data is MCAR)."
-msgstr ""
-"MCAR – חסרים לחלוטין באקראי (אם ערכי ה־p אינם מובהקים, זה מעיד שהנתונים "
-"חסרים לחלוטין באקראי)."
-
 #: mMF/options/isMAR.title
 msgid "MCAR (Missing Completely at Random) and MAR (Missing at Random) estimation"
 msgstr "אומדן MCAR (חסרים לחלוטין באקראי) ו־MAR (חסרים באקראי)"
 
 #: R/mui.b.R
-msgid "MCI=0 ("
-msgstr "MCI=0 ("
+msgid "MCI=0 ({})"
+msgstr ""
 
 #: R/mui.b.R
-msgid "MCI=1 ("
-msgstr "MCI=1 ("
+msgid "MCI=1 ({})"
+msgstr ""
 
 #: mCOR/options/clustMet/mcquitty.title
 msgid "McQuitty Linkage (WPGMA)"
@@ -1059,16 +2151,27 @@ msgstr "חציון"
 msgid "Median Linkage"
 msgstr "הצמדת החציון"
 
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+msgid "Median Survival"
+msgstr ""
+
 #: mCOR/options/method.title
+#: mMOUT/ui[1][0].label
 #: mOUT/ui[1][0].label
 #: mUI/ui[1][3].label
 msgid "Method"
 msgstr "שיטה"
 
+#: mLR/results/infoTable.columns.title
+#: mMLP/results/infoTable.columns.title
 #: mMLP/results/statsTable.columns.title
 #, fuzzy
 msgid "Metric"
 msgstr "מטריקה"
+
+#: mPCA/results/kmeansTable.columns.title
+msgid "Metric / Cluster"
+msgstr ""
 
 #: mPWR/options/es.title
 #: mPWR/ui[1]/es.label
@@ -1154,6 +2257,14 @@ msgstr "מסווג MLP"
 msgid "MLP Classifier Learning Curve"
 msgstr "עקומת למידה של מסווג MLP"
 
+#: R/mmlp.b.R
+msgid "MLP Classifier Predicted Class"
+msgstr ""
+
+#: R/mmlp.b.R
+msgid "MLP Classifier Predicted Probability"
+msgstr ""
+
 #: mMLP/results/curvePlot.title
 #, fuzzy
 msgid "MLP Learning Curve"
@@ -1163,6 +2274,21 @@ msgstr "עקומת למידה של MLP"
 #, fuzzy
 msgid "MLP Network Topology"
 msgstr "טופולוגיית רשת MLP"
+
+#: package/analyses/mMLP.description
+#: mMLP/options.description.main
+msgid ""
+"MLP Neural Network Classifier. Note that weight initialization and data "
+"partitioning use a hardcoded random seed (42) for reproducibility."
+msgstr ""
+
+#: mLR/results/coeffTable.title
+msgid "Model Coefficients (Post-Selection / Refitted Model)"
+msgstr ""
+
+#: mLR/results/infoTable.title
+msgid "Model Fit & Predictive Performance"
+msgstr ""
 
 #: mMLP/results/infoTable.title
 #, fuzzy
@@ -1184,18 +2310,20 @@ msgstr "ציוני Z מותאמים (סנן המפל)"
 msgid "More Certain Interval (MCI)"
 msgstr "קטע הוודאות (MCI)"
 
-#: R/mui.b.R
-#, fuzzy
-msgid ""
-"More Certain Interval (MCI) is interval outside the Uncertain Interval and "
-"divide into low and high parts."
-msgstr ""
-"אינטרוול ודאי יותר (MCI) הוא אינטרוול מחוץ לאינטרוול האי-ודאי ומחולק לחלקים "
-"נמוכים וגבוהים."
-
 #: R/mmf.b.R
-msgid "MSE - mean squared error (for Continuous variables);"
-msgstr "MSE – ממוצע ריבועי השגיאות (למשתנים רציפים);"
+msgid "MSE"
+msgstr ""
+
+#: mLR/options/multiclass_roc_type.title
+#: mLR/ui[3]/show_roc/multiclass_roc_type.label
+#: mMLP/options/multiclass_roc_type.title
+#: mMLP/ui[3]/show_roc/multiclass_roc_type.label
+msgid "Multiclass ROC Layout"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Multinomial Log-odds Equations"
+msgstr ""
 
 #: mCOR/options/adjust.title
 msgid "Multiple comparison correction"
@@ -1205,13 +2333,17 @@ msgstr "תיקון השוואות מרובות"
 msgid "Multiple imputation for missing data"
 msgstr "החלפות מרובות לנתונים חסרים"
 
-#: R/mmf.b.R
-msgid "N - number of imputted values;"
-msgstr "N – מספר הערכים המוחלפים;"
+#: package/analyses/mMOUT.title
+#: package/analyses/mMOUT.menuTitle
+#: mMOUT/options.title
+#: mMOUT/ui.title
+#: mMOUT/results.title
+msgid "Multivariate outliers identification and removal"
+msgstr ""
 
-#: R/mmf.b.R
-msgid "N - number of missing values;"
-msgstr "N – מספר הערכים החסרים;"
+#: mSRV/results/kmSection/kmRiskTable.columns.title
+msgid "N at Risk"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/results/nEsCurve.title
@@ -1221,6 +2353,10 @@ msgstr "N לפי גודל האפקט"
 #: mPWR/options/n_es_curve.title
 msgid "N by Effect Size Curve"
 msgstr "N לפי עקומת גודל האפקט"
+
+#: mSRV/results/kmSection/kmRiskTable.columns.title
+msgid "N Events"
+msgstr ""
 
 #: mPWR/ui[1]/n.label
 #, fuzzy
@@ -1250,11 +2386,6 @@ msgstr "N"
 msgid "N2"
 msgstr "N"
 
-#: mMLP/results/matrixTable.columns.title
-#, fuzzy
-msgid "Negative Class"
-msgstr "מחלקה שלילית"
-
 #: R/mmlp.b.R
 #, fuzzy
 msgid "Negative Predictive Value (NPV)"
@@ -1264,6 +2395,19 @@ msgstr "ערך נבואי שלילי (NPV)"
 #, fuzzy
 msgid "Negative Weight"
 msgstr "משקל שלילי"
+
+#: R/mcor.b.R
+msgid "Network ("
+msgstr ""
+
+#: mCOR/options/glassoLayout.title
+msgid "Network layout"
+msgstr ""
+
+#: mCOR/options/glassoPlot.title
+#: mCOR/results/glassoGroup/glassoPlot.title
+msgid "Network plot"
+msgstr ""
 
 #: mMLP/options/show_topo.title
 #, fuzzy
@@ -1285,26 +2429,50 @@ msgstr "סיווג רשת נוירונים"
 msgid "Neural Network Classifier (multilayer perceptron) demonstration"
 msgstr "דגמון מסווג רשת עצבים (רב-שכבתי)"
 
+#: R/mpca.b.R
+msgid "Noise (95th percentile)"
+msgstr ""
+
+#: R/mpwr.b.R
+#: mPWR/ui[1]/alt/non-inferior.title
+msgid "non-inferiority"
+msgstr ""
+
 #: mUI/options/model/none.title
 msgid "Non-parametric"
 msgstr "לא פרמטרי"
 
+#: R/mlr.b.R
 #: mCOR/options/adjust/none.title
 #: mCOR/options/clPos/n.title
+#: mLR/options/palBrewer/none.title
+#: mMLP/options/palBrewer/none.title
+#: mPCA/options/palBrewer/none.title
 #: mROC/options/theBest/none.title
 #: mROC/options/cmpDeLong/none.title
 #: mROC/options/palBrewer/none.title
+#: mSRV/options/palBrewer/none.title
 msgid "None"
 msgstr "כלום"
 
+#: R/mmout.b.R
+msgid "Normal"
+msgstr ""
+
 #: R/mout.b.R
+#: R/mui.b.R
 msgid "Normality p-value"
 msgstr "ערך p לנורמליות"
 
-#: R/mui.b.R
-#, fuzzy
-msgid "NPV - Negative Predictive Value of the negative class TN/(TN+FN)"
-msgstr "NPV - ערך נבואי שלילי של המחלקה השלילית TN/(TN+FN)"
+#: R/msrv.b.R
+msgid ""
+"Not enough events or survivors at the selected analysis time point t to "
+"perform ROC analysis."
+msgstr ""
+
+#: mUI/results/stat/mcistat.columns.title
+msgid "NPV"
+msgstr ""
 
 #: mCOR/options/plotMetU/number.title
 #: mCOR/options/plotMetL/number.title
@@ -1319,11 +2487,32 @@ msgstr ""
 "מספר הערכים שאינם חסרים המועמדים לשמש כמדגם בשלבי התאמת הממוצע המנבא. 0 כדי "
 "להימנע משלב זה"
 
+#: mPCA/options/kMeansK.title
+msgid "Number of clusters (K-Means)"
+msgstr ""
+
+#: mPCA/ui[3][0]/kMeansK.label
+msgid "Number of clusters (K)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid "Number of Clusters (k1)"
+msgstr ""
+
+#: mPCA/options/npc.title
+#: mPCA/ui[1][0]/npc.label
+msgid "Number of components to retain"
+msgstr ""
+
 #: mPWR/options/k_covariates.title
 #: mPWR/ui[1]/k_covariates.label
 #, fuzzy
 msgid "Number of covariates"
 msgstr "מספר משתנים משפיעים"
+
+#: R/mpwr.b.R
+msgid "Number of Events"
+msgstr ""
 
 #: mPWR/options/factor_levels.title
 #: mPWR/ui[1]/factor_levels.label
@@ -1347,9 +2536,23 @@ msgstr "מספר התבניות"
 msgid "Number of trees to grow in each forest"
 msgstr "מספר העצים שיש לגדל בכל יער"
 
+#: mPCA/options/scorePlot.title
+#: mPCA/results/scorePlot.title
+msgid "Object score distribution with 95% ellipses"
+msgstr ""
+
 #: R/mmf.b.R
 msgid "observed"
 msgstr "נצפה"
+
+#: R/mpca.b.R
+msgid "Observed Data"
+msgstr ""
+
+#: R/mlr.b.R
+#: mLR/results/coeffTable.columns.title
+msgid "Odds Ratio (OR)"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/options/design/one.sample.title
@@ -1396,10 +2599,23 @@ msgstr "מקורי"
 msgid "OutFlux**"
 msgstr "OutFlux**"
 
+#: R/mmout.b.R
 #: R/mout.b.R
 #, fuzzy
 msgid "outl"
 msgstr "נתונים חריגים"
+
+#: R/mmout.b.R
+msgid "Outlier"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Outlier (Both)"
+msgstr ""
+
+#: mMOUT/options/method.title
+msgid "Outlier identifying method"
+msgstr ""
 
 #: mOUT/options/outfence.title
 #: mOUT/results/stat/outstat.title
@@ -1408,10 +2624,13 @@ msgid "Outliers fences"
 msgstr "גדרות חריגים"
 
 #: R/mout.b.R
+#: mMOUT/results/stat.columns.title
+#: mMOUT/results/oind.columns.title
 #, fuzzy
 msgid "Outliers found"
 msgstr "החריגות שנמצאו"
 
+#: mMOUT/ui[1].label
 #: mOUT/ui[1].label
 #: mOUT/results/stat.title
 #, fuzzy
@@ -1433,10 +2652,18 @@ msgstr "שיטת זיהוי החריגות"
 msgid "Outliers indices"
 msgstr "אינדקסים של חריגים"
 
+#: mMOUT/results/oind.title
+msgid "Outliers indices (Rows)"
+msgstr ""
+
 #: mOUT/ui[2].label
 #, fuzzy
 msgid "Outliers removal"
 msgstr "הסרת חריגים"
+
+#: mMOUT/results/stat.title
+msgid "Outliers summary"
+msgstr ""
 
 #: mMLP/options/out_activation.title
 #: mMLP/ui[1]/out_activation.label
@@ -1454,13 +2681,20 @@ msgstr "מידע על הפלט"
 msgid "Output Layer"
 msgstr "שכבת פלט"
 
+#: mLR/ui[3].label
 #: mMLP/ui[3].label
 #, fuzzy
 msgid "Outputs & Evaluation"
 msgstr "פלטים והערכה"
 
+#: mROC/results/rocTable.columns.title
+msgid "p (DeLong)"
+msgstr ""
+
 #: mCOR/options/pval.title
 #: mCOR/results/matrix.columns.content
+#: mCOR/results/glassoGroup/glassoTable.columns.content
+#: mLR/results/coeffTable.columns.title
 msgid "p-value"
 msgstr "ערך p"
 
@@ -1470,7 +2704,23 @@ msgstr "ערך p"
 msgid "p<sub>value</sub>"
 msgstr "ערך p"
 
+#: R/mcor.b.R
+msgid ""
+"Packages 'glasso' and 'qgraph' are required for this analysis. Please "
+"install them."
+msgstr ""
+
+#: R/mcor.b.R
+msgid ""
+"Packages 'ppcor' and 'qgraph' are required for this analysis. Please install "
+"them."
+msgstr ""
+
+#: mLR/options/palBrewer/Paired.title
+#: mMLP/options/palBrewer/Paired.title
+#: mPCA/options/palBrewer/Paired.title
 #: mROC/options/palBrewer/Paired.title
+#: mSRV/options/palBrewer/Paired.title
 msgid "Paired"
 msgstr "מזווג"
 
@@ -1486,19 +2736,68 @@ msgstr "דגימות זוגיות (Student)"
 msgid "Paired Samples (Wilcoxon)"
 msgstr "דגימות זוגיות (וילקוקסון)"
 
+#: mCOR/options/glassoTable.title
+#: mCOR/results/glassoGroup/glassoTable.title
+msgid "Partial correlation matrix"
+msgstr ""
+
+#: mCOR/options/glasso.title
+msgid "Partial correlation network"
+msgstr ""
+
+#: mCOR/results/glassoGroup.title
+msgid "Partial Correlation Network"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Partial Correlation Network (GLASSO)"
+msgstr ""
+
 #: mMLP/options/partition.title
 #: mMLP/ui[2]/partition.label
 #, fuzzy
 msgid "Partition Method"
 msgstr "שיטת חלוקה"
 
+#: mLR/options/palBrewer/Pastel1.title
+#: mMLP/options/palBrewer/Pastel1.title
+#: mPCA/options/palBrewer/Pastel1.title
 #: mROC/options/palBrewer/Pastel1.title
+#: mSRV/options/palBrewer/Pastel1.title
 msgid "Pastel1"
 msgstr "פסטל1"
 
 #: R/mmf.b.R
 msgid "Pattern frequency"
 msgstr "תדירות התבנית"
+
+#: R/mpca.b.R
+msgid "PC"
+msgstr ""
+
+#: mPCA/options/pcX.title
+msgid "PC for X axis"
+msgstr ""
+
+#: mPCA/ui[1][0]/pcX.label
+msgid "PC for X axis (Plot)"
+msgstr ""
+
+#: mPCA/options/pcY.title
+msgid "PC for Y axis"
+msgstr ""
+
+#: mPCA/ui[1][0]/pcY.label
+msgid "PC for Y axis (Plot)"
+msgstr ""
+
+#: package/datasets/PCAbloodcells.name
+msgid "PCA blood cells"
+msgstr ""
+
+#: mPCA/ui[1].label
+msgid "PCA Configuration"
+msgstr ""
 
 #: mCOR/options/method/pearson.title
 msgid "Pearson (r)"
@@ -1508,8 +2807,7 @@ msgstr "פירסון (r)"
 msgid "Pearson correlation cannot be calculated for non-numeric values"
 msgstr "אי אפשר לחשב מתאם פירסון לערכים לא מספריים"
 
-#: mCOR/results/matrix.columns.title
-#: mCOR/results/matrix.columns.content
+#: R/mcor.b.R
 msgid "Pearson's r"
 msgstr "r של פירסון"
 
@@ -1517,7 +2815,9 @@ msgstr "r של פירסון"
 msgid "per pattern"
 msgstr "לפי תבנית"
 
+#: mLR/options/roc_unit/percent.title
 #: mMLP/options/roc_unit/percent.title
+#: mPCA/options/roc_unit/percent.title
 #, fuzzy
 msgid "Percentage (%)"
 msgstr "אחוז (%)"
@@ -1526,6 +2826,10 @@ msgstr "אחוז (%)"
 #, fuzzy
 msgid "Performance Statistics"
 msgstr "סטטיסטיקות ביצועים"
+
+#: R/mpca.b.R
+msgid "Permutation"
+msgstr ""
 
 #: mMLP/options/show_imp.title
 #, fuzzy
@@ -1536,24 +2840,33 @@ msgstr "חשיבות החלפה"
 msgid "PFC"
 msgstr "PFC"
 
-#: R/mmf.b.R
-msgid "PFC - proportion of falsely classified (for Nominal and Ordinal variables);"
-msgstr "PFC – יחס המסווגים לא נכון (למשתנים מסדר שמני וסדר)."
-
 #: mCOR/options/plotMetU/pie.title
 #: mCOR/options/plotMetL/pie.title
 msgid "Pie"
 msgstr "עיגולי"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
 #, fuzzy
 msgid "Please select a dependent variable (target)."
 msgstr "נא לבחור משתנה תלות (יעד)"
 
+#: R/mmout.b.R
+msgid "Please select at least 2 variables for multivariate analysis."
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Please select at least 2 variables for PCA."
+msgstr ""
+
 #: R/mmlp.b.R
 #, fuzzy
 msgid "Please select at least one predictor variable (factor or covariate)."
 msgstr "נא לבחור לפחות משתנה נבחר אחד (גורם או קוביאט)"
+
+#: R/mlr.b.R
+msgid "Please select at least one predictor variable."
+msgstr ""
 
 #: mUI/options/isTGR.title
 msgid "Plot"
@@ -1571,8 +2884,18 @@ msgstr "אפשרויות התרשים"
 msgid "Plot the missing data patterns"
 msgstr "יצירת תרשים של דפוס הנתונים החסרים"
 
+#: mMOUT/options/plotType.title
+msgid "Plot type"
+msgstr ""
+
+#: mSRV/options/kmType.title
+msgid "Plot Type"
+msgstr ""
+
 #: mCOR/ui[5].label
 #: mMF/ui[1][0][1].label
+#: mMOUT/options/showPlots.title
+#: mMOUT/ui[2].label
 #: mPWR/ui[2].label
 #: mUI/ui[1][4].label
 msgid "Plots"
@@ -1581,11 +2904,6 @@ msgstr "תרשימים"
 #: mROC/options/polygon.title
 msgid "Polygon"
 msgstr "מצולע"
-
-#: mMLP/results/matrixTable.columns.title
-#, fuzzy
-msgid "Positive Class"
-msgstr "מחלקה חיובית"
 
 #: R/mmlp.b.R
 #, fuzzy
@@ -1607,6 +2925,15 @@ msgstr "רווח סמך תחתון"
 #, fuzzy
 msgid "Power by Effect Size"
 msgstr "כוח לפי גודל האפקט"
+
+#: R/mpwr.b.R
+#: mPWR/results/powerEsAlphaCurve.title
+msgid "Power by Effect Size and Alpha"
+msgstr ""
+
+#: mPWR/options/power_es_alpha_curve.title
+msgid "Power by Effect Size and Alpha Curve"
+msgstr ""
 
 #: mPWR/options/power_es_curve.title
 #, fuzzy
@@ -1633,30 +2960,51 @@ msgstr "עקומת כוח"
 msgid "Power Curve (Power by N)"
 msgstr "עקומת כוח (כוח לפי N)"
 
-#: R/mui.b.R
-#, fuzzy
-msgid "PPV - Positive Predictive Value of the positive class TP/(TN+FN)"
-msgstr "PPV - ערך חיזוי חיובי של המחלקה החיובית TP/(TN+FN)"
+#: mUI/results/stat/mcistat.columns.title
+msgid "PPV"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
 msgid "Precision"
 msgstr "דיוק"
 
+#: R/mcor.b.R
+msgid "Precision matrix diagonal elements are not all positive."
+msgstr ""
+
+#: R/mlr.b.R
 #: R/mmlp.b.R
-#, fuzzy
-msgid "Predicted"
-msgstr "מוערך"
+#: mLR/options/predClass.title
+#: mLR/results/predClass.title
+#: mMLP/options/predClass.title
+#: mMLP/results/matrixTable.columns.title
+#: mMLP/results/predClass.title
+msgid "Predicted Class"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: mLR/options/predProb.title
+#: mLR/results/predProb.title
+#: mMLP/options/predProb.title
+#: mMLP/results/predProb.title
+msgid "Predicted Probability"
+msgstr ""
 
 #: mMF/options/pmmk.title
 msgid "Predictive Mean Matching (PMM) steps"
 msgstr "שלבי התאמת הממוצע המנבא (PMM)"
 
 #: R/mmlp.b.R
+#: mLR/results/coeffTable.columns.title
 #: mMLP/results/importanceTable.columns.title
+#: mROC/results/rocTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
 #: mUI/results/stat/uistat.columns.title
 #: mUI/results/stat/mcistat.columns.title
 #: mUI/results/stat/intstat.columns.title
+#: mUI/results/stat/rocTable.columns.title
 msgid "Predictor"
 msgstr "מנבא"
 
@@ -1678,10 +3026,50 @@ msgstr "תרשים חשיבות המשתנים"
 msgid "Predictors"
 msgstr "מנבאים"
 
-#: R/mui.b.R
+#: mSRV/options/rocPredictors.title
+#: mSRV/ui[1][0].label
+msgid "Predictors (ROC)"
+msgstr ""
+
+#: mUI/results/stat/mcistat.columns.title
 #, fuzzy
 msgid "Prevalence"
 msgstr "שכיחות"
+
+#: R/mpca.b.R
+msgid "Principal Component"
+msgstr ""
+
+#: package/analyses/mPCA.title
+#: package/analyses/mPCA.menuTitle
+#: mPCA/options.title
+#: mPCA/ui.title
+#: mPCA/results.title
+msgid "Principal Component Analysis"
+msgstr ""
+
+#: package/datasets/PCAbloodcells.description
+msgid "Principal Component Analysis (PCA) demonstration"
+msgstr ""
+
+#: package/analyses/mPCA.description
+#: mPCA/options.description.main
+msgid ""
+"Principal Component Analysis (PCA). Note that parallel analysis and "
+"cross-validation use a hardcoded random seed (42) for reproducibility."
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Probability Model"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Probability Models"
+msgstr ""
+
+#: mSRV/results/coxSection/coxAssumpTable.title
+msgid "Proportional Hazards Assumption (Schoenfeld Residuals Test)"
+msgstr ""
 
 #: mUI/options/isProp.title
 #: mUI/results/stat/intstat.title
@@ -1704,8 +3092,28 @@ msgid "Purpose of Calculation"
 msgstr "מטרת החישוב"
 
 #: R/mmf.b.R
-msgid "PVU - proportion of variance unexplained 1-R² (for Continuous variables);"
-msgstr "PVU – יחס השונות הבלתי מוסברת 1-R² (למשתנים רציפים)."
+msgid "PVU"
+msgstr ""
+
+#: mSRV/options/palBrewer.title
+msgid "Qualitative Palette"
+msgstr ""
+
+#: mPCA/results/cos2Table.title
+msgid "Quality of representation (Cos²)"
+msgstr ""
+
+#: mPCA/options/cos2Heatmap.title
+msgid "Quality of representation (Cos²) heatmap"
+msgstr ""
+
+#: mPCA/results/cos2Heatmap.title
+msgid "Quality of representation (Cos²) Heatmap"
+msgstr ""
+
+#: mPCA/options/cos2Table.title
+msgid "Quality of representation (Cos²) table"
+msgstr ""
 
 #: mPWR/options/r2_predictor.title
 #: mPWR/ui[1]/r2_predictor.label
@@ -1718,9 +3126,54 @@ msgstr "R² של מנבא X עם משתנים משפיעים אחרים"
 msgid "Rank"
 msgstr "דירוג"
 
+#: mLR/options/refLevel.title
+#: mLR/ui[0][0]/refLevel.label
 #: mUI/options/refval.title
 msgid "Reference level"
 msgstr "רמת ייחוס"
+
+#: R/mlr.b.R
+msgid "Reference level: {ref}"
+msgstr ""
+
+#: package/analyses/mROC.menuSubgroup
+#: package/analyses/mMLP.menuSubgroup
+#: package/analyses/mLR.menuSubgroup
+#: package/analyses/mSRV.menuSubgroup
+#: mLR/options.menuSubgroup
+#: mMLP/options.menuSubgroup
+#: mROC/options.menuSubgroup
+#: mSRV/options.menuSubgroup
+msgid "Regression & Classification"
+msgstr ""
+
+#: mPCA/ui[3][0][3].label
+msgid "Regression Model & Validation"
+msgstr ""
+
+#: mPCA/results/regTable.title
+msgid "Regression Model Performance (K-fold Cross-Validation)"
+msgstr ""
+
+#: mPCA/options/regTable.title
+msgid "Regression model quality with K-fold CV"
+msgstr ""
+
+#: mPCA/results/rocPlot.title
+msgid "Regression Model ROC Curve (Full Dataset)"
+msgstr ""
+
+#: mPCA/options/rocPlot.title
+msgid "Regression ROC plot"
+msgstr ""
+
+#: mLR/options/lasso_penalty.title
+msgid "Regularization Penalty Choice"
+msgstr ""
+
+#: mLR/ui[1]/lasso_penalty.label
+msgid "Regularization Penalty Optimization"
+msgstr ""
 
 #: mPWR/ui[1]/n_ratio.label
 #, fuzzy
@@ -1732,6 +3185,8 @@ msgstr "גודל יחסי של קבוצה 2 לקבוצה 1"
 msgid "ReLU"
 msgstr "ReLU"
 
+#: mMOUT/options/remOut.title
+#: mMOUT/results/remOut.title
 #: mOUT/options/remOut.title
 #: mOUT/results/remOut.title
 msgid "Remove outliers"
@@ -1741,6 +3196,31 @@ msgstr "הסרת החריגות"
 msgid "Reorder"
 msgstr "סידור מחדש"
 
+#: R/mlr.b.R
+msgid "Rep {k}-Fold CV (x{r})"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Repeated CV"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Repeated Stratified CV"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "Repeated Stratified CV (AUC ="
+msgstr ""
+
+#: mLR/options/partition/repeated_kfold.title
+msgid "Repeated Stratified K-Fold CV"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Representation Quality (Cos²)"
+msgstr ""
+
 #: mMF/options/setseed.title
 msgid "Reproducible random number generation (RNG) results"
 msgstr "תוצאות מחולל מספרים אקראיים (RNG) הניתנות לשחזור"
@@ -1749,22 +3229,53 @@ msgstr "תוצאות מחולל מספרים אקראיים (RNG) הניתנות
 msgid "Right"
 msgstr "ימין"
 
-#: mMF/options/seed.title
-msgid "RNG seed value"
-msgstr "ערך הגרעין של RNG"
+#: mSRV/options/kmTable.title
+msgid "Risk-at-time Table"
+msgstr ""
 
+#: R/mmout.b.R
+msgid "Robust"
+msgstr ""
+
+#: mMOUT/options/method/robust.title
+msgid "Robust Mahalanobis distance (MCD)"
+msgstr ""
+
+#: R/mmout.b.R
+msgid ""
+"Robust MCD covariance estimation failed (possibly due to small sample size "
+"or collinearity). Classic Mahalanobis distance was used instead."
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Robust Outlier"
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Robust Squared Mahalanobis Distance"
+msgstr ""
+
+#: mLR/options/show_roc.title
 #: mMLP/options/show_roc.title
 #, fuzzy
 msgid "ROC Analysis"
 msgstr "ניתוח ROC"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
 #: mMLP/results/rocPlot.title
 #, fuzzy
 msgid "ROC Analysis Comparison"
 msgstr "השוואת ניתוח ROC"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "ROC Analysis for {class}"
+msgstr ""
+
+#: mLR/options/roc_unit.title
 #: mMLP/options/roc_unit.title
+#: mPCA/options/roc_unit.title
 #, fuzzy
 msgid "ROC Axis Units"
 msgstr "יחידות ציר ROC"
@@ -1790,21 +3301,53 @@ msgstr "סיווג ROC"
 msgid "ROC comparison"
 msgstr "השוואת ROC"
 
+#: mLR/results/rocPlot.title
+msgid "ROC Curve Comparison"
+msgstr ""
+
 #: mUI/options/isROC.title
 #: mUI/results/plotsROC.title
 msgid "ROC curves"
 msgstr "עקומות ROC"
+
+#: R/mlr.b.R
+#: R/mpca.b.R
+msgid "ROC Curves"
+msgstr ""
 
 #: package/datasets/BCModelsROCEstimation.description
 #: package/datasets/CHDModelsROCEstimation.description
 msgid "ROC estimation for binomial logistis models demonstration"
 msgstr "הדגמת אומדן ROC למודלים לוגיטיים בינומיים"
 
-#: mROC/ui[1].label
+#: mROC/ui[2].label
 msgid "ROC graphs"
 msgstr "גרפי ROC"
 
+#: mSRV/options/rocPlot.title
+msgid "ROC Plot"
+msgstr ""
+
+#: mLR/results/rocTable.title
+#: mMLP/results/rocTable.title
+#: mPCA/results/rocTable.title
+#: mUI/results/stat/rocTable.title
+msgid "ROC Quantitative Evaluation"
+msgstr ""
+
+#: mROC/results/rocTable.title
+msgid "ROC Results"
+msgstr ""
+
+#: mROC/options/showTable.title
+#: mROC/ui[1].label
+#: mROC/ui[1]/showTable.label
+msgid "ROC Tables"
+msgstr ""
+
+#: mLR/options/roc_x.title
 #: mMLP/options/roc_x.title
+#: mPCA/options/roc_x.title
 #, fuzzy
 msgid "ROC X-axis Coordinate"
 msgstr "קואורדינטה X של ROC"
@@ -1819,42 +3362,129 @@ msgstr "גודל הדגימה (N)"
 msgid "Sample Size (N1)"
 msgstr "גודל דגימה (N1)"
 
+#: R/mcor.b.R
+msgid "Sample size is too small to compute Classical Partial Correlation."
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Sample size is too small to compute Classical Semi-Partial Correlation."
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Sample size is too small to compute Graphical Lasso."
+msgstr ""
+
 #: mPWR/options/n_ratio.title
 #, fuzzy
 msgid "Sample size ratio (N<sub>2</sub>/N<sub>1</sub>)"
 msgstr "יחס גודל דגימה (N<sub>2</sub>/N<sub>1</sub>)"
 
+#: mLR/ui[4].label
+#: mMLP/ui[4].label
+#: mMOUT/ui[3].label
 #: mUI/ui[2].label
 msgid "Save"
 msgstr "שמירה"
+
+#: mMOUT/options/outDist.title
+#: mMOUT/results/outDist.title
+msgid "Saved Mahalanobis distances"
+msgstr ""
+
+#: mMOUT/options/outFlag.title
+#: mMOUT/results/outFlag.title
+msgid "Saved outlier flags"
+msgstr ""
+
+#: mCOR/options/glassoPlotScale.title
+msgid "Scale node size by centrality"
+msgstr ""
 
 #: mCOR/options/clPos.title
 msgid "Scale position"
 msgstr "מיקום הסולם"
 
+#: mSRV/options/showSchoenfeldPlot.title
+msgid "Schoenfeld Residuals Plot"
+msgstr ""
+
+#: mSRV/results/coxSection/schoenfeldPlots.title
+msgid "Schoenfeld Residuals Plots"
+msgstr ""
+
+#: mPCA/options/screePlot.title
+msgid "Scree plot with parallel analysis"
+msgstr ""
+
+#: mPCA/results/screePlot.title
+msgid "Scree Plot with Parallel Analysis"
+msgstr ""
+
 #: package/datasets/SDIROCclassification.name
 msgid "SDI ROC classification"
 msgstr "סיווג ROC מיקום העיוות בזרע"
 
-#: R/mui.b.R
-#, fuzzy
-msgid "Se - sensitivity of the positive and negative classifications TP/(TP+FN)"
-msgstr "Se - רגישות של הסיווגים החיוביים והשליליים TP/(TP+FN)"
+#: mROC/results/rocTable.columns.title
+#: mUI/results/stat/mcistat.columns.title
+msgid "Se"
+msgstr ""
+
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "SE"
+msgstr ""
+
+#: mLR/options/seed.title
+#: mLR/ui[2]/seed.label
+#: mMF/options/seed.title
+#: mMLP/options/seed.title
+#: mMLP/ui[2]/seed.label
+#: mPCA/options/seed.title
+#: mPCA/ui[1][0]/seed.label
+msgid "Seed number"
+msgstr ""
 
 #: mCOR/options/selgroup.title
 #: mROC/options/selgroup.title
 msgid "Select group"
 msgstr "בחירת קבוצה"
 
+#: mLR/options/selgroup.title
+#: mPCA/options/selgroup.title
+msgid "Select group for filtering"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Selected Factors: {factors}; Selected Covariates: {covs}"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Selection"
+msgstr ""
+
+#: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
+#: R/msrv.b.R
 #: R/mui.b.R
+#: mPCA/results/regTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
 msgid "Sensitivity"
 msgstr "רגישות"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
 msgid "Sensitivity (%)"
 msgstr "רגישות (%)"
+
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
+#: mUI/results/stat/rocTable.columns.title
+msgid "Sensitivity (Se)"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
@@ -1871,15 +3501,35 @@ msgstr "רגישות בתוך UI <"
 msgid "Sensitivity outside UI >"
 msgstr "רגישות מחוץ ל-UI >"
 
+#: mLR/options/multiclass_roc_type/separate.title
+msgid "Separate"
+msgstr ""
+
+#: mMLP/options/multiclass_roc_type/separate.title
+msgid "Separate Plots (Class-Specific)"
+msgstr ""
+
+#: mLR/options/palBrewer/Set1.title
+#: mMLP/options/palBrewer/Set1.title
+#: mPCA/options/palBrewer/Set1.title
 #: mROC/options/palBrewer/Set1.title
+#: mSRV/options/palBrewer/Set1.title
 msgid "Set1"
 msgstr "מערך1"
 
+#: mLR/options/palBrewer/Set2.title
+#: mMLP/options/palBrewer/Set2.title
+#: mPCA/options/palBrewer/Set2.title
 #: mROC/options/palBrewer/Set2.title
+#: mSRV/options/palBrewer/Set2.title
 msgid "Set2"
 msgstr "מערך2"
 
+#: mLR/options/palBrewer/Set3.title
+#: mMLP/options/palBrewer/Set3.title
+#: mPCA/options/palBrewer/Set3.title
 #: mROC/options/palBrewer/Set3.title
+#: mSRV/options/palBrewer/Set3.title
 msgid "Set3"
 msgstr "מערך3"
 
@@ -1887,6 +3537,46 @@ msgstr "מערך3"
 #: mCOR/options/plotMetL/shade.title
 msgid "Shade"
 msgstr "צל"
+
+#: mLR/options/show_roc_cut.title
+#: mLR/ui[3]/show_roc/show_roc_cut.label
+#: mMLP/options/show_roc_cut.title
+#: mMLP/ui[3]/show_roc/show_roc_cut.label
+#: mPCA/options/show_roc_cut.title
+#: mPCA/ui[3][0]/rocPlot/show_roc_cut.label
+#: mUI/options/show_roc_cut.title
+msgid "Show Cut-off Thresholds"
+msgstr ""
+
+#: mCOR/options/glassoLabels.title
+msgid "Show edge labels"
+msgstr ""
+
+#: mLR/ui[3]/show_formula.label
+msgid "Show Mathematical Model Formula"
+msgstr ""
+
+#: mLR/options/show_formula.title
+msgid "Show Model Formula"
+msgstr ""
+
+#: mMOUT/options/outind.title
+msgid "Show outliers indices table"
+msgstr ""
+
+#: mLR/ui[3]/show_roc.label
+msgid "Show ROC Analysis curves"
+msgstr ""
+
+#: mLR/options/show_roc_table.title
+#: mLR/ui[3]/show_roc/show_roc_table.label
+#: mMLP/options/show_roc_table.title
+#: mMLP/ui[3]/show_roc/show_roc_table.label
+#: mPCA/options/show_roc_table.title
+#: mPCA/ui[3][0]/rocPlot/show_roc_table.label
+#: mUI/options/show_roc_table.title
+msgid "Show ROC Table"
+msgstr ""
 
 #: R/mmlp.b.R
 #: mMLP/options/activation/sigmoid.title
@@ -1898,6 +3588,10 @@ msgstr "Sigmoid"
 #: mCOR/options/signif.title
 msgid "Significance"
 msgstr "מובהקות"
+
+#: mMOUT/options/alpha.title
+msgid "Significance level (alpha)"
+msgstr ""
 
 #: R/mcor.b.R
 msgid "Simultaneous multiple correlation comparisons using {n} method"
@@ -1911,10 +3605,9 @@ msgstr "הצמדה יחידה"
 msgid "Slanted Titles"
 msgstr "כותרות בשיפוע"
 
-#: R/mui.b.R
-#, fuzzy
-msgid "SNPV - standardized negative predictive value of the negative class"
-msgstr "SNPV - ערך נבואי שלילי מתוקנן של המחלקה השלילית"
+#: mUI/results/stat/mcistat.columns.title
+msgid "SNPV"
+msgstr ""
 
 #: mMLP/options/activation/softmax.title
 #: mMLP/options/out_activation/softmax.title
@@ -1922,30 +3615,49 @@ msgstr "SNPV - ערך נבואי שלילי מתוקנן של המחלקה הש�
 msgid "Softmax"
 msgstr "Softmax"
 
-#: R/mui.b.R
-#, fuzzy
-msgid "Sp - specificity of the positive and negative classifications TN/(TN+FN)"
-msgstr "Sp - ספציפיות של הסיווגים החיוביים והשליליים TN/(TN+FN)"
+#: R/mpca.b.R
+msgid "Source"
+msgstr ""
+
+#: mROC/results/rocTable.columns.title
+#: mUI/results/stat/mcistat.columns.title
+msgid "Sp"
+msgstr ""
 
 #: mCOR/options/method/spearman.title
 msgid "Spearman (ρ)"
 msgstr "ספירמן (ρ)"
 
-#: mCOR/results/matrix.columns.title
-#: mCOR/results/matrix.columns.content
-msgid "Spearman's Rho"
-msgstr "רו של ספירמן"
+#: R/mcor.b.R
+msgid "Spearman's ρ"
+msgstr ""
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
+#: mLR/options/roc_x/spec.title
 #: mMLP/options/roc_x/spec.title
+#: mPCA/options/roc_x/spec.title
+#: mPCA/results/regTable.columns.title
+#: mSRV/results/rocSection/rocTable.columns.title
 msgid "Specificity"
 msgstr "סגוליות"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
 #: R/mroc.b.R
 msgid "Specificity (%)"
 msgstr "סגוליות (%)"
+
+#: mLR/results/rocTable.columns.title
+#: mMLP/results/rocTable.columns.title
+#: mPCA/results/rocTable.columns.title
+#: mUI/results/stat/rocTable.columns.title
+msgid "Specificity (Sp)"
+msgstr ""
 
 #: mUI/options/uiSp.title
 #, fuzzy
@@ -1969,15 +3681,43 @@ msgstr "פיצול העקומות"
 msgid "Splitted ROC by predictors"
 msgstr "ROC מחולק על פי מנבאים"
 
-#: R/mui.b.R
-#, fuzzy
-msgid "SPPV - standardized positive predictive value of the positive class"
-msgstr "SPPV - ערך נבואי חיובי מתוקנן של המחלקה החיובית"
+#: mUI/results/stat/mcistat.columns.title
+msgid "SPPV"
+msgstr ""
+
+#: mCOR/options/glassoLayout/spring.title
+msgid "Spring"
+msgstr ""
 
 #: mCOR/options/plotMetU/square.title
 #: mCOR/options/plotMetL/square.title
 msgid "Square"
 msgstr "ריבוע"
+
+#: mLR/results/coeffTable.columns.title
+msgid "Standardized Beta"
+msgstr ""
+
+#: mSRV/results/coxSection/coxFitTable.columns.title
+msgid "Statistic"
+msgstr ""
+
+#: mSRV/options/status.title
+#: mSRV/ui[0][1].label
+msgid "Status / Event Variable"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Status variable must be factor, character, or numeric."
+msgstr ""
+
+#: mLR/results/coeffTable.columns.title
+msgid "Std. Error"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
+msgid "Strength"
+msgstr ""
 
 #: mROC/options/cmpDeLong/succ.title
 msgid "Successively"
@@ -1987,9 +3727,53 @@ msgstr "ברצף"
 msgid "Sum"
 msgstr "סכום"
 
+#: R/mpwr.b.R
+#: mPWR/ui[1]/alt/superior.title
+msgid "superiority"
+msgstr ""
+
+#: R/mpwr.b.R
+#: mPWR/options/design/survival.title
+msgid "Survival / Log-Rank Test"
+msgstr ""
+
+#: package/analyses/mSRV.title
+#: package/analyses/mSRV.menuTitle
+#: mSRV/options.title
+#: mSRV/ui.title
+#: mSRV/results.title
+msgid "Survival Analysis"
+msgstr ""
+
+#: package/datasets/SurvivalAnalysisKaggle.description
+msgid "Survival Analysis (Kaplan-Meier and Cox regression) demonstration"
+msgstr ""
+
+#: package/analyses/mSRV.description
+msgid ""
+"Survival Analysis including Kaplan-Meier curves, log-rank tests, Cox "
+"proportional hazards regression, and time-dependent ROC curves."
+msgstr ""
+
+#: package/datasets/SurvivalAnalysisKaggle.name
+msgid "Survival Analysis Kaggle"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Survival Probability"
+msgstr ""
+
+#: mSRV/options/kmType/survival.title
+msgid "Survival probability"
+msgstr ""
+
 #: mCOR/ui[4].label
 msgid "Tables"
 msgstr "טבלאות"
+
+#: mPCA/ui[2].label
+msgid "Tables and Visualizations"
+msgstr ""
 
 #: mPWR/options/alt.title
 #: mPWR/ui[1]/alt.label
@@ -2002,9 +3786,17 @@ msgstr "זנבות"
 msgid "Tanh"
 msgstr "Tanh"
 
+#: mSRV/results/coxSection/coxFitTable.columns.title
+msgid "Test"
+msgstr ""
+
 #: mOUT/options/norm.title
 msgid "Test for normality"
 msgstr "מבחן לנורמליות"
+
+#: mSRV/options/coxAssump.title
+msgid "Test Proportional Hazards Assumption"
+msgstr ""
 
 #: mPWR/options/k_tested.title
 #: mPWR/ui[1]/k_tested.label
@@ -2031,20 +3823,39 @@ msgstr ""
 "למשתנה המסווג ”{}“ אין בדיוק שתי רמות. ניתן לערוך סיווג ROC על משתנים "
 "מסווגים בעלי שתי רמות."
 
+#: R/mcor.b.R
+msgid ""
+"The correlation matrix was not positive definite and was adjusted to the "
+"nearest positive definite matrix to calculate Graphical Lasso."
+msgstr ""
+
+#: R/mlr.b.R
+msgid ""
+"The dataset has too few complete cases to perform logistic regression "
+"(minimum 15 cases required)."
+msgstr ""
+
 #: R/mmlp.b.R
 #, fuzzy
 msgid "The dataset has too few complete cases to train the neural network."
 msgstr "למאגר הנתונים יש מספר קטן מדי של מקרים מלאים כדי לאמן את רשת העצבים"
 
 #: R/mmlp.b.R
-#, fuzzy
-msgid "The dependent variable must have exactly 2 levels (binary classification)."
-msgstr "משתנה התלות חייב להיות בדיוק 2 רמות (סיווג בינארי)"
+msgid "The dependent variable must have at least 2 levels."
+msgstr ""
+
+#: R/mmout.b.R
+msgid "Theoretical Chi-Square Quantiles"
+msgstr ""
 
 #: package/datasets/UncertainInterval(UI).description
 #, fuzzy
 msgid "Three-Way threshold determination in test results"
 msgstr "קביעת סף שלוש-דרכים בתוצאות מבחן"
+
+#: R/mpca.b.R
+msgid "Threshold (K ="
+msgstr ""
 
 #: mOUT/options/tholdZS.title
 #: mOUT/options/tholdmZS.title
@@ -2057,6 +3868,45 @@ msgstr "סף לציון Z"
 msgid "Threshold on Youden"
 msgstr "סף על פי Youden"
 
+#: mSRV/results/kmSection/kmRiskTable.columns.title
+msgid "Time"
+msgstr ""
+
+#: mSRV/results/rocSection/rocTable.columns.title
+msgid "Time Point t"
+msgstr ""
+
+#: mSRV/options/elapsed.title
+#: mSRV/ui[0][0].label
+msgid "Time Variable (elapsed time)"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Time variable must be numeric."
+msgstr ""
+
+#: mSRV/options/showRoc.title
+#: mSRV/ui[5].label
+#: mSRV/results/rocSection.title
+msgid "Time-dependent ROC Analysis"
+msgstr ""
+
+#: mSRV/results/rocSection/rocPlot.title
+msgid "Time-dependent ROC Curves"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Time-dependent ROC Curves (t = {time})"
+msgstr ""
+
+#: mSRV/results/rocSection/rocTable.title
+msgid "Time-dependent ROC Results"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Too few observations after removing missing values (minimum 5 required)."
+msgstr ""
+
 #: R/mmf.b.R
 msgid "Total number of missing entries {}"
 msgstr "המספר הכולל של הכניסות החסרות {}"
@@ -2067,26 +3917,50 @@ msgstr "המספר הכולל של הכניסות החסרות {}"
 msgid "Total predictors"
 msgstr "מנבאים כוללים"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
+msgid "Train"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Train Acc (%)"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Train AUC"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
 #: mMLP/results/statsTable.columns.title
 #, fuzzy
 msgid "Training"
 msgstr "אימון"
 
+#: R/mlr.b.R
 #: R/mmlp.b.R
-#, fuzzy
-msgid "Training (AUC = "
-msgstr "אימון (AUC = "
+#: R/mpca.b.R
+msgid "Training (AUC ="
+msgstr ""
 
-#: mMLP/results/infoTable.columns.title
+#: R/mmlp.b.R
 #, fuzzy
 msgid "Training Accuracy (%)"
 msgstr "דיוק אימון (%)"
+
+#: mCOR/options/glassoType.title
+msgid "Tuning parameter"
+msgstr ""
 
 #: R/mpwr.b.R
 #, fuzzy
 msgid "two one-tailed"
 msgstr "שני זנבות"
+
+#: R/mpca.b.R
+msgid "Two-dimensional Variable Projection (Biplot)"
+msgstr ""
 
 #: mUI/options/UImethod/TGR.title
 #: mUI/results/plotsTGR.title
@@ -2128,28 +4002,10 @@ msgstr "UI עבור מודלים לוגיסטיים בינומיים"
 msgid "Uncertain Interval (UI)"
 msgstr "קטע אלתור (UI)"
 
-#: R/mui.b.R
-#, fuzzy
-msgid ""
-"Uncertain Interval (UI) is placed around the point of intersection between "
-"the two distributions with and without the targeted state."
-msgstr ""
-"אינטרוול אי-ודאי (UI) ממוקם סביב נקודת החיתוך בין שתי ההתפלגויות עם ובלי "
-"המצב המיועד."
-
 #: package/datasets/UIforbinomiallogistismodels.description
 #, fuzzy
 msgid "Uncertain Interval estimation for binomial logistis models"
 msgstr "אומדן רווח לא ודאי עבור מודלי רב־איברים לוגיסטיים"
-
-#: R/mui.b.R
-#, fuzzy
-msgid ""
-"Uncertain Interval is considered to be a range of test scores that is "
-"inconclusive and does not warrant a right decision."
-msgstr ""
-"קטע האלתור נחשב להיות טווח של ציוני מבחן שהוא בלתי מוכרע ואינו מצדיק החלטה "
-"נכונה."
 
 #: mUI/options/polygon.title
 #, fuzzy
@@ -2165,6 +4021,15 @@ msgstr "פוליגון של אינטרוול אי-ודאי"
 msgid "Univariate outliers identification and removal"
 msgstr "זיהוי והסרה של נתונים חריגים חד-ממדיים"
 
+#: mSRV/results/kmSection/kmSummaryTable.columns.title
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+msgid "Upper 95% CI"
+msgstr ""
+
+#: mSRV/results/rocSection/rocTable.columns.title
+msgid "Upper CI"
+msgstr ""
+
 #: R/mout.b.R
 #, fuzzy
 msgid "Upper fence"
@@ -2174,7 +4039,7 @@ msgstr "גדר עליונה"
 msgid "Upper part"
 msgstr "החלק העליון"
 
-#: R/mui.b.R
+#: mUI/results/stat/uistat.columns.title
 msgid "Upper threshold"
 msgstr "הסף העליון"
 
@@ -2183,20 +4048,51 @@ msgstr "הסף העליון"
 msgid "User Defined"
 msgstr "הגדרת המשתמש"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+msgid "Val"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Val / CV AUC"
+msgstr ""
+
+#: R/mlr.b.R
 #: R/mmlp.b.R
 #: mMLP/results/statsTable.columns.title
 #, fuzzy
 msgid "Validation"
 msgstr "אימות"
 
+#: mLR/options/partition.title
+#: mLR/ui[2]/partition.label
+msgid "Validation Method"
+msgstr ""
+
+#: mLR/ui[2].label
 #: mMLP/ui[2].label
 #, fuzzy
 msgid "Validation Settings"
 msgstr "הגדרות אימות"
 
+#: mLR/results/infoTable.columns.title
+#: mMLP/results/infoTable.columns.title
+msgid "Value"
+msgstr ""
+
+#: mPCA/results/kmeansTable.columns.title
+msgid "Value / Match count"
+msgstr ""
+
+#: R/mpca.b.R
+#: mCOR/results/glassoGroup/glassoHubTable.columns.title
 #: mMF/results/estim/mars.columns.title
 #: mMF/results/imput/errors.columns.title
 #: mOUT/results/stat/outstat.columns.title
+#: mPCA/results/loadingsTable.columns.title
+#: mPCA/results/cos2Table.columns.title
+#: mSRV/results/coxSection/coxCoefTable.columns.title
+#: mSRV/results/coxSection/coxAssumpTable.columns.title
 msgid "Variable"
 msgstr "משתנה"
 
@@ -2216,10 +4112,17 @@ msgstr "המספרים של המשתנה מופרדים בפסיקים"
 msgid "Variable to impute"
 msgstr "המשתנה שיש להחליף"
 
+#: mMOUT/options/vars.title
+#: mMOUT/ui[0][0].label
 #: mOUT/options/vars.title
 #: mOUT/ui[0][0].label
+#: mPCA/options/vars.title
 msgid "Variables"
 msgstr "משתנים"
+
+#: mPCA/ui[0][0].label
+msgid "Variables for PCA"
+msgstr ""
 
 #: mPWR/options/var_ratio.title
 #: mPWR/ui[1]/var_ratio.label
@@ -2235,7 +4138,11 @@ msgstr "הצמדת D2 של ורד"
 msgid "Ward´s Linkage"
 msgstr "הצמדה של ורד"
 
-#: mMLP/results/infoTable.columns.title
+#: R/mpca.b.R
+msgid "Warning: Grouping variable must have at least 2 levels."
+msgstr ""
+
+#: R/mmlp.b.R
 #, fuzzy
 msgid "Weight Decay"
 msgstr "דעיכת משקל"
@@ -2267,7 +4174,9 @@ msgstr "עם נתונים חסרים במשתנים אחרים"
 msgid "with observed data on other variables"
 msgstr "עם נתונים נצפים במשתנים אחרים"
 
+#: mLR/ui[3]/show_roc/roc_x.label
 #: mMLP/ui[3]/show_roc/roc_x.label
+#: mPCA/ui[3][0]/rocPlot/roc_x.label
 #, fuzzy
 msgid "X-axis Coordinate"
 msgstr "קואורדינטה של ציר X"
@@ -2285,6 +4194,15 @@ msgstr "Youden הטוב ביותר (Sp, Se)"
 #: mOUT/options/outlcheck/ZS.title
 msgid "Z-score"
 msgstr "ציון Z"
+
+#: mLR/results/coeffTable.columns.title
+msgid "z-value"
+msgstr ""
+
+#: mPWR/options/alpha.title
+#: mPWR/ui[1]/alpha.label
+msgid "α (type I error rate)"
+msgstr ""
 
 #, fuzzy
 #~ msgid "Continuous predictors"

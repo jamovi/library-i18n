@@ -3,8 +3,8 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-06-27 20:07+0000\n"
 "Last-Translator: Jonathon Love <jon@thon.cc>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/jamovi/module-"
-"vijplots/ja/>\n"
+"Language-Team: Japanese "
+"<https://hosted.weblate.org/projects/jamovi/module-vijplots/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -163,31 +163,24 @@ msgid ""
 msgstr ""
 "<h3>データと並べ替え</h3>\n"
 "<ul>\n"
-"<li>リッカート変数は順序変数である必要があります（連続変数でも動作します）"
-"。</li>\n"
-"<li>平均・中央値・標準偏差の計算や比較検定を行う場合、データ型は整数である必"
-"要があります。</li>\n"
-"<li><strong>水準の整理：</strong>水準が欠けている変数がある場合に、表やグラフ"
-"のラベル順を調整します。</li>\n"
-"<li><strong>変数を整数に変換：</strong>水準ラベルは無視され、整数値のみが使用"
-"されます。</li>\n"
-"<li><strong>中央値で変数を並べ替え：</strong>リッカート変数の一覧を中央値で並"
-"べ替えます。</li>\n"
+"<li>リッカート変数は順序変数である必要があります（連続変数でも動作します）。</li>\n"
+"<li>平均・中央値・標準偏差の計算や比較検定を行う場合、データ型は整数である必要があります。</li>\n"
+"<li><strong>水準の整理：</strong>水準が欠けている変数がある場合に、表やグラフのラベル順を調整します。</li>\n"
+"<li><strong>変数を整数に変換：</strong>水準ラベルは無視され、整数値のみが使用されます。</li>\n"
+"<li><strong>中央値で変数を並べ替え：</strong>リッカート変数の一覧を中央値で並べ替えます。</li>\n"
 "</ul>\n"
 "<h3>比較検定</h3>\n"
 "<p>グループ変数を使用する場合、以下の検定が利用できます：</p>\n"
 "<ul>\n"
 "<li><strong>マン・ホイットニーのU：</strong>2群の比較</li>\n"
 "<li><strong>クラスカル・ウォリス：</strong>n群の比較</li>\n"
-"<li><strong>事後検定：</strong>ダン、コノヴァー、ドゥワス・スティール・"
-"クリッチロウ・フリグナー（DSCF）によるペアワイズ比較</li>\n"
+"<li><strong>事後検定：</strong>ダン、コノヴァー、ドゥワス・スティール・クリッチロウ・フリグナー（DSCF）によるペアワイズ比較</"
+"li>\n"
 "</ul>\n"
-"<p>p値は、事後検定については<strong>グループ単位</strong>（各質問ごと）で、"
-"マン・ホイットニーのU、クラスカル・ウォリス、および事後検定については<strong>"
-"全体</strong>（グループおよび質問全体）で調整できます。DSCFのp値はすでに（"
-"グループ単位で）調整されており、追加の調整はできません。</p>\n"
-"<p>サンプルデータは「Open > Data Library > vijPlots > Likert」から利用できま"
-"す。</p>"
+"<p>p値は、事後検定については<strong>グループ単位</"
+"strong>（各質問ごと）で、マン・ホイットニーのU、クラスカル・ウォリス、および事後検定については<strong>全体</"
+"strong>（グループおよび質問全体）で調整できます。DSCFのp値はすでに（グループ単位で）調整されており、追加の調整はできません。</p>\n"
+"<p>サンプルデータは「Open > Data Library > vijPlots > Likert」から利用できます。</p>"
 
 #: R/corresp.b.R
 msgid ""
@@ -221,33 +214,26 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
 msgstr ""
-"<p>このモジュールは、2つのカテゴリ変数に対する<strong>対応分析（CA）</strong>"
-"を実施します。計算は、F.&nbsp;Husson、J.&nbsp;Josse、S.&nbsp;Le、"
-"J.&nbsp;Mazetによるパッケージ<a href = \"https://CRAN.R-project.org/"
-"package=FactoMineR\" target=\"_blank\">FactoMineR<a/>に基づいています。</p>\n"
+"<p>このモジュールは、2つのカテゴリ変数に対する<strong>対応分析（CA）</strong>を実施します。計算は、F.&"
+"nbsp;Husson、J.&nbsp;Josse、S.&nbsp;Le、J.&nbsp;Mazetによるパッケージ<a href = "
+"\"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/>に基づいています。</p>\n"
 "<p>データは以下のいずれかです。</p>\n"
 "<ul>\n"
-"<li><strong>観測データ表</strong>（生データ）。<em>jamovi</em>の組み込み重み"
-"づけ機能、または「度数」変数を用いて重みづけできます。</li>\n"
+"<li><strong>観測データ表</strong>（生データ）。<em>jamovi</"
+"em>の組み込み重みづけ機能、または「度数」変数を用いて重みづけできます。</li>\n"
 "<li>または<strong>分割表</strong></li>\n"
 "</ul>\n"
-"<p><strong>補助行または補助列</strong>の番号は、整数のリスト（例：1,3,6）で指"
-"定できます。</p>\n"
-"<p>4種類の正規化（プロット前の行・列スコアのスケーリング）が利用できます。</"
-"p>\n"
+"<p><strong>補助行または補助列</strong>の番号は、整数のリスト（例：1,3,6）で指定できます。</p>\n"
+"<p>4種類の正規化（プロット前の行・列スコアのスケーリング）が利用できます。</p>\n"
 "<ul>\n"
-"<li><strong>主成分：</strong> 行と列のスコアを固有値でスケーリングします。</"
-"li>\n"
-"<li><strong>対象：</strong> 行と列のスコアを固有値の平方根でスケーリングしま"
-"す。</li>\n"
-"<li><strong>行主成分：</strong> 行スコアのみを固有値でスケーリングします。</"
-"li>\n"
-"<li><strong>列主成分：</strong> 列スコアのみを固有値でスケーリングします。</"
-"li>\n"
+"<li><strong>主成分：</strong> 行と列のスコアを固有値でスケーリングします。</li>\n"
+"<li><strong>対象：</strong> 行と列のスコアを固有値の平方根でスケーリングします。</li>\n"
+"<li><strong>行主成分：</strong> 行スコアのみを固有値でスケーリングします。</li>\n"
+"<li><strong>列主成分：</strong> 列スコアのみを固有値でスケーリングします。</li>\n"
 "<li><strong>標準：</strong> 正規化を行わない生座標を使用します。</li>\n"
 "</ul>\n"
-"<p>サンプルファイルは、Open &gt; Data Library &gt; vijPlots &gt; Smoking に含"
-"まれています。</p>"
+"<p>サンプルファイルは、Open &gt; Data Library &gt; vijPlots &gt; Smoking に含まれています。</p>"
 
 #: R/multcorresp.b.R
 msgid ""
@@ -282,36 +268,26 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
 msgstr ""
-"<p>このモジュールは、複数のカテゴリ変数に対して<strong>多重コレスポンデンス分"
-"析 (MCA)</strong> を実行します。計算は、F.&nbsp;Husson、J.&nbsp;Josse、"
-"S.&nbsp;Le、J.&nbsp;Mazetらによる <a href = \"https://CRAN.R-project.org/"
-"package=FactoMineR\" target=\"_blank\">FactoMineR<a/> パッケージに基づいてい"
-"ます。</p>\n"
+"<p>このモジュールは、複数のカテゴリ変数に対して<strong>多重コレスポンデンス分析 (MCA)</strong> "
+"を実行します。計算は、F.&nbsp;Husson、J.&nbsp;Josse、S.&nbsp;Le、J.&nbsp;Mazetらによる <a href "
+"= \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> パッケージに基づいています。</p>\n"
 "<p>以下の2つの古典的な手法が利用可能です：</p>\n"
 "<ul>\n"
 "<li><strong>指示行列：</strong> 指示行列に対する対応分析</li>\n"
-"<li><strong>バート行列：</strong> バート行列に対する対応分析。固有値は指示行"
-"列法の固有値の2乗になります。</li>\n"
+"<li><strong>バート行列：</strong> バート行列に対する対応分析。固有値は指示行列法の固有値の2乗になります。</li>\n"
 "</ul>\n"
-"<p>どちらの手法を用いても、同じ <em>標準</em> 座標（ただし異なる <em>主</em> "
-"座標）が得られます。</p>\n"
-"<p>選択した場合、<strong>ベンゼクリおよびグリーンエーカーの補正</strong>は固"
-"有値のみに適用されます（<strong>要約</strong> テーブル）。カテゴリおよび観測"
-"値の座標は、バート行列の元の固有値から計算されます。</p>\n"
-"<p><strong>標準化</strong> オプションは、座標を（固有値で）どのように"
-"スケーリングするかを指定します：</p>\n"
+"<p>どちらの手法を用いても、同じ <em>標準</em> 座標（ただし異なる <em>主</em> 座標）が得られます。</p>\n"
+"<p>選択した場合、<strong>ベンゼクリおよびグリーンエーカーの補正</strong>は固有値のみに適用されます（<strong>要約</"
+"strong> テーブル）。カテゴリおよび観測値の座標は、バート行列の元の固有値から計算されます。</p>\n"
+"<p><strong>標準化</strong> オプションは、座標を（固有値で）どのようにスケーリングするかを指定します：</p>\n"
 "<ul>\n"
-"<li><strong>主標準化：</strong> カテゴリと個体の両方の座標がスケーリングされ"
-"ます。</li>\n"
-"<li><strong>カテゴリ主標準化：</strong> カテゴリの座標のみがスケーリングされ"
-"ます。</li>\n"
-"<li><strong>観測値主標準化：</strong> 観測値の座標のみがスケーリングされます"
-"。</li>\n"
-"<li><strong>標準：</strong> カテゴリと観測値の両方の座標が標準となります。</"
-"li>\n"
+"<li><strong>主標準化：</strong> カテゴリと個体の両方の座標がスケーリングされます。</li>\n"
+"<li><strong>カテゴリ主標準化：</strong> カテゴリの座標のみがスケーリングされます。</li>\n"
+"<li><strong>観測値主標準化：</strong> 観測値の座標のみがスケーリングされます。</li>\n"
+"<li><strong>標準：</strong> カテゴリと観測値の両方の座標が標準となります。</li>\n"
 "</ul>\n"
-"<p>サンプルファイルは Open > Data Library > vijPlots > Cars に含まれています"
-"。</p>"
+"<p>サンプルファイルは Open > Data Library > vijPlots > Cars に含まれています。</p>"
 
 #: R/principal.b.R
 msgid ""
@@ -342,32 +318,24 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
 msgstr ""
-"<p>このモジュールは、複数の連続変数に対して<strong>主成分分析 (PCA)</strong> "
-"を実行します。計算は <tt>stats::prcomp</tt> 関数に基づいています。</p>\n"
-"<p>回転後の成分は厳密には主成分ではありませんが、広く利用されています。直交回"
-"転のみが利用可能です（GPArotation パッケージを使用）。</p>\n"
-"<p>主成分負荷量（変数座標）およびスコア（観測値座標）は主座標（固有値の平方根"
-"でスケーリングされたもの）です。</p>\n"
-"<p>バイプロットは \"Biplots in Practice\" (Michael Greenacre, 2010) に準拠し"
-"ています：</p>\n"
+"<p>このモジュールは、複数の連続変数に対して<strong>主成分分析 (PCA)</strong> を実行します。計算は "
+"<tt>stats::prcomp</tt> 関数に基づいています。</p>\n"
+"<p>回転後の成分は厳密には主成分ではありませんが、広く利用されています。直交回転のみが利用可能です（GPArotation "
+"パッケージを使用）。</p>\n"
+"<p>主成分負荷量（変数座標）およびスコア（観測値座標）は主座標（固有値の平方根でスケーリングされたもの）です。</p>\n"
+"<p>バイプロットは \"Biplots in Practice\" (Michael Greenacre, 2010) に準拠しています：</p>\n"
 "<ul>\n"
-"<li><strong>フォーム・バイプロット：</strong> スコアは主座標（固有値で"
-"スケーリング）され、負荷量は標準座標となります。</li>\n"
-"<li><strong>共分散バイプロット：</strong> 負荷量は主座標となり、スコアは標準"
-"座標となります。</li>\n"
+"<li><strong>フォーム・バイプロット：</strong> スコアは主座標（固有値でスケーリング）され、負荷量は標準座標となります。</li>\n"
+"<li><strong>共分散バイプロット：</strong> 負荷量は主座標となり、スコアは標準座標となります。</li>\n"
 "</ul>\n"
 "<p><strong>詳細設定</strong>:</p>\n"
 "<ul>\n"
-"<li><strong>負荷量の標準化：</strong> 負荷量を（固有値ではなく）2乗和が1にな"
-"るように標準化します。</li>\n"
-"<li><strong>スコアの標準化</strong> スコアを（固有値ではなく）分散が1になるよ"
-"うに標準化します。</li>\n"
-"<li><strong>固有ベクトルの回転：</strong> 主座標としての負荷量ではなく、固有"
-"ベクトル（標準負荷量）に対して回転（バリマックス回転など）を適用します（STATA"
-"方式）。</li>\n"
+"<li><strong>負荷量の標準化：</strong> 負荷量を（固有値ではなく）2乗和が1になるように標準化します。</li>\n"
+"<li><strong>スコアの標準化</strong> スコアを（固有値ではなく）分散が1になるように標準化します。</li>\n"
+"<li><strong>固有ベクトルの回転：</strong> "
+"主座標としての負荷量ではなく、固有ベクトル（標準負荷量）に対して回転（バリマックス回転など）を適用します（STATA方式）。</li>\n"
 "</ul>\n"
-"<p>サンプルファイルは「開く > データライブラリ > vijPlots > Iris」に含まれて"
-"います。</p>"
+"<p>サンプルファイルは「開く > データライブラリ > vijPlots > Iris」に含まれています。</p>"
 
 #: R/mrfrequencies.b.R
 msgid ""
@@ -383,17 +351,13 @@ msgid ""
 "<p>A sample file is included at Open > Data Library > vijPlots > Credit "
 "Cards</p>"
 msgstr ""
-"<p>このモジュールは、複数回答質問（いわゆる「該当するものをすべて選択」）の度"
-"数集計を行います。</p>\n"
+"<p>このモジュールは、複数回答質問（いわゆる「該当するものをすべて選択」）の度数集計を行います。</p>\n"
 "<p>質問は以下の形式でコーディングできます：</p>\n"
 "<ul>\n"
-"<li>各選択肢ごとに、0/1、1/2、Y/N などで表した複数の<strong>ダミー変数</"
-"strong>；</li>\n"
-"<li>選択された回答を区切り記号（通常は「,」や「;」）で並べた、単一の<strong>"
-"多値変数</strong>。</li>\n"
+"<li>各選択肢ごとに、0/1、1/2、Y/N などで表した複数の<strong>ダミー変数</strong>；</li>\n"
+"<li>選択された回答を区切り記号（通常は「,」や「;」）で並べた、単一の<strong>多値変数</strong>。</li>\n"
 "</ul>\n"
-"<p>サンプルデータは「Open > Data Library > vijPlots > Credit Cards」から利用"
-"できます。</p>"
+"<p>サンプルデータは「Open > Data Library > vijPlots > Credit Cards」から利用できます。</p>"
 
 #: R/mrcrosstabs.b.R
 msgid ""
@@ -409,17 +373,13 @@ msgid ""
 "<p>A sample file is included at Open > Data Library > vijPlots > Credit "
 "Cards</p>"
 msgstr ""
-"<p>このモジュールは、複数回答質問（いわゆる「該当するものをすべて選択」）に対"
-"して、2変数の度数集計を行います。</p>\n"
+"<p>このモジュールは、複数回答質問（いわゆる「該当するものをすべて選択」）に対して、2変数の度数集計を行います。</p>\n"
 "<p>質問は以下の形式でコーディングできます：</p>\n"
 "<ul>\n"
-"<li> 各選択肢ごとに、0/1、1/2、Y/N などで表した複数の <strong> ダミー変数 </"
-"strong> ； </li>\n"
-"<li>選択された回答を区切り記号（通常は「,」や「;」）で並べた、単一の "
-"<strong> 多値変数 </strong> 。</li>\n"
+"<li> 各選択肢ごとに、0/1、1/2、Y/N などで表した複数の <strong> ダミー変数 </strong> ； </li>\n"
+"<li>選択された回答を区切り記号（通常は「,」や「;」）で並べた、単一の <strong> 多値変数 </strong> 。</li>\n"
 "</ul>\n"
-"<p>サンプルデータは「Open > Data Library > vijPlots > Credit Cards」から利用"
-"できます。</p>"
+"<p>サンプルデータは「Open > Data Library > vijPlots > Credit Cards」から利用できます。</p>"
 
 #: R/qqplot.b.R
 msgid ""
@@ -471,52 +431,40 @@ msgid ""
 "</ul>\n"
 "</p>"
 msgstr ""
-"<p>このモジュールは、Alexandre Almeida、Adam Loy、Heike Hofmannらによる <a "
-"href = \"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">"
-"qqplotr R パッケージ<a/> を使用しています。詳細な情報は、CRANサイトにある"
-"パッケージのドキュメントで確認できます。</p>\n"
-"<p><strong>参照線：</strong> <em>恒等線</em> (y = x)、または2つのデータ分位"
-"数 (Q<sub>0.25</sub> および Q<sub>0.75</sub>) を通る一般的な <em>Q-Q 線</em> "
-"のいずれかを描画します。P-P プロットは恒等線のみをサポートしています。</p>\n"
+"<p>このモジュールは、Alexandre Almeida、Adam Loy、Heike Hofmannらによる <a href = "
+"\"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">qqplotr R "
+"パッケージ<a/> を使用しています。詳細な情報は、CRANサイトにあるパッケージのドキュメントで確認できます。</p>\n"
+"<p><strong>参照線：</strong> <em>恒等線</em> (y = x)、または2つのデータ分位数 (Q<sub>0.25</sub> "
+"および Q<sub>0.75</sub>) を通る一般的な <em>Q-Q 線</em> のいずれかを描画します。P-P "
+"プロットは恒等線のみをサポートしています。</p>\n"
 "<p><strong>信頼帯：</strong> 参照線の周囲に信頼帯を描画します。qqplotr "
-"パッケージでは、信頼帯を計算するために以下のようないくつかの手法が提供されて"
-"います：</p>\n"
+"パッケージでは、信頼帯を計算するために以下のようないくつかの手法が提供されています：</p>\n"
 "<ul>\n"
-"<li><strong><em>点別</em></strong> は、正規分布の信頼区間に基づいて点別の信頼"
-"帯を構築します。</li>\n"
-"<li><strong><em>ブートストラップ</em></strong> は、パラメトリック・"
-"ブートストラップに基づいて点別の信頼帯を作成します。</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> 帯は、コルモゴロフ・"
-"スミルノフ検定に基づいています。</li>\n"
-"<li><strong><em>Tail-Sensitive</em></strong> は、裾の重さに感度を持たせた信頼"
-"帯を構築しますが、正規 Q-Q プロットに対してのみ実装されています。</li>\n"
-"<li><strong><em>等局所水準</em></strong> は、等局所水準を用いて同時信頼帯を構"
-"築します。</li>\n"
+"<li><strong><em>点別</em></strong> は、正規分布の信頼区間に基づいて点別の信頼帯を構築します。</li>\n"
+"<li><strong><em>ブートストラップ</em></strong> "
+"は、パラメトリック・ブートストラップに基づいて点別の信頼帯を作成します。</li>\n"
+"<li><strong><em>Kolmogorov-Smirnov</em></strong> "
+"帯は、コルモゴロフ・スミルノフ検定に基づいています。</li>\n"
+"<li><strong><em>Tail-Sensitive</em></strong> は、裾の重さに感度を持たせた信頼帯を構築しますが、正規 Q-Q "
+"プロットに対してのみ実装されています。</li>\n"
+"<li><strong><em>等局所水準</em></strong> は、等局所水準を用いて同時信頼帯を構築します。</li>\n"
 "</ul>\n"
-"<p>P-P プロットは「等局所水準」と「ブートストラップ」の手法のみをサポートして"
-"います。</p>\n"
-"<p><strong>トレンド除去プロット：</strong> 各オブジェクトは、参照線に基づい"
-"て <em>トレンド除去</em> されます。この手順は、点から参照線までの直交距離によ"
-"って生じる視覚的なバイアスを軽減するのに役立ちます。</p>\n"
-"<p><strong>パラメタ値：</strong> 分布のパラメタは、以下の方法でデータから推定"
-"できます：</p>\n"
+"<p>P-P プロットは「等局所水準」と「ブートストラップ」の手法のみをサポートしています。</p>\n"
+"<p><strong>トレンド除去プロット：</strong> 各オブジェクトは、参照線に基づいて <em>トレンド除去</em> "
+"されます。この手順は、点から参照線までの直交距離によって生じる視覚的なバイアスを軽減するのに役立ちます。</p>\n"
+"<p><strong>パラメタ値：</strong> 分布のパラメタは、以下の方法でデータから推定できます：</p>\n"
 "<ul>\n"
-"<li><strong>最尤法</strong>（MASS パッケージを使用）： 「t分布」と「一様分布"
-"」を除くすべての分布で機能します。</li>\n"
-"<li><strong>モーメント法 </strong> (モーメントに基づくパラメーター用): 「正規"
-"分布」、「対数正規分布」、「ベータ分布」、「指数分布」、「ガンマ分布」、「"
-"ロジスティック分布」、「一様分布」で機能します。</li>\n"
+"<li><strong>最尤法</strong>（MASS パッケージを使用）： 「t分布」と「一様分布」を除くすべての分布で機能します。</li>\n"
+"<li><strong>モーメント法 </strong> (モーメントに基づくパラメーター用): "
+"「正規分布」、「対数正規分布」、「ベータ分布」、「指数分布」、「ガンマ分布」、「ロジスティック分布」、「一様分布」で機能します。</li>\n"
 "</ul>\n"
 "<p>または、ユーザーが入力することも可能です：</p>\n"
 "<ul>\n"
-"<li><strong>パラメーター 1：</strong> 平均（正規分布）、対数平均（対数正規分"
-"布）、形状1 (ベータ分布)、位置（コーシー分布、ロジスティック分布）、自由度（"
-"カイ2乗、スチューデント）、自由度1（F分布）、レート（指数分布）、形状（ガンマ"
-"分布、ワイブル分布）、最小値（一様分布）。</li>\n"
-"<li><strong>パラメーター 2：</strong> 標準偏差（正規分布）、対数標準偏差（対"
-"数正規分布）、形状2 (ベータ分布)、スケール （コーシー分布、ロジスティック分布"
-"）、自由度2（F分布）、レート （ガンマ分布、ワイブル分布）、最大値（一様分布）"
-"。</li>\n"
+"<li><strong>パラメーター 1：</strong> 平均（正規分布）、対数平均（対数正規分布）、形状1 "
+"(ベータ分布)、位置（コーシー分布、ロジスティック分布）、自由度（カイ2乗、スチューデント）、自由度1"
+"（F分布）、レート（指数分布）、形状（ガンマ分布、ワイブル分布）、最小値（一様分布）。</li>\n"
+"<li><strong>パラメーター 2：</strong> 標準偏差（正規分布）、対数標準偏差（対数正規分布）、形状2 (ベータ分布)、スケール "
+"（コーシー分布、ロジスティック分布）、自由度2（F分布）、レート （ガンマ分布、ワイブル分布）、最大値（一様分布）。</li>\n"
 "</ul>\n"
 "</p>"
 
@@ -555,6 +503,11 @@ msgstr "10-20-2035"
 msgid "10/20/35"
 msgstr "10/20/35"
 
+#: areachart/options/dateBreak/100year.title
+#: linechart/options/dateBreak/100year.title
+msgid "100 years"
+msgstr ""
+
 #: areachart/options/dateBreak/2week.title
 #: linechart/options/dateBreak/2week.title
 msgid "2 weeks"
@@ -564,6 +517,11 @@ msgstr "2週間"
 #: linechart/options/displayFormat/%e%B%Y.title
 msgid "20 October 2035"
 msgstr "20 October 2035"
+
+#: areachart/options/dateBreak/20year.title
+#: linechart/options/dateBreak/20year.title
+msgid "20 years"
+msgstr ""
 
 #: areachart/options/displayFormat/%d-%m-%Y.title
 #: linechart/options/displayFormat/%d-%m-%Y.title
@@ -595,10 +553,25 @@ msgstr "2035 October 20"
 msgid "2035-10-20"
 msgstr "2035-10-20"
 
+#: areachart/options/dateBreak/25year.title
+#: linechart/options/dateBreak/25year.title
+msgid "25 years"
+msgstr ""
+
 #: areachart/options/dateBreak/3month.title
 #: linechart/options/dateBreak/3month.title
 msgid "3 months"
 msgstr "3か月"
+
+#: areachart/options/dateBreak/5year.title
+#: linechart/options/dateBreak/5year.title
+msgid "5 years"
+msgstr ""
+
+#: areachart/options/dateBreak/50year.title
+#: linechart/options/dateBreak/50year.title
+msgid "50 years"
+msgstr ""
 
 #: areachart/options/dateBreak/6month.title
 #: linechart/options/dateBreak/6month.title
@@ -770,6 +743,7 @@ msgid "August"
 msgstr "8月"
 
 #: areachart/options/dateFormat/auto.title
+#: areachart/options/xAxisRangeType/auto.title
 #: areachart/options/yAxisRangeType/auto.title
 #: barchart/options/textColor/auto.title
 #: barchart/options/yAxisRangeType/auto.title
@@ -783,6 +757,7 @@ msgstr "8月"
 #: histogram/options/xAxisRangeType/auto.title
 #: likertplot/options/labelColor/auto.title
 #: linechart/options/dateFormat/auto.title
+#: linechart/options/xAxisRangeType/auto.title
 #: linechart/options/yAxisRangeType/auto.title
 #: lollipop/options/yAxisRangeType/auto.title
 #: lollipop/options/xAxisRangeType/auto.title
@@ -3033,16 +3008,11 @@ msgstr "ロリポップのサイズ & 色"
 msgid ""
 "Main statistical charts (histogram, boxplot, point, bar, line, raincloud…) "
 "with many options along with Likert plot, multiple response barplot, "
-"Principal Component and (Multiple) Correspondence Analyses. Project source "
-"(and changelog) is available at <a "
-"href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>."
+"Principal Component and (Multiple) Correspondence Analyses. The module is "
+"available in the <strong>Plots tab</strong>. Project source (and changelog) "
+"is available at <a href=\"https://github.com/vjalby/vijPlots\" "
+"target=\"_blank\">Github</a>."
 msgstr ""
-"主な統計グラフ（ヒストグラム、箱ひげ図、点プロット、棒グラフ、折れ線グラフ、"
-"レインクラウドプロットなど）には多数のオプションが用意されています。あわせて"
-"、リッカートプロット、多重回答棒グラフ、主成分分析および（多重）対応分析にも"
-"対応しています。 プロジェクトのソースコード（および変更履歴）は <a "
-"href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a> で公"
-"開されています。"
 
 #: likertplot/options/showMannU.title
 msgid "Mann-Whitney U"
@@ -3052,6 +3022,7 @@ msgstr "マン・ホイットニーのU"
 msgid "Mann-Whitney U Tests"
 msgstr "マン・ホイットニーのU検定"
 
+#: areachart/options/xAxisRangeType/manual.title
 #: areachart/options/yAxisRangeType/manual.title
 #: barchart/options/yAxisRangeType/manual.title
 #: barchart/options/xAxisRangeType/manual.title
@@ -3061,6 +3032,7 @@ msgstr "マン・ホイットニーのU検定"
 #: boxplot/options/xAxisRangeType/manual.title
 #: histogram/options/yAxisRangeType/manual.title
 #: histogram/options/xAxisRangeType/manual.title
+#: linechart/options/xAxisRangeType/manual.title
 #: linechart/options/yAxisRangeType/manual.title
 #: lollipop/options/yAxisRangeType/manual.title
 #: lollipop/options/xAxisRangeType/manual.title
@@ -3093,6 +3065,7 @@ msgstr "3月"
 msgid "Mass"
 msgstr "質量"
 
+#: areachart/options/xAxisRangeMax.title
 #: areachart/options/yAxisRangeMax.title
 #: barchart/options/yaxis/max.title
 #: barchart/options/yAxisRangeMax.title
@@ -3104,6 +3077,7 @@ msgstr "質量"
 #: boxplot/options/xAxisRangeMax.title
 #: histogram/options/yAxisRangeMax.title
 #: histogram/options/xAxisRangeMax.title
+#: linechart/options/xAxisRangeMax.title
 #: linechart/options/yAxisRangeMax.title
 #: lollipop/options/yaxis/max.title
 #: lollipop/options/yAxisRangeMax.title
@@ -3216,6 +3190,7 @@ msgstr "方法："
 msgid "Middle"
 msgstr "中央"
 
+#: areachart/options/xAxisRangeMin.title
 #: areachart/options/yAxisRangeMin.title
 #: barchart/options/yaxis/min.title
 #: barchart/options/yAxisRangeMin.title
@@ -3227,6 +3202,7 @@ msgstr "中央"
 #: boxplot/options/xAxisRangeMin.title
 #: histogram/options/yAxisRangeMin.title
 #: histogram/options/xAxisRangeMin.title
+#: linechart/options/xAxisRangeMin.title
 #: linechart/options/yAxisRangeMin.title
 #: lollipop/options/yaxis/min.title
 #: lollipop/options/yAxisRangeMin.title
@@ -4184,6 +4160,7 @@ msgstr "レインクラウド"
 msgid "Raincloud Plot"
 msgstr "レインクラウドプロット"
 
+#: areachart/ui[2][0][0][1].label
 #: areachart/ui[2][0][1][1].label
 #: barchart/ui[6][0][0][1].label
 #: barchart/ui[6][0][1][1].label
@@ -4193,6 +4170,7 @@ msgstr "レインクラウドプロット"
 #: boxplot/ui[4][0][1][1].label
 #: histogram/ui[5][0][0][1].label
 #: histogram/ui[5][0][1][1].label
+#: linechart/ui[2][0][0][1].label
 #: linechart/ui[2][0][1][1].label
 #: lollipop/ui[5][0][0][1].label
 #: lollipop/ui[5][0][1][1].label
@@ -5097,6 +5075,7 @@ msgstr "理論確率"
 msgid "Theoretical Quantiles"
 msgstr "理論分位点"
 
+#: areachart/options/xTicks.title
 #: areachart/options/yTicks.title
 #: barchart/options/xTicks.title
 #: barchart/options/yTicks.title
@@ -5106,6 +5085,7 @@ msgstr "理論分位点"
 #: boxplot/options/yTicks.title
 #: histogram/options/xTicks.title
 #: histogram/options/yTicks.title
+#: linechart/options/xTicks.title
 #: linechart/options/yTicks.title
 #: lollipop/options/xTicks.title
 #: lollipop/options/yTicks.title
@@ -5778,11 +5758,13 @@ msgstr "X軸範囲"
 msgid "Y-Axis"
 msgstr "Y軸"
 
+#: areachart/options/xAxisRangeType.title
 #: areachart/options/yAxisRangeType.title
 #: barchart/options/yAxisRangeType.title
 #: barplot/options/yAxisRangeType.title
 #: boxplot/options/yAxisRangeType.title
 #: histogram/options/yAxisRangeType.title
+#: linechart/options/xAxisRangeType.title
 #: linechart/options/yAxisRangeType.title
 #: lollipop/options/yAxisRangeType.title
 #: mrcrosstabs/options/yAxisRangeType.title
