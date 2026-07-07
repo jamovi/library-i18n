@@ -13,6 +13,10 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 2026.7.dev0\n"
 
+#: R/msnp.b.R
+msgid "-log10(p-value)"
+msgstr ""
+
 #: R/mlr.b.R
 msgid "(Intercept)"
 msgstr ""
@@ -65,11 +69,8 @@ msgid "%"
 msgstr "%"
 
 #: R/mpca.b.R
-msgid "% of variance"
-msgstr ""
-
 #: mPCA/results/varianceTable.columns.title
-msgid "% of Variance"
+msgid "% of variance"
 msgstr ""
 
 #: mMOUT/results/stat.columns.title
@@ -83,6 +84,20 @@ msgid ""
 "Shapiro-Wilk test"
 msgstr ""
 
+#: R/msnp.b.R
+msgid ""
+"<b>Allele frequencies (p, q)</b> represent the proportions of the two "
+"alleles in the sample. For a biallelic marker with alleles A and B: p = "
+"freq(A) = (2*n_AA + n_AB) / (2*N), q = 1 - p."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Allelic test</b> compares allele frequencies between case and control "
+"groups using a 2×2 contingency table. Tests whether the minor allele is "
+"significantly more (or less) frequent in cases than controls."
+msgstr ""
+
 #: R/mpwr.b.R
 msgid ""
 "<b>Alpha (α)</b> is the significance level, representing the maximum "
@@ -92,8 +107,21 @@ msgstr ""
 
 #: R/mui.b.R
 msgid ""
-"<b>Balance</b> - balance between correct and incorrect classified "
+"<b>Balance</b> - balance between correctly and incorrectly classified cases "
 "(TP+TN)/(FP+FN)"
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Balanced Accuracy (BA)</b> = (Sensitivity + Specificity) / 2. Accounts "
+"for class imbalance. BA = 0.5 indicates random classification."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Best model selection</b>: the genetic model with the lowest p-value (or "
+"AIC/BIC) is highlighted. This helps identify the most likely mode of "
+"inheritance for the observed association."
 msgstr ""
 
 #: R/mcor.b.R
@@ -119,6 +147,19 @@ msgid ""
 "network)."
 msgstr ""
 
+#: R/msnp.b.R
+msgid ""
+"<b>Chi-square test</b> is the classical Pearson goodness-of-fit test "
+"comparing observed and expected genotype counts under HWE. Suitable for "
+"large sample sizes (N > 50). Asymptotic; may be unreliable for rare alleles."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Classification</b> defines the epistatic model: subjects in HR cells are "
+"predicted as cases, LR cells as controls."
+msgstr ""
+
 #: R/mcor.b.R
 msgid ""
 "<b>CLOSENESS</b>: inverse of the sum of shortest path lengths to all other "
@@ -142,6 +183,21 @@ msgstr ""
 
 #: R/mcor.b.R
 msgid "<b>Correlation method</b>: {method}"
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Cross-Validation Consistency (CVC)</b> is the number of folds (out of K) "
+"in which the model was selected as best. Higher CVC indicates greater "
+"stability of the identified interaction."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>D' (normalized LD)</b> measures the strength of linkage disequilibrium "
+"between two loci, scaled to [-1, 1]. <b>|D'| = 1</b> indicates complete LD "
+"(no recombination observed), <b>D' = 0</b> indicates linkage equilibrium "
+"(independent assortment)."
 msgstr ""
 
 #: R/mpwr.b.R
@@ -183,12 +239,39 @@ msgid ""
 "p-values, it is independent of the sample size."
 msgstr ""
 
+#: R/msnp.b.R
+msgid ""
+"<b>Effective number of alleles (Ne)</b> is the reciprocal of homozygosity: "
+"Ne = 1 / Σ(pi²). Ne = 1 indicates fixation (monomorphic), Ne = 2 indicates "
+"equal allele frequencies for a biallelic marker."
+msgstr ""
+
 #: R/mpwr.b.R
 msgid ""
 "<b>Events (N1)</b> represents the required number of target events (e.g., "
 "deaths or failures) to achieve the desired power. In survival analysis, "
 "statistical power is driven by the number of events rather than the total "
 "number of subjects."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Exact test</b> (Haldane, 1954) computes the exact probability of the "
+"observed heterozygote count, conditional on the allele counts. Recommended "
+"for small samples or rare alleles."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Expected genotype frequencies</b> are the counts predicted under "
+"Hardy-Weinberg equilibrium: E(AA) = p² × N, E(AB) = 2pq × N, E(BB) = q² × N."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Expected heterozygosity (H_exp)</b> is the heterozygosity expected under "
+"HWE: H_exp = 2pq. A significant difference between H_obs and H_exp may "
+"indicate inbreeding, population substructure, or selection."
 msgstr ""
 
 #: R/mcor.b.R
@@ -204,12 +287,27 @@ msgid ""
 "p<sub>value</sub>."
 msgstr ""
 
+#: R/msnp.b.R
+msgid ""
+"<b>Genetic models</b> test the association under different inheritance "
+"patterns: <b>Codominant</b> (AA vs AB vs BB), <b>Dominant</b> (AA vs AB+BB), "
+"<b>Recessive</b> (AA+AB vs BB), <b>Overdominant</b> (AA+BB vs AB), "
+"<b>Log-additive</b> (trend test for allele dose 0/1/2)."
+msgstr ""
+
 #: R/mcor.b.R
 msgid "<b>Hₐ</b> is negative correlation"
 msgstr ""
 
 #: R/mcor.b.R
 msgid "<b>Hₐ</b> is positive correlation"
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Haplotype frequencies</b> are estimated using the "
+"Expectation-Maximization (EM) algorithm from unphased genotype data. The "
+"p-value tests the null hypothesis D = 0 (linkage equilibrium)."
 msgstr ""
 
 #: R/mpwr.b.R
@@ -236,10 +334,24 @@ msgid ""
 "output activation functions)"
 msgstr ""
 
+#: R/msnp.b.R
+msgid ""
+"<b>High-Risk (HR)</b> cells have cases/controls ratio ≥ threshold T. "
+"<b>Low-Risk (LR)</b> cells have ratio < T."
+msgstr ""
+
 #: R/mmlp.b.R
 msgid ""
 "<b>Hold-out Accuracy</b>: classification accuracy on the hold-out validation "
 "dataset."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Inbreeding coefficient (F_IS)</b> measures deviation from HWE: F_IS = 1 - "
+"H_obs / H_exp. <b>F_IS > 0</b> indicates heterozygote deficiency "
+"(inbreeding), <b>F_IS < 0</b> indicates heterozygote excess (outbreeding), "
+"<b>F_IS = 0</b> indicates Hardy-Weinberg equilibrium."
 msgstr ""
 
 #: R/mmlp.b.R
@@ -267,6 +379,13 @@ msgid ""
 "a null model without covariates."
 msgstr ""
 
+#: R/msnp.b.R
+msgid ""
+"<b>Likelihood-ratio test</b> compares the likelihood of the data under HWE "
+"versus the saturated model. The test statistic -2 × ln(L_HWE / L_sat) "
+"follows chi-square with 1 df."
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "<b>Log-rank (Mantel-Cox) test</b> is a non-parametric hypothesis test that "
@@ -279,18 +398,26 @@ msgstr ""
 
 #: R/mui.b.R
 msgid ""
-"<b>LR-</b> - Negative Likelihood Ratio P(-|D+))/(P(-|D-)). The probability "
-"of a person with the condition receiving a negative classification / "
-"probability of a person without the condition receiving a negative "
-"classification"
+"<b>LR-</b> - Negative Likelihood Ratio (P(-|D+))/(P(-|D-)). The ratio of the "
+"probability of a person with the condition receiving a negative "
+"classification to the probability of a person without the condition "
+"receiving a negative classification"
 msgstr ""
 
 #: R/mui.b.R
 msgid ""
-"<b>LR+</b> - Positive Likelihood Ratio (P(+|D+))/(P(+|D-)) The probability "
-"of a person with the condition receiving a positive classification / "
-"probability of a person without the condition receiving a positive "
-"classification"
+"<b>LR+</b> - Positive Likelihood Ratio (P(+|D+))/(P(+|D-)). The ratio of the "
+"probability of a person with the condition receiving a positive "
+"classification to the probability of a person without the condition "
+"receiving a positive classification"
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>MAF (Minor Allele Frequency)</b> is the frequency of the less common "
+"allele in the population. Markers with <b>MAF < 0.01</b> are typically "
+"considered monomorphic and may be excluded from analysis. <b>MAF < 0.05</b> "
+"indicates a rare variant."
 msgstr ""
 
 #: R/mmf.b.R
@@ -307,6 +434,14 @@ msgstr ""
 msgid ""
 "<b>MCAR</b> - missing completely at random (if the p<sub>value</sub> is not "
 "significant, there is evidence the data is MCAR)."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>MDR (Multifactor Dimensionality Reduction)</b> (Ritchie et al., 2001) is "
+"a non-parametric method for detecting gene-gene interactions (epistasis). It "
+"reduces high-dimensional genotype combinations into a binary variable "
+"(high-risk vs. low-risk)."
 msgstr ""
 
 #: R/mcor.b.R
@@ -342,8 +477,8 @@ msgstr ""
 
 #: R/mui.b.R
 msgid ""
-"<b>More Certain Interval (MCI)</b> is interval outside the Uncertain "
-"Interval and divide into low and high parts."
+"<b>More Certain Interval (MCI)</b> is the interval outside the Uncertain "
+"Interval and is divided into low and high parts."
 msgstr ""
 
 #: R/mmf.b.R
@@ -371,10 +506,58 @@ msgstr ""
 msgid "<b>NPV</b> - Negative Predictive Value of the negative class TN/(TN+FN)"
 msgstr ""
 
+#: R/msnp.b.R
+msgid ""
+"<b>Observed genotype frequencies</b> are the raw counts and proportions of "
+"each genotype (AA, AB, BB) directly from the data."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Observed heterozygosity (H_obs)</b> is the proportion of heterozygous "
+"individuals (AB) in the sample: H_obs = n_AB / N."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Odds Ratio (OR)</b> quantifies the strength of association between an "
+"allele/genotype and the outcome. <b>OR > 1</b> indicates increased risk, "
+"<b>OR < 1</b> indicates protective effect, <b>OR = 1</b> indicates no "
+"association. The 95% CI that does not cross 1.0 indicates significance."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>p-adjusted</b> is the p-value corrected for multiple testing across "
+"markers using the selected method (Bonferroni, Holm, or Benjamini–Hochberg "
+"FDR)."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Permutation p-value</b> is obtained by shuffling outcome labels. It "
+"represents the proportion of permuted datasets that achieved a testing BA ≥ "
+"the observed value."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Permutation test</b> estimates the p-value by randomly permuting alleles "
+"among genotypes. Distribution-free; valid for any sample size."
+msgstr ""
+
 #: R/mmf.b.R
 msgid ""
 "<b>PFC</b> - proportion of falsely classified (for Nominal and Ordinal "
 "variables);"
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>PIC (Polymorphism Information Content)</b> measures the informativeness "
+"of a genetic marker. <b>PIC > 0.5</b> is highly informative, <b>0.25 < PIC < "
+"0.5</b> is moderately informative, <b>PIC < 0.25</b> is slightly informative "
+"(Botstein et al., 1980)."
 msgstr ""
 
 #: R/mpwr.b.R
@@ -385,13 +568,28 @@ msgid ""
 msgstr ""
 
 #: R/mui.b.R
-msgid "<b>PPV</b> - Positive Predictive Value of the positive class TP/(TN+FN)"
+msgid "<b>PPV</b> - Positive Predictive Value of the positive class TP/(TP+FP)"
 msgstr ""
 
 #: R/mmf.b.R
 msgid ""
 "<b>PVU</b> - proportion of variance unexplained 1-R² (for Continuous "
 "variables);"
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>r² (squared correlation)</b> measures both LD strength and allele "
+"frequency similarity. <b>r² = 1</b> indicates perfect LD (complete mutual "
+"predictability), <b>r² > 0.8</b> is commonly used as the threshold for "
+"strong LD in GWAS tag-SNP selection. r² is preferred over D' for association "
+"study design because it directly relates to statistical power."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Ratio</b> = Cases / Controls. Empty cells (no observations) are left "
+"unclassified."
 msgstr ""
 
 #: R/msrv.b.R
@@ -404,9 +602,14 @@ msgid ""
 msgstr ""
 
 #: R/mui.b.R
+msgid "<b>Se</b> - sensitivity of the positive class TP/(TP+FN)"
+msgstr ""
+
+#: R/msnp.b.R
 msgid ""
-"<b>Se</b> - sensitivity of the positive and negative classifications "
-"TP/(TP+FN)"
+"<b>Shannon Information Index (I)</b> quantifies allelic diversity. Higher "
+"values indicate greater diversity. For a biallelic marker, maximum I = ln(2) "
+"≈ 0.693 when allele frequencies are equal."
 msgstr ""
 
 #: R/mui.b.R
@@ -414,9 +617,7 @@ msgid "<b>SNPV</b> - standardized negative predictive value of the negative clas
 msgstr ""
 
 #: R/mui.b.R
-msgid ""
-"<b>Sp</b> - specificity of the positive and negative classifications "
-"TN/(TN+FN)"
+msgid "<b>Sp</b> - specificity of the negative class TN/(TN+FP)"
 msgstr ""
 
 #: R/mui.b.R
@@ -442,6 +643,13 @@ msgstr ""
 
 #: R/mmlp.b.R
 msgid "<b>Training Accuracy</b>: classification accuracy on the training dataset."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Training BA</b> may be optimistically biased. <b>Testing BA</b> is "
+"computed on the held-out fold and provides an unbiased estimate of "
+"predictive performance."
 msgstr ""
 
 #: R/mui.b.R
@@ -487,6 +695,14 @@ msgstr ""
 msgid "1 - Specificity"
 msgstr "1 - Специфічність"
 
+#: mSNP/options/mdrOrder/1.title
+msgid "1-way"
+msgstr ""
+
+#: mSNP/options/mdrFolds/10.title
+msgid "10 folds"
+msgstr ""
+
 #: mMLP/options/hidden_structure.default
 #, fuzzy
 msgid "10,5"
@@ -499,6 +715,18 @@ msgstr "10,5"
 msgid "100 - Specificity (%)"
 msgstr "100 - Специфічність (%)"
 
+#: mSNP/options/mdrOrder/2.title
+msgid "2-way"
+msgstr ""
+
+#: mSNP/options/mdrFolds/3.title
+msgid "3 folds"
+msgstr ""
+
+#: mSNP/options/mdrOrder/3.title
+msgid "3-way"
+msgstr ""
+
 #: mOUT/options/tholdZS/3.0.title
 msgid "3.0 (standard)"
 msgstr "3.0 (стандарт)"
@@ -506,6 +734,14 @@ msgstr "3.0 (стандарт)"
 #: mOUT/options/tholdmZS/3.5.title
 msgid "3.5 (standard)"
 msgstr "3.5 (стандарт)"
+
+#: mSNP/options/mdrOrder/4.title
+msgid "4-way"
+msgstr ""
+
+#: mSNP/options/mdrFolds/5.title
+msgid "5 folds"
+msgstr ""
 
 #: mLR/results/coeffTable.columns.title
 msgid "95% OR CI Lower"
@@ -543,6 +779,10 @@ msgstr "Інтервальний аналіз"
 msgid "Accent"
 msgstr "Акцент"
 
+#: mSNP/options/ternaryRegion.title
+msgid "Acceptance region type"
+msgstr ""
+
 #: mPCA/results/regTable.columns.title
 msgid "Accuracy"
 msgstr ""
@@ -560,12 +800,24 @@ msgid "Agglomeration method"
 msgstr "Метод агломерації"
 
 #: mMF/options/alg.title
-msgid "Algorythm"
-msgstr "Алгоритм"
+msgid "Algorithm"
+msgstr ""
 
 #: mCOR/options/signif/all.title
 msgid "All"
 msgstr "Усі"
+
+#: mSNP/options/geneticModel/all.title
+msgid "All models"
+msgstr ""
+
+#: mSNP/options/groupAlleles.title
+msgid "Allele analysis"
+msgstr ""
+
+#: mSNP/options/freqTable.title
+msgid "Allele and genotype frequencies"
+msgstr ""
 
 #: mCOR/options/plotOrder/alphabet.title
 msgid "Alphabetical"
@@ -584,6 +836,21 @@ msgstr "масив MAR"
 msgid "Analysis by Groups"
 msgstr ""
 
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/groupAnalysisTable.title
+msgid "Analysis of Alleles and Genotypes by Groups"
+msgstr ""
+
+#: package/analyses/mSNP.description
+msgid ""
+"Analysis of genetic polymorphisms (SNP) including Hardy-Weinberg "
+"Equilibrium, Association Tests, Population Genetics metrics, MDR, and LD."
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Analysis of Genotypes by Groups"
+msgstr ""
+
 #: mSRV/options/rocTime.title
 msgid "Analysis Time Point t"
 msgstr ""
@@ -597,6 +864,22 @@ msgstr "Власні вектори кутового порядку"
 #, fuzzy
 msgid "ANOVA / ANCOVA (F-Test)"
 msgstr "ANOVA / ANCOVA (Тест F)"
+
+#: mSNP/options/assocEnable.title
+msgid "Association tests"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/1.title
+msgid "Asymptotic Chi-square (1)"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/3.title
+msgid "Asymptotic Chi-square female (3)"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/5.title
+msgid "Asymptotic Likelihood-ratio (5)"
+msgstr ""
 
 #: R/mroc.b.R
 #: mLR/results/rocTable.columns.title
@@ -641,6 +924,10 @@ msgstr ""
 msgid "Balance"
 msgstr "Баланс"
 
+#: R/msnp.b.R
+msgid "Balanced Accuracy (BA)"
+msgstr ""
+
 #: mPWR/options/base_prob.title
 #: mPWR/ui[1]/base_prob.label
 #, fuzzy
@@ -663,6 +950,31 @@ msgstr "Бенджаміні-Хохберг (1995)"
 msgid "Benjamini-Yekutieli (2001)"
 msgstr "Бенджамін-Єкутіль (2001)"
 
+#: mSNP/options/adjust/fdr.title
+msgid "Benjamini–Hochberg (FDR)"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrBestTable.columns.title
+#: mSNP/results/mdrGroup/mdrCellTable.columns.title
+msgid "Best Combination"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrBestTable.title
+msgid "Best MDR Models by Order"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Beta"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Beta Lower 95% CI"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Beta Upper 95% CI"
+msgstr ""
+
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Betweenness"
 msgstr ""
@@ -678,6 +990,10 @@ msgstr "Чорно-біле"
 #: package/datasets/BCROCclassification.description
 msgid "Blood cells multiple ROC Classification demonstration"
 msgstr "Демонстрація множинної ROC-класифікації клітин крові"
+
+#: mSNP/options/adjust/bonferroni.title
+msgid "Bonferroni"
+msgstr ""
 
 #: mCOR/options/adjust/bonferroni.title
 msgid "Bonferroni (1961)"
@@ -706,6 +1022,14 @@ msgstr "Коробчасті діаграми з викидами"
 msgid "Brewer's qualitative palette"
 msgstr "Якісна палітра Брюера"
 
+#: R/msnp.b.R
+msgid "Ca"
+msgstr ""
+
+#: mSNP/options/groupTotal.title
+msgid "Calculate totals"
+msgstr ""
+
 #: mOUT/results/stat/outstat.description
 msgid "Calculated fences for outliers"
 msgstr "Розраховані межі для викидів"
@@ -719,6 +1043,18 @@ msgstr "Помилка обчислень:"
 msgid ""
 "Calculations for survival log-rank test are based on Schoenfeld's asymptotic "
 "approximation. N1 represents the total number of events required."
+msgstr ""
+
+#: mSNP/results/qcGroup/qcTable.columns.title
+msgid "Call Rate"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrCellTable.columns.title
+msgid "Cases"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrCellTable.columns.title
+msgid "Cases/Controls Ratio"
 msgstr ""
 
 #: mUI/results/stat/mcistat.columns.title
@@ -751,6 +1087,14 @@ msgstr ""
 #, fuzzy
 msgid "Chi-square Goodness-of-Fit / Independence (Chi-square Test)"
 msgstr "Тест доброго BoxFit / незалежності (тест хі-квадрат)"
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "Chi-square p"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "Chi-square p-adj"
+msgstr ""
 
 #: mMOUT/options/plotType/qq.title
 #: mMOUT/results/qqplot.title
@@ -886,6 +1230,23 @@ msgstr ""
 msgid "Clusters 2"
 msgstr ""
 
+#: R/msnp.b.R
+msgid "Co"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/options/geneticModel/codominant.title
+msgid "Codominant"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Codominant (AB vs AA)"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Codominant (BB vs AA)"
+msgstr ""
+
 #: mSRV/results/coxSection/coxCoefTable.columns.title
 msgid "Coefficient (Estimate)"
 msgstr ""
@@ -1000,6 +1361,14 @@ msgstr "Матриця плутанини"
 msgid "Contingency Matrix (Clusters vs Groups):"
 msgstr ""
 
+#: mSNP/results/mdrGroup/mdrCellTable.columns.title
+msgid "Controls"
+msgstr ""
+
+#: mSNP/options/polyDf1.title
+msgid "Controversial df for polymorphism"
+msgstr ""
+
 #: mCOR/options/hyp/corr.title
 msgid "Correlated"
 msgstr "Корельований"
@@ -1057,11 +1426,14 @@ msgstr "Кореляції між змінними"
 msgid "Cos²"
 msgstr ""
 
+#: R/msnp.b.R
 #: mMLP/results/matrixTable.columns.title
 msgid "Count"
 msgstr ""
 
 #: R/msrv.b.R
+#: mSNP/options/covs.title
+#: mSNP/ui[0][2].label
 msgid "Covariates"
 msgstr ""
 
@@ -1106,6 +1478,10 @@ msgstr "Втрата за перетином ентропії"
 msgid "Cross-Validation"
 msgstr "Перекрестна валідация"
 
+#: mSNP/options/mdrFolds.title
+msgid "Cross-validation folds"
+msgstr ""
+
 #: mLR/options/cv_folds.title
 #: mLR/ui[2]/cv_folds.label
 #: mMLP/options/cv_folds.title
@@ -1127,9 +1503,6 @@ msgid "Cumulative %"
 msgstr ""
 
 #: R/msrv.b.R
-msgid "Cumulative Hazard"
-msgstr ""
-
 #: mSRV/options/kmType/hazard.title
 msgid "Cumulative hazard"
 msgstr ""
@@ -1149,6 +1522,12 @@ msgstr ""
 msgid "Cut-off"
 msgstr ""
 
+#: mLR/ui[3]/show_roc/show_roc_cut.label
+#: mMLP/ui[3]/show_roc/show_roc_cut.label
+#: mPCA/ui[3][0]/rocPlot/show_roc_cut.label
+msgid "Cut-off thresholds"
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 msgid "CV"
@@ -1156,6 +1535,15 @@ msgstr ""
 
 #: R/mlr.b.R
 msgid "CV Acc (%)"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrBestTable.columns.title
+msgid "CVC"
+msgstr ""
+
+#: mSNP/options/ldMetric/Dprime.title
+#: mSNP/results/ldGroup/ldTable.columns.title
+msgid "D'"
 msgstr ""
 
 #: mMF/results/estim/mcar.columns.title
@@ -1222,6 +1610,14 @@ msgstr ""
 msgid "Design"
 msgstr "Дизайн"
 
+#: mSNP/options/mdrCellTable.title
+msgid "Detailed cell classification table"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrCellTable.title
+msgid "Detailed Cell Risk Classification"
+msgstr ""
+
 #: mSRV/results/logRankTable.columns.title
 #: mSRV/results/coxSection/coxFitTable.columns.title
 #: mSRV/results/coxSection/coxAssumpTable.columns.title
@@ -1229,8 +1625,10 @@ msgid "df"
 msgstr ""
 
 #: package/analyses/mUI.menuSubgroup
+#: package/analyses/mSNP.menuSubgroup
+#: mSNP/options.menuSubgroup
 #: mUI/options.menuSubgroup
-msgid "Diagnostics"
+msgid "Diagnostics & Genetics"
 msgstr ""
 
 #: mUI/options/UImethod/noUI.title
@@ -1257,6 +1655,11 @@ msgstr ""
 msgid "Distribution model"
 msgstr "Модель розподілу"
 
+#: R/msnp.b.R
+#: mSNP/options/geneticModel/dominant.title
+msgid "Dominant"
+msgstr ""
+
 #: mROC/options/dotline.title
 msgid "Dotted line"
 msgstr "Пунктирна лінія"
@@ -1269,16 +1672,24 @@ msgstr ""
 msgid "EBIC gamma"
 msgstr ""
 
+#: R/mpwr.b.R
 #: mPWR/options/calc/es.title
 #, fuzzy
 msgid "Effect size"
 msgstr "Розмір ефекту"
 
-#: R/mpwr.b.R
 #: mPWR/results/powerTable.columns.title
 #, fuzzy
 msgid "Effect Size"
 msgstr "Розмір ефекту"
+
+#: R/msnp.b.R
+msgid "Effect size (Beta)"
+msgstr ""
+
+#: mSNP/results/popGroup/popTable.columns.title
+msgid "Effective Alleles (Ne)"
+msgstr ""
 
 #: R/mpca.b.R
 #: mPCA/results/varianceTable.columns.title
@@ -1314,14 +1725,14 @@ msgstr "Еліпс"
 msgid "Empirical Squared Mahalanobis Distances"
 msgstr ""
 
+#: mCOR/options/plotMetU/empty.title
+#: mCOR/options/plotMetL/empty.title
+msgid "Empty"
+msgstr ""
+
 #: R/mmf.b.R
 msgid "Empty data table"
 msgstr "Порожня таблиця даних"
-
-#: mCOR/options/plotMetU/empty.title
-#: mCOR/options/plotMetL/empty.title
-msgid "Emtpy"
-msgstr "Порожній"
 
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/equivalent.title
@@ -1374,8 +1785,55 @@ msgstr "Оцінювання пояснювальних документів MAR
 msgid "Events"
 msgstr ""
 
+#: mSNP/options/ternaryRegion/7.title
+msgid "Exact autosomal (7)"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/4.title
+msgid "Exact female (4)"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/2.title
+msgid "Exact joint (2)"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/6.title
+msgid "Exact joint test (6)"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "Exact p"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "Exact p-adj"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "Exp AA"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "Exp AB"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "Exp BB"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Expected"
+msgstr ""
+
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Expected Influence"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Expected p-value (-log10)"
 msgstr ""
 
 #: mMF/results/estim/mars.columns.title
@@ -1388,6 +1846,10 @@ msgstr "Пояснювальний"
 #: mCOR/options.menuSubgroup
 #: mPCA/options.menuSubgroup
 msgid "Exploratory & Factor Analysis"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "F_IS"
 msgstr ""
 
 #: R/mmlp.b.R
@@ -1422,6 +1884,10 @@ msgstr ""
 #, fuzzy
 msgid "Factors (Categorical Predictors)"
 msgstr "Фактори (Категоріальні передбачувачі)"
+
+#: R/msnp.b.R
+msgid "Failed QC"
+msgstr ""
 
 #: mLR/options/method.title
 #: mLR/ui[1]/method.label
@@ -1468,6 +1934,7 @@ msgstr ""
 
 #: mLR/options/showForest.title
 #: mLR/ui[3]/showForest.label
+#: mSNP/options/assocForest.title
 msgid "Forest plot of Odds Ratios"
 msgstr ""
 
@@ -1479,8 +1946,73 @@ msgstr ""
 msgid "Forward Stepwise Selection (AIC)"
 msgstr ""
 
+#: mSNP/options/freqPct.title
+msgid "Frequencies as percentages (%)"
+msgstr ""
+
+#: mSNP/ui[1].label
+msgid "Frequency Tables"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Full dataset used in analysis"
+msgstr ""
+
+#: mSNP/results/assocGroup/assocTable.title
+msgid "Genetic Association Analysis"
+msgstr ""
+
+#: mSNP/options/geneticModel.title
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "Genetic model"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Genetic model:"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/groupAnalysisTable.columns.title
+msgid "Genotype"
+msgstr ""
+
+#: mSNP/options/groupTable.title
+msgid "Genotype and allele analysis by groups"
+msgstr ""
+
+#: mSNP/results/hweGroup/freqTable.title
+msgid "Genotype and Allele Frequencies"
+msgstr ""
+
+#: mSNP/options/barPlot.title
+#: mSNP/results/hweGroup/barPlot.title
+msgid "Genotype barplot (Observed vs Expected)"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Genotype Means (Mean ± SD)"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Genotype N"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Genotype test"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrCellTable.columns.title
+msgid "Genotypes"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "Genotypes Cases"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "Genotypes Controls"
 msgstr ""
 
 #: package.description
@@ -1498,6 +2030,8 @@ msgstr ""
 #: R/mout.b.R
 #: mMOUT/results/stat.columns.title
 #: mMOUT/results/oind.columns.title
+#: mSNP/options/group.title
+#: mSNP/ui[0][3].label
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "Group"
@@ -1539,6 +2073,25 @@ msgstr "Групування змінних"
 msgid "Groups"
 msgstr ""
 
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "H(exp)"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "H(obs)"
+msgstr ""
+
+#: mSNP/ui[2].label
+#: mSNP/results/hweGroup.title
+msgid "Hardy-Weinberg Equilibrium (HWE) Analysis"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.title
+msgid "Hardy-Weinberg Equilibrium Statistical Tests"
+msgstr ""
+
 #: R/mpwr.b.R
 #: R/msrv.b.R
 msgid "Hazard Ratio"
@@ -1555,6 +2108,10 @@ msgstr ""
 #: package/datasets/HIROCclassification.description
 msgid "Healthy/Ill ROC Classification demonstration"
 msgstr "Демонстрація класифікації ROC для здорових/хворих"
+
+#: mSNP/options/ldMetric.title
+msgid "Heatmap metric"
+msgstr ""
 
 #: package/datasets/HIROCclassification.name
 msgid "HI ROC classification"
@@ -1600,6 +2157,10 @@ msgstr ""
 msgid "Hierarchical clustering tree"
 msgstr "Ієрархічне дерево кластеризації"
 
+#: R/msnp.b.R
+msgid "High Risk"
+msgstr ""
+
 #: mCOR/options/adjust/hochberg.title
 msgid "Hochberg (1988)"
 msgstr "Гохберг (1988)"
@@ -1642,6 +2203,10 @@ msgstr "Розділ валідації"
 msgid "Hold-out Validation Split (%)"
 msgstr "Розділ валідації (%)"
 
+#: mSNP/options/adjust/holm.title
+msgid "Holm"
+msgstr ""
+
 #: mCOR/options/adjust/holm.title
 msgid "Holm (1979)"
 msgstr "Холм (1979)"
@@ -1652,6 +2217,22 @@ msgstr "Джміль (1988)"
 
 #: mCOR/options/glassoHub.title
 msgid "Hub markers table"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "HWE compliant"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "HWE deviation"
+msgstr ""
+
+#: mSNP/results/qcGroup/qcTable.columns.title
+msgid "HWE p-value (Controls)"
+msgstr ""
+
+#: mSNP/options/hwTests.title
+msgid "HWE statistical tests"
 msgstr ""
 
 #: mCOR/options/hyp.title
@@ -1680,6 +2261,10 @@ msgstr ""
 #: R/mmf.b.R
 msgid "imp"
 msgstr "імп"
+
+#: R/mmf.b.R
+msgid "Imputation failed: {}"
+msgstr ""
 
 #: R/mmf.b.R
 msgid "Imputation model predictor"
@@ -1756,6 +2341,10 @@ msgstr "Діапазон початкових ваг"
 msgid "Input Layer"
 msgstr "Вхідний шар"
 
+#: R/msnp.b.R
+msgid "Interaction Order"
+msgstr ""
+
 #: mCOR/options/clustMat.title
 #: mCOR/results/rplots.title
 msgid "Intercluster Matrices"
@@ -1814,6 +2403,7 @@ msgstr "Паркани IQR Tukey"
 #: package/analyses/mLR.menuGroup
 #: package/analyses/mSRV.menuGroup
 #: package/analyses/mPCA.menuGroup
+#: package/analyses/mSNP.menuGroup
 #: mCOR/options.menuGroup
 #: mLR/options.menuGroup
 #: mMF/options.menuGroup
@@ -1823,6 +2413,7 @@ msgstr "Паркани IQR Tukey"
 #: mPCA/options.menuGroup
 #: mPWR/options.menuSubgroup
 #: mROC/options.menuGroup
+#: mSNP/options.menuGroup
 #: mSRV/options.menuGroup
 #: mUI/options.menuGroup
 msgid "jYS"
@@ -1927,6 +2518,18 @@ msgstr ""
 msgid "LASSO L1 Regularization"
 msgstr ""
 
+#: mSNP/results/ldGroup/ldHeatmap.title
+msgid "LD Heatmap"
+msgstr ""
+
+#: mSNP/options/ldHeatmap.title
+msgid "LD heatmap (r² / D' triangular plot)"
+msgstr ""
+
+#: mSNP/options/ldTable.title
+msgid "LD metrics table"
+msgstr ""
+
 #: mMLP/options/show_curve.title
 #, fuzzy
 msgid "Learning Curve"
@@ -1956,6 +2559,19 @@ msgstr "Ширина лінії"
 msgid "Linear Regression (F-Test)"
 msgstr "Лінійна регресія (F-тест)"
 
+#: mSNP/options/ldEnable.title
+msgid "Linkage Disequilibrium (LD) analysis"
+msgstr ""
+
+#: mSNP/ui[9].label
+#: mSNP/results/ldGroup.title
+msgid "Linkage Disequilibrium (LD) Analysis"
+msgstr ""
+
+#: mSNP/results/ldGroup/ldTable.title
+msgid "Linkage Disequilibrium (LD) Table"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Loading"
 msgstr ""
@@ -1971,6 +2587,11 @@ msgstr ""
 
 #: mLR/options/forestLog.title
 msgid "Log scale for Odds Ratios"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/options/geneticModel/log-additive.title
+msgid "Log-additive"
 msgstr ""
 
 #: mSRV/results/logRankTable.title
@@ -2027,6 +2648,10 @@ msgid ""
 "partitioning uses a hardcoded random seed (42) for reproducibility."
 msgstr ""
 
+#: R/msnp.b.R
+msgid "Low Risk"
+msgstr ""
+
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
 msgid "Lower 95% CI"
@@ -2054,6 +2679,35 @@ msgstr ""
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "LR+"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "LRT p"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "LRT p-adj"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "LRT Stat"
+msgstr ""
+
+#: mSNP/results/qcGroup/qcTable.columns.title
+#: mSNP/results/popGroup/popTable.columns.title
+msgid "MAF"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "MAF is below threshold"
+msgstr ""
+
+#: mSNP/options/ternaryShowMAF.title
+msgid "MAF threshold boundary lines"
+msgstr ""
+
+#: mSNP/options/mafThreshold.title
+msgid "MAF threshold for warnings"
 msgstr ""
 
 #: R/mlr.b.R
@@ -2085,13 +2739,51 @@ msgstr "Таблиця класифікації MAR"
 msgid "Mark significance *<0.05, **<0.01, ***<0.001"
 msgstr "Значення позначки *<0.05, **<0.01, ***<0.001"
 
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+#: mSNP/results/hweGroup/hwTable.columns.title
+#: mSNP/results/assocGroup/assocTable.columns.title
+#: mSNP/results/qcGroup/qcTable.columns.title
+#: mSNP/results/popGroup/popTable.columns.title
+msgid "Marker"
+msgstr ""
+
+#: mSNP/results/ldGroup/ldTable.columns.title
+msgid "Marker 1"
+msgstr ""
+
+#: mSNP/results/ldGroup/ldTable.columns.title
+msgid "Marker 2"
+msgstr ""
+
+#: mSNP/results/popGroup/popTable.title
+msgid "Marker Informative Metrics"
+msgstr ""
+
+#: mSNP/options/vars.title
+#: mSNP/ui[0][0].label
+msgid "Markers"
+msgstr ""
+
+#: mSNP/options/xLinked.title
+msgid "Markers are X-linked"
+msgstr ""
+
 #: mLR/results/formulaHtml.title
 msgid "Mathematical Model Formula"
+msgstr ""
+
+#: mLR/ui[3]/show_formula.label
+msgid "Mathematical model formula"
 msgstr ""
 
 #: R/mcor.b.R
 msgid "Matrix #{i}"
 msgstr "Матриця #{i}"
+
+#: mSNP/options/mdrOrder.title
+msgid "Max interaction order"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
@@ -2128,6 +2820,22 @@ msgstr ""
 #: mCOR/options/clustMet/mcquitty.title
 msgid "McQuitty Linkage (WPGMA)"
 msgstr "Зв'язок МакКвітті (WPGMA)"
+
+#: mSNP/options/mdrEnable.title
+msgid "MDR analysis"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrHeatmap.title
+msgid "MDR Interaction Heatmap"
+msgstr ""
+
+#: mSNP/options/mdrHeatmap.title
+msgid "MDR interaction heatmap (2-way grid)"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrBarPlot.title
+msgid "MDR Model Performance Comparison"
+msgstr ""
 
 #: R/mout.b.R
 msgid "Mean"
@@ -2187,11 +2895,23 @@ msgstr "Потрібна мінімальна кількість змінних 
 msgid "Minimum 2 impute variables are required"
 msgstr "Потрібно щонайменше 2 змінні імпутації"
 
+#: mSNP/options/qcCallRate.title
+msgid "Minimum Call Rate"
+msgstr ""
+
 #: mPWR/options/power.title
 #: mPWR/ui[1]/power.label
 #, fuzzy
 msgid "Minimum desired power"
 msgstr "Мінімальний бажаний рівень потужності"
+
+#: mSNP/options/qcHwe.title
+msgid "Minimum HWE p-value in controls"
+msgstr ""
+
+#: mSNP/options/qcMaf.title
+msgid "Minimum MAF"
+msgstr ""
 
 #: mMF/options/alg/mF.title
 msgid "missForest (2012)"
@@ -2301,6 +3021,10 @@ msgstr "Інформація про модель та точність"
 msgid "Model Parameters"
 msgstr "Параметри моделі"
 
+#: mSNP/options/mdrBarPlot.title
+msgid "Model performance barplot"
+msgstr ""
+
 #: mOUT/options/outlcheck/mZS.title
 msgid "Modified Z-score (Hampel filter)"
 msgstr "Модифікований Z-показник (фільтр Гампеля)"
@@ -2321,6 +3045,11 @@ msgstr ""
 msgid "Multiclass ROC Layout"
 msgstr ""
 
+#: mSNP/ui[7].label
+#: mSNP/results/mdrGroup.title
+msgid "Multifactor Dimensionality Reduction (MDR)"
+msgstr ""
+
 #: R/mlr.b.R
 msgid "Multinomial Log-odds Equations"
 msgstr ""
@@ -2332,6 +3061,11 @@ msgstr "Корекція множинних порівнянь"
 #: mMF/options/imputeOV.title
 msgid "Multiple imputation for missing data"
 msgstr "Множинна імпутація для відсутніх даних"
+
+#: mSNP/options/adjust.title
+#: mSNP/ui[11].label
+msgid "Multiple testing correction"
+msgstr ""
 
 #: package/analyses/mMOUT.title
 #: package/analyses/mMOUT.menuTitle
@@ -2453,9 +3187,18 @@ msgstr "Не-параметричний"
 #: mROC/options/theBest/none.title
 #: mROC/options/cmpDeLong/none.title
 #: mROC/options/palBrewer/none.title
+#: mSNP/options/mafThreshold/none.title
+#: mSNP/options/adjust/none.title
+#: mSNP/options/qcCallRate/none.title
+#: mSNP/options/qcMaf/none.title
+#: mSNP/options/qcHwe/none.title
 #: mSRV/options/palBrewer/none.title
 msgid "None"
 msgstr "Жоден"
+
+#: mSNP/options/ternaryRegion/0.title
+msgid "None (0)"
+msgstr ""
 
 #: R/mmout.b.R
 msgid "Normal"
@@ -2470,6 +3213,16 @@ msgstr "p-значення нормальності"
 msgid ""
 "Not enough events or survivors at the selected analysis time point t to "
 "perform ROC analysis."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"Note: Allelic and Genotypic models are unadjusted. Logistic regression is "
+"fitted for other models."
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Note: Linear regression is adjusted for selected covariates."
 msgstr ""
 
 #: mUI/results/stat/mcistat.columns.title
@@ -2522,6 +3275,10 @@ msgstr ""
 msgid "Number of factor levels/groups"
 msgstr "Кількість рівнів факторів/груп"
 
+#: mSNP/options/nPermMDR.title
+msgid "Number of MDR permutations"
+msgstr ""
+
 #: R/mmf.b.R
 msgid "Number of missing entries"
 msgstr "Кількість відсутніх записів"
@@ -2534,6 +3291,10 @@ msgstr "Кількість відсутніх записів на змінну"
 msgid "Number of patterns"
 msgstr "Кількість візерунків"
 
+#: mSNP/options/nPerm.title
+msgid "Number of permutations"
+msgstr ""
+
 #: mMF/options/ntree.title
 msgid "Number of trees to grow in each forest"
 msgstr "Кількість дерев, які потрібно вирощувати в кожному лісі"
@@ -2543,17 +3304,50 @@ msgstr "Кількість дерев, які потрібно вирощува�
 msgid "Object score distribution with 95% ellipses"
 msgstr ""
 
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "Obs AA"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "Obs AB"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "Obs BB"
+msgstr ""
+
 #: R/mmf.b.R
-msgid "observed"
-msgstr "спостерігається"
+#: R/msnp.b.R
+msgid "Observed"
+msgstr ""
 
 #: R/mpca.b.R
 msgid "Observed Data"
 msgstr ""
 
+#: R/msnp.b.R
+msgid "Observed p-value (-log10)"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "Odds Ratio"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Odds Ratio (log scale)"
+msgstr ""
+
 #: R/mlr.b.R
 #: mLR/results/coeffTable.columns.title
 msgid "Odds Ratio (OR)"
+msgstr ""
+
+#: mSNP/results/assocGroup/assocForest.title
+msgid "Odds Ratio Forest Plot"
 msgstr ""
 
 #: R/mpwr.b.R
@@ -2591,9 +3385,31 @@ msgstr "односторонній"
 msgid "OOB errors table"
 msgstr "Таблиця помилок OOB"
 
+#: R/msnp.b.R
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "OR Lower 95% CI"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "OR Upper 95% CI"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrBestTable.columns.title
+msgid "Order"
+msgstr ""
+
 #: mCOR/options/plotOrder/original.title
 msgid "Original"
 msgstr "Оригінал"
+
+#: mSNP/options/outcome.title
+msgid "Outcome (Case/Control)"
+msgstr ""
+
+#: mSNP/ui[0][1].label
+msgid "Outcome Variable (Case/Control)"
+msgstr ""
 
 #: R/mmf.b.R
 msgid "OutFlux**"
@@ -2679,14 +3495,34 @@ msgstr "Вихідний шар"
 msgid "Outputs & Evaluation"
 msgstr "Вивід та оцінка"
 
+#: R/msnp.b.R
+#: mSNP/options/geneticModel/overdominant.title
+msgid "Overdominant"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "p"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "p (A)"
+msgstr ""
+
 #: mROC/results/rocTable.columns.title
 msgid "p (DeLong)"
+msgstr ""
+
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "p-adjusted"
 msgstr ""
 
 #: mCOR/options/pval.title
 #: mCOR/results/matrix.columns.content
 #: mCOR/results/glassoGroup/glassoTable.columns.content
 #: mLR/results/coeffTable.columns.title
+#: mSNP/results/assocGroup/assocTable.columns.title
+#: mSNP/results/ldGroup/ldTable.columns.title
 msgid "p-value"
 msgstr "p-значення"
 
@@ -2814,6 +3650,14 @@ msgstr "за візерунком"
 msgid "Percentage (%)"
 msgstr "Відсоток (%)"
 
+#: mSNP/options/hwPerm.title
+msgid "Perform permutation test"
+msgstr ""
+
+#: mSNP/options/mdrPermTest.title
+msgid "Perform permutation testing"
+msgstr ""
+
 #: mMLP/results/statsTable.title
 #, fuzzy
 msgid "Performance Statistics"
@@ -2828,9 +3672,27 @@ msgstr ""
 msgid "Permutation Importance"
 msgstr "Важливість перемішування"
 
+#: mSNP/results/hweGroup/hwTable.columns.title
+#: mSNP/results/mdrGroup/mdrBestTable.columns.title
+msgid "Permutation p"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "Permutation p-adj"
+msgstr ""
+
 #: mMF/results/imput/errors.columns.title
 msgid "PFC"
 msgstr "PFC"
+
+#: mSNP/ui[3].label
+#: mSNP/results/assocGroup.title
+msgid "Phenotype Association Tests"
+msgstr ""
+
+#: mSNP/results/popGroup/popTable.columns.title
+msgid "PIC"
+msgstr ""
 
 #: mCOR/options/plotMetU/pie.title
 #: mCOR/options/plotMetL/pie.title
@@ -2895,9 +3757,36 @@ msgstr ""
 msgid "Plots"
 msgstr "Ділянки"
 
+#: mSNP/options/prsOutput.title
+#: mSNP/results/prsOutput.title
+msgid "Polygenic Risk Score"
+msgstr ""
+
 #: mROC/options/polygon.title
 msgid "Polygon"
 msgstr "Багатокутник"
+
+#: mSNP/results/hweGroup/groupAnalysisTable.columns.title
+msgid "Polymorphism"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Polymorphism test"
+msgstr ""
+
+#: mSNP/results/hweGroup/freqTable.columns.title
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "Population"
+msgstr ""
+
+#: mSNP/options/popMetrics.title
+msgid "Population genetic metrics"
+msgstr ""
+
+#: mSNP/ui[5].label
+#: mSNP/results/popGroup.title
+msgid "Population genetics metrics"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
@@ -3078,6 +3967,14 @@ msgstr "Пропоноване рішення"
 msgid "provide a correlation matrix plot."
 msgstr "надайте графік матриці кореляції."
 
+#: mSNP/options/manhattanPlot.title
+msgid "Pseudo-Manhattan plot"
+msgstr ""
+
+#: mSNP/results/assocGroup/manhattanPlot.title
+msgid "Pseudo-Manhattan Plot of Association p-values"
+msgstr ""
+
 #: mPWR/options/calc.title
 #, fuzzy
 msgid "Purpose of Calculation"
@@ -3087,8 +3984,34 @@ msgstr "Мета розрахунку"
 msgid "PVU"
 msgstr ""
 
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "q (B)"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Q-Q plot for HWE"
+msgstr ""
+
+#: mSNP/options/qqPlot.title
+#: mSNP/results/hweGroup/qqPlot.title
+msgid "Q-Q plot of HWE p-values"
+msgstr ""
+
 #: mSRV/options/palBrewer.title
 msgid "Qualitative Palette"
+msgstr ""
+
+#: mSNP/results/qcGroup.title
+msgid "Quality Control (QC) Analysis"
+msgstr ""
+
+#: mSNP/ui[6].label
+msgid "Quality Control (QC) Filters"
+msgstr ""
+
+#: mSNP/results/qcGroup/qcTable.title
+msgid "Quality Control Summary"
 msgstr ""
 
 #: mPCA/results/cos2Table.title
@@ -3107,16 +4030,30 @@ msgstr ""
 msgid "Quality of representation (Cos²) table"
 msgstr ""
 
+#: mSNP/options/ldMetric/r2.title
+#: mSNP/results/ldGroup/ldTable.columns.title
+msgid "r²"
+msgstr ""
+
 #: mPWR/options/r2_predictor.title
 #: mPWR/ui[1]/r2_predictor.label
 #, fuzzy
 msgid "R² of predictor X with other covariates"
 msgstr "R² передбачувача X з іншими коваріатами"
 
+#: mSNP/options/mdrSeed.title
+msgid "Random seed"
+msgstr ""
+
 #: mMLP/results/importanceTable.columns.title
 #, fuzzy
 msgid "Rank"
 msgstr "Ранг"
+
+#: R/msnp.b.R
+#: mSNP/options/geneticModel/recessive.title
+msgid "Recessive"
+msgstr ""
 
 #: mLR/options/refLevel.title
 #: mLR/ui[0][0]/refLevel.label
@@ -3221,6 +4158,14 @@ msgstr "Результати відтворюваної генерації ви�
 msgid "Right"
 msgstr "Праворуч"
 
+#: R/msnp.b.R
+msgid "Risk Class"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrCellTable.columns.title
+msgid "Risk Classification"
+msgstr ""
+
 #: mSRV/options/kmTable.title
 msgid "Risk-at-time Table"
 msgstr ""
@@ -3260,6 +4205,10 @@ msgstr "Аналіз ROC"
 msgid "ROC Analysis Comparison"
 msgstr "Порівняння аналізу ROC"
 
+#: mLR/ui[3]/show_roc.label
+msgid "ROC analysis curves"
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 msgid "ROC Analysis for {class}"
@@ -3297,20 +4246,17 @@ msgstr "Порівняння ROC"
 msgid "ROC Curve Comparison"
 msgstr ""
 
+#: R/mlr.b.R
+#: R/mpca.b.R
 #: mUI/options/isROC.title
 #: mUI/results/plotsROC.title
 msgid "ROC curves"
 msgstr "ROC-криві"
 
-#: R/mlr.b.R
-#: R/mpca.b.R
-msgid "ROC Curves"
-msgstr ""
-
 #: package/datasets/BCModelsROCEstimation.description
 #: package/datasets/CHDModelsROCEstimation.description
-msgid "ROC estimation for binomial logistis models demonstration"
-msgstr "ROC Демонстрація оцінки для біноміальних логістичних моделей"
+msgid "ROC estimation for binomial logistic models demonstration"
+msgstr ""
 
 #: mROC/ui[2].label
 msgid "ROC graphs"
@@ -3329,6 +4275,12 @@ msgstr ""
 
 #: mROC/results/rocTable.title
 msgid "ROC Results"
+msgstr ""
+
+#: mLR/ui[3]/show_roc/show_roc_table.label
+#: mMLP/ui[3]/show_roc/show_roc_table.label
+#: mPCA/ui[3][0]/rocPlot/show_roc_table.label
+msgid "ROC table"
 msgstr ""
 
 #: mROC/options/showTable.title
@@ -3523,27 +4475,32 @@ msgstr "Набір2"
 msgid "Set3"
 msgstr "Набір3"
 
+#: mSNP/options/gender.title
+msgid "Sex variable"
+msgstr ""
+
+#: mSNP/ui[0][4].label
+msgid "Sex Variable (for X-linked HWE)"
+msgstr ""
+
 #: mCOR/options/plotMetU/shade.title
 #: mCOR/options/plotMetL/shade.title
 msgid "Shade"
 msgstr "Тінь"
 
+#: mSNP/results/popGroup/popTable.columns.title
+msgid "Shannon Index (I)"
+msgstr ""
+
 #: mLR/options/show_roc_cut.title
-#: mLR/ui[3]/show_roc/show_roc_cut.label
 #: mMLP/options/show_roc_cut.title
-#: mMLP/ui[3]/show_roc/show_roc_cut.label
 #: mPCA/options/show_roc_cut.title
-#: mPCA/ui[3][0]/rocPlot/show_roc_cut.label
 #: mUI/options/show_roc_cut.title
 msgid "Show Cut-off Thresholds"
 msgstr ""
 
 #: mCOR/options/glassoLabels.title
 msgid "Show edge labels"
-msgstr ""
-
-#: mLR/ui[3]/show_formula.label
-msgid "Show Mathematical Model Formula"
 msgstr ""
 
 #: mLR/options/show_formula.title
@@ -3554,16 +4511,9 @@ msgstr ""
 msgid "Show outliers indices table"
 msgstr ""
 
-#: mLR/ui[3]/show_roc.label
-msgid "Show ROC Analysis curves"
-msgstr ""
-
 #: mLR/options/show_roc_table.title
-#: mLR/ui[3]/show_roc/show_roc_table.label
 #: mMLP/options/show_roc_table.title
-#: mMLP/ui[3]/show_roc/show_roc_table.label
 #: mPCA/options/show_roc_table.title
-#: mPCA/ui[3][0]/rocPlot/show_roc_table.label
 #: mUI/options/show_roc_table.title
 msgid "Show ROC Table"
 msgstr ""
@@ -3580,7 +4530,12 @@ msgid "Significance"
 msgstr "Значення"
 
 #: mMOUT/options/alpha.title
+#: mSNP/options/alpha.title
 msgid "Significance level (alpha)"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Significant HWE deviation"
 msgstr ""
 
 #: R/mcor.b.R
@@ -3591,9 +4546,25 @@ msgstr "Одночасні множинні кореляційні порівн�
 msgid "Single Linkage"
 msgstr "Одинарне з'єднання"
 
+#: package/analyses/mSNP.title
+#: package/analyses/mSNP.menuTitle
+#: mSNP/options.title
+#: mSNP/ui.title
+#: mSNP/results.title
+msgid "Single Nucleotide Polymorphism"
+msgstr ""
+
 #: mMF/options/anghead.title
 msgid "Slanted Titles"
 msgstr "Схилені назви"
+
+#: package/datasets/SNPandHWEanalysis.name
+msgid "SNP and HWE analysis"
+msgstr ""
+
+#: package/datasets/SNPandHWEanalysis.description
+msgid "SNP Association and Hardy-Weinberg Equilibrium analysis demonstration"
+msgstr ""
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "SNPV"
@@ -3665,9 +4636,13 @@ msgstr "Демонстрація класифікації ROC за індекс�
 msgid "Split curves"
 msgstr "Розділені криві"
 
+#: mSNP/options/hweSplitOutcome.title
+msgid "Split HWE by outcome"
+msgstr ""
+
 #: mROC/results/splots.title
-msgid "Splitted ROC by predictors"
-msgstr "Розділена ROC за предикторами"
+msgid "Split ROC by predictors"
+msgstr ""
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "SPPV"
@@ -3688,6 +4663,10 @@ msgstr ""
 
 #: mSRV/results/coxSection/coxFitTable.columns.title
 msgid "Statistic"
+msgstr ""
+
+#: mSNP/results/qcGroup/qcTable.columns.title
+msgid "Status"
 msgstr ""
 
 #: mSRV/options/status.title
@@ -3748,9 +4727,6 @@ msgid "Survival Analysis Kaggle"
 msgstr ""
 
 #: R/msrv.b.R
-msgid "Survival Probability"
-msgstr ""
-
 #: mSRV/options/kmType/survival.title
 msgid "Survival probability"
 msgstr ""
@@ -3774,6 +4750,11 @@ msgstr "Хвости"
 msgid "Tanh"
 msgstr "Гіперболічний тангенс"
 
+#: mSNP/options/ternaryPlot.title
+#: mSNP/results/hweGroup/ternaryPlot.title
+msgid "Ternary diagram (de Finetti)"
+msgstr ""
+
 #: mSRV/results/coxSection/coxFitTable.columns.title
 msgid "Test"
 msgstr ""
@@ -3791,6 +4772,14 @@ msgstr ""
 #, fuzzy
 msgid "Tested predictors"
 msgstr "Перевірені передбачувачі"
+
+#: R/msnp.b.R
+msgid "Testing"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrBestTable.columns.title
+msgid "Testing BA"
+msgstr ""
 
 #: R/mpwr.b.R
 #, fuzzy
@@ -3892,6 +4881,10 @@ msgstr ""
 msgid "Too few observations after removing missing values (minimum 5 required)."
 msgstr ""
 
+#: R/msnp.b.R
+msgid "Total"
+msgstr ""
+
 #: R/mmf.b.R
 msgid "Total number of missing entries {}"
 msgstr "Загальна кількість відсутніх записів {}"
@@ -3918,6 +4911,7 @@ msgstr ""
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/msnp.b.R
 #: mMLP/results/statsTable.columns.title
 #, fuzzy
 msgid "Training"
@@ -3933,6 +4927,14 @@ msgstr ""
 #, fuzzy
 msgid "Training Accuracy (%)"
 msgstr "Точність навчання (%)"
+
+#: mSNP/results/mdrGroup/mdrBestTable.columns.title
+msgid "Training BA"
+msgstr ""
+
+#: mSNP/options/assocForestTrunc.title
+msgid "Truncate large confidence intervals"
+msgstr ""
 
 #: mCOR/options/glassoType.title
 msgid "Tuning parameter"
@@ -3958,6 +4960,10 @@ msgstr "Двографічні ROC-криві"
 msgid "two-tailed"
 msgstr "двосторонній"
 
+#: R/msnp.b.R
+msgid "Type"
+msgstr ""
+
 #: mPWR/options/plot_err.title
 #: mPWR/results/plot.title
 #, fuzzy
@@ -3968,9 +4974,9 @@ msgstr "Графіки помилок типу 1 і типу 2"
 msgid "UI"
 msgstr "UI"
 
-#: package/datasets/UIforbinomiallogistismodels.name
-msgid "UI for binomial logistis models"
-msgstr "Інтерфейс користувача для біноміальних моделей логістики"
+#: package/datasets/UIforbinomiallogisticmodels.name
+msgid "UI for binomial logistic models"
+msgstr ""
 
 #: package/analyses/mUI.title
 #: package/analyses/mUI.menuTitle
@@ -3983,9 +4989,9 @@ msgstr "Інтерфейс користувача для біноміальни�
 msgid "Uncertain Interval (UI)"
 msgstr "Невизначений інтервал (UI)"
 
-#: package/datasets/UIforbinomiallogistismodels.description
-msgid "Uncertain Interval estimation for binomial logistis models"
-msgstr "Оцінка невизначеного інтервалу для біноміальних логістичних моделей"
+#: package/datasets/UIforbinomiallogisticmodels.description
+msgid "Uncertain Interval estimation for binomial logistic models"
+msgstr ""
 
 #: mUI/options/polygon.title
 msgid "Uncertainty interval polygon"

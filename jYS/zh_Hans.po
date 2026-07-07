@@ -3,14 +3,18 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-07-07 01:18+0000\n"
 "Last-Translator: Jonathon Love <jon@thon.cc>\n"
-"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
-"projects/jamovi/module-jys/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified Han script) "
+"<https://hosted.weblate.org/projects/jamovi/module-jys/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2026.7.1.dev0\n"
+
+#: R/msnp.b.R
+msgid "-log10(p-value)"
+msgstr ""
 
 #: R/mlr.b.R
 msgid "(Intercept)"
@@ -64,11 +68,8 @@ msgid "%"
 msgstr "%"
 
 #: R/mpca.b.R
-msgid "% of variance"
-msgstr "方差占比 (%)"
-
 #: mPCA/results/varianceTable.columns.title
-msgid "% of Variance"
+msgid "% of variance"
 msgstr "方差占比 (%)"
 
 #: mMOUT/results/stat.columns.title
@@ -82,29 +83,52 @@ msgid ""
 "Shapiro-Wilk test"
 msgstr "<b>*p<0.05</b> — Shapiro-Wilk检验拒绝了正态分布的假设"
 
+#: R/msnp.b.R
+msgid ""
+"<b>Allele frequencies (p, q)</b> represent the proportions of the two "
+"alleles in the sample. For a biallelic marker with alleles A and B: p = "
+"freq(A) = (2*n_AA + n_AB) / (2*N), q = 1 - p."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Allelic test</b> compares allele frequencies between case and control "
+"groups using a 2×2 contingency table. Tests whether the minor allele is "
+"significantly more (or less) frequent in cases than controls."
+msgstr ""
+
 #: R/mpwr.b.R
 msgid ""
 "<b>Alpha (α)</b> is the significance level, representing the maximum "
 "acceptable probability of committing a Type I error (detecting a false "
 "positive difference when none actually exists)."
-msgstr ""
-"<b>Alpha（α）</b>：显著性水平，表示可接受的最大犯第一类错误的概率（即实际不存"
-"在差异时误检出有差异，即假阳性）。"
+msgstr "<b>Alpha（α）</b>：显著性水平，表示可接受的最大犯第一类错误的概率（即实际不存在差异时误检出有差异，即假阳性）。"
 
 #: R/mui.b.R
 msgid ""
-"<b>Balance</b> - balance between correct and incorrect classified "
+"<b>Balance</b> - balance between correctly and incorrectly classified cases "
 "(TP+TN)/(FP+FN)"
-msgstr "<b>平衡度</b> — 正确分类与错误分类之间的平衡，(TP+TN)/(FP+FN)"
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Balanced Accuracy (BA)</b> = (Sensitivity + Specificity) / 2. Accounts "
+"for class imbalance. BA = 0.5 indicates random classification."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Best model selection</b>: the genetic model with the lowest p-value (or "
+"AIC/BIC) is highlighted. This helps identify the most likely mode of "
+"inheritance for the observed association."
+msgstr ""
 
 #: R/mcor.b.R
 msgid ""
 "<b>BETWEENNESS</b>: number of shortest paths between all pairs of nodes that "
 "pass through this node; shows its importance as a \"bridge\" or transit "
 "point."
-msgstr ""
-"<b>介数中心性</b>：所有节点对之间的最短路径中经过该节点的数量；反映其作为“桥"
-"梁”或中转点的重要。"
+msgstr "<b>介数中心性</b>：所有节点对之间的最短路径中经过该节点的数量；反映其作为“桥梁”或中转点的重要。"
 
 #: R/mpwr.b.R
 msgid "<b>Calculated parameter</b>:"
@@ -122,13 +146,24 @@ msgid ""
 "network)."
 msgstr "<b>中心性指标</b>（衡量节点在网络中重要性的不同度量）。"
 
+#: R/msnp.b.R
+msgid ""
+"<b>Chi-square test</b> is the classical Pearson goodness-of-fit test "
+"comparing observed and expected genotype counts under HWE. Suitable for "
+"large sample sizes (N > 50). Asymptotic; may be unreliable for rare alleles."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Classification</b> defines the epistatic model: subjects in HR cells are "
+"predicted as cases, LR cells as controls."
+msgstr ""
+
 #: R/mcor.b.R
 msgid ""
 "<b>CLOSENESS</b>: inverse of the sum of shortest path lengths to all other "
 "nodes; shows how central a node is in terms of distance."
-msgstr ""
-"<b>接近中心性</b>：到所有其他节点最短路径长度之和的倒数；反映节点在距离意义上"
-"的中心程度。"
+msgstr "<b>接近中心性</b>：到所有其他节点最短路径长度之和的倒数；反映节点在距离意义上的中心程度。"
 
 #: R/mpwr.b.R
 msgid ""
@@ -137,22 +172,34 @@ msgid ""
 "subjects within the same cluster using the Intraclass Correlation "
 "Coefficient (<b>ICC</b>) and average cluster size via the Design Effect."
 msgstr ""
-"<b>集群（k1/k2）</b> 表示每组所需的集群数量（例如，诊所或学校）。使用组内相关"
-"系数（<b>ICC</b>）调整同一集群内受试者之间的相似性，并通过设计效应调整平均集"
-"群大小。"
+"<b>集群（k1/k2）</b> "
+"表示每组所需的集群数量（例如，诊所或学校）。使用组内相关系数（<b>ICC</b>）调整同一集群内受试者之间的相似性，并通过设计效应调整平均集群大小。"
 
 #: R/mui.b.R
 msgid ""
 "<b>Concordance</b> - C-Statistic or AUC. The probability that a randomly "
 "chosen subject with the condition is correctly ranked higher than a randomly "
 "chosen subject without the condition"
-msgstr ""
-"<b>一致性</b> — C统计量或AUC。随机选取的一名患病受试者被正确排序高于随机选取"
-"的一名未患病受试者的概率"
+msgstr "<b>一致性</b> — C统计量或AUC。随机选取的一名患病受试者被正确排序高于随机选取的一名未患病受试者的概率"
 
 #: R/mcor.b.R
 msgid "<b>Correlation method</b>: {method}"
 msgstr "<b>相关方法</b>：{method}"
+
+#: R/msnp.b.R
+msgid ""
+"<b>Cross-Validation Consistency (CVC)</b> is the number of folds (out of K) "
+"in which the model was selected as best. Higher CVC indicates greater "
+"stability of the identified interaction."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>D' (normalized LD)</b> measures the strength of linkage disequilibrium "
+"between two loci, scaled to [-1, 1]. <b>|D'| = 1</b> indicates complete LD "
+"(no recombination observed), <b>D' = 0</b> indicates linkage equilibrium "
+"(independent assortment)."
+msgstr ""
 
 #: R/mpwr.b.R
 msgid "<b>Design</b>:"
@@ -191,9 +238,14 @@ msgid ""
 "<b>Effect Size</b> measures the standardized magnitude of the difference or "
 "association (e.g., Cohen's d for means, or correlation coefficient). Unlike "
 "p-values, it is independent of the sample size."
+msgstr "<b>效应量</b>：衡量差异或关联的标准化大小（例如，均值的Cohen's d或相关系数）。与p值不同，它不受样本量大小的影响。"
+
+#: R/msnp.b.R
+msgid ""
+"<b>Effective number of alleles (Ne)</b> is the reciprocal of homozygosity: "
+"Ne = 1 / Σ(pi²). Ne = 1 indicates fixation (monomorphic), Ne = 2 indicates "
+"equal allele frequencies for a biallelic marker."
 msgstr ""
-"<b>效应量</b>：衡量差异或关联的标准化大小（例如，均值的Cohen's d或相关系数）"
-"。与p值不同，它不受样本量大小的影响。"
 
 #: R/mpwr.b.R
 msgid ""
@@ -201,24 +253,48 @@ msgid ""
 "deaths or failures) to achieve the desired power. In survival analysis, "
 "statistical power is driven by the number of events rather than the total "
 "number of subjects."
+msgstr "<b>事件数（N1）</b>：表示达到所需检验功效所需的目标事件数（例如，死亡或失效）。在生存分析中，统计功效由事件数决定，而非受试者总人数。"
+
+#: R/msnp.b.R
+msgid ""
+"<b>Exact test</b> (Haldane, 1954) computes the exact probability of the "
+"observed heterozygote count, conditional on the allele counts. Recommended "
+"for small samples or rare alleles."
 msgstr ""
-"<b>事件数（N1）</b>：表示达到所需检验功效所需的目标事件数（例如，死亡或失效）"
-"。在生存分析中，统计功效由事件数决定，而非受试者总人数。"
+
+#: R/msnp.b.R
+msgid ""
+"<b>Expected genotype frequencies</b> are the counts predicted under "
+"Hardy-Weinberg equilibrium: E(AA) = p² × N, E(AB) = 2pq × N, E(BB) = q² × N."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Expected heterozygosity (H_exp)</b> is the heterozygosity expected under "
+"HWE: H_exp = 2pq. A significant difference between H_obs and H_exp may "
+"indicate inbreeding, population substructure, or selection."
+msgstr ""
 
 #: R/mcor.b.R
 msgid ""
 "<b>EXPECTED INFLUENCE</b>: sum of signed weights of connected edges; shows "
 "the node's net impact on the network, considering positive and negative "
 "relations."
-msgstr ""
-"<b>预期影响</b>：连接边带符号权重的总和；在考虑正负关系的情况下，反映节点对网"
-"络的净影响。"
+msgstr "<b>预期影响</b>：连接边带符号权重的总和；在考虑正负关系的情况下，反映节点对网络的净影响。"
 
 #: R/mmf.b.R
 msgid ""
 "<b>Explanatory</b> - variable corresponding to MAR with minimal "
 "p<sub>value</sub>."
 msgstr "<b>解释变量</b> — 对应于MAR的最小p<sub>值</sub>的变量。"
+
+#: R/msnp.b.R
+msgid ""
+"<b>Genetic models</b> test the association under different inheritance "
+"patterns: <b>Codominant</b> (AA vs AB vs BB), <b>Dominant</b> (AA vs AB+BB), "
+"<b>Recessive</b> (AA+AB vs BB), <b>Overdominant</b> (AA+BB vs AB), "
+"<b>Log-additive</b> (trend test for allele dose 0/1/2)."
+msgstr ""
 
 #: R/mcor.b.R
 msgid "<b>Hₐ</b> is negative correlation"
@@ -228,14 +304,19 @@ msgstr "<b>Hₐ</b> 为负相关"
 msgid "<b>Hₐ</b> is positive correlation"
 msgstr "<b>Hₐ</b> 为正相关"
 
+#: R/msnp.b.R
+msgid ""
+"<b>Haplotype frequencies</b> are estimated using the "
+"Expectation-Maximization (EM) algorithm from unphased genotype data. The "
+"p-value tests the null hypothesis D = 0 (linkage equilibrium)."
+msgstr ""
+
 #: R/mpwr.b.R
 msgid ""
 "<b>Hazard Ratio (HR)</b> represents the ratio of event rates between the two "
 "groups. A Hazard Ratio of 1 indicates no difference in risk, while values "
 "further from 1 represent stronger effects."
-msgstr ""
-"<b>风险比（HR）</b>：表示两组之间事件发生率的比值。风险比为1表示风险无差异，"
-"而距1越远的值表示效应越强。"
+msgstr "<b>风险比（HR）</b>：表示两组之间事件发生率的比值。风险比为1表示风险无差异，而距1越远的值表示效应越强。"
 
 #: R/msrv.b.R
 msgid ""
@@ -247,10 +328,9 @@ msgid ""
 "hazard (protective effect). <b>Lower/Upper 95% CI</b> represent the "
 "confidence interval for the Hazard Ratio."
 msgstr ""
-"<b>风险比（HR）</b>：表示由解释变量的两个水平所描述的条件对应的风险率之比（"
-"Cox，1972）。它反映了预测变量每变化一个单位时事件发生的相对风险。<b>HR > 1</"
-"b>表示风险增加（事件发生风险更高），而<b>HR < 1</b>表示风险降低（保护效应）"
-"。<b>下限/上限 95% 置信区间</b>表示风险比的置信区间。"
+"<b>风险比（HR）</b>：表示由解释变量的两个水平所描述的条件对应的风险率之比（Cox，1972"
+"）。它反映了预测变量每变化一个单位时事件发生的相对风险。<b>HR > 1</b>表示风险增加（事件发生风险更高），而<b>HR < "
+"1</b>表示风险降低（保护效应）。<b>下限/上限 95% 置信区间</b>表示风险比的置信区间。"
 
 #: R/mmlp.b.R
 msgid ""
@@ -258,11 +338,25 @@ msgid ""
 "output activation functions)"
 msgstr "<b>隐藏层</b>：网络架构（隐藏层大小、隐藏层/输出层激活函数）"
 
+#: R/msnp.b.R
+msgid ""
+"<b>High-Risk (HR)</b> cells have cases/controls ratio ≥ threshold T. "
+"<b>Low-Risk (LR)</b> cells have ratio < T."
+msgstr ""
+
 #: R/mmlp.b.R
 msgid ""
 "<b>Hold-out Accuracy</b>: classification accuracy on the hold-out validation "
 "dataset."
 msgstr "<b>留出准确率</b>：在留出验证数据集上的分类准确率。"
+
+#: R/msnp.b.R
+msgid ""
+"<b>Inbreeding coefficient (F_IS)</b> measures deviation from HWE: F_IS = 1 - "
+"H_obs / H_exp. <b>F_IS > 0</b> indicates heterozygote deficiency "
+"(inbreeding), <b>F_IS < 0</b> indicates heterozygote excess (outbreeding), "
+"<b>F_IS = 0</b> indicates Hardy-Weinberg equilibrium."
+msgstr ""
 
 #: R/mmlp.b.R
 msgid ""
@@ -279,10 +373,9 @@ msgid ""
 "(survival probability drops to 0.5). <b>Lower/Upper 95% CI</b> represent the "
 "95% confidence interval limits for this median survival time."
 msgstr ""
-"<b>Kaplan-Meier估计量</b>（Kaplan & Meier, 1958）是一种非参数统计量，用于根据"
-"生存时间数据估计生存函数，并考虑删失观测值。<b>中位生存时间</b>是估计的50%受"
-"试者已发生事件的时间点（生存概率降至0.5）。<b>下限/上限 95% 置信区间 </b>表示"
-"该中位生存时间的95%置信区间上下限。"
+"<b>Kaplan-Meier估计量</b>（Kaplan & Meier, "
+"1958）是一种非参数统计量，用于根据生存时间数据估计生存函数，并考虑删失观测值。<b>中位生存时间</b>是估计的50%"
+"受试者已发生事件的时间点（生存概率降至0.5）。<b>下限/上限 95% 置信区间 </b>表示该中位生存时间的95%置信区间上下限。"
 
 #: R/msrv.b.R
 msgid ""
@@ -292,9 +385,16 @@ msgid ""
 "indicate that the predictors collectively improve the model fit relative to "
 "a null model without covariates."
 msgstr ""
-"<b>似然比</b>、<b>Wald</b>和<b>Score（对数秩）</b>检验用于评估模型中所有回归"
-"系数（β）均等于零的全局零假设。具有统计学显著性的p值（p < 0.05）表明，与不含"
-"协变量的零模型相比，预测变量整体上改善了模型的拟合优度。"
+"<b>似然比</b>、<b>Wald</b>和<b>Score（对数秩）</"
+"b>检验用于评估模型中所有回归系数（β）均等于零的全局零假设。具有统计学显著性的p值（p < "
+"0.05）表明，与不含协变量的零模型相比，预测变量整体上改善了模型的拟合优度。"
+
+#: R/msnp.b.R
+msgid ""
+"<b>Likelihood-ratio test</b> compares the likelihood of the data under HWE "
+"versus the saturated model. The test statistic -2 × ln(L_HWE / L_sat) "
+"follows chi-square with 1 df."
+msgstr ""
 
 #: R/msrv.b.R
 msgid ""
@@ -305,29 +405,32 @@ msgid ""
 "vs. expected events, and the <b>p-value</b> indicates the statistical "
 "significance of the differences under the null hypothesis."
 msgstr ""
-"<b>对数秩（Mantel-Cox）检验</b>：一种非参数假设检验，用于比较两个或多个独立组"
-"的生存分布。它评估组间生存曲线无差异的零假设。<b>卡方</b>是基于观测事件数与期"
-"望事件数的检验统计量，<b>p值</b>表示在零假设下差异的统计学显著性。"
+"<b>对数秩（Mantel-Cox）检验</b>：一种非参数假设检验，用于比较两个或多个独立组的生存分布。它评估组间生存曲线无差异的零假设。<b>卡方</"
+"b>是基于观测事件数与期望事件数的检验统计量，<b>p值</b>表示在零假设下差异的统计学显著性。"
 
 #: R/mui.b.R
 msgid ""
-"<b>LR-</b> - Negative Likelihood Ratio P(-|D+))/(P(-|D-)). The probability "
-"of a person with the condition receiving a negative classification / "
-"probability of a person without the condition receiving a negative "
-"classification"
+"<b>LR-</b> - Negative Likelihood Ratio (P(-|D+))/(P(-|D-)). The ratio of the "
+"probability of a person with the condition receiving a negative "
+"classification to the probability of a person without the condition "
+"receiving a negative classification"
 msgstr ""
-"<b>LR-</b> — 阴性似然比，P(-|D+)/P(-|D-)。即患病者被分类为阴性的概率 / 未患病"
-"者被分类为阴性的概率"
 
 #: R/mui.b.R
 msgid ""
-"<b>LR+</b> - Positive Likelihood Ratio (P(+|D+))/(P(+|D-)) The probability "
-"of a person with the condition receiving a positive classification / "
-"probability of a person without the condition receiving a positive "
-"classification"
+"<b>LR+</b> - Positive Likelihood Ratio (P(+|D+))/(P(+|D-)). The ratio of the "
+"probability of a person with the condition receiving a positive "
+"classification to the probability of a person without the condition "
+"receiving a positive classification"
 msgstr ""
-"<b>LR+</b> — 阳性似然比，P(+|D+)/P(+|D-)。即患病者被分类为阳性的概率 / 未患病"
-"者被分类为阳性的概率"
+
+#: R/msnp.b.R
+msgid ""
+"<b>MAF (Minor Allele Frequency)</b> is the frequency of the less common "
+"allele in the population. Markers with <b>MAF < 0.01</b> are typically "
+"considered monomorphic and may be excluded from analysis. <b>MAF < 0.05</b> "
+"indicates a rare variant."
+msgstr ""
 
 #: R/mmf.b.R
 msgid ""
@@ -343,9 +446,15 @@ msgstr "<b>最大迭代次数</b>：最大训练轮次数。"
 msgid ""
 "<b>MCAR</b> - missing completely at random (if the p<sub>value</sub> is not "
 "significant, there is evidence the data is MCAR)."
+msgstr "<b>MCAR</b> — 完全随机缺失（若p<sub>值</sub>不显著，则有证据表明数据为完全随机缺失）。"
+
+#: R/msnp.b.R
+msgid ""
+"<b>MDR (Multifactor Dimensionality Reduction)</b> (Ritchie et al., 2001) is "
+"a non-parametric method for detecting gene-gene interactions (epistasis). It "
+"reduces high-dimensional genotype combinations into a binary variable "
+"(high-risk vs. low-risk)."
 msgstr ""
-"<b>MCAR</b> — 完全随机缺失（若p<sub>值</sub>不显著，则有证据表明数据为完全随"
-"机缺失）。"
 
 #: R/mcor.b.R
 msgid ""
@@ -353,9 +462,7 @@ msgid ""
 "Computes the linear association between each pair of variables while "
 "controlling for all other variables in the dataset, producing a fully "
 "connected network."
-msgstr ""
-"<b>方法</b>：经典偏相关（无正则化/L1惩罚）。在控制数据集中所有其他变量的条件"
-"下，计算每对变量之间的线性关联，生成全连接网络。"
+msgstr "<b>方法</b>：经典偏相关（无正则化/L1惩罚）。在控制数据集中所有其他变量的条件下，计算每对变量之间的线性关联，生成全连接网络。"
 
 #: R/mcor.b.R
 msgid ""
@@ -364,8 +471,8 @@ msgid ""
 "while controlling for all other variables in the dataset from only the "
 "second variable, yielding an asymmetric network."
 msgstr ""
-"<b>方法</b>：经典半偏相关（无正则化/L1惩罚）。在控制数据集中所有其他变量的条"
-"件下，仅从第二个变量中剔除影响，计算每对变量之间的线性关联，生成非对称网络。"
+"<b>方法</b>：经典半偏相关（无正则化/L1"
+"惩罚）。在控制数据集中所有其他变量的条件下，仅从第二个变量中剔除影响，计算每对变量之间的线性关联，生成非对称网络。"
 
 #: R/mcor.b.R
 msgid ""
@@ -373,8 +480,8 @@ msgid ""
 "= {rho}). GLASSO uses L1 regularization to shrink weak partial correlations "
 "to exactly zero, producing a sparse network."
 msgstr ""
-"<b>方法</b>：图形Lasso（GLASSO），使用手动惩罚参数（rho = {rho}）。GLASSO通过"
-"L1正则化将弱偏相关收缩至精确为零，生成稀疏网络。"
+"<b>方法</b>：图形Lasso（GLASSO），使用手动惩罚参数（rho = "
+"{rho}）。GLASSO通过L1正则化将弱偏相关收缩至精确为零，生成稀疏网络。"
 
 #: R/mcor.b.R
 msgid ""
@@ -383,14 +490,14 @@ msgid ""
 "L1 regularization to shrink weak partial correlations to exactly zero, "
 "producing a sparse network."
 msgstr ""
-"<b>方法</b>：图形Lasso（GLASSO），使用扩展贝叶斯信息准则（EBIC）调参选择（"
-"gamma = {gamma}）。GLASSO通过L1正则化将弱偏相关收缩至精确为零，生成稀疏网络。"
+"<b>方法</b>：图形Lasso（GLASSO），使用扩展贝叶斯信息准则（EBIC）调参选择（gamma = "
+"{gamma}）。GLASSO通过L1正则化将弱偏相关收缩至精确为零，生成稀疏网络。"
 
 #: R/mui.b.R
 msgid ""
-"<b>More Certain Interval (MCI)</b> is interval outside the Uncertain "
-"Interval and divide into low and high parts."
-msgstr "<b>较确定区间（MCI）</b>：处于不确定区间之外的区间，分为低端和高端两部分。"
+"<b>More Certain Interval (MCI)</b> is the interval outside the Uncertain "
+"Interval and is divided into low and high parts."
+msgstr ""
 
 #: R/mmf.b.R
 msgid "<b>MSE</b> - mean squared error (for Continuous variables);"
@@ -405,9 +512,7 @@ msgid ""
 "<b>N1</b> and <b>N2</b> represent the required number of subjects in Group 1 "
 "and Group 2. The ratio of their sizes is determined by the specified "
 "allocation ratio."
-msgstr ""
-"<b>N1</b>和<b>N2</b>分别表示组1和组2所需的受试者数，其比例由指定的分配比决定"
-"。"
+msgstr "<b>N1</b>和<b>N2</b>分别表示组1和组2所需的受试者数，其比例由指定的分配比决定。"
 
 #: R/mpwr.b.R
 msgid ""
@@ -419,30 +524,91 @@ msgstr "<b>N1</b>：表示所需样本量（单组中的受试者总人数，或
 msgid "<b>NPV</b> - Negative Predictive Value of the negative class TN/(TN+FN)"
 msgstr "<b>NPV</b> — 阴性预测值，TN/(TN+FN)"
 
+#: R/msnp.b.R
+msgid ""
+"<b>Observed genotype frequencies</b> are the raw counts and proportions of "
+"each genotype (AA, AB, BB) directly from the data."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Observed heterozygosity (H_obs)</b> is the proportion of heterozygous "
+"individuals (AB) in the sample: H_obs = n_AB / N."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Odds Ratio (OR)</b> quantifies the strength of association between an "
+"allele/genotype and the outcome. <b>OR > 1</b> indicates increased risk, "
+"<b>OR < 1</b> indicates protective effect, <b>OR = 1</b> indicates no "
+"association. The 95% CI that does not cross 1.0 indicates significance."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>p-adjusted</b> is the p-value corrected for multiple testing across "
+"markers using the selected method (Bonferroni, Holm, or Benjamini–Hochberg "
+"FDR)."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Permutation p-value</b> is obtained by shuffling outcome labels. It "
+"represents the proportion of permuted datasets that achieved a testing BA ≥ "
+"the observed value."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Permutation test</b> estimates the p-value by randomly permuting alleles "
+"among genotypes. Distribution-free; valid for any sample size."
+msgstr ""
+
 #: R/mmf.b.R
 msgid ""
 "<b>PFC</b> - proportion of falsely classified (for Nominal and Ordinal "
 "variables);"
 msgstr "<b>PFC</b> — 错误分类比例（用于名义变量和有序变量）；"
 
+#: R/msnp.b.R
+msgid ""
+"<b>PIC (Polymorphism Information Content)</b> measures the informativeness "
+"of a genetic marker. <b>PIC > 0.5</b> is highly informative, <b>0.25 < PIC < "
+"0.5</b> is moderately informative, <b>PIC < 0.25</b> is slightly informative "
+"(Botstein et al., 1980)."
+msgstr ""
+
 #: R/mpwr.b.R
 msgid ""
 "<b>Power</b> is the probability of correctly detecting a statistically "
 "significant difference when a true difference exists in the population (1 - "
 "Type II error rate, or the probability of avoiding a false negative)."
-msgstr ""
-"<b>功效</b>：当总体中确实存在真实差异时，能够正确检出具有统计学显著性差异的概"
-"率（1 - 第二类错误率，即避免假阴性的概率）。"
+msgstr "<b>功效</b>：当总体中确实存在真实差异时，能够正确检出具有统计学显著性差异的概率（1 - 第二类错误率，即避免假阴性的概率）。"
 
 #: R/mui.b.R
-msgid "<b>PPV</b> - Positive Predictive Value of the positive class TP/(TN+FN)"
-msgstr "<b>PPV</b> — 阳性预测值，TP/(TP+FP)"
+msgid "<b>PPV</b> - Positive Predictive Value of the positive class TP/(TP+FP)"
+msgstr ""
 
 #: R/mmf.b.R
 msgid ""
 "<b>PVU</b> - proportion of variance unexplained 1-R² (for Continuous "
 "variables);"
 msgstr "<b>PVU</b> — 未解释方差比例，1-R²（用于连续变量）；"
+
+#: R/msnp.b.R
+msgid ""
+"<b>r² (squared correlation)</b> measures both LD strength and allele "
+"frequency similarity. <b>r² = 1</b> indicates perfect LD (complete mutual "
+"predictability), <b>r² > 0.8</b> is commonly used as the threshold for "
+"strong LD in GWAS tag-SNP selection. r² is preferred over D' for association "
+"study design because it directly relates to statistical power."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Ratio</b> = Cases / Controls. Empty cells (no observations) are left "
+"unclassified."
+msgstr ""
 
 #: R/msrv.b.R
 msgid ""
@@ -452,25 +618,28 @@ msgid ""
 "statistically significant <b>p-value (p < 0.05)</b> indicates a violation of "
 "the PH assumption, meaning the hazard ratio changes over time."
 msgstr ""
-"<b>Schoenfeld残差检验</b>：分别对每个协变量及整体评估Cox模型的比例风险（PH）"
-"假设。它检验协变量的效应是否随时间保持恒定。具有统计学显著性的<b>p值（p < "
+"<b>Schoenfeld残差检验</"
+"b>：分别对每个协变量及整体评估Cox模型的比例风险（PH）假设。它检验协变量的效应是否随时间保持恒定。具有统计学显著性的<b>p值（p < "
 "0.05）</b>表明违反了PH假设，即风险比随时间变化。"
 
 #: R/mui.b.R
+msgid "<b>Se</b> - sensitivity of the positive class TP/(TP+FN)"
+msgstr ""
+
+#: R/msnp.b.R
 msgid ""
-"<b>Se</b> - sensitivity of the positive and negative classifications "
-"TP/(TP+FN)"
-msgstr "<b>Se</b> — 敏感性，TP/(TP+FN)"
+"<b>Shannon Information Index (I)</b> quantifies allelic diversity. Higher "
+"values indicate greater diversity. For a biallelic marker, maximum I = ln(2) "
+"≈ 0.693 when allele frequencies are equal."
+msgstr ""
 
 #: R/mui.b.R
 msgid "<b>SNPV</b> - standardized negative predictive value of the negative class"
 msgstr "<b>SNPV</b> — 标准化阴性预测值"
 
 #: R/mui.b.R
-msgid ""
-"<b>Sp</b> - specificity of the positive and negative classifications "
-"TN/(TN+FN)"
-msgstr "<b>Sp</b> — 阳性与阴性分类的特异度，TN/(TN+FN)"
+msgid "<b>Sp</b> - specificity of the negative class TN/(TN+FP)"
+msgstr ""
 
 #: R/mui.b.R
 msgid "<b>SPPV</b> - standardized positive predictive value of the positive class"
@@ -492,14 +661,20 @@ msgid ""
 "the optimal threshold determined by the Youden index (J = Sensitivity + "
 "Specificity - 1)."
 msgstr ""
-"<b>时间依赖性ROC</b>分析（Heagerty等，2000）：在特定时间点<i>t</i>评估连续标"
-"志物对生存结局的预测准确性，将患者划分为发生事件或未发生事件两类。<b>AUC</b>"
-"（曲线下面积）衡量判别能力（取值范围为0.5至1.0）。<b>Cut-off</b>表示由约登指"
-"数（J = 敏感性 + 特异性 - 1）确定的最佳截断值。"
+"<b>时间依赖性ROC</b>分析（Heagerty等，2000）：在特定时间点<i>t</"
+"i>评估连续标志物对生存结局的预测准确性，将患者划分为发生事件或未发生事件两类。<b>AUC</b>（曲线下面积）衡量判别能力（取值范围为0.5至1.0"
+"）。<b>Cut-off</b>表示由约登指数（J = 敏感性 + 特异性 - 1）确定的最佳截断值。"
 
 #: R/mmlp.b.R
 msgid "<b>Training Accuracy</b>: classification accuracy on the training dataset."
 msgstr "<b>训练准确率</b>：在训练数据集上的分类准确率。"
+
+#: R/msnp.b.R
+msgid ""
+"<b>Training BA</b> may be optimistically biased. <b>Testing BA</b> is "
+"computed on the held-out fold and provides an unbiased estimate of "
+"predictive performance."
+msgstr ""
 
 #: R/mui.b.R
 msgid ""
@@ -511,9 +686,7 @@ msgstr "<b>不确定区间（UI）</b>：置于有目标状态与无目标状态
 msgid ""
 "<b>Uncertain Interval</b> is considered to be a range of test scores that is "
 "inconclusive and does not warrant a right decision."
-msgstr ""
-"<b>不确定区间</b>：指检测分数中无法得出明确结论、不足以支持做出正确判断的一段"
-"范围。"
+msgstr "<b>不确定区间</b>：指检测分数中无法得出明确结论、不足以支持做出正确判断的一段范围。"
 
 #: R/mmlp.b.R
 msgid "<b>Weight Decay</b>: L2 regularization penalty parameter."
@@ -546,6 +719,14 @@ msgstr "0.01（标准值）"
 msgid "1 - Specificity"
 msgstr "1 - 特异度"
 
+#: mSNP/options/mdrOrder/1.title
+msgid "1-way"
+msgstr ""
+
+#: mSNP/options/mdrFolds/10.title
+msgid "10 folds"
+msgstr ""
+
 #: mMLP/options/hidden_structure.default
 msgid "10,5"
 msgstr "10,5"
@@ -557,6 +738,18 @@ msgstr "10,5"
 msgid "100 - Specificity (%)"
 msgstr "100 - 特异度(%)"
 
+#: mSNP/options/mdrOrder/2.title
+msgid "2-way"
+msgstr ""
+
+#: mSNP/options/mdrFolds/3.title
+msgid "3 folds"
+msgstr ""
+
+#: mSNP/options/mdrOrder/3.title
+msgid "3-way"
+msgstr ""
+
 #: mOUT/options/tholdZS/3.0.title
 msgid "3.0 (standard)"
 msgstr "3.0 (标准)"
@@ -564,6 +757,14 @@ msgstr "3.0 (标准)"
 #: mOUT/options/tholdmZS/3.5.title
 msgid "3.5 (standard)"
 msgstr "3.5 (标准)"
+
+#: mSNP/options/mdrOrder/4.title
+msgid "4-way"
+msgstr ""
+
+#: mSNP/options/mdrFolds/5.title
+msgid "5 folds"
+msgstr ""
 
 #: mLR/results/coeffTable.columns.title
 msgid "95% OR CI Lower"
@@ -597,6 +798,10 @@ msgstr "先验功效分析结果"
 msgid "Accent"
 msgstr "强调"
 
+#: mSNP/options/ternaryRegion.title
+msgid "Acceptance region type"
+msgstr ""
+
 #: mPCA/results/regTable.columns.title
 msgid "Accuracy"
 msgstr "准确度"
@@ -614,12 +819,24 @@ msgid "Agglomeration method"
 msgstr "聚合方法"
 
 #: mMF/options/alg.title
-msgid "Algorythm"
-msgstr "演算法"
+msgid "Algorithm"
+msgstr ""
 
 #: mCOR/options/signif/all.title
 msgid "All"
 msgstr "所有"
+
+#: mSNP/options/geneticModel/all.title
+msgid "All models"
+msgstr ""
+
+#: mSNP/options/groupAlleles.title
+msgid "Allele analysis"
+msgstr ""
+
+#: mSNP/options/freqTable.title
+msgid "Allele and genotype frequencies"
+msgstr ""
 
 #: mCOR/options/plotOrder/alphabet.title
 msgid "Alphabetical"
@@ -637,6 +854,21 @@ msgstr "MARs 阵列"
 msgid "Analysis by Groups"
 msgstr "分组分析"
 
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/groupAnalysisTable.title
+msgid "Analysis of Alleles and Genotypes by Groups"
+msgstr ""
+
+#: package/analyses/mSNP.description
+msgid ""
+"Analysis of genetic polymorphisms (SNP) including Hardy-Weinberg "
+"Equilibrium, Association Tests, Population Genetics metrics, MDR, and LD."
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Analysis of Genotypes by Groups"
+msgstr ""
+
 #: mSRV/options/rocTime.title
 msgid "Analysis Time Point t"
 msgstr "分析时间点 t"
@@ -649,6 +881,22 @@ msgstr "按角度排序特征向量"
 #: mPWR/options/design/anova.title
 msgid "ANOVA / ANCOVA (F-Test)"
 msgstr "方差分析 / 协方差分析（F检验）"
+
+#: mSNP/options/assocEnable.title
+msgid "Association tests"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/1.title
+msgid "Asymptotic Chi-square (1)"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/3.title
+msgid "Asymptotic Chi-square female (3)"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/5.title
+msgid "Asymptotic Likelihood-ratio (5)"
+msgstr ""
 
 #: R/mroc.b.R
 #: mLR/results/rocTable.columns.title
@@ -692,6 +940,10 @@ msgstr "向后逐步淘汰法（AIC）"
 msgid "Balance"
 msgstr "平衡"
 
+#: R/msnp.b.R
+msgid "Balanced Accuracy (BA)"
+msgstr ""
+
 #: mPWR/options/base_prob.title
 #: mPWR/ui[1]/base_prob.label
 msgid "Base probability"
@@ -713,6 +965,31 @@ msgstr "Benjamini-Hochberg (1995)"
 msgid "Benjamini-Yekutieli (2001)"
 msgstr "Benjamini-Yekutieli (2001)"
 
+#: mSNP/options/adjust/fdr.title
+msgid "Benjamini–Hochberg (FDR)"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrBestTable.columns.title
+#: mSNP/results/mdrGroup/mdrCellTable.columns.title
+msgid "Best Combination"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrBestTable.title
+msgid "Best MDR Models by Order"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Beta"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Beta Lower 95% CI"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Beta Upper 95% CI"
+msgstr ""
+
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Betweenness"
 msgstr "介数中心性"
@@ -728,6 +1005,10 @@ msgstr "黑白"
 #: package/datasets/BCROCclassification.description
 msgid "Blood cells multiple ROC Classification demonstration"
 msgstr "血细胞多类ROC分类演示"
+
+#: mSNP/options/adjust/bonferroni.title
+msgid "Bonferroni"
+msgstr ""
 
 #: mCOR/options/adjust/bonferroni.title
 msgid "Bonferroni (1961)"
@@ -756,6 +1037,14 @@ msgstr "含离群值的箱线图"
 msgid "Brewer's qualitative palette"
 msgstr "Brewer 定性调色板"
 
+#: R/msnp.b.R
+msgid "Ca"
+msgstr ""
+
+#: mSNP/options/groupTotal.title
+msgid "Calculate totals"
+msgstr ""
+
 #: mOUT/results/stat/outstat.description
 msgid "Calculated fences for outliers"
 msgstr "离群值计算界限"
@@ -769,6 +1058,18 @@ msgid ""
 "Calculations for survival log-rank test are based on Schoenfeld's asymptotic "
 "approximation. N1 represents the total number of events required."
 msgstr "生存分析对数秩检验的计算基于Schoenfeld渐近近似。N1表示所需的总事件数。"
+
+#: mSNP/results/qcGroup/qcTable.columns.title
+msgid "Call Rate"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrCellTable.columns.title
+msgid "Cases"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrCellTable.columns.title
+msgid "Cases/Controls Ratio"
+msgstr ""
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "CCR"
@@ -799,6 +1100,14 @@ msgstr "卡方截断值"
 #: mPWR/options/design/chisq.title
 msgid "Chi-square Goodness-of-Fit / Independence (Chi-square Test)"
 msgstr "卡方拟合优度检验 / 卡方独立性检验（卡方检验）"
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "Chi-square p"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "Chi-square p-adj"
+msgstr ""
 
 #: mMOUT/options/plotType/qq.title
 #: mMOUT/results/qqplot.title
@@ -933,6 +1242,23 @@ msgstr "集群 1"
 msgid "Clusters 2"
 msgstr "集群 2"
 
+#: R/msnp.b.R
+msgid "Co"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/options/geneticModel/codominant.title
+msgid "Codominant"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Codominant (AB vs AA)"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Codominant (BB vs AA)"
+msgstr ""
+
 #: mSRV/results/coxSection/coxCoefTable.columns.title
 msgid "Coefficient (Estimate)"
 msgstr "系数（估计值）"
@@ -1046,6 +1372,14 @@ msgstr "混淆矩阵"
 msgid "Contingency Matrix (Clusters vs Groups):"
 msgstr "列联矩阵（集群 vs 组别）："
 
+#: mSNP/results/mdrGroup/mdrCellTable.columns.title
+msgid "Controls"
+msgstr ""
+
+#: mSNP/options/polyDf1.title
+msgid "Controversial df for polymorphism"
+msgstr ""
+
 #: mCOR/options/hyp/corr.title
 msgid "Correlated"
 msgstr "有相关"
@@ -1103,11 +1437,14 @@ msgstr "变量间的相关"
 msgid "Cos²"
 msgstr "Cos²"
 
+#: R/msnp.b.R
 #: mMLP/results/matrixTable.columns.title
 msgid "Count"
 msgstr "计数"
 
 #: R/msrv.b.R
+#: mSNP/options/covs.title
+#: mSNP/ui[0][2].label
 msgid "Covariates"
 msgstr "协变量"
 
@@ -1149,6 +1486,10 @@ msgstr "交叉熵损失"
 msgid "Cross-Validation"
 msgstr "交叉验证"
 
+#: mSNP/options/mdrFolds.title
+msgid "Cross-validation folds"
+msgstr ""
+
 #: mLR/options/cv_folds.title
 #: mLR/ui[2]/cv_folds.label
 #: mMLP/options/cv_folds.title
@@ -1169,9 +1510,6 @@ msgid "Cumulative %"
 msgstr "累计%"
 
 #: R/msrv.b.R
-msgid "Cumulative Hazard"
-msgstr "累积风险"
-
 #: mSRV/options/kmType/hazard.title
 msgid "Cumulative hazard"
 msgstr "累积风险"
@@ -1191,6 +1529,12 @@ msgstr "曲线"
 msgid "Cut-off"
 msgstr "截断"
 
+#: mLR/ui[3]/show_roc/show_roc_cut.label
+#: mMLP/ui[3]/show_roc/show_roc_cut.label
+#: mPCA/ui[3][0]/rocPlot/show_roc_cut.label
+msgid "Cut-off thresholds"
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 msgid "CV"
@@ -1199,6 +1543,15 @@ msgstr "交叉验证（CV）"
 #: R/mlr.b.R
 msgid "CV Acc (%)"
 msgstr "交叉验证准确率（%）"
+
+#: mSNP/results/mdrGroup/mdrBestTable.columns.title
+msgid "CVC"
+msgstr ""
+
+#: mSNP/options/ldMetric/Dprime.title
+#: mSNP/results/ldGroup/ldTable.columns.title
+msgid "D'"
+msgstr ""
 
 #: mMF/results/estim/mcar.columns.title
 msgid "D²"
@@ -1260,6 +1613,14 @@ msgstr "因变量至少有两个水平。"
 msgid "Design"
 msgstr "设计"
 
+#: mSNP/options/mdrCellTable.title
+msgid "Detailed cell classification table"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrCellTable.title
+msgid "Detailed Cell Risk Classification"
+msgstr ""
+
 #: mSRV/results/logRankTable.columns.title
 #: mSRV/results/coxSection/coxFitTable.columns.title
 #: mSRV/results/coxSection/coxAssumpTable.columns.title
@@ -1267,9 +1628,11 @@ msgid "df"
 msgstr "自由度"
 
 #: package/analyses/mUI.menuSubgroup
+#: package/analyses/mSNP.menuSubgroup
+#: mSNP/options.menuSubgroup
 #: mUI/options.menuSubgroup
-msgid "Diagnostics"
-msgstr "诊断"
+msgid "Diagnostics & Genetics"
+msgstr ""
 
 #: mUI/options/UImethod/noUI.title
 msgid "Dichotomization (no uncertainty)"
@@ -1295,6 +1658,11 @@ msgstr "距离-距离图"
 msgid "Distribution model"
 msgstr "分布模型"
 
+#: R/msnp.b.R
+#: mSNP/options/geneticModel/dominant.title
+msgid "Dominant"
+msgstr ""
+
 #: mROC/options/dotline.title
 msgid "Dotted line"
 msgstr "虚线"
@@ -1307,14 +1675,22 @@ msgstr "EBIC — 扩展贝叶斯信息准则"
 msgid "EBIC gamma"
 msgstr "EBIC gamma — 扩展贝叶斯信息准则gamma参数"
 
+#: R/mpwr.b.R
 #: mPWR/options/calc/es.title
 msgid "Effect size"
 msgstr "效应量"
 
-#: R/mpwr.b.R
 #: mPWR/results/powerTable.columns.title
 msgid "Effect Size"
 msgstr "效应量"
+
+#: R/msnp.b.R
+msgid "Effect size (Beta)"
+msgstr ""
+
+#: mSNP/results/popGroup/popTable.columns.title
+msgid "Effective Alleles (Ne)"
+msgstr ""
 
 #: R/mpca.b.R
 #: mPCA/results/varianceTable.columns.title
@@ -1350,14 +1726,14 @@ msgstr "椭圆"
 msgid "Empirical Squared Mahalanobis Distances"
 msgstr "经验平方马氏距离"
 
+#: mCOR/options/plotMetU/empty.title
+#: mCOR/options/plotMetL/empty.title
+msgid "Empty"
+msgstr ""
+
 #: R/mmf.b.R
 msgid "Empty data table"
 msgstr "空数据表"
-
-#: mCOR/options/plotMetU/empty.title
-#: mCOR/options/plotMetL/empty.title
-msgid "Emtpy"
-msgstr "空的"
 
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/equivalent.title
@@ -1410,9 +1786,56 @@ msgstr "MAR 解释器评估"
 msgid "Events"
 msgstr "事件数"
 
+#: mSNP/options/ternaryRegion/7.title
+msgid "Exact autosomal (7)"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/4.title
+msgid "Exact female (4)"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/2.title
+msgid "Exact joint (2)"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/6.title
+msgid "Exact joint test (6)"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "Exact p"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "Exact p-adj"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "Exp AA"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "Exp AB"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "Exp BB"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Expected"
+msgstr ""
+
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Expected Influence"
 msgstr "预期影响"
+
+#: R/msnp.b.R
+msgid "Expected p-value (-log10)"
+msgstr ""
 
 #: mMF/results/estim/mars.columns.title
 #: mMF/results/estim/fMARtab.template.columns.title
@@ -1425,6 +1848,10 @@ msgstr "解释变量"
 #: mPCA/options.menuSubgroup
 msgid "Exploratory & Factor Analysis"
 msgstr "探索性与因子分析"
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "F_IS"
+msgstr ""
 
 #: R/mmlp.b.R
 msgid "F1-Score"
@@ -1456,6 +1883,10 @@ msgstr "因子载荷表"
 #: mMLP/ui[0][2].label
 msgid "Factors (Categorical Predictors)"
 msgstr "因子（分类预测变量）"
+
+#: R/msnp.b.R
+msgid "Failed QC"
+msgstr ""
 
 #: mLR/options/method.title
 #: mLR/ui[1]/method.label
@@ -1502,6 +1933,7 @@ msgstr "比值比森林图"
 
 #: mLR/options/showForest.title
 #: mLR/ui[3]/showForest.label
+#: mSNP/options/assocForest.title
 msgid "Forest plot of Odds Ratios"
 msgstr "比值比森林图"
 
@@ -1513,9 +1945,74 @@ msgstr "向前法（AIC）"
 msgid "Forward Stepwise Selection (AIC)"
 msgstr "向前逐步选择法（AIC）"
 
+#: mSNP/options/freqPct.title
+msgid "Frequencies as percentages (%)"
+msgstr ""
+
+#: mSNP/ui[1].label
+msgid "Frequency Tables"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Full dataset used in analysis"
 msgstr "分析中使用的完整数据集"
+
+#: mSNP/results/assocGroup/assocTable.title
+msgid "Genetic Association Analysis"
+msgstr ""
+
+#: mSNP/options/geneticModel.title
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "Genetic model"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Genetic model:"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/groupAnalysisTable.columns.title
+msgid "Genotype"
+msgstr ""
+
+#: mSNP/options/groupTable.title
+msgid "Genotype and allele analysis by groups"
+msgstr ""
+
+#: mSNP/results/hweGroup/freqTable.title
+msgid "Genotype and Allele Frequencies"
+msgstr ""
+
+#: mSNP/options/barPlot.title
+#: mSNP/results/hweGroup/barPlot.title
+msgid "Genotype barplot (Observed vs Expected)"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Genotype Means (Mean ± SD)"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Genotype N"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Genotype test"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrCellTable.columns.title
+msgid "Genotypes"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "Genotypes Cases"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "Genotypes Controls"
+msgstr ""
 
 #: package.description
 msgid ""
@@ -1523,9 +2020,7 @@ msgid ""
 "cluster tree of correlating variables, multifactor adaptive correlation "
 "matrix, multidimensional ROC classification curves, missing data estimation "
 "and imputation, outliers identification and removal etc."
-msgstr ""
-"主流数据分析方法功能的图形化扩展：相关变量聚类树、多因子自适应相关矩阵、多维"
-"ROC分类曲线、缺失数据估计与插补、异常值识别与剔除等。"
+msgstr "主流数据分析方法功能的图形化扩展：相关变量聚类树、多因子自适应相关矩阵、多维ROC分类曲线、缺失数据估计与插补、异常值识别与剔除等。"
 
 #: mCOR/options/netMethod/glasso.title
 msgid "Graphical Lasso (GLASSO)"
@@ -1534,6 +2029,8 @@ msgstr "图形Lasso（GLASSO）"
 #: R/mout.b.R
 #: mMOUT/results/stat.columns.title
 #: mMOUT/results/oind.columns.title
+#: mSNP/options/group.title
+#: mSNP/ui[0][3].label
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "Group"
@@ -1544,9 +2041,7 @@ msgid ""
 "Group '{grp}': Robust MCD covariance estimation failed (possibly due to "
 "small sample size or collinearity). Classic Mahalanobis distance was used "
 "instead."
-msgstr ""
-"组“{grp}”：稳健MCD协方差估计失败（可能由于样本量过小或共线性）。已改用经典马"
-"氏距离。"
+msgstr "组“{grp}”：稳健MCD协方差估计失败（可能由于样本量过小或共线性）。已改用经典马氏距离。"
 
 #: mSRV/ui[3].label
 msgid "Group Comparison"
@@ -1577,6 +2072,25 @@ msgstr "分组变量"
 msgid "Groups"
 msgstr "组别"
 
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "H(exp)"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "H(obs)"
+msgstr ""
+
+#: mSNP/ui[2].label
+#: mSNP/results/hweGroup.title
+msgid "Hardy-Weinberg Equilibrium (HWE) Analysis"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.title
+msgid "Hardy-Weinberg Equilibrium Statistical Tests"
+msgstr ""
+
 #: R/mpwr.b.R
 #: R/msrv.b.R
 msgid "Hazard Ratio"
@@ -1593,6 +2107,10 @@ msgstr "风险比（95%置信区间）"
 #: package/datasets/HIROCclassification.description
 msgid "Healthy/Ill ROC Classification demonstration"
 msgstr "健康/患病 ROC 分类演示"
+
+#: mSNP/options/ldMetric.title
+msgid "Heatmap metric"
+msgstr ""
 
 #: package/datasets/HIROCclassification.name
 msgid "HI ROC classification"
@@ -1633,6 +2151,10 @@ msgstr "由于相关矩阵包含缺失（NA/NaN）值，无法进行层次聚类
 msgid "Hierarchical clustering tree"
 msgstr "层次聚类树"
 
+#: R/msnp.b.R
+msgid "High Risk"
+msgstr ""
+
 #: mCOR/options/adjust/hochberg.title
 msgid "Hochberg (1988)"
 msgstr "Hochberg (1988)"
@@ -1672,6 +2194,10 @@ msgstr "留出法验证划分"
 msgid "Hold-out Validation Split (%)"
 msgstr "留出法验证划分比例（%）"
 
+#: mSNP/options/adjust/holm.title
+msgid "Holm"
+msgstr ""
+
 #: mCOR/options/adjust/holm.title
 msgid "Holm (1979)"
 msgstr "Holm (1979)"
@@ -1683,6 +2209,22 @@ msgstr "Hommel (1988)"
 #: mCOR/options/glassoHub.title
 msgid "Hub markers table"
 msgstr "枢纽标志物表"
+
+#: R/msnp.b.R
+msgid "HWE compliant"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "HWE deviation"
+msgstr ""
+
+#: mSNP/results/qcGroup/qcTable.columns.title
+msgid "HWE p-value (Controls)"
+msgstr ""
+
+#: mSNP/options/hwTests.title
+msgid "HWE statistical tests"
+msgstr ""
 
 #: mCOR/options/hyp.title
 msgid "Hypothesis"
@@ -1707,6 +2249,10 @@ msgstr "若至少有一个MAR的p<sub>值</sub>不显著，且MCAR的p<sub>值</
 #: R/mmf.b.R
 msgid "imp"
 msgstr "imp"
+
+#: R/mmf.b.R
+msgid "Imputation failed: {}"
+msgstr ""
 
 #: R/mmf.b.R
 msgid "Imputation model predictor"
@@ -1778,6 +2324,10 @@ msgstr "初始权重范围"
 msgid "Input Layer"
 msgstr "输入层"
 
+#: R/msnp.b.R
+msgid "Interaction Order"
+msgstr ""
+
 #: mCOR/options/clustMat.title
 #: mCOR/results/rplots.title
 msgid "Intercluster Matrices"
@@ -1833,6 +2383,7 @@ msgstr "四分位距 Tukey 围栏"
 #: package/analyses/mLR.menuGroup
 #: package/analyses/mSRV.menuGroup
 #: package/analyses/mPCA.menuGroup
+#: package/analyses/mSNP.menuGroup
 #: mCOR/options.menuGroup
 #: mLR/options.menuGroup
 #: mMF/options.menuGroup
@@ -1842,6 +2393,7 @@ msgstr "四分位距 Tukey 围栏"
 #: mPCA/options.menuGroup
 #: mPWR/options.menuSubgroup
 #: mROC/options.menuGroup
+#: mSNP/options.menuGroup
 #: mSRV/options.menuGroup
 #: mUI/options.menuGroup
 msgid "jYS"
@@ -1944,6 +2496,18 @@ msgstr "LASSO ({penalty})"
 msgid "LASSO L1 Regularization"
 msgstr "LASSO L1正则化"
 
+#: mSNP/results/ldGroup/ldHeatmap.title
+msgid "LD Heatmap"
+msgstr ""
+
+#: mSNP/options/ldHeatmap.title
+msgid "LD heatmap (r² / D' triangular plot)"
+msgstr ""
+
+#: mSNP/options/ldTable.title
+msgid "LD metrics table"
+msgstr ""
+
 #: mMLP/options/show_curve.title
 msgid "Learning Curve"
 msgstr "学习曲线"
@@ -1971,6 +2535,19 @@ msgstr "线宽"
 msgid "Linear Regression (F-Test)"
 msgstr "线性回归（F检验"
 
+#: mSNP/options/ldEnable.title
+msgid "Linkage Disequilibrium (LD) analysis"
+msgstr ""
+
+#: mSNP/ui[9].label
+#: mSNP/results/ldGroup.title
+msgid "Linkage Disequilibrium (LD) Analysis"
+msgstr ""
+
+#: mSNP/results/ldGroup/ldTable.title
+msgid "Linkage Disequilibrium (LD) Table"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Loading"
 msgstr "载荷"
@@ -1986,6 +2563,11 @@ msgstr "对数尺度"
 #: mLR/options/forestLog.title
 msgid "Log scale for Odds Ratios"
 msgstr "比值比对数尺度"
+
+#: R/msnp.b.R
+#: mSNP/options/geneticModel/log-additive.title
+msgid "Log-additive"
+msgstr ""
 
 #: mSRV/results/logRankTable.title
 msgid "Log-rank Test (Group Comparison)"
@@ -2038,9 +2620,11 @@ msgstr "逻辑斯谛回归预测概率"
 msgid ""
 "Logistic Regression with feature selection. Note that cross-validation fold "
 "partitioning uses a hardcoded random seed (42) for reproducibility."
+msgstr "带特征选择的逻辑斯谛回归。注意，交叉验证折次划分使用固定随机种子（42）以确保结果可复现。"
+
+#: R/msnp.b.R
+msgid "Low Risk"
 msgstr ""
-"带特征选择的逻辑斯谛回归。注意，交叉验证折次划分使用固定随机种子（42）以确保"
-"结果可复现。"
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
@@ -2071,6 +2655,35 @@ msgstr "LR-"
 msgid "LR+"
 msgstr "LR+"
 
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "LRT p"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "LRT p-adj"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "LRT Stat"
+msgstr ""
+
+#: mSNP/results/qcGroup/qcTable.columns.title
+#: mSNP/results/popGroup/popTable.columns.title
+msgid "MAF"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "MAF is below threshold"
+msgstr ""
+
+#: mSNP/options/ternaryShowMAF.title
+msgid "MAF threshold boundary lines"
+msgstr ""
+
+#: mSNP/options/mafThreshold.title
+msgid "MAF threshold for warnings"
+msgstr ""
+
 #: R/mlr.b.R
 msgid "Manual"
 msgstr "手动"
@@ -2100,13 +2713,51 @@ msgstr "MAR 分类表"
 msgid "Mark significance *<0.05, **<0.01, ***<0.001"
 msgstr "标记的显著性水平 *<0.05, **<0.01, ***<0.001"
 
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+#: mSNP/results/hweGroup/hwTable.columns.title
+#: mSNP/results/assocGroup/assocTable.columns.title
+#: mSNP/results/qcGroup/qcTable.columns.title
+#: mSNP/results/popGroup/popTable.columns.title
+msgid "Marker"
+msgstr ""
+
+#: mSNP/results/ldGroup/ldTable.columns.title
+msgid "Marker 1"
+msgstr ""
+
+#: mSNP/results/ldGroup/ldTable.columns.title
+msgid "Marker 2"
+msgstr ""
+
+#: mSNP/results/popGroup/popTable.title
+msgid "Marker Informative Metrics"
+msgstr ""
+
+#: mSNP/options/vars.title
+#: mSNP/ui[0][0].label
+msgid "Markers"
+msgstr ""
+
+#: mSNP/options/xLinked.title
+msgid "Markers are X-linked"
+msgstr ""
+
 #: mLR/results/formulaHtml.title
 msgid "Mathematical Model Formula"
 msgstr "数学模型公式"
 
+#: mLR/ui[3]/show_formula.label
+msgid "Mathematical model formula"
+msgstr ""
+
 #: R/mcor.b.R
 msgid "Matrix #{i}"
 msgstr "矩阵 #{i}"
+
+#: mSNP/options/mdrOrder.title
+msgid "Max interaction order"
+msgstr ""
 
 #: R/mmlp.b.R
 msgid "Max Iterations"
@@ -2141,6 +2792,22 @@ msgstr "MCI=1 ({})"
 #: mCOR/options/clustMet/mcquitty.title
 msgid "McQuitty Linkage (WPGMA)"
 msgstr "McQuitty 联结法 (WPGMA)"
+
+#: mSNP/options/mdrEnable.title
+msgid "MDR analysis"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrHeatmap.title
+msgid "MDR Interaction Heatmap"
+msgstr ""
+
+#: mSNP/options/mdrHeatmap.title
+msgid "MDR interaction heatmap (2-way grid)"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrBarPlot.title
+msgid "MDR Model Performance Comparison"
+msgstr ""
 
 #: R/mout.b.R
 msgid "Mean"
@@ -2196,10 +2863,22 @@ msgstr "至少需要 {minVar} 个变量（完整 + 不完整）"
 msgid "Minimum 2 impute variables are required"
 msgstr "至少需要 2 个插补变量"
 
+#: mSNP/options/qcCallRate.title
+msgid "Minimum Call Rate"
+msgstr ""
+
 #: mPWR/options/power.title
 #: mPWR/ui[1]/power.label
 msgid "Minimum desired power"
 msgstr "最小期望功效"
+
+#: mSNP/options/qcHwe.title
+msgid "Minimum HWE p-value in controls"
+msgstr ""
+
+#: mSNP/options/qcMaf.title
+msgid "Minimum MAF"
+msgstr ""
 
 #: mMF/options/alg/mF.title
 msgid "missForest (2012)"
@@ -2283,9 +2962,7 @@ msgstr "多层感知机网络拓扑结构"
 msgid ""
 "MLP Neural Network Classifier. Note that weight initialization and data "
 "partitioning use a hardcoded random seed (42) for reproducibility."
-msgstr ""
-"MLP神经网络分类器。注意，权重初始化和数据划分使用固定随机种子（42）以确保结果"
-"可复现。"
+msgstr "MLP神经网络分类器。注意，权重初始化和数据划分使用固定随机种子（42）以确保结果可复现。"
 
 #: mLR/results/coeffTable.title
 msgid "Model Coefficients (Post-Selection / Refitted Model)"
@@ -2302,6 +2979,10 @@ msgstr "模型信息与准确率"
 #: mMLP/ui[1].label
 msgid "Model Parameters"
 msgstr "模型参数"
+
+#: mSNP/options/mdrBarPlot.title
+msgid "Model performance barplot"
+msgstr ""
 
 #: mOUT/options/outlcheck/mZS.title
 msgid "Modified Z-score (Hampel filter)"
@@ -2323,6 +3004,11 @@ msgstr "MSE — 均方误差"
 msgid "Multiclass ROC Layout"
 msgstr "多分类ROC布局"
 
+#: mSNP/ui[7].label
+#: mSNP/results/mdrGroup.title
+msgid "Multifactor Dimensionality Reduction (MDR)"
+msgstr ""
+
 #: R/mlr.b.R
 msgid "Multinomial Log-odds Equations"
 msgstr "多项对数优势方程"
@@ -2334,6 +3020,11 @@ msgstr "多重比较校正"
 #: mMF/options/imputeOV.title
 msgid "Multiple imputation for missing data"
 msgstr "缺失数据多重插补"
+
+#: mSNP/options/adjust.title
+#: mSNP/ui[11].label
+msgid "Multiple testing correction"
+msgstr ""
 
 #: package/analyses/mMOUT.title
 #: package/analyses/mMOUT.menuTitle
@@ -2439,9 +3130,18 @@ msgstr "非参数"
 #: mROC/options/theBest/none.title
 #: mROC/options/cmpDeLong/none.title
 #: mROC/options/palBrewer/none.title
+#: mSNP/options/mafThreshold/none.title
+#: mSNP/options/adjust/none.title
+#: mSNP/options/qcCallRate/none.title
+#: mSNP/options/qcMaf/none.title
+#: mSNP/options/qcHwe/none.title
 #: mSRV/options/palBrewer/none.title
 msgid "None"
 msgstr "无"
+
+#: mSNP/options/ternaryRegion/0.title
+msgid "None (0)"
+msgstr ""
 
 #: R/mmout.b.R
 msgid "Normal"
@@ -2457,6 +3157,16 @@ msgid ""
 "Not enough events or survivors at the selected analysis time point t to "
 "perform ROC analysis."
 msgstr "所选分析时间点t的事件数或幸存者数不足，无法进行ROC分析。"
+
+#: R/msnp.b.R
+msgid ""
+"Note: Allelic and Genotypic models are unadjusted. Logistic regression is "
+"fitted for other models."
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Note: Linear regression is adjusted for selected covariates."
+msgstr ""
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "NPV"
@@ -2504,6 +3214,10 @@ msgstr "事件数"
 msgid "Number of factor levels/groups"
 msgstr "因子水平数 / 组数"
 
+#: mSNP/options/nPermMDR.title
+msgid "Number of MDR permutations"
+msgstr ""
+
 #: R/mmf.b.R
 msgid "Number of missing entries"
 msgstr "缺失条目数"
@@ -2516,6 +3230,10 @@ msgstr "每个变量的缺失条目数"
 msgid "Number of patterns"
 msgstr "模式数量"
 
+#: mSNP/options/nPerm.title
+msgid "Number of permutations"
+msgstr ""
+
 #: mMF/options/ntree.title
 msgid "Number of trees to grow in each forest"
 msgstr "每片森林中生长的树的数量"
@@ -2525,18 +3243,51 @@ msgstr "每片森林中生长的树的数量"
 msgid "Object score distribution with 95% ellipses"
 msgstr "对象得分分布（含95%置信椭圆）"
 
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "Obs AA"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "Obs AB"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "Obs BB"
+msgstr ""
+
 #: R/mmf.b.R
-msgid "observed"
-msgstr "观测值"
+#: R/msnp.b.R
+msgid "Observed"
+msgstr ""
 
 #: R/mpca.b.R
 msgid "Observed Data"
 msgstr "观测数据"
 
+#: R/msnp.b.R
+msgid "Observed p-value (-log10)"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "Odds Ratio"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Odds Ratio (log scale)"
+msgstr ""
+
 #: R/mlr.b.R
 #: mLR/results/coeffTable.columns.title
 msgid "Odds Ratio (OR)"
 msgstr "比值比（OR）"
+
+#: mSNP/results/assocGroup/assocForest.title
+msgid "Odds Ratio Forest Plot"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/options/design/one.sample.title
@@ -2568,9 +3319,31 @@ msgstr "单尾"
 msgid "OOB errors table"
 msgstr "OOB误差表"
 
+#: R/msnp.b.R
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "OR Lower 95% CI"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "OR Upper 95% CI"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrBestTable.columns.title
+msgid "Order"
+msgstr ""
+
 #: mCOR/options/plotOrder/original.title
 msgid "Original"
 msgstr "原始"
+
+#: mSNP/options/outcome.title
+msgid "Outcome (Case/Control)"
+msgstr ""
+
+#: mSNP/ui[0][1].label
+msgid "Outcome Variable (Case/Control)"
+msgstr ""
 
 #: R/mmf.b.R
 msgid "OutFlux**"
@@ -2653,14 +3426,34 @@ msgstr "输出层"
 msgid "Outputs & Evaluation"
 msgstr "输出和评价"
 
+#: R/msnp.b.R
+#: mSNP/options/geneticModel/overdominant.title
+msgid "Overdominant"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "p"
+msgstr ""
+
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "p (A)"
+msgstr ""
+
 #: mROC/results/rocTable.columns.title
 msgid "p (DeLong)"
 msgstr "p值（DeLong法）"
+
+#: mSNP/results/assocGroup/assocTable.columns.title
+msgid "p-adjusted"
+msgstr ""
 
 #: mCOR/options/pval.title
 #: mCOR/results/matrix.columns.content
 #: mCOR/results/glassoGroup/glassoTable.columns.content
 #: mLR/results/coeffTable.columns.title
+#: mSNP/results/assocGroup/assocTable.columns.title
+#: mSNP/results/ldGroup/ldTable.columns.title
 msgid "p-value"
 msgstr "p 值"
 
@@ -2784,6 +3577,14 @@ msgstr "每模式"
 msgid "Percentage (%)"
 msgstr "百分比（%）"
 
+#: mSNP/options/hwPerm.title
+msgid "Perform permutation test"
+msgstr ""
+
+#: mSNP/options/mdrPermTest.title
+msgid "Perform permutation testing"
+msgstr ""
+
 #: mMLP/results/statsTable.title
 msgid "Performance Statistics"
 msgstr "性能统计量"
@@ -2796,9 +3597,27 @@ msgstr "置换检验"
 msgid "Permutation Importance"
 msgstr "置换重要性"
 
+#: mSNP/results/hweGroup/hwTable.columns.title
+#: mSNP/results/mdrGroup/mdrBestTable.columns.title
+msgid "Permutation p"
+msgstr ""
+
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "Permutation p-adj"
+msgstr ""
+
 #: mMF/results/imput/errors.columns.title
 msgid "PFC"
 msgstr "PFC"
+
+#: mSNP/ui[3].label
+#: mSNP/results/assocGroup.title
+msgid "Phenotype Association Tests"
+msgstr ""
+
+#: mSNP/results/popGroup/popTable.columns.title
+msgid "PIC"
+msgstr ""
 
 #: mCOR/options/plotMetU/pie.title
 #: mCOR/options/plotMetL/pie.title
@@ -2859,9 +3678,36 @@ msgstr "图表类型"
 msgid "Plots"
 msgstr "绘图"
 
+#: mSNP/options/prsOutput.title
+#: mSNP/results/prsOutput.title
+msgid "Polygenic Risk Score"
+msgstr ""
+
 #: mROC/options/polygon.title
 msgid "Polygon"
 msgstr "多边形"
+
+#: mSNP/results/hweGroup/groupAnalysisTable.columns.title
+msgid "Polymorphism"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Polymorphism test"
+msgstr ""
+
+#: mSNP/results/hweGroup/freqTable.columns.title
+#: mSNP/results/hweGroup/hwTable.columns.title
+msgid "Population"
+msgstr ""
+
+#: mSNP/options/popMetrics.title
+msgid "Population genetic metrics"
+msgstr ""
+
+#: mSNP/ui[5].label
+#: mSNP/results/popGroup.title
+msgid "Population genetics metrics"
+msgstr ""
 
 #: R/mmlp.b.R
 msgid "Positive Weight"
@@ -3001,9 +3847,7 @@ msgstr "主成分分析（PCA）演示"
 msgid ""
 "Principal Component Analysis (PCA). Note that parallel analysis and "
 "cross-validation use a hardcoded random seed (42) for reproducibility."
-msgstr ""
-"主成分分析（PCA）。注意，平行分析和交叉验证使用固定随机种子（42）以确保结果可"
-"复现。"
+msgstr "主成分分析（PCA）。注意，平行分析和交叉验证使用固定随机种子（42）以确保结果可复现。"
 
 #: R/mlr.b.R
 msgid "Probability Model"
@@ -3031,6 +3875,14 @@ msgstr "建议决策"
 msgid "provide a correlation matrix plot."
 msgstr "提供相关矩阵图。"
 
+#: mSNP/options/manhattanPlot.title
+msgid "Pseudo-Manhattan plot"
+msgstr ""
+
+#: mSNP/results/assocGroup/manhattanPlot.title
+msgid "Pseudo-Manhattan Plot of Association p-values"
+msgstr ""
+
 #: mPWR/options/calc.title
 msgid "Purpose of Calculation"
 msgstr "计算目的"
@@ -3039,9 +3891,35 @@ msgstr "计算目的"
 msgid "PVU"
 msgstr "PVU — 未解释方差比例"
 
+#: R/msnp.b.R
+#: mSNP/results/hweGroup/freqTable.columns.title
+msgid "q (B)"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Q-Q plot for HWE"
+msgstr ""
+
+#: mSNP/options/qqPlot.title
+#: mSNP/results/hweGroup/qqPlot.title
+msgid "Q-Q plot of HWE p-values"
+msgstr ""
+
 #: mSRV/options/palBrewer.title
 msgid "Qualitative Palette"
 msgstr "定性调色板"
+
+#: mSNP/results/qcGroup.title
+msgid "Quality Control (QC) Analysis"
+msgstr ""
+
+#: mSNP/ui[6].label
+msgid "Quality Control (QC) Filters"
+msgstr ""
+
+#: mSNP/results/qcGroup/qcTable.title
+msgid "Quality Control Summary"
+msgstr ""
 
 #: mPCA/results/cos2Table.title
 msgid "Quality of representation (Cos²)"
@@ -3059,14 +3937,28 @@ msgstr "表征质量（Cos²）热图"
 msgid "Quality of representation (Cos²) table"
 msgstr "表征质量（Cos²）表"
 
+#: mSNP/options/ldMetric/r2.title
+#: mSNP/results/ldGroup/ldTable.columns.title
+msgid "r²"
+msgstr ""
+
 #: mPWR/options/r2_predictor.title
 #: mPWR/ui[1]/r2_predictor.label
 msgid "R² of predictor X with other covariates"
 msgstr "预测变量 X 与其他协变量的 R²（决定系数）"
 
+#: mSNP/options/mdrSeed.title
+msgid "Random seed"
+msgstr ""
+
 #: mMLP/results/importanceTable.columns.title
 msgid "Rank"
 msgstr "秩"
+
+#: R/msnp.b.R
+#: mSNP/options/geneticModel/recessive.title
+msgid "Recessive"
+msgstr ""
 
 #: mLR/options/refLevel.title
 #: mLR/ui[0][0]/refLevel.label
@@ -3169,6 +4061,14 @@ msgstr "可重复的随机数生成（RNG）结果"
 msgid "Right"
 msgstr "右"
 
+#: R/msnp.b.R
+msgid "Risk Class"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrCellTable.columns.title
+msgid "Risk Classification"
+msgstr ""
+
 #: mSRV/options/kmTable.title
 msgid "Risk-at-time Table"
 msgstr "时间点风险表"
@@ -3206,6 +4106,10 @@ msgstr "ROC 分析"
 msgid "ROC Analysis Comparison"
 msgstr "ROC 分析比较"
 
+#: mLR/ui[3]/show_roc.label
+msgid "ROC analysis curves"
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 msgid "ROC Analysis for {class}"
@@ -3242,20 +4146,17 @@ msgstr "ROC比较"
 msgid "ROC Curve Comparison"
 msgstr "ROC曲线比较"
 
+#: R/mlr.b.R
+#: R/mpca.b.R
 #: mUI/options/isROC.title
 #: mUI/results/plotsROC.title
 msgid "ROC curves"
 msgstr "ROC曲线"
 
-#: R/mlr.b.R
-#: R/mpca.b.R
-msgid "ROC Curves"
-msgstr "ROC曲线"
-
 #: package/datasets/BCModelsROCEstimation.description
 #: package/datasets/CHDModelsROCEstimation.description
-msgid "ROC estimation for binomial logistis models demonstration"
-msgstr "二项Logistic模型的ROC估计演示"
+msgid "ROC estimation for binomial logistic models demonstration"
+msgstr ""
 
 #: mROC/ui[2].label
 msgid "ROC graphs"
@@ -3275,6 +4176,12 @@ msgstr "ROC定量评估"
 #: mROC/results/rocTable.title
 msgid "ROC Results"
 msgstr "ROC结果"
+
+#: mLR/ui[3]/show_roc/show_roc_table.label
+#: mMLP/ui[3]/show_roc/show_roc_table.label
+#: mPCA/ui[3][0]/rocPlot/show_roc_table.label
+msgid "ROC table"
+msgstr ""
 
 #: mROC/options/showTable.title
 #: mROC/ui[1].label
@@ -3463,17 +4370,26 @@ msgstr "组2"
 msgid "Set3"
 msgstr "组3"
 
+#: mSNP/options/gender.title
+msgid "Sex variable"
+msgstr ""
+
+#: mSNP/ui[0][4].label
+msgid "Sex Variable (for X-linked HWE)"
+msgstr ""
+
 #: mCOR/options/plotMetU/shade.title
 #: mCOR/options/plotMetL/shade.title
 msgid "Shade"
 msgstr "阴影"
 
+#: mSNP/results/popGroup/popTable.columns.title
+msgid "Shannon Index (I)"
+msgstr ""
+
 #: mLR/options/show_roc_cut.title
-#: mLR/ui[3]/show_roc/show_roc_cut.label
 #: mMLP/options/show_roc_cut.title
-#: mMLP/ui[3]/show_roc/show_roc_cut.label
 #: mPCA/options/show_roc_cut.title
-#: mPCA/ui[3][0]/rocPlot/show_roc_cut.label
 #: mUI/options/show_roc_cut.title
 msgid "Show Cut-off Thresholds"
 msgstr "显示截断阈值"
@@ -3481,10 +4397,6 @@ msgstr "显示截断阈值"
 #: mCOR/options/glassoLabels.title
 msgid "Show edge labels"
 msgstr "显示边标签"
-
-#: mLR/ui[3]/show_formula.label
-msgid "Show Mathematical Model Formula"
-msgstr "显示数学模型公式"
 
 #: mLR/options/show_formula.title
 msgid "Show Model Formula"
@@ -3494,16 +4406,9 @@ msgstr "显示模型公式"
 msgid "Show outliers indices table"
 msgstr "显示异常值索引表"
 
-#: mLR/ui[3]/show_roc.label
-msgid "Show ROC Analysis curves"
-msgstr "显示ROC分析曲线"
-
 #: mLR/options/show_roc_table.title
-#: mLR/ui[3]/show_roc/show_roc_table.label
 #: mMLP/options/show_roc_table.title
-#: mMLP/ui[3]/show_roc/show_roc_table.label
 #: mPCA/options/show_roc_table.title
-#: mPCA/ui[3][0]/rocPlot/show_roc_table.label
 #: mUI/options/show_roc_table.title
 msgid "Show ROC Table"
 msgstr "显示ROC表"
@@ -3519,8 +4424,13 @@ msgid "Significance"
 msgstr "显著性"
 
 #: mMOUT/options/alpha.title
+#: mSNP/options/alpha.title
 msgid "Significance level (alpha)"
 msgstr "显著性水平（alpha）"
+
+#: R/msnp.b.R
+msgid "Significant HWE deviation"
+msgstr ""
 
 #: R/mcor.b.R
 msgid "Simultaneous multiple correlation comparisons using {n} method"
@@ -3530,9 +4440,25 @@ msgstr "使用{n}方法进行同时多重相关比较"
 msgid "Single Linkage"
 msgstr "单一链接"
 
+#: package/analyses/mSNP.title
+#: package/analyses/mSNP.menuTitle
+#: mSNP/options.title
+#: mSNP/ui.title
+#: mSNP/results.title
+msgid "Single Nucleotide Polymorphism"
+msgstr ""
+
 #: mMF/options/anghead.title
 msgid "Slanted Titles"
 msgstr "斜标题"
+
+#: package/datasets/SNPandHWEanalysis.name
+msgid "SNP and HWE analysis"
+msgstr ""
+
+#: package/datasets/SNPandHWEanalysis.description
+msgid "SNP Association and Hardy-Weinberg Equilibrium analysis demonstration"
+msgstr ""
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "SNPV"
@@ -3603,9 +4529,13 @@ msgstr "精子畸形指数ROC分类演示"
 msgid "Split curves"
 msgstr "拆分曲线"
 
+#: mSNP/options/hweSplitOutcome.title
+msgid "Split HWE by outcome"
+msgstr ""
+
 #: mROC/results/splots.title
-msgid "Splitted ROC by predictors"
-msgstr "按预测变量拆分ROC曲线"
+msgid "Split ROC by predictors"
+msgstr ""
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "SPPV"
@@ -3627,6 +4557,10 @@ msgstr "标准化Beta系数"
 #: mSRV/results/coxSection/coxFitTable.columns.title
 msgid "Statistic"
 msgstr "统计量"
+
+#: mSNP/results/qcGroup/qcTable.columns.title
+msgid "Status"
+msgstr ""
 
 #: mSRV/options/status.title
 #: mSRV/ui[0][1].label
@@ -3679,18 +4613,13 @@ msgstr "生存分析（Kaplan-Meier与Cox回归）演示"
 msgid ""
 "Survival Analysis including Kaplan-Meier curves, log-rank tests, Cox "
 "proportional hazards regression, and time-dependent ROC curves."
-msgstr ""
-"生存分析，包括Kaplan-Meier曲线、对数秩检验、Cox比例风险回归以及时间依赖性ROC"
-"曲线。"
+msgstr "生存分析，包括Kaplan-Meier曲线、对数秩检验、Cox比例风险回归以及时间依赖性ROC曲线。"
 
 #: package/datasets/SurvivalAnalysisKaggle.name
 msgid "Survival Analysis Kaggle"
 msgstr "Kaggle生存分析"
 
 #: R/msrv.b.R
-msgid "Survival Probability"
-msgstr "生存概率"
-
 #: mSRV/options/kmType/survival.title
 msgid "Survival probability"
 msgstr "生存概率"
@@ -3712,6 +4641,11 @@ msgstr "尾数"
 msgid "Tanh"
 msgstr "Tanh 函数"
 
+#: mSNP/options/ternaryPlot.title
+#: mSNP/results/hweGroup/ternaryPlot.title
+msgid "Ternary diagram (de Finetti)"
+msgstr ""
+
 #: mSRV/results/coxSection/coxFitTable.columns.title
 msgid "Test"
 msgstr "检验"
@@ -3728,6 +4662,14 @@ msgstr "检验比例风险假设"
 #: mPWR/ui[1]/k_tested.label
 msgid "Tested predictors"
 msgstr "已检验的预测变量"
+
+#: R/msnp.b.R
+msgid "Testing"
+msgstr ""
+
+#: mSNP/results/mdrGroup/mdrBestTable.columns.title
+msgid "Testing BA"
+msgstr ""
 
 #: R/mpwr.b.R
 msgid "The 'pwrss' package is not installed. Please install it in R."
@@ -3825,6 +4767,10 @@ msgstr "时间依赖性ROC结果"
 msgid "Too few observations after removing missing values (minimum 5 required)."
 msgstr "剔除缺失值后观测数过少（至少需要5个）。"
 
+#: R/msnp.b.R
+msgid "Total"
+msgstr ""
+
 #: R/mmf.b.R
 msgid "Total number of missing entries {}"
 msgstr "缺失条目总数为{}"
@@ -3850,6 +4796,7 @@ msgstr "训练AUC"
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/msnp.b.R
 #: mMLP/results/statsTable.columns.title
 msgid "Training"
 msgstr "训练"
@@ -3863,6 +4810,14 @@ msgstr "训练（AUC ="
 #: R/mmlp.b.R
 msgid "Training Accuracy (%)"
 msgstr "训练准确率（%）"
+
+#: mSNP/results/mdrGroup/mdrBestTable.columns.title
+msgid "Training BA"
+msgstr ""
+
+#: mSNP/options/assocForestTrunc.title
+msgid "Truncate large confidence intervals"
+msgstr ""
 
 #: mCOR/options/glassoType.title
 msgid "Tuning parameter"
@@ -3886,6 +4841,10 @@ msgstr "两图ROC曲线"
 msgid "two-tailed"
 msgstr "双侧"
 
+#: R/msnp.b.R
+msgid "Type"
+msgstr ""
+
 #: mPWR/options/plot_err.title
 #: mPWR/results/plot.title
 msgid "Type 1 and Type 2 Error Plots"
@@ -3895,9 +4854,9 @@ msgstr "第Ⅰ类错误与第Ⅱ类错误图"
 msgid "UI"
 msgstr "不确定区间"
 
-#: package/datasets/UIforbinomiallogistismodels.name
-msgid "UI for binomial logistis models"
-msgstr "二项Logistic模型的不确定区间"
+#: package/datasets/UIforbinomiallogisticmodels.name
+msgid "UI for binomial logistic models"
+msgstr ""
 
 #: package/analyses/mUI.title
 #: package/analyses/mUI.menuTitle
@@ -3910,9 +4869,9 @@ msgstr "二项Logistic模型的不确定区间"
 msgid "Uncertain Interval (UI)"
 msgstr "不确定区间（UI）"
 
-#: package/datasets/UIforbinomiallogistismodels.description
-msgid "Uncertain Interval estimation for binomial logistis models"
-msgstr "二项Logistic模型的不确定区间估计"
+#: package/datasets/UIforbinomiallogisticmodels.description
+msgid "Uncertain Interval estimation for binomial logistic models"
+msgstr ""
 
 #: mUI/options/polygon.title
 msgid "Uncertainty interval polygon"
