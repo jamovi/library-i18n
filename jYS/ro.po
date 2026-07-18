@@ -276,8 +276,8 @@ msgstr ""
 
 #: R/msnp.b.R
 msgid ""
-"<b>Expected heterozygosity (H_exp)</b> is the heterozygosity expected under "
-"HWE: H_exp = 2pq. A significant difference between H_obs and H_exp may "
+"<b>Expected heterozygosity (H(exp))</b> is the heterozygosity expected under "
+"HWE: H(exp) = 2pq. A significant difference between H(obs) and H(exp) may "
 "indicate inbreeding, population substructure, or selection."
 msgstr ""
 
@@ -348,6 +348,7 @@ msgid ""
 msgstr ""
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid ""
 "<b>Hold-out Accuracy</b>: classification accuracy on the hold-out validation "
 "dataset."
@@ -356,12 +357,13 @@ msgstr ""
 #: R/msnp.b.R
 msgid ""
 "<b>Inbreeding coefficient (F_IS)</b> measures deviation from HWE: F_IS = 1 - "
-"H_obs / H_exp. <b>F_IS > 0</b> indicates heterozygote deficiency "
+"H(obs) / H(exp). <b>F_IS > 0</b> indicates heterozygote deficiency "
 "(inbreeding), <b>F_IS < 0</b> indicates heterozygote excess (outbreeding), "
 "<b>F_IS = 0</b> indicates Hardy-Weinberg equilibrium."
 msgstr ""
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid ""
 "<b>K-Fold CV Accuracy</b>: average classification accuracy across "
 "cross-validation folds."
@@ -492,6 +494,10 @@ msgstr ""
 msgid "<b>MSE</b> - mean squared error (for Continuous variables);"
 msgstr ""
 
+#: R/mrf.b.R
+msgid "<b>mtry</b>: number of candidate variables randomly sampled at each split."
+msgstr ""
+
 #: R/mmf.b.R
 msgid "<b>N</b> - number of missing values;"
 msgstr ""
@@ -513,6 +519,10 @@ msgstr ""
 msgid "<b>NPV</b> - Negative Predictive Value of the negative class TN/(TN+FN)"
 msgstr ""
 
+#: R/mrf.b.R
+msgid "<b>Number of Trees</b>: total number of decision trees grown in the ensemble."
+msgstr ""
+
 #: R/msnp.b.R
 msgid ""
 "<b>Observed genotype frequencies</b> are the raw counts and proportions of "
@@ -521,8 +531,8 @@ msgstr ""
 
 #: R/msnp.b.R
 msgid ""
-"<b>Observed heterozygosity (H_obs)</b> is the proportion of heterozygous "
-"individuals (AB) in the sample: H_obs = n_AB / N."
+"<b>Observed heterozygosity (H(obs))</b> is the proportion of heterozygous "
+"individuals (AB) in the sample: H(obs) = n_AB / N."
 msgstr ""
 
 #: R/msnp.b.R
@@ -531,6 +541,12 @@ msgid ""
 "allele/genotype and the outcome. <b>OR > 1</b> indicates increased risk, "
 "<b>OR < 1</b> indicates protective effect, <b>OR = 1</b> indicates no "
 "association. The 95% CI that does not cross 1.0 indicates significance."
+msgstr ""
+
+#: R/mrf.b.R
+msgid ""
+"<b>OOB Accuracy</b>: out-of-bag accuracy estimated from bootstrap samples "
+"not used for training each tree."
 msgstr ""
 
 #: R/msnp.b.R
@@ -699,11 +715,13 @@ msgstr ""
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/mroc.b.R
 #: R/msrv.b.R
 #: mLR/options/roc_x/1spec.title
 #: mMLP/options/roc_x/1spec.title
 #: mPCA/options/roc_x/1spec.title
+#: mRF/options/roc_x/1spec.title
 #, fuzzy
 msgid "1 - Specificity"
 msgstr "1 - Specificitate"
@@ -724,6 +742,7 @@ msgstr "10,5"
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/mroc.b.R
 #, fuzzy
 msgid "100 - Specificity (%)"
@@ -767,6 +786,10 @@ msgstr ""
 msgid "95% OR CI Upper"
 msgstr ""
 
+#: R/msnp.b.R
+msgid "A – Allelic, D – Dominant, OD – Overdominant, R – Recessive"
+msgstr ""
+
 #: mCOR/results/matrix.description
 #, fuzzy
 msgid "a correlation matrix table"
@@ -789,6 +812,7 @@ msgstr "Rezultatele analizei puterii a priori"
 #: mLR/options/palBrewer/Accent.title
 #: mMLP/options/palBrewer/Accent.title
 #: mPCA/options/palBrewer/Accent.title
+#: mRF/options/palBrewer/Accent.title
 #: mROC/options/palBrewer/Accent.title
 #: mSRV/options/palBrewer/Accent.title
 #, fuzzy
@@ -803,7 +827,11 @@ msgstr ""
 msgid "Accuracy"
 msgstr ""
 
+#: mLR/results/misclassifiedTable.columns.title
 #: mMLP/results/matrixTable.columns.title
+#: mMLP/results/misclassifiedTable.columns.title
+#: mRF/results/matrixTable.columns.title
+#: mRF/results/misclassifiedTable.columns.title
 msgid "Actual Class"
 msgstr ""
 
@@ -837,6 +865,10 @@ msgstr ""
 msgid "Allele and genotype frequencies"
 msgstr ""
 
+#: R/msnp.b.R
+msgid "Allelic abbreviation"
+msgstr ""
+
 #: mCOR/options/plotOrder/alphabet.title
 #, fuzzy
 msgid "Alphabetical"
@@ -858,7 +890,7 @@ msgstr ""
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/groupAnalysisTable.title
-msgid "Analysis of Alleles and Genotypes by Groups"
+msgid "Analysis of Alleles and Genotypes by Outcome Variable"
 msgstr ""
 
 #: package/analyses/mSNP.description
@@ -868,7 +900,7 @@ msgid ""
 msgstr ""
 
 #: R/msnp.b.R
-msgid "Analysis of Genotypes by Groups"
+msgid "Analysis of Genotypes by Outcome Variable"
 msgstr ""
 
 #: mSRV/options/rocTime.title
@@ -907,10 +939,15 @@ msgstr ""
 #: mMLP/results/rocTable.columns.title
 #: mPCA/results/regTable.columns.title
 #: mPCA/results/rocTable.columns.title
+#: mRF/results/rocTable.columns.title
 #: mROC/results/rocTable.columns.title
 #: mSRV/results/rocSection/rocTable.columns.title
 #: mUI/results/stat/rocTable.columns.title
 msgid "AUC"
+msgstr ""
+
+#: mRF/options/mtry_method/auto.title
+msgid "Auto (sqrt for classification)"
 msgstr ""
 
 #: R/mpca.b.R
@@ -930,6 +967,7 @@ msgstr "Legătură medie (UPGMA)"
 #: mLR/ui[3]/show_roc/roc_unit.label
 #: mMLP/ui[3]/show_roc/roc_unit.label
 #: mPCA/ui[3][0]/rocPlot/roc_unit.label
+#: mRF/ui[3]/show_roc/roc_unit.label
 #, fuzzy
 msgid "Axis Units"
 msgstr "Unități de axă"
@@ -1002,6 +1040,7 @@ msgstr ""
 msgid "Beta Upper 95% CI"
 msgstr ""
 
+#: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Betweenness"
 msgstr ""
@@ -1030,6 +1069,22 @@ msgstr ""
 msgid "Bonferroni (1961)"
 msgstr "Bonferroni (1961)"
 
+#: mCOR/options/glassoBootN.title
+msgid "Bootstrap samples (N)"
+msgstr ""
+
+#: mCOR/options/glassoBootType.title
+msgid "Bootstrap type"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Bootstrapped Edge Weights 95% CI"
+msgstr ""
+
+#: mCOR/options/glassoStability.title
+msgid "Bootstrapped stability analysis"
+msgstr ""
+
 #: mMOUT/options/plotType/both.title
 msgid "Both Plots"
 msgstr ""
@@ -1051,6 +1106,8 @@ msgstr "Diagramă de cutii cu outlieri"
 #: mMLP/ui[3]/show_roc/palBrewer.label
 #: mPCA/options/palBrewer.title
 #: mPCA/ui[3][0]/rocPlot/palBrewer.label
+#: mRF/options/palBrewer.title
+#: mRF/ui[3]/show_roc/palBrewer.label
 #: mROC/options/palBrewer.title
 #, fuzzy
 msgid "Brewer's qualitative palette"
@@ -1080,8 +1137,17 @@ msgid ""
 "approximation. N1 represents the total number of events required."
 msgstr ""
 
+#: R/msnp.b.R
 #: mSNP/results/qcGroup/qcTable.columns.title
 msgid "Call Rate"
+msgstr ""
+
+#: mCOR/options/glassoBootType/casedrop.title
+msgid "Case-dropping (centrality stability)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Case-dropping Centrality Stability Curve"
 msgstr ""
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
@@ -1096,8 +1162,21 @@ msgstr ""
 msgid "CCR"
 msgstr ""
 
+#: R/mcor.b.R
+msgid "Centrality correlation"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Centrality Correlation (r)"
+msgstr ""
+
 #: mCOR/results/glassoGroup/glassoHubTable.title
 msgid "Centrality metrics (hub markers)"
+msgstr ""
+
+#: mCOR/options/glassoCentralityPlot.title
+#: mCOR/results/glassoGroup/glassoCentralityPlot.title
+msgid "Centrality plot"
 msgstr ""
 
 #: mCOR/options/clustMet/centroid.title
@@ -1210,6 +1289,7 @@ msgid "Classical Squared Mahalanobis Distance"
 msgstr ""
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #, fuzzy
 msgid "Classification Accuracy"
 msgstr "Acurateçea clasificării"
@@ -1242,6 +1322,7 @@ msgstr ""
 msgid "Clipping threshold"
 msgstr ""
 
+#: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Closeness"
 msgstr ""
@@ -1315,21 +1396,25 @@ msgid "Combined"
 msgstr ""
 
 #: mMLP/options/multiclass_roc_type/combined.title
+#: mRF/options/multiclass_roc_type/combined.title
 msgid "Combined Plot (Single Axes)"
 msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Combined ROC - Cross-Validation"
 msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Combined ROC - Training"
 msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Combined ROC - Validation"
 msgstr ""
 
@@ -1375,6 +1460,7 @@ msgid "Concordance"
 msgstr "Concordă"
 
 #: mMLP/results/text.title
+#: mRF/results/text.title
 #: mROC/results/text.title
 #, fuzzy
 msgid "Conditions"
@@ -1382,6 +1468,10 @@ msgstr "Condiţii"
 
 #: mLR/results/text.title
 msgid "Conditions & Diagnostics"
+msgstr ""
+
+#: mLR/results/misclassifiedTable.columns.title
+msgid "Confidence"
 msgstr ""
 
 #: mROC/options/ciAUC.title
@@ -1411,6 +1501,8 @@ msgstr ""
 
 #: mMLP/options/show_matrix.title
 #: mMLP/results/matrixTable.title
+#: mRF/options/show_matrix.title
+#: mRF/results/matrixTable.title
 #, fuzzy
 msgid "Confusion Matrix"
 msgstr "Matrice de confuzie"
@@ -1425,6 +1517,10 @@ msgstr ""
 
 #: mSNP/options/polyDf1.title
 msgid "Controversial df for polymorphism"
+msgstr ""
+
+#: package/datasets/RandomForestCHDclassification.description
+msgid "Coronary Heart Disease classification using Random Forest"
 msgstr ""
 
 #: mCOR/options/hyp/corr.title
@@ -1496,6 +1592,7 @@ msgstr ""
 
 #: R/msnp.b.R
 #: mMLP/results/matrixTable.columns.title
+#: mRF/results/matrixTable.columns.title
 msgid "Count"
 msgstr ""
 
@@ -1509,6 +1606,8 @@ msgstr ""
 #: mLR/ui[0][1].label
 #: mMLP/options/covs.title
 #: mMLP/ui[0][1].label
+#: mRF/options/covs.title
+#: mRF/ui[0][1].label
 #, fuzzy
 msgid "Covariates (Continuous Predictors)"
 msgstr "Covariabile (Predictori continui)"
@@ -1542,6 +1641,7 @@ msgid "Cross-Entropy Loss"
 msgstr "Pierdere entropică"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #, fuzzy
 msgid "Cross-Validation"
 msgstr "Validare cross"
@@ -1554,6 +1654,8 @@ msgstr ""
 #: mLR/ui[2]/cv_folds.label
 #: mMLP/options/cv_folds.title
 #: mMLP/ui[2]/cv_folds.label
+#: mRF/options/cv_folds.title
+#: mRF/ui[2]/cv_folds.label
 #, fuzzy
 msgid "Cross-Validation Folds (K)"
 msgstr "Folzi de validare cruzată (K)"
@@ -1564,6 +1666,10 @@ msgstr ""
 
 #: mLR/ui[2]/cv_repeats.label
 msgid "Cross-Validation Repeats (R)"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
+msgid "CS-coefficient (cor = 0.7)"
 msgstr ""
 
 #: mPCA/results/varianceTable.columns.title
@@ -1578,26 +1684,35 @@ msgstr ""
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
 #: mPCA/results/rocTable.columns.title
+#: mRF/results/rocTable.columns.title
 msgid "Curve"
 msgstr ""
 
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
 #: mPCA/results/rocTable.columns.title
+#: mRF/results/rocTable.columns.title
 #: mROC/results/rocTable.columns.title
 #: mSRV/results/rocSection/rocTable.columns.title
 #: mUI/results/stat/rocTable.columns.title
 msgid "Cut-off"
 msgstr ""
 
+#: mLR/options/show_roc_cut.title
 #: mLR/ui[3]/show_roc/show_roc_cut.label
+#: mMLP/options/show_roc_cut.title
 #: mMLP/ui[3]/show_roc/show_roc_cut.label
+#: mPCA/options/show_roc_cut.title
 #: mPCA/ui[3][0]/rocPlot/show_roc_cut.label
+#: mRF/options/show_roc_cut.title
+#: mRF/ui[3]/show_roc/show_roc_cut.label
+#: mUI/options/show_roc_cut.title
 msgid "Cut-off thresholds"
 msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "CV"
 msgstr ""
 
@@ -1622,6 +1737,7 @@ msgstr "D²"
 #: mLR/options/palBrewer/Dark2.title
 #: mMLP/options/palBrewer/Dark2.title
 #: mPCA/options/palBrewer/Dark2.title
+#: mRF/options/palBrewer/Dark2.title
 #: mROC/options/palBrewer/Dark2.title
 #: mSRV/options/palBrewer/Dark2.title
 #, fuzzy
@@ -1645,6 +1761,7 @@ msgstr ""
 #: mLR/options/roc_unit/decimal.title
 #: mMLP/options/roc_unit/decimal.title
 #: mPCA/options/roc_unit/decimal.title
+#: mRF/options/roc_unit/decimal.title
 #, fuzzy
 msgid "Decimal (0 to 1)"
 msgstr "Zecimal (0 la 1)"
@@ -1669,6 +1786,8 @@ msgstr "Grade de libertate"
 #: mLR/ui[0][0].label
 #: mMLP/options/dep.title
 #: mMLP/ui[0][0].label
+#: mRF/options/dep.title
+#: mRF/ui[0][0].label
 #, fuzzy
 msgid "Dependent Variable (Target)"
 msgstr "Variabilă dependentă (Țintă)"
@@ -1711,6 +1830,7 @@ msgstr "Dihotomizare (fără incertitudine)"
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
 #: mPCA/results/rocTable.columns.title
+#: mRF/results/rocTable.columns.title
 #: mROC/options/direction.title
 #: mROC/results/rocTable.columns.title
 #: mUI/results/stat/uistat.columns.title
@@ -1735,10 +1855,18 @@ msgstr "Model de distribuţie"
 msgid "Dominant"
 msgstr ""
 
+#: R/msnp.b.R
+msgid "Dominant abbreviation"
+msgstr ""
+
 #: mROC/options/dotline.title
 #, fuzzy
 msgid "Dotted line"
 msgstr "Linie punctată"
+
+#: R/mcor.b.R
+msgid "Dropped Cases (%)"
+msgstr ""
 
 #: mCOR/options/glassoType/ebic.title
 msgid "EBIC"
@@ -1746,6 +1874,14 @@ msgstr ""
 
 #: mCOR/options/glassoGamma.title
 msgid "EBIC gamma"
+msgstr ""
+
+#: mCOR/options/glassoLabels.title
+msgid "Edge labels"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Edge Weights Bootstrap"
 msgstr ""
 
 #: R/mpwr.b.R
@@ -1826,6 +1962,10 @@ msgstr ""
 msgid "Error during neural network fitting:"
 msgstr ""
 
+#: R/mrf.b.R
+msgid "Error during Random Forest fitting:"
+msgstr ""
+
 #: R/mcor.b.R
 msgid "Error in Classical Partial Correlation calculation: {}"
 msgstr ""
@@ -1840,6 +1980,12 @@ msgstr ""
 
 #: R/mpca.b.R
 msgid "Error occurred while calculating PCA. Please check your variables."
+msgstr ""
+
+#: mLR/results/misclassifiedTable.columns.title
+#: mMLP/results/misclassifiedTable.columns.title
+#: mRF/results/misclassifiedTable.columns.title
+msgid "Error Type"
 msgstr ""
 
 #: mLR/results/coeffTable.columns.title
@@ -1863,6 +2009,12 @@ msgstr "Evaluarea explicatorilor MAR"
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 msgid "Events"
+msgstr ""
+
+#: mLR/results/riskTable.columns.title
+#: mMLP/results/riskTable.columns.title
+#: mRF/results/riskTable.columns.title
+msgid "Events (n)"
 msgstr ""
 
 #: mSNP/options/ternaryRegion/7.title
@@ -1890,6 +2042,10 @@ msgid "Exact p-adj"
 msgstr ""
 
 #: R/msnp.b.R
+msgid "Excluded"
+msgstr ""
+
+#: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
 msgid "Exp AA"
 msgstr ""
@@ -1908,6 +2064,7 @@ msgstr ""
 msgid "Expected"
 msgstr ""
 
+#: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Expected Influence"
 msgstr ""
@@ -1934,6 +2091,7 @@ msgid "F_IS"
 msgstr ""
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #, fuzzy
 msgid "F1-Score"
 msgstr "F1-Score"
@@ -1962,12 +2120,26 @@ msgstr ""
 #: mLR/ui[0][2].label
 #: mMLP/options/factors.title
 #: mMLP/ui[0][2].label
+#: mRF/options/factors.title
+#: mRF/ui[0][2].label
 #, fuzzy
 msgid "Factors (Categorical Predictors)"
 msgstr "Factori (predictori categoriali)"
 
 #: R/msnp.b.R
 msgid "Failed QC"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
+msgid "False Negative (FN)"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
+msgid "False Positive (FP)"
 msgstr ""
 
 #: mLR/options/method.title
@@ -2060,7 +2232,7 @@ msgid "Genotype"
 msgstr ""
 
 #: mSNP/options/groupTable.title
-msgid "Genotype and allele analysis by groups"
+msgid "Genotype and allele analysis by outcome"
 msgstr ""
 
 #: mSNP/results/hweGroup/freqTable.title
@@ -2246,8 +2418,24 @@ msgstr ""
 msgid "Hierarchical clustering tree"
 msgstr "Arborele de clustering ierarhic"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
 #: R/msnp.b.R
 msgid "High Risk"
+msgstr ""
+
+#: mLR/options/risk_cut_high.title
+#: mLR/ui[3]/show_risk_strat/risk_cut_high.label
+#: mMLP/options/risk_cut_high.title
+#: mMLP/ui[3]/show_risk_strat/risk_cut_high.label
+#: mRF/options/risk_cut_high.title
+#: mRF/ui[3]/show_risk_strat/risk_cut_high.label
+msgid "High Risk Threshold (%)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "High stability (CS >= 0.5)"
 msgstr ""
 
 #: mCOR/options/adjust/hochberg.title
@@ -2264,23 +2452,27 @@ msgid "Hold-out Acc (%)"
 msgstr ""
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #, fuzzy
 msgid "Hold-out Accuracy (%)"
 msgstr "Acurateçea de validare prin ântărziere (%)"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Hold-out Validation"
 msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 msgid "Hold-out Validation (AUC ="
 msgstr ""
 
 #: mLR/options/partition/holdout.title
 #: mMLP/options/partition/holdout.title
+#: mRF/options/partition/holdout.title
 #, fuzzy
 msgid "Hold-out Validation Split"
 msgstr "Divizare de validare prin ântărziere"
@@ -2289,6 +2481,8 @@ msgstr "Divizare de validare prin ântărziere"
 #: mLR/ui[2]/val_split.label
 #: mMLP/options/val_split.title
 #: mMLP/ui[2]/val_split.label
+#: mRF/options/val_split.title
+#: mRF/ui[2]/val_split.label
 #, fuzzy
 msgid "Hold-out Validation Split (%)"
 msgstr "Divizare de validare hold-out (%)"
@@ -2358,6 +2552,24 @@ msgstr ""
 #, fuzzy
 msgid "imp"
 msgstr "imp"
+
+#: mRF/results/importanceTable.columns.title
+msgid "Importance"
+msgstr ""
+
+#: mRF/options/imp_type.title
+#: mRF/ui[3]/show_imp/imp_type.label
+msgid "Importance Type"
+msgstr ""
+
+#: R/mrf.b.R
+msgid "Importance type:"
+msgstr ""
+
+#: R/mrf.b.R
+#: mRF/options/imp_type/impurity.title
+msgid "Impurity (Gini) Importance"
+msgstr ""
 
 #: R/mmf.b.R
 msgid "Imputation failed: {}"
@@ -2513,6 +2725,7 @@ msgstr "IQR Garduri Tukey"
 #: package/analyses/mPWR.menuSubgroup
 #: package/analyses/mMLP.menuGroup
 #: package/analyses/mLR.menuGroup
+#: package/analyses/mRF.menuGroup
 #: package/analyses/mSRV.menuGroup
 #: package/analyses/mPCA.menuGroup
 #: package/analyses/mSNP.menuGroup
@@ -2524,6 +2737,7 @@ msgstr "IQR Garduri Tukey"
 #: mOUT/options.menuGroup
 #: mPCA/options.menuGroup
 #: mPWR/options.menuSubgroup
+#: mRF/options.menuGroup
 #: mROC/options.menuGroup
 #: mSNP/options.menuGroup
 #: mSRV/options.menuGroup
@@ -2538,13 +2752,16 @@ msgid "jYS Extended Functions"
 msgstr "Funcții extinse jYS"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #: mLR/options/partition/kfold.title
 #: mMLP/options/partition/kfold.title
+#: mRF/options/partition/kfold.title
 #, fuzzy
 msgid "K-Fold Cross-Validation"
 msgstr "Validare cruzată K-strat"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "K-Fold Cross-Validation (AUC ="
 msgstr ""
 
@@ -2559,6 +2776,7 @@ msgid "K-Fold CV (AUC ="
 msgstr ""
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #, fuzzy
 msgid "K-Fold CV Accuracy (%)"
 msgstr "Acuratețe K-Fold CV (%)"
@@ -2768,8 +2986,24 @@ msgid ""
 "partitioning uses a hardcoded random seed (42) for reproducibility."
 msgstr ""
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
 #: R/msnp.b.R
 msgid "Low Risk"
+msgstr ""
+
+#: mLR/options/risk_cut_low.title
+#: mLR/ui[3]/show_risk_strat/risk_cut_low.label
+#: mMLP/options/risk_cut_low.title
+#: mMLP/ui[3]/show_risk_strat/risk_cut_low.label
+#: mRF/options/risk_cut_low.title
+#: mRF/ui[3]/show_risk_strat/risk_cut_low.label
+msgid "Low Risk Threshold (%)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Low stability (CS < 0.25). Interpret centrality with caution."
 msgstr ""
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
@@ -2834,6 +3068,7 @@ msgid "MAF threshold for warnings"
 msgstr ""
 
 #: R/mlr.b.R
+#: mRF/options/mtry_method/manual.title
 msgid "Manual"
 msgstr ""
 
@@ -2845,6 +3080,11 @@ msgstr ""
 #, fuzzy
 msgid "Manual Clusters"
 msgstr "Clustere manuale"
+
+#: mRF/options/mtry_val.title
+#: mRF/ui[1]/mtry_val.label
+msgid "Manual mtry Value"
+msgstr ""
 
 #: mCOR/options/glassoType/manual.title
 msgid "Manual penalty"
@@ -2929,6 +3169,11 @@ msgstr "Iteraçii maxime (Epoci)"
 msgid "Maximum number of iterations"
 msgstr "Numărul maxim de iteraţii"
 
+#: mRF/options/maxdepth.title
+#: mRF/ui[1]/maxdepth.label
+msgid "Maximum Tree Depth (0 = unlimited)"
+msgstr ""
+
 #: mMF/results/estim/mcar.columns.content
 #, fuzzy
 msgid "MCAR"
@@ -3008,12 +3253,18 @@ msgstr "Metodă"
 #: mLR/results/infoTable.columns.title
 #: mMLP/results/infoTable.columns.title
 #: mMLP/results/statsTable.columns.title
+#: mRF/results/infoTable.columns.title
+#: mRF/results/statsTable.columns.title
 #, fuzzy
 msgid "Metric"
 msgstr "Metrică"
 
 #: mPCA/results/kmeansTable.columns.title
 msgid "Metric / Cluster"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
+msgid "Metric / Target"
 msgstr ""
 
 #: mPWR/options/es.title
@@ -3048,6 +3299,34 @@ msgstr ""
 
 #: mSNP/options/qcMaf.title
 msgid "Minimum MAF"
+msgstr ""
+
+#: R/mrf.b.R
+#: mRF/options/nodesize.title
+#: mRF/ui[1]/nodesize.label
+msgid "Minimum Node Size"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
+msgid "Misclassified"
+msgstr ""
+
+#: mLR/results/misclassifiedTable.title
+#: mMLP/results/misclassifiedTable.title
+#: mRF/results/misclassifiedTable.title
+msgid "Misclassified Cases"
+msgstr ""
+
+#: mLR/options/show_misclassified.title
+#: mLR/ui[3]/show_misclassified.label
+msgid "Misclassified cases table"
+msgstr ""
+
+#: mMLP/options/show_misclassified.title
+#: mRF/options/show_misclassified.title
+msgid "Misclassified Cases Table"
 msgstr ""
 
 #: mMF/options/alg/mF.title
@@ -3148,6 +3427,10 @@ msgid ""
 "partitioning use a hardcoded random seed (42) for reproducibility."
 msgstr ""
 
+#: R/msnp.b.R
+msgid "Model"
+msgstr ""
+
 #: mLR/results/coeffTable.title
 msgid "Model Coefficients (Post-Selection / Refitted Model)"
 msgstr ""
@@ -3156,18 +3439,34 @@ msgstr ""
 msgid "Model Fit & Predictive Performance"
 msgstr ""
 
+#: mLR/options/show_formula.title
+msgid "Model formula"
+msgstr ""
+
 #: mMLP/results/infoTable.title
+#: mRF/results/infoTable.title
 #, fuzzy
 msgid "Model Information & Accuracy"
 msgstr "Informaçii despre model şi acurateçe"
 
 #: mMLP/ui[1].label
+#: mRF/ui[1].label
 #, fuzzy
 msgid "Model Parameters"
 msgstr "Parametrii modelului"
 
 #: mSNP/options/mdrBarPlot.title
 msgid "Model performance barplot"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
+msgid "Moderate Risk"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Moderate stability (0.25 <= CS < 0.5)"
 msgstr ""
 
 #: mOUT/options/outlcheck/mZS.title
@@ -3189,6 +3488,8 @@ msgstr ""
 #: mLR/ui[3]/show_roc/multiclass_roc_type.label
 #: mMLP/options/multiclass_roc_type.title
 #: mMLP/ui[3]/show_roc/multiclass_roc_type.label
+#: mRF/options/multiclass_roc_type.title
+#: mRF/ui[3]/show_roc/multiclass_roc_type.label
 msgid "Multiclass ROC Layout"
 msgstr ""
 
@@ -3269,6 +3570,7 @@ msgid "N2"
 msgstr "N2"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #, fuzzy
 msgid "Negative Predictive Value (NPV)"
 msgstr "Valoare predictivă negativă (NPV)"
@@ -3291,6 +3593,15 @@ msgstr ""
 msgid "Network plot"
 msgstr ""
 
+#: mCOR/options/glassoStabilityPlot.title
+#: mCOR/results/glassoGroup/glassoStabilityPlot.title
+msgid "Network stability plot"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoStabilityTable.title
+msgid "Network stability summary"
+msgstr ""
+
 #: mMLP/options/show_topo.title
 #, fuzzy
 msgid "Network Topology / Architecture Diagram"
@@ -3311,6 +3622,16 @@ msgstr "Clasificare neuronală"
 msgid "Neural Network Classifier (multilayer perceptron) demonstration"
 msgstr "Demonstraçie clasificator de reçea neuronală (perceptron multistrat)"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
+msgid "No misclassified cases found."
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Node Strength Stability"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Noise (95th percentile)"
 msgstr ""
@@ -3325,12 +3646,21 @@ msgstr ""
 msgid "Non-parametric"
 msgstr "Neparametric"
 
+#: mCOR/options/glassoBootType/nonparametric.title
+msgid "Non-parametric (edge stability)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Non-parametric bootstrap ({b} iterations). Mean edge 95% CI width: {w}%"
+msgstr ""
+
 #: R/mlr.b.R
 #: mCOR/options/adjust/none.title
 #: mCOR/options/clPos/n.title
 #: mLR/options/palBrewer/none.title
 #: mMLP/options/palBrewer/none.title
 #: mPCA/options/palBrewer/none.title
+#: mRF/options/palBrewer/none.title
 #: mROC/options/theBest/none.title
 #: mROC/options/cmpDeLong/none.title
 #: mROC/options/palBrewer/none.title
@@ -3449,6 +3779,20 @@ msgstr "Numărul de modele"
 msgid "Number of permutations"
 msgstr ""
 
+#: mRF/ui[3]/show_pdp/pdp_n_vars.label
+msgid "Number of Top Predictors"
+msgstr ""
+
+#: mRF/options/pdp_n_vars.title
+msgid "Number of Top Predictors for PDP"
+msgstr ""
+
+#: R/mrf.b.R
+#: mRF/options/ntree.title
+#: mRF/ui[1]/ntree.label
+msgid "Number of Trees"
+msgstr ""
+
 #: mMF/options/ntree.title
 #, fuzzy
 msgid "Number of trees to grow in each forest"
@@ -3481,6 +3825,12 @@ msgstr ""
 
 #: R/mpca.b.R
 msgid "Observed Data"
+msgstr ""
+
+#: mLR/results/riskTable.columns.title
+#: mMLP/results/riskTable.columns.title
+#: mRF/results/riskTable.columns.title
+msgid "Observed Event Rate (%)"
 msgstr ""
 
 #: R/msnp.b.R
@@ -3536,6 +3886,27 @@ msgstr "Corelație la un eşantion (Spearman)"
 msgid "one-tailed"
 msgstr "unilateral"
 
+#: R/mrf.b.R
+msgid "OOB"
+msgstr ""
+
+#: R/mrf.b.R
+msgid "OOB Accuracy (%)"
+msgstr ""
+
+#: R/mrf.b.R
+msgid "OOB Error (%)"
+msgstr ""
+
+#: R/mrf.b.R
+#: mRF/results/oobCurvePlot.title
+msgid "OOB Error Convergence"
+msgstr ""
+
+#: mRF/options/show_oob_curve.title
+msgid "OOB Error Convergence Curve"
+msgstr ""
+
 #: mMF/results/imput/errors.description
 #, fuzzy
 msgid "OOB errors table"
@@ -3559,6 +3930,14 @@ msgstr ""
 #, fuzzy
 msgid "Original"
 msgstr "Original"
+
+#: mRF/options/partition/oob.title
+msgid "Out-of-Bag (OOB) Estimation"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Outcome"
+msgstr ""
 
 #: mSNP/options/outcome.title
 msgid "Outcome (Case/Control)"
@@ -3631,6 +4010,10 @@ msgstr "Indicii valorilor extreme"
 msgid "Outliers indices (Rows)"
 msgstr ""
 
+#: mMOUT/options/outind.title
+msgid "Outliers indices table"
+msgstr ""
+
 #: mOUT/ui[2].label
 #, fuzzy
 msgid "Outliers removal"
@@ -3658,6 +4041,7 @@ msgstr "Strat de ieşirăre"
 
 #: mLR/ui[3].label
 #: mMLP/ui[3].label
+#: mRF/ui[3].label
 #, fuzzy
 msgid "Outputs & Evaluation"
 msgstr "Ieşirări şi evaluare"
@@ -3665,6 +4049,10 @@ msgstr "Ieşirări şi evaluare"
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/overdominant.title
 msgid "Overdominant"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Overdominant abbreviation"
 msgstr ""
 
 #: R/msnp.b.R
@@ -3716,6 +4104,7 @@ msgstr ""
 #: mLR/options/palBrewer/Paired.title
 #: mMLP/options/palBrewer/Paired.title
 #: mPCA/options/palBrewer/Paired.title
+#: mRF/options/palBrewer/Paired.title
 #: mROC/options/palBrewer/Paired.title
 #: mSRV/options/palBrewer/Paired.title
 #, fuzzy
@@ -3751,15 +4140,38 @@ msgstr ""
 msgid "Partial Correlation Network (GLASSO)"
 msgstr ""
 
+#: R/mcor.b.R
+msgid "Partial Correlation Weight"
+msgstr ""
+
+#: mRF/results/pdpPlot.title
+msgid "Partial Dependence Plots"
+msgstr ""
+
+#: mRF/options/show_pdp.title
+msgid "Partial Dependence Plots (Top Predictors)"
+msgstr ""
+
+#: R/mrf.b.R
+msgid "Partial Dependence: {var}"
+msgstr ""
+
 #: mMLP/options/partition.title
 #: mMLP/ui[2]/partition.label
+#: mRF/options/partition.title
+#: mRF/ui[2]/partition.label
 #, fuzzy
 msgid "Partition Method"
 msgstr "Metodă de împărçire"
 
+#: R/msnp.b.R
+msgid "Passed"
+msgstr ""
+
 #: mLR/options/palBrewer/Pastel1.title
 #: mMLP/options/palBrewer/Pastel1.title
 #: mPCA/options/palBrewer/Pastel1.title
+#: mRF/options/palBrewer/Pastel1.title
 #: mROC/options/palBrewer/Pastel1.title
 #: mSRV/options/palBrewer/Pastel1.title
 #, fuzzy
@@ -3822,6 +4234,7 @@ msgstr "pe model"
 #: mLR/options/roc_unit/percent.title
 #: mMLP/options/roc_unit/percent.title
 #: mPCA/options/roc_unit/percent.title
+#: mRF/options/roc_unit/percent.title
 #, fuzzy
 msgid "Percentage (%)"
 msgstr "Procent (%)"
@@ -3835,6 +4248,7 @@ msgid "Perform permutation testing"
 msgstr ""
 
 #: mMLP/results/statsTable.title
+#: mRF/results/statsTable.title
 #, fuzzy
 msgid "Performance Statistics"
 msgstr "Statistici de performançă"
@@ -3843,7 +4257,9 @@ msgstr "Statistici de performançă"
 msgid "Permutation"
 msgstr ""
 
+#: R/mrf.b.R
 #: mMLP/options/show_imp.title
+#: mRF/options/imp_type/permutation.title
 #, fuzzy
 msgid "Permutation Importance"
 msgstr "Importança permutării"
@@ -3879,6 +4295,7 @@ msgstr "Plăcintă"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #, fuzzy
 msgid "Please select a dependent variable (target)."
 msgstr "Vă rugăm să selectaçi o variabilă dependentă (îtintă)."
@@ -3892,6 +4309,7 @@ msgid "Please select at least 2 variables for PCA."
 msgstr ""
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #, fuzzy
 msgid "Please select at least one predictor variable (factor or covariate)."
 msgstr "Vă rugăm să selectaçi cel puìin înce un predictor (factor sau covariat)."
@@ -4029,6 +4447,7 @@ msgid "PPV"
 msgstr ""
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #, fuzzy
 msgid "Precision"
 msgstr "Precizie"
@@ -4039,20 +4458,30 @@ msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #: mLR/options/predClass.title
+#: mLR/results/misclassifiedTable.columns.title
 #: mLR/results/predClass.title
 #: mMLP/options/predClass.title
 #: mMLP/results/matrixTable.columns.title
+#: mMLP/results/misclassifiedTable.columns.title
 #: mMLP/results/predClass.title
+#: mRF/options/predClass.title
+#: mRF/results/matrixTable.columns.title
+#: mRF/results/misclassifiedTable.columns.title
+#: mRF/results/predClass.title
 msgid "Predicted Class"
 msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #: mLR/options/predProb.title
 #: mLR/results/predProb.title
 #: mMLP/options/predProb.title
 #: mMLP/results/predProb.title
+#: mRF/options/predProb.title
+#: mRF/results/predProb.title
 msgid "Predicted Probability"
 msgstr ""
 
@@ -4062,8 +4491,10 @@ msgid "Predictive Mean Matching (PMM) steps"
 msgstr "Etapele metodei de potrivire a mediei predictive (PMM)"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #: mLR/results/coeffTable.columns.title
 #: mMLP/results/importanceTable.columns.title
+#: mRF/results/importanceTable.columns.title
 #: mROC/results/rocTable.columns.title
 #: mSRV/results/rocSection/rocTable.columns.title
 #: mUI/results/stat/uistat.columns.title
@@ -4126,12 +4557,23 @@ msgid ""
 "cross-validation use a hardcoded random seed (42) for reproducibility."
 msgstr ""
 
+#: mMLP/results/misclassifiedTable.columns.title
+#: mRF/results/misclassifiedTable.columns.title
+msgid "Probability"
+msgstr ""
+
 #: R/mlr.b.R
 msgid "Probability Model"
 msgstr ""
 
 #: R/mlr.b.R
 msgid "Probability Models"
+msgstr ""
+
+#: mLR/results/riskTable.columns.title
+#: mMLP/results/riskTable.columns.title
+#: mRF/results/riskTable.columns.title
+msgid "Probability Range"
 msgstr ""
 
 #: mSRV/results/coxSection/coxAssumpTable.title
@@ -4229,11 +4671,40 @@ msgstr ""
 msgid "R² of predictor X with other covariates"
 msgstr "R² al predictorului X cu alîci covariabile"
 
+#: package/datasets/RandomForestCHDclassification.name
+msgid "Random Forest CHD classification"
+msgstr ""
+
+#: package/analyses/mRF.title
+#: package/analyses/mRF.menuTitle
+#: mRF/options.title
+#: mRF/options.menuTitle
+#: mRF/ui.title
+#: mRF/results.title
+msgid "Random Forest Classifier"
+msgstr ""
+
+#: package/analyses/mRF.description
+#: mRF/options.description.main
+msgid ""
+"Random Forest Classifier using the ranger package. Note that data "
+"partitioning uses a hardcoded random seed (42) for reproducibility."
+msgstr ""
+
+#: R/mrf.b.R
+msgid "Random Forest Predicted Class"
+msgstr ""
+
+#: R/mrf.b.R
+msgid "Random Forest Predicted Probability"
+msgstr ""
+
 #: mSNP/options/mdrSeed.title
 msgid "Random seed"
 msgstr ""
 
 #: mMLP/results/importanceTable.columns.title
+#: mRF/results/importanceTable.columns.title
 #, fuzzy
 msgid "Rank"
 msgstr "Rang"
@@ -4241,6 +4712,10 @@ msgstr "Rang"
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/recessive.title
 msgid "Recessive"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Recessive abbreviation"
 msgstr ""
 
 #: mLR/options/refLevel.title
@@ -4257,9 +4732,11 @@ msgstr ""
 #: package/analyses/mROC.menuSubgroup
 #: package/analyses/mMLP.menuSubgroup
 #: package/analyses/mLR.menuSubgroup
+#: package/analyses/mRF.menuSubgroup
 #: package/analyses/mSRV.menuSubgroup
 #: mLR/options.menuSubgroup
 #: mMLP/options.menuSubgroup
+#: mRF/options.menuSubgroup
 #: mROC/options.menuSubgroup
 #: mSRV/options.menuSubgroup
 msgid "Regression & Classification"
@@ -4351,12 +4828,31 @@ msgstr "Rezultatele generării numerelor aleatoare reproductibile (RNG)"
 msgid "Right"
 msgstr "Dreapta"
 
+#: mLR/results/riskTable.columns.title
+#: mMLP/results/riskTable.columns.title
+#: mRF/results/riskTable.columns.title
+msgid "Risk Category"
+msgstr ""
+
 #: R/msnp.b.R
 msgid "Risk Class"
 msgstr ""
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Risk Classification"
+msgstr ""
+
+#: mLR/results/riskTable.title
+#: mMLP/results/riskTable.title
+#: mRF/results/riskTable.title
+msgid "Risk Stratification"
+msgstr ""
+
+#: mLR/options/show_risk_strat.title
+#: mLR/ui[3]/show_risk_strat.label
+#: mMLP/options/show_risk_strat.title
+#: mRF/options/show_risk_strat.title
+msgid "Risk Stratification Table"
 msgstr ""
 
 #: mSRV/options/kmTable.title
@@ -4387,13 +4883,16 @@ msgstr ""
 
 #: mLR/options/show_roc.title
 #: mMLP/options/show_roc.title
+#: mRF/options/show_roc.title
 #, fuzzy
 msgid "ROC Analysis"
 msgstr "Analiza ROC"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #: mMLP/results/rocPlot.title
+#: mRF/results/rocPlot.title
 #, fuzzy
 msgid "ROC Analysis Comparison"
 msgstr "Comparare a analizei ROC"
@@ -4404,12 +4903,14 @@ msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "ROC Analysis for {class}"
 msgstr ""
 
 #: mLR/options/roc_unit.title
 #: mMLP/options/roc_unit.title
 #: mPCA/options/roc_unit.title
+#: mRF/options/roc_unit.title
 #, fuzzy
 msgid "ROC Axis Units"
 msgstr "Unităçi axă ROC"
@@ -4468,6 +4969,7 @@ msgstr ""
 #: mLR/results/rocTable.title
 #: mMLP/results/rocTable.title
 #: mPCA/results/rocTable.title
+#: mRF/results/rocTable.title
 #: mUI/results/stat/rocTable.title
 msgid "ROC Quantitative Evaluation"
 msgstr ""
@@ -4476,9 +4978,15 @@ msgstr ""
 msgid "ROC Results"
 msgstr ""
 
+#: mLR/options/show_roc_table.title
 #: mLR/ui[3]/show_roc/show_roc_table.label
+#: mMLP/options/show_roc_table.title
 #: mMLP/ui[3]/show_roc/show_roc_table.label
+#: mPCA/options/show_roc_table.title
 #: mPCA/ui[3][0]/rocPlot/show_roc_table.label
+#: mRF/options/show_roc_table.title
+#: mRF/ui[3]/show_roc/show_roc_table.label
+#: mUI/options/show_roc_table.title
 msgid "ROC table"
 msgstr ""
 
@@ -4491,9 +4999,21 @@ msgstr ""
 #: mLR/options/roc_x.title
 #: mMLP/options/roc_x.title
 #: mPCA/options/roc_x.title
+#: mRF/options/roc_x.title
 #, fuzzy
 msgid "ROC X-axis Coordinate"
 msgstr "Coordonată pe axa X a curbei ROC"
+
+#: mLR/results/misclassifiedTable.columns.title
+#: mMLP/results/misclassifiedTable.columns.title
+#: mRF/results/misclassifiedTable.columns.title
+msgid "Row"
+msgstr ""
+
+#: mRF/options/sample_fraction.title
+#: mRF/ui[1]/sample_fraction.label
+msgid "Sample Fraction (Bootstrap)"
+msgstr ""
 
 #: R/mpwr.b.R
 #, fuzzy
@@ -4525,6 +5045,7 @@ msgstr "Raportul dimensiunii eşantioanelor (N<sub>2</sub>/N<sub>1</sub>)"
 #: mLR/ui[4].label
 #: mMLP/ui[4].label
 #: mMOUT/ui[3].label
+#: mRF/ui[4].label
 #: mUI/ui[2].label
 #, fuzzy
 msgid "Save"
@@ -4586,6 +5107,8 @@ msgstr ""
 #: mMLP/ui[2]/seed.label
 #: mPCA/options/seed.title
 #: mPCA/ui[1][0]/seed.label
+#: mRF/options/seed.title
+#: mRF/ui[2]/seed.label
 msgid "Seed number"
 msgstr ""
 
@@ -4611,6 +5134,7 @@ msgstr ""
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/mroc.b.R
 #: R/msrv.b.R
 #: R/mui.b.R
@@ -4623,6 +5147,7 @@ msgstr "Sensibilitate"
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/mroc.b.R
 #, fuzzy
 msgid "Sensitivity (%)"
@@ -4631,11 +5156,13 @@ msgstr "Sensibilitate (%)"
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
 #: mPCA/results/rocTable.columns.title
+#: mRF/results/rocTable.columns.title
 #: mUI/results/stat/rocTable.columns.title
 msgid "Sensitivity (Se)"
 msgstr ""
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #, fuzzy
 msgid "Sensitivity / Recall"
 msgstr "Sensibilitate / Recal"
@@ -4655,12 +5182,14 @@ msgid "Separate"
 msgstr ""
 
 #: mMLP/options/multiclass_roc_type/separate.title
+#: mRF/options/multiclass_roc_type/separate.title
 msgid "Separate Plots (Class-Specific)"
 msgstr ""
 
 #: mLR/options/palBrewer/Set1.title
 #: mMLP/options/palBrewer/Set1.title
 #: mPCA/options/palBrewer/Set1.title
+#: mRF/options/palBrewer/Set1.title
 #: mROC/options/palBrewer/Set1.title
 #: mSRV/options/palBrewer/Set1.title
 #, fuzzy
@@ -4670,6 +5199,7 @@ msgstr "Set1"
 #: mLR/options/palBrewer/Set2.title
 #: mMLP/options/palBrewer/Set2.title
 #: mPCA/options/palBrewer/Set2.title
+#: mRF/options/palBrewer/Set2.title
 #: mROC/options/palBrewer/Set2.title
 #: mSRV/options/palBrewer/Set2.title
 #, fuzzy
@@ -4679,6 +5209,7 @@ msgstr "Set2"
 #: mLR/options/palBrewer/Set3.title
 #: mMLP/options/palBrewer/Set3.title
 #: mPCA/options/palBrewer/Set3.title
+#: mRF/options/palBrewer/Set3.title
 #: mROC/options/palBrewer/Set3.title
 #: mSRV/options/palBrewer/Set3.title
 #, fuzzy
@@ -4703,30 +5234,10 @@ msgstr "Umbre"
 msgid "Shannon Index (I)"
 msgstr ""
 
-#: mLR/options/show_roc_cut.title
-#: mMLP/options/show_roc_cut.title
-#: mPCA/options/show_roc_cut.title
-#: mUI/options/show_roc_cut.title
-msgid "Show Cut-off Thresholds"
-msgstr ""
-
-#: mCOR/options/glassoLabels.title
-msgid "Show edge labels"
-msgstr ""
-
-#: mLR/options/show_formula.title
-msgid "Show Model Formula"
-msgstr ""
-
-#: mMOUT/options/outind.title
-msgid "Show outliers indices table"
-msgstr ""
-
-#: mLR/options/show_roc_table.title
-#: mMLP/options/show_roc_table.title
-#: mPCA/options/show_roc_table.title
-#: mUI/options/show_roc_table.title
-msgid "Show ROC Table"
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
+msgid "Showing first {max_rows} of {total} misclassified cases."
 msgstr ""
 
 #: R/mmlp.b.R
@@ -4744,6 +5255,10 @@ msgstr "Semnificaţie"
 #: mMOUT/options/alpha.title
 #: mSNP/options/alpha.title
 msgid "Significance level (alpha)"
+msgstr ""
+
+#: mSNP/options/signifMarkers.title
+msgid "Significance markers"
 msgstr ""
 
 #: R/msnp.b.R
@@ -4812,12 +5327,14 @@ msgstr ""
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
 #: mLR/options/roc_x/spec.title
 #: mMLP/options/roc_x/spec.title
 #: mPCA/options/roc_x/spec.title
 #: mPCA/results/regTable.columns.title
+#: mRF/options/roc_x/spec.title
 #: mSRV/results/rocSection/rocTable.columns.title
 #, fuzzy
 msgid "Specificity"
@@ -4826,6 +5343,7 @@ msgstr "Specificitate"
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/mroc.b.R
 #, fuzzy
 msgid "Specificity (%)"
@@ -4834,6 +5352,7 @@ msgstr "Specificitate (%)"
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
 #: mPCA/results/rocTable.columns.title
+#: mRF/results/rocTable.columns.title
 #: mUI/results/stat/rocTable.columns.title
 msgid "Specificity (Sp)"
 msgstr ""
@@ -4880,6 +5399,10 @@ msgstr ""
 msgid "Square"
 msgstr "Pătrat"
 
+#: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
+msgid "Stability Assessment"
+msgstr ""
+
 #: mLR/results/coeffTable.columns.title
 msgid "Standardized Beta"
 msgstr ""
@@ -4905,6 +5428,7 @@ msgstr ""
 msgid "Std. Error"
 msgstr ""
 
+#: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Strength"
 msgstr ""
@@ -5013,6 +5537,10 @@ msgstr ""
 msgid "The 'pwrss' package is not installed. Please install it in R."
 msgstr "Pachetul 'pwrss' nu este instalat. Vă rugăm să-l instalaţi ân R."
 
+#: R/mrf.b.R
+msgid "The 'ranger' package is required. Please install it."
+msgstr ""
+
 #: mROC/options/theBest.title
 #, fuzzy
 msgid "The Best point on ROC"
@@ -5040,6 +5568,10 @@ msgid ""
 "(minimum 15 cases required)."
 msgstr ""
 
+#: R/mrf.b.R
+msgid "The dataset has too few complete cases to train the model."
+msgstr ""
+
 #: R/mmlp.b.R
 #, fuzzy
 msgid "The dataset has too few complete cases to train the neural network."
@@ -5048,6 +5580,7 @@ msgstr ""
 "neuronală."
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "The dependent variable must have at least 2 levels."
 msgstr ""
 
@@ -5062,6 +5595,10 @@ msgstr "Determinarea pragului de trei ori a rezultatelor testelor"
 
 #: R/mpca.b.R
 msgid "Threshold (K ="
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Threshold (r = 0.70)"
 msgstr ""
 
 #: mOUT/options/tholdZS.title
@@ -5115,8 +5652,23 @@ msgstr ""
 msgid "Too few observations after removing missing values (minimum 5 required)."
 msgstr ""
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
 #: R/msnp.b.R
 msgid "Total"
+msgstr ""
+
+#: mLR/results/riskTable.columns.title
+#: mMLP/results/riskTable.columns.title
+#: mRF/results/riskTable.columns.title
+msgid "Total (%)"
+msgstr ""
+
+#: mLR/results/riskTable.columns.title
+#: mMLP/results/riskTable.columns.title
+#: mRF/results/riskTable.columns.title
+msgid "Total (N)"
 msgstr ""
 
 #: R/mmf.b.R
@@ -5132,6 +5684,7 @@ msgstr "Predictori totali"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Train"
 msgstr ""
 
@@ -5146,8 +5699,10 @@ msgstr ""
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/msnp.b.R
 #: mMLP/results/statsTable.columns.title
+#: mRF/results/statsTable.columns.title
 #, fuzzy
 msgid "Training"
 msgstr "Antrenare"
@@ -5155,10 +5710,12 @@ msgstr "Antrenare"
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 msgid "Training (AUC ="
 msgstr ""
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #, fuzzy
 msgid "Training Accuracy (%)"
 msgstr "Acurateçea de antrenare (%)"
@@ -5276,6 +5833,7 @@ msgstr "Definit de utilizator"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Val"
 msgstr ""
 
@@ -5285,7 +5843,9 @@ msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #: mMLP/results/statsTable.columns.title
+#: mRF/results/statsTable.columns.title
 #, fuzzy
 msgid "Validation"
 msgstr "Validare"
@@ -5297,12 +5857,14 @@ msgstr ""
 
 #: mLR/ui[2].label
 #: mMLP/ui[2].label
+#: mRF/ui[2].label
 #, fuzzy
 msgid "Validation Settings"
 msgstr "Setări de validare"
 
 #: mLR/results/infoTable.columns.title
 #: mMLP/results/infoTable.columns.title
+#: mRF/results/infoTable.columns.title
 msgid "Value"
 msgstr ""
 
@@ -5327,6 +5889,16 @@ msgstr "Variabilă"
 #, fuzzy
 msgid "Variable - $key"
 msgstr "Variabilă - $key"
+
+#: R/mrf.b.R
+#: mRF/options/show_imp.title
+#: mRF/results/importanceTable.title
+msgid "Variable Importance"
+msgstr ""
+
+#: mRF/results/importancePlot.title
+msgid "Variable Importance Chart"
+msgstr ""
 
 #: R/mmf.b.R
 #, fuzzy
@@ -5354,6 +5926,12 @@ msgstr "Variabile"
 
 #: mPCA/ui[0][0].label
 msgid "Variables for PCA"
+msgstr ""
+
+#: R/mrf.b.R
+#: mRF/options/mtry_method.title
+#: mRF/ui[1]/mtry_method.label
+msgid "Variables per Split (mtry)"
 msgstr ""
 
 #: mPWR/options/var_ratio.title
@@ -5414,6 +5992,7 @@ msgstr "cu date observate pentru alte variabile"
 #: mLR/ui[3]/show_roc/roc_x.label
 #: mMLP/ui[3]/show_roc/roc_x.label
 #: mPCA/ui[3][0]/rocPlot/roc_x.label
+#: mRF/ui[3]/show_roc/roc_x.label
 #, fuzzy
 msgid "X-axis Coordinate"
 msgstr "Coordinată pe axa X"

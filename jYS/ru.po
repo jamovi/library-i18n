@@ -3,8 +3,8 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "PO-Revision-Date: 2026-07-17 23:52+0000\n"
 "Last-Translator: Jonathon Love <jon@thon.cc>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/jamovi/module-"
-"jys/ru/>\n"
+"Language-Team: Russian "
+"<https://hosted.weblate.org/projects/jamovi/module-jys/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -297,8 +297,9 @@ msgid ""
 "equal allele frequencies for a biallelic marker."
 msgstr ""
 "<b>Эффективное число аллелей (Ne)</b> – это величина, обратная "
-"гомозиготности: Ne = 1 / Σ(pi²). Ne = 1 указывает на фиксацию (мономорфность)"
-", Ne = 2 указывает на равные частоты аллелей для двухаллельного маркера."
+"гомозиготности: Ne = 1 / Σ(pi²). Ne = 1 указывает на фиксацию "
+"(мономорфность), Ne = 2 указывает на равные частоты аллелей для "
+"двухаллельного маркера."
 
 #: R/mpwr.b.R
 msgid ""
@@ -332,13 +333,10 @@ msgstr ""
 
 #: R/msnp.b.R
 msgid ""
-"<b>Expected heterozygosity (H_exp)</b> is the heterozygosity expected under "
-"HWE: H_exp = 2pq. A significant difference between H_obs and H_exp may "
+"<b>Expected heterozygosity (H(exp))</b> is the heterozygosity expected under "
+"HWE: H(exp) = 2pq. A significant difference between H(obs) and H(exp) may "
 "indicate inbreeding, population substructure, or selection."
 msgstr ""
-"<b>Ожидаемая гетерозиготность (H_exp)</b> — это гетерозиготность, ожидаемая "
-"при HWE: H_exp = 2pq. Значительная разница между H_obs и H_exp может "
-"указывать на инбридинг, подструктуру популяции или отбор."
 
 #: R/mcor.b.R
 msgid ""
@@ -354,8 +352,8 @@ msgid ""
 "<b>Explanatory</b> - variable corresponding to MAR with minimal "
 "p<sub>value</sub>."
 msgstr ""
-"<b>Определитель</b> - переменная, соответствующая MAR с минимальным p<sub>"
-"value</sub>."
+"<b>Определитель</b> - переменная, соответствующая MAR с минимальным "
+"p<sub>value</sub>."
 
 #: R/msnp.b.R
 msgid ""
@@ -431,6 +429,7 @@ msgstr ""
 "порога Т. <b>Ячейки низкого риска (LR)</b> имеют отношение < Т."
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid ""
 "<b>Hold-out Accuracy</b>: classification accuracy on the hold-out validation "
 "dataset."
@@ -441,16 +440,13 @@ msgstr ""
 #: R/msnp.b.R
 msgid ""
 "<b>Inbreeding coefficient (F_IS)</b> measures deviation from HWE: F_IS = 1 - "
-"H_obs / H_exp. <b>F_IS > 0</b> indicates heterozygote deficiency "
+"H(obs) / H(exp). <b>F_IS > 0</b> indicates heterozygote deficiency "
 "(inbreeding), <b>F_IS < 0</b> indicates heterozygote excess (outbreeding), "
 "<b>F_IS = 0</b> indicates Hardy-Weinberg equilibrium."
 msgstr ""
-"<b>Коэффициент инбридинга (F_IS)</b> измеряет отклонение от HWE: F_IS = 1 - "
-"H_obs / H_exp. <b>F_IS > 0</b> указывает на недостаток гетерозигот "
-"(инбридинг), <b>F_IS < 0</b> указывает на избыток гетерозигот (аутбридинг), "
-"<b>F_IS = 0</b> указывает на равновесие Харди-Вайнберга."
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid ""
 "<b>K-Fold CV Accuracy</b>: average classification accuracy across "
 "cross-validation folds."
@@ -469,11 +465,11 @@ msgid ""
 msgstr ""
 "<b>Оценка Каплана-Мейера</b> (Kaplan & Meier, 1958) — это непараметрический "
 "метод, используемый для оценки функции выживаемости на основе данных о "
-"времени до наступления события с учетом цензурированных наблюдений. <b>"
-"Медиана выживаемости</b> — это расчетное время, к которому событие наступает "
-"у 50% субъектов (вероятность выживаемости падает до 0,5). <b>Нижний/Верхний "
-"95% ДИ</b> представляют границы 95% доверительного интервала для медианы "
-"времени выживаемости."
+"времени до наступления события с учетом цензурированных наблюдений. "
+"<b>Медиана выживаемости</b> — это расчетное время, к которому событие "
+"наступает у 50% субъектов (вероятность выживаемости падает до 0,5). "
+"<b>Нижний/Верхний 95% ДИ</b> представляют границы 95% доверительного "
+"интервала для медианы времени выживаемости."
 
 #: R/msrv.b.R
 msgid ""
@@ -483,11 +479,11 @@ msgid ""
 "indicate that the predictors collectively improve the model fit relative to "
 "a null model without covariates."
 msgstr ""
-"Критерии <b>отношения правдоподобия</b>, <b>Вальда</b> и <b>Score (лог-"
-"ранговый)</b> оценивают общую нулевую гипотезу о том, что все коэффициенты "
-"регрессии (beta) в модели равны нулю. Статистически значимые p-значения (p < "
-"0,05) показывают, что совокупность предикторов улучшает качество модели по "
-"сравнению с моделью без ковариат."
+"Критерии <b>отношения правдоподобия</b>, <b>Вальда</b> и <b>Score "
+"(лог-ранговый)</b> оценивают общую нулевую гипотезу о том, что все "
+"коэффициенты регрессии (beta) в модели равны нулю. Статистически значимые "
+"p-значения (p < 0,05) показывают, что совокупность предикторов улучшает "
+"качество модели по сравнению с моделью без ковариат."
 
 #: R/msnp.b.R
 msgid ""
@@ -512,8 +508,8 @@ msgstr ""
 "проверки гипотез, сравнивающий распределения выживаемости в двух или более "
 "независимых группах. Он проверяет нулевую гипотезу об отсутствии различий "
 "между кривыми выживаемости. <b>Хи-квадрат</b> — это статистика критерия, "
-"основанная на разности наблюдаемого и ожидаемого числа событий, а <b>p-"
-"значение</b> указывает на статистическую значимость этих различий."
+"основанная на разности наблюдаемого и ожидаемого числа событий, а "
+"<b>p-значение</b> указывает на статистическую значимость этих различий."
 
 #: R/mui.b.R
 msgid ""
@@ -580,8 +576,8 @@ msgid ""
 msgstr ""
 "<b>MDR (Мультифакторная редукция размерности)</b> (Ritchie et al., 2001) – "
 "непараметрический метод для выявления ген-генных взаимодействий (эпистаза). "
-"Он сводит многомерные комбинации генотипов к бинарной переменной (высокого/"
-"низкого риска)."
+"Он сводит многомерные комбинации генотипов к бинарной переменной "
+"(высокого/низкого риска)."
 
 #: R/mcor.b.R
 msgid ""
@@ -601,10 +597,10 @@ msgid ""
 "while controlling for all other variables in the dataset from only the "
 "second variable, yielding an asymmetric network."
 msgstr ""
-"<b>Метод</b>: Классическая получастная корреляция (без регуляризации/L1-"
-"штрафа). Вычисляет линейную связь между каждой парой переменных при контроле "
-"всех остальных переменных в наборе данных только из второй переменной, "
-"создавая асимметричную сеть."
+"<b>Метод</b>: Классическая получастная корреляция (без "
+"регуляризации/L1-штрафа). Вычисляет линейную связь между каждой парой "
+"переменных при контроле всех остальных переменных в наборе данных только из "
+"второй переменной, создавая асимметричную сеть."
 
 #: R/mcor.b.R
 msgid ""
@@ -638,8 +634,11 @@ msgstr ""
 
 #: R/mmf.b.R
 msgid "<b>MSE</b> - mean squared error (for Continuous variables);"
+msgstr "<b>MSE</b> - средняя квадратическая ошибка (для непрерывных переменных);"
+
+#: R/mrf.b.R
+msgid "<b>mtry</b>: number of candidate variables randomly sampled at each split."
 msgstr ""
-"<b>MSE</b> - средняя квадратическая ошибка (для непрерывных переменных);"
 
 #: R/mmf.b.R
 msgid "<b>N</b> - number of missing values;"
@@ -667,8 +666,12 @@ msgstr ""
 #: R/mui.b.R
 msgid "<b>NPV</b> - Negative Predictive Value of the negative class TN/(TN+FN)"
 msgstr ""
-"<b>NPV</b> - отрицательное прогностическое значение отрицательного класса TN/"
-"(TN+FN)"
+"<b>NPV</b> - отрицательное прогностическое значение отрицательного класса "
+"TN/(TN+FN)"
+
+#: R/mrf.b.R
+msgid "<b>Number of Trees</b>: total number of decision trees grown in the ensemble."
+msgstr ""
 
 #: R/msnp.b.R
 msgid ""
@@ -680,11 +683,9 @@ msgstr ""
 
 #: R/msnp.b.R
 msgid ""
-"<b>Observed heterozygosity (H_obs)</b> is the proportion of heterozygous "
-"individuals (AB) in the sample: H_obs = n_AB / N."
+"<b>Observed heterozygosity (H(obs))</b> is the proportion of heterozygous "
+"individuals (AB) in the sample: H(obs) = n_AB / N."
 msgstr ""
-"<b>Наблюдаемая гетерозиготность (H_obs)</b> — это доля гетерозиготных особей "
-"(AB) в выборке: H_obs = n_AB / N."
 
 #: R/msnp.b.R
 msgid ""
@@ -694,9 +695,15 @@ msgid ""
 "association. The 95% CI that does not cross 1.0 indicates significance."
 msgstr ""
 "<b>Отношение шансов (ОШ)</b> количественно определяет силу связи между "
-"аллелем/генотипом и исходом. <b>ОШ > 1</b> указывает на повышенный риск, <b>"
-"ОШ < 1</b> указывает на защитный эффект, <b>ОШ = 1</b> указывает на "
+"аллелем/генотипом и исходом. <b>ОШ > 1</b> указывает на повышенный риск, "
+"<b>ОШ < 1</b> указывает на защитный эффект, <b>ОШ = 1</b> указывает на "
 "отсутствие связи. 95% ДИ, не пересекающий 1.0, свидетельствует о значимости."
+
+#: R/mrf.b.R
+msgid ""
+"<b>OOB Accuracy</b>: out-of-bag accuracy estimated from bootstrap samples "
+"not used for training each tree."
+msgstr ""
 
 #: R/msnp.b.R
 msgid ""
@@ -760,15 +767,14 @@ msgstr ""
 #: R/mui.b.R
 msgid "<b>PPV</b> - Positive Predictive Value of the positive class TP/(TP+FP)"
 msgstr ""
-"<b>PPV</b> - положительная прогностическая ценность положительного класса TP/"
-"(TP+FP)"
+"<b>PPV</b> - положительная прогностическая ценность положительного класса "
+"TP/(TP+FP)"
 
 #: R/mmf.b.R
 msgid ""
 "<b>PVU</b> - proportion of variance unexplained 1-R² (for Continuous "
 "variables);"
-msgstr ""
-"<b>PVU</b> - доля необъясненной дисперсии 1-R² (для непрерывных переменных);"
+msgstr "<b>PVU</b> - доля необъясненной дисперсии 1-R² (для непрерывных переменных);"
 
 #: R/msnp.b.R
 msgid ""
@@ -859,9 +865,9 @@ msgstr ""
 "прогностическую точность непрерывных маркеров для исходов типа «время до "
 "события» в определенный момент времени <i>t</i>, разделяя пациентов на "
 "группы с наступившим событием и без него. <b>AUC</b> (площадь под кривой) "
-"измеряет разделяющую способность теста (от 0,5 до 1,0). <b>Порог отсечения</"
-"b> — оптимальный порог, определяемый по индексу Юдена (J = Чувствительность "
-"+ Специфичность - 1)."
+"измеряет разделяющую способность теста (от 0,5 до 1,0). <b>Порог "
+"отсечения</b> — оптимальный порог, определяемый по индексу Юдена (J = "
+"Чувствительность + Специфичность - 1)."
 
 #: R/mmlp.b.R
 msgid "<b>Training Accuracy</b>: classification accuracy on the training dataset."
@@ -901,8 +907,7 @@ msgstr "<b>Снижение весов</b>: параметр штрафа L2-р�
 
 #: R/mmf.b.R
 msgid "<h2>Help</h2><div>Please select complete and incomplete variables</div>"
-msgstr ""
-"<h2>Справка</h2><div>Пожалуйста, выберите полные и неполные переменные</div>"
+msgstr "<h2>Справка</h2><div>Пожалуйста, выберите полные и неполные переменные</div>"
 
 #: mMF/ui[1][0][1]/patplot/npat.suffix
 msgid "0 - auto"
@@ -919,11 +924,13 @@ msgstr "0.01 (стандарт)"
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/mroc.b.R
 #: R/msrv.b.R
 #: mLR/options/roc_x/1spec.title
 #: mMLP/options/roc_x/1spec.title
 #: mPCA/options/roc_x/1spec.title
+#: mRF/options/roc_x/1spec.title
 msgid "1 - Specificity"
 msgstr "1 - Специфичность"
 
@@ -942,6 +949,7 @@ msgstr "10,5"
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/mroc.b.R
 msgid "100 - Specificity (%)"
 msgstr "100 - Специфичность (%)"
@@ -982,6 +990,10 @@ msgstr "95% ДИ ОШ нижний"
 msgid "95% OR CI Upper"
 msgstr "95% ДИ ОШ верхний"
 
+#: R/msnp.b.R
+msgid "A – Allelic, D – Dominant, OD – Overdominant, R – Recessive"
+msgstr ""
+
 #: mCOR/results/matrix.description
 msgid "a correlation matrix table"
 msgstr "таблица корреляционной матрицы"
@@ -1001,6 +1013,7 @@ msgstr "Результаты априорного анализа мощност�
 #: mLR/options/palBrewer/Accent.title
 #: mMLP/options/palBrewer/Accent.title
 #: mPCA/options/palBrewer/Accent.title
+#: mRF/options/palBrewer/Accent.title
 #: mROC/options/palBrewer/Accent.title
 #: mSRV/options/palBrewer/Accent.title
 msgid "Accent"
@@ -1014,7 +1027,11 @@ msgstr "Тип области принятия"
 msgid "Accuracy"
 msgstr "Точность (Accuracy)"
 
+#: mLR/results/misclassifiedTable.columns.title
 #: mMLP/results/matrixTable.columns.title
+#: mMLP/results/misclassifiedTable.columns.title
+#: mRF/results/matrixTable.columns.title
+#: mRF/results/misclassifiedTable.columns.title
 msgid "Actual Class"
 msgstr "Наблюдаемый класс"
 
@@ -1046,6 +1063,10 @@ msgstr "Анализ аллелей"
 msgid "Allele and genotype frequencies"
 msgstr "Частоты аллелей и генотипов"
 
+#: R/msnp.b.R
+msgid "Allelic abbreviation"
+msgstr ""
+
 #: mCOR/options/plotOrder/alphabet.title
 msgid "Alphabetical"
 msgstr "Алфавитное"
@@ -1064,8 +1085,8 @@ msgstr "Анализ по группам"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/groupAnalysisTable.title
-msgid "Analysis of Alleles and Genotypes by Groups"
-msgstr "Анализ аллелей и генотипов по группам"
+msgid "Analysis of Alleles and Genotypes by Outcome Variable"
+msgstr ""
 
 #: package/analyses/mSNP.description
 msgid ""
@@ -1076,8 +1097,8 @@ msgstr ""
 "ассоциативные тесты, показатели популяционной генетики, MDR и LD."
 
 #: R/msnp.b.R
-msgid "Analysis of Genotypes by Groups"
-msgstr "Анализ генотипов по группам"
+msgid "Analysis of Genotypes by Outcome Variable"
+msgstr ""
 
 #: mSRV/options/rocTime.title
 msgid "Analysis Time Point t"
@@ -1113,11 +1134,16 @@ msgstr "Асимптотическое отношение правдоподоб
 #: mMLP/results/rocTable.columns.title
 #: mPCA/results/regTable.columns.title
 #: mPCA/results/rocTable.columns.title
+#: mRF/results/rocTable.columns.title
 #: mROC/results/rocTable.columns.title
 #: mSRV/results/rocSection/rocTable.columns.title
 #: mUI/results/stat/rocTable.columns.title
 msgid "AUC"
 msgstr "AUC"
+
+#: mRF/options/mtry_method/auto.title
+msgid "Auto (sqrt for classification)"
+msgstr ""
 
 #: R/mpca.b.R
 msgid "Average (Mean)"
@@ -1135,6 +1161,7 @@ msgstr "Средней связи"
 #: mLR/ui[3]/show_roc/roc_unit.label
 #: mMLP/ui[3]/show_roc/roc_unit.label
 #: mPCA/ui[3][0]/rocPlot/roc_unit.label
+#: mRF/ui[3]/show_roc/roc_unit.label
 msgid "Axis Units"
 msgstr "Единицы оси"
 
@@ -1200,6 +1227,7 @@ msgstr "Нижняя граница 95% ДИ Бета"
 msgid "Beta Upper 95% CI"
 msgstr "Верхняя граница 95% ДИ Бета"
 
+#: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Betweenness"
 msgstr "Посредничество"
@@ -1224,6 +1252,22 @@ msgstr "Бонферрони"
 msgid "Bonferroni (1961)"
 msgstr "Бонферрони (1961)"
 
+#: mCOR/options/glassoBootN.title
+msgid "Bootstrap samples (N)"
+msgstr ""
+
+#: mCOR/options/glassoBootType.title
+msgid "Bootstrap type"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Bootstrapped Edge Weights 95% CI"
+msgstr ""
+
+#: mCOR/options/glassoStability.title
+msgid "Bootstrapped stability analysis"
+msgstr ""
+
 #: mMOUT/options/plotType/both.title
 msgid "Both Plots"
 msgstr "Оба графика"
@@ -1243,6 +1287,8 @@ msgstr "Боксплоты с выбросами"
 #: mMLP/ui[3]/show_roc/palBrewer.label
 #: mPCA/options/palBrewer.title
 #: mPCA/ui[3][0]/rocPlot/palBrewer.label
+#: mRF/options/palBrewer.title
+#: mRF/ui[3]/show_roc/palBrewer.label
 #: mROC/options/palBrewer.title
 msgid "Brewer's qualitative palette"
 msgstr "Категориальная палитра Брюэр"
@@ -1271,9 +1317,18 @@ msgstr ""
 "Расчеты для логрангового критерия выживаемости основаны на асимптотическом "
 "приближении Шенфельда. N1 представляет общее количество требуемых событий."
 
+#: R/msnp.b.R
 #: mSNP/results/qcGroup/qcTable.columns.title
 msgid "Call Rate"
 msgstr "Call Rate"
+
+#: mCOR/options/glassoBootType/casedrop.title
+msgid "Case-dropping (centrality stability)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Case-dropping Centrality Stability Curve"
+msgstr ""
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Cases"
@@ -1287,9 +1342,22 @@ msgstr "Отношение Случаи/Контроль"
 msgid "CCR"
 msgstr "CCR"
 
+#: R/mcor.b.R
+msgid "Centrality correlation"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Centrality Correlation (r)"
+msgstr ""
+
 #: mCOR/results/glassoGroup/glassoHubTable.title
 msgid "Centrality metrics (hub markers)"
 msgstr "Показатели центральности (хаб-маркеры)"
+
+#: mCOR/options/glassoCentralityPlot.title
+#: mCOR/results/glassoGroup/glassoCentralityPlot.title
+msgid "Centrality plot"
+msgstr ""
 
 #: mCOR/options/clustMet/centroid.title
 msgid "Centroid Linkage (UPGMC)"
@@ -1393,6 +1461,7 @@ msgid "Classical Squared Mahalanobis Distance"
 msgstr "Классическое квадратичное расстояние Махаланобиса"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Classification Accuracy"
 msgstr "Точность классификации"
 
@@ -1421,6 +1490,7 @@ msgstr "Подрезать очень большие отношения шанс
 msgid "Clipping threshold"
 msgstr "Порог подрезания"
 
+#: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Closeness"
 msgstr "Близость"
@@ -1489,21 +1559,25 @@ msgid "Combined"
 msgstr "Комбинированный"
 
 #: mMLP/options/multiclass_roc_type/combined.title
+#: mRF/options/multiclass_roc_type/combined.title
 msgid "Combined Plot (Single Axes)"
 msgstr "На одних осях"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Combined ROC - Cross-Validation"
 msgstr "Комбинированная ROC-кривая - Кросс-валидация"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Combined ROC - Training"
 msgstr "Комбинированная ROC-кривая - Обучение"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Combined ROC - Validation"
 msgstr "Комбинированная ROC-кривая - Валидация"
 
@@ -1545,6 +1619,7 @@ msgid "Concordance"
 msgstr "Конкордантность"
 
 #: mMLP/results/text.title
+#: mRF/results/text.title
 #: mROC/results/text.title
 msgid "Conditions"
 msgstr "Условия"
@@ -1552,6 +1627,10 @@ msgstr "Условия"
 #: mLR/results/text.title
 msgid "Conditions & Diagnostics"
 msgstr "Условия и диагностика"
+
+#: mLR/results/misclassifiedTable.columns.title
+msgid "Confidence"
+msgstr ""
 
 #: mROC/options/ciAUC.title
 #: mROC/ui[2]/ciAUC.label
@@ -1577,6 +1656,8 @@ msgstr "Доверительные интервалы (КМ)"
 
 #: mMLP/options/show_matrix.title
 #: mMLP/results/matrixTable.title
+#: mRF/options/show_matrix.title
+#: mRF/results/matrixTable.title
 msgid "Confusion Matrix"
 msgstr "Матрица ошибок"
 
@@ -1591,6 +1672,10 @@ msgstr "Контроли"
 #: mSNP/options/polyDf1.title
 msgid "Controversial df for polymorphism"
 msgstr "Спорный df для полиморфизма"
+
+#: package/datasets/RandomForestCHDclassification.description
+msgid "Coronary Heart Disease classification using Random Forest"
+msgstr ""
 
 #: mCOR/options/hyp/corr.title
 msgid "Correlated"
@@ -1653,6 +1738,7 @@ msgstr "Cos²"
 
 #: R/msnp.b.R
 #: mMLP/results/matrixTable.columns.title
+#: mRF/results/matrixTable.columns.title
 msgid "Count"
 msgstr "Частота"
 
@@ -1666,6 +1752,8 @@ msgstr "Ковариаты"
 #: mLR/ui[0][1].label
 #: mMLP/options/covs.title
 #: mMLP/ui[0][1].label
+#: mRF/options/covs.title
+#: mRF/ui[0][1].label
 msgid "Covariates (Continuous Predictors)"
 msgstr "Коварианты (непрерывные предикторы)"
 
@@ -1697,6 +1785,7 @@ msgid "Cross-Entropy Loss"
 msgstr "Потери перекрестной энтропии"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Cross-Validation"
 msgstr "Кросс-валидация"
 
@@ -1708,6 +1797,8 @@ msgstr "Фолды кросс-валидации"
 #: mLR/ui[2]/cv_folds.label
 #: mMLP/options/cv_folds.title
 #: mMLP/ui[2]/cv_folds.label
+#: mRF/options/cv_folds.title
+#: mRF/ui[2]/cv_folds.label
 msgid "Cross-Validation Folds (K)"
 msgstr "Количество блоков кросс-валидации (K)"
 
@@ -1718,6 +1809,10 @@ msgstr "Число повторений кросс-валидации"
 #: mLR/ui[2]/cv_repeats.label
 msgid "Cross-Validation Repeats (R)"
 msgstr "Число повторений кросс-валидации (R)"
+
+#: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
+msgid "CS-coefficient (cor = 0.7)"
+msgstr ""
 
 #: mPCA/results/varianceTable.columns.title
 msgid "Cumulative %"
@@ -1731,26 +1826,35 @@ msgstr "Кумулятивный риск"
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
 #: mPCA/results/rocTable.columns.title
+#: mRF/results/rocTable.columns.title
 msgid "Curve"
 msgstr "Кривая"
 
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
 #: mPCA/results/rocTable.columns.title
+#: mRF/results/rocTable.columns.title
 #: mROC/results/rocTable.columns.title
 #: mSRV/results/rocSection/rocTable.columns.title
 #: mUI/results/stat/rocTable.columns.title
 msgid "Cut-off"
 msgstr "Порог отсечения"
 
+#: mLR/options/show_roc_cut.title
 #: mLR/ui[3]/show_roc/show_roc_cut.label
+#: mMLP/options/show_roc_cut.title
 #: mMLP/ui[3]/show_roc/show_roc_cut.label
+#: mPCA/options/show_roc_cut.title
 #: mPCA/ui[3][0]/rocPlot/show_roc_cut.label
+#: mRF/options/show_roc_cut.title
+#: mRF/ui[3]/show_roc/show_roc_cut.label
+#: mUI/options/show_roc_cut.title
 msgid "Cut-off thresholds"
 msgstr "Пороги отсечки"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "CV"
 msgstr "КВ"
 
@@ -1774,6 +1878,7 @@ msgstr "D²"
 #: mLR/options/palBrewer/Dark2.title
 #: mMLP/options/palBrewer/Dark2.title
 #: mPCA/options/palBrewer/Dark2.title
+#: mRF/options/palBrewer/Dark2.title
 #: mROC/options/palBrewer/Dark2.title
 #: mSRV/options/palBrewer/Dark2.title
 msgid "Dark2"
@@ -1796,6 +1901,7 @@ msgstr "Набор данных ограничен группой:"
 #: mLR/options/roc_unit/decimal.title
 #: mMLP/options/roc_unit/decimal.title
 #: mPCA/options/roc_unit/decimal.title
+#: mRF/options/roc_unit/decimal.title
 msgid "Decimal (0 to 1)"
 msgstr "Десятичный (от 0 до 1)"
 
@@ -1816,6 +1922,8 @@ msgstr "Степени свободы"
 #: mLR/ui[0][0].label
 #: mMLP/options/dep.title
 #: mMLP/ui[0][0].label
+#: mRF/options/dep.title
+#: mRF/ui[0][0].label
 msgid "Dependent Variable (Target)"
 msgstr "Зависимая переменная (Целевая)"
 
@@ -1855,6 +1963,7 @@ msgstr "Дихотомизация (без неопределенности)"
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
 #: mPCA/results/rocTable.columns.title
+#: mRF/results/rocTable.columns.title
 #: mROC/options/direction.title
 #: mROC/results/rocTable.columns.title
 #: mUI/results/stat/uistat.columns.title
@@ -1877,9 +1986,17 @@ msgstr "Модель распределения"
 msgid "Dominant"
 msgstr "Доминантная"
 
+#: R/msnp.b.R
+msgid "Dominant abbreviation"
+msgstr ""
+
 #: mROC/options/dotline.title
 msgid "Dotted line"
 msgstr "Пунктирная линия"
+
+#: R/mcor.b.R
+msgid "Dropped Cases (%)"
+msgstr ""
 
 #: mCOR/options/glassoType/ebic.title
 msgid "EBIC"
@@ -1888,6 +2005,14 @@ msgstr "EBIC"
 #: mCOR/options/glassoGamma.title
 msgid "EBIC gamma"
 msgstr "Параметр γ для EBIC"
+
+#: mCOR/options/glassoLabels.title
+msgid "Edge labels"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Edge Weights Bootstrap"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/options/calc/es.title
@@ -1963,6 +2088,10 @@ msgstr "Граница эквивалентности / неполноценно
 msgid "Error during neural network fitting:"
 msgstr "Ошибка при обучении нейронной сети:"
 
+#: R/mrf.b.R
+msgid "Error during Random Forest fitting:"
+msgstr ""
+
 #: R/mcor.b.R
 msgid "Error in Classical Partial Correlation calculation: {}"
 msgstr "Ошибка при вычислении классической частичной корреляции: {}"
@@ -1978,6 +2107,12 @@ msgstr "Ошибка расчета Graphical Lasso: {}"
 #: R/mpca.b.R
 msgid "Error occurred while calculating PCA. Please check your variables."
 msgstr "Произошла ошибка при вычислении PCA. Пожалуйста, проверьте переменные."
+
+#: mLR/results/misclassifiedTable.columns.title
+#: mMLP/results/misclassifiedTable.columns.title
+#: mRF/results/misclassifiedTable.columns.title
+msgid "Error Type"
+msgstr ""
 
 #: mLR/results/coeffTable.columns.title
 msgid "Estimate (B)"
@@ -1999,6 +2134,12 @@ msgstr "Оценка определителей MAR"
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 msgid "Events"
 msgstr "События"
+
+#: mLR/results/riskTable.columns.title
+#: mMLP/results/riskTable.columns.title
+#: mRF/results/riskTable.columns.title
+msgid "Events (n)"
+msgstr ""
 
 #: mSNP/options/ternaryRegion/7.title
 msgid "Exact autosomal (7)"
@@ -2025,6 +2166,10 @@ msgid "Exact p-adj"
 msgstr "Скорр. точное p-value"
 
 #: R/msnp.b.R
+msgid "Excluded"
+msgstr ""
+
+#: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
 msgid "Exp AA"
 msgstr "Ожид. AA"
@@ -2043,6 +2188,7 @@ msgstr "Ожид. BB"
 msgid "Expected"
 msgstr "Ожидаемые"
 
+#: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Expected Influence"
 msgstr "Ожидаемое влияние"
@@ -2068,6 +2214,7 @@ msgid "F_IS"
 msgstr "F_IS"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "F1-Score"
 msgstr "F1-оценка"
 
@@ -2095,12 +2242,26 @@ msgstr "Таблица факторных нагрузок"
 #: mLR/ui[0][2].label
 #: mMLP/options/factors.title
 #: mMLP/ui[0][2].label
+#: mRF/options/factors.title
+#: mRF/ui[0][2].label
 msgid "Factors (Categorical Predictors)"
 msgstr "Факторы (качественные предикторы)"
 
 #: R/msnp.b.R
 msgid "Failed QC"
 msgstr "Не прошел QC"
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
+msgid "False Negative (FN)"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
+msgid "False Positive (FP)"
+msgstr ""
 
 #: mLR/options/method.title
 #: mLR/ui[1]/method.label
@@ -2190,8 +2351,8 @@ msgid "Genotype"
 msgstr "Генотип"
 
 #: mSNP/options/groupTable.title
-msgid "Genotype and allele analysis by groups"
-msgstr "Анализ генотипов и аллелей по группам"
+msgid "Genotype and allele analysis by outcome"
+msgstr ""
 
 #: mSNP/results/hweGroup/freqTable.title
 msgid "Genotype and Allele Frequencies"
@@ -2374,9 +2535,25 @@ msgstr ""
 msgid "Hierarchical clustering tree"
 msgstr "Дерево иерархической кластеризации"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
 #: R/msnp.b.R
 msgid "High Risk"
 msgstr "Высокий риск"
+
+#: mLR/options/risk_cut_high.title
+#: mLR/ui[3]/show_risk_strat/risk_cut_high.label
+#: mMLP/options/risk_cut_high.title
+#: mMLP/ui[3]/show_risk_strat/risk_cut_high.label
+#: mRF/options/risk_cut_high.title
+#: mRF/ui[3]/show_risk_strat/risk_cut_high.label
+msgid "High Risk Threshold (%)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "High stability (CS >= 0.5)"
+msgstr ""
 
 #: mCOR/options/adjust/hochberg.title
 msgid "Hochberg (1988)"
@@ -2391,22 +2568,26 @@ msgid "Hold-out Acc (%)"
 msgstr "Hold-out точность (%)"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Hold-out Accuracy (%)"
 msgstr "Точность на контрольной выборке (%)"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Hold-out Validation"
 msgstr "Hold-out валидация"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 msgid "Hold-out Validation (AUC ="
 msgstr "Hold-out валидация (AUC ="
 
 #: mLR/options/partition/holdout.title
 #: mMLP/options/partition/holdout.title
+#: mRF/options/partition/holdout.title
 msgid "Hold-out Validation Split"
 msgstr "Разделение выборки для валидации"
 
@@ -2414,6 +2595,8 @@ msgstr "Разделение выборки для валидации"
 #: mLR/ui[2]/val_split.label
 #: mMLP/options/val_split.title
 #: mMLP/ui[2]/val_split.label
+#: mRF/options/val_split.title
+#: mRF/ui[2]/val_split.label
 msgid "Hold-out Validation Split (%)"
 msgstr "Разделение выборки для валидации (%)"
 
@@ -2468,13 +2651,31 @@ msgid ""
 "p<sub>value</sub> in MCAR is significant then the data is MNAR (Missing Not "
 "At Random)."
 msgstr ""
-"Если хотя бы одно p<sub>значение</sub> в MAR не является значимым, а p<sub>"
-"значение</sub> в MCAR является значимым, то данные являются неслучайно "
+"Если хотя бы одно p<sub>значение</sub> в MAR не является значимым, а "
+"p<sub>значение</sub> в MCAR является значимым, то данные являются неслучайно "
 "пропущенными (MNAR)."
 
 #: R/mmf.b.R
 msgid "imp"
 msgstr "восст"
+
+#: mRF/results/importanceTable.columns.title
+msgid "Importance"
+msgstr ""
+
+#: mRF/options/imp_type.title
+#: mRF/ui[3]/show_imp/imp_type.label
+msgid "Importance Type"
+msgstr ""
+
+#: R/mrf.b.R
+msgid "Importance type:"
+msgstr ""
+
+#: R/mrf.b.R
+#: mRF/options/imp_type/impurity.title
+msgid "Impurity (Gini) Importance"
+msgstr ""
 
 #: R/mmf.b.R
 msgid "Imputation failed: {}"
@@ -2610,6 +2811,7 @@ msgstr "IQR заборы Тьюки"
 #: package/analyses/mPWR.menuSubgroup
 #: package/analyses/mMLP.menuGroup
 #: package/analyses/mLR.menuGroup
+#: package/analyses/mRF.menuGroup
 #: package/analyses/mSRV.menuGroup
 #: package/analyses/mPCA.menuGroup
 #: package/analyses/mSNP.menuGroup
@@ -2621,6 +2823,7 @@ msgstr "IQR заборы Тьюки"
 #: mOUT/options.menuGroup
 #: mPCA/options.menuGroup
 #: mPWR/options.menuSubgroup
+#: mRF/options.menuGroup
 #: mROC/options.menuGroup
 #: mSNP/options.menuGroup
 #: mSRV/options.menuGroup
@@ -2633,12 +2836,15 @@ msgid "jYS Extended Functions"
 msgstr "jЮС расширенные функции"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #: mLR/options/partition/kfold.title
 #: mMLP/options/partition/kfold.title
+#: mRF/options/partition/kfold.title
 msgid "K-Fold Cross-Validation"
 msgstr "K-блочная кросс-валидация"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "K-Fold Cross-Validation (AUC ="
 msgstr "K-Fold кросс-валидация (AUC ="
 
@@ -2653,6 +2859,7 @@ msgid "K-Fold CV (AUC ="
 msgstr "K-Fold кросс-проверка (AUC ="
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "K-Fold CV Accuracy (%)"
 msgstr "Точность K-блочной кросс-валидации (%)"
 
@@ -2850,13 +3057,29 @@ msgid ""
 "Logistic Regression with feature selection. Note that cross-validation fold "
 "partitioning uses a hardcoded random seed (42) for reproducibility."
 msgstr ""
-"Логистическая регрессия с отбором переменных. Разбиение на блоки кросс-"
-"валидации использует фиксированное начальное число (42) для "
+"Логистическая регрессия с отбором переменных. Разбиение на блоки "
+"кросс-валидации использует фиксированное начальное число (42) для "
 "воспроизводимости."
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
 #: R/msnp.b.R
 msgid "Low Risk"
 msgstr "Низкий риск"
+
+#: mLR/options/risk_cut_low.title
+#: mLR/ui[3]/show_risk_strat/risk_cut_low.label
+#: mMLP/options/risk_cut_low.title
+#: mMLP/ui[3]/show_risk_strat/risk_cut_low.label
+#: mRF/options/risk_cut_low.title
+#: mRF/ui[3]/show_risk_strat/risk_cut_low.label
+msgid "Low Risk Threshold (%)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Low stability (CS < 0.25). Interpret centrality with caution."
+msgstr ""
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
@@ -2917,6 +3140,7 @@ msgid "MAF threshold for warnings"
 msgstr "Порог MAF для предупреждений"
 
 #: R/mlr.b.R
+#: mRF/options/mtry_method/manual.title
 msgid "Manual"
 msgstr "Ручной выбор"
 
@@ -2927,6 +3151,11 @@ msgstr "Вручную (использовать все предикторы)"
 #: mCOR/options/clustMan.title
 msgid "Manual Clusters"
 msgstr "Кластеры вручную"
+
+#: mRF/options/mtry_val.title
+#: mRF/ui[1]/mtry_val.label
+msgid "Manual mtry Value"
+msgstr ""
 
 #: mCOR/options/glassoType/manual.title
 msgid "Manual penalty"
@@ -3005,6 +3234,11 @@ msgstr "Максимальное количество итераций (эпох
 msgid "Maximum number of iterations"
 msgstr "Максимальное количество итераций"
 
+#: mRF/options/maxdepth.title
+#: mRF/ui[1]/maxdepth.label
+msgid "Maximum Tree Depth (0 = unlimited)"
+msgstr ""
+
 #: mMF/results/estim/mcar.columns.content
 msgid "MCAR"
 msgstr "MCAR"
@@ -3075,12 +3309,18 @@ msgstr "Метод"
 #: mLR/results/infoTable.columns.title
 #: mMLP/results/infoTable.columns.title
 #: mMLP/results/statsTable.columns.title
+#: mRF/results/infoTable.columns.title
+#: mRF/results/statsTable.columns.title
 msgid "Metric"
 msgstr "Метрика"
 
 #: mPCA/results/kmeansTable.columns.title
 msgid "Metric / Cluster"
 msgstr "Метрика / Кластер"
+
+#: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
+msgid "Metric / Target"
+msgstr ""
 
 #: mPWR/options/es.title
 #: mPWR/ui[1]/es.label
@@ -3111,6 +3351,34 @@ msgstr "Минимальный HWE p-value в контроле"
 #: mSNP/options/qcMaf.title
 msgid "Minimum MAF"
 msgstr "Минимальная частота MAF"
+
+#: R/mrf.b.R
+#: mRF/options/nodesize.title
+#: mRF/ui[1]/nodesize.label
+msgid "Minimum Node Size"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
+msgid "Misclassified"
+msgstr ""
+
+#: mLR/results/misclassifiedTable.title
+#: mMLP/results/misclassifiedTable.title
+#: mRF/results/misclassifiedTable.title
+msgid "Misclassified Cases"
+msgstr ""
+
+#: mLR/options/show_misclassified.title
+#: mLR/ui[3]/show_misclassified.label
+msgid "Misclassified cases table"
+msgstr ""
+
+#: mMLP/options/show_misclassified.title
+#: mRF/options/show_misclassified.title
+msgid "Misclassified Cases Table"
+msgstr ""
 
 #: mMF/options/alg/mF.title
 msgid "missForest (2012)"
@@ -3201,6 +3469,10 @@ msgstr ""
 "и разбиение данных используют фиксированное начальное число (42) для "
 "воспроизводимости."
 
+#: R/msnp.b.R
+msgid "Model"
+msgstr ""
+
 #: mLR/results/coeffTable.title
 msgid "Model Coefficients (Post-Selection / Refitted Model)"
 msgstr "Коэффициенты модели (после отбора факторов / переобученная модель)"
@@ -3209,17 +3481,33 @@ msgstr "Коэффициенты модели (после отбора факт�
 msgid "Model Fit & Predictive Performance"
 msgstr "Соответствие модели и прогностическая способность"
 
+#: mLR/options/show_formula.title
+msgid "Model formula"
+msgstr ""
+
 #: mMLP/results/infoTable.title
+#: mRF/results/infoTable.title
 msgid "Model Information & Accuracy"
 msgstr "Информация о модели и точность"
 
 #: mMLP/ui[1].label
+#: mRF/ui[1].label
 msgid "Model Parameters"
 msgstr "Параметры модели"
 
 #: mSNP/options/mdrBarPlot.title
 msgid "Model performance barplot"
 msgstr "Столбчатая диаграмма эффективности моделей"
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
+msgid "Moderate Risk"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Moderate stability (0.25 <= CS < 0.5)"
+msgstr ""
 
 #: mOUT/options/outlcheck/mZS.title
 msgid "Modified Z-score (Hampel filter)"
@@ -3238,6 +3526,8 @@ msgstr "MSE"
 #: mLR/ui[3]/show_roc/multiclass_roc_type.label
 #: mMLP/options/multiclass_roc_type.title
 #: mMLP/ui[3]/show_roc/multiclass_roc_type.label
+#: mRF/options/multiclass_roc_type.title
+#: mRF/ui[3]/show_roc/multiclass_roc_type.label
 msgid "Multiclass ROC Layout"
 msgstr "Компоновка многоклассовой ROC"
 
@@ -3309,6 +3599,7 @@ msgid "N2"
 msgstr "N2"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Negative Predictive Value (NPV)"
 msgstr "Отрицательное прогностическое значение (NPV)"
 
@@ -3329,6 +3620,15 @@ msgstr "Топология сети"
 msgid "Network plot"
 msgstr "График сети"
 
+#: mCOR/options/glassoStabilityPlot.title
+#: mCOR/results/glassoGroup/glassoStabilityPlot.title
+msgid "Network stability plot"
+msgstr ""
+
+#: mCOR/results/glassoGroup/glassoStabilityTable.title
+msgid "Network stability summary"
+msgstr ""
+
 #: mMLP/options/show_topo.title
 msgid "Network Topology / Architecture Diagram"
 msgstr "Топология сети / Диаграмма архитектуры"
@@ -3345,6 +3645,16 @@ msgstr "Классификация с помощью нейронной сети
 msgid "Neural Network Classifier (multilayer perceptron) demonstration"
 msgstr "Демонстрация классификатора нейронной сети (многослойный перцептрон)"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
+msgid "No misclassified cases found."
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Node Strength Stability"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Noise (95th percentile)"
 msgstr "Шум (95-й процентиль)"
@@ -3358,12 +3668,21 @@ msgstr "неполноценность"
 msgid "Non-parametric"
 msgstr "Непараметрическая"
 
+#: mCOR/options/glassoBootType/nonparametric.title
+msgid "Non-parametric (edge stability)"
+msgstr ""
+
+#: R/mcor.b.R
+msgid "Non-parametric bootstrap ({b} iterations). Mean edge 95% CI width: {w}%"
+msgstr ""
+
 #: R/mlr.b.R
 #: mCOR/options/adjust/none.title
 #: mCOR/options/clPos/n.title
 #: mLR/options/palBrewer/none.title
 #: mMLP/options/palBrewer/none.title
 #: mPCA/options/palBrewer/none.title
+#: mRF/options/palBrewer/none.title
 #: mROC/options/theBest/none.title
 #: mROC/options/cmpDeLong/none.title
 #: mROC/options/palBrewer/none.title
@@ -3407,8 +3726,7 @@ msgstr ""
 
 #: R/msnp.b.R
 msgid "Note: Linear regression is adjusted for selected covariates."
-msgstr ""
-"Примечание. Линейная регрессия скорректирована с учетом выбранных ковариат."
+msgstr "Примечание. Линейная регрессия скорректирована с учетом выбранных ковариат."
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "NPV"
@@ -3478,6 +3796,20 @@ msgstr "Число паттернов"
 msgid "Number of permutations"
 msgstr "Число пермутаций"
 
+#: mRF/ui[3]/show_pdp/pdp_n_vars.label
+msgid "Number of Top Predictors"
+msgstr ""
+
+#: mRF/options/pdp_n_vars.title
+msgid "Number of Top Predictors for PDP"
+msgstr ""
+
+#: R/mrf.b.R
+#: mRF/options/ntree.title
+#: mRF/ui[1]/ntree.label
+msgid "Number of Trees"
+msgstr ""
+
 #: mMF/options/ntree.title
 msgid "Number of trees to grow in each forest"
 msgstr "Количество деревьев, выращиваемых в каждом случайном лесе"
@@ -3510,6 +3842,12 @@ msgstr "Наблюдаемые"
 #: R/mpca.b.R
 msgid "Observed Data"
 msgstr "Наблюдаемые данные"
+
+#: mLR/results/riskTable.columns.title
+#: mMLP/results/riskTable.columns.title
+#: mRF/results/riskTable.columns.title
+msgid "Observed Event Rate (%)"
+msgstr ""
 
 #: R/msnp.b.R
 msgid "Observed p-value (-log10)"
@@ -3559,6 +3897,27 @@ msgstr "Корреляция одной выборки (Спирмен)"
 msgid "one-tailed"
 msgstr "односторонний"
 
+#: R/mrf.b.R
+msgid "OOB"
+msgstr ""
+
+#: R/mrf.b.R
+msgid "OOB Accuracy (%)"
+msgstr ""
+
+#: R/mrf.b.R
+msgid "OOB Error (%)"
+msgstr ""
+
+#: R/mrf.b.R
+#: mRF/results/oobCurvePlot.title
+msgid "OOB Error Convergence"
+msgstr ""
+
+#: mRF/options/show_oob_curve.title
+msgid "OOB Error Convergence Curve"
+msgstr ""
+
 #: mMF/results/imput/errors.description
 msgid "OOB errors table"
 msgstr "Таблица прогнозируемых ошибок"
@@ -3580,6 +3939,14 @@ msgstr "Порядок"
 #: mCOR/options/plotOrder/original.title
 msgid "Original"
 msgstr "Оригинальное"
+
+#: mRF/options/partition/oob.title
+msgid "Out-of-Bag (OOB) Estimation"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Outcome"
+msgstr ""
 
 #: mSNP/options/outcome.title
 msgid "Outcome (Case/Control)"
@@ -3644,6 +4011,10 @@ msgstr "Индексы выбросов"
 msgid "Outliers indices (Rows)"
 msgstr "Индексы выбросов (строки)"
 
+#: mMOUT/options/outind.title
+msgid "Outliers indices table"
+msgstr ""
+
 #: mOUT/ui[2].label
 msgid "Outliers removal"
 msgstr "Удаление выбросов"
@@ -3667,6 +4038,7 @@ msgstr "Выходной слой"
 
 #: mLR/ui[3].label
 #: mMLP/ui[3].label
+#: mRF/ui[3].label
 msgid "Outputs & Evaluation"
 msgstr "Выходы и оценка"
 
@@ -3674,6 +4046,10 @@ msgstr "Выходы и оценка"
 #: mSNP/options/geneticModel/overdominant.title
 msgid "Overdominant"
 msgstr "Овердоминантная"
+
+#: R/msnp.b.R
+msgid "Overdominant abbreviation"
+msgstr ""
 
 #: R/msnp.b.R
 msgid "p"
@@ -3726,6 +4102,7 @@ msgstr ""
 #: mLR/options/palBrewer/Paired.title
 #: mMLP/options/palBrewer/Paired.title
 #: mPCA/options/palBrewer/Paired.title
+#: mRF/options/palBrewer/Paired.title
 #: mROC/options/palBrewer/Paired.title
 #: mSRV/options/palBrewer/Paired.title
 msgid "Paired"
@@ -3758,14 +4135,37 @@ msgstr "Сеть частных корреляций"
 msgid "Partial Correlation Network (GLASSO)"
 msgstr "Сеть частных корреляций (GLASSO)"
 
+#: R/mcor.b.R
+msgid "Partial Correlation Weight"
+msgstr ""
+
+#: mRF/results/pdpPlot.title
+msgid "Partial Dependence Plots"
+msgstr ""
+
+#: mRF/options/show_pdp.title
+msgid "Partial Dependence Plots (Top Predictors)"
+msgstr ""
+
+#: R/mrf.b.R
+msgid "Partial Dependence: {var}"
+msgstr ""
+
 #: mMLP/options/partition.title
 #: mMLP/ui[2]/partition.label
+#: mRF/options/partition.title
+#: mRF/ui[2]/partition.label
 msgid "Partition Method"
 msgstr "Метод разделения"
+
+#: R/msnp.b.R
+msgid "Passed"
+msgstr ""
 
 #: mLR/options/palBrewer/Pastel1.title
 #: mMLP/options/palBrewer/Pastel1.title
 #: mPCA/options/palBrewer/Pastel1.title
+#: mRF/options/palBrewer/Pastel1.title
 #: mROC/options/palBrewer/Pastel1.title
 #: mSRV/options/palBrewer/Pastel1.title
 msgid "Pastel1"
@@ -3822,6 +4222,7 @@ msgstr "на паттерн"
 #: mLR/options/roc_unit/percent.title
 #: mMLP/options/roc_unit/percent.title
 #: mPCA/options/roc_unit/percent.title
+#: mRF/options/roc_unit/percent.title
 msgid "Percentage (%)"
 msgstr "Процент (%)"
 
@@ -3834,6 +4235,7 @@ msgid "Perform permutation testing"
 msgstr "Выполнить пермутационный тест"
 
 #: mMLP/results/statsTable.title
+#: mRF/results/statsTable.title
 msgid "Performance Statistics"
 msgstr "Статистика производительности"
 
@@ -3841,7 +4243,9 @@ msgstr "Статистика производительности"
 msgid "Permutation"
 msgstr "Пермутация"
 
+#: R/mrf.b.R
 #: mMLP/options/show_imp.title
+#: mRF/options/imp_type/permutation.title
 msgid "Permutation Importance"
 msgstr "Важность метода перестановок"
 
@@ -3874,6 +4278,7 @@ msgstr "Пицца"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Please select a dependent variable (target)."
 msgstr "Пожалуйста, выберите зависимую переменную (цель)."
 
@@ -3886,9 +4291,9 @@ msgid "Please select at least 2 variables for PCA."
 msgstr "Пожалуйста, выберите как минимум 2 переменные для PCA."
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Please select at least one predictor variable (factor or covariate)."
-msgstr ""
-"Пожалуйста, выберите хотя бы одну переменную-предиктор (фактор или кофактор)."
+msgstr "Пожалуйста, выберите хотя бы одну переменную-предиктор (фактор или кофактор)."
 
 #: R/mlr.b.R
 msgid "Please select at least one predictor variable."
@@ -4010,6 +4415,7 @@ msgid "PPV"
 msgstr "PPV"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Precision"
 msgstr "Точность"
 
@@ -4019,20 +4425,30 @@ msgstr "Не все диагональные элементы матрицы т�
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #: mLR/options/predClass.title
+#: mLR/results/misclassifiedTable.columns.title
 #: mLR/results/predClass.title
 #: mMLP/options/predClass.title
 #: mMLP/results/matrixTable.columns.title
+#: mMLP/results/misclassifiedTable.columns.title
 #: mMLP/results/predClass.title
+#: mRF/options/predClass.title
+#: mRF/results/matrixTable.columns.title
+#: mRF/results/misclassifiedTable.columns.title
+#: mRF/results/predClass.title
 msgid "Predicted Class"
 msgstr "Предсказанный класс"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #: mLR/options/predProb.title
 #: mLR/results/predProb.title
 #: mMLP/options/predProb.title
 #: mMLP/results/predProb.title
+#: mRF/options/predProb.title
+#: mRF/results/predProb.title
 msgid "Predicted Probability"
 msgstr "Прогнозируемая вероятность"
 
@@ -4041,8 +4457,10 @@ msgid "Predictive Mean Matching (PMM) steps"
 msgstr "Шаги предиктивного cреднего сопоставления (PMM)"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #: mLR/results/coeffTable.columns.title
 #: mMLP/results/importanceTable.columns.title
+#: mRF/results/importanceTable.columns.title
 #: mROC/results/rocTable.columns.title
 #: mSRV/results/rocSection/rocTable.columns.title
 #: mUI/results/stat/uistat.columns.title
@@ -4102,6 +4520,11 @@ msgstr ""
 "Анализ главных компонент (PCA). Параллельный анализ и кросс-валидация "
 "используют фиксированное начальное число (42) для воспроизводимости."
 
+#: mMLP/results/misclassifiedTable.columns.title
+#: mRF/results/misclassifiedTable.columns.title
+msgid "Probability"
+msgstr ""
+
 #: R/mlr.b.R
 msgid "Probability Model"
 msgstr "Вероятностная модель"
@@ -4109,6 +4532,12 @@ msgstr "Вероятностная модель"
 #: R/mlr.b.R
 msgid "Probability Models"
 msgstr "Вероятностные модели"
+
+#: mLR/results/riskTable.columns.title
+#: mMLP/results/riskTable.columns.title
+#: mRF/results/riskTable.columns.title
+msgid "Probability Range"
+msgstr ""
 
 #: mSRV/results/coxSection/coxAssumpTable.title
 msgid "Proportional Hazards Assumption (Schoenfeld Residuals Test)"
@@ -4200,11 +4629,40 @@ msgstr "r²"
 msgid "R² of predictor X with other covariates"
 msgstr "Коэффициент детерминации R² предиктора X с другими кофакторами"
 
+#: package/datasets/RandomForestCHDclassification.name
+msgid "Random Forest CHD classification"
+msgstr ""
+
+#: package/analyses/mRF.title
+#: package/analyses/mRF.menuTitle
+#: mRF/options.title
+#: mRF/options.menuTitle
+#: mRF/ui.title
+#: mRF/results.title
+msgid "Random Forest Classifier"
+msgstr ""
+
+#: package/analyses/mRF.description
+#: mRF/options.description.main
+msgid ""
+"Random Forest Classifier using the ranger package. Note that data "
+"partitioning uses a hardcoded random seed (42) for reproducibility."
+msgstr ""
+
+#: R/mrf.b.R
+msgid "Random Forest Predicted Class"
+msgstr ""
+
+#: R/mrf.b.R
+msgid "Random Forest Predicted Probability"
+msgstr ""
+
 #: mSNP/options/mdrSeed.title
 msgid "Random seed"
 msgstr "Случайное число (seed)"
 
 #: mMLP/results/importanceTable.columns.title
+#: mRF/results/importanceTable.columns.title
 msgid "Rank"
 msgstr "Ранг"
 
@@ -4212,6 +4670,10 @@ msgstr "Ранг"
 #: mSNP/options/geneticModel/recessive.title
 msgid "Recessive"
 msgstr "Рецессивная"
+
+#: R/msnp.b.R
+msgid "Recessive abbreviation"
+msgstr ""
 
 #: mLR/options/refLevel.title
 #: mLR/ui[0][0]/refLevel.label
@@ -4226,9 +4688,11 @@ msgstr "Опорный уровень: {ref}"
 #: package/analyses/mROC.menuSubgroup
 #: package/analyses/mMLP.menuSubgroup
 #: package/analyses/mLR.menuSubgroup
+#: package/analyses/mRF.menuSubgroup
 #: package/analyses/mSRV.menuSubgroup
 #: mLR/options.menuSubgroup
 #: mMLP/options.menuSubgroup
+#: mRF/options.menuSubgroup
 #: mROC/options.menuSubgroup
 #: mSRV/options.menuSubgroup
 msgid "Regression & Classification"
@@ -4314,6 +4778,12 @@ msgstr "Воспроизводимые результаты генерации �
 msgid "Right"
 msgstr "Справа"
 
+#: mLR/results/riskTable.columns.title
+#: mMLP/results/riskTable.columns.title
+#: mRF/results/riskTable.columns.title
+msgid "Risk Category"
+msgstr ""
+
 #: R/msnp.b.R
 msgid "Risk Class"
 msgstr "Класс риска"
@@ -4321,6 +4791,19 @@ msgstr "Класс риска"
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Risk Classification"
 msgstr "Классификация риска"
+
+#: mLR/results/riskTable.title
+#: mMLP/results/riskTable.title
+#: mRF/results/riskTable.title
+msgid "Risk Stratification"
+msgstr ""
+
+#: mLR/options/show_risk_strat.title
+#: mLR/ui[3]/show_risk_strat.label
+#: mMLP/options/show_risk_strat.title
+#: mRF/options/show_risk_strat.title
+msgid "Risk Stratification Table"
+msgstr ""
 
 #: mSRV/options/kmTable.title
 msgid "Risk-at-time Table"
@@ -4353,12 +4836,15 @@ msgstr "Робастное квадратичное расстояние Мах�
 
 #: mLR/options/show_roc.title
 #: mMLP/options/show_roc.title
+#: mRF/options/show_roc.title
 msgid "ROC Analysis"
 msgstr "ROC-анализ"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #: mMLP/results/rocPlot.title
+#: mRF/results/rocPlot.title
 msgid "ROC Analysis Comparison"
 msgstr "Сравнительный ROC-анализ"
 
@@ -4368,12 +4854,14 @@ msgstr "Кривые ROC-анализа"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "ROC Analysis for {class}"
 msgstr "ROC-анализ для {class}"
 
 #: mLR/options/roc_unit.title
 #: mMLP/options/roc_unit.title
 #: mPCA/options/roc_unit.title
+#: mRF/options/roc_unit.title
 msgid "ROC Axis Units"
 msgstr "Единицы оси кривой ROC"
 
@@ -4425,6 +4913,7 @@ msgstr "График ROC"
 #: mLR/results/rocTable.title
 #: mMLP/results/rocTable.title
 #: mPCA/results/rocTable.title
+#: mRF/results/rocTable.title
 #: mUI/results/stat/rocTable.title
 msgid "ROC Quantitative Evaluation"
 msgstr "Количественная оценка ROC"
@@ -4433,9 +4922,15 @@ msgstr "Количественная оценка ROC"
 msgid "ROC Results"
 msgstr "Результаты ROC"
 
+#: mLR/options/show_roc_table.title
 #: mLR/ui[3]/show_roc/show_roc_table.label
+#: mMLP/options/show_roc_table.title
 #: mMLP/ui[3]/show_roc/show_roc_table.label
+#: mPCA/options/show_roc_table.title
 #: mPCA/ui[3][0]/rocPlot/show_roc_table.label
+#: mRF/options/show_roc_table.title
+#: mRF/ui[3]/show_roc/show_roc_table.label
+#: mUI/options/show_roc_table.title
 msgid "ROC table"
 msgstr "Таблица РПЦ"
 
@@ -4448,8 +4943,20 @@ msgstr "Таблицы ROC"
 #: mLR/options/roc_x.title
 #: mMLP/options/roc_x.title
 #: mPCA/options/roc_x.title
+#: mRF/options/roc_x.title
 msgid "ROC X-axis Coordinate"
 msgstr "Координата X кривой ROC"
+
+#: mLR/results/misclassifiedTable.columns.title
+#: mMLP/results/misclassifiedTable.columns.title
+#: mRF/results/misclassifiedTable.columns.title
+msgid "Row"
+msgstr ""
+
+#: mRF/options/sample_fraction.title
+#: mRF/ui[1]/sample_fraction.label
+msgid "Sample Fraction (Bootstrap)"
+msgstr ""
 
 #: R/mpwr.b.R
 msgid "Sample Size (N)"
@@ -4461,8 +4968,7 @@ msgstr "Размер выборки (N1)"
 
 #: R/mcor.b.R
 msgid "Sample size is too small to compute Classical Partial Correlation."
-msgstr ""
-"Размер выборки слишком мал для вычисления классической частичной корреляции."
+msgstr "Размер выборки слишком мал для вычисления классической частичной корреляции."
 
 #: R/mcor.b.R
 msgid "Sample size is too small to compute Classical Semi-Partial Correlation."
@@ -4481,6 +4987,7 @@ msgstr "Отношение размера выборок (N<sub>2</sub>/N<sub>1<
 #: mLR/ui[4].label
 #: mMLP/ui[4].label
 #: mMOUT/ui[3].label
+#: mRF/ui[4].label
 #: mUI/ui[2].label
 msgid "Save"
 msgstr "Сохранять"
@@ -4539,6 +5046,8 @@ msgstr "SE"
 #: mMLP/ui[2]/seed.label
 #: mPCA/options/seed.title
 #: mPCA/ui[1][0]/seed.label
+#: mRF/options/seed.title
+#: mRF/ui[2]/seed.label
 msgid "Seed number"
 msgstr "Начальное значение ГСЧ"
 
@@ -4563,6 +5072,7 @@ msgstr "Выбор"
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/mroc.b.R
 #: R/msrv.b.R
 #: R/mui.b.R
@@ -4574,6 +5084,7 @@ msgstr "Чувствительность"
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/mroc.b.R
 msgid "Sensitivity (%)"
 msgstr "Чувствительность (%)"
@@ -4581,11 +5092,13 @@ msgstr "Чувствительность (%)"
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
 #: mPCA/results/rocTable.columns.title
+#: mRF/results/rocTable.columns.title
 #: mUI/results/stat/rocTable.columns.title
 msgid "Sensitivity (Se)"
 msgstr "Чувствительность (Se)"
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Sensitivity / Recall"
 msgstr "Чувствительность / Полнота"
 
@@ -4602,12 +5115,14 @@ msgid "Separate"
 msgstr "Раздельно"
 
 #: mMLP/options/multiclass_roc_type/separate.title
+#: mRF/options/multiclass_roc_type/separate.title
 msgid "Separate Plots (Class-Specific)"
 msgstr "Отдельно по классам"
 
 #: mLR/options/palBrewer/Set1.title
 #: mMLP/options/palBrewer/Set1.title
 #: mPCA/options/palBrewer/Set1.title
+#: mRF/options/palBrewer/Set1.title
 #: mROC/options/palBrewer/Set1.title
 #: mSRV/options/palBrewer/Set1.title
 msgid "Set1"
@@ -4616,6 +5131,7 @@ msgstr "Набор 1"
 #: mLR/options/palBrewer/Set2.title
 #: mMLP/options/palBrewer/Set2.title
 #: mPCA/options/palBrewer/Set2.title
+#: mRF/options/palBrewer/Set2.title
 #: mROC/options/palBrewer/Set2.title
 #: mSRV/options/palBrewer/Set2.title
 msgid "Set2"
@@ -4624,6 +5140,7 @@ msgstr "Набор 2"
 #: mLR/options/palBrewer/Set3.title
 #: mMLP/options/palBrewer/Set3.title
 #: mPCA/options/palBrewer/Set3.title
+#: mRF/options/palBrewer/Set3.title
 #: mROC/options/palBrewer/Set3.title
 #: mSRV/options/palBrewer/Set3.title
 msgid "Set3"
@@ -4646,31 +5163,11 @@ msgstr "Тень"
 msgid "Shannon Index (I)"
 msgstr "Индекс Шеннона (I)"
 
-#: mLR/options/show_roc_cut.title
-#: mMLP/options/show_roc_cut.title
-#: mPCA/options/show_roc_cut.title
-#: mUI/options/show_roc_cut.title
-msgid "Show Cut-off Thresholds"
-msgstr "Показывать пороги отсечения"
-
-#: mCOR/options/glassoLabels.title
-msgid "Show edge labels"
-msgstr "Показывать подписи ребер"
-
-#: mLR/options/show_formula.title
-msgid "Show Model Formula"
-msgstr "Показать формулу модели"
-
-#: mMOUT/options/outind.title
-msgid "Show outliers indices table"
-msgstr "Показать таблицу индексов выбросов"
-
-#: mLR/options/show_roc_table.title
-#: mMLP/options/show_roc_table.title
-#: mPCA/options/show_roc_table.title
-#: mUI/options/show_roc_table.title
-msgid "Show ROC Table"
-msgstr "Показать таблицу ROC"
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
+msgid "Showing first {max_rows} of {total} misclassified cases."
+msgstr ""
 
 #: R/mmlp.b.R
 #: mMLP/options/activation/sigmoid.title
@@ -4686,6 +5183,10 @@ msgstr "Значимость"
 #: mSNP/options/alpha.title
 msgid "Significance level (alpha)"
 msgstr "Уровень значимости (альфа)"
+
+#: mSNP/options/signifMarkers.title
+msgid "Significance markers"
+msgstr ""
 
 #: R/msnp.b.R
 msgid "Significant HWE deviation"
@@ -4750,12 +5251,14 @@ msgstr "ρ Спирмена"
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/mroc.b.R
 #: R/mui.b.R
 #: mLR/options/roc_x/spec.title
 #: mMLP/options/roc_x/spec.title
 #: mPCA/options/roc_x/spec.title
 #: mPCA/results/regTable.columns.title
+#: mRF/options/roc_x/spec.title
 #: mSRV/results/rocSection/rocTable.columns.title
 msgid "Specificity"
 msgstr "Специфичность"
@@ -4763,6 +5266,7 @@ msgstr "Специфичность"
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/mroc.b.R
 msgid "Specificity (%)"
 msgstr "Специфичность (%)"
@@ -4770,6 +5274,7 @@ msgstr "Специфичность (%)"
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
 #: mPCA/results/rocTable.columns.title
+#: mRF/results/rocTable.columns.title
 #: mUI/results/stat/rocTable.columns.title
 msgid "Specificity (Sp)"
 msgstr "Специфичность (Sp)"
@@ -4811,6 +5316,10 @@ msgstr "Пружинный"
 msgid "Square"
 msgstr "Квадрат"
 
+#: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
+msgid "Stability Assessment"
+msgstr ""
+
 #: mLR/results/coeffTable.columns.title
 msgid "Standardized Beta"
 msgstr "Стандартизированный бета-коэффициент"
@@ -4836,6 +5345,7 @@ msgstr "Переменная статуса должна быть факторо
 msgid "Std. Error"
 msgstr "Станд. ошибка"
 
+#: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Strength"
 msgstr "Сила связи"
@@ -4938,6 +5448,10 @@ msgstr "Тестирующая BA"
 msgid "The 'pwrss' package is not installed. Please install it in R."
 msgstr "Пакет 'pwrss' не установлен. Пожалуйста, установите его в R."
 
+#: R/mrf.b.R
+msgid "The 'ranger' package is required. Please install it."
+msgstr ""
+
 #: mROC/options/theBest.title
 msgid "The Best point on ROC"
 msgstr "Лучшая точка ROC"
@@ -4968,11 +5482,16 @@ msgstr ""
 "В наборе данных слишком мало полных наблюдений для выполнения логистической "
 "регрессии (требуется не менее 15 наблюдений)."
 
+#: R/mrf.b.R
+msgid "The dataset has too few complete cases to train the model."
+msgstr ""
+
 #: R/mmlp.b.R
 msgid "The dataset has too few complete cases to train the neural network."
 msgstr "Датасет имеет слишком мало полных случаев для обучения нейронной сети."
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "The dependent variable must have at least 2 levels."
 msgstr "Зависимая переменная должна иметь не менее 2 уровней."
 
@@ -4987,6 +5506,10 @@ msgstr "Трихотомическое определение порогов в 
 #: R/mpca.b.R
 msgid "Threshold (K ="
 msgstr "Порог (K ="
+
+#: R/mcor.b.R
+msgid "Threshold (r = 0.70)"
+msgstr ""
 
 #: mOUT/options/tholdZS.title
 #: mOUT/options/tholdmZS.title
@@ -5039,9 +5562,24 @@ msgstr ""
 "Слишком мало наблюдений после удаления пропущенных значений (требуется не "
 "менее 5)."
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mrf.b.R
 #: R/msnp.b.R
 msgid "Total"
 msgstr "Всего"
+
+#: mLR/results/riskTable.columns.title
+#: mMLP/results/riskTable.columns.title
+#: mRF/results/riskTable.columns.title
+msgid "Total (%)"
+msgstr ""
+
+#: mLR/results/riskTable.columns.title
+#: mMLP/results/riskTable.columns.title
+#: mRF/results/riskTable.columns.title
+msgid "Total (N)"
+msgstr ""
 
 #: R/mmf.b.R
 msgid "Total number of missing entries {}"
@@ -5054,6 +5592,7 @@ msgstr "Общее количество предикторов"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Train"
 msgstr "Обучение"
 
@@ -5068,18 +5607,22 @@ msgstr "Обуч. AUC"
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 #: R/msnp.b.R
 #: mMLP/results/statsTable.columns.title
+#: mRF/results/statsTable.columns.title
 msgid "Training"
 msgstr "Обучение"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
+#: R/mrf.b.R
 msgid "Training (AUC ="
 msgstr "Обучение (AUC ="
 
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Training Accuracy (%)"
 msgstr "Точность обучения (%)"
 
@@ -5143,8 +5686,7 @@ msgstr "Интервал неопределенности (ИН)"
 
 #: package/datasets/UIforbinomiallogisticmodels.description
 msgid "Uncertain Interval estimation for binomial logistic models"
-msgstr ""
-"Оценка интервала неопределенности для биномиальных логистических моделей"
+msgstr "Оценка интервала неопределенности для биномиальных логистических моделей"
 
 #: mUI/options/polygon.title
 msgid "Uncertainty interval polygon"
@@ -5185,6 +5727,7 @@ msgstr "Задано пользователем"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 msgid "Val"
 msgstr "Вал."
 
@@ -5194,7 +5737,9 @@ msgstr "Вал./КВ AUC"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mrf.b.R
 #: mMLP/results/statsTable.columns.title
+#: mRF/results/statsTable.columns.title
 msgid "Validation"
 msgstr "Валидация"
 
@@ -5205,11 +5750,13 @@ msgstr "Метод валидации"
 
 #: mLR/ui[2].label
 #: mMLP/ui[2].label
+#: mRF/ui[2].label
 msgid "Validation Settings"
 msgstr "Параметры валидации"
 
 #: mLR/results/infoTable.columns.title
 #: mMLP/results/infoTable.columns.title
+#: mRF/results/infoTable.columns.title
 msgid "Value"
 msgstr "Значение"
 
@@ -5232,6 +5779,16 @@ msgstr "Переменная"
 #: mMF/results/estim/fMARtab.template.title
 msgid "Variable - $key"
 msgstr "Переменная - $key"
+
+#: R/mrf.b.R
+#: mRF/options/show_imp.title
+#: mRF/results/importanceTable.title
+msgid "Variable Importance"
+msgstr ""
+
+#: mRF/results/importancePlot.title
+msgid "Variable Importance Chart"
+msgstr ""
 
 #: R/mmf.b.R
 msgid "Variable name"
@@ -5257,6 +5814,12 @@ msgstr "Переменные"
 msgid "Variables for PCA"
 msgstr "Переменные для PCA"
 
+#: R/mrf.b.R
+#: mRF/options/mtry_method.title
+#: mRF/ui[1]/mtry_method.label
+msgid "Variables per Split (mtry)"
+msgstr ""
+
 #: mPWR/options/var_ratio.title
 #: mPWR/ui[1]/var_ratio.label
 msgid "Variance ratio (SD₁² / SD₂²)"
@@ -5272,8 +5835,7 @@ msgstr "Уорд связи"
 
 #: R/mpca.b.R
 msgid "Warning: Grouping variable must have at least 2 levels."
-msgstr ""
-"Предупреждение: Группирующая переменная должна иметь не менее 2 уровней."
+msgstr "Предупреждение: Группирующая переменная должна иметь не менее 2 уровней."
 
 #: R/mmlp.b.R
 msgid "Weight Decay"
@@ -5306,6 +5868,7 @@ msgstr "с наблюдаемыми данными по другим перем�
 #: mLR/ui[3]/show_roc/roc_x.label
 #: mMLP/ui[3]/show_roc/roc_x.label
 #: mPCA/ui[3][0]/rocPlot/roc_x.label
+#: mRF/ui[3]/show_roc/roc_x.label
 msgid "X-axis Coordinate"
 msgstr "Координата X"
 
