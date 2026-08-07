@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-07-23 07:14+0000\n"
-"Last-Translator: Jonathon Love <jon@thon.cc>\n"
-"Language-Team: Chinese (Simplified Han script) "
-"<https://hosted.weblate.org/projects/jamovi/module-jys/zh_Hans/>\n"
+"PO-Revision-Date: 2026-10-05 04:18+0000\n"
+"Last-Translator: 陳正昌 <chencc99@gmail.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/jamovi/module-jys/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: Weblate 2026.10.1.dev0\n"
 
 #: R/msnp.b.R
 msgid "-log10(p-value)"
@@ -474,6 +474,9 @@ msgid ""
 "(inbreeding), <b>F_IS < 0</b> indicates heterozygote excess (outbreeding), "
 "<b>F_IS = 0</b> indicates Hardy-Weinberg equilibrium."
 msgstr ""
+"<b>近交系数（F_IS）</b>衡量偏离哈代-温伯格平衡（HWE）的程度：F_IS = 1 - 观测"
+"杂合度 / 期望杂合度。<b>F_IS > 0</b> 表示杂合子缺失（近交），<b>F_IS < 0</b> "
+"表示杂合子过剩（远交/异交），<b>F_IS = 0</b> 表示处于哈代-温伯格平衡状态。"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -627,7 +630,7 @@ msgstr "<b>MSE</b> — 均方误差（用于连续变量）；"
 
 #: R/mrf.b.R
 msgid "<b>mtry</b>: number of candidate variables randomly sampled at each split."
-msgstr ""
+msgstr "<b>mtry</b>：每次分裂时随机抽样的候选变量个数。"
 
 #: R/mmf.b.R
 msgid "<b>N</b> - number of missing values;"
@@ -661,7 +664,7 @@ msgstr "<b>NPV</b> — 阴性预测值，TN/(TN+FN)"
 
 #: R/mrf.b.R
 msgid "<b>Number of Trees</b>: total number of decision trees grown in the ensemble."
-msgstr ""
+msgstr "<b>树的数量</b>：集成中生长的决策树总数。"
 
 #: R/msnp.b.R
 msgid ""
@@ -674,6 +677,8 @@ msgid ""
 "<b>Observed heterozygosity (H(obs))</b> is the proportion of heterozygous "
 "individuals (AB) in the sample: H(obs) = n_AB / N."
 msgstr ""
+"<b>观测杂合度 (H(obs))</b> 指样本中杂合子个体 (AB) 所占比例：H(obs) = n_AB / "
+"N。"
 
 #: R/msnp.b.R
 msgid ""
@@ -689,7 +694,7 @@ msgstr ""
 msgid ""
 "<b>OOB Accuracy</b>: out-of-bag accuracy estimated from bootstrap samples "
 "not used for training each tree."
-msgstr ""
+msgstr "<b>OOB 精度</b>：基于未用于训练每棵树的自助样本所估计的袋外精度。"
 
 #: R/mdca.b.R
 msgid ""
@@ -974,7 +979,7 @@ msgstr "95% OR 置信区间上限"
 
 #: R/msnp.b.R
 msgid "A – Allelic, D – Dominant, OD – Overdominant, R – Recessive"
-msgstr ""
+msgstr "A – 加性，D – 显性，OD – 超显性，R – 隐性"
 
 #: mCOR/results/matrix.description
 msgid "a correlation matrix table"
@@ -1096,7 +1101,7 @@ msgstr "分组分析"
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/groupAnalysisTable.title
 msgid "Analysis of Alleles and Genotypes by Outcome Variable"
-msgstr ""
+msgstr "按结局变量进行的等位基因与基因型分析"
 
 #: package/analyses/mSNP.description
 msgid ""
@@ -1106,7 +1111,7 @@ msgstr "遗传多态性（SNP）分析，包括Hardy-Weinberg平衡、关联检�
 
 #: R/msnp.b.R
 msgid "Analysis of Genotypes by Outcome Variable"
-msgstr ""
+msgstr "按结局变量进行的基因型分析"
 
 #: mSRV/options/rocTime.title
 msgid "Analysis Time Point t"
@@ -1157,7 +1162,7 @@ msgstr "AUC"
 
 #: mRF/options/mtry_method/auto.title
 msgid "Auto (sqrt for classification)"
-msgstr ""
+msgstr "自动 (分类时取平方根)"
 
 #: R/mpca.b.R
 msgid "Average (Mean)"
@@ -1276,19 +1281,19 @@ msgstr "Bonferroni (1961)"
 
 #: mCOR/options/glassoBootN.title
 msgid "Bootstrap samples (N)"
-msgstr ""
+msgstr "自助样本数 (N)"
 
 #: mCOR/options/glassoBootType.title
 msgid "Bootstrap type"
-msgstr ""
+msgstr "自助法类型"
 
 #: R/mcor.b.R
 msgid "Bootstrapped Edge Weights 95% CI"
-msgstr ""
+msgstr "自助法边权重的 95% 置信区间"
 
 #: mCOR/options/glassoStability.title
 msgid "Bootstrapped stability analysis"
-msgstr ""
+msgstr "自助法稳定性分析"
 
 #: mMOUT/options/plotType/both.title
 msgid "Both Plots"
@@ -1365,11 +1370,11 @@ msgstr "检出率"
 
 #: mCOR/options/glassoBootType/casedrop.title
 msgid "Case-dropping (centrality stability)"
-msgstr ""
+msgstr "个案丢弃法 (中心性稳定性)"
 
 #: R/mcor.b.R
 msgid "Case-dropping Centrality Stability Curve"
-msgstr ""
+msgstr "个案丢弃中心性稳定性曲线"
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Cases"
@@ -1405,11 +1410,11 @@ msgstr ""
 
 #: R/mcor.b.R
 msgid "Centrality correlation"
-msgstr ""
+msgstr "中心性相关"
 
 #: R/mcor.b.R
 msgid "Centrality Correlation (r)"
-msgstr ""
+msgstr "中心性相关 (r)"
 
 #: mCOR/results/glassoGroup/glassoHubTable.title
 msgid "Centrality metrics (hub markers)"
@@ -1418,7 +1423,7 @@ msgstr "中心性指标（枢纽标志物）"
 #: mCOR/options/glassoCentralityPlot.title
 #: mCOR/results/glassoGroup/glassoCentralityPlot.title
 msgid "Centrality plot"
-msgstr ""
+msgstr "中心性图"
 
 #: mCOR/options/clustMet/centroid.title
 msgid "Centroid Linkage (UPGMC)"
@@ -1709,7 +1714,7 @@ msgstr "条件"
 
 #: mLR/results/misclassifiedTable.columns.title
 msgid "Confidence"
-msgstr ""
+msgstr "置信度"
 
 #: mROC/options/ciAUC.title
 #: mROC/ui[1]/ciAUC.label
@@ -1773,7 +1778,7 @@ msgstr "对照组"
 
 #: package/datasets/RandomForestCHDclassification.description
 msgid "Coronary Heart Disease classification using Random Forest"
-msgstr ""
+msgstr "基于随机森林的冠心病分类"
 
 #: mCOR/options/hyp/corr.title
 msgid "Correlated"
@@ -1911,7 +1916,7 @@ msgstr "交叉验证重复次数（R）"
 
 #: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
 msgid "CS-coefficient (cor = 0.7)"
-msgstr ""
+msgstr "CS 系数 (cor = 0.7)"
 
 #: mPCA/results/varianceTable.columns.title
 msgid "Cumulative %"
@@ -2160,7 +2165,7 @@ msgstr "虚线"
 
 #: R/mcor.b.R
 msgid "Dropped Cases (%)"
-msgstr ""
+msgstr "丢弃个案百分比 (%)"
 
 #: mDCA/results/calTable.columns.title
 msgid "E avg"
@@ -2180,11 +2185,11 @@ msgstr "EBIC gamma — 扩展贝叶斯信息准则gamma参数"
 
 #: mCOR/options/glassoLabels.title
 msgid "Edge labels"
-msgstr ""
+msgstr "边标签"
 
 #: R/mcor.b.R
 msgid "Edge Weights Bootstrap"
-msgstr ""
+msgstr "边权重自助法"
 
 #: R/mpwr.b.R
 #: mPWR/options/calc/es.title
@@ -2301,7 +2306,7 @@ msgstr "计算主成分分析时出错。请检查您的变量。"
 #: mMLP/results/misclassifiedTable.columns.title
 #: mRF/results/misclassifiedTable.columns.title
 msgid "Error Type"
-msgstr ""
+msgstr "错误类型"
 
 #: mLR/results/coeffTable.columns.title
 msgid "Estimate (B)"
@@ -2335,7 +2340,7 @@ msgstr "事件数"
 #: mMLP/results/riskTable.columns.title
 #: mRF/results/riskTable.columns.title
 msgid "Events (n)"
-msgstr ""
+msgstr "事件数 (n)"
 
 #: mSNP/options/ternaryRegion/7.title
 msgid "Exact autosomal (7)"
@@ -2482,13 +2487,13 @@ msgstr "质控失败"
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "False Negative (FN)"
-msgstr ""
+msgstr "假阴性 (FN)"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "False Positive (FP)"
-msgstr ""
+msgstr "假阳性 (FP)"
 
 #: mLR/options/method.title
 #: mLR/ui[1]/method.label
@@ -2587,7 +2592,7 @@ msgstr "基因型"
 
 #: mSNP/options/groupTable.title
 msgid "Genotype and allele analysis by outcome"
-msgstr ""
+msgstr "按结局进行的基因型与等位基因分析"
 
 #: mSNP/results/hweGroup/freqTable.title
 msgid "Genotype and Allele Frequencies"
@@ -2793,11 +2798,11 @@ msgstr "高风险"
 #: mRF/options/risk_cut_high.title
 #: mRF/ui[3]/show_risk_strat/risk_cut_high.label
 msgid "High Risk Threshold (%)"
-msgstr ""
+msgstr "高风险阈值 (%)"
 
 #: R/mcor.b.R
 msgid "High stability (CS >= 0.5)"
-msgstr ""
+msgstr "高稳定性 (CS >= 0.5)"
 
 #: mCOR/options/adjust/hochberg.title
 msgid "Hochberg (1988)"
@@ -2903,21 +2908,21 @@ msgstr "imp"
 
 #: mRF/results/importanceTable.columns.title
 msgid "Importance"
-msgstr ""
+msgstr "重要性"
 
 #: mRF/options/imp_type.title
 #: mRF/ui[3]/show_imp/imp_type.label
 msgid "Importance Type"
-msgstr ""
+msgstr "重要性类型"
 
 #: R/mrf.b.R
 msgid "Importance type:"
-msgstr ""
+msgstr "重要性类型："
 
 #: R/mrf.b.R
 #: mRF/options/imp_type/impurity.title
 msgid "Impurity (Gini) Importance"
-msgstr ""
+msgstr "不纯度 (基尼) 重要性"
 
 #: R/mmf.b.R
 msgid "Imputation failed: {}"
@@ -3333,11 +3338,11 @@ msgstr "低风险"
 #: mRF/options/risk_cut_low.title
 #: mRF/ui[3]/show_risk_strat/risk_cut_low.label
 msgid "Low Risk Threshold (%)"
-msgstr ""
+msgstr "低风险阈值 (%)"
 
 #: R/mcor.b.R
 msgid "Low stability (CS < 0.25). Interpret centrality with caution."
-msgstr ""
+msgstr "低稳定性 (CS < 0.25)。解释中心性时需谨慎。"
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
@@ -3416,7 +3421,7 @@ msgstr "手动簇"
 #: mRF/options/mtry_val.title
 #: mRF/ui[1]/mtry_val.label
 msgid "Manual mtry Value"
-msgstr ""
+msgstr "手动设定的 mtry 值"
 
 #: mCOR/options/glassoType/manual.title
 msgid "Manual penalty"
@@ -3521,7 +3526,7 @@ msgstr ""
 #: mRF/options/maxdepth.title
 #: mRF/ui[1]/maxdepth.label
 msgid "Maximum Tree Depth (0 = unlimited)"
-msgstr ""
+msgstr "最大树深度 (0 = 无限制)"
 
 #: mMF/results/estim/mcar.columns.content
 msgid "MCAR"
@@ -3614,7 +3619,7 @@ msgstr "度量 / 集群"
 
 #: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
 msgid "Metric / Target"
-msgstr ""
+msgstr "指标 / 目标"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Min Threshold (%)"
@@ -3654,7 +3659,7 @@ msgstr "最小等位基因频率阈值"
 #: mRF/options/nodesize.title
 #: mRF/ui[1]/nodesize.label
 msgid "Minimum Node Size"
-msgstr ""
+msgstr "最小节点大小"
 
 #: mDCA/options/threshMin.title
 msgid "Minimum Threshold"
@@ -3664,23 +3669,23 @@ msgstr ""
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Misclassified"
-msgstr ""
+msgstr "误分类"
 
 #: mLR/results/misclassifiedTable.title
 #: mMLP/results/misclassifiedTable.title
 #: mRF/results/misclassifiedTable.title
 msgid "Misclassified Cases"
-msgstr ""
+msgstr "误分类个案"
 
 #: mLR/options/show_misclassified.title
 #: mLR/ui[3]/show_misclassified.label
 msgid "Misclassified cases table"
-msgstr ""
+msgstr "误分类个案表"
 
 #: mMLP/options/show_misclassified.title
 #: mRF/options/show_misclassified.title
 msgid "Misclassified Cases Table"
-msgstr ""
+msgstr "误分类个案表"
 
 #: mMF/options/alg/mF.title
 msgid "missForest (2012)"
@@ -3771,7 +3776,7 @@ msgstr ""
 #: R/msnp.b.R
 #: mDCA/results/calTable.columns.title
 msgid "Model"
-msgstr ""
+msgstr "模型"
 
 #: mDCA/results/dcaTable.columns.title
 #: mDCA/results/windowTable.columns.title
@@ -3823,7 +3828,7 @@ msgstr ""
 
 #: mLR/options/show_formula.title
 msgid "Model formula"
-msgstr ""
+msgstr "模型公式"
 
 #: mMLP/results/infoTable.title
 #: mRF/results/infoTable.title
@@ -3848,11 +3853,11 @@ msgstr ""
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Moderate Risk"
-msgstr ""
+msgstr "中风险"
 
 #: R/mcor.b.R
 msgid "Moderate stability (0.25 <= CS < 0.5)"
-msgstr ""
+msgstr "中等稳定性 (0.25 <= CS < 0.5)"
 
 #: mOUT/options/outlcheck/mZS.title
 msgid "Modified Z-score (Hampel filter)"
@@ -4009,11 +4014,11 @@ msgstr "网络图"
 #: mCOR/options/glassoStabilityPlot.title
 #: mCOR/results/glassoGroup/glassoStabilityPlot.title
 msgid "Network stability plot"
-msgstr ""
+msgstr "网络稳定性图"
 
 #: mCOR/results/glassoGroup/glassoStabilityTable.title
 msgid "Network stability summary"
-msgstr ""
+msgstr "网络稳定性汇总"
 
 #: mMLP/options/show_topo.title
 msgid "Network Topology / Architecture Diagram"
@@ -4047,7 +4052,7 @@ msgstr ""
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "No misclassified cases found."
-msgstr ""
+msgstr "未发现误分类个案。"
 
 #: R/msrv.b.R
 msgid "No valid predictors found for time-dependent Cox model."
@@ -4055,7 +4060,7 @@ msgstr ""
 
 #: R/mcor.b.R
 msgid "Node Strength Stability"
-msgstr ""
+msgstr "节点强度稳定性"
 
 #: R/mpca.b.R
 msgid "Noise (95th percentile)"
@@ -4072,11 +4077,11 @@ msgstr "非参数"
 
 #: mCOR/options/glassoBootType/nonparametric.title
 msgid "Non-parametric (edge stability)"
-msgstr ""
+msgstr "非参数 (边稳定性)"
 
 #: R/mcor.b.R
 msgid "Non-parametric bootstrap ({b} iterations). Mean edge 95% CI width: {w}%"
-msgstr ""
+msgstr "非参数自助法 ({b} 次迭代)。边均值的 95% 置信区间宽度：{w}%"
 
 #: R/mlr.b.R
 #: mCOR/options/adjust/none.title
@@ -4194,17 +4199,17 @@ msgstr "置换次数"
 
 #: mRF/ui[3]/show_pdp/pdp_n_vars.label
 msgid "Number of Top Predictors"
-msgstr ""
+msgstr "重要预测因子个数"
 
 #: mRF/options/pdp_n_vars.title
 msgid "Number of Top Predictors for PDP"
-msgstr ""
+msgstr "PDP 的重要预测因子个数"
 
 #: R/mrf.b.R
 #: mRF/options/ntree.title
 #: mRF/ui[1]/ntree.label
 msgid "Number of Trees"
-msgstr ""
+msgstr "树的数量"
 
 #: mMF/options/ntree.title
 msgid "Number of trees to grow in each forest"
@@ -4243,7 +4248,7 @@ msgstr "观测数据"
 #: mMLP/results/riskTable.columns.title
 #: mRF/results/riskTable.columns.title
 msgid "Observed Event Rate (%)"
-msgstr ""
+msgstr "观测事件率 (%)"
 
 #: R/msnp.b.R
 msgid "Observed p-value (-log10)"
@@ -4299,24 +4304,24 @@ msgstr "单尾"
 
 #: R/mrf.b.R
 msgid "OOB"
-msgstr ""
+msgstr "袋外 (OOB)"
 
 #: R/mrf.b.R
 msgid "OOB Accuracy (%)"
-msgstr ""
+msgstr "袋外精度 (%)"
 
 #: R/mrf.b.R
 msgid "OOB Error (%)"
-msgstr ""
+msgstr "袋外误差率 (%)"
 
 #: R/mrf.b.R
 #: mRF/results/oobCurvePlot.title
 msgid "OOB Error Convergence"
-msgstr ""
+msgstr "袋外误差收敛性"
 
 #: mRF/options/show_oob_curve.title
 msgid "OOB Error Convergence Curve"
-msgstr ""
+msgstr "袋外误差收敛曲线"
 
 #: mMF/results/imput/errors.description
 msgid "OOB errors table"
@@ -4350,11 +4355,11 @@ msgstr "原始"
 
 #: mRF/options/partition/oob.title
 msgid "Out-of-Bag (OOB) Estimation"
-msgstr ""
+msgstr "袋外 (OOB) 估计"
 
 #: R/msnp.b.R
 msgid "Outcome"
-msgstr ""
+msgstr "结局变量"
 
 #: mSNP/options/outcome.title
 msgid "Outcome (Case/Control)"
@@ -4421,7 +4426,7 @@ msgstr "异常值索引（行）"
 
 #: mMOUT/options/outind.title
 msgid "Outliers indices table"
-msgstr ""
+msgstr "离群值索引表"
 
 #: mOUT/ui[2].label
 msgid "Outliers removal"
@@ -4539,19 +4544,19 @@ msgstr "偏相关网络（GLASSO）"
 
 #: R/mcor.b.R
 msgid "Partial Correlation Weight"
-msgstr ""
+msgstr "偏相关权重"
 
 #: mRF/results/pdpPlot.title
 msgid "Partial Dependence Plots"
-msgstr ""
+msgstr "偏依赖图"
 
 #: mRF/options/show_pdp.title
 msgid "Partial Dependence Plots (Top Predictors)"
-msgstr ""
+msgstr "偏依赖图 (重要预测因子)"
 
 #: R/mrf.b.R
 msgid "Partial Dependence: {var}"
-msgstr ""
+msgstr "偏依赖：{var}"
 
 #: mMLP/options/partition.title
 #: mMLP/ui[2]/partition.label
@@ -4562,7 +4567,7 @@ msgstr "划分方法"
 
 #: R/msnp.b.R
 msgid "Passed"
-msgstr ""
+msgstr "通过"
 
 #: mLR/options/palBrewer/Pastel1.title
 #: mMLP/options/palBrewer/Pastel1.title
@@ -4918,7 +4923,7 @@ msgstr ""
 #: mMLP/results/misclassifiedTable.columns.title
 #: mRF/results/misclassifiedTable.columns.title
 msgid "Probability"
-msgstr ""
+msgstr "概率"
 
 #: R/mlr.b.R
 msgid "Probability Model"
@@ -4932,7 +4937,7 @@ msgstr "概率模型"
 #: mMLP/results/riskTable.columns.title
 #: mRF/results/riskTable.columns.title
 msgid "Probability Range"
-msgstr ""
+msgstr "概率范围"
 
 #: mSRV/results/coxSection/coxAssumpTable.title
 msgid "Proportional Hazards Assumption (Schoenfeld Residuals Test)"
@@ -5027,7 +5032,7 @@ msgstr "预测变量 X 与其他协变量的 R²（决定系数）"
 
 #: package/datasets/RandomForestCHDclassification.name
 msgid "Random Forest CHD classification"
-msgstr ""
+msgstr "随机森林冠心病分类"
 
 #: package/analyses/mRF.title
 #: package/analyses/mRF.menuTitle
@@ -5036,7 +5041,7 @@ msgstr ""
 #: mRF/ui.title
 #: mRF/results.title
 msgid "Random Forest Classifier"
-msgstr ""
+msgstr "随机森林分类器"
 
 #: package/analyses/mRF.description
 #: mRF/options.description.main
@@ -5048,11 +5053,11 @@ msgstr ""
 
 #: R/mrf.b.R
 msgid "Random Forest Predicted Class"
-msgstr ""
+msgstr "随机森林预测类别"
 
 #: R/mrf.b.R
 msgid "Random Forest Predicted Probability"
-msgstr ""
+msgstr "随机森林预测概率"
 
 #: mSNP/options/mdrSeed.title
 msgid "Random seed"
@@ -5188,7 +5193,7 @@ msgstr "右"
 #: mMLP/results/riskTable.columns.title
 #: mRF/results/riskTable.columns.title
 msgid "Risk Category"
-msgstr ""
+msgstr "风险类别"
 
 #: R/msnp.b.R
 msgid "Risk Class"
@@ -5202,14 +5207,14 @@ msgstr "风险分类"
 #: mMLP/results/riskTable.title
 #: mRF/results/riskTable.title
 msgid "Risk Stratification"
-msgstr ""
+msgstr "风险分层"
 
 #: mLR/options/show_risk_strat.title
 #: mLR/ui[3]/show_risk_strat.label
 #: mMLP/options/show_risk_strat.title
 #: mRF/options/show_risk_strat.title
 msgid "Risk Stratification Table"
-msgstr ""
+msgstr "风险分层表"
 
 #: mSRV/options/kmTable.title
 msgid "Risk-at-time Table"
@@ -5354,12 +5359,12 @@ msgstr "ROC 曲线横轴坐标"
 #: mMLP/results/misclassifiedTable.columns.title
 #: mRF/results/misclassifiedTable.columns.title
 msgid "Row"
-msgstr ""
+msgstr "行"
 
 #: mRF/options/sample_fraction.title
 #: mRF/ui[1]/sample_fraction.label
 msgid "Sample Fraction (Bootstrap)"
-msgstr ""
+msgstr "样本占比 (自助法)"
 
 #: R/mpwr.b.R
 msgid "Sample Size (N)"
@@ -5599,7 +5604,7 @@ msgstr ""
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Showing first {max_rows} of {total} misclassified cases."
-msgstr ""
+msgstr "显示 {total} 个误分类个案中的前 {max_rows} 个。"
 
 #: R/mmlp.b.R
 #: mMLP/options/activation/sigmoid.title
@@ -5618,7 +5623,7 @@ msgstr "显著性水平（alpha）"
 
 #: mSNP/options/signifMarkers.title
 msgid "Significance markers"
-msgstr ""
+msgstr "显著性标记"
 
 #: R/msnp.b.R
 msgid "Significant HWE deviation"
@@ -5744,7 +5749,7 @@ msgstr "平方"
 
 #: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
 msgid "Stability Assessment"
-msgstr ""
+msgstr "稳定性评估"
 
 #: R/msrv.b.R
 msgid "Standard errors and confidence intervals are adjusted for clustering by"
@@ -5930,7 +5935,7 @@ msgstr "未安装“pwrss”包。请在R中安装。"
 
 #: R/mrf.b.R
 msgid "The 'ranger' package is required. Please install it."
-msgstr ""
+msgstr "需要 'ranger' 包。请安装它。"
 
 #: R/mroc.b.R
 msgid ""
@@ -5953,7 +5958,7 @@ msgstr "数据集中完整样本量过少，无法进行逻辑斯谛回归（至
 
 #: R/mrf.b.R
 msgid "The dataset has too few complete cases to train the model."
-msgstr ""
+msgstr "该数据集的完整个案过少，无法训练模型。"
 
 #: R/mmlp.b.R
 msgid "The dataset has too few complete cases to train the neural network."
@@ -5988,7 +5993,7 @@ msgstr ""
 
 #: R/mcor.b.R
 msgid "Threshold (r = 0.70)"
-msgstr ""
+msgstr "阈值 (r = 0.70)"
 
 #: mOUT/options/tholdmZS.title
 msgid "Threshold for modified Z-score"
@@ -6087,13 +6092,13 @@ msgstr "总计"
 #: mMLP/results/riskTable.columns.title
 #: mRF/results/riskTable.columns.title
 msgid "Total (%)"
-msgstr ""
+msgstr "总计 (%)"
 
 #: mLR/results/riskTable.columns.title
 #: mMLP/results/riskTable.columns.title
 #: mRF/results/riskTable.columns.title
 msgid "Total (N)"
-msgstr ""
+msgstr "总计 (N)"
 
 #: R/mmf.b.R
 msgid "Total number of missing entries {}"
@@ -6318,11 +6323,11 @@ msgstr ""
 #: mRF/options/show_imp.title
 #: mRF/results/importanceTable.title
 msgid "Variable Importance"
-msgstr ""
+msgstr "变量重要性"
 
 #: mRF/results/importancePlot.title
 msgid "Variable Importance Chart"
-msgstr ""
+msgstr "变量重要性图"
 
 #: R/mmf.b.R
 msgid "Variable name"
@@ -6352,7 +6357,7 @@ msgstr "主成分分析变量"
 #: mRF/options/mtry_method.title
 #: mRF/ui[1]/mtry_method.label
 msgid "Variables per Split (mtry)"
-msgstr ""
+msgstr "每次分裂变量数 (mtry)"
 
 #: mPWR/options/var_ratio.title
 #: mPWR/ui[1]/var_ratio.label
