@@ -23,12 +23,6 @@ msgstr "カイザー正規化を伴う{rotation}回転"
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "カイザー正規化を伴う{rotation}回転が用いられました。"
 
-#: R/corresp.b.R
-#: R/multcorresp.b.R
-#: multcorresp/results/categories.columns.title
-msgid "% Inertia"
-msgstr "%慣性"
-
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -68,20 +62,20 @@ msgid ""
 "<li>or a <strong>Contingency table</strong></li>\n"
 "</ul>\n"
 "<p><strong>Supplementary row or column</strong> numbers may be entered as "
-"integer lists : 1,3,6</p>\n"
-"<p>Four normalizations (scaling of row and column scores before plotting) "
-"are available :</p>\n"
+"integer lists: 1,3,6</p>\n"
+"<p>Five normalizations (scaling of row and column scores before plotting) "
+"are available:</p>\n"
 "<ul>\n"
-"<li><strong>Principal:</strong> Row and column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row and column scores are scaled by the "
-"square root of eigenvalues. </li>\n"
-"<li><strong>Row Principal:</strong> Only row scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Column Principal:</strong> Only column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Standard:</strong> The raw coordinates without "
-"normalization.</li>\n"
+"<li><strong>Principal:</strong> Row and column scores are in principal "
+"coordinates, i.e. standard coordinates scaled by the singular values.</li>\n"
+"<li><strong>Symmetric:</strong> Row and column scores are standard "
+"coordinates scaled by the square root of the singular values.</li>\n"
+"<li><strong>Row principal:</strong> Row scores are in principal coordinates, "
+"column scores in standard coordinates.</li>\n"
+"<li><strong>Column principal:</strong> Column scores are in principal "
+"coordinates, row scores in standard coordinates.</li>\n"
+"<li><strong>Standard:</strong> Row and column scores are in standard "
+"coordinates (unit weighted variance on each dimension).</li>\n"
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Smoking</p>"
 msgstr ""
@@ -185,7 +179,7 @@ msgid ""
 "variances equal to 1 (instead of eigenvalues)</li>\n"
 "<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
 "applied to eigenvectors (standard loadings) instead of principal loadings "
-"(STATA way).</li>\n"
+"(Stata way).</li>\n"
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Iris</p>"
 msgstr ""
@@ -204,7 +198,7 @@ msgstr ""
 "<li><strong>負荷量の標準化：</strong> 負荷量を（固有値ではなく）2乗和が1になるように標準化します。</li>\n"
 "<li><strong>スコアの標準化</strong> スコアを（固有値ではなく）分散が1になるように標準化します。</li>\n"
 "<li><strong>固有ベクトルの回転：</strong> "
-"主座標としての負荷量ではなく、固有ベクトル（標準負荷量）に対して回転（バリマックス回転など）を適用します（STATA方式）。</li>\n"
+"主座標としての負荷量ではなく、固有ベクトル（標準負荷量）に対して回転（バリマックス回転など）を適用します（Stata方式）。</li>\n"
 "</ul>\n"
 "<p>サンプルファイルは「開く > データライブラリ > vijMulti > Iris」に含まれています。</p>"
 
@@ -559,14 +553,19 @@ msgstr "座標"
 msgid "Correspondence Analysis"
 msgstr "対応分析"
 
+#: R/corresp.b.R
 #: R/multcorresp.b.R
-msgid "COS2"
+msgid "Cos²"
 msgstr "コサイン2乗"
 
 #: corresp/options/counts.title
 #: corresp/ui/mode/obsTable[0][0][2].label
 msgid "Counts (optional)"
 msgstr "度数（任意）"
+
+#: R/corresp.b.R
+msgid "Counts are not integers. The χ² test may not be valid."
+msgstr ""
 
 #: R/corresp.b.R
 msgid "Counts may not be infinite."
@@ -576,13 +575,9 @@ msgstr "度数を無限大にすることはできません。"
 msgid "Counts may not be negative."
 msgstr "度数を負にすることはできません。"
 
-#: principal/ui[3][2][0]/biplotType_covPlot.label
-msgid "Cov (Loading principal)"
-msgstr "共分散 (主成分負荷量)"
-
 #: principal/options/biplotType/covPlot.title
-msgid "Covariance (Loading principal)"
-msgstr "共分散 (主成分負荷量)"
+msgid "Covariance"
+msgstr ""
 
 #: R/principal.b.R
 msgid "Covariance Biplot"
@@ -630,6 +625,7 @@ msgstr "ダークグレー"
 msgid "default"
 msgstr "初期値"
 
+#: corresp/results/chisq.columns.title
 #: principal/results/kmoTable.columns.title
 msgid "df"
 msgstr "自由度"
@@ -727,9 +723,8 @@ msgid "Font size"
 msgstr "文字サイズ"
 
 #: principal/options/biplotType/formPlot.title
-#: principal/ui[3][2][0]/biplotType_formPlot.label
-msgid "Form (Score principal)"
-msgstr "形式（主成分得点）"
+msgid "Form"
+msgstr ""
 
 #: R/principal.b.R
 msgid "Form Biplot"
@@ -787,9 +782,11 @@ msgstr "グループ"
 msgid "Indicator matrix"
 msgstr "指標行列"
 
+#: R/corresp.b.R
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
+#: multcorresp/results/categories.columns.title
 msgid "Inertia"
 msgstr "慣性"
 
@@ -1007,10 +1004,6 @@ msgstr "多重対応分析"
 msgid "Multivariate"
 msgstr "多変量"
 
-#: multcorresp/results/observations.columns.title
-msgid "Name"
-msgstr "名前"
-
 #: R/principal.b.R
 msgid "No rotation used."
 msgstr "回転されていません。"
@@ -1061,15 +1054,6 @@ msgstr "次元数"
 msgid "Number of dimensions must be less than or equal to {maxDim}."
 msgstr "次元数は {maxDim} 以下でなければなりません。"
 
-#: multcorresp/options/obsColor.title
-msgid "Obs color"
-msgstr "観測値の色"
-
-#: R/principal.b.R
-#: principal/results/obsTable.columns.title
-msgid "Observation"
-msgstr "観測値"
-
 #: multcorresp/results/obsCoordOV.title
 #: principal/results/obsCoordOV.title
 msgid "Observation Coordinates"
@@ -1113,6 +1097,7 @@ msgstr "観測データ表"
 
 #: multcorresp/options/showObservations.title
 #: multcorresp/options/showObservationPlot.title
+#: multcorresp/options/obsColor.title
 #: principal/options/showObservations.title
 #: principal/options/showObsPlot.title
 #: principal/options/obsLabelSize.title
@@ -1300,6 +1285,7 @@ msgstr "紫 → 赤"
 msgid "Purples"
 msgstr "紫系"
 
+#: R/corresp.b.R
 #: multcorresp/results/categories.columns.title
 msgid "QLT"
 msgstr "品質"
@@ -1393,6 +1379,14 @@ msgstr "行・列の要約"
 #: corresp/ui/mode/contTable[0][0][1].label
 msgid "Row Labels"
 msgstr "行ラベル"
+
+#: R/corresp.b.R
+msgid "Row labels may not be missing."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Row labels must be unique."
+msgstr ""
 
 #: corresp/options/showRowPlot.title
 #: corresp/options/rowTitleText.title
@@ -1571,13 +1565,9 @@ msgstr "サブタイトル文字"
 msgid "Summary"
 msgstr "要約"
 
-#: R/multcorresp.b.R
-msgid "Suppl. variables"
-msgstr "補助変数"
-
 #: corresp/options/supColor.title
-msgid "Supplement"
-msgstr "補助"
+msgid "Supplementary"
+msgstr ""
 
 #: R/corresp.b.R
 msgid "Supplementary column numbers must be a list of numbers, e.g. 1,2,9"
@@ -1645,6 +1635,10 @@ msgstr "文字サイズ"
 #: corresp/ui[5].label
 msgid "Text Size & Colors"
 msgstr "文字サイズと色"
+
+#: R/corresp.b.R
+msgid "The category names {names} are reserved. Please rename these categories."
+msgstr ""
 
 #: R/principal.b.R
 msgid "The correlation matrix is nearly singular. Computations may not be accurate."
@@ -1911,6 +1905,7 @@ msgstr "黄 → 緑"
 msgid "Yellow to Red"
 msgstr "黄 → 赤"
 
-#: R/corresp.b.R
-msgid "χ² = {chisq}, df = {df}, p-value = {pval}"
-msgstr "χ² = {chisq}, df = {df}, p-value = {pval}"
+#: corresp/options/showChisq.title
+#: corresp/results/chisq.title
+msgid "χ² Test"
+msgstr "χ²検定"

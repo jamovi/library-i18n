@@ -23,12 +23,6 @@ msgstr "Rotation {rotation} avec normalisation de Kaiser"
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "La rotation {rotation} avec normalisation de Kaiser a été utilisée."
 
-#: R/corresp.b.R
-#: R/multcorresp.b.R
-#: multcorresp/results/categories.columns.title
-msgid "% Inertia"
-msgstr "% d'inertie"
-
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -71,20 +65,20 @@ msgid ""
 "<li>or a <strong>Contingency table</strong></li>\n"
 "</ul>\n"
 "<p><strong>Supplementary row or column</strong> numbers may be entered as "
-"integer lists : 1,3,6</p>\n"
-"<p>Four normalizations (scaling of row and column scores before plotting) "
-"are available :</p>\n"
+"integer lists: 1,3,6</p>\n"
+"<p>Five normalizations (scaling of row and column scores before plotting) "
+"are available:</p>\n"
 "<ul>\n"
-"<li><strong>Principal:</strong> Row and column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row and column scores are scaled by the "
-"square root of eigenvalues. </li>\n"
-"<li><strong>Row Principal:</strong> Only row scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Column Principal:</strong> Only column scores are scaled by "
-"eigenvalues.</li>\n"
-"<li><strong>Standard:</strong> The raw coordinates without "
-"normalization.</li>\n"
+"<li><strong>Principal:</strong> Row and column scores are in principal "
+"coordinates, i.e. standard coordinates scaled by the singular values.</li>\n"
+"<li><strong>Symmetric:</strong> Row and column scores are standard "
+"coordinates scaled by the square root of the singular values.</li>\n"
+"<li><strong>Row principal:</strong> Row scores are in principal coordinates, "
+"column scores in standard coordinates.</li>\n"
+"<li><strong>Column principal:</strong> Column scores are in principal "
+"coordinates, row scores in standard coordinates.</li>\n"
+"<li><strong>Standard:</strong> Row and column scores are in standard "
+"coordinates (unit weighted variance on each dimension).</li>\n"
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Smoking</p>"
 msgstr ""
@@ -213,7 +207,7 @@ msgid ""
 "variances equal to 1 (instead of eigenvalues)</li>\n"
 "<li><strong>Rotate eigenvectors:</strong> the rotation (varimax, etc) is "
 "applied to eigenvectors (standard loadings) instead of principal loadings "
-"(STATA way).</li>\n"
+"(Stata way).</li>\n"
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Iris</p>"
 msgstr ""
@@ -231,8 +225,8 @@ msgstr ""
 "<li><strong>Form :</strong> Les coordonnées des observations sont "
 "principales (mis à l'échelle par les valeurs propres) tandis que celles des "
 "variables sont standardisées.</li>\n"
-"<li><strong>Cov :</strong> Les coordonnées des variables sont principales "
-"tandis que celles des observations sont standardisées. </li>\n"
+"<li><strong>Covariance :</strong> Les coordonnées des variables sont "
+"principales tandis que celles des observations sont standardisées. </li>\n"
 "</ul>\n"
 "<p><strong>Options avancées :</strong></p>\n"
 "<ul>\n"
@@ -244,7 +238,7 @@ msgstr ""
 "valeurs propres).</li>\n"
 "<li><strong>Rotation des vecteurs propres :</strong> la rotation (varimax, "
 "etc.) est appliquée aux vecteurs propres (coordonnées standardisées) au lieu "
-"des coordonnées principales (méthode STATA).</li>\n"
+"des coordonnées principales (méthode Stata).</li>\n"
 "</ul>\n"
 "<p>Un fichier de démonstration est disponible dans Ouvrir > Bibliothèque de "
 "données > vijMulti > Iris</p>"
@@ -600,14 +594,19 @@ msgstr "Coordonnées"
 msgid "Correspondence Analysis"
 msgstr "Analyse des correspondances"
 
+#: R/corresp.b.R
 #: R/multcorresp.b.R
-msgid "COS2"
-msgstr "COS2"
+msgid "Cos²"
+msgstr "Cos²"
 
 #: corresp/options/counts.title
 #: corresp/ui/mode/obsTable[0][0][2].label
 msgid "Counts (optional)"
 msgstr "Effectifs (optionnel)"
+
+#: R/corresp.b.R
+msgid "Counts are not integers. The χ² test may not be valid."
+msgstr "Les effectifs ne sont pas entiers. Le test du χ² peut ne pas être valide."
 
 #: R/corresp.b.R
 msgid "Counts may not be infinite."
@@ -617,13 +616,9 @@ msgstr "Les effectifs ne peuvent pas être infinis."
 msgid "Counts may not be negative."
 msgstr "Les effectifs ne peuvent pas être négatifs."
 
-#: principal/ui[3][2][0]/biplotType_covPlot.label
-msgid "Cov (Loading principal)"
-msgstr "Cov (Var. principales)"
-
 #: principal/options/biplotType/covPlot.title
-msgid "Covariance (Loading principal)"
-msgstr "Covariance (Variables principales)"
+msgid "Covariance"
+msgstr "Covariance"
 
 #: R/principal.b.R
 msgid "Covariance Biplot"
@@ -671,6 +666,7 @@ msgstr "Gris foncé"
 msgid "default"
 msgstr "par défaut"
 
+#: corresp/results/chisq.columns.title
 #: principal/results/kmoTable.columns.title
 msgid "df"
 msgstr "ddl"
@@ -768,9 +764,8 @@ msgid "Font size"
 msgstr "Taille de police"
 
 #: principal/options/biplotType/formPlot.title
-#: principal/ui[3][2][0]/biplotType_formPlot.label
-msgid "Form (Score principal)"
-msgstr "Form (Obs. principales)"
+msgid "Form"
+msgstr "Form"
 
 #: R/principal.b.R
 msgid "Form Biplot"
@@ -828,9 +823,11 @@ msgstr "Groupe"
 msgid "Indicator matrix"
 msgstr "Tableau disjonctif"
 
+#: R/corresp.b.R
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
+#: multcorresp/results/categories.columns.title
 msgid "Inertia"
 msgstr "Inertie"
 
@@ -1048,10 +1045,6 @@ msgstr "Analyse des correspondances multiples"
 msgid "Multivariate"
 msgstr "Multivarié"
 
-#: multcorresp/results/observations.columns.title
-msgid "Name"
-msgstr "Nom"
-
 #: R/principal.b.R
 msgid "No rotation used."
 msgstr "Aucune rotation appliquée."
@@ -1102,15 +1095,6 @@ msgstr "Nombre de dimensions"
 msgid "Number of dimensions must be less than or equal to {maxDim}."
 msgstr "Le nombre de dimensions doit être inférieur ou égal à {maxDim}."
 
-#: multcorresp/options/obsColor.title
-msgid "Obs color"
-msgstr "Couleur obs."
-
-#: R/principal.b.R
-#: principal/results/obsTable.columns.title
-msgid "Observation"
-msgstr "Observation"
-
 #: multcorresp/results/obsCoordOV.title
 #: principal/results/obsCoordOV.title
 msgid "Observation Coordinates"
@@ -1154,6 +1138,7 @@ msgstr "Table des observations"
 
 #: multcorresp/options/showObservations.title
 #: multcorresp/options/showObservationPlot.title
+#: multcorresp/options/obsColor.title
 #: principal/options/showObservations.title
 #: principal/options/showObsPlot.title
 #: principal/options/obsLabelSize.title
@@ -1341,6 +1326,7 @@ msgstr "Violet à rouge"
 msgid "Purples"
 msgstr "Violets"
 
+#: R/corresp.b.R
 #: multcorresp/results/categories.columns.title
 msgid "QLT"
 msgstr "QLT"
@@ -1434,6 +1420,14 @@ msgstr "Résumés des lignes et colonnes"
 #: corresp/ui/mode/contTable[0][0][1].label
 msgid "Row Labels"
 msgstr "Étiquette des lignes"
+
+#: R/corresp.b.R
+msgid "Row labels may not be missing."
+msgstr "Les étiquettes de ligne ne doivent pas être manquantes."
+
+#: R/corresp.b.R
+msgid "Row labels must be unique."
+msgstr "Les étiquettes de ligne doivent être uniques."
 
 #: corresp/options/showRowPlot.title
 #: corresp/options/rowTitleText.title
@@ -1612,12 +1606,8 @@ msgstr "Texte des sous-titres"
 msgid "Summary"
 msgstr "Résumé"
 
-#: R/multcorresp.b.R
-msgid "Suppl. variables"
-msgstr "Variables sup."
-
 #: corresp/options/supColor.title
-msgid "Supplement"
+msgid "Supplementary"
 msgstr "Supplémentaire"
 
 #: R/corresp.b.R
@@ -1690,6 +1680,12 @@ msgstr "Taille du texte"
 #: corresp/ui[5].label
 msgid "Text Size & Colors"
 msgstr "Taille du texte & couleurs"
+
+#: R/corresp.b.R
+msgid "The category names {names} are reserved. Please rename these categories."
+msgstr ""
+"Les noms de catégories {names} sont réservés. Veuillez renommer ces "
+"catégories."
 
 #: R/principal.b.R
 msgid "The correlation matrix is nearly singular. Computations may not be accurate."
@@ -1966,6 +1962,7 @@ msgstr "Jaune à vert"
 msgid "Yellow to Red"
 msgstr "Jaune à rouge"
 
-#: R/corresp.b.R
-msgid "χ² = {chisq}, df = {df}, p-value = {pval}"
-msgstr "χ² = {chisq}, df = {df}, p-value = {pval}"
+#: corresp/options/showChisq.title
+#: corresp/results/chisq.title
+msgid "χ² Test"
+msgstr "Test du χ²"
