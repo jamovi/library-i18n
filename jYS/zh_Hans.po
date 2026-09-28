@@ -106,6 +106,13 @@ msgid ""
 "positive difference when none actually exists)."
 msgstr "<b>Alpha（α）</b>：显著性水平，表示可接受的最大犯第一类错误的概率（即实际不存在差异时误检出有差异，即假阳性）。"
 
+#: R/mdca.b.R
+msgid ""
+"<b>Avoided at 20%</b>: reduction in unnecessary interventions per 100 "
+"patients compared to Treat All, without missing true positive cases: "
+"(NB_model - NB_all) / [pt / (1 - pt)] * 100 evaluated at pt = 0.20."
+msgstr ""
+
 #: R/mui.b.R
 msgid ""
 "<b>Balance</b> - balance between correctly and incorrectly classified cases "
@@ -132,9 +139,33 @@ msgid ""
 "point."
 msgstr "<b>介数中心性</b>：所有节点对之间的最短路径中经过该节点的数量；反映其作为“桥梁”或中转点的重要。"
 
+#: R/mdca.b.R
+msgid ""
+"<b>Brier Score</b>: mean squared error between predicted probabilities and "
+"binary outcomes: BS = (1/N) * sum((p - y)^2). Overall accuracy metric "
+"combining discrimination and calibration (0 = perfect, 1 = worst). Values "
+"below the cohort incidence indicate informative predictions."
+msgstr ""
+
 #: R/mpwr.b.R
 msgid "<b>Calculated parameter</b>:"
 msgstr "<b>计算参数</b>："
+
+#: R/mdca.b.R
+msgid ""
+"<b>Calibration Intercept</b>: calibration-in-the-large reflecting systematic "
+"over- or underestimation with slope fixed to 1. Ideal value is 0.000. "
+"Negative values indicate systematic overestimation of cohort risk; positive "
+"values indicate underestimation."
+msgstr ""
+
+#: R/mdca.b.R
+msgid ""
+"<b>Calibration Slope</b>: regression slope of log-odds predicted risk. Ideal "
+"value is 1.000. Values < 1 indicate overfitting (risk overestimation in "
+"high-risk patients and underestimation in low-risk patients), while values > "
+"1 indicate underfitting (predictions shrunk toward cohort incidence)."
+msgstr ""
 
 #: R/mui.b.R
 msgid ""
@@ -162,6 +193,30 @@ msgid ""
 "<b>Classification</b> defines the epistatic model: subjects in HR cells are "
 "predicted as cases, LR cells as controls."
 msgstr "<b>分类</b> 定义了上位模型：HR细胞中的受试者被预测为病例，LR细胞中的受试者被预测为对照。"
+
+#: R/mdca.b.R
+msgid ""
+"<b>Clinical Decision Window</b>: range of decision thresholds [Min %, Max %] "
+"where the model yields higher Net Benefit than both default strategies "
+"(NB_model > max(NB_all, 0)). Below Min %, Treat All is preferred; above Max "
+"%, Treat None is preferred."
+msgstr ""
+
+#: R/mdca.b.R
+msgid ""
+"<b>Clinical Selection Rule</b>: a model is clinically useful at threshold pt "
+"if its Net Benefit is strictly higher than both default strategies (NB_model "
+"> NB_all and NB_model > 0). Among competing models, the one with the highest "
+"Net Benefit at the clinically acceptable threshold should be chosen."
+msgstr ""
+
+#: R/mdca.b.R
+msgid ""
+"<b>Clinical Superiority</b>: overall verdict on model utility. 'Superior' "
+"indicates that the model provides clinical gain over both default strategies "
+"across a meaningful threshold range; 'No clinical gain' indicates that "
+"testing offers no improvement over default strategies."
+msgstr ""
 
 #: R/mcor.b.R
 msgid ""
@@ -210,6 +265,20 @@ msgstr ""
 #: R/mpwr.b.R
 msgid "<b>Design</b>:"
 msgstr "<b>设计</b>："
+
+#: R/mdca.b.R
+msgid ""
+"<b>E avg</b>: average absolute difference between non-parametric "
+"LOESS-calibrated probability and predicted risk across all patients. "
+"Reflects average individual risk miscalibration."
+msgstr ""
+
+#: R/mdca.b.R
+msgid ""
+"<b>E max</b>: maximum absolute difference between LOESS-calibrated "
+"probability and predicted risk across the risk spectrum. Reflects the "
+"worst-case local probability error."
+msgstr ""
 
 #: R/mpwr.b.R
 msgid "<b>Effect size measure</b>: Cohen's d"
@@ -545,6 +614,15 @@ msgid ""
 "the single group, or total number of pairs for paired comparisons)."
 msgstr "<b>N1</b>：表示所需样本量（单组中的受试者总人数，或配对比较中的配对数）。"
 
+#: R/mdca.b.R
+msgid ""
+"<b>Net Benefit (NB)</b>: clinical utility calculated as NB = (TP/N) - (FP/N) "
+"* [pt / (1 - pt)] - harm. Represents the equivalent number of true positive "
+"diagnoses per patient without increasing unnecessary false positive "
+"interventions. The weighting factor [pt / (1 - pt)] reflects the relative "
+"harm of a false positive vs the benefit of a true positive."
+msgstr ""
+
 #: R/mui.b.R
 msgid "<b>NPV</b> - Negative Predictive Value of the negative class TN/(TN+FN)"
 msgstr "<b>NPV</b> — 阴性预测值，TN/(TN+FN)"
@@ -579,6 +657,13 @@ msgstr ""
 msgid ""
 "<b>OOB Accuracy</b>: out-of-bag accuracy estimated from bootstrap samples "
 "not used for training each tree."
+msgstr ""
+
+#: R/mdca.b.R
+msgid ""
+"<b>Optimal Threshold</b>: decision threshold pt at which the model achieves "
+"its maximum Net Benefit (Max Net Benefit). Balances detection of true events "
+"with avoidance of unnecessary interventions in the evaluated cohort."
 msgstr ""
 
 #: R/msnp.b.R
@@ -653,6 +738,13 @@ msgid ""
 "unclassified."
 msgstr "<b>比值</b> = 病例数 / 对照数。空单元格（无观测）不予分类。"
 
+#: R/mdca.b.R
+msgid ""
+"<b>Recalibration</b>: Platt scaling (logistic calibration) applied to input "
+"probabilities to remove systematic bias, adjust slope toward 1.000, and "
+"align intercept to 0.000 while preserving ROC discrimination."
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "<b>Schoenfeld residuals test</b> evaluates the proportional hazards (PH) "
@@ -696,6 +788,13 @@ msgid ""
 "strongly a node is directly connected to its neighbors."
 msgstr "<b>强度</b>：连接边绝对权重之和；反映节点与其邻居节点直接连接的强弱程度。"
 
+#: R/mdca.b.R
+msgid ""
+"<b>Test Harm</b>: a penalty of {harm} Net Benefit units is deducted per "
+"patient to account for financial costs, invasiveness, discomfort, or "
+"procedural complications of testing."
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "<b>Time-dependent ROC</b> analysis (Heagerty et al., 2000) evaluates the "
@@ -721,6 +820,22 @@ msgid ""
 "predictive performance."
 msgstr "<b>训练BA</b> 可能存在乐观偏差。<b>检验BA</b> 在留出的折上计算，提供对预测性能的无偏估计。"
 
+#: R/mdca.b.R
+msgid ""
+"<b>Treat All</b>: strategy of offering intervention to all patients without "
+"diagnostic testing (NB = Prevalence - (1 - Prevalence) * [pt / (1 - pt)] - "
+"harm). Yields high net benefit at low thresholds, but drops rapidly with "
+"increasing pt and produces net clinical harm when unnecessary interventions "
+"outweigh true detections."
+msgstr ""
+
+#: R/mdca.b.R
+msgid ""
+"<b>Treat None</b>: strategy of offering intervention to no patients. Net "
+"Benefit is identically zero (NB = 0) across all decision thresholds pt, as "
+"there are neither true positive benefits nor false positive harms."
+msgstr ""
+
 #: R/mui.b.R
 msgid ""
 "<b>Uncertain Interval (UI)</b> is placed around the point of intersection "
@@ -736,6 +851,13 @@ msgstr "<b>不确定区间</b>：指检测分数中无法得出明确结论、�
 #: R/mmlp.b.R
 msgid "<b>Weight Decay</b>: L2 regularization penalty parameter."
 msgstr "<b>权重衰减</b>：L2正则化惩罚参数。"
+
+#: R/mdca.b.R
+msgid ""
+"<b>Window Span</b>: width of the clinical decision window (Max % - Min %). A "
+"wider span (> 20-30%) demonstrates robustness of the model's clinical "
+"utility across diverse practitioner and patient risk tolerances."
+msgstr ""
 
 #: R/mmf.b.R
 msgid "<h2>Help</h2><div>Please select complete and incomplete variables</div>"
@@ -842,6 +964,7 @@ msgstr "先验功效分析"
 msgid "A Priori Power Analysis Results"
 msgstr "先验功效分析结果"
 
+#: mDCA/options/palBrewer/Accent.title
 #: mLR/options/palBrewer/Accent.title
 #: mMLP/options/palBrewer/Accent.title
 #: mPCA/options/palBrewer/Accent.title
@@ -910,6 +1033,10 @@ msgstr "备选"
 #: mMF/results/estim/fMARtab.description
 msgid "an array of MARs"
 msgstr "MARs 阵列"
+
+#: mDCA/ui[2].label
+msgid "Analysis & Plot Options"
+msgstr ""
 
 #: mPCA/ui[3].label
 msgid "Analysis by Groups"
@@ -987,6 +1114,10 @@ msgstr "平均集群大小（m）"
 #: mCOR/options/clustMet/average.title
 msgid "Average Linkage (UPGMA)"
 msgstr "平均连结法（UPGMA）"
+
+#: mDCA/results/windowTable.columns.title
+msgid "Avoided at 20% (per 100)"
+msgstr ""
 
 #: mLR/ui[3]/show_roc/roc_unit.label
 #: mMLP/ui[3]/show_roc/roc_unit.label
@@ -1123,6 +1254,10 @@ msgstr "含离群值的箱线图"
 msgid "Brewer's qualitative palette"
 msgstr "Brewer 定性调色板"
 
+#: mDCA/results/calTable.columns.title
+msgid "Brier Score"
+msgstr ""
+
 #: R/msnp.b.R
 msgid "Ca"
 msgstr "Ca：病例组"
@@ -1144,6 +1279,18 @@ msgid ""
 "Calculations for survival log-rank test are based on Schoenfeld's asymptotic "
 "approximation. N1 represents the total number of events required."
 msgstr "生存分析对数秩检验的计算基于Schoenfeld渐近近似。N1表示所需的总事件数。"
+
+#: mDCA/options/calBins.title
+msgid "Calibration Deciles (Bins)"
+msgstr ""
+
+#: mDCA/results/calTable.columns.title
+msgid "Calibration Intercept"
+msgstr ""
+
+#: mDCA/results/calTable.columns.title
+msgid "Calibration Slope"
+msgstr ""
 
 #: R/msnp.b.R
 #: mSNP/results/qcGroup/qcTable.columns.title
@@ -1307,6 +1454,22 @@ msgstr "完全随机缺失分类 (MCAR)"
 #: mUI/ui[0][1].label
 msgid "Classifying variable"
 msgstr "分类变量"
+
+#: mDCA/results/windowTable.title
+msgid "Clinical Decision Window"
+msgstr ""
+
+#: mDCA/options/showWindowTable.title
+msgid "Clinical Decision Window Table"
+msgstr ""
+
+#: mDCA/results/windowTable.columns.title
+msgid "Clinical Superiority"
+msgstr ""
+
+#: mDCA/ui[1].label
+msgid "Clinical Threshold Settings"
+msgstr ""
 
 #: mLR/options/forestClip.title
 #: mLR/ui[3]/showForest/forestClip.label
@@ -1492,6 +1655,11 @@ msgstr "混淆矩阵"
 #: R/mpca.b.R
 msgid "Contingency Matrix (Clusters vs Groups):"
 msgstr "列联矩阵（集群 vs 组别）："
+
+#: mDCA/options/scores.title
+#: mDCA/ui[0][2].label
+msgid "Continuous Predictors / Scores"
+msgstr ""
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Controls"
@@ -1701,6 +1869,7 @@ msgstr "D'"
 msgid "D²"
 msgstr "D²"
 
+#: mDCA/options/palBrewer/Dark2.title
 #: mLR/options/palBrewer/Dark2.title
 #: mMLP/options/palBrewer/Dark2.title
 #: mPCA/options/palBrewer/Dark2.title
@@ -1735,6 +1904,51 @@ msgstr "小数（0到1）"
 msgid "decision"
 msgstr "决策"
 
+#: package/analyses/mDCA.title
+#: package/analyses/mDCA.menuTitle
+#: mDCA/options.title
+#: mDCA/options.menuTitle
+#: mDCA/ui.title
+#: mDCA/results.title
+msgid "Decision Curve Analysis (DCA)"
+msgstr ""
+
+#: package/datasets/DecisionCurveAnalysisCHDmodels.description
+msgid ""
+"Decision Curve Analysis (DCA) and Model Calibration for CHD prediction "
+"models demonstration"
+msgstr ""
+
+#: package/analyses/mDCA.description
+#: mDCA/options.description.main
+msgid ""
+"Decision Curve Analysis (DCA) and Model Calibration. Evaluates clinical net "
+"benefit (Vickers et al., 2006) and interventions avoided for predictive "
+"models and biomarkers."
+msgstr ""
+
+#: R/mdca.b.R
+msgid ""
+"Decision Curve Analysis (DCA) evaluates the clinical net benefit of "
+"prediction models and biomarkers across a range of decision thresholds."
+msgstr ""
+
+#: R/mdca.b.R
+msgid "Decision Curve Analysis (Net Benefit)"
+msgstr ""
+
+#: package/datasets/DecisionCurveAnalysisCHDmodels.name
+msgid "Decision Curve Analysis CHD models"
+msgstr ""
+
+#: mDCA/results/dcaPlot.title
+msgid "Decision Curves (Net Benefit vs Threshold)"
+msgstr ""
+
+#: mDCA/options/showDcaPlot.title
+msgid "Decision Curves Plot (Net Benefit)"
+msgstr ""
+
 #: mMF/results/estim/mcar.columns.title
 msgid "Degree of Freedom (df)"
 msgstr "自由度 (df)"
@@ -1744,6 +1958,8 @@ msgstr "自由度 (df)"
 msgid "Degrees of freedom"
 msgstr "自由度"
 
+#: mDCA/options/dep.title
+#: mDCA/ui[0][0].label
 #: mLR/options/dep.title
 #: mLR/ui[0][0].label
 #: mMLP/options/dep.title
@@ -1822,6 +2038,14 @@ msgstr "虚线"
 
 #: R/mcor.b.R
 msgid "Dropped Cases (%)"
+msgstr ""
+
+#: mDCA/results/calTable.columns.title
+msgid "E avg"
+msgstr ""
+
+#: mDCA/results/calTable.columns.title
+msgid "E max"
 msgstr ""
 
 #: mCOR/options/glassoType/ebic.title
@@ -2043,8 +2267,9 @@ msgid ""
 "Uncertain Interval (UI) threshold estimation, a priori power analysis, MLP "
 "neural network classifier, logistic regression with feature selection, "
 "Random Forest classifier, survival analysis (Kaplan-Meier and Cox "
-"regression), Principal Component Analysis (PCA), and Single Nucleotide "
-"Polymorphism (SNP) association and Hardy-Weinberg equilibrium analysis."
+"regression), Principal Component Analysis (PCA), Single Nucleotide "
+"Polymorphism (SNP) association and Hardy-Weinberg equilibrium analysis, and "
+"Decision Curve Analysis (DCA) with model calibration."
 msgstr ""
 
 #: mSNP/results/hweGroup/hwTable.columns.title
@@ -2227,6 +2452,10 @@ msgstr "基因型病例"
 msgid "Genotypes Controls"
 msgstr "基因型对照"
 
+#: R/mdca.b.R
+msgid "Getting started:"
+msgstr ""
+
 #: mCOR/options/netMethod/glasso.title
 msgid "Graphical Lasso (GLASSO)"
 msgstr "图形Lasso（GLASSO）"
@@ -2295,6 +2524,10 @@ msgstr "Hardy-Weinberg平衡 (HWE) 分析"
 #: mSNP/results/hweGroup/hwTable.title
 msgid "Hardy-Weinberg Equilibrium Statistical Tests"
 msgstr "Hardy-Weinberg平衡统计检验"
+
+#: mDCA/options/harm.title
+msgid "Harm of Intervention"
+msgstr ""
 
 #: R/mpwr.b.R
 #: R/msrv.b.R
@@ -2569,6 +2802,10 @@ msgstr "初始权重范围"
 msgid "Input Layer"
 msgstr "输入层"
 
+#: mDCA/results/instructions.title
+msgid "Instructions"
+msgstr ""
+
 #: R/msnp.b.R
 msgid "Interaction Order"
 msgstr "交互作用阶数"
@@ -2598,6 +2835,14 @@ msgstr "区间确定方法"
 msgid "Intervals Estimation"
 msgstr "区间估计"
 
+#: R/mdca.b.R
+msgid "Interventions Avoided (per 100 patients)"
+msgstr ""
+
+#: mDCA/options/showAvoidedPlot.title
+msgid "Interventions Avoided Plot"
+msgstr ""
+
 #: mPWR/options/icc.title
 #: mPWR/ui[1]/icc.label
 msgid "Intraclass correlation (ICC)"
@@ -2618,19 +2863,21 @@ msgid "IQR Tukey's fences"
 msgstr "四分位距 Tukey 围栏"
 
 #: package/analyses/mCOR.menuGroup
-#: package/analyses/mROC.menuGroup
+#: package/analyses/mPCA.menuGroup
 #: package/analyses/mMF.menuGroup
 #: package/analyses/mOUT.menuGroup
 #: package/analyses/mMOUT.menuGroup
-#: package/analyses/mUI.menuGroup
-#: package/analyses/mPWR.menuSubgroup
-#: package/analyses/mMLP.menuGroup
 #: package/analyses/mLR.menuGroup
 #: package/analyses/mRF.menuGroup
+#: package/analyses/mMLP.menuGroup
 #: package/analyses/mSRV.menuGroup
-#: package/analyses/mPCA.menuGroup
+#: package/analyses/mROC.menuGroup
+#: package/analyses/mDCA.menuGroup
+#: package/analyses/mUI.menuGroup
 #: package/analyses/mSNP.menuGroup
+#: package/analyses/mPWR.menuSubgroup
 #: mCOR/options.menuGroup
+#: mDCA/options.menuGroup
 #: mLR/options.menuGroup
 #: mMF/options.menuGroup
 #: mMLP/options.menuGroup
@@ -3042,9 +3289,21 @@ msgstr "最大迭代次数"
 msgid "Max Iterations (Epochs)"
 msgstr "最大迭代次数（轮数）"
 
+#: mDCA/results/dcaTable.columns.title
+msgid "Max Net Benefit"
+msgstr ""
+
+#: mDCA/results/windowTable.columns.title
+msgid "Max Threshold (%)"
+msgstr ""
+
 #: mMF/options/maxiter.title
 msgid "Maximum number of iterations"
 msgstr "最大迭代次数"
+
+#: mDCA/options/threshMax.title
+msgid "Maximum Threshold"
+msgstr ""
 
 #: mRF/options/maxdepth.title
 #: mRF/ui[1]/maxdepth.label
@@ -3099,6 +3358,10 @@ msgstr "平均准确率下降量"
 msgid "Mean Decrease in Accuracy (%)"
 msgstr "平均准确率下降量（%）"
 
+#: R/mdca.b.R
+msgid "Mean Predicted Probability"
+msgstr ""
+
 #: R/mout.b.R
 msgid "Median"
 msgstr "中位数"
@@ -3132,6 +3395,10 @@ msgstr "度量 / 集群"
 
 #: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
 msgid "Metric / Target"
+msgstr ""
+
+#: mDCA/results/windowTable.columns.title
+msgid "Min Threshold (%)"
 msgstr ""
 
 #: mPWR/options/es.title
@@ -3168,6 +3435,10 @@ msgstr "最小等位基因频率阈值"
 #: mRF/options/nodesize.title
 #: mRF/ui[1]/nodesize.label
 msgid "Minimum Node Size"
+msgstr ""
+
+#: mDCA/options/threshMin.title
+msgid "Minimum Threshold"
 msgstr ""
 
 #: R/mlr.b.R
@@ -3276,8 +3547,36 @@ msgid ""
 "partitioning use a hardcoded random seed (42) for reproducibility."
 msgstr "MLP神经网络分类器。注意，权重初始化和数据划分使用固定随机种子（42）以确保结果可复现。"
 
+#: R/mdca.b.R
 #: R/msnp.b.R
+#: mDCA/results/calTable.columns.title
 msgid "Model"
+msgstr ""
+
+#: mDCA/results/dcaTable.columns.title
+#: mDCA/results/windowTable.columns.title
+msgid "Model / Predictor"
+msgstr ""
+
+#: mDCA/ui[3].label
+msgid "Model Calibration"
+msgstr ""
+
+#: R/mdca.b.R
+#: mDCA/results/calPlot.title
+msgid "Model Calibration Curves (Observed vs Predicted)"
+msgstr ""
+
+#: mDCA/results/calTable.title
+msgid "Model Calibration Metrics"
+msgstr ""
+
+#: mDCA/options/showCalPlot.title
+msgid "Model Calibration Plot"
+msgstr ""
+
+#: mDCA/options/showCalTable.title
+msgid "Model Calibration Table"
 msgstr ""
 
 #: mLR/results/coeffTable.title
@@ -3305,6 +3604,11 @@ msgstr "模型参数"
 #: mSNP/options/mdrBarPlot.title
 msgid "Model performance barplot"
 msgstr "模型性能条形图"
+
+#: mDCA/options/probs.title
+#: mDCA/ui[0][1].label
+msgid "Model Probabilities (0 to 1)"
+msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -3368,6 +3672,10 @@ msgstr "多重检验校正"
 msgid "Multivariate outliers identification and removal"
 msgstr "多元异常值识别与剔除"
 
+#: R/mdca.b.R
+msgid "must be probabilities between 0 and 1."
+msgstr ""
+
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "N at Risk"
 msgstr "风险例数"
@@ -3405,6 +3713,22 @@ msgstr "N1"
 msgid "N2"
 msgstr "N2"
 
+#: mDCA/results/dcaTable.columns.title
+msgid "NB at 10%"
+msgstr ""
+
+#: mDCA/results/dcaTable.columns.title
+msgid "NB at 20%"
+msgstr ""
+
+#: mDCA/results/dcaTable.columns.title
+msgid "NB at 30%"
+msgstr ""
+
+#: mDCA/results/dcaTable.columns.title
+msgid "NB at 40%"
+msgstr ""
+
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Negative Predictive Value (NPV)"
@@ -3413,6 +3737,26 @@ msgstr "阴性预测值（NPV）"
 #: R/mmlp.b.R
 msgid "Negative Weight"
 msgstr "负权重"
+
+#: R/mdca.b.R
+msgid "Net Benefit"
+msgstr ""
+
+#: mDCA/results/dcaTable.title
+msgid "Net Benefit at Key Clinical Thresholds"
+msgstr ""
+
+#: mDCA/options/showDcaTable.title
+msgid "Net Benefit Summary Table"
+msgstr ""
+
+#: R/mdca.b.R
+msgid "Net Reduction in Interventions"
+msgstr ""
+
+#: mDCA/results/avoidedPlot.title
+msgid "Net Reduction in Interventions (per 100 patients)"
+msgstr ""
 
 #: R/mcor.b.R
 msgid "Network ("
@@ -3451,6 +3795,10 @@ msgstr "神经网络分类"
 #: package/datasets/NeuralNetworkClassification.description
 msgid "Neural Network Classifier (multilayer perceptron) demonstration"
 msgstr "神经网络分类器（多层感知机）演示"
+
+#: R/mdca.b.R
+msgid "No clinical gain"
+msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -3654,6 +4002,10 @@ msgstr ""
 msgid "Observed p-value (-log10)"
 msgstr "观测 p 值 (-log10)"
 
+#: R/mdca.b.R
+msgid "Observed Proportion of Events"
+msgstr ""
+
 #: R/msnp.b.R
 #: mSNP/results/assocGroup/assocTable.columns.title
 msgid "Odds Ratio"
@@ -3722,6 +4074,10 @@ msgstr ""
 #: mMF/results/imput/errors.description
 msgid "OOB errors table"
 msgstr "OOB误差表"
+
+#: mDCA/results/dcaTable.columns.title
+msgid "Optimal Threshold"
+msgstr ""
 
 #: R/msnp.b.R
 #: mSNP/results/assocGroup/assocTable.columns.title
@@ -3896,6 +4252,7 @@ msgid ""
 "them."
 msgstr "此分析需要“ppcor”和“qgraph”两个R包，请先安装。"
 
+#: mDCA/options/palBrewer/Paired.title
 #: mLR/options/palBrewer/Paired.title
 #: mMLP/options/palBrewer/Paired.title
 #: mPCA/options/palBrewer/Paired.title
@@ -4380,6 +4737,7 @@ msgstr "HWE的Q-Q图"
 msgid "Q-Q plot of HWE p-values"
 msgstr "HWE p值的Q-Q图"
 
+#: mDCA/options/palBrewer.title
 #: mSRV/options/palBrewer.title
 msgid "Qualitative Palette"
 msgstr "定性调色板"
@@ -4459,6 +4817,10 @@ msgstr "随机种子"
 msgid "Rank"
 msgstr "秩"
 
+#: mDCA/options/recalibrate.title
+msgid "Recalibrate Probabilities (Platt Scaling)"
+msgstr ""
+
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/recessive.title
 msgid "Recessive"
@@ -4470,6 +4832,9 @@ msgstr ""
 
 #: mLR/options/refLevel.title
 #: mLR/ui[0][0]/refLevel.label
+msgid "Reference"
+msgstr ""
+
 #: mUI/options/refval.title
 msgid "Reference level"
 msgstr "参照水平"
@@ -4478,11 +4843,13 @@ msgstr "参照水平"
 msgid "Reference level: {ref}"
 msgstr "参照水平：{ref}"
 
-#: package/analyses/mROC.menuSubgroup
-#: package/analyses/mMLP.menuSubgroup
 #: package/analyses/mLR.menuSubgroup
 #: package/analyses/mRF.menuSubgroup
+#: package/analyses/mMLP.menuSubgroup
 #: package/analyses/mSRV.menuSubgroup
+#: package/analyses/mROC.menuSubgroup
+#: package/analyses/mDCA.menuSubgroup
+#: mDCA/options.menuSubgroup
 #: mLR/options.menuSubgroup
 #: mMLP/options.menuSubgroup
 #: mRF/options.menuSubgroup
@@ -4806,6 +5173,10 @@ msgstr "Schoenfeld残差图"
 msgid "Schoenfeld Residuals Plots"
 msgstr "Schoenfeld残差图"
 
+#: R/mdca.b.R
+msgid "Score"
+msgstr ""
+
 #: mPCA/options/screePlot.title
 msgid "Scree plot with parallel analysis"
 msgstr "碎石图（含平行分析）"
@@ -4838,6 +5209,12 @@ msgstr "SE — 标准误"
 #: mRF/ui[2]/seed.label
 msgid "Seed number"
 msgstr "随机种子数"
+
+#: R/mdca.b.R
+msgid ""
+"Select a binary target variable (Outcome), target event level, and at least "
+"one model probability column (values between 0 and 1)."
+msgstr ""
 
 #: mCOR/options/selgroup.title
 #: mROC/options/selgroup.title
@@ -4907,6 +5284,7 @@ msgstr "分开"
 msgid "Separate Plots (Class-Specific)"
 msgstr "分开图（按类别）"
 
+#: mDCA/options/palBrewer/Set1.title
 #: mLR/options/palBrewer/Set1.title
 #: mMLP/options/palBrewer/Set1.title
 #: mPCA/options/palBrewer/Set1.title
@@ -4916,6 +5294,7 @@ msgstr "分开图（按类别）"
 msgid "Set1"
 msgstr "组1"
 
+#: mDCA/options/palBrewer/Set2.title
 #: mLR/options/palBrewer/Set2.title
 #: mMLP/options/palBrewer/Set2.title
 #: mPCA/options/palBrewer/Set2.title
@@ -4925,6 +5304,7 @@ msgstr "组1"
 msgid "Set2"
 msgstr "组2"
 
+#: mDCA/options/palBrewer/Set3.title
 #: mLR/options/palBrewer/Set3.title
 #: mMLP/options/palBrewer/Set3.title
 #: mPCA/options/palBrewer/Set3.title
@@ -5131,6 +5511,10 @@ msgstr "状态变量必须为因子型、字符型或数值型。"
 msgid "Std. Error"
 msgstr "标准误"
 
+#: R/mdca.b.R
+msgid "Strategy / Model"
+msgstr ""
+
 #: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Strength"
@@ -5143,6 +5527,10 @@ msgstr "依次"
 #: R/mui.b.R
 msgid "Sum"
 msgstr "总和"
+
+#: R/mdca.b.R
+msgid "Superior"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/superior.title
@@ -5197,6 +5585,15 @@ msgstr "尾数"
 #: mMLP/options/activation/tanh.title
 msgid "Tanh"
 msgstr "Tanh 函数"
+
+#: mDCA/options/targetLevel.title
+#: mDCA/ui[0][0]/targetLevel.label
+msgid "Target"
+msgstr ""
+
+#: R/mdca.b.R
+msgid "Target variable must contain both positive and negative cases."
+msgstr ""
 
 #: mSNP/options/ternaryPlot.title
 #: mSNP/results/hweGroup/ternaryPlot.title
@@ -5298,6 +5695,14 @@ msgstr "Z分数的阈值"
 msgid "Threshold on Youden"
 msgstr "约登指数对应的阈值"
 
+#: R/mdca.b.R
+msgid "Threshold Probability"
+msgstr ""
+
+#: mDCA/options/threshStep.title
+msgid "Threshold Step"
+msgstr ""
+
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "Time"
 msgstr "时间"
@@ -5336,6 +5741,12 @@ msgstr "时间依赖性ROC结果"
 #: R/mpca.b.R
 msgid "Too few observations after removing missing values (minimum 5 required)."
 msgstr "剔除缺失值后观测数过少（至少需要5个）。"
+
+#: R/mdca.b.R
+msgid ""
+"Too few valid observations for Decision Curve Analysis (at least 10 "
+"required)."
+msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -5404,6 +5815,14 @@ msgstr "训练准确率（%）"
 #: mSNP/results/mdrGroup/mdrBestTable.columns.title
 msgid "Training BA"
 msgstr "训练 BA"
+
+#: R/mdca.b.R
+msgid "Treat All"
+msgstr ""
+
+#: R/mdca.b.R
+msgid "Treat None"
+msgstr ""
 
 #: mSNP/options/assocForestTrunc.title
 msgid "Truncate large confidence intervals"
@@ -5539,6 +5958,10 @@ msgstr "值"
 msgid "Value / Match count"
 msgstr "值 / 匹配计数"
 
+#: R/mdca.b.R
+msgid "Values of"
+msgstr ""
+
 #: R/mpca.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 #: mMF/results/estim/mars.columns.title
@@ -5623,6 +6046,10 @@ msgstr "权重衰减（L2正则化）"
 #: mMLP/options/decay.title
 msgid "Weight Decay (Regularization)"
 msgstr "权重衰减（正则化）"
+
+#: mDCA/results/windowTable.columns.title
+msgid "Window Span (%)"
+msgstr ""
 
 #: mROC/options/cmpDeLong/w05.title
 msgid "With 0.5"

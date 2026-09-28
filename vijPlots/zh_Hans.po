@@ -12,6 +12,18 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2026.7.1.dev0\n"
 
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid ""
+"\"Range\" option for the X-axis is only available for numeric and date "
+"variables."
+msgstr ""
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "\"Tick Count\" option for the X-axis is only available for numeric variables."
+msgstr ""
+
 #: R/qqplot.b.R
 msgid "{distrib} distribution requires positive (>0) data."
 msgstr "{distrib} 分布要求数据为正数 (>0)。"
@@ -37,8 +49,8 @@ msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "采用了 {rotation} 旋转及 Kaiser 标准化。"
 
 #: R/barchart.b.R
-msgid "{var} (Mean ± {level}%  CI)"
-msgstr "{var} (均值 ± {level}% 置信区间)"
+msgid "{var} (Mean ± {level}% CI)"
+msgstr ""
 
 #: R/barchart.b.R
 msgid "{var} (Mean ± SD)"
@@ -58,6 +70,7 @@ msgstr "{var} 不具备有效的日期格式。"
 #: boxplot/options/facetNumber.title
 #: histogram/options/facetNumber.title
 #: lollipop/options/facetNumber.title
+#: mosaic/options/facetNumber.title
 #: piechart/options/facetNumber.title
 #: scatterplot/options/facetNumber.title
 msgid "# of rows/columns"
@@ -84,6 +97,7 @@ msgstr "准确率 (%)"
 msgid "% by row"
 msgstr "行百分比"
 
+#: R/corresp.b.R
 #: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
 msgid "% Inertia"
@@ -128,15 +142,15 @@ msgid "% of Variance"
 msgstr "方差占比 (%)"
 
 #: R/mrcrosstabs.b.R
-msgid "% within"
-msgstr "组内百分比（%）"
+msgid "% within {category}"
+msgstr ""
 
 #: R/likertplot.b.R
 msgid ""
 "<h3>Data & Sorting</h3>\n"
 "<ul>\n"
-"<li>Likert variables must be of ordinal measure-type. (Continuous "
-"measure-type works as well.)</li>\n"
+"<li>Likert variables must be of ordinal measure-type. (Continuous-Integer "
+"works as well.)</li>\n"
 "<li>If you plan to compute mean/median/sd or to use comparison tests, they "
 "must be of integer data-type.</li>\n"
 "<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
@@ -152,42 +166,37 @@ msgid ""
 "<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
 "<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
 "<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
-"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
+"Dwass-Steel-Critchlow-Fligner (DSCF) pairwise comparisons tests.</li>\n"
 "</ul>\n"
 "<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
 "question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
+"questionwise) for Mann-Whitney U, Kruskal-Wallis and post hoc tests. DSCF "
 "p-values are already adjusted (groupwise); no other adjustment is "
 "possible.</p>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
 msgstr ""
-"<h3>数据与排序</h3>\n"
-"<ul>\n"
-"<li>李克特变量必须为定序 (Ordinal) 测量类型。（连续型测量类型同样适用。）</li>\n"
-"<li>如果您计划计算均值/中位数/标准差或使用比较检验，变量必须为整数 (Integer) 数据类型。</li>\n"
-"<li><strong>整理水平：</strong> 勾选后，当某些变量缺失部分等级时，系统会尝试修正表格和图形中的标签顺序。</li>\n"
-"<li><strong>将变量转换为整数：</strong> 勾选后，系统将忽略等级标签，仅使用整数值进行计算。</li>\n"
-"<li><strong>按中位数排序变量：</strong> 根据中位数对李克特变量列表进行排序。</li>\n"
-"</ul>\n"
-"<h3>比较检验</h3>\n"
-"<p>当使用分组变量时，可进行以下几种检验：</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U：</strong> 两组间比较</li>\n"
-"<li><strong>Kruskal-Wallis：</strong> n 组间比较</li>\n"
-"<li><strong>事后检验：</strong> Dunn、Conover 以及 Dwass-Steel-Critchlow-Fligner "
-"(DSCF) 两两比较检验。</li>\n"
-"</ul>\n"
-"<p>对于事后检验，可以按每个问题 (groupwise) 调整 p 值；或者对于 Mann-Whitney U、Kruskal-Wallis "
-"及事后检验进行整体 (overall)（同时针对每个问题和组别）调整。DSCF 的 p 值已经过自动调整（按每个问题视角）；无法进行其他调整。</p>\n"
-"<p>示例文件位于：打开 > 数据库 > vijPlots > Likert</p>"
+
+#: package.description
+msgid ""
+"<p>Main statistical charts, all built with <b>ggplot2</b> and offering "
+"extensive customization options:</p> <ul> <li><strong>Continuous "
+"variables</strong>: Histogram, Box plot, Raincloud plot, Scatter plot, Error "
+"bar chart, Lollipop plot, QQ plot</li> <li><strong>Categorical "
+"variables</strong>: Bar plot, Pie chart, Mosaic plot, Likert plot</li> "
+"<li><strong>Time series</strong>: Line chart, Area chart</li> "
+"<li><strong>Multiple Response</strong>: Frequencies, Crosstab</li> </ul> "
+"<p>The module is available in the <strong>Plots</strong> tab.</p> <p>Project "
+"source (and changelog) is available at <a "
+"href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>.</p>"
+msgstr ""
 
 #: R/corresp.b.R
 msgid ""
 "<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
 "two categorical variables. Computations are based on <a href = "
 "\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"target=\"_blank\">FactoMineR<a/> package by F. Husson, J. Josse, S. Le, J. "
+"Mazet.</p>\n"
 "<p>The data can be</p>\n"
 "<ul>\n"
 "<li>an <strong>Observation table</strong> (raw data), possibly weighted "
@@ -198,11 +207,11 @@ msgid ""
 "<p><strong>Supplementary row or column</strong> numbers may be entered as "
 "integer lists : 1,3,6</p>\n"
 "<p>Four normalizations (scaling of row and column scores before plotting) "
-"are avalaible :</p>\n"
+"are available :</p>\n"
 "<ul>\n"
-"<li><strong>Principal:</strong> Row an columns scores are scaled by "
+"<li><strong>Principal:</strong> Row and column scores are scaled by "
 "eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
+"<li><strong>Symmetric:</strong> Row and column scores are scaled by the "
 "square root of eigenvalues. </li>\n"
 "<li><strong>Row Principal:</strong> Only row scores are scaled by "
 "eigenvalues.</li>\n"
@@ -213,46 +222,26 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
 msgstr ""
-"<p>此模块计算两个分类变量的 <strong>相应分析 (CA)</strong>。计算基于 <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> 包，由 F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet 创建。</p>\n"
-"<p>数据可以是</p>\n"
-"<ul>\n"
-"<li>一个 <strong>观察表</strong> (原始数据)，可能使用 <em>jamovi</em> 内置权重系统或使用 \"计数\" "
-"变量进行加权</li>\n"
-"<li>或一个 <strong>联表</strong></li>\n"
-"</ul>\n"
-"<p><strong>补充行或列</strong> 数字可以作为整数列表输入：1,3,6</p>\n"
-"<p>有四种归一化（在绘图前对行和列评分进行缩放）可用：</p>\n"
-"<ul>\n"
-"<li><strong>主导:</strong> 行和列评分按特征值缩放。</li>\n"
-"<li><strong>对称:</strong> 行和列评分按特征值平方根缩放。</li>\n"
-"<li><strong>行主导:</strong> 仅行评分按特征值缩放。</li>\n"
-"<li><strong>列主导:</strong> 仅列评分按特征值缩放。</li>\n"
-"<li><strong>标准:</strong> 原始坐标，无归一化。</li>\n"
-"</ul>\n"
-"<p>示例文件包含在 Open > 数据库 > vijPlots > Smoking 中</p>"
 
 #: R/multcorresp.b.R
 msgid ""
 "<p>This module computes <strong>Multiple Correspondence Analysis "
 "(MCA)</strong> for several categorical variables. Computations are based on "
 "<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"target=\"_blank\">FactoMineR<a/> package by F. Husson, J. Josse, S. Le, J. "
+"Mazet.</p>\n"
 "<p>Both classic methods are available:</p>\n"
 "<ul>\n"
 "<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
 "<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues are "
 "the squares of those of the indicator matrix method. </li>\n"
 "</ul>\n"
-"<p>Both methods give the same <em>standard</em> coordinates (but different "
-"<em>principal</em> coordinates).</p>\n"
+"<p>Both methods give the same <em>standard</em> coordinates and "
+"discriminations (but different <em>principal</em> coordinates).</p>\n"
 "<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
-"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
-"(and inertia) of categories and observations are computed from the original "
-"eigenvalues of the Burt matrix.</p>\n"
+"applied to eigenvalues only (<strong>Summary</strong> table). Principal "
+"coordinates (and inertia) of categories and observations are computed from "
+"the original eigenvalues of the Burt matrix.</p>\n"
 "<p>The <strong>Normalization</strong> options specify how the coordinates "
 "are scaled (by eigenvalues):</p>\n"
 "<ul>\n"
@@ -267,28 +256,6 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
 msgstr ""
-"<p>此模块对多个分类变量进行<strong>多重对应分析 (MCA)</strong>。计算基于 F.&nbsp;Husson, "
-"J.&nbsp;Josse, S.&nbsp;Le, J.&nbsp;Mazet 开发的 <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> 软件包。</p>\n"
-"<p>提供以下两种经典方法：</p>\n"
-"<ul>\n"
-"<li><strong>指示矩阵 (Indicator matrix)：</strong> 指示矩阵的 CA 分析</li>\n"
-"<li><strong>Burt 矩阵 (Burt matrix)：</strong> Burt 矩阵的 CA "
-"分析。其特征值是指示矩阵法特征值的平方。</li>\n"
-"</ul>\n"
-"<p>两种方法得到相同的<em>标准 (standard)</em> 坐标（但<em>主 (principal)</em> 坐标不同）。</p>\n"
-"<p>选中时，<strong>Benzécri 和 Greenacre "
-"校正</strong>仅应用于特征值（<strong>摘要</strong>表）。类别和观测值的坐标（及惯量）根据 Burt "
-"矩阵的原始特征值计算。</p>\n"
-"<p><strong>标准化 (Normalization)</strong> 选项指定坐标如何缩放（按特征值）：</p>\n"
-"<ul>\n"
-"<li><strong>主坐标 (Principal)：</strong> 类别和观测值坐标均进行缩放。</li>\n"
-"<li><strong>类别主坐标 (Category principal)：</strong> 仅对类别坐标进行缩放。</li>\n"
-"<li><strong>观测值主坐标 (Observation principal)：</strong> 仅对观测值坐标进行缩放。</li>\n"
-"<li><strong>标准坐标 (Standard)：</strong> 类别和观测值坐标均为标准坐标。</li>\n"
-"</ul>\n"
-"<p>示例文件位于：Open > Data Library > vijPlots > Cars</p>"
 
 #: R/principal.b.R
 msgid ""
@@ -299,7 +266,7 @@ msgid ""
 "used. Only orthogonal rotations are available (from GPArotation "
 "package).</p>\n"
 "<p>Loadings (variable coordinates) and scores (observation coordinates) are "
-"principal (scaled by the squareroot of eigenvalues).</p>\n"
+"principal (scaled by the square root of eigenvalues).</p>\n"
 "<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
 "<ul>\n"
 "<li><strong>Form biplot:</strong> Scores are principal (scaled by "
@@ -319,23 +286,6 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
 msgstr ""
-"<p>本模块对多个连续变量进行<strong>主成分分析 (PCA)</strong>。计算基于 <tt>stats::prcomp</tt> "
-"函数。</p>\n"
-"<p>虽然旋转后的成分不再是主成分，但其应用非常广泛。目前仅支持正交旋转（由 GPArotation 包提供）。</p>\n"
-"<p>载荷（变量坐标）和得分（观测值坐标）均为“主坐标”（按特征值的平方根缩放）。</p>\n"
-"<p>双标图遵循《双标图实践》(Michael Greenacre, 2010) 的标准：</p>\n"
-"<ul>\n"
-"<li><strong>形状双标图 (Form biplot)：</strong> 得分为主坐标（按特征值缩放），载荷为标准坐标。</li>\n"
-"<li><strong>协方差双标图 (Covariance biplot)：</strong> 载荷为主坐标，得分为标准坐标。</li>\n"
-"</ul>\n"
-"<p><strong>高级选项</strong>：</p>\n"
-"<ul>\n"
-"<li><strong>标准化载荷：</strong> 对载荷进行归一化处理，使其平方和等于 1（而非特征值）。</li>\n"
-"<li><strong>标准化得分：</strong> 对得分进行归一化处理，使其方差等于 1（而非特征值）。</li>\n"
-"<li><strong>旋转特征向量：</strong> 对特征向量（标准载荷）而非主载荷进行旋转（如方差最大化旋转等），这是 STATA "
-"的处理方式。</li>\n"
-"</ul>\n"
-"<p>示例文件见：打开 > 数据库 > vijPlots > Iris</p>"
 
 #: R/mrfrequencies.b.R
 msgid ""
@@ -579,37 +529,22 @@ msgstr "50年"
 msgid "6 months"
 msgstr "6 个月"
 
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "A date variable must be in text format."
+msgstr ""
+
 #: package/datasets/vijPlots.description
 msgid "A demonstration dataset for vijPlots module."
 msgstr "vijPlots 模块演示数据集。"
 
-#: package/datasets/Smoking.description
-msgid "A demonstration dataset for vijPlots/Correspondence Analysis."
-msgstr "vijPlots/对应分析 演示数据集。"
-
 #: package/datasets/Likert.description
-msgid "A demonstration dataset for vijPlots/Likert plots."
-msgstr "vijPlots/李克特量表图 演示数据集。"
-
-#: package/datasets/Cars.description
-msgid "A demonstration dataset for vijPlots/Multiple Correspondence Analysis."
-msgstr "vijPlots/多重对应分析 演示数据集。"
+msgid "A demonstration dataset for vijPlots/Likert plot."
+msgstr ""
 
 #: package/datasets/CreditCards.description
 msgid "A demonstration dataset for vijPlots/Multiple Response plots."
 msgstr "vijPlots/多重响应图 演示数据集。"
-
-#: package/datasets/Iris.description
-msgid "A demonstration dataset for vijPlots/Principal Component Analysis."
-msgstr "vijPlots/主成分分析 演示数据集。"
-
-#: package/datasets/Raincloud.description
-msgid "A demonstration dataset for vijPlots/Raincloud plot."
-msgstr "vijPlots/雨滴图 演示数据集。"
-
-#: package/datasets/TimeSeries.description
-msgid "A demonstration dataset for vijPlots/Time Serie plots."
-msgstr "vijPlots/时间序列图 演示数据集。"
 
 #: areachart/options/colorPalette/Accent.title
 #: barchart/options/colorPalette/Accent.title
@@ -617,6 +552,7 @@ msgstr "vijPlots/时间序列图 演示数据集。"
 #: boxplot/options/colorPalette/Accent.title
 #: histogram/options/colorPalette/Accent.title
 #: linechart/options/colorPalette/Accent.title
+#: mosaic/options/colorPalette/Accent.title
 #: mrcrosstabs/options/colorPalette/Accent.title
 #: mrfrequencies/options/colorPalette/Accent.title
 #: multcorresp/options/colorPalette/Accent.title
@@ -628,6 +564,11 @@ msgstr "vijPlots/时间序列图 演示数据集。"
 msgid "Accent"
 msgstr "强调"
 
+#: mosaic/options/accuracy.title
+#: mosaic/ui[2][0][2][0].label
+msgid "Accuracy"
+msgstr ""
+
 #: R/corresp.b.R
 msgid "Active Margin"
 msgstr "活动边际"
@@ -636,15 +577,11 @@ msgstr "活动边际"
 msgid "Add median line (Stacked only)"
 msgstr "添加中位数线（仅限堆叠图）"
 
-#: scatterplot/options/plotBorder.title
-msgid "Add plot frame"
-msgstr "添加图表框"
-
 #: R/likertplot.b.R
 msgid "Adj. p"
 msgstr "调整后 p 值"
 
-#: principal/ui[7].label
+#: principal/ui[8].label
 msgid "Advanced Options"
 msgstr "高级选项"
 
@@ -654,18 +591,22 @@ msgstr "高级选项"
 #: barchart/options/titleAlign.title
 #: barchart/options/subtitleAlign.title
 #: barchart/options/captionAlign.title
+#: barchart/options/facetAlign.title
 #: barplot/options/titleAlign.title
 #: barplot/options/subtitleAlign.title
 #: barplot/options/captionAlign.title
+#: barplot/options/facetAlign.title
 #: boxplot/options/titleAlign.title
 #: boxplot/options/subtitleAlign.title
 #: boxplot/options/captionAlign.title
+#: boxplot/options/facetAlign.title
 #: corresp/options/titleAlign.title
 #: corresp/options/subtitleAlign.title
 #: corresp/options/captionAlign.title
 #: histogram/options/titleAlign.title
 #: histogram/options/subtitleAlign.title
 #: histogram/options/captionAlign.title
+#: histogram/options/facetAlign.title
 #: likertplot/options/titleAlign.title
 #: likertplot/options/subtitleAlign.title
 #: likertplot/options/captionAlign.title
@@ -675,6 +616,11 @@ msgstr "高级选项"
 #: lollipop/options/titleAlign.title
 #: lollipop/options/subtitleAlign.title
 #: lollipop/options/captionAlign.title
+#: lollipop/options/facetAlign.title
+#: mosaic/options/titleAlign.title
+#: mosaic/options/subtitleAlign.title
+#: mosaic/options/captionAlign.title
+#: mosaic/options/facetAlign.title
 #: mrcrosstabs/options/titleAlign.title
 #: mrcrosstabs/options/subtitleAlign.title
 #: mrcrosstabs/options/captionAlign.title
@@ -687,6 +633,7 @@ msgstr "高级选项"
 #: piechart/options/titleAlign.title
 #: piechart/options/subtitleAlign.title
 #: piechart/options/captionAlign.title
+#: piechart/options/facetAlign.title
 #: principal/options/titleAlign.title
 #: principal/options/subtitleAlign.title
 #: principal/options/captionAlign.title
@@ -699,12 +646,17 @@ msgstr "高级选项"
 #: scatterplot/options/titleAlign.title
 #: scatterplot/options/subtitleAlign.title
 #: scatterplot/options/captionAlign.title
+#: scatterplot/options/facetAlign.title
 msgid "Align"
 msgstr "对齐"
 
 #: raincloud/options/alphaC.title
 msgid "Alpha"
 msgstr "α"
+
+#: mosaic/options/alwaysShowGroupLegend.title
+msgid "Always show group legend"
+msgstr ""
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -762,6 +714,7 @@ msgstr "八月"
 #: linechart/options/yAxisRangeType/auto.title
 #: lollipop/options/yAxisRangeType/auto.title
 #: lollipop/options/xAxisRangeType/auto.title
+#: mosaic/options/labelColor/auto.title
 #: mrcrosstabs/options/textColor/auto.title
 #: mrcrosstabs/options/yAxisRangeType/auto.title
 #: mrcrosstabs/options/xAxisRangeType/auto.title
@@ -786,11 +739,12 @@ msgstr "自动"
 #: likertplot/ui[6].label
 #: linechart/ui[2].label
 #: lollipop/ui[5].label
+#: mosaic/ui[5].label
 #: mrcrosstabs/ui[4].label
 #: mrfrequencies/ui[4].label
 #: qqplot/ui[5].label
 #: raincloud/ui[2].label
-#: scatterplot/ui[3].label
+#: scatterplot/ui[4].label
 msgid "Axes"
 msgstr "坐标轴"
 
@@ -802,18 +756,10 @@ msgstr "坐标轴序号不能相同。"
 msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
 msgstr "坐标轴序号必须小于或等于维度总数（{nDim}）。"
 
-#: corresp/ui[6].label
+#: corresp/ui[7].label
 #: mrfrequencies/ui[5].label
 msgid "Axis Titles"
 msgstr "轴标题"
-
-#: package/analyses/barchart.title
-#: package/analyses/barchart.menuTitle
-#: barchart/options.title
-#: barchart/ui.title
-#: barchart/results.title
-msgid "Bar Chart"
-msgstr "条形图"
 
 #: package/analyses/barplot.title
 #: package/analyses/barplot.menuTitle
@@ -865,6 +811,10 @@ msgstr "BH法"
 msgid "Bin Color"
 msgstr "柱颜色"
 
+#: histogram/options/binOpacity.title
+msgid "Bin opacity"
+msgstr ""
+
 #: histogram/ui[1][1][0].label
 msgid "Bin Size"
 msgstr "柱宽度"
@@ -884,7 +834,7 @@ msgstr "柱宽度"
 #: principal/options/biplotTitleText.title
 #: principal/options/biplotSubtitleText.title
 #: principal/options/biplotCaptionText.title
-#: principal/ui[3][2][0].label
+#: principal/ui[4][2][0].label
 #: principal/results/biPlot.title
 msgid "Biplot"
 msgstr "双标图"
@@ -903,6 +853,7 @@ msgstr "双标图类型"
 #: likertplot/options/labelColor/black.title
 #: lollipop/options/dotColor/black.title
 #: lollipop/options/lineColor/black.title
+#: mosaic/options/labelColor/black.title
 #: mrcrosstabs/options/borderColor/black.title
 #: mrcrosstabs/options/textColor/black.title
 #: mrfrequencies/options/borderColor/black.title
@@ -916,6 +867,17 @@ msgstr "双标图类型"
 #: scatterplot/options/singleColor/black.title
 msgid "Black"
 msgstr "黑色"
+
+#: barchart/options/facetStyle/border.title
+#: barplot/options/facetStyle/border.title
+#: boxplot/options/facetStyle/border.title
+#: histogram/options/facetStyle/border.title
+#: lollipop/options/facetStyle/border.title
+#: mosaic/options/facetStyle/border.title
+#: piechart/options/facetStyle/border.title
+#: scatterplot/options/facetStyle/border.title
+msgid "Black border"
+msgstr ""
 
 #: corresp/options/rowColor/blue.title
 #: corresp/options/colColor/blue.title
@@ -935,6 +897,7 @@ msgstr "蓝色"
 #: boxplot/options/colorPalette/BuGn.title
 #: histogram/options/colorPalette/BuGn.title
 #: linechart/options/colorPalette/BuGn.title
+#: mosaic/options/colorPalette/BuGn.title
 #: mrcrosstabs/options/colorPalette/BuGn.title
 #: mrfrequencies/options/colorPalette/BuGn.title
 #: multcorresp/options/colorPalette/BuGn.title
@@ -952,6 +915,7 @@ msgstr "蓝-绿渐变"
 #: boxplot/options/colorPalette/BuPu.title
 #: histogram/options/colorPalette/BuPu.title
 #: linechart/options/colorPalette/BuPu.title
+#: mosaic/options/colorPalette/BuPu.title
 #: mrcrosstabs/options/colorPalette/BuPu.title
 #: mrfrequencies/options/colorPalette/BuPu.title
 #: multcorresp/options/colorPalette/BuPu.title
@@ -969,6 +933,7 @@ msgstr "蓝-紫渐变"
 #: boxplot/options/colorPalette/Blues.title
 #: histogram/options/colorPalette/Blues.title
 #: linechart/options/colorPalette/Blues.title
+#: mosaic/options/colorPalette/Blues.title
 #: mrcrosstabs/options/colorPalette/Blues.title
 #: mrfrequencies/options/colorPalette/Blues.title
 #: multcorresp/options/colorPalette/Blues.title
@@ -986,18 +951,22 @@ msgstr "蓝色"
 #: barchart/options/titleFontFace/bold.title
 #: barchart/options/subtitleFontFace/bold.title
 #: barchart/options/captionFontFace/bold.title
+#: barchart/options/facetFontFace/bold.title
 #: barplot/options/titleFontFace/bold.title
 #: barplot/options/subtitleFontFace/bold.title
 #: barplot/options/captionFontFace/bold.title
+#: barplot/options/facetFontFace/bold.title
 #: boxplot/options/titleFontFace/bold.title
 #: boxplot/options/subtitleFontFace/bold.title
 #: boxplot/options/captionFontFace/bold.title
+#: boxplot/options/facetFontFace/bold.title
 #: corresp/options/titleFontFace/bold.title
 #: corresp/options/subtitleFontFace/bold.title
 #: corresp/options/captionFontFace/bold.title
 #: histogram/options/titleFontFace/bold.title
 #: histogram/options/subtitleFontFace/bold.title
 #: histogram/options/captionFontFace/bold.title
+#: histogram/options/facetFontFace/bold.title
 #: likertplot/options/titleFontFace/bold.title
 #: likertplot/options/subtitleFontFace/bold.title
 #: likertplot/options/captionFontFace/bold.title
@@ -1007,6 +976,11 @@ msgstr "蓝色"
 #: lollipop/options/titleFontFace/bold.title
 #: lollipop/options/subtitleFontFace/bold.title
 #: lollipop/options/captionFontFace/bold.title
+#: lollipop/options/facetFontFace/bold.title
+#: mosaic/options/titleFontFace/bold.title
+#: mosaic/options/subtitleFontFace/bold.title
+#: mosaic/options/captionFontFace/bold.title
+#: mosaic/options/facetFontFace/bold.title
 #: mrcrosstabs/options/titleFontFace/bold.title
 #: mrcrosstabs/options/subtitleFontFace/bold.title
 #: mrcrosstabs/options/captionFontFace/bold.title
@@ -1019,6 +993,7 @@ msgstr "蓝色"
 #: piechart/options/titleFontFace/bold.title
 #: piechart/options/subtitleFontFace/bold.title
 #: piechart/options/captionFontFace/bold.title
+#: piechart/options/facetFontFace/bold.title
 #: principal/options/titleFontFace/bold.title
 #: principal/options/subtitleFontFace/bold.title
 #: principal/options/captionFontFace/bold.title
@@ -1031,6 +1006,7 @@ msgstr "蓝色"
 #: scatterplot/options/titleFontFace/bold.title
 #: scatterplot/options/subtitleFontFace/bold.title
 #: scatterplot/options/captionFontFace/bold.title
+#: scatterplot/options/facetFontFace/bold.title
 msgid "Bold"
 msgstr "粗体"
 
@@ -1040,18 +1016,22 @@ msgstr "粗体"
 #: barchart/options/titleFontFace/bold.italic.title
 #: barchart/options/subtitleFontFace/bold.italic.title
 #: barchart/options/captionFontFace/bold.italic.title
+#: barchart/options/facetFontFace/bold.italic.title
 #: barplot/options/titleFontFace/bold.italic.title
 #: barplot/options/subtitleFontFace/bold.italic.title
 #: barplot/options/captionFontFace/bold.italic.title
+#: barplot/options/facetFontFace/bold.italic.title
 #: boxplot/options/titleFontFace/bold.italic.title
 #: boxplot/options/subtitleFontFace/bold.italic.title
 #: boxplot/options/captionFontFace/bold.italic.title
+#: boxplot/options/facetFontFace/bold.italic.title
 #: corresp/options/titleFontFace/bold.italic.title
 #: corresp/options/subtitleFontFace/bold.italic.title
 #: corresp/options/captionFontFace/bold.italic.title
 #: histogram/options/titleFontFace/bold.italic.title
 #: histogram/options/subtitleFontFace/bold.italic.title
 #: histogram/options/captionFontFace/bold.italic.title
+#: histogram/options/facetFontFace/bold.italic.title
 #: likertplot/options/titleFontFace/bold.italic.title
 #: likertplot/options/subtitleFontFace/bold.italic.title
 #: likertplot/options/captionFontFace/bold.italic.title
@@ -1061,6 +1041,11 @@ msgstr "粗体"
 #: lollipop/options/titleFontFace/bold.italic.title
 #: lollipop/options/subtitleFontFace/bold.italic.title
 #: lollipop/options/captionFontFace/bold.italic.title
+#: lollipop/options/facetFontFace/bold.italic.title
+#: mosaic/options/titleFontFace/bold.italic.title
+#: mosaic/options/subtitleFontFace/bold.italic.title
+#: mosaic/options/captionFontFace/bold.italic.title
+#: mosaic/options/facetFontFace/bold.italic.title
 #: mrcrosstabs/options/titleFontFace/bold.italic.title
 #: mrcrosstabs/options/subtitleFontFace/bold.italic.title
 #: mrcrosstabs/options/captionFontFace/bold.italic.title
@@ -1073,6 +1058,7 @@ msgstr "粗体"
 #: piechart/options/titleFontFace/bold.italic.title
 #: piechart/options/subtitleFontFace/bold.italic.title
 #: piechart/options/captionFontFace/bold.italic.title
+#: piechart/options/facetFontFace/bold.italic.title
 #: principal/options/titleFontFace/bold.italic.title
 #: principal/options/subtitleFontFace/bold.italic.title
 #: principal/options/captionFontFace/bold.italic.title
@@ -1085,6 +1071,7 @@ msgstr "粗体"
 #: scatterplot/options/titleFontFace/bold.italic.title
 #: scatterplot/options/subtitleFontFace/bold.italic.title
 #: scatterplot/options/captionFontFace/bold.italic.title
+#: scatterplot/options/facetFontFace/bold.italic.title
 msgid "Bold Italic"
 msgstr "粗斜体"
 
@@ -1094,12 +1081,13 @@ msgstr "Bonferroni法"
 
 #: qqplot/options/methodQQ/boot.title
 #: qqplot/options/methodPP/boot.title
-msgid "Boostrap"
-msgstr "Boostrap自助法"
+msgid "Bootstrap"
+msgstr ""
 
 #: barchart/options/borderColor.title
 #: barplot/options/borderColor.title
 #: histogram/options/borderColor.title
+#: mosaic/ui[3][0][2][0].label
 #: mrcrosstabs/options/borderColor.title
 #: mrfrequencies/options/borderColor.title
 #: piechart/options/borderColor.title
@@ -1121,6 +1109,8 @@ msgstr "边框"
 #: linechart/options/legendPosition/bottom.title
 #: linechart/options/yAxisPosition/0.title
 #: lollipop/options/yAxisPosition/0.title
+#: mosaic/options/legendPosition/bottom.title
+#: mosaic/options/yAxisPosition/0.title
 #: mrcrosstabs/options/legendPosition/bottom.title
 #: mrcrosstabs/options/yAxisPosition/0.title
 #: mrfrequencies/options/yAxisPosition/0.title
@@ -1171,6 +1161,7 @@ msgstr "棕色"
 #: histogram/options/colorPalette/BrBG.title
 #: likertplot/options/plotColor/BrBG.title
 #: linechart/options/colorPalette/BrBG.title
+#: mosaic/options/colorPalette/BrBG.title
 #: mrcrosstabs/options/colorPalette/BrBG.title
 #: mrfrequencies/options/colorPalette/BrBG.title
 #: multcorresp/options/colorPalette/BrBG.title
@@ -1184,7 +1175,7 @@ msgstr "棕-绿渐变"
 
 #: R/multcorresp.b.R
 #: multcorresp/options/method/Burt.title
-#: multcorresp/ui[3][0][0]/method_burt.label
+#: multcorresp/ui[4][0][0]/method_burt.label
 msgid "Burt matrix"
 msgstr "Burt 矩阵"
 
@@ -1218,36 +1209,71 @@ msgstr "无法整理文本变量"
 #: likertplot/ui[8][2].label
 #: linechart/ui[4][2].label
 #: lollipop/ui[7][2].label
+#: mosaic/ui[7][2].label
 #: mrcrosstabs/ui[6][2].label
 #: mrfrequencies/ui[6][2].label
 #: piechart/ui[6][2].label
 #: qqplot/ui[7][2].label
 #: raincloud/ui[4][2].label
-#: scatterplot/ui[5][2].label
+#: scatterplot/ui[6][2].label
 msgid "Caption"
 msgstr "标题说明"
 
-#: corresp/ui[7][2][1][0].label
-#: multcorresp/ui[8][2][1][0].label
-#: principal/ui[6][2][1][0].label
+#: corresp/ui[8][2][1][0].label
+#: multcorresp/ui[9][2][1][0].label
+#: principal/ui[7][2][1][0].label
 msgid "Caption Style"
 msgstr "图注样式"
 
-#: corresp/ui[7][2][0][0].label
-#: multcorresp/ui[8][2][0][0].label
-#: principal/ui[6][2][0][0].label
+#: corresp/ui[8][2][0][0].label
+#: multcorresp/ui[9][2][0][0].label
+#: principal/ui[7][2][0][0].label
 msgid "Caption Text"
 msgstr "标题文字"
 
-#: package/datasets/Cars.name
-msgid "Cars"
-msgstr "Cars数据集"
+#: areachart/options/colorPalette/custom::carbon_dark.title
+#: barchart/options/colorPalette/custom::carbon_dark.title
+#: barplot/options/colorPalette/custom::carbon_dark.title
+#: boxplot/options/colorPalette/custom::carbon_dark.title
+#: histogram/options/colorPalette/custom::carbon_dark.title
+#: linechart/options/colorPalette/custom::carbon_dark.title
+#: mosaic/options/colorPalette/custom::carbon_dark.title
+#: mrcrosstabs/options/colorPalette/custom::carbon_dark.title
+#: mrfrequencies/options/colorPalette/custom::carbon_dark.title
+#: multcorresp/options/colorPalette/custom::carbon_dark.title
+#: piechart/options/colorPalette/custom::carbon_dark.title
+#: principal/options/colorPalette/custom::carbon_dark.title
+#: qqplot/options/colorPalette/custom::carbon_dark.title
+#: raincloud/options/colorPalette/custom::carbon_dark.title
+#: scatterplot/options/colorPalette/custom::carbon_dark.title
+msgid "Carbon:Dark"
+msgstr ""
+
+#: areachart/options/colorPalette/custom::carbon_light.title
+#: barchart/options/colorPalette/custom::carbon_light.title
+#: barplot/options/colorPalette/custom::carbon_light.title
+#: boxplot/options/colorPalette/custom::carbon_light.title
+#: histogram/options/colorPalette/custom::carbon_light.title
+#: linechart/options/colorPalette/custom::carbon_light.title
+#: mosaic/options/colorPalette/custom::carbon_light.title
+#: mrcrosstabs/options/colorPalette/custom::carbon_light.title
+#: mrfrequencies/options/colorPalette/custom::carbon_light.title
+#: multcorresp/options/colorPalette/custom::carbon_light.title
+#: piechart/options/colorPalette/custom::carbon_light.title
+#: principal/options/colorPalette/custom::carbon_light.title
+#: qqplot/options/colorPalette/custom::carbon_light.title
+#: raincloud/options/colorPalette/custom::carbon_light.title
+#: scatterplot/options/colorPalette/custom::carbon_light.title
+msgid "Carbon:Light"
+msgstr ""
 
 #: package/analyses/barplot.menuSubgroup
 #: package/analyses/piechart.menuSubgroup
+#: package/analyses/mosaic.menuSubgroup
 #: package/analyses/likertplot.menuSubgroup
 #: barplot/options.menuSubgroup
 #: likertplot/options.menuSubgroup
+#: mosaic/options.menuSubgroup
 #: piechart/options.menuSubgroup
 msgid "Categorical"
 msgstr "分类"
@@ -1259,6 +1285,8 @@ msgstr "类别"
 
 #: barplot/options/rows.title
 #: barplot/ui[0][0].label
+#: mosaic/options/category.title
+#: mosaic/ui[0][0].label
 msgid "Category Axis"
 msgstr "分类轴"
 
@@ -1273,7 +1301,7 @@ msgstr "分类图"
 msgid "Category plot"
 msgstr "分类图"
 
-#: multcorresp/ui[6][0][1][0].label
+#: multcorresp/ui[7][0][1][0].label
 msgid "Category Plot Options"
 msgstr "分类图选项"
 
@@ -1302,16 +1330,19 @@ msgstr "Cauchy分布"
 #: barchart/options/titleAlign/0.5.title
 #: barchart/options/subtitleAlign/0.5.title
 #: barchart/options/captionAlign/0.5.title
+#: barchart/options/facetAlign/0.5.title
 #: barchart/options/xAxisPosition/0.5.title
 #: barchart/options/yAxisPosition/0.5.title
 #: barplot/options/titleAlign/0.5.title
 #: barplot/options/subtitleAlign/0.5.title
 #: barplot/options/captionAlign/0.5.title
+#: barplot/options/facetAlign/0.5.title
 #: barplot/options/xAxisPosition/0.5.title
 #: barplot/options/yAxisPosition/0.5.title
 #: boxplot/options/titleAlign/0.5.title
 #: boxplot/options/subtitleAlign/0.5.title
 #: boxplot/options/captionAlign/0.5.title
+#: boxplot/options/facetAlign/0.5.title
 #: boxplot/options/xAxisPosition/0.5.title
 #: boxplot/options/yAxisPosition/0.5.title
 #: corresp/options/titleAlign/0.5.title
@@ -1322,6 +1353,7 @@ msgstr "Cauchy分布"
 #: histogram/options/titleAlign/0.5.title
 #: histogram/options/subtitleAlign/0.5.title
 #: histogram/options/captionAlign/0.5.title
+#: histogram/options/facetAlign/0.5.title
 #: histogram/options/xAxisPosition/0.5.title
 #: histogram/options/yAxisPosition/0.5.title
 #: likertplot/options/titleAlign/0.5.title
@@ -1335,8 +1367,15 @@ msgstr "Cauchy分布"
 #: lollipop/options/titleAlign/0.5.title
 #: lollipop/options/subtitleAlign/0.5.title
 #: lollipop/options/captionAlign/0.5.title
+#: lollipop/options/facetAlign/0.5.title
 #: lollipop/options/xAxisPosition/0.5.title
 #: lollipop/options/yAxisPosition/0.5.title
+#: mosaic/options/titleAlign/0.5.title
+#: mosaic/options/subtitleAlign/0.5.title
+#: mosaic/options/captionAlign/0.5.title
+#: mosaic/options/facetAlign/0.5.title
+#: mosaic/options/xAxisPosition/0.5.title
+#: mosaic/options/yAxisPosition/0.5.title
 #: mrcrosstabs/options/titleAlign/0.5.title
 #: mrcrosstabs/options/subtitleAlign/0.5.title
 #: mrcrosstabs/options/captionAlign/0.5.title
@@ -1355,6 +1394,7 @@ msgstr "Cauchy分布"
 #: piechart/options/titleAlign/0.5.title
 #: piechart/options/subtitleAlign/0.5.title
 #: piechart/options/captionAlign/0.5.title
+#: piechart/options/facetAlign/0.5.title
 #: principal/options/titleAlign/0.5.title
 #: principal/options/subtitleAlign/0.5.title
 #: principal/options/captionAlign/0.5.title
@@ -1373,6 +1413,7 @@ msgstr "Cauchy分布"
 #: scatterplot/options/titleAlign/0.5.title
 #: scatterplot/options/subtitleAlign/0.5.title
 #: scatterplot/options/captionAlign/0.5.title
+#: scatterplot/options/facetAlign/0.5.title
 #: scatterplot/options/xAxisPosition/0.5.title
 #: scatterplot/options/yAxisPosition/0.5.title
 msgid "Center"
@@ -1388,6 +1429,10 @@ msgstr "居中"
 msgid "Chi-squared"
 msgstr "卡方"
 
+#: mosaic/options/labelColor.title
+msgid "Color"
+msgstr ""
+
 #: barchart/options/colorNo.title
 #: barplot/options/colorNo.title
 #: boxplot/options/colorNo.title
@@ -1402,7 +1447,7 @@ msgstr "颜色号"
 #: mrfrequencies/ui[3][0][1][0].label
 #: piechart/ui[3][0][1][0].label
 #: raincloud/ui[1][1][0].label
-#: scatterplot/ui[1][1][0].label
+#: scatterplot/ui[2][0][0].label
 msgid "Color Options"
 msgstr "颜色选项"
 
@@ -1411,6 +1456,7 @@ msgstr "颜色选项"
 #: boxplot/ui[2][0][0][0].label
 #: histogram/options/colorPalette.title
 #: histogram/ui[3][1][0].label
+#: mosaic/ui[3][0][0][0].label
 #: mrcrosstabs/ui[3][0][0][0].label
 #: mrfrequencies/ui[3][0][0][0].label
 #: piechart/ui[3][0][0][0].label
@@ -1420,7 +1466,7 @@ msgstr "颜色调色板"
 
 #: barchart/ui[4].label
 #: barplot/ui[3].label
-#: corresp/ui[5][0][1][0].label
+#: corresp/ui[6][0][1][0].label
 #: histogram/ui[3].label
 #: lollipop/ui[3][0][0][0].label
 #: mrcrosstabs/ui[3].label
@@ -1428,6 +1474,10 @@ msgstr "颜色调色板"
 #: piechart/ui[3].label
 msgid "Colors"
 msgstr "颜色"
+
+#: scatterplot/ui[2].label
+msgid "Colors & Element Sizes"
+msgstr ""
 
 #: boxplot/ui[2].label
 #: qqplot/ui[4].label
@@ -1437,18 +1487,20 @@ msgstr "颜色和选项"
 #: barchart/options/facetBy/column.title
 #: barchart/ui[5][0][0][0][0]/facetBy_column.label
 #: barplot/options/facetBy/column.title
-#: barplot/ui[4][0][1][0][0]/facetBy_column.label
+#: barplot/ui[4][0][0][0]/facetBy_column.label
 #: boxplot/options/facetBy/column.title
-#: boxplot/ui[3][0][1][0][0]/facetBy_column.label
+#: boxplot/ui[3][0][0][0]/facetBy_column.label
 #: corresp/options/colColor.title
 #: histogram/options/facetBy/column.title
 #: histogram/ui[4][0][0][0][0]/facetBy_column.label
 #: lollipop/options/facetBy/column.title
 #: lollipop/ui[4][0][0][0][0]/facetBy_column.label
+#: mosaic/options/facetBy/column.title
+#: mosaic/ui[4][0][0][0][0]/facetBy_column.label
 #: piechart/options/facetBy/column.title
-#: piechart/ui[4][0][1][0][0]/facetBy_column.label
+#: piechart/ui[4][0][0][0]/facetBy_column.label
 #: scatterplot/options/facetBy/column.title
-#: scatterplot/ui[2][0][1][0][0]/facetBy_column.label
+#: scatterplot/ui[3][0][0][0][0]/facetBy_column.label
 msgid "Column"
 msgstr "列"
 
@@ -1506,17 +1558,21 @@ msgid "Comparison Tests"
 msgstr "比较检定"
 
 #: R/likertplot.b.R
-msgid "Comparison tests cannot be computed with empty (N=0) groups"
-msgstr "无法对空分组（样本量 N=0）进行比较检验"
+msgid "Comparison tests require at least two groups."
+msgstr ""
 
 #: R/likertplot.b.R
-msgid "Comparison tests require numeric variables"
-msgstr "比较检验要求使用数值型变量"
+msgid "Comparison tests require numeric variables."
+msgstr ""
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
 msgid "Component"
 msgstr "成分"
+
+#: R/principal.b.R
+msgid "Component {n} ({perc} %)"
+msgstr ""
 
 #: R/principal.b.R
 msgid "Component Plot"
@@ -1574,6 +1630,7 @@ msgstr "列联表"
 msgid "Continuous"
 msgstr "连续"
 
+#: R/corresp.b.R
 #: R/multcorresp.b.R
 msgid "Contributions"
 msgstr "贡献值"
@@ -1606,14 +1663,26 @@ msgstr "拟合优度平方"
 #: barplot/ui[1][0][0]/yaxis_count.label
 #: histogram/options/histtype/count.title
 #: histogram/ui[1][0][0]/histtype_count.label
+#: mosaic/options/labelType/count.title
 #: piechart/options/labels/count.title
 msgid "Count"
 msgstr "计数"
+
+#: barplot/options/showLabels.title
+#: mrcrosstabs/options/showLabels.title
+#: mrfrequencies/options/showLabels.title
+msgid "Count labels"
+msgstr ""
 
 #: mrcrosstabs/options/endorsed.title
 #: mrfrequencies/options/endorsed.title
 msgid "Counted value"
 msgstr "计数值"
+
+#: R/mrcrosstabs.b.R
+#: R/mrfrequencies.b.R
+msgid "Counted value string may not be empty."
+msgstr ""
 
 #: R/mrfrequencies.b.R
 #: likertplot/options/frequencies/counts.title
@@ -1625,12 +1694,37 @@ msgstr "计数值"
 msgid "Counts"
 msgstr "计数"
 
+#: barplot/options/counts.title
+#: barplot/ui[0][2].label
 #: corresp/options/counts.title
 #: corresp/ui/mode/obsTable[0][0][2].label
+#: mosaic/options/counts.title
+#: mosaic/ui[0][2].label
+#: piechart/options/counts.title
+#: piechart/ui[0][1].label
 msgid "Counts (optional)"
 msgstr "计数（可选）"
 
-#: principal/ui[3][2][0]/biplotType_covPlot.label
+#: R/barplot.b.R
+#: R/corresp.b.R
+#: R/mosaic.b.R
+#: R/piechart.b.R
+msgid "Counts may not be infinite."
+msgstr ""
+
+#: R/barplot.b.R
+#: R/corresp.b.R
+#: R/mosaic.b.R
+#: R/piechart.b.R
+msgid "Counts may not be negative."
+msgstr ""
+
+#: R/barplot.b.R
+#: R/mosaic.b.R
+msgid "Counts may not contain missing values."
+msgstr ""
+
+#: principal/ui[4][2][0]/biplotType_covPlot.label
 msgid "Cov (Loading principal)"
 msgstr "协方差（主载荷）"
 
@@ -1678,6 +1772,7 @@ msgstr "累计百分比"
 #: boxplot/options/colorPalette/Dark2.title
 #: histogram/options/colorPalette/Dark2.title
 #: linechart/options/colorPalette/Dark2.title
+#: mosaic/options/colorPalette/Dark2.title
 #: mrcrosstabs/options/colorPalette/Dark2.title
 #: mrfrequencies/options/colorPalette/Dark2.title
 #: multcorresp/options/colorPalette/Dark2.title
@@ -1732,6 +1827,8 @@ msgstr "小数精度"
 #: boxplot/ui[1][1][0]/order_decreasing.label
 #: lollipop/options/order/decreasing.title
 #: lollipop/ui[2][1][0]/order_decreasing.label
+#: mosaic/options/order/decreasing.title
+#: mosaic/ui[1][1][1]/order_decreasing.label
 #: mrcrosstabs/options/order/decreasing.title
 #: mrcrosstabs/ui[1][2][0]/order_decreasing.label
 #: mrfrequencies/options/order/decreasing.title
@@ -1766,10 +1863,21 @@ msgstr "降序"
 msgid "default"
 msgstr "默认"
 
+#: barchart/options/facetStyle/default.title
+#: barplot/options/facetStyle/default.title
+#: boxplot/options/facetStyle/default.title
+#: histogram/options/facetStyle/default.title
+#: lollipop/options/facetStyle/default.title
+#: mosaic/options/facetStyle/default.title
+#: piechart/options/facetStyle/default.title
+#: scatterplot/options/facetStyle/default.title
+msgid "Default"
+msgstr ""
+
 #: R/histogram.b.R
 #: histogram/options/histtype/density.title
 #: histogram/ui[1][0][0]/histtype_density.label
-#: histogram/ui[2][0][0].label
+#: histogram/ui[2][1][0].label
 msgid "Density"
 msgstr "概率密度"
 
@@ -1801,6 +1909,7 @@ msgstr "自由度"
 #: boxplot/options/colorPalette/dichromat::Categorical.12.title
 #: histogram/options/colorPalette/dichromat::Categorical.12.title
 #: linechart/options/colorPalette/dichromat::Categorical.12.title
+#: mosaic/options/colorPalette/dichromat::Categorical.12.title
 #: mrcrosstabs/options/colorPalette/dichromat::Categorical.12.title
 #: mrfrequencies/options/colorPalette/dichromat::Categorical.12.title
 #: multcorresp/options/colorPalette/dichromat::Categorical.12.title
@@ -1812,17 +1921,25 @@ msgstr "自由度"
 msgid "Dichromat:Categorical"
 msgstr "二分类变量：类别型"
 
-#: R/multcorresp.b.R
 #: R/principal.b.R
 msgid "Dim"
 msgstr "维度"
 
 #: R/corresp.b.R
 #: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "Dim {n}"
+msgstr ""
+
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
 msgid "Dimension"
 msgstr "维度"
+
+#: R/corresp.b.R
+#: R/multcorresp.b.R
+msgid "Dimension {n} ({perc} %)"
+msgstr ""
 
 #: R/multcorresp.b.R
 msgid "Discrimination"
@@ -1910,14 +2027,10 @@ msgstr "特征值"
 msgid "Eigenvalues"
 msgstr "特征值"
 
-#: principal/ui[4][0][0][1].label
-#: scatterplot/ui[2][0][0][0].label
+#: principal/ui[5][0][0][1].label
+#: scatterplot/ui[2][1][0].label
 msgid "Element Sizes"
 msgstr "元素大小"
-
-#: scatterplot/ui[2].label
-msgid "Element Sizes & Facets"
-msgstr "要素尺寸与维度分面"
 
 #: qqplot/options/methodQQ/ell.title
 #: qqplot/options/methodPP/ell.title
@@ -1927,6 +2040,14 @@ msgstr "局部水平对齐"
 #: principal/options/rotation/equamax.title
 msgid "Equamax"
 msgstr "Equamax旋转法"
+
+#: package/analyses/barchart.title
+#: package/analyses/barchart.menuTitle
+#: barchart/options.title
+#: barchart/ui.title
+#: barchart/results.title
+msgid "Error Bar Chart"
+msgstr ""
 
 #: barchart/ui[3][1][0].label
 msgid "Error Bar Size"
@@ -1939,7 +2060,7 @@ msgid "Error Bars"
 msgstr "误差棒"
 
 #: qqplot/options/paramMethod/paraEstimate.title
-#: qqplot/ui[3][0][0]/paramMethod_paraEstimat.label
+#: qqplot/ui[3][0][0]/paramMethod_paraEstimate.label
 msgid "Estimate parameters from data"
 msgstr "基于数据进行参数估计"
 
@@ -1957,6 +2078,10 @@ msgstr "指数型"
 msgid "Exponential distribution requires non-negative (≥0) data."
 msgstr "Exponential 分布要求非负 (≥0) 数据。"
 
+#: R/principal.b.R
+msgid "Extraction"
+msgstr ""
+
 #: principal/results/summaryTable.columns.superTitle
 msgid "Extraction Sums of Squared Loadings"
 msgstr "提取载荷平方和"
@@ -1966,7 +2091,7 @@ msgstr "提取载荷平方和"
 #: barchart/ui[0][3].label
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
-#: barplot/ui[0][2].label
+#: barplot/ui[0][3].label
 #: boxplot/options/facet.title
 #: boxplot/ui[0][3].label
 #: histogram/options/facet.title
@@ -1974,27 +2099,47 @@ msgstr "提取载荷平方和"
 #: lollipop/options/facet.title
 #: lollipop/options/facetBy.title
 #: lollipop/ui[0][2].label
+#: mosaic/options/facet.title
+#: mosaic/options/facetBy.title
+#: mosaic/ui[0][3].label
 #: piechart/options/facet.title
-#: piechart/ui[0][1].label
+#: piechart/ui[0][2].label
 #: scatterplot/options/facet.title
 #: scatterplot/ui[0][5].label
 msgid "Facet"
 msgstr "分面"
 
+#: barchart/ui[5][0][1][0].label
+#: barplot/ui[4][1][0].label
+#: boxplot/ui[3][1][0].label
+#: histogram/ui[4][0][1][0].label
+#: lollipop/ui[4][0][1][0].label
+#: mosaic/ui[4][0][1][0].label
+#: piechart/ui[4][1][0].label
+#: scatterplot/ui[3][0][1][0].label
+msgid "Facet Labels"
+msgstr ""
+
 #: barchart/ui[5].label
 #: barchart/ui[5][0][0][0].label
-#: barplot/ui[4][0][1][0].label
+#: barplot/ui[4].label
+#: barplot/ui[4][0][0].label
 #: boxplot/options/facetBy.title
-#: boxplot/ui[3][0][1][0].label
+#: boxplot/ui[3].label
+#: boxplot/ui[3][0][0].label
 #: histogram/options/facetBy.title
 #: histogram/ui[4].label
 #: histogram/ui[4][0][0][0].label
 #: lollipop/ui[4].label
 #: lollipop/ui[4][0][0][0].label
+#: mosaic/ui[4].label
+#: mosaic/ui[4][0][0][0].label
 #: piechart/options/facetBy.title
-#: piechart/ui[4][0][1][0].label
+#: piechart/ui[4].label
+#: piechart/ui[4][0][0].label
 #: scatterplot/options/facetBy.title
-#: scatterplot/ui[2][0][1][0].label
+#: scatterplot/ui[3].label
+#: scatterplot/ui[3][0][0][0].label
 msgid "Facets"
 msgstr "分面"
 
@@ -2022,15 +2167,19 @@ msgstr "填充"
 #: barchart/options/titleFontFace.title
 #: barchart/options/subtitleFontFace.title
 #: barchart/options/captionFontFace.title
+#: barchart/options/facetFontFace.title
 #: barplot/options/titleFontFace.title
 #: barplot/options/subtitleFontFace.title
 #: barplot/options/captionFontFace.title
+#: barplot/options/facetFontFace.title
 #: boxplot/options/titleFontFace.title
 #: boxplot/options/subtitleFontFace.title
 #: boxplot/options/captionFontFace.title
+#: boxplot/options/facetFontFace.title
 #: histogram/options/titleFontFace.title
 #: histogram/options/subtitleFontFace.title
 #: histogram/options/captionFontFace.title
+#: histogram/options/facetFontFace.title
 #: likertplot/options/titleFontFace.title
 #: likertplot/options/subtitleFontFace.title
 #: likertplot/options/captionFontFace.title
@@ -2040,6 +2189,11 @@ msgstr "填充"
 #: lollipop/options/titleFontFace.title
 #: lollipop/options/subtitleFontFace.title
 #: lollipop/options/captionFontFace.title
+#: lollipop/options/facetFontFace.title
+#: mosaic/options/titleFontFace.title
+#: mosaic/options/subtitleFontFace.title
+#: mosaic/options/captionFontFace.title
+#: mosaic/options/facetFontFace.title
 #: mrcrosstabs/options/titleFontFace.title
 #: mrcrosstabs/options/subtitleFontFace.title
 #: mrcrosstabs/options/captionFontFace.title
@@ -2049,6 +2203,7 @@ msgstr "填充"
 #: piechart/options/titleFontFace.title
 #: piechart/options/subtitleFontFace.title
 #: piechart/options/captionFontFace.title
+#: piechart/options/facetFontFace.title
 #: qqplot/options/titleFontFace.title
 #: qqplot/options/subtitleFontFace.title
 #: qqplot/options/captionFontFace.title
@@ -2058,6 +2213,7 @@ msgstr "填充"
 #: scatterplot/options/titleFontFace.title
 #: scatterplot/options/subtitleFontFace.title
 #: scatterplot/options/captionFontFace.title
+#: scatterplot/options/facetFontFace.title
 msgid "Font"
 msgstr "字体"
 
@@ -2086,7 +2242,7 @@ msgid "Font size"
 msgstr "字体大小"
 
 #: histogram/options/usePalette/forBorder.title
-#: histogram/ui[3][1][0][1]/usePalette_forBoder.label
+#: histogram/ui[3][1][0][1]/usePalette_forBorder.label
 msgid "For border"
 msgstr "边框设置"
 
@@ -2096,7 +2252,7 @@ msgid "For filling"
 msgstr "填充设置"
 
 #: principal/options/biplotType/formPlot.title
-#: principal/ui[3][2][0]/biplotType_formPlot.label
+#: principal/ui[4][2][0]/biplotType_formPlot.label
 msgid "Form (Score principal)"
 msgstr "得分形式（主成分法）"
 
@@ -2150,6 +2306,17 @@ msgstr "Gamma系数"
 msgid "Gray"
 msgstr "灰色"
 
+#: barchart/options/facetStyle/background.title
+#: barplot/options/facetStyle/background.title
+#: boxplot/options/facetStyle/background.title
+#: histogram/options/facetStyle/background.title
+#: lollipop/options/facetStyle/background.title
+#: mosaic/options/facetStyle/background.title
+#: piechart/options/facetStyle/background.title
+#: scatterplot/options/facetStyle/background.title
+msgid "Gray background"
+msgstr ""
+
 #: corresp/options/rowColor/forestgreen.title
 #: corresp/options/colColor/forestgreen.title
 #: histogram/options/fillColor/#4DAF4A.title
@@ -2167,6 +2334,7 @@ msgstr "绿色"
 #: boxplot/options/colorPalette/GnBu.title
 #: histogram/options/colorPalette/GnBu.title
 #: linechart/options/colorPalette/GnBu.title
+#: mosaic/options/colorPalette/GnBu.title
 #: mrcrosstabs/options/colorPalette/GnBu.title
 #: mrfrequencies/options/colorPalette/GnBu.title
 #: multcorresp/options/colorPalette/GnBu.title
@@ -2187,8 +2355,8 @@ msgid "Greenacre correction"
 msgstr "Greenacre 校正"
 
 #: R/multcorresp.b.R
-msgid "Greenacre's corrected inertia ="
-msgstr "Greenacre 校正惯量 ="
+msgid "Greenacre's corrected inertia = {inertia}"
+msgstr ""
 
 #: areachart/options/colorPalette/Greens.title
 #: barchart/options/colorPalette/Greens.title
@@ -2196,6 +2364,7 @@ msgstr "Greenacre 校正惯量 ="
 #: boxplot/options/colorPalette/Greens.title
 #: histogram/options/colorPalette/Greens.title
 #: linechart/options/colorPalette/Greens.title
+#: mosaic/options/colorPalette/Greens.title
 #: mrcrosstabs/options/colorPalette/Greens.title
 #: mrfrequencies/options/colorPalette/Greens.title
 #: multcorresp/options/colorPalette/Greens.title
@@ -2217,6 +2386,7 @@ msgstr "灰色"
 #: boxplot/options/colorPalette/Greys.title
 #: histogram/options/colorPalette/Greys.title
 #: linechart/options/colorPalette/Greys.title
+#: mosaic/options/colorPalette/Greys.title
 #: mrcrosstabs/options/colorPalette/Greys.title
 #: mrfrequencies/options/colorPalette/Greys.title
 #: multcorresp/options/colorPalette/Greys.title
@@ -2244,9 +2414,11 @@ msgstr "灰色"
 #: linechart/ui[0][2].label
 #: lollipop/options/group.title
 #: lollipop/ui[0][1].label
+#: mosaic/options/group.title
+#: mosaic/ui[0][1].label
 #: piechart/options/labels/group.title
 #: principal/options/groupVar.title
-#: principal/ui[0][2].label
+#: principal/ui[1][2].label
 #: scatterplot/options/group.title
 #: scatterplot/ui[0][2].label
 msgid "Group"
@@ -2274,9 +2446,12 @@ msgstr "分组 + 百分比"
 msgid "Group By"
 msgstr "分组依据"
 
+#: mosaic/options/yAxis/label.title
+msgid "Group label"
+msgstr ""
+
 #: barchart/options/barType/dodge2.title
 #: barplot/options/barType/dodge2.title
-#: histogram/options/grouping/dodge.title
 #: mrcrosstabs/options/bartype/dodge2.title
 msgid "Grouped"
 msgstr "分组"
@@ -2287,7 +2462,6 @@ msgstr "分组"
 msgid "Grouped (tight)"
 msgstr "分组（紧凑）"
 
-#: histogram/options/grouping.title
 #: histogram/options/groupingN.title
 #: histogram/ui[1][2][0].label
 msgid "Grouping"
@@ -2309,15 +2483,29 @@ msgstr "分组变量"
 msgid "Groupwise"
 msgstr "按组"
 
+#: package/analyses/principal.menuGroup
+#: package/analyses/corresp.menuGroup
+#: package/analyses/multcorresp.menuGroup
+#: corresp/options.menuGroup
+#: multcorresp/options.menuGroup
+#: principal/options.menuGroup
+msgid "hidden"
+msgstr ""
+
 #: likertplot/options/hideLabelsBelow.title
 msgid "Hide % labels below 5%"
 msgstr "隐藏 < 5% 的标签"
+
+#: mosaic/options/hideAxes.title
+msgid "Hide axes"
+msgstr ""
 
 #: package/analyses/histogram.title
 #: package/analyses/histogram.menuTitle
 #: histogram/options.title
 #: histogram/options/histtype.title
 #: histogram/ui.title
+#: histogram/ui[2][0][0].label
 #: histogram/results.title
 msgid "Histogram"
 msgstr "直方图"
@@ -2346,6 +2534,7 @@ msgstr "水平参考线于"
 #: barplot/options/horizontal.title
 #: boxplot/options/horizontal.title
 #: lollipop/options/horizontal.title
+#: mosaic/options/horizontal.title
 #: mrcrosstabs/options/horizontal.title
 #: mrfrequencies/options/horizontal.title
 #: raincloud/options/horizontal.title
@@ -2359,6 +2548,7 @@ msgstr "恒等线"
 
 #: barchart/options/ignoreNA.title
 #: likertplot/options/ignoreNA.title
+#: raincloud/options/ignoreNA.title
 msgid "Ignore missing groups"
 msgstr "忽略缺失分组"
 
@@ -2366,6 +2556,7 @@ msgstr "忽略缺失分组"
 #: barplot/options/ignoreNA.title
 #: boxplot/options/ignoreNA.title
 #: linechart/options/ignoreNA.title
+#: mosaic/options/ignoreNA.title
 msgid "Ignore missing values"
 msgstr "忽略缺失值"
 
@@ -2381,6 +2572,8 @@ msgstr "优化标签显示"
 #: boxplot/ui[1][1][0]/order_increasing.label
 #: lollipop/options/order/increasing.title
 #: lollipop/ui[2][1][0]/order_increasing.label
+#: mosaic/options/order/increasing.title
+#: mosaic/ui[1][1][1]/order_increasing.label
 #: mrcrosstabs/options/order/increasing.title
 #: mrcrosstabs/ui[1][2][0]/order_increasing.label
 #: mrfrequencies/options/order/increasing.title
@@ -2390,7 +2583,7 @@ msgstr "升序"
 
 #: R/multcorresp.b.R
 #: multcorresp/options/method/Indicator.title
-#: multcorresp/ui[3][0][0]/method_indicator.label
+#: multcorresp/ui[4][0][0]/method_indicator.label
 msgid "Indicator matrix"
 msgstr "指示矩阵"
 
@@ -2413,10 +2606,6 @@ msgstr "初始特征值"
 msgid "Input format"
 msgstr "输入格式"
 
-#: package/datasets/Iris.name
-msgid "Iris"
-msgstr "Iris数据集"
-
 #: areachart/options/dateFormat/iso.title
 #: linechart/options/dateFormat/iso.title
 msgid "ISO (Y-M-D)"
@@ -2428,18 +2617,22 @@ msgstr "ISO 日期格式 (年-月-日)"
 #: barchart/options/titleFontFace/italic.title
 #: barchart/options/subtitleFontFace/italic.title
 #: barchart/options/captionFontFace/italic.title
+#: barchart/options/facetFontFace/italic.title
 #: barplot/options/titleFontFace/italic.title
 #: barplot/options/subtitleFontFace/italic.title
 #: barplot/options/captionFontFace/italic.title
+#: barplot/options/facetFontFace/italic.title
 #: boxplot/options/titleFontFace/italic.title
 #: boxplot/options/subtitleFontFace/italic.title
 #: boxplot/options/captionFontFace/italic.title
+#: boxplot/options/facetFontFace/italic.title
 #: corresp/options/titleFontFace/italic.title
 #: corresp/options/subtitleFontFace/italic.title
 #: corresp/options/captionFontFace/italic.title
 #: histogram/options/titleFontFace/italic.title
 #: histogram/options/subtitleFontFace/italic.title
 #: histogram/options/captionFontFace/italic.title
+#: histogram/options/facetFontFace/italic.title
 #: likertplot/options/titleFontFace/italic.title
 #: likertplot/options/subtitleFontFace/italic.title
 #: likertplot/options/captionFontFace/italic.title
@@ -2449,6 +2642,11 @@ msgstr "ISO 日期格式 (年-月-日)"
 #: lollipop/options/titleFontFace/italic.title
 #: lollipop/options/subtitleFontFace/italic.title
 #: lollipop/options/captionFontFace/italic.title
+#: lollipop/options/facetFontFace/italic.title
+#: mosaic/options/titleFontFace/italic.title
+#: mosaic/options/subtitleFontFace/italic.title
+#: mosaic/options/captionFontFace/italic.title
+#: mosaic/options/facetFontFace/italic.title
 #: mrcrosstabs/options/titleFontFace/italic.title
 #: mrcrosstabs/options/subtitleFontFace/italic.title
 #: mrcrosstabs/options/captionFontFace/italic.title
@@ -2461,6 +2659,7 @@ msgstr "ISO 日期格式 (年-月-日)"
 #: piechart/options/titleFontFace/italic.title
 #: piechart/options/subtitleFontFace/italic.title
 #: piechart/options/captionFontFace/italic.title
+#: piechart/options/facetFontFace/italic.title
 #: principal/options/titleFontFace/italic.title
 #: principal/options/subtitleFontFace/italic.title
 #: principal/options/captionFontFace/italic.title
@@ -2473,6 +2672,7 @@ msgstr "ISO 日期格式 (年-月-日)"
 #: scatterplot/options/titleFontFace/italic.title
 #: scatterplot/options/subtitleFontFace/italic.title
 #: scatterplot/options/captionFontFace/italic.title
+#: scatterplot/options/facetFontFace/italic.title
 msgid "Italic"
 msgstr "斜体"
 
@@ -2501,6 +2701,7 @@ msgstr "jmv 蓝色"
 #: boxplot/options/colorPalette/jmv.title
 #: histogram/options/colorPalette/jmv.title
 #: linechart/options/colorPalette/jmv.title
+#: mosaic/options/colorPalette/jmv.title
 #: mrcrosstabs/options/colorPalette/jmv.title
 #: mrfrequencies/options/colorPalette/jmv.title
 #: multcorresp/options/colorPalette/jmv.title
@@ -2603,20 +2804,21 @@ msgstr "Kruskal-Wallis 检验"
 #: boxplot/options/labSize.title
 #: boxplot/ui[0][2].label
 #: corresp/options/labelSize.title
-#: likertplot/options/textSize.title
 #: likertplot/options/labelSize.title
 #: mrcrosstabs/options/labelFontSize.title
 #: mrfrequencies/options/labelFontSize.title
 #: mrfrequencies/options/textColor.title
 #: multcorresp/options/labelVar.title
-#: multcorresp/ui[0][2].label
+#: multcorresp/options/labelSize.title
+#: multcorresp/ui[1][2].label
 #: piechart/options/labType/label.title
 #: piechart/options/labSize.title
 #: piechart/options/textColor.title
 #: piechart/ui[2][0][0][0]/labType_label.label
 #: principal/options/labelVar.title
-#: principal/ui[0][1].label
+#: principal/ui[1][1].label
 #: scatterplot/options/labelVar.title
+#: scatterplot/options/labelTextSize.title
 #: scatterplot/ui[0][3].label
 msgid "Label"
 msgstr "标签"
@@ -2641,6 +2843,8 @@ msgstr "标签颜色"
 #: linechart/options/xAxisLabelFontSize.title
 #: lollipop/options/yAxisLabelFontSize.title
 #: lollipop/options/xAxisLabelFontSize.title
+#: mosaic/options/yAxisLabelFontSize.title
+#: mosaic/options/xAxisLabelFontSize.title
 #: mrcrosstabs/options/yAxisLabelFontSize.title
 #: mrcrosstabs/options/xAxisLabelFontSize.title
 #: mrfrequencies/options/yAxisLabelFontSize.title
@@ -2654,6 +2858,11 @@ msgstr "标签颜色"
 msgid "Label font size"
 msgstr "标签字体大小"
 
+#: mosaic/ui[2][0][1][0].label
+msgid "Label Format"
+msgstr ""
+
+#: mosaic/ui[2].label
 #: piechart/ui[2][0][1][0].label
 msgid "Label Options"
 msgstr "标签选项"
@@ -2683,6 +2892,8 @@ msgstr "标签位置"
 #: linechart/options/xAxisLabelRotation.title
 #: lollipop/options/yAxisLabelRotation.title
 #: lollipop/options/xAxisLabelRotation.title
+#: mosaic/options/yAxisLabelRotation.title
+#: mosaic/options/xAxisLabelRotation.title
 #: mrcrosstabs/options/yAxisLabelRotation.title
 #: mrcrosstabs/options/xAxisLabelRotation.title
 #: mrfrequencies/options/yAxisLabelRotation.title
@@ -2700,7 +2911,11 @@ msgstr "标签旋转"
 msgid "Label Size"
 msgstr "标签大小"
 
-#: multcorresp/options/labelSize.title
+#: mosaic/options/labelType.title
+#: mosaic/ui[2][0][0][0].label
+msgid "Label Type"
+msgstr ""
+
 #: piechart/options/labels.title
 #: piechart/ui[1][1][0].label
 #: piechart/ui[2].label
@@ -2716,16 +2931,19 @@ msgstr "标签"
 #: barchart/options/titleAlign/0.title
 #: barchart/options/subtitleAlign/0.title
 #: barchart/options/captionAlign/0.title
+#: barchart/options/facetAlign/0.title
 #: barchart/options/legendPosition/left.title
 #: barchart/options/xAxisPosition/0.title
 #: barplot/options/titleAlign/0.title
 #: barplot/options/subtitleAlign/0.title
 #: barplot/options/captionAlign/0.title
+#: barplot/options/facetAlign/0.title
 #: barplot/options/legendPosition/left.title
 #: barplot/options/xAxisPosition/0.title
 #: boxplot/options/titleAlign/0.title
 #: boxplot/options/subtitleAlign/0.title
 #: boxplot/options/captionAlign/0.title
+#: boxplot/options/facetAlign/0.title
 #: boxplot/options/legendPosition/left.title
 #: boxplot/options/xAxisPosition/0.title
 #: corresp/options/titleAlign/0.title
@@ -2735,6 +2953,7 @@ msgstr "标签"
 #: histogram/options/titleAlign/0.title
 #: histogram/options/subtitleAlign/0.title
 #: histogram/options/captionAlign/0.title
+#: histogram/options/facetAlign/0.title
 #: histogram/options/legendPosition/left.title
 #: histogram/options/xAxisPosition/0.title
 #: likertplot/options/titleAlign/0.title
@@ -2749,7 +2968,14 @@ msgstr "标签"
 #: lollipop/options/titleAlign/0.title
 #: lollipop/options/subtitleAlign/0.title
 #: lollipop/options/captionAlign/0.title
+#: lollipop/options/facetAlign/0.title
 #: lollipop/options/xAxisPosition/0.title
+#: mosaic/options/titleAlign/0.title
+#: mosaic/options/subtitleAlign/0.title
+#: mosaic/options/captionAlign/0.title
+#: mosaic/options/facetAlign/0.title
+#: mosaic/options/legendPosition/left.title
+#: mosaic/options/xAxisPosition/0.title
 #: mrcrosstabs/options/titleAlign/0.title
 #: mrcrosstabs/options/subtitleAlign/0.title
 #: mrcrosstabs/options/captionAlign/0.title
@@ -2767,6 +2993,7 @@ msgstr "标签"
 #: piechart/options/titleAlign/0.title
 #: piechart/options/subtitleAlign/0.title
 #: piechart/options/captionAlign/0.title
+#: piechart/options/facetAlign/0.title
 #: piechart/options/legendPosition/left.title
 #: principal/options/titleAlign/0.title
 #: principal/options/subtitleAlign/0.title
@@ -2786,6 +3013,7 @@ msgstr "标签"
 #: scatterplot/options/titleAlign/0.title
 #: scatterplot/options/subtitleAlign/0.title
 #: scatterplot/options/captionAlign/0.title
+#: scatterplot/options/facetAlign/0.title
 #: scatterplot/options/legendPosition/left.title
 #: scatterplot/options/xAxisPosition/0.title
 msgid "Left"
@@ -2798,14 +3026,15 @@ msgstr "左"
 #: histogram/ui[6][0].label
 #: likertplot/ui[7][0].label
 #: linechart/ui[3][0].label
+#: mosaic/ui[6][0].label
 #: mrcrosstabs/ui[5][0].label
-#: multcorresp/ui[7][0].label
+#: multcorresp/ui[8][0].label
 #: piechart/ui[5].label
 #: piechart/ui[5][0].label
-#: principal/ui[5][0].label
+#: principal/ui[6][0].label
 #: qqplot/ui[6][0].label
 #: raincloud/ui[3][0].label
-#: scatterplot/ui[4][0].label
+#: scatterplot/ui[5][0].label
 msgid "Legend"
 msgstr "图例"
 
@@ -2816,12 +3045,13 @@ msgstr "图例"
 #: histogram/ui[6].label
 #: linechart/ui[3].label
 #: lollipop/ui[6].label
+#: mosaic/ui[6].label
 #: mrcrosstabs/ui[5].label
-#: multcorresp/ui[7].label
-#: principal/ui[5].label
+#: multcorresp/ui[8].label
+#: principal/ui[6].label
 #: qqplot/ui[6].label
 #: raincloud/ui[3].label
-#: scatterplot/ui[4].label
+#: scatterplot/ui[5].label
 msgid "Legend & Axis Titles"
 msgstr "图例与轴标题"
 
@@ -2835,6 +3065,7 @@ msgstr "图例标题"
 #: boxplot/options/colorPalette/custom::lemovice.title
 #: histogram/options/colorPalette/custom::lemovice.title
 #: linechart/options/colorPalette/custom::lemovice.title
+#: mosaic/options/colorPalette/custom::lemovice.title
 #: mrcrosstabs/options/colorPalette/custom::lemovice.title
 #: mrfrequencies/options/colorPalette/custom::lemovice.title
 #: multcorresp/options/colorPalette/custom::lemovice.title
@@ -2937,8 +3168,8 @@ msgid "Likert Plot"
 msgstr "Likert 图"
 
 #: R/likertplot.b.R
-msgid "Likert Plot requires ordinal (or numeric) variables"
-msgstr "Likert 图要求使用定序（或数值型）变量"
+msgid "Likert Plot requires ordinal (or continuous-integer) variables."
+msgstr ""
 
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
@@ -2964,6 +3195,7 @@ msgid "Line Chart"
 msgstr "线图"
 
 #: barchart/options/errorBarLineSize.title
+#: histogram/options/lineLineSize.title
 #: histogram/options/densityLineSize.title
 #: histogram/options/normalCurveLineSize.title
 msgid "Line size"
@@ -3005,19 +3237,6 @@ msgstr "棒棒糖圆点大小"
 msgid "Lollipop Size & Colors"
 msgstr "棒棒糖图的圆点大小与颜色"
 
-#: package.description
-msgid ""
-"Main statistical charts (histogram, boxplot, point, bar, line, raincloud…) "
-"with many options along with Likert plot, multiple response barplot, "
-"Principal Component and (Multiple) Correspondence Analyses. The module is "
-"available in the <strong>Plots tab</strong>. Project source (and changelog) "
-"is available at <a href=\"https://github.com/vjalby/vijPlots\" "
-"target=\"_blank\">Github</a>."
-msgstr ""
-"主要统计图表（直方图、箱线图、点图、条形图、折线图、雨云图等），附带多种选项，以及李克特图、多选题条形图、主成分分析和（多重）对应分析。该模块位于<str"
-"ong>“绘图”选项卡</strong>中。项目源码（及更新日志）可在<a "
-"href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>获取。"
-
 #: likertplot/options/showMannU.title
 msgid "Mann-Whitney U"
 msgstr "Mann-Whitney U 检验"
@@ -3052,6 +3271,16 @@ msgstr "Mann-Whitney U 检验"
 #: scatterplot/options/xAxisRangeType/manual.title
 msgid "Manual"
 msgstr "手动"
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "Manual X-axis range doesn't have a valid date format."
+msgstr ""
+
+#: mosaic/options/residualsAsOpacity.title
+#: mosaic/ui[3][0][1][0]/residualsAsOpacity.label
+msgid "Map to residuals"
+msgstr ""
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -3106,7 +3335,7 @@ msgid "Maximum of {var}"
 msgstr "{var} 的最大值"
 
 #: qqplot/options/paramEstMethod/mle.title
-#: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mle.label
+#: qqplot/ui[3][0][0]/paramMethod_paraEstimate/paramEstMethod_mle.label
 msgid "Maximum-likelihood (MLE)"
 msgstr "极大似然估计 (MLE)"
 
@@ -3116,15 +3345,16 @@ msgid "May"
 msgstr "五月"
 
 #: R/multcorresp.b.R
-msgid "MCA Principal Coordinates"
-msgstr "MCA 主坐标"
+msgid "MCA Principal Coordinates ({method})"
+msgstr ""
 
 #: R/multcorresp.b.R
-msgid "MCA Standard Coordinates"
-msgstr "MCA 标准坐标"
+msgid "MCA Standard Coordinates ({method})"
+msgstr ""
 
 #: barchart/options/yaxis/mean.title
 #: barchart/ui[1][0][0][0]/yaxis_mean.label
+#: boxplot/options/showMean.title
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 msgid "Mean"
@@ -3133,6 +3363,10 @@ msgstr "均值"
 #: likertplot/options/showMean.title
 msgid "Mean & SD"
 msgstr "均值与标准差"
+
+#: histogram/options/meanLine.title
+msgid "Mean line"
+msgstr ""
 
 #: R/barchart.b.R
 #: R/lollipop.b.R
@@ -3151,6 +3385,10 @@ msgstr "中位数"
 #: R/likertplot.b.R
 msgid "Median and mean require numeric variables"
 msgstr "中位数和平均值要求使用数值型变量"
+
+#: histogram/options/medianLine.title
+msgid "Median line"
+msgstr ""
 
 #: R/barchart.b.R
 #: R/lollipop.b.R
@@ -3171,19 +3409,19 @@ msgstr "十月"
 
 #: likertplot/options/adjustMethod.title
 #: multcorresp/options/method.title
-#: multcorresp/ui[3][0].label
+#: multcorresp/ui[4][0].label
 #: scatterplot/options/lineMethod.title
 msgid "Method"
 msgstr "方法"
 
 #: qqplot/options/paramEstMethod/mme.title
-#: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mme.label
+#: qqplot/ui[3][0][0]/paramMethod_paraEstimate/paramEstMethod_mme.label
 msgid "Method of moments (MME)"
 msgstr "矩估计 (MME)"
 
 #: R/multcorresp.b.R
-msgid "Method:"
-msgstr "方法："
+msgid "Method: {method}"
+msgstr ""
 
 #: barplot/options/labelPosition/middle.title
 #: barplot/ui[2][0][1][0]/labelPosition_middle.label
@@ -3239,6 +3477,14 @@ msgstr "最小熵"
 msgid "Minimum of {var}"
 msgstr "{var} 的最小值"
 
+#: package/analyses/mosaic.title
+#: package/analyses/mosaic.menuTitle
+#: mosaic/options.title
+#: mosaic/ui.title
+#: mosaic/results.title
+msgid "Mosaic Plot"
+msgstr ""
+
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
 #: mrcrosstabs/ui/mode/onevar[0][1].label
@@ -3292,12 +3538,17 @@ msgid "Name"
 msgstr "名称"
 
 #: qqplot/options/transLog.title
-msgid "Natural log tranform"
-msgstr "自然对数变换"
+msgid "Natural log transform"
+msgstr ""
 
 #: R/qqplot.b.R
-msgid "Natural Log Tranform requires positive (>0) data."
-msgstr "自然对数变换要求数据为正数 (>0)。"
+msgid "Natural Log Transform requires positive (>0) data."
+msgstr ""
+
+#: R/mrcrosstabs.b.R
+#: R/mrfrequencies.b.R
+msgid "No distinct values found in the selected variable."
+msgstr ""
 
 #: R/principal.b.R
 msgid "No rotation used."
@@ -3314,13 +3565,16 @@ msgstr "未使用旋转。"
 #: boxplot/ui[1][1][0]/order_none.label
 #: histogram/options/fillColor/none.title
 #: histogram/options/borderColor/none.title
-#: histogram/options/grouping/none.title
 #: likertplot/options/sorting/none.title
 #: likertplot/options/pValue/none.title
 #: likertplot/ui[1][1][0]/sorting_none.label
 #: likertplot/ui[3][0][2][0]/pValue_none.label
 #: lollipop/options/order/none.title
 #: lollipop/ui[2][1][0]/order_none.label
+#: mosaic/options/yAxis/none.title
+#: mosaic/options/order/none.title
+#: mosaic/options/labelType/none.title
+#: mosaic/ui[1][1][1]/order_none.label
 #: mrcrosstabs/options/order/none.title
 #: mrcrosstabs/options/borderColor/none.title
 #: mrcrosstabs/ui[1][2][0]/order_none.label
@@ -3340,18 +3594,22 @@ msgstr "无"
 #: barchart/options/titleFontFace/plain.title
 #: barchart/options/subtitleFontFace/plain.title
 #: barchart/options/captionFontFace/plain.title
+#: barchart/options/facetFontFace/plain.title
 #: barplot/options/titleFontFace/plain.title
 #: barplot/options/subtitleFontFace/plain.title
 #: barplot/options/captionFontFace/plain.title
+#: barplot/options/facetFontFace/plain.title
 #: boxplot/options/titleFontFace/plain.title
 #: boxplot/options/subtitleFontFace/plain.title
 #: boxplot/options/captionFontFace/plain.title
+#: boxplot/options/facetFontFace/plain.title
 #: corresp/options/titleFontFace/plain.title
 #: corresp/options/subtitleFontFace/plain.title
 #: corresp/options/captionFontFace/plain.title
 #: histogram/options/titleFontFace/plain.title
 #: histogram/options/subtitleFontFace/plain.title
 #: histogram/options/captionFontFace/plain.title
+#: histogram/options/facetFontFace/plain.title
 #: likertplot/options/titleFontFace/plain.title
 #: likertplot/options/subtitleFontFace/plain.title
 #: likertplot/options/captionFontFace/plain.title
@@ -3361,6 +3619,11 @@ msgstr "无"
 #: lollipop/options/titleFontFace/plain.title
 #: lollipop/options/subtitleFontFace/plain.title
 #: lollipop/options/captionFontFace/plain.title
+#: lollipop/options/facetFontFace/plain.title
+#: mosaic/options/titleFontFace/plain.title
+#: mosaic/options/subtitleFontFace/plain.title
+#: mosaic/options/captionFontFace/plain.title
+#: mosaic/options/facetFontFace/plain.title
 #: mrcrosstabs/options/titleFontFace/plain.title
 #: mrcrosstabs/options/subtitleFontFace/plain.title
 #: mrcrosstabs/options/captionFontFace/plain.title
@@ -3373,6 +3636,7 @@ msgstr "无"
 #: piechart/options/titleFontFace/plain.title
 #: piechart/options/subtitleFontFace/plain.title
 #: piechart/options/captionFontFace/plain.title
+#: piechart/options/facetFontFace/plain.title
 #: principal/options/titleFontFace/plain.title
 #: principal/options/subtitleFontFace/plain.title
 #: principal/options/captionFontFace/plain.title
@@ -3385,20 +3649,29 @@ msgstr "无"
 #: scatterplot/options/titleFontFace/plain.title
 #: scatterplot/options/subtitleFontFace/plain.title
 #: scatterplot/options/captionFontFace/plain.title
+#: scatterplot/options/facetFontFace/plain.title
 msgid "Normal"
 msgstr "正态"
 
-#: histogram/ui[2][1][0].label
+#: histogram/ui[2][1][1].label
 msgid "Normal Curve"
 msgstr "正态曲线"
 
 #: corresp/options/normalization.title
-#: corresp/ui[3][0].label
+#: corresp/ui[4][0].label
 #: multcorresp/options/normalization.title
-#: multcorresp/ui[4][0].label
-#: principal/ui[7][0][0][0].label
+#: multcorresp/ui[5][0].label
+#: principal/ui[8][0][0][0].label
 msgid "Normalization"
 msgstr "标准化"
+
+#: R/principal.b.R
+msgid "Not enough complete observations to perform PCA."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Not enough data to compute CA."
+msgstr ""
 
 #: boxplot/options/notchWidth.title
 msgid "Notch width"
@@ -3428,8 +3701,8 @@ msgid "Number of cases"
 msgstr "例数"
 
 #: R/mrfrequencies.b.R
-msgid "Number of cases:"
-msgstr "案例数："
+msgid "Number of cases: {n}"
+msgstr ""
 
 #: corresp/options/dimNum.title
 #: multcorresp/options/dimNum.title
@@ -3444,6 +3717,11 @@ msgstr "维度数量必须小于或等于 {maxDim}。"
 #: multcorresp/options/obsColor.title
 msgid "Obs color"
 msgstr "观测值颜色"
+
+#: R/principal.b.R
+#: principal/results/obsTable.columns.title
+msgid "Observation"
+msgstr ""
 
 #: multcorresp/results/obsCoordOV.title
 #: principal/results/obsCoordOV.title
@@ -3466,7 +3744,7 @@ msgstr "观测图"
 msgid "Observation plot"
 msgstr "观测图"
 
-#: multcorresp/ui[6][0][1][1].label
+#: multcorresp/ui[7][0][1][1].label
 msgid "Observation Plot Options"
 msgstr "观测图选项"
 
@@ -3536,10 +3814,14 @@ msgstr "单变量"
 #: barchart/ui[4][0][0][0]/singleColor/colorNo.suffix
 #: barplot/ui[3][0][0][0]/singleColor/colorNo.suffix
 #: boxplot/ui[2][0][0][0]/singleColor/colorNo.suffix
-#: mrfrequencies/ui[3][0][0][0][1]/colorNo.suffix
+#: mrfrequencies/ui[3][0][0][0]/singleColor/colorNo.suffix
 #: raincloud/ui[1][1][0]/singleColor/colorNo.suffix
 msgid "only"
 msgstr "仅"
+
+#: mosaic/ui[3][0][1][0].label
+msgid "Opacity"
+msgstr ""
 
 #: mrcrosstabs/options/optionname.title
 #: mrfrequencies/options/optionname.title
@@ -3582,6 +3864,7 @@ msgstr "橙色"
 #: histogram/options/colorPalette/PuOr.title
 #: likertplot/options/plotColor/PuOr.title
 #: linechart/options/colorPalette/PuOr.title
+#: mosaic/options/colorPalette/PuOr.title
 #: mrcrosstabs/options/colorPalette/PuOr.title
 #: mrfrequencies/options/colorPalette/PuOr.title
 #: multcorresp/options/colorPalette/PuOr.title
@@ -3599,6 +3882,7 @@ msgstr "橙色和紫色"
 #: boxplot/options/colorPalette/OrRd.title
 #: histogram/options/colorPalette/OrRd.title
 #: linechart/options/colorPalette/OrRd.title
+#: mosaic/options/colorPalette/OrRd.title
 #: mrcrosstabs/options/colorPalette/OrRd.title
 #: mrfrequencies/options/colorPalette/OrRd.title
 #: multcorresp/options/colorPalette/OrRd.title
@@ -3616,6 +3900,7 @@ msgstr "橙红渐变"
 #: boxplot/options/colorPalette/Oranges.title
 #: histogram/options/colorPalette/Oranges.title
 #: linechart/options/colorPalette/Oranges.title
+#: mosaic/options/colorPalette/Oranges.title
 #: mrcrosstabs/options/colorPalette/Oranges.title
 #: mrfrequencies/options/colorPalette/Oranges.title
 #: multcorresp/options/colorPalette/Oranges.title
@@ -3635,6 +3920,10 @@ msgstr "原始特征值"
 msgid "Other Options"
 msgstr "其他选项"
 
+#: boxplot/options/showOutliers.title
+msgid "Outliers"
+msgstr ""
+
 #: R/mrcrosstabs.b.R
 #: likertplot/options/pValue/overall.title
 #: likertplot/ui[3][0][2][0]/pValue_overall.label
@@ -3646,7 +3935,6 @@ msgid "Overall (all groups)"
 msgstr "总体（所有组）"
 
 #: areachart/options/position/identity.title
-#: histogram/options/grouping/identity.title
 #: histogram/options/groupingN/identity.title
 #: histogram/ui[1][2][0]/groupingN_identity.label
 msgid "Overlapping"
@@ -3685,6 +3973,7 @@ msgstr "p值使用 {method} 方法进行校正。"
 #: boxplot/options/colorPalette/Paired.title
 #: histogram/options/colorPalette/Paired.title
 #: linechart/options/colorPalette/Paired.title
+#: mosaic/options/colorPalette/Paired.title
 #: mrcrosstabs/options/colorPalette/Paired.title
 #: mrfrequencies/options/colorPalette/Paired.title
 #: multcorresp/options/colorPalette/Paired.title
@@ -3706,6 +3995,7 @@ msgstr "两两比较"
 #: boxplot/options/colorPalette.title
 #: likertplot/options/plotColor.title
 #: linechart/options/colorPalette.title
+#: mosaic/options/colorPalette.title
 #: mrcrosstabs/options/colorPalette.title
 #: mrfrequencies/options/colorPalette.title
 #: multcorresp/options/colorPalette.title
@@ -3725,11 +4015,19 @@ msgstr "参数 1"
 msgid "Parameter 2"
 msgstr "参数 2"
 
-#: R/qqplot.b.R
 #: qqplot/results/paramTable.title
 msgid "Parameter Estimates"
 msgstr "参数估计"
 
+#: R/qqplot.b.R
+msgid "Parameter Estimates (MLE)"
+msgstr ""
+
+#: R/qqplot.b.R
+msgid "Parameter Estimates (MME)"
+msgstr ""
+
+#: R/qqplot.b.R
 #: qqplot/ui[3].label
 msgid "Parameter Values"
 msgstr "参数值"
@@ -3749,6 +4047,7 @@ msgstr "Parsimax"
 #: boxplot/options/colorPalette/Pastel1.title
 #: histogram/options/colorPalette/Pastel1.title
 #: linechart/options/colorPalette/Pastel1.title
+#: mosaic/options/colorPalette/Pastel1.title
 #: mrcrosstabs/options/colorPalette/Pastel1.title
 #: mrfrequencies/options/colorPalette/Pastel1.title
 #: multcorresp/options/colorPalette/Pastel1.title
@@ -3766,6 +4065,7 @@ msgstr "浅色调 1"
 #: boxplot/options/colorPalette/Pastel2.title
 #: histogram/options/colorPalette/Pastel2.title
 #: linechart/options/colorPalette/Pastel2.title
+#: mosaic/options/colorPalette/Pastel2.title
 #: mrcrosstabs/options/colorPalette/Pastel2.title
 #: mrfrequencies/options/colorPalette/Pastel2.title
 #: multcorresp/options/colorPalette/Pastel2.title
@@ -3782,12 +4082,26 @@ msgid "PCA Principal Coordinates"
 msgstr "PCA 主坐标"
 
 #: R/principal.b.R
+msgid "PCA Principal Coordinates ({rot})"
+msgstr ""
+
+#: R/principal.b.R
 msgid "PCA Standard Coordinates"
 msgstr "PCA 标准坐标"
+
+#: R/principal.b.R
+msgid "PCA Standard Coordinates ({rot})"
+msgstr ""
+
+#: mosaic/options/labelType/residuals.title
+msgid "Pearson residuals"
+msgstr ""
 
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
 #: barplot/ui[1][0][0]/yaxis_percent.label
+#: mosaic/options/yAxis/percent.title
+#: mosaic/options/labelType/percent.title
 #: piechart/options/labels/percent.title
 msgid "Percent"
 msgstr "百分比"
@@ -3827,6 +4141,7 @@ msgstr "粉色"
 #: histogram/options/colorPalette/PiYG.title
 #: likertplot/options/plotColor/PiYG.title
 #: linechart/options/colorPalette/PiYG.title
+#: mosaic/options/colorPalette/PiYG.title
 #: mrcrosstabs/options/colorPalette/PiYG.title
 #: mrfrequencies/options/colorPalette/PiYG.title
 #: multcorresp/options/colorPalette/PiYG.title
@@ -3845,13 +4160,17 @@ msgid "Plot"
 msgstr "图"
 
 #: likertplot/ui[4][2][1][0].label
-#: multcorresp/ui[6][0][0][0].label
+#: multcorresp/ui[7][0][0][0].label
 msgid "Plot Color"
 msgstr "图表颜色"
 
-#: principal/ui[4][0][1][0].label
+#: principal/ui[5][0][1][0].label
 msgid "Plot Colors"
 msgstr "图表配色"
+
+#: scatterplot/options/plotBorder.title
+msgid "Plot frame"
+msgstr ""
 
 #: areachart/ui[1][0][0].label
 #: barchart/ui[2].label
@@ -3860,11 +4179,12 @@ msgstr "图表配色"
 #: barplot/ui[2][0][0][0].label
 #: boxplot/ui[1][0][0].label
 #: linechart/ui[1][0][0].label
+#: mosaic/ui[1][0][0].label
 #: mrcrosstabs/ui[2].label
 #: mrcrosstabs/ui[2][0][0][0].label
 #: mrfrequencies/ui[2].label
 #: mrfrequencies/ui[2][0][0][0].label
-#: multcorresp/ui[6].label
+#: multcorresp/ui[7].label
 #: piechart/ui[1][0][0].label
 #: qqplot/ui[2][1][0].label
 #: raincloud/ui[1][0][0].label
@@ -3880,18 +4200,19 @@ msgstr "绘图选项"
 #: likertplot/ui[8].label
 #: linechart/ui[4].label
 #: lollipop/ui[7].label
+#: mosaic/ui[7].label
 #: mrcrosstabs/ui[6].label
 #: mrfrequencies/ui[6].label
 #: piechart/ui[6].label
 #: qqplot/ui[7].label
 #: raincloud/ui[4].label
-#: scatterplot/ui[5].label
+#: scatterplot/ui[6].label
 msgid "Plot Titles"
 msgstr "图表标题"
 
-#: corresp/ui[7].label
-#: multcorresp/ui[8].label
-#: principal/ui[6].label
+#: corresp/ui[8].label
+#: multcorresp/ui[9].label
+#: principal/ui[7].label
 msgid "Plot Titles & Subtitles"
 msgstr "图表标题和子标题"
 
@@ -3901,10 +4222,10 @@ msgstr "图表标题和子标题"
 msgid "Plot Type"
 msgstr "图表类型"
 
-#: corresp/ui[4][1][0].label
+#: corresp/ui[5][1][0].label
 #: mrcrosstabs/results/plot.title
-#: multcorresp/ui[5][1][0].label
-#: principal/ui[3][1][0].label
+#: multcorresp/ui[6][1][0].label
+#: principal/ui[4][1][0].label
 msgid "Plots"
 msgstr "绘图"
 
@@ -3924,6 +4245,10 @@ msgstr "点大小"
 #: principal/options/obsColor.title
 msgid "Points"
 msgstr "点"
+
+#: scatterplot/options/keepNA.title
+msgid "Points with missing group/label"
+msgstr ""
 
 #: qqplot/options/methodQQ/pointwise.title
 msgid "Pointwise"
@@ -3953,6 +4278,9 @@ msgstr "逐点"
 #: linechart/options/yAxisPosition.title
 #: lollipop/options/xAxisPosition.title
 #: lollipop/options/yAxisPosition.title
+#: mosaic/options/legendPosition.title
+#: mosaic/options/xAxisPosition.title
+#: mosaic/options/yAxisPosition.title
 #: mrcrosstabs/options/legendPosition.title
 #: mrcrosstabs/options/xAxisPosition.title
 #: mrcrosstabs/options/yAxisPosition.title
@@ -4036,6 +4364,7 @@ msgstr "紫色"
 #: histogram/options/colorPalette/PRGn.title
 #: likertplot/options/plotColor/PRGn.title
 #: linechart/options/colorPalette/PRGn.title
+#: mosaic/options/colorPalette/PRGn.title
 #: mrcrosstabs/options/colorPalette/PRGn.title
 #: mrfrequencies/options/colorPalette/PRGn.title
 #: multcorresp/options/colorPalette/PRGn.title
@@ -4053,6 +4382,7 @@ msgstr "紫色 和 绿色"
 #: boxplot/options/colorPalette/PuBu.title
 #: histogram/options/colorPalette/PuBu.title
 #: linechart/options/colorPalette/PuBu.title
+#: mosaic/options/colorPalette/PuBu.title
 #: mrcrosstabs/options/colorPalette/PuBu.title
 #: mrfrequencies/options/colorPalette/PuBu.title
 #: multcorresp/options/colorPalette/PuBu.title
@@ -4070,6 +4400,7 @@ msgstr "紫蓝渐变"
 #: boxplot/options/colorPalette/PuBuGn.title
 #: histogram/options/colorPalette/PuBuGn.title
 #: linechart/options/colorPalette/PuBuGn.title
+#: mosaic/options/colorPalette/PuBuGn.title
 #: mrcrosstabs/options/colorPalette/PuBuGn.title
 #: mrfrequencies/options/colorPalette/PuBuGn.title
 #: multcorresp/options/colorPalette/PuBuGn.title
@@ -4087,6 +4418,7 @@ msgstr "紫绿渐变"
 #: boxplot/options/colorPalette/PuRd.title
 #: histogram/options/colorPalette/PuRd.title
 #: linechart/options/colorPalette/PuRd.title
+#: mosaic/options/colorPalette/PuRd.title
 #: mrcrosstabs/options/colorPalette/PuRd.title
 #: mrfrequencies/options/colorPalette/PuRd.title
 #: multcorresp/options/colorPalette/PuRd.title
@@ -4104,6 +4436,7 @@ msgstr "紫红渐变"
 #: boxplot/options/colorPalette/Purples.title
 #: histogram/options/colorPalette/Purples.title
 #: linechart/options/colorPalette/Purples.title
+#: mosaic/options/colorPalette/Purples.title
 #: mrcrosstabs/options/colorPalette/Purples.title
 #: mrfrequencies/options/colorPalette/Purples.title
 #: multcorresp/options/colorPalette/Purples.title
@@ -4152,10 +4485,6 @@ msgstr "四次方极大法"
 msgid "Questions"
 msgstr "题目"
 
-#: package/datasets/Raincloud.name
-msgid "Raincloud"
-msgstr "雨云"
-
 #: package/analyses/raincloud.title
 #: package/analyses/raincloud.menuTitle
 #: raincloud/options.title
@@ -4186,8 +4515,8 @@ msgstr "雨云图"
 #: qqplot/ui[5][0][1][1].label
 #: raincloud/ui[2][0][0][1].label
 #: raincloud/ui[2][0][1][1].label
-#: scatterplot/ui[3][0][0][1].label
-#: scatterplot/ui[3][0][1][1].label
+#: scatterplot/ui[4][0][0][1].label
+#: scatterplot/ui[4][0][1][1].label
 msgid "Range"
 msgstr "全距"
 
@@ -4211,6 +4540,7 @@ msgstr "红色"
 #: histogram/options/colorPalette/RdBu.title
 #: likertplot/options/plotColor/RdBu.title
 #: linechart/options/colorPalette/RdBu.title
+#: mosaic/options/colorPalette/RdBu.title
 #: mrcrosstabs/options/colorPalette/RdBu.title
 #: mrfrequencies/options/colorPalette/RdBu.title
 #: multcorresp/options/colorPalette/RdBu.title
@@ -4229,6 +4559,7 @@ msgstr "红色 和 蓝色"
 #: histogram/options/colorPalette/RdGy.title
 #: likertplot/options/plotColor/RdGy.title
 #: linechart/options/colorPalette/RdGy.title
+#: mosaic/options/colorPalette/RdGy.title
 #: mrcrosstabs/options/colorPalette/RdGy.title
 #: mrfrequencies/options/colorPalette/RdGy.title
 #: multcorresp/options/colorPalette/RdGy.title
@@ -4246,6 +4577,7 @@ msgstr "红色和灰色"
 #: boxplot/options/colorPalette/RdPu.title
 #: histogram/options/colorPalette/RdPu.title
 #: linechart/options/colorPalette/RdPu.title
+#: mosaic/options/colorPalette/RdPu.title
 #: mrcrosstabs/options/colorPalette/RdPu.title
 #: mrfrequencies/options/colorPalette/RdPu.title
 #: multcorresp/options/colorPalette/RdPu.title
@@ -4271,6 +4603,7 @@ msgstr "红色、黄色和绿色"
 #: boxplot/options/colorPalette/RdYlBu.title
 #: histogram/options/colorPalette/RdYlBu.title
 #: linechart/options/colorPalette/RdYlBu.title
+#: mosaic/options/colorPalette/RdYlBu.title
 #: mrcrosstabs/options/colorPalette/RdYlBu.title
 #: mrfrequencies/options/colorPalette/RdYlBu.title
 #: multcorresp/options/colorPalette/RdYlBu.title
@@ -4288,6 +4621,7 @@ msgstr "红、黄、蓝"
 #: boxplot/options/colorPalette/RdYlGn.title
 #: histogram/options/colorPalette/RdYlGn.title
 #: linechart/options/colorPalette/RdYlGn.title
+#: mosaic/options/colorPalette/RdYlGn.title
 #: mrcrosstabs/options/colorPalette/RdYlGn.title
 #: mrfrequencies/options/colorPalette/RdYlGn.title
 #: multcorresp/options/colorPalette/RdYlGn.title
@@ -4305,6 +4639,7 @@ msgstr "红、黄、绿"
 #: boxplot/options/colorPalette/Reds.title
 #: histogram/options/colorPalette/Reds.title
 #: linechart/options/colorPalette/Reds.title
+#: mosaic/options/colorPalette/Reds.title
 #: mrcrosstabs/options/colorPalette/Reds.title
 #: mrfrequencies/options/colorPalette/Reds.title
 #: multcorresp/options/colorPalette/Reds.title
@@ -4321,13 +4656,18 @@ msgstr "红色"
 msgid "Reference line"
 msgstr "参考线"
 
-#: scatterplot/ui[1][2][0].label
+#: histogram/ui[2][0][1].label
+#: scatterplot/ui[1][1][0].label
 msgid "Reference Lines"
 msgstr "参考线"
 
-#: scatterplot/ui[1][3][0].label
+#: scatterplot/ui[1][1][1].label
 msgid "Regression Line"
 msgstr "回归线"
+
+#: R/mosaic.b.R
+msgid "Residuals"
+msgstr ""
 
 #: raincloud/options/reverse.title
 msgid "Reverse disposition"
@@ -4336,6 +4676,7 @@ msgstr "逆序排列"
 #: barchart/options/reverseStack.title
 #: barplot/options/reverseStack.title
 #: likertplot/options/reverseLikert.title
+#: mosaic/options/reverseStack.title
 #: mrcrosstabs/options/reverseStack.title
 msgid "Reverse stacking order"
 msgstr "反转堆叠顺序"
@@ -4348,16 +4689,19 @@ msgstr "反转堆叠顺序"
 #: barchart/options/titleAlign/1.title
 #: barchart/options/subtitleAlign/1.title
 #: barchart/options/captionAlign/1.title
+#: barchart/options/facetAlign/1.title
 #: barchart/options/legendPosition/right.title
 #: barchart/options/xAxisPosition/1.title
 #: barplot/options/titleAlign/1.title
 #: barplot/options/subtitleAlign/1.title
 #: barplot/options/captionAlign/1.title
+#: barplot/options/facetAlign/1.title
 #: barplot/options/legendPosition/right.title
 #: barplot/options/xAxisPosition/1.title
 #: boxplot/options/titleAlign/1.title
 #: boxplot/options/subtitleAlign/1.title
 #: boxplot/options/captionAlign/1.title
+#: boxplot/options/facetAlign/1.title
 #: boxplot/options/legendPosition/right.title
 #: boxplot/options/xAxisPosition/1.title
 #: corresp/options/titleAlign/1.title
@@ -4367,6 +4711,7 @@ msgstr "反转堆叠顺序"
 #: histogram/options/titleAlign/1.title
 #: histogram/options/subtitleAlign/1.title
 #: histogram/options/captionAlign/1.title
+#: histogram/options/facetAlign/1.title
 #: histogram/options/legendPosition/right.title
 #: histogram/options/xAxisPosition/1.title
 #: likertplot/options/titleAlign/1.title
@@ -4381,7 +4726,14 @@ msgstr "反转堆叠顺序"
 #: lollipop/options/titleAlign/1.title
 #: lollipop/options/subtitleAlign/1.title
 #: lollipop/options/captionAlign/1.title
+#: lollipop/options/facetAlign/1.title
 #: lollipop/options/xAxisPosition/1.title
+#: mosaic/options/titleAlign/1.title
+#: mosaic/options/subtitleAlign/1.title
+#: mosaic/options/captionAlign/1.title
+#: mosaic/options/facetAlign/1.title
+#: mosaic/options/legendPosition/right.title
+#: mosaic/options/xAxisPosition/1.title
 #: mrcrosstabs/options/titleAlign/1.title
 #: mrcrosstabs/options/subtitleAlign/1.title
 #: mrcrosstabs/options/captionAlign/1.title
@@ -4399,6 +4751,7 @@ msgstr "反转堆叠顺序"
 #: piechart/options/titleAlign/1.title
 #: piechart/options/subtitleAlign/1.title
 #: piechart/options/captionAlign/1.title
+#: piechart/options/facetAlign/1.title
 #: piechart/options/legendPosition/right.title
 #: principal/options/titleAlign/1.title
 #: principal/options/subtitleAlign/1.title
@@ -4418,6 +4771,7 @@ msgstr "反转堆叠顺序"
 #: scatterplot/options/titleAlign/1.title
 #: scatterplot/options/subtitleAlign/1.title
 #: scatterplot/options/captionAlign/1.title
+#: scatterplot/options/facetAlign/1.title
 #: scatterplot/options/legendPosition/right.title
 #: scatterplot/options/xAxisPosition/1.title
 msgid "Right"
@@ -4428,26 +4782,28 @@ msgid "Rotate eigenvectors"
 msgstr "旋转特征向量"
 
 #: principal/options/rotation.title
-#: principal/ui[2][1][0].label
-#: principal/ui[7][0][1][0].label
+#: principal/ui[3][1][0].label
+#: principal/ui[8][0][1][0].label
 msgid "Rotation"
 msgstr "旋转"
 
 #: barchart/options/facetBy/row.title
 #: barchart/ui[5][0][0][0][0]/facetBy_row.label
 #: barplot/options/facetBy/row.title
-#: barplot/ui[4][0][1][0][0]/facetBy_row.label
+#: barplot/ui[4][0][0][0]/facetBy_row.label
 #: boxplot/options/facetBy/row.title
-#: boxplot/ui[3][0][1][0][0]/facetBy_row.label
+#: boxplot/ui[3][0][0][0]/facetBy_row.label
 #: corresp/options/rowColor.title
 #: histogram/options/facetBy/row.title
 #: histogram/ui[4][0][0][0][0]/facetBy_row.label
 #: lollipop/options/facetBy/row.title
 #: lollipop/ui[4][0][0][0][0]/facetBy_row.label
+#: mosaic/options/facetBy/row.title
+#: mosaic/ui[4][0][0][0][0]/facetBy_row.label
 #: piechart/options/facetBy/row.title
-#: piechart/ui[4][0][1][0][0]/facetBy_row.label
+#: piechart/ui[4][0][0][0]/facetBy_row.label
 #: scatterplot/options/facetBy/row.title
-#: scatterplot/ui[2][0][1][0][0]/facetBy_row.label
+#: scatterplot/ui[3][0][0][0][0]/facetBy_row.label
 msgid "Row"
 msgstr "行"
 
@@ -4529,8 +4885,8 @@ msgstr "样本分位数"
 msgid "Sample Quantiles Deviation"
 msgstr "样本分位数偏差"
 
-#: multcorresp/ui[9].label
-#: principal/ui[8].label
+#: multcorresp/ui[10].label
+#: principal/ui[9].label
 msgid "Save"
 msgstr "保存"
 
@@ -4563,15 +4919,26 @@ msgstr "碎石图"
 msgid "SD"
 msgstr "标准差"
 
+#: R/likertplot.b.R
+msgid ""
+"Select the \"Convert variables to integers\" option when the variables are "
+"not of the same type."
+msgstr ""
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "Sep"
+msgstr ""
+
 #: mrcrosstabs/options/separator.title
 #: mrfrequencies/options/separator.title
 msgid "Separator"
 msgstr "分隔符"
 
-#: R/areachart.b.R
-#: R/linechart.b.R
-msgid "Sept"
-msgstr "九月"
+#: R/mrcrosstabs.b.R
+#: R/mrfrequencies.b.R
+msgid "Separator string may not be empty."
+msgstr ""
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -4584,6 +4951,7 @@ msgstr "九月"
 #: boxplot/options/colorPalette/Set1.title
 #: histogram/options/colorPalette/Set1.title
 #: linechart/options/colorPalette/Set1.title
+#: mosaic/options/colorPalette/Set1.title
 #: mrcrosstabs/options/colorPalette/Set1.title
 #: mrfrequencies/options/colorPalette/Set1.title
 #: multcorresp/options/colorPalette/Set1.title
@@ -4601,6 +4969,7 @@ msgstr "集合 1"
 #: boxplot/options/colorPalette/Set2.title
 #: histogram/options/colorPalette/Set2.title
 #: linechart/options/colorPalette/Set2.title
+#: mosaic/options/colorPalette/Set2.title
 #: mrcrosstabs/options/colorPalette/Set2.title
 #: mrfrequencies/options/colorPalette/Set2.title
 #: multcorresp/options/colorPalette/Set2.title
@@ -4618,6 +4987,7 @@ msgstr "集合 2"
 #: boxplot/options/colorPalette/Set3.title
 #: histogram/options/colorPalette/Set3.title
 #: linechart/options/colorPalette/Set3.title
+#: mosaic/options/colorPalette/Set3.title
 #: mrcrosstabs/options/colorPalette/Set3.title
 #: mrfrequencies/options/colorPalette/Set3.title
 #: multcorresp/options/colorPalette/Set3.title
@@ -4633,47 +5003,50 @@ msgstr "集合 3"
 msgid "Several variables"
 msgstr "多个变量"
 
+#: scatterplot/options/groupShapes.title
+msgid "Shape by group"
+msgstr ""
+
 #: likertplot/options/addLabels.title
 msgid "Show % labels"
 msgstr "显示百分比标签"
 
-#: barplot/options/showLabels.title
-#: mrcrosstabs/options/showLabels.title
-#: mrfrequencies/options/showLabels.title
-msgid "Show count labels"
-msgstr "显示计数标签"
+#: histogram/options/showBins.title
+msgid "Show bins"
+msgstr ""
+
+#: mosaic/options/showCategoryPercent.title
+msgid "Show category %"
+msgstr ""
 
 #: histogram/options/density.title
 msgid "Show density"
 msgstr "显示密度"
+
+#: histogram/options/summaryLineLabel.title
+msgid "Show label"
+msgstr ""
+
+#: mosaic/options/showOpacityLegend.title
+msgid "Show legend"
+msgstr ""
 
 #: scatterplot/options/regLine.title
 msgid "Show line"
 msgstr "显示线"
 
 #: areachart/options/showLine.title
+#: histogram/options/showLines.title
 msgid "Show lines"
 msgstr "显示线"
-
-#: boxplot/options/showMean.title
-msgid "Show mean"
-msgstr "显示均数"
 
 #: histogram/options/normalCurve.title
 msgid "Show normal curve"
 msgstr "显示正态曲线"
 
-#: boxplot/options/showOutliers.title
-msgid "Show outliers"
-msgstr "显示离群值"
-
 #: linechart/options/showPoint.title
 msgid "Show points"
 msgstr "显示数据点"
-
-#: scatterplot/options/keepNA.title
-msgid "Show points with missing group/label"
-msgstr "显示缺失分组/标签的数据点"
 
 #: likertplot/options/addTotals.title
 msgid "Show totals (Centered only)"
@@ -4694,17 +5067,21 @@ msgstr "奇异值"
 #: areachart/options/legendFontSize.title
 #: areachart/options/xAxisFontSize.title
 #: areachart/options/yAxisFontSize.title
+#: barchart/options/facetFontSize.title
 #: barchart/options/legendFontSize.title
 #: barchart/options/xAxisFontSize.title
 #: barchart/options/yAxisFontSize.title
+#: barplot/options/facetFontSize.title
 #: barplot/options/legendFontSize.title
 #: barplot/options/xAxisFontSize.title
 #: barplot/options/yAxisFontSize.title
+#: boxplot/options/facetFontSize.title
 #: boxplot/options/legendFontSize.title
 #: boxplot/options/xAxisFontSize.title
 #: boxplot/options/yAxisFontSize.title
 #: corresp/options/xAxisFontSize.title
 #: corresp/options/yAxisFontSize.title
+#: histogram/options/facetFontSize.title
 #: histogram/options/legendFontSize.title
 #: histogram/options/xAxisFontSize.title
 #: histogram/options/yAxisFontSize.title
@@ -4712,8 +5089,14 @@ msgstr "奇异值"
 #: linechart/options/legendFontSize.title
 #: linechart/options/xAxisFontSize.title
 #: linechart/options/yAxisFontSize.title
+#: lollipop/options/facetFontSize.title
 #: lollipop/options/xAxisFontSize.title
 #: lollipop/options/yAxisFontSize.title
+#: mosaic/options/labelFontSize.title
+#: mosaic/options/facetFontSize.title
+#: mosaic/options/legendFontSize.title
+#: mosaic/options/xAxisFontSize.title
+#: mosaic/options/yAxisFontSize.title
 #: mrcrosstabs/options/legendFontSize.title
 #: mrcrosstabs/options/xAxisFontSize.title
 #: mrcrosstabs/options/yAxisFontSize.title
@@ -4722,6 +5105,7 @@ msgstr "奇异值"
 #: multcorresp/options/legendFontSize.title
 #: multcorresp/options/xAxisFontSize.title
 #: multcorresp/options/yAxisFontSize.title
+#: piechart/options/facetFontSize.title
 #: piechart/options/legendFontSize.title
 #: principal/options/legendFontSize.title
 #: principal/options/xAxisFontSize.title
@@ -4732,6 +5116,7 @@ msgstr "奇异值"
 #: raincloud/options/legendFontSize.title
 #: raincloud/options/xAxisFontSize.title
 #: raincloud/options/yAxisFontSize.title
+#: scatterplot/options/facetFontSize.title
 #: scatterplot/options/legendFontSize.title
 #: scatterplot/options/xAxisFontSize.title
 #: scatterplot/options/yAxisFontSize.title
@@ -4739,23 +5124,27 @@ msgid "Size"
 msgstr "大小"
 
 #: linechart/ui[1][0][1].label
-#: principal/ui[4].label
+#: principal/ui[5].label
 msgid "Sizes & Colors"
 msgstr "大小和颜色"
-
-#: package/datasets/Smoking.name
-msgid "Smoking"
-msgstr "吸烟"
 
 #: scatterplot/options/lineMethod/loess.title
 msgid "Smooth"
 msgstr "平滑"
 
-#: corresp/ui[1][0].label
-#: multcorresp/ui[2][0].label
-#: principal/ui[2][0][0].label
+#: corresp/ui[2][0].label
+#: multcorresp/ui[3][0].label
+#: principal/ui[3][0][0].label
 msgid "Solution"
 msgstr "解决方案"
+
+#: R/corresp.b.R
+msgid "Some categories have zero counts and must be removed."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Some values are missing from the contingency table."
+msgstr ""
 
 #: likertplot/options/sorting.title
 #: likertplot/ui[1][1][0].label
@@ -4787,6 +5176,7 @@ msgstr "排序（按中位数）"
 #: histogram/options/colorPalette/Spectral.title
 #: likertplot/options/plotColor/Spectral.title
 #: linechart/options/colorPalette/Spectral.title
+#: mosaic/options/colorPalette/Spectral.title
 #: mrcrosstabs/options/colorPalette/Spectral.title
 #: mrfrequencies/options/colorPalette/Spectral.title
 #: multcorresp/options/colorPalette/Spectral.title
@@ -4805,7 +5195,6 @@ msgstr "载荷平方和"
 #: areachart/options/position/stack.title
 #: barchart/options/barType/stack.title
 #: barplot/options/barType/stack.title
-#: histogram/options/grouping/stack.title
 #: histogram/options/groupingN/stack.title
 #: histogram/ui[1][2][0]/groupingN_stack.label
 #: likertplot/options/type/stacked.title
@@ -4857,6 +5246,10 @@ msgid "Standardize variables"
 msgstr "标准化变量"
 
 #: R/qqplot.b.R
+msgid "Standardized data cannot fit {distrib} distribution."
+msgstr ""
+
+#: R/qqplot.b.R
 msgid "Standardized Sample Quantiles"
 msgstr "标准化样本分位数"
 
@@ -4886,6 +5279,17 @@ msgstr "拉伸箭头系数："
 msgid "Student"
 msgstr "学生"
 
+#: barchart/options/facetStyle.title
+#: barplot/options/facetStyle.title
+#: boxplot/options/facetStyle.title
+#: histogram/options/facetStyle.title
+#: lollipop/options/facetStyle.title
+#: mosaic/options/facetStyle.title
+#: piechart/options/facetStyle.title
+#: scatterplot/options/facetStyle.title
+msgid "Style"
+msgstr ""
+
 #: areachart/ui[4][1].label
 #: barchart/ui[8][1].label
 #: barplot/ui[7][1].label
@@ -4894,24 +5298,25 @@ msgstr "学生"
 #: likertplot/ui[8][1].label
 #: linechart/ui[4][1].label
 #: lollipop/ui[7][1].label
+#: mosaic/ui[7][1].label
 #: mrcrosstabs/ui[6][1].label
 #: mrfrequencies/ui[6][1].label
 #: piechart/ui[6][1].label
 #: qqplot/ui[7][1].label
 #: raincloud/ui[4][1].label
-#: scatterplot/ui[5][1].label
+#: scatterplot/ui[6][1].label
 msgid "Subtitle"
 msgstr "副标题"
 
-#: corresp/ui[7][1][1][0].label
-#: multcorresp/ui[8][1][1][0].label
-#: principal/ui[6][1][1][0].label
+#: corresp/ui[8][1][1][0].label
+#: multcorresp/ui[9][1][1][0].label
+#: principal/ui[7][1][1][0].label
 msgid "Subtitle Style"
 msgstr "副标题样式"
 
-#: corresp/ui[7][1][0][0].label
-#: multcorresp/ui[8][1][0][0].label
-#: principal/ui[6][1][0][0].label
+#: corresp/ui[8][1][0][0].label
+#: multcorresp/ui[9][1][0][0].label
+#: principal/ui[7][1][0][0].label
 msgid "Subtitle Text"
 msgstr "副标题文本"
 
@@ -4931,14 +5336,6 @@ msgstr "{var} 之和"
 #: principal/results/summaryTable.title
 msgid "Summary"
 msgstr "摘要"
-
-#: R/corresp.b.R
-msgid "Suppl. Column"
-msgstr "补充列"
-
-#: R/corresp.b.R
-msgid "Suppl. Row"
-msgstr "补充行"
 
 #: R/multcorresp.b.R
 msgid "Suppl. variables"
@@ -4961,7 +5358,7 @@ msgstr "补充列号必须在 1 到 {nmax} 之间。"
 msgid "Supplementary columns"
 msgstr "补充列"
 
-#: corresp/ui[2][0].label
+#: corresp/ui[3][0].label
 msgid "Supplementary Points"
 msgstr "附加点"
 
@@ -4983,17 +5380,13 @@ msgid "Supplementary rows/columns"
 msgstr "补充行/列"
 
 #: multcorresp/options/supplVars.title
-#: multcorresp/ui[0][1].label
+#: multcorresp/ui[1][1].label
 msgid "Supplementary Variables"
 msgstr "补充变量"
 
 #: R/multcorresp.b.R
 msgid "Supplementary variables"
 msgstr "补充变量"
-
-#: R/corresp.b.R
-msgid "Symetric normalization"
-msgstr "对称归一化"
 
 #: corresp/options/normalization/symmetric.title
 msgid "Symmetric"
@@ -5010,9 +5403,9 @@ msgstr "对称归一化"
 msgid "Table"
 msgstr "表格"
 
-#: corresp/ui[4][0][0].label
-#: multcorresp/ui[5][0][0].label
-#: principal/ui[3][0][0].label
+#: corresp/ui[5][0][0].label
+#: multcorresp/ui[6][0][0].label
+#: principal/ui[4][0][0].label
 msgid "Tables"
 msgstr "表格"
 
@@ -5030,16 +5423,16 @@ msgstr "检验"
 msgid "Text"
 msgstr "文本"
 
-#: barplot/ui[4][0][0][0].label
-#: boxplot/ui[3][0][0][0].label
-#: corresp/ui[5][0][0][0].label
+#: barplot/ui[2][0][1][1].label
+#: boxplot/ui[2][0][0][1].label
+#: corresp/ui[6][0][0][0].label
 #: likertplot/ui[5].label
 #: likertplot/ui[5][0][0][0].label
 #: mrcrosstabs/ui[2][0][2][1].label
 #: mrfrequencies/ui[2][0][0][1].label
-#: multcorresp/ui[6][0][0][1].label
-#: piechart/ui[4][0][0][0].label
-#: principal/ui[4][0][0][0].label
+#: multcorresp/ui[7][0][0][1].label
+#: piechart/ui[2][0][1][1].label
+#: principal/ui[5][0][0][0].label
 msgid "Text Size"
 msgstr "文字大小"
 
@@ -5047,29 +5440,45 @@ msgstr "文字大小"
 msgid "Text size"
 msgstr "文本大小"
 
-#: corresp/ui[5].label
+#: corresp/ui[6].label
 msgid "Text Size & Colors"
 msgstr "文字大小 & 颜色"
 
-#: barplot/ui[4].label
-#: boxplot/ui[3].label
-#: piechart/ui[4].label
-msgid "Text Size & Facets"
-msgstr "文字大小 & 分面"
+#: R/principal.b.R
+msgid "The correlation matrix is nearly singular. Computations may not be accurate."
+msgstr ""
 
 #: R/principal.b.R
 msgid ""
-"The correlation matrix is not positive definite. Computations may not be "
-"accurate."
-msgstr "相关矩阵不是正定矩阵。计算可能不准确。"
+"The following variable(s) are constant and cannot be used in a principal "
+"component analysis: {vars}."
+msgstr ""
 
 #: R/multcorresp.b.R
 msgid "The number of dimensions cannot be greater than {max}."
 msgstr "维度数量不能大于 {max}。"
 
 #: R/principal.b.R
+msgid "The number of dimensions cannot be greater than the number of observations."
+msgstr ""
+
+#: R/principal.b.R
 msgid "The number of dimensions cannot be greater than the number of variables."
 msgstr "维度数量不能超过变量总数。"
+
+#: R/corresp.b.R
+msgid ""
+"The singular value for dimension {n} is close to zero. The plots may not be "
+"accurate."
+msgstr ""
+
+#: R/qqplot.b.R
+msgid "The variance of the variable is equal to zero."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "The χ2 statistic is equal to zero."
+msgstr ""
 
 #: R/qqplot.b.R
 msgid "Theoretical Probabilities"
@@ -5078,6 +5487,20 @@ msgstr "理论概率"
 #: R/qqplot.b.R
 msgid "Theoretical Quantiles"
 msgstr "理论分位数"
+
+#: R/corresp.b.R
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid ""
+"This analysis is deprecated and kept only for backward compatibility with "
+"existing documents. Please use vijMulti module instead."
+msgstr ""
+
+#: corresp/ui[0][0].label
+#: multcorresp/ui[0][0].label
+#: principal/ui[0][0].label
+msgid "This analysis is deprecated. Please use vijMulti module instead."
+msgstr ""
 
 #: areachart/options/xTicks.title
 #: areachart/options/yTicks.title
@@ -5093,6 +5516,8 @@ msgstr "理论分位数"
 #: linechart/options/yTicks.title
 #: lollipop/options/xTicks.title
 #: lollipop/options/yTicks.title
+#: mosaic/options/xTicks.title
+#: mosaic/options/yTicks.title
 #: mrcrosstabs/options/xTicks.title
 #: mrcrosstabs/options/yTicks.title
 #: mrfrequencies/options/xTicks.title
@@ -5116,6 +5541,7 @@ msgstr "整理水平"
 #: boxplot/options/colorPalette/tidy::alger.title
 #: histogram/options/colorPalette/tidy::alger.title
 #: linechart/options/colorPalette/tidy::alger.title
+#: mosaic/options/colorPalette/tidy::alger.title
 #: mrcrosstabs/options/colorPalette/tidy::alger.title
 #: mrfrequencies/options/colorPalette/tidy::alger.title
 #: multcorresp/options/colorPalette/tidy::alger.title
@@ -5133,6 +5559,7 @@ msgstr "Tidy:Alger"
 #: boxplot/options/colorPalette/tidy::apple.title
 #: histogram/options/colorPalette/tidy::apple.title
 #: linechart/options/colorPalette/tidy::apple.title
+#: mosaic/options/colorPalette/tidy::apple.title
 #: mrcrosstabs/options/colorPalette/tidy::apple.title
 #: mrfrequencies/options/colorPalette/tidy::apple.title
 #: multcorresp/options/colorPalette/tidy::apple.title
@@ -5150,6 +5577,7 @@ msgstr "Tidy:Apple"
 #: boxplot/options/colorPalette/tidy::candy.title
 #: histogram/options/colorPalette/tidy::candy.title
 #: linechart/options/colorPalette/tidy::candy.title
+#: mosaic/options/colorPalette/tidy::candy.title
 #: mrcrosstabs/options/colorPalette/tidy::candy.title
 #: mrfrequencies/options/colorPalette/tidy::candy.title
 #: multcorresp/options/colorPalette/tidy::candy.title
@@ -5167,6 +5595,7 @@ msgstr "Tidy:Candy"
 #: boxplot/options/colorPalette/tidy::friendly.title
 #: histogram/options/colorPalette/tidy::friendly.title
 #: linechart/options/colorPalette/tidy::friendly.title
+#: mosaic/options/colorPalette/tidy::friendly.title
 #: mrcrosstabs/options/colorPalette/tidy::friendly.title
 #: mrfrequencies/options/colorPalette/tidy::friendly.title
 #: multcorresp/options/colorPalette/tidy::friendly.title
@@ -5184,6 +5613,7 @@ msgstr "Tidy:Friendly"
 #: boxplot/options/colorPalette/tidy::ibm.title
 #: histogram/options/colorPalette/tidy::ibm.title
 #: linechart/options/colorPalette/tidy::ibm.title
+#: mosaic/options/colorPalette/tidy::ibm.title
 #: mrcrosstabs/options/colorPalette/tidy::ibm.title
 #: mrfrequencies/options/colorPalette/tidy::ibm.title
 #: multcorresp/options/colorPalette/tidy::ibm.title
@@ -5201,6 +5631,7 @@ msgstr "Tidy:Ibm"
 #: boxplot/options/colorPalette/tidy::metro.title
 #: histogram/options/colorPalette/tidy::metro.title
 #: linechart/options/colorPalette/tidy::metro.title
+#: mosaic/options/colorPalette/tidy::metro.title
 #: mrcrosstabs/options/colorPalette/tidy::metro.title
 #: mrfrequencies/options/colorPalette/tidy::metro.title
 #: multcorresp/options/colorPalette/tidy::metro.title
@@ -5218,6 +5649,7 @@ msgstr "Tidy:Metro"
 #: boxplot/options/colorPalette/tidy::rainbow.title
 #: histogram/options/colorPalette/tidy::rainbow.title
 #: linechart/options/colorPalette/tidy::rainbow.title
+#: mosaic/options/colorPalette/tidy::rainbow.title
 #: mrcrosstabs/options/colorPalette/tidy::rainbow.title
 #: mrfrequencies/options/colorPalette/tidy::rainbow.title
 #: multcorresp/options/colorPalette/tidy::rainbow.title
@@ -5235,6 +5667,7 @@ msgstr "Tidy:彩虹色"
 #: boxplot/options/colorPalette/tidy::seaside.title
 #: histogram/options/colorPalette/tidy::seaside.title
 #: linechart/options/colorPalette/tidy::seaside.title
+#: mosaic/options/colorPalette/tidy::seaside.title
 #: mrcrosstabs/options/colorPalette/tidy::seaside.title
 #: mrfrequencies/options/colorPalette/tidy::seaside.title
 #: multcorresp/options/colorPalette/tidy::seaside.title
@@ -5246,9 +5679,12 @@ msgstr "Tidy:彩虹色"
 msgid "Tidy:Seaside"
 msgstr "Tidy:海滨配色"
 
+#: mosaic/ui[3].label
+msgid "Tile Options"
+msgstr ""
+
 #: package/analyses/linechart.menuSubgroup
 #: package/analyses/areachart.menuSubgroup
-#: package/datasets/TimeSeries.name
 #: areachart/options.menuSubgroup
 #: linechart/options.menuSubgroup
 msgid "Time Series"
@@ -5262,24 +5698,25 @@ msgstr "时间序列"
 #: likertplot/ui[8][0].label
 #: linechart/ui[4][0].label
 #: lollipop/ui[7][0].label
+#: mosaic/ui[7][0].label
 #: mrcrosstabs/ui[6][0].label
 #: mrfrequencies/ui[6][0].label
 #: piechart/ui[6][0].label
 #: qqplot/ui[7][0].label
 #: raincloud/ui[4][0].label
-#: scatterplot/ui[5][0].label
+#: scatterplot/ui[6][0].label
 msgid "Title"
 msgstr "标题"
 
-#: corresp/ui[7][0][1][0].label
-#: multcorresp/ui[8][0][1][0].label
-#: principal/ui[6][0][1][0].label
+#: corresp/ui[8][0][1][0].label
+#: multcorresp/ui[9][0][1][0].label
+#: principal/ui[7][0][1][0].label
 msgid "Title Style"
 msgstr "标题格式"
 
-#: corresp/ui[7][0][0][0].label
-#: multcorresp/ui[8][0][0][0].label
-#: principal/ui[6][0][0][0].label
+#: corresp/ui[8][0][0][0].label
+#: multcorresp/ui[9][0][0][0].label
+#: principal/ui[7][0][0][0].label
 msgid "Title Text"
 msgstr "标题文字"
 
@@ -5300,6 +5737,8 @@ msgstr "标题文字"
 #: linechart/options/legendPosition/top.title
 #: linechart/options/yAxisPosition/1.title
 #: lollipop/options/yAxisPosition/1.title
+#: mosaic/options/legendPosition/top.title
+#: mosaic/options/yAxisPosition/1.title
 #: mrcrosstabs/options/labelPosition/top.title
 #: mrcrosstabs/options/legendPosition/top.title
 #: mrcrosstabs/options/yAxisPosition/1.title
@@ -5341,9 +5780,33 @@ msgstr "将空值视为缺失值"
 msgid "Type"
 msgstr "类型"
 
+#: R/corresp.b.R
+msgid "Unable to compute correspondence analysis for the selected data."
+msgstr ""
+
+#: R/multcorresp.b.R
+msgid "Unable to compute MCA because of too many missing values."
+msgstr ""
+
+#: R/multcorresp.b.R
+msgid "Unable to compute MCA for the selected variables."
+msgstr ""
+
+#: R/principal.b.R
+msgid "Unable to compute principal components for the selected variables."
+msgstr ""
+
+#: R/principal.b.R
+msgid "Unable to compute the correlation matrix."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Unable to compute the χ2 statistic."
+msgstr ""
+
 #: R/qqplot.b.R
-msgid "Unable to estimate the distribution parameters."
-msgstr "无法估计分布参数。"
+msgid "Unable to estimate the distribution parameters using {method} method."
+msgstr ""
 
 #: R/principal.b.R
 msgid "Unable to use {rotation} rotation."
@@ -5385,7 +5848,6 @@ msgid "Use the same color for variables"
 msgstr "对变量使用相同颜色"
 
 #: corresp/options/descAsVarName.title
-#: likertplot/options/descAsVarName.title
 #: multcorresp/options/descAsVarName.title
 #: principal/options/descAsVarName.title
 msgid "Use variable's description as name"
@@ -5422,14 +5884,18 @@ msgstr "值"
 msgid "Variable"
 msgstr "变量"
 
-#: multcorresp/options/showDiscriminations.title
-#: multcorresp/options/showDiscriminationPlot.title
-msgid "Variable dicriminations"
-msgstr "变量区分度"
+#: likertplot/options/descAsVarName.title
+msgid "Variable descriptions as names"
+msgstr ""
 
 #: multcorresp/results/discrim.title
 msgid "Variable Discriminations"
 msgstr "变量区分度"
+
+#: multcorresp/options/showDiscriminations.title
+#: multcorresp/options/showDiscriminationPlot.title
+msgid "Variable discriminations"
+msgstr ""
 
 #: principal/options/varTitleText.title
 #: principal/options/varSubtitleText.title
@@ -5450,12 +5916,12 @@ msgstr "变量图"
 #: linechart/options/vars.title
 #: linechart/ui[0][1].label
 #: multcorresp/options/vars.title
-#: multcorresp/ui[0][0].label
+#: multcorresp/ui[1][0].label
 #: principal/options/vars.title
 #: principal/options/showLoadings.title
 #: principal/options/showVarPlot.title
 #: principal/options/varLabelSize.title
-#: principal/ui[0][0].label
+#: principal/ui[1][0].label
 #: principal/results/loadingTable.title
 msgid "Variables"
 msgstr "变量"
@@ -5477,6 +5943,7 @@ msgstr "垂直线在"
 #: package/analyses/raincloud.menuGroup
 #: package/analyses/barplot.menuGroup
 #: package/analyses/piechart.menuGroup
+#: package/analyses/mosaic.menuGroup
 #: package/analyses/likertplot.menuGroup
 #: package/analyses/mrfrequencies.menuGroup
 #: package/analyses/mrcrosstabs.menuGroup
@@ -5486,24 +5953,19 @@ msgstr "垂直线在"
 #: package/analyses/linechart.menuGroup
 #: package/analyses/areachart.menuGroup
 #: package/analyses/qqplot.menuGroup
-#: package/analyses/principal.menuGroup
-#: package/analyses/corresp.menuGroup
-#: package/analyses/multcorresp.menuGroup
 #: package/datasets/vijPlots.name
 #: areachart/options.menuGroup
 #: barchart/options.menuGroup
 #: barplot/options.menuGroup
 #: boxplot/options.menuGroup
-#: corresp/options.menuGroup
 #: histogram/options.menuGroup
 #: likertplot/options.menuGroup
 #: linechart/options.menuGroup
 #: lollipop/options.menuGroup
+#: mosaic/options.menuGroup
 #: mrcrosstabs/options.menuGroup
 #: mrfrequencies/options.menuGroup
-#: multcorresp/options.menuGroup
 #: piechart/options.menuGroup
-#: principal/options.menuGroup
 #: qqplot/options.menuGroup
 #: raincloud/options.menuGroup
 #: scatterplot/options.menuGroup
@@ -5520,6 +5982,7 @@ msgstr "vijPlots：又一个 jamovi 绘图模块"
 #: boxplot/options/colorPalette/viridis::inferno.title
 #: histogram/options/colorPalette/viridis::inferno.title
 #: linechart/options/colorPalette/viridis::inferno.title
+#: mosaic/options/colorPalette/viridis::inferno.title
 #: mrcrosstabs/options/colorPalette/viridis::inferno.title
 #: mrfrequencies/options/colorPalette/viridis::inferno.title
 #: multcorresp/options/colorPalette/viridis::inferno.title
@@ -5537,6 +6000,7 @@ msgstr "Viridis：Inferno"
 #: boxplot/options/colorPalette/viridis::magma.title
 #: histogram/options/colorPalette/viridis::magma.title
 #: linechart/options/colorPalette/viridis::magma.title
+#: mosaic/options/colorPalette/viridis::magma.title
 #: mrcrosstabs/options/colorPalette/viridis::magma.title
 #: mrfrequencies/options/colorPalette/viridis::magma.title
 #: multcorresp/options/colorPalette/viridis::magma.title
@@ -5554,6 +6018,7 @@ msgstr "Viridis:Magma"
 #: boxplot/options/colorPalette/viridis::plasma.title
 #: histogram/options/colorPalette/viridis::plasma.title
 #: linechart/options/colorPalette/viridis::plasma.title
+#: mosaic/options/colorPalette/viridis::plasma.title
 #: mrcrosstabs/options/colorPalette/viridis::plasma.title
 #: mrfrequencies/options/colorPalette/viridis::plasma.title
 #: multcorresp/options/colorPalette/viridis::plasma.title
@@ -5571,6 +6036,7 @@ msgstr "Viridis:Plasma"
 #: boxplot/options/colorPalette/viridis::turbo.title
 #: histogram/options/colorPalette/viridis::turbo.title
 #: linechart/options/colorPalette/viridis::turbo.title
+#: mosaic/options/colorPalette/viridis::turbo.title
 #: mrcrosstabs/options/colorPalette/viridis::turbo.title
 #: mrfrequencies/options/colorPalette/viridis::turbo.title
 #: multcorresp/options/colorPalette/viridis::turbo.title
@@ -5588,6 +6054,7 @@ msgstr "Viridis:Turbo"
 #: boxplot/options/colorPalette/viridis::viridis.title
 #: histogram/options/colorPalette/viridis::viridis.title
 #: linechart/options/colorPalette/viridis::viridis.title
+#: mosaic/options/colorPalette/viridis::viridis.title
 #: mrcrosstabs/options/colorPalette/viridis::viridis.title
 #: mrfrequencies/options/colorPalette/viridis::viridis.title
 #: multcorresp/options/colorPalette/viridis::viridis.title
@@ -5614,6 +6081,7 @@ msgstr "韦伯分布"
 #: likertplot/options/labelColor/white.title
 #: lollipop/options/dotColor/white.title
 #: lollipop/options/lineColor/white.title
+#: mosaic/options/labelColor/white.title
 #: mrcrosstabs/options/borderColor/white.title
 #: mrcrosstabs/options/textColor/white.title
 #: mrfrequencies/options/borderColor/white.title
@@ -5626,6 +6094,7 @@ msgstr "白色"
 
 #: barchart/options/errorBarWidth.title
 #: histogram/options/binWidth.title
+#: mosaic/options/borderWidth.title
 msgid "Width"
 msgstr "宽度"
 
@@ -5659,7 +6128,7 @@ msgstr "参数值错误。"
 #: boxplot/ui[4][0][0][0].label
 #: boxplot/ui[5][1].label
 #: corresp/options/xaxis.title
-#: corresp/ui[6][0].label
+#: corresp/ui[7][0].label
 #: histogram/ui[5][0][0][0].label
 #: histogram/ui[6][1].label
 #: likertplot/ui[6][0][0][0].label
@@ -5670,6 +6139,9 @@ msgstr "参数值错误。"
 #: linechart/ui[3][1].label
 #: lollipop/ui[5][0][0][0].label
 #: lollipop/ui[6][0].label
+#: mosaic/ui[1][1][0].label
+#: mosaic/ui[5][0][0][0].label
+#: mosaic/ui[6][1].label
 #: mrcrosstabs/options/xaxis.title
 #: mrcrosstabs/ui[2][0][1][1].label
 #: mrcrosstabs/ui[4][0][0][0].label
@@ -5677,17 +6149,17 @@ msgstr "参数值错误。"
 #: mrfrequencies/ui[4][0][0][0].label
 #: mrfrequencies/ui[5][0].label
 #: multcorresp/options/xaxis.title
-#: multcorresp/ui[7][1].label
+#: multcorresp/ui[8][1].label
 #: principal/options/xaxis.title
-#: principal/ui[5][1].label
+#: principal/ui[6][1].label
 #: qqplot/ui[5][0][0][0].label
 #: qqplot/ui[6][1].label
 #: raincloud/ui[2][0][0][0].label
 #: raincloud/ui[3][1].label
 #: scatterplot/options/xaxis.title
 #: scatterplot/ui[0][0].label
-#: scatterplot/ui[3][0][0][0].label
-#: scatterplot/ui[4][1].label
+#: scatterplot/ui[4][0][0][0].label
+#: scatterplot/ui[5][1].label
 msgid "X-Axis"
 msgstr "X 轴"
 
@@ -5705,6 +6177,11 @@ msgstr "X 轴和 Y 轴的数量不能超过维度总数。"
 #: linechart/options/isDate.title
 msgid "X-Axis is a date"
 msgstr "X 轴为日期"
+
+#: mosaic/options/order.title
+#: mosaic/ui[1][1][1].label
+msgid "X-Axis Order"
+msgstr ""
 
 #: barchart/options/xAxisRangeType.title
 #: barplot/options/xAxisRangeType.title
@@ -5731,7 +6208,7 @@ msgstr "X 轴范围"
 #: boxplot/ui[4][0][1][0].label
 #: boxplot/ui[5][2].label
 #: corresp/options/yaxis.title
-#: corresp/ui[6][1].label
+#: corresp/ui[7][1].label
 #: histogram/ui[1][0][0].label
 #: histogram/ui[5][0][1][0].label
 #: histogram/ui[6][2].label
@@ -5742,23 +6219,27 @@ msgstr "X 轴范围"
 #: lollipop/ui[2][0][0].label
 #: lollipop/ui[5][0][1][0].label
 #: lollipop/ui[6][1].label
+#: mosaic/options/yAxis.title
+#: mosaic/ui[1][2][0].label
+#: mosaic/ui[5][0][1][0].label
+#: mosaic/ui[6][2].label
 #: mrcrosstabs/ui[4][0][1][0].label
 #: mrcrosstabs/ui[5][2].label
 #: mrfrequencies/options/yaxis.title
 #: mrfrequencies/ui[4][0][1][0].label
 #: mrfrequencies/ui[5][1].label
 #: multcorresp/options/yaxis.title
-#: multcorresp/ui[7][2].label
+#: multcorresp/ui[8][2].label
 #: principal/options/yaxis.title
-#: principal/ui[5][2].label
+#: principal/ui[6][2].label
 #: qqplot/ui[5][0][1][0].label
 #: qqplot/ui[6][2].label
 #: raincloud/ui[2][0][1][0].label
 #: raincloud/ui[3][2].label
 #: scatterplot/options/yaxis.title
 #: scatterplot/ui[0][1].label
-#: scatterplot/ui[3][0][1][0].label
-#: scatterplot/ui[4][2].label
+#: scatterplot/ui[4][0][1][0].label
+#: scatterplot/ui[5][2].label
 msgid "Y-Axis"
 msgstr "Y 轴"
 
@@ -5795,6 +6276,7 @@ msgstr "黄色"
 #: boxplot/options/colorPalette/YlGnBu.title
 #: histogram/options/colorPalette/YlGnBu.title
 #: linechart/options/colorPalette/YlGnBu.title
+#: mosaic/options/colorPalette/YlGnBu.title
 #: mrcrosstabs/options/colorPalette/YlGnBu.title
 #: mrfrequencies/options/colorPalette/YlGnBu.title
 #: multcorresp/options/colorPalette/YlGnBu.title
@@ -5812,6 +6294,7 @@ msgstr "黄-蓝渐变"
 #: boxplot/options/colorPalette/YlOrBr.title
 #: histogram/options/colorPalette/YlOrBr.title
 #: linechart/options/colorPalette/YlOrBr.title
+#: mosaic/options/colorPalette/YlOrBr.title
 #: mrcrosstabs/options/colorPalette/YlOrBr.title
 #: mrfrequencies/options/colorPalette/YlOrBr.title
 #: multcorresp/options/colorPalette/YlOrBr.title
@@ -5829,6 +6312,7 @@ msgstr "黄-棕渐变"
 #: boxplot/options/colorPalette/YlGn.title
 #: histogram/options/colorPalette/YlGn.title
 #: linechart/options/colorPalette/YlGn.title
+#: mosaic/options/colorPalette/YlGn.title
 #: mrcrosstabs/options/colorPalette/YlGn.title
 #: mrfrequencies/options/colorPalette/YlGn.title
 #: multcorresp/options/colorPalette/YlGn.title
@@ -5846,6 +6330,7 @@ msgstr "黄-绿渐变色"
 #: boxplot/options/colorPalette/YlOrRd.title
 #: histogram/options/colorPalette/YlOrRd.title
 #: linechart/options/colorPalette/YlOrRd.title
+#: mosaic/options/colorPalette/YlOrRd.title
 #: mrcrosstabs/options/colorPalette/YlOrRd.title
 #: mrfrequencies/options/colorPalette/YlOrRd.title
 #: multcorresp/options/colorPalette/YlOrRd.title
@@ -5856,3 +6341,7 @@ msgstr "黄-绿渐变色"
 #: scatterplot/options/colorPalette/YlOrRd.title
 msgid "Yellow to Red"
 msgstr "黄-红渐变色"
+
+#: R/corresp.b.R
+msgid "χ² = {chisq}, df = {df}, p-value = {pval}"
+msgstr ""

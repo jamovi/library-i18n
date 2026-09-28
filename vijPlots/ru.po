@@ -13,6 +13,18 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 2026.7.1.dev0\n"
 
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid ""
+"\"Range\" option for the X-axis is only available for numeric and date "
+"variables."
+msgstr ""
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "\"Tick Count\" option for the X-axis is only available for numeric variables."
+msgstr ""
+
 #: R/qqplot.b.R
 msgid "{distrib} distribution requires positive (>0) data."
 msgstr "{distrib} распределение требует положительных (>0) данных."
@@ -38,8 +50,8 @@ msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "{rotation} было использовано вращение с нормализацией Кайзера."
 
 #: R/barchart.b.R
-msgid "{var} (Mean ± {level}%  CI)"
-msgstr "{var} (Среднее ± {level}%  ДИ)"
+msgid "{var} (Mean ± {level}% CI)"
+msgstr ""
 
 #: R/barchart.b.R
 msgid "{var} (Mean ± SD)"
@@ -59,6 +71,7 @@ msgstr "{var} не имеет допустимого формата даты."
 #: boxplot/options/facetNumber.title
 #: histogram/options/facetNumber.title
 #: lollipop/options/facetNumber.title
+#: mosaic/options/facetNumber.title
 #: piechart/options/facetNumber.title
 #: scatterplot/options/facetNumber.title
 msgid "# of rows/columns"
@@ -85,6 +98,7 @@ msgstr "% Точность"
 msgid "% by row"
 msgstr "% по строкам"
 
+#: R/corresp.b.R
 #: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
 msgid "% Inertia"
@@ -129,15 +143,15 @@ msgid "% of Variance"
 msgstr "% от дисперсии"
 
 #: R/mrcrosstabs.b.R
-msgid "% within"
-msgstr "% в пределах"
+msgid "% within {category}"
+msgstr ""
 
 #: R/likertplot.b.R
 msgid ""
 "<h3>Data & Sorting</h3>\n"
 "<ul>\n"
-"<li>Likert variables must be of ordinal measure-type. (Continuous "
-"measure-type works as well.)</li>\n"
+"<li>Likert variables must be of ordinal measure-type. (Continuous-Integer "
+"works as well.)</li>\n"
 "<li>If you plan to compute mean/median/sd or to use comparison tests, they "
 "must be of integer data-type.</li>\n"
 "<li><strong>Tidy up levels:</strong> when checked, try to fix the labels "
@@ -153,54 +167,37 @@ msgid ""
 "<li><strong>Mann-Whitney U:</strong> Two group comparison</li>\n"
 "<li><strong>Kruskal-Wallis:</strong> n group comparison</li>\n"
 "<li><strong>Post Hoc Tests:</strong> Dunn, Conover and "
-"Dwass-Steel-Critchlow-Fligner (DSCF) paiwise comparisons tests.</li>\n"
+"Dwass-Steel-Critchlow-Fligner (DSCF) pairwise comparisons tests.</li>\n"
 "</ul>\n"
 "<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
 "question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for MannWithney U, Kruskal-Wallis and post hoc tests. DSCF "
+"questionwise) for Mann-Whitney U, Kruskal-Wallis and post hoc tests. DSCF "
 "p-values are already adjusted (groupwise); no other adjustment is "
 "possible.</p>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
 msgstr ""
-"<h3>Данные и сортировка</h3>\n"
-"<ul>\n"
-"<li>Переменные Лайкерта должны быть измерения порядкового типа. (Измерения "
-"непрерывного типа также работают.)</li>\n"
-"<li>Если вы планируете вычислять среднее/медиану/стандартное отклонение или "
-"использовать тесты сравнения, они должны быть целочисленного типа "
-"данных.</li>\n"
-"<li><strong>Очистить уровни:</strong> когда отмечено, попытаться исправить "
-"порядок меток в таблице и графике (когда некоторые переменные пропускают "
-"некоторые уровни).</li>\n"
-"<li><strong>Преобразовать переменные в целые числа:</strong> когда отмечено, "
-"метки уровней игнорируются, и используются только целочисленные "
-"значения.</li>\n"
-"<li><strong>Сортировка переменных по медиане:</strong> упорядочивает список "
-"переменных Лайкерта по медиане.</li>\n"
-"</ul>\n"
-"<h3>Тесты сравнения</h3>\n"
-"<p>При использовании переменной группы доступны несколько тестов:</p>\n"
-"<ul>\n"
-"<li><strong>Манна-Уитни У:</strong> Сравнение двух групп</li>\n"
-"<li><strong>Крускал-Уоллис:</strong> Сравнение n групп</li>\n"
-"<li><strong>Пост-хок тесты:</strong> Тесты парных сравнений Данна, Коновера "
-"и Двасса-Стила-Критчлоу-Флингера (DSCF).</li>\n"
-"</ul>\n"
-"<p>Значения p можно скорректировать <strong>по группам</strong> (для каждого "
-"вопроса) для пост-хок тестов или <strong>в целом</strong> (по группам и "
-"вопросам) для тестов Манна-Уитни У, Крускал-Уоллис и пост-хок тестов. "
-"Значения p DSCF уже скорректированы (по группам); никаких других "
-"корректировок не возможно.</p>\n"
-"<p>Пример файла включен в Открыть > Библиотека данных > vijPlots > "
-"Лайкерт</p>"
+
+#: package.description
+msgid ""
+"<p>Main statistical charts, all built with <b>ggplot2</b> and offering "
+"extensive customization options:</p> <ul> <li><strong>Continuous "
+"variables</strong>: Histogram, Box plot, Raincloud plot, Scatter plot, Error "
+"bar chart, Lollipop plot, QQ plot</li> <li><strong>Categorical "
+"variables</strong>: Bar plot, Pie chart, Mosaic plot, Likert plot</li> "
+"<li><strong>Time series</strong>: Line chart, Area chart</li> "
+"<li><strong>Multiple Response</strong>: Frequencies, Crosstab</li> </ul> "
+"<p>The module is available in the <strong>Plots</strong> tab.</p> <p>Project "
+"source (and changelog) is available at <a "
+"href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>.</p>"
+msgstr ""
 
 #: R/corresp.b.R
 msgid ""
 "<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
 "two categorical variables. Computations are based on <a href = "
 "\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"target=\"_blank\">FactoMineR<a/> package by F. Husson, J. Josse, S. Le, J. "
+"Mazet.</p>\n"
 "<p>The data can be</p>\n"
 "<ul>\n"
 "<li>an <strong>Observation table</strong> (raw data), possibly weighted "
@@ -211,11 +208,11 @@ msgid ""
 "<p><strong>Supplementary row or column</strong> numbers may be entered as "
 "integer lists : 1,3,6</p>\n"
 "<p>Four normalizations (scaling of row and column scores before plotting) "
-"are avalaible :</p>\n"
+"are available :</p>\n"
 "<ul>\n"
-"<li><strong>Principal:</strong> Row an columns scores are scaled by "
+"<li><strong>Principal:</strong> Row and column scores are scaled by "
 "eigenvalues.</li>\n"
-"<li><strong>Symmetric:</strong> Row an columns scores are scaled by the "
+"<li><strong>Symmetric:</strong> Row and column scores are scaled by the "
 "square root of eigenvalues. </li>\n"
 "<li><strong>Row Principal:</strong> Only row scores are scaled by "
 "eigenvalues.</li>\n"
@@ -226,55 +223,26 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
 msgstr ""
-"<p>Этот модуль вычисляет <strong>Анализ соответствия (CA)</strong> для двух "
-"категориальных переменных. Расчеты основаны на <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> пакете от F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
-"<p>Данные могут быть</p>\n"
-"<ul>\n"
-"<li>таблицей <strong>наблюдений</strong> (сырые данные), возможно взвешенные "
-"с использованием встроенной системы весов <em>jamovi</em> или с "
-"использованием переменной \"Количество\"</li>\n"
-"<li>или таблицей <strong>сочетаний</strong></li>\n"
-"</ul>\n"
-"<p>Дополнительные номера строк или столбцов могут быть введены как "
-"целочисленные списки: 1,3,6</p>\n"
-"<p>Четыре нормализации (масштабирование баллов строк и столбцов до "
-"построения) доступны:</p>\n"
-"<ul>\n"
-"<li><strong>Основная:</strong> Баллы строк и столбцов масштабируются по "
-"собственным значениям.</li>\n"
-"<li><strong>Симметричная:</strong> Баллы строк и столбцов масштабируются по "
-"квадратному корню из собственных значений.</li>\n"
-"<li><strong>Основная строка:</strong> Только баллы строк масштабируются по "
-"собственным значениям.</li>\n"
-"<li><strong>Основной столбец:</strong> Только баллы столбцов масштабируются "
-"по собственным значениям.</li>\n"
-"<li><strong>Стандарт:</strong> Исходные координаты без нормализации.</li>\n"
-"</ul>\n"
-"<p>Пример файла включен в Открыть > Библиотека данных > vijPlots > "
-"Smoking</p>"
 
 #: R/multcorresp.b.R
 msgid ""
 "<p>This module computes <strong>Multiple Correspondence Analysis "
 "(MCA)</strong> for several categorical variables. Computations are based on "
 "<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR<a/> package by F.&nbsp;Husson, J.&nbsp;Josse, "
-"S.&nbsp;Le, J.&nbsp;Mazet.</p>\n"
+"target=\"_blank\">FactoMineR<a/> package by F. Husson, J. Josse, S. Le, J. "
+"Mazet.</p>\n"
 "<p>Both classic methods are available:</p>\n"
 "<ul>\n"
 "<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
 "<li><strong>Burt matrix:</strong> CA of the Burt matrix. The eigenvalues are "
 "the squares of those of the indicator matrix method. </li>\n"
 "</ul>\n"
-"<p>Both methods give the same <em>standard</em> coordinates (but different "
-"<em>principal</em> coordinates).</p>\n"
+"<p>Both methods give the same <em>standard</em> coordinates and "
+"discriminations (but different <em>principal</em> coordinates).</p>\n"
 "<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
-"applied to eigenvalues only (<strong>Summary</strong> table). Coordinates "
-"(and inertia) of categories and observations are computed from the original "
-"eigenvalues of the Burt matrix.</p>\n"
+"applied to eigenvalues only (<strong>Summary</strong> table). Principal "
+"coordinates (and inertia) of categories and observations are computed from "
+"the original eigenvalues of the Burt matrix.</p>\n"
 "<p>The <strong>Normalization</strong> options specify how the coordinates "
 "are scaled (by eigenvalues):</p>\n"
 "<ul>\n"
@@ -289,35 +257,6 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
 msgstr ""
-"<p>Этот модуль вычисляет <strong>Многомерное Корреспонденс-Анализ "
-"(MCA)</strong> для нескольких категориальных переменных. Вычисления основаны "
-"на пакете <a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR</a> авторов F.Хассон, J.Хоссе, S.Ле, "
-"J.Мазе.</p>\n"
-"<p>Доступны оба классических метода:</p>\n"
-"<ul>\n"
-"<li><strong>Матрица показателей:</strong> CA матрицы показателей</li>\n"
-"<li><strong>Бурта матрица:</strong> CA Бурт матрицы. Свойства ей образуют "
-"квадрату свойств метода матрицы показателей. </li>\n"
-"</ul>\n"
-"<p>Оба метода дает одинаковые <em>стандартные</em> координаты (но различные "
-"<em>главные</em> координаты).</p>\n"
-"<p>При выборе, <strong>Исправления Бензекри и Гринакре</strong> применяются "
-"только к свойствам (таблица <strong>Символ</strong>). Координаты категорий и "
-"наблюдений расчетываются из исходных свойств Бурт матрицы.</p>\n"
-"<p>Варианты <strong>Нормализации</strong> задают, как координаты "
-"масштабируются (по свойствам):</p>\n"
-"<ul>\n"
-"<li><strong>Главная:</strong> Обе категории и наблюдений координаты "
-"масштабируются.</li>\n"
-"<li><strong>Категории главная:</strong> только категории координаты "
-"масштабируются.</li>\n"
-"<li><strong>Наблюдений главный:</strong> только наблюдений координаты "
-"масштабируются.</li>\n"
-"<li><strong>Стандартная:</strong> обе категории и наблюдений координаты "
-"стандартны.</li>\n"
-"</ul>\n"
-"<p>Пример файла включен в открытие > Библиотека данных > vijPlots > Cars</p>"
 
 #: R/principal.b.R
 msgid ""
@@ -328,7 +267,7 @@ msgid ""
 "used. Only orthogonal rotations are available (from GPArotation "
 "package).</p>\n"
 "<p>Loadings (variable coordinates) and scores (observation coordinates) are "
-"principal (scaled by the squareroot of eigenvalues).</p>\n"
+"principal (scaled by the square root of eigenvalues).</p>\n"
 "<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
 "<ul>\n"
 "<li><strong>Form biplot:</strong> Scores are principal (scaled by "
@@ -348,32 +287,6 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
 msgstr ""
-"<p>Этот модуль вычисляет <strong>Принципал Компонентный Анализ "
-"(PCA)</strong> для нескольких непрерывных переменных. Вычисления основаны на "
-"функции <tt>stats::prcomp</tt>.</p>\n"
-"<p>Хотя повёрнутые компоненты не являются основными компонентами, они широко "
-"используются. Доступны только ортогональные вращения (из пакета "
-"GPArotation).</p>\n"
-"<p>Нагрузки (координаты переменных) и баллы (координаты наблюдений) являются "
-"основными (масштабируются по квадратному корню из собственных значений).</p>\n"
-"<p>Биплот следует \"Биплотам в практике\" (Майкл Гринакр, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Форма биплота:</strong> Баллы являются основными (масштабируются "
-"по собственным значениям), а нагрузки являются стандартными.</li>\n"
-"<li><strong>Ковариационный биплот:</strong> Нагрузки являются основными, а "
-"баллы являются стандартными.</li>\n"
-"</ul>\n"
-"<p><strong>Расширенные параметры</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Стандартизировать нагрузки:</strong> нагрузки нормализуются с "
-"суммами квадратов, равными 1 (вместо собственных значений)</li>\n"
-"<li><strong>Стандартизировать баллы:</strong> баллы нормализуются с "
-"дисперсиями, равными 1 (вместо собственных значений)</li>\n"
-"<li><strong>Повернуть собственный вектор:</strong> вращение (варимакс и т. "
-"д.) применяется к собственным векторам (стандартным нагрузкам) вместо "
-"основных нагрузок (способ STATA).</li>\n"
-"</ul>\n"
-"<p>Пример файла включен в Открыть > Библиотека данных > vijPlots > Iris</p>"
 
 #: R/mrfrequencies.b.R
 msgid ""
@@ -638,21 +551,18 @@ msgstr "50 лет"
 msgid "6 months"
 msgstr "6 месяцев"
 
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "A date variable must be in text format."
+msgstr ""
+
 #: package/datasets/vijPlots.description
 msgid "A demonstration dataset for vijPlots module."
 msgstr "Демонстрационный набор данных для модуля vijPlots."
 
-#: package/datasets/Smoking.description
-msgid "A demonstration dataset for vijPlots/Correspondence Analysis."
-msgstr "Демонстрационный набор данных для vijPlots/Анализ соответствия."
-
 #: package/datasets/Likert.description
-msgid "A demonstration dataset for vijPlots/Likert plots."
-msgstr "Демонстрационный набор данных для графиков vijPlots/Likert."
-
-#: package/datasets/Cars.description
-msgid "A demonstration dataset for vijPlots/Multiple Correspondence Analysis."
-msgstr "Демонстрационный набор данных для vijPlots/Множественный анализ соответствия."
+msgid "A demonstration dataset for vijPlots/Likert plot."
+msgstr ""
 
 #: package/datasets/CreditCards.description
 msgid "A demonstration dataset for vijPlots/Multiple Response plots."
@@ -660,26 +570,13 @@ msgstr ""
 "Демонстрационный набор данных для построения графиков "
 "vijPlots/Множественного отклика ."
 
-#: package/datasets/Iris.description
-msgid "A demonstration dataset for vijPlots/Principal Component Analysis."
-msgstr "Демонстрационный набор данных для vijPlots/Анализа главных компонент."
-
-#: package/datasets/Raincloud.description
-msgid "A demonstration dataset for vijPlots/Raincloud plot."
-msgstr "Демонстрационный набор данных для построения графиков vijPlots/Raincloud."
-
-#: package/datasets/TimeSeries.description
-msgid "A demonstration dataset for vijPlots/Time Serie plots."
-msgstr ""
-"Демонстрационный набор данных для построения графиков vijPlots/Временных "
-"рядов."
-
 #: areachart/options/colorPalette/Accent.title
 #: barchart/options/colorPalette/Accent.title
 #: barplot/options/colorPalette/Accent.title
 #: boxplot/options/colorPalette/Accent.title
 #: histogram/options/colorPalette/Accent.title
 #: linechart/options/colorPalette/Accent.title
+#: mosaic/options/colorPalette/Accent.title
 #: mrcrosstabs/options/colorPalette/Accent.title
 #: mrfrequencies/options/colorPalette/Accent.title
 #: multcorresp/options/colorPalette/Accent.title
@@ -691,6 +588,11 @@ msgstr ""
 msgid "Accent"
 msgstr "Акцент"
 
+#: mosaic/options/accuracy.title
+#: mosaic/ui[2][0][2][0].label
+msgid "Accuracy"
+msgstr ""
+
 #: R/corresp.b.R
 msgid "Active Margin"
 msgstr "Активная маржа"
@@ -699,15 +601,11 @@ msgstr "Активная маржа"
 msgid "Add median line (Stacked only)"
 msgstr "Добавить медианную линию (только для графиков с накоплением)"
 
-#: scatterplot/options/plotBorder.title
-msgid "Add plot frame"
-msgstr "Добавить рамку графика"
-
 #: R/likertplot.b.R
 msgid "Adj. p"
 msgstr "Скорр. p"
 
-#: principal/ui[7].label
+#: principal/ui[8].label
 msgid "Advanced Options"
 msgstr "Расширенные параметры"
 
@@ -717,18 +615,22 @@ msgstr "Расширенные параметры"
 #: barchart/options/titleAlign.title
 #: barchart/options/subtitleAlign.title
 #: barchart/options/captionAlign.title
+#: barchart/options/facetAlign.title
 #: barplot/options/titleAlign.title
 #: barplot/options/subtitleAlign.title
 #: barplot/options/captionAlign.title
+#: barplot/options/facetAlign.title
 #: boxplot/options/titleAlign.title
 #: boxplot/options/subtitleAlign.title
 #: boxplot/options/captionAlign.title
+#: boxplot/options/facetAlign.title
 #: corresp/options/titleAlign.title
 #: corresp/options/subtitleAlign.title
 #: corresp/options/captionAlign.title
 #: histogram/options/titleAlign.title
 #: histogram/options/subtitleAlign.title
 #: histogram/options/captionAlign.title
+#: histogram/options/facetAlign.title
 #: likertplot/options/titleAlign.title
 #: likertplot/options/subtitleAlign.title
 #: likertplot/options/captionAlign.title
@@ -738,6 +640,11 @@ msgstr "Расширенные параметры"
 #: lollipop/options/titleAlign.title
 #: lollipop/options/subtitleAlign.title
 #: lollipop/options/captionAlign.title
+#: lollipop/options/facetAlign.title
+#: mosaic/options/titleAlign.title
+#: mosaic/options/subtitleAlign.title
+#: mosaic/options/captionAlign.title
+#: mosaic/options/facetAlign.title
 #: mrcrosstabs/options/titleAlign.title
 #: mrcrosstabs/options/subtitleAlign.title
 #: mrcrosstabs/options/captionAlign.title
@@ -750,6 +657,7 @@ msgstr "Расширенные параметры"
 #: piechart/options/titleAlign.title
 #: piechart/options/subtitleAlign.title
 #: piechart/options/captionAlign.title
+#: piechart/options/facetAlign.title
 #: principal/options/titleAlign.title
 #: principal/options/subtitleAlign.title
 #: principal/options/captionAlign.title
@@ -762,12 +670,17 @@ msgstr "Расширенные параметры"
 #: scatterplot/options/titleAlign.title
 #: scatterplot/options/subtitleAlign.title
 #: scatterplot/options/captionAlign.title
+#: scatterplot/options/facetAlign.title
 msgid "Align"
 msgstr "Выровнять"
 
 #: raincloud/options/alphaC.title
 msgid "Alpha"
 msgstr "Альфа"
+
+#: mosaic/options/alwaysShowGroupLegend.title
+msgid "Always show group legend"
+msgstr ""
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -825,6 +738,7 @@ msgstr "Август"
 #: linechart/options/yAxisRangeType/auto.title
 #: lollipop/options/yAxisRangeType/auto.title
 #: lollipop/options/xAxisRangeType/auto.title
+#: mosaic/options/labelColor/auto.title
 #: mrcrosstabs/options/textColor/auto.title
 #: mrcrosstabs/options/yAxisRangeType/auto.title
 #: mrcrosstabs/options/xAxisRangeType/auto.title
@@ -849,11 +763,12 @@ msgstr "Авто"
 #: likertplot/ui[6].label
 #: linechart/ui[2].label
 #: lollipop/ui[5].label
+#: mosaic/ui[5].label
 #: mrcrosstabs/ui[4].label
 #: mrfrequencies/ui[4].label
 #: qqplot/ui[5].label
 #: raincloud/ui[2].label
-#: scatterplot/ui[3].label
+#: scatterplot/ui[4].label
 msgid "Axes"
 msgstr "Оси"
 
@@ -865,18 +780,10 @@ msgstr "Номера осей не могут быть равны."
 msgid "Axis numbers must be less than or equal to the number of dimensions ({nDim})."
 msgstr "Номера осей должны быть меньше или равны количеству измерений ({nDim})."
 
-#: corresp/ui[6].label
+#: corresp/ui[7].label
 #: mrfrequencies/ui[5].label
 msgid "Axis Titles"
 msgstr "Подписи осей"
-
-#: package/analyses/barchart.title
-#: package/analyses/barchart.menuTitle
-#: barchart/options.title
-#: barchart/ui.title
-#: barchart/results.title
-msgid "Bar Chart"
-msgstr "Столбиковая"
 
 #: package/analyses/barplot.title
 #: package/analyses/barplot.menuTitle
@@ -928,6 +835,10 @@ msgstr "BH"
 msgid "Bin Color"
 msgstr "Цвет контейнера"
 
+#: histogram/options/binOpacity.title
+msgid "Bin opacity"
+msgstr ""
+
 #: histogram/ui[1][1][0].label
 msgid "Bin Size"
 msgstr "Размер бункера"
@@ -947,7 +858,7 @@ msgstr "Размер бункера"
 #: principal/options/biplotTitleText.title
 #: principal/options/biplotSubtitleText.title
 #: principal/options/biplotCaptionText.title
-#: principal/ui[3][2][0].label
+#: principal/ui[4][2][0].label
 #: principal/results/biPlot.title
 msgid "Biplot"
 msgstr "Биплот"
@@ -966,6 +877,7 @@ msgstr "Тип биплота"
 #: likertplot/options/labelColor/black.title
 #: lollipop/options/dotColor/black.title
 #: lollipop/options/lineColor/black.title
+#: mosaic/options/labelColor/black.title
 #: mrcrosstabs/options/borderColor/black.title
 #: mrcrosstabs/options/textColor/black.title
 #: mrfrequencies/options/borderColor/black.title
@@ -979,6 +891,17 @@ msgstr "Тип биплота"
 #: scatterplot/options/singleColor/black.title
 msgid "Black"
 msgstr "Черный"
+
+#: barchart/options/facetStyle/border.title
+#: barplot/options/facetStyle/border.title
+#: boxplot/options/facetStyle/border.title
+#: histogram/options/facetStyle/border.title
+#: lollipop/options/facetStyle/border.title
+#: mosaic/options/facetStyle/border.title
+#: piechart/options/facetStyle/border.title
+#: scatterplot/options/facetStyle/border.title
+msgid "Black border"
+msgstr ""
 
 #: corresp/options/rowColor/blue.title
 #: corresp/options/colColor/blue.title
@@ -998,6 +921,7 @@ msgstr "Синий"
 #: boxplot/options/colorPalette/BuGn.title
 #: histogram/options/colorPalette/BuGn.title
 #: linechart/options/colorPalette/BuGn.title
+#: mosaic/options/colorPalette/BuGn.title
 #: mrcrosstabs/options/colorPalette/BuGn.title
 #: mrfrequencies/options/colorPalette/BuGn.title
 #: multcorresp/options/colorPalette/BuGn.title
@@ -1015,6 +939,7 @@ msgstr "Синий к зеленому"
 #: boxplot/options/colorPalette/BuPu.title
 #: histogram/options/colorPalette/BuPu.title
 #: linechart/options/colorPalette/BuPu.title
+#: mosaic/options/colorPalette/BuPu.title
 #: mrcrosstabs/options/colorPalette/BuPu.title
 #: mrfrequencies/options/colorPalette/BuPu.title
 #: multcorresp/options/colorPalette/BuPu.title
@@ -1032,6 +957,7 @@ msgstr "От синего к фиолетовому"
 #: boxplot/options/colorPalette/Blues.title
 #: histogram/options/colorPalette/Blues.title
 #: linechart/options/colorPalette/Blues.title
+#: mosaic/options/colorPalette/Blues.title
 #: mrcrosstabs/options/colorPalette/Blues.title
 #: mrfrequencies/options/colorPalette/Blues.title
 #: multcorresp/options/colorPalette/Blues.title
@@ -1049,18 +975,22 @@ msgstr "Блюз"
 #: barchart/options/titleFontFace/bold.title
 #: barchart/options/subtitleFontFace/bold.title
 #: barchart/options/captionFontFace/bold.title
+#: barchart/options/facetFontFace/bold.title
 #: barplot/options/titleFontFace/bold.title
 #: barplot/options/subtitleFontFace/bold.title
 #: barplot/options/captionFontFace/bold.title
+#: barplot/options/facetFontFace/bold.title
 #: boxplot/options/titleFontFace/bold.title
 #: boxplot/options/subtitleFontFace/bold.title
 #: boxplot/options/captionFontFace/bold.title
+#: boxplot/options/facetFontFace/bold.title
 #: corresp/options/titleFontFace/bold.title
 #: corresp/options/subtitleFontFace/bold.title
 #: corresp/options/captionFontFace/bold.title
 #: histogram/options/titleFontFace/bold.title
 #: histogram/options/subtitleFontFace/bold.title
 #: histogram/options/captionFontFace/bold.title
+#: histogram/options/facetFontFace/bold.title
 #: likertplot/options/titleFontFace/bold.title
 #: likertplot/options/subtitleFontFace/bold.title
 #: likertplot/options/captionFontFace/bold.title
@@ -1070,6 +1000,11 @@ msgstr "Блюз"
 #: lollipop/options/titleFontFace/bold.title
 #: lollipop/options/subtitleFontFace/bold.title
 #: lollipop/options/captionFontFace/bold.title
+#: lollipop/options/facetFontFace/bold.title
+#: mosaic/options/titleFontFace/bold.title
+#: mosaic/options/subtitleFontFace/bold.title
+#: mosaic/options/captionFontFace/bold.title
+#: mosaic/options/facetFontFace/bold.title
 #: mrcrosstabs/options/titleFontFace/bold.title
 #: mrcrosstabs/options/subtitleFontFace/bold.title
 #: mrcrosstabs/options/captionFontFace/bold.title
@@ -1082,6 +1017,7 @@ msgstr "Блюз"
 #: piechart/options/titleFontFace/bold.title
 #: piechart/options/subtitleFontFace/bold.title
 #: piechart/options/captionFontFace/bold.title
+#: piechart/options/facetFontFace/bold.title
 #: principal/options/titleFontFace/bold.title
 #: principal/options/subtitleFontFace/bold.title
 #: principal/options/captionFontFace/bold.title
@@ -1094,6 +1030,7 @@ msgstr "Блюз"
 #: scatterplot/options/titleFontFace/bold.title
 #: scatterplot/options/subtitleFontFace/bold.title
 #: scatterplot/options/captionFontFace/bold.title
+#: scatterplot/options/facetFontFace/bold.title
 msgid "Bold"
 msgstr "Жирный"
 
@@ -1103,18 +1040,22 @@ msgstr "Жирный"
 #: barchart/options/titleFontFace/bold.italic.title
 #: barchart/options/subtitleFontFace/bold.italic.title
 #: barchart/options/captionFontFace/bold.italic.title
+#: barchart/options/facetFontFace/bold.italic.title
 #: barplot/options/titleFontFace/bold.italic.title
 #: barplot/options/subtitleFontFace/bold.italic.title
 #: barplot/options/captionFontFace/bold.italic.title
+#: barplot/options/facetFontFace/bold.italic.title
 #: boxplot/options/titleFontFace/bold.italic.title
 #: boxplot/options/subtitleFontFace/bold.italic.title
 #: boxplot/options/captionFontFace/bold.italic.title
+#: boxplot/options/facetFontFace/bold.italic.title
 #: corresp/options/titleFontFace/bold.italic.title
 #: corresp/options/subtitleFontFace/bold.italic.title
 #: corresp/options/captionFontFace/bold.italic.title
 #: histogram/options/titleFontFace/bold.italic.title
 #: histogram/options/subtitleFontFace/bold.italic.title
 #: histogram/options/captionFontFace/bold.italic.title
+#: histogram/options/facetFontFace/bold.italic.title
 #: likertplot/options/titleFontFace/bold.italic.title
 #: likertplot/options/subtitleFontFace/bold.italic.title
 #: likertplot/options/captionFontFace/bold.italic.title
@@ -1124,6 +1065,11 @@ msgstr "Жирный"
 #: lollipop/options/titleFontFace/bold.italic.title
 #: lollipop/options/subtitleFontFace/bold.italic.title
 #: lollipop/options/captionFontFace/bold.italic.title
+#: lollipop/options/facetFontFace/bold.italic.title
+#: mosaic/options/titleFontFace/bold.italic.title
+#: mosaic/options/subtitleFontFace/bold.italic.title
+#: mosaic/options/captionFontFace/bold.italic.title
+#: mosaic/options/facetFontFace/bold.italic.title
 #: mrcrosstabs/options/titleFontFace/bold.italic.title
 #: mrcrosstabs/options/subtitleFontFace/bold.italic.title
 #: mrcrosstabs/options/captionFontFace/bold.italic.title
@@ -1136,6 +1082,7 @@ msgstr "Жирный"
 #: piechart/options/titleFontFace/bold.italic.title
 #: piechart/options/subtitleFontFace/bold.italic.title
 #: piechart/options/captionFontFace/bold.italic.title
+#: piechart/options/facetFontFace/bold.italic.title
 #: principal/options/titleFontFace/bold.italic.title
 #: principal/options/subtitleFontFace/bold.italic.title
 #: principal/options/captionFontFace/bold.italic.title
@@ -1148,6 +1095,7 @@ msgstr "Жирный"
 #: scatterplot/options/titleFontFace/bold.italic.title
 #: scatterplot/options/subtitleFontFace/bold.italic.title
 #: scatterplot/options/captionFontFace/bold.italic.title
+#: scatterplot/options/facetFontFace/bold.italic.title
 msgid "Bold Italic"
 msgstr "Жирный курсив"
 
@@ -1157,12 +1105,13 @@ msgstr "Бонферрони"
 
 #: qqplot/options/methodQQ/boot.title
 #: qqplot/options/methodPP/boot.title
-msgid "Boostrap"
-msgstr "Бустрап"
+msgid "Bootstrap"
+msgstr ""
 
 #: barchart/options/borderColor.title
 #: barplot/options/borderColor.title
 #: histogram/options/borderColor.title
+#: mosaic/ui[3][0][2][0].label
 #: mrcrosstabs/options/borderColor.title
 #: mrfrequencies/options/borderColor.title
 #: piechart/options/borderColor.title
@@ -1184,6 +1133,8 @@ msgstr "Граница"
 #: linechart/options/legendPosition/bottom.title
 #: linechart/options/yAxisPosition/0.title
 #: lollipop/options/yAxisPosition/0.title
+#: mosaic/options/legendPosition/bottom.title
+#: mosaic/options/yAxisPosition/0.title
 #: mrcrosstabs/options/legendPosition/bottom.title
 #: mrcrosstabs/options/yAxisPosition/0.title
 #: mrfrequencies/options/yAxisPosition/0.title
@@ -1234,6 +1185,7 @@ msgstr "Коричневый"
 #: histogram/options/colorPalette/BrBG.title
 #: likertplot/options/plotColor/BrBG.title
 #: linechart/options/colorPalette/BrBG.title
+#: mosaic/options/colorPalette/BrBG.title
 #: mrcrosstabs/options/colorPalette/BrBG.title
 #: mrfrequencies/options/colorPalette/BrBG.title
 #: multcorresp/options/colorPalette/BrBG.title
@@ -1247,7 +1199,7 @@ msgstr "Коричневый и Зеленый"
 
 #: R/multcorresp.b.R
 #: multcorresp/options/method/Burt.title
-#: multcorresp/ui[3][0][0]/method_burt.label
+#: multcorresp/ui[4][0][0]/method_burt.label
 msgid "Burt matrix"
 msgstr "Матрица Берта"
 
@@ -1281,36 +1233,71 @@ msgstr "Не возможно очистить текстовые перемен
 #: likertplot/ui[8][2].label
 #: linechart/ui[4][2].label
 #: lollipop/ui[7][2].label
+#: mosaic/ui[7][2].label
 #: mrcrosstabs/ui[6][2].label
 #: mrfrequencies/ui[6][2].label
 #: piechart/ui[6][2].label
 #: qqplot/ui[7][2].label
 #: raincloud/ui[4][2].label
-#: scatterplot/ui[5][2].label
+#: scatterplot/ui[6][2].label
 msgid "Caption"
 msgstr "Подпись"
 
-#: corresp/ui[7][2][1][0].label
-#: multcorresp/ui[8][2][1][0].label
-#: principal/ui[6][2][1][0].label
+#: corresp/ui[8][2][1][0].label
+#: multcorresp/ui[9][2][1][0].label
+#: principal/ui[7][2][1][0].label
 msgid "Caption Style"
 msgstr "Стиль подписи"
 
-#: corresp/ui[7][2][0][0].label
-#: multcorresp/ui[8][2][0][0].label
-#: principal/ui[6][2][0][0].label
+#: corresp/ui[8][2][0][0].label
+#: multcorresp/ui[9][2][0][0].label
+#: principal/ui[7][2][0][0].label
 msgid "Caption Text"
 msgstr "Текст подписи"
 
-#: package/datasets/Cars.name
-msgid "Cars"
-msgstr "Автомобили"
+#: areachart/options/colorPalette/custom::carbon_dark.title
+#: barchart/options/colorPalette/custom::carbon_dark.title
+#: barplot/options/colorPalette/custom::carbon_dark.title
+#: boxplot/options/colorPalette/custom::carbon_dark.title
+#: histogram/options/colorPalette/custom::carbon_dark.title
+#: linechart/options/colorPalette/custom::carbon_dark.title
+#: mosaic/options/colorPalette/custom::carbon_dark.title
+#: mrcrosstabs/options/colorPalette/custom::carbon_dark.title
+#: mrfrequencies/options/colorPalette/custom::carbon_dark.title
+#: multcorresp/options/colorPalette/custom::carbon_dark.title
+#: piechart/options/colorPalette/custom::carbon_dark.title
+#: principal/options/colorPalette/custom::carbon_dark.title
+#: qqplot/options/colorPalette/custom::carbon_dark.title
+#: raincloud/options/colorPalette/custom::carbon_dark.title
+#: scatterplot/options/colorPalette/custom::carbon_dark.title
+msgid "Carbon:Dark"
+msgstr ""
+
+#: areachart/options/colorPalette/custom::carbon_light.title
+#: barchart/options/colorPalette/custom::carbon_light.title
+#: barplot/options/colorPalette/custom::carbon_light.title
+#: boxplot/options/colorPalette/custom::carbon_light.title
+#: histogram/options/colorPalette/custom::carbon_light.title
+#: linechart/options/colorPalette/custom::carbon_light.title
+#: mosaic/options/colorPalette/custom::carbon_light.title
+#: mrcrosstabs/options/colorPalette/custom::carbon_light.title
+#: mrfrequencies/options/colorPalette/custom::carbon_light.title
+#: multcorresp/options/colorPalette/custom::carbon_light.title
+#: piechart/options/colorPalette/custom::carbon_light.title
+#: principal/options/colorPalette/custom::carbon_light.title
+#: qqplot/options/colorPalette/custom::carbon_light.title
+#: raincloud/options/colorPalette/custom::carbon_light.title
+#: scatterplot/options/colorPalette/custom::carbon_light.title
+msgid "Carbon:Light"
+msgstr ""
 
 #: package/analyses/barplot.menuSubgroup
 #: package/analyses/piechart.menuSubgroup
+#: package/analyses/mosaic.menuSubgroup
 #: package/analyses/likertplot.menuSubgroup
 #: barplot/options.menuSubgroup
 #: likertplot/options.menuSubgroup
+#: mosaic/options.menuSubgroup
 #: piechart/options.menuSubgroup
 msgid "Categorical"
 msgstr "Категориальный"
@@ -1322,6 +1309,8 @@ msgstr "Категории"
 
 #: barplot/options/rows.title
 #: barplot/ui[0][0].label
+#: mosaic/options/category.title
+#: mosaic/ui[0][0].label
 msgid "Category Axis"
 msgstr "Ось категории"
 
@@ -1336,7 +1325,7 @@ msgstr "Категориальный График"
 msgid "Category plot"
 msgstr "Категориальный график"
 
-#: multcorresp/ui[6][0][1][0].label
+#: multcorresp/ui[7][0][1][0].label
 msgid "Category Plot Options"
 msgstr "Параметры категориального графика"
 
@@ -1365,16 +1354,19 @@ msgstr "Коши"
 #: barchart/options/titleAlign/0.5.title
 #: barchart/options/subtitleAlign/0.5.title
 #: barchart/options/captionAlign/0.5.title
+#: barchart/options/facetAlign/0.5.title
 #: barchart/options/xAxisPosition/0.5.title
 #: barchart/options/yAxisPosition/0.5.title
 #: barplot/options/titleAlign/0.5.title
 #: barplot/options/subtitleAlign/0.5.title
 #: barplot/options/captionAlign/0.5.title
+#: barplot/options/facetAlign/0.5.title
 #: barplot/options/xAxisPosition/0.5.title
 #: barplot/options/yAxisPosition/0.5.title
 #: boxplot/options/titleAlign/0.5.title
 #: boxplot/options/subtitleAlign/0.5.title
 #: boxplot/options/captionAlign/0.5.title
+#: boxplot/options/facetAlign/0.5.title
 #: boxplot/options/xAxisPosition/0.5.title
 #: boxplot/options/yAxisPosition/0.5.title
 #: corresp/options/titleAlign/0.5.title
@@ -1385,6 +1377,7 @@ msgstr "Коши"
 #: histogram/options/titleAlign/0.5.title
 #: histogram/options/subtitleAlign/0.5.title
 #: histogram/options/captionAlign/0.5.title
+#: histogram/options/facetAlign/0.5.title
 #: histogram/options/xAxisPosition/0.5.title
 #: histogram/options/yAxisPosition/0.5.title
 #: likertplot/options/titleAlign/0.5.title
@@ -1398,8 +1391,15 @@ msgstr "Коши"
 #: lollipop/options/titleAlign/0.5.title
 #: lollipop/options/subtitleAlign/0.5.title
 #: lollipop/options/captionAlign/0.5.title
+#: lollipop/options/facetAlign/0.5.title
 #: lollipop/options/xAxisPosition/0.5.title
 #: lollipop/options/yAxisPosition/0.5.title
+#: mosaic/options/titleAlign/0.5.title
+#: mosaic/options/subtitleAlign/0.5.title
+#: mosaic/options/captionAlign/0.5.title
+#: mosaic/options/facetAlign/0.5.title
+#: mosaic/options/xAxisPosition/0.5.title
+#: mosaic/options/yAxisPosition/0.5.title
 #: mrcrosstabs/options/titleAlign/0.5.title
 #: mrcrosstabs/options/subtitleAlign/0.5.title
 #: mrcrosstabs/options/captionAlign/0.5.title
@@ -1418,6 +1418,7 @@ msgstr "Коши"
 #: piechart/options/titleAlign/0.5.title
 #: piechart/options/subtitleAlign/0.5.title
 #: piechart/options/captionAlign/0.5.title
+#: piechart/options/facetAlign/0.5.title
 #: principal/options/titleAlign/0.5.title
 #: principal/options/subtitleAlign/0.5.title
 #: principal/options/captionAlign/0.5.title
@@ -1436,6 +1437,7 @@ msgstr "Коши"
 #: scatterplot/options/titleAlign/0.5.title
 #: scatterplot/options/subtitleAlign/0.5.title
 #: scatterplot/options/captionAlign/0.5.title
+#: scatterplot/options/facetAlign/0.5.title
 #: scatterplot/options/xAxisPosition/0.5.title
 #: scatterplot/options/yAxisPosition/0.5.title
 msgid "Center"
@@ -1451,6 +1453,10 @@ msgstr "Центрировано"
 msgid "Chi-squared"
 msgstr "Хи-квадрат"
 
+#: mosaic/options/labelColor.title
+msgid "Color"
+msgstr ""
+
 #: barchart/options/colorNo.title
 #: barplot/options/colorNo.title
 #: boxplot/options/colorNo.title
@@ -1465,7 +1471,7 @@ msgstr "Номер цвета"
 #: mrfrequencies/ui[3][0][1][0].label
 #: piechart/ui[3][0][1][0].label
 #: raincloud/ui[1][1][0].label
-#: scatterplot/ui[1][1][0].label
+#: scatterplot/ui[2][0][0].label
 msgid "Color Options"
 msgstr "Настройки цвета"
 
@@ -1474,6 +1480,7 @@ msgstr "Настройки цвета"
 #: boxplot/ui[2][0][0][0].label
 #: histogram/options/colorPalette.title
 #: histogram/ui[3][1][0].label
+#: mosaic/ui[3][0][0][0].label
 #: mrcrosstabs/ui[3][0][0][0].label
 #: mrfrequencies/ui[3][0][0][0].label
 #: piechart/ui[3][0][0][0].label
@@ -1483,7 +1490,7 @@ msgstr "Цветовая палитра"
 
 #: barchart/ui[4].label
 #: barplot/ui[3].label
-#: corresp/ui[5][0][1][0].label
+#: corresp/ui[6][0][1][0].label
 #: histogram/ui[3].label
 #: lollipop/ui[3][0][0][0].label
 #: mrcrosstabs/ui[3].label
@@ -1491,6 +1498,10 @@ msgstr "Цветовая палитра"
 #: piechart/ui[3].label
 msgid "Colors"
 msgstr "Цвета"
+
+#: scatterplot/ui[2].label
+msgid "Colors & Element Sizes"
+msgstr ""
 
 #: boxplot/ui[2].label
 #: qqplot/ui[4].label
@@ -1500,18 +1511,20 @@ msgstr "Цвета и настройки"
 #: barchart/options/facetBy/column.title
 #: barchart/ui[5][0][0][0][0]/facetBy_column.label
 #: barplot/options/facetBy/column.title
-#: barplot/ui[4][0][1][0][0]/facetBy_column.label
+#: barplot/ui[4][0][0][0]/facetBy_column.label
 #: boxplot/options/facetBy/column.title
-#: boxplot/ui[3][0][1][0][0]/facetBy_column.label
+#: boxplot/ui[3][0][0][0]/facetBy_column.label
 #: corresp/options/colColor.title
 #: histogram/options/facetBy/column.title
 #: histogram/ui[4][0][0][0][0]/facetBy_column.label
 #: lollipop/options/facetBy/column.title
 #: lollipop/ui[4][0][0][0][0]/facetBy_column.label
+#: mosaic/options/facetBy/column.title
+#: mosaic/ui[4][0][0][0][0]/facetBy_column.label
 #: piechart/options/facetBy/column.title
-#: piechart/ui[4][0][1][0][0]/facetBy_column.label
+#: piechart/ui[4][0][0][0]/facetBy_column.label
 #: scatterplot/options/facetBy/column.title
-#: scatterplot/ui[2][0][1][0][0]/facetBy_column.label
+#: scatterplot/ui[3][0][0][0][0]/facetBy_column.label
 msgid "Column"
 msgstr "Столбец"
 
@@ -1569,17 +1582,21 @@ msgid "Comparison Tests"
 msgstr "Сравнительные тесты"
 
 #: R/likertplot.b.R
-msgid "Comparison tests cannot be computed with empty (N=0) groups"
-msgstr "Тесты сравнения не могут быть вычислены с пустыми (N=0) группами"
+msgid "Comparison tests require at least two groups."
+msgstr ""
 
 #: R/likertplot.b.R
-msgid "Comparison tests require numeric variables"
-msgstr "Тесты сравнения требуют числовых переменных"
+msgid "Comparison tests require numeric variables."
+msgstr ""
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
 msgid "Component"
 msgstr "Компонент"
+
+#: R/principal.b.R
+msgid "Component {n} ({perc} %)"
+msgstr ""
 
 #: R/principal.b.R
 msgid "Component Plot"
@@ -1637,6 +1654,7 @@ msgstr "Таблица сопряжения"
 msgid "Continuous"
 msgstr "Непрерывный"
 
+#: R/corresp.b.R
 #: R/multcorresp.b.R
 msgid "Contributions"
 msgstr "Взносы"
@@ -1669,14 +1687,26 @@ msgstr "COS2"
 #: barplot/ui[1][0][0]/yaxis_count.label
 #: histogram/options/histtype/count.title
 #: histogram/ui[1][0][0]/histtype_count.label
+#: mosaic/options/labelType/count.title
 #: piechart/options/labels/count.title
 msgid "Count"
 msgstr "Количество"
+
+#: barplot/options/showLabels.title
+#: mrcrosstabs/options/showLabels.title
+#: mrfrequencies/options/showLabels.title
+msgid "Count labels"
+msgstr ""
 
 #: mrcrosstabs/options/endorsed.title
 #: mrfrequencies/options/endorsed.title
 msgid "Counted value"
 msgstr "Подсчитанное значение"
+
+#: R/mrcrosstabs.b.R
+#: R/mrfrequencies.b.R
+msgid "Counted value string may not be empty."
+msgstr ""
 
 #: R/mrfrequencies.b.R
 #: likertplot/options/frequencies/counts.title
@@ -1688,12 +1718,37 @@ msgstr "Подсчитанное значение"
 msgid "Counts"
 msgstr "Частоты"
 
+#: barplot/options/counts.title
+#: barplot/ui[0][2].label
 #: corresp/options/counts.title
 #: corresp/ui/mode/obsTable[0][0][2].label
+#: mosaic/options/counts.title
+#: mosaic/ui[0][2].label
+#: piechart/options/counts.title
+#: piechart/ui[0][1].label
 msgid "Counts (optional)"
 msgstr "Счетчики (необязательно)"
 
-#: principal/ui[3][2][0]/biplotType_covPlot.label
+#: R/barplot.b.R
+#: R/corresp.b.R
+#: R/mosaic.b.R
+#: R/piechart.b.R
+msgid "Counts may not be infinite."
+msgstr ""
+
+#: R/barplot.b.R
+#: R/corresp.b.R
+#: R/mosaic.b.R
+#: R/piechart.b.R
+msgid "Counts may not be negative."
+msgstr ""
+
+#: R/barplot.b.R
+#: R/mosaic.b.R
+msgid "Counts may not contain missing values."
+msgstr ""
+
+#: principal/ui[4][2][0]/biplotType_covPlot.label
 msgid "Cov (Loading principal)"
 msgstr "Cov (Загрузка главных)"
 
@@ -1741,6 +1796,7 @@ msgstr "Совокупный %"
 #: boxplot/options/colorPalette/Dark2.title
 #: histogram/options/colorPalette/Dark2.title
 #: linechart/options/colorPalette/Dark2.title
+#: mosaic/options/colorPalette/Dark2.title
 #: mrcrosstabs/options/colorPalette/Dark2.title
 #: mrfrequencies/options/colorPalette/Dark2.title
 #: multcorresp/options/colorPalette/Dark2.title
@@ -1795,6 +1851,8 @@ msgstr "Точность дроби"
 #: boxplot/ui[1][1][0]/order_decreasing.label
 #: lollipop/options/order/decreasing.title
 #: lollipop/ui[2][1][0]/order_decreasing.label
+#: mosaic/options/order/decreasing.title
+#: mosaic/ui[1][1][1]/order_decreasing.label
 #: mrcrosstabs/options/order/decreasing.title
 #: mrcrosstabs/ui[1][2][0]/order_decreasing.label
 #: mrfrequencies/options/order/decreasing.title
@@ -1829,10 +1887,21 @@ msgstr "Уменьшение"
 msgid "default"
 msgstr "по умолчанию"
 
+#: barchart/options/facetStyle/default.title
+#: barplot/options/facetStyle/default.title
+#: boxplot/options/facetStyle/default.title
+#: histogram/options/facetStyle/default.title
+#: lollipop/options/facetStyle/default.title
+#: mosaic/options/facetStyle/default.title
+#: piechart/options/facetStyle/default.title
+#: scatterplot/options/facetStyle/default.title
+msgid "Default"
+msgstr ""
+
 #: R/histogram.b.R
 #: histogram/options/histtype/density.title
 #: histogram/ui[1][0][0]/histtype_density.label
-#: histogram/ui[2][0][0].label
+#: histogram/ui[2][1][0].label
 msgid "Density"
 msgstr "Плотность"
 
@@ -1864,6 +1933,7 @@ msgstr "df"
 #: boxplot/options/colorPalette/dichromat::Categorical.12.title
 #: histogram/options/colorPalette/dichromat::Categorical.12.title
 #: linechart/options/colorPalette/dichromat::Categorical.12.title
+#: mosaic/options/colorPalette/dichromat::Categorical.12.title
 #: mrcrosstabs/options/colorPalette/dichromat::Categorical.12.title
 #: mrfrequencies/options/colorPalette/dichromat::Categorical.12.title
 #: multcorresp/options/colorPalette/dichromat::Categorical.12.title
@@ -1875,17 +1945,25 @@ msgstr "df"
 msgid "Dichromat:Categorical"
 msgstr "Дихромат:Категориальный"
 
-#: R/multcorresp.b.R
 #: R/principal.b.R
 msgid "Dim"
 msgstr "Dim"
 
 #: R/corresp.b.R
 #: R/multcorresp.b.R
+#: R/principal.b.R
+msgid "Dim {n}"
+msgstr ""
+
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
 msgid "Dimension"
 msgstr "Измерение"
+
+#: R/corresp.b.R
+#: R/multcorresp.b.R
+msgid "Dimension {n} ({perc} %)"
+msgstr ""
 
 #: R/multcorresp.b.R
 msgid "Discrimination"
@@ -1973,14 +2051,10 @@ msgstr "Собственное значение"
 msgid "Eigenvalues"
 msgstr "Собственные значения"
 
-#: principal/ui[4][0][0][1].label
-#: scatterplot/ui[2][0][0][0].label
+#: principal/ui[5][0][0][1].label
+#: scatterplot/ui[2][1][0].label
 msgid "Element Sizes"
 msgstr "Размеры элемента"
-
-#: scatterplot/ui[2].label
-msgid "Element Sizes & Facets"
-msgstr "Размеры и фасеты элемента"
 
 #: qqplot/options/methodQQ/ell.title
 #: qqplot/options/methodPP/ell.title
@@ -1990,6 +2064,14 @@ msgstr "Равные местные уровни"
 #: principal/options/rotation/equamax.title
 msgid "Equamax"
 msgstr "Эквамакс"
+
+#: package/analyses/barchart.title
+#: package/analyses/barchart.menuTitle
+#: barchart/options.title
+#: barchart/ui.title
+#: barchart/results.title
+msgid "Error Bar Chart"
+msgstr ""
 
 #: barchart/ui[3][1][0].label
 msgid "Error Bar Size"
@@ -2002,7 +2084,7 @@ msgid "Error Bars"
 msgstr "Полосы ошибок"
 
 #: qqplot/options/paramMethod/paraEstimate.title
-#: qqplot/ui[3][0][0]/paramMethod_paraEstimat.label
+#: qqplot/ui[3][0][0]/paramMethod_paraEstimate.label
 msgid "Estimate parameters from data"
 msgstr "Оценить параметры по данным"
 
@@ -2020,6 +2102,10 @@ msgstr "Экспоненциальный"
 msgid "Exponential distribution requires non-negative (≥0) data."
 msgstr "Экспоненциальное распределение требует неотрицательных (≥ 0) данных."
 
+#: R/principal.b.R
+msgid "Extraction"
+msgstr ""
+
 #: principal/results/summaryTable.columns.superTitle
 msgid "Extraction Sums of Squared Loadings"
 msgstr "Извлечение сумм квадратов нагрузок"
@@ -2029,7 +2115,7 @@ msgstr "Извлечение сумм квадратов нагрузок"
 #: barchart/ui[0][3].label
 #: barplot/options/facet.title
 #: barplot/options/facetBy.title
-#: barplot/ui[0][2].label
+#: barplot/ui[0][3].label
 #: boxplot/options/facet.title
 #: boxplot/ui[0][3].label
 #: histogram/options/facet.title
@@ -2037,27 +2123,47 @@ msgstr "Извлечение сумм квадратов нагрузок"
 #: lollipop/options/facet.title
 #: lollipop/options/facetBy.title
 #: lollipop/ui[0][2].label
+#: mosaic/options/facet.title
+#: mosaic/options/facetBy.title
+#: mosaic/ui[0][3].label
 #: piechart/options/facet.title
-#: piechart/ui[0][1].label
+#: piechart/ui[0][2].label
 #: scatterplot/options/facet.title
 #: scatterplot/ui[0][5].label
 msgid "Facet"
 msgstr "Фасет"
 
+#: barchart/ui[5][0][1][0].label
+#: barplot/ui[4][1][0].label
+#: boxplot/ui[3][1][0].label
+#: histogram/ui[4][0][1][0].label
+#: lollipop/ui[4][0][1][0].label
+#: mosaic/ui[4][0][1][0].label
+#: piechart/ui[4][1][0].label
+#: scatterplot/ui[3][0][1][0].label
+msgid "Facet Labels"
+msgstr ""
+
 #: barchart/ui[5].label
 #: barchart/ui[5][0][0][0].label
-#: barplot/ui[4][0][1][0].label
+#: barplot/ui[4].label
+#: barplot/ui[4][0][0].label
 #: boxplot/options/facetBy.title
-#: boxplot/ui[3][0][1][0].label
+#: boxplot/ui[3].label
+#: boxplot/ui[3][0][0].label
 #: histogram/options/facetBy.title
 #: histogram/ui[4].label
 #: histogram/ui[4][0][0][0].label
 #: lollipop/ui[4].label
 #: lollipop/ui[4][0][0][0].label
+#: mosaic/ui[4].label
+#: mosaic/ui[4][0][0][0].label
 #: piechart/options/facetBy.title
-#: piechart/ui[4][0][1][0].label
+#: piechart/ui[4].label
+#: piechart/ui[4][0][0].label
 #: scatterplot/options/facetBy.title
-#: scatterplot/ui[2][0][1][0].label
+#: scatterplot/ui[3].label
+#: scatterplot/ui[3][0][0][0].label
 msgid "Facets"
 msgstr "Фасеты"
 
@@ -2085,15 +2191,19 @@ msgstr "Заливка"
 #: barchart/options/titleFontFace.title
 #: barchart/options/subtitleFontFace.title
 #: barchart/options/captionFontFace.title
+#: barchart/options/facetFontFace.title
 #: barplot/options/titleFontFace.title
 #: barplot/options/subtitleFontFace.title
 #: barplot/options/captionFontFace.title
+#: barplot/options/facetFontFace.title
 #: boxplot/options/titleFontFace.title
 #: boxplot/options/subtitleFontFace.title
 #: boxplot/options/captionFontFace.title
+#: boxplot/options/facetFontFace.title
 #: histogram/options/titleFontFace.title
 #: histogram/options/subtitleFontFace.title
 #: histogram/options/captionFontFace.title
+#: histogram/options/facetFontFace.title
 #: likertplot/options/titleFontFace.title
 #: likertplot/options/subtitleFontFace.title
 #: likertplot/options/captionFontFace.title
@@ -2103,6 +2213,11 @@ msgstr "Заливка"
 #: lollipop/options/titleFontFace.title
 #: lollipop/options/subtitleFontFace.title
 #: lollipop/options/captionFontFace.title
+#: lollipop/options/facetFontFace.title
+#: mosaic/options/titleFontFace.title
+#: mosaic/options/subtitleFontFace.title
+#: mosaic/options/captionFontFace.title
+#: mosaic/options/facetFontFace.title
 #: mrcrosstabs/options/titleFontFace.title
 #: mrcrosstabs/options/subtitleFontFace.title
 #: mrcrosstabs/options/captionFontFace.title
@@ -2112,6 +2227,7 @@ msgstr "Заливка"
 #: piechart/options/titleFontFace.title
 #: piechart/options/subtitleFontFace.title
 #: piechart/options/captionFontFace.title
+#: piechart/options/facetFontFace.title
 #: qqplot/options/titleFontFace.title
 #: qqplot/options/subtitleFontFace.title
 #: qqplot/options/captionFontFace.title
@@ -2121,6 +2237,7 @@ msgstr "Заливка"
 #: scatterplot/options/titleFontFace.title
 #: scatterplot/options/subtitleFontFace.title
 #: scatterplot/options/captionFontFace.title
+#: scatterplot/options/facetFontFace.title
 msgid "Font"
 msgstr "Шрифт"
 
@@ -2149,7 +2266,7 @@ msgid "Font size"
 msgstr "Размер шрифта"
 
 #: histogram/options/usePalette/forBorder.title
-#: histogram/ui[3][1][0][1]/usePalette_forBoder.label
+#: histogram/ui[3][1][0][1]/usePalette_forBorder.label
 msgid "For border"
 msgstr "Для границы"
 
@@ -2159,7 +2276,7 @@ msgid "For filling"
 msgstr "Для наполнения"
 
 #: principal/options/biplotType/formPlot.title
-#: principal/ui[3][2][0]/biplotType_formPlot.label
+#: principal/ui[4][2][0]/biplotType_formPlot.label
 msgid "Form (Score principal)"
 msgstr "Форма (Счет главных)"
 
@@ -2213,6 +2330,17 @@ msgstr "Гамма"
 msgid "Gray"
 msgstr "Серый"
 
+#: barchart/options/facetStyle/background.title
+#: barplot/options/facetStyle/background.title
+#: boxplot/options/facetStyle/background.title
+#: histogram/options/facetStyle/background.title
+#: lollipop/options/facetStyle/background.title
+#: mosaic/options/facetStyle/background.title
+#: piechart/options/facetStyle/background.title
+#: scatterplot/options/facetStyle/background.title
+msgid "Gray background"
+msgstr ""
+
 #: corresp/options/rowColor/forestgreen.title
 #: corresp/options/colColor/forestgreen.title
 #: histogram/options/fillColor/#4DAF4A.title
@@ -2230,6 +2358,7 @@ msgstr "Зеленый"
 #: boxplot/options/colorPalette/GnBu.title
 #: histogram/options/colorPalette/GnBu.title
 #: linechart/options/colorPalette/GnBu.title
+#: mosaic/options/colorPalette/GnBu.title
 #: mrcrosstabs/options/colorPalette/GnBu.title
 #: mrfrequencies/options/colorPalette/GnBu.title
 #: multcorresp/options/colorPalette/GnBu.title
@@ -2250,8 +2379,8 @@ msgid "Greenacre correction"
 msgstr "Коррекция Гринакра"
 
 #: R/multcorresp.b.R
-msgid "Greenacre's corrected inertia ="
-msgstr "Скорректированная инерция Гринакра ="
+msgid "Greenacre's corrected inertia = {inertia}"
+msgstr ""
 
 #: areachart/options/colorPalette/Greens.title
 #: barchart/options/colorPalette/Greens.title
@@ -2259,6 +2388,7 @@ msgstr "Скорректированная инерция Гринакра ="
 #: boxplot/options/colorPalette/Greens.title
 #: histogram/options/colorPalette/Greens.title
 #: linechart/options/colorPalette/Greens.title
+#: mosaic/options/colorPalette/Greens.title
 #: mrcrosstabs/options/colorPalette/Greens.title
 #: mrfrequencies/options/colorPalette/Greens.title
 #: multcorresp/options/colorPalette/Greens.title
@@ -2280,6 +2410,7 @@ msgstr "Серый"
 #: boxplot/options/colorPalette/Greys.title
 #: histogram/options/colorPalette/Greys.title
 #: linechart/options/colorPalette/Greys.title
+#: mosaic/options/colorPalette/Greys.title
 #: mrcrosstabs/options/colorPalette/Greys.title
 #: mrfrequencies/options/colorPalette/Greys.title
 #: multcorresp/options/colorPalette/Greys.title
@@ -2307,9 +2438,11 @@ msgstr "Серые"
 #: linechart/ui[0][2].label
 #: lollipop/options/group.title
 #: lollipop/ui[0][1].label
+#: mosaic/options/group.title
+#: mosaic/ui[0][1].label
 #: piechart/options/labels/group.title
 #: principal/options/groupVar.title
-#: principal/ui[0][2].label
+#: principal/ui[1][2].label
 #: scatterplot/options/group.title
 #: scatterplot/ui[0][2].label
 msgid "Group"
@@ -2337,9 +2470,12 @@ msgstr "Группа + Процент"
 msgid "Group By"
 msgstr "Группировать по"
 
+#: mosaic/options/yAxis/label.title
+msgid "Group label"
+msgstr ""
+
 #: barchart/options/barType/dodge2.title
 #: barplot/options/barType/dodge2.title
-#: histogram/options/grouping/dodge.title
 #: mrcrosstabs/options/bartype/dodge2.title
 msgid "Grouped"
 msgstr "Сгруппировано"
@@ -2350,7 +2486,6 @@ msgstr "Сгруппировано"
 msgid "Grouped (tight)"
 msgstr "Группированные (тесные)"
 
-#: histogram/options/grouping.title
 #: histogram/options/groupingN.title
 #: histogram/ui[1][2][0].label
 msgid "Grouping"
@@ -2372,15 +2507,29 @@ msgstr "Группирующая переменная"
 msgid "Groupwise"
 msgstr "Групповой"
 
+#: package/analyses/principal.menuGroup
+#: package/analyses/corresp.menuGroup
+#: package/analyses/multcorresp.menuGroup
+#: corresp/options.menuGroup
+#: multcorresp/options.menuGroup
+#: principal/options.menuGroup
+msgid "hidden"
+msgstr ""
+
 #: likertplot/options/hideLabelsBelow.title
 msgid "Hide % labels below 5%"
 msgstr "Скрыть % меток ниже 5%"
+
+#: mosaic/options/hideAxes.title
+msgid "Hide axes"
+msgstr ""
 
 #: package/analyses/histogram.title
 #: package/analyses/histogram.menuTitle
 #: histogram/options.title
 #: histogram/options/histtype.title
 #: histogram/ui.title
+#: histogram/ui[2][0][0].label
 #: histogram/results.title
 msgid "Histogram"
 msgstr "Гистограмма"
@@ -2409,6 +2558,7 @@ msgstr "Горизонтальная линия на"
 #: barplot/options/horizontal.title
 #: boxplot/options/horizontal.title
 #: lollipop/options/horizontal.title
+#: mosaic/options/horizontal.title
 #: mrcrosstabs/options/horizontal.title
 #: mrfrequencies/options/horizontal.title
 #: raincloud/options/horizontal.title
@@ -2422,6 +2572,7 @@ msgstr "Идентификационная линия"
 
 #: barchart/options/ignoreNA.title
 #: likertplot/options/ignoreNA.title
+#: raincloud/options/ignoreNA.title
 msgid "Ignore missing groups"
 msgstr "Игнорировать пропущенные группы"
 
@@ -2429,6 +2580,7 @@ msgstr "Игнорировать пропущенные группы"
 #: barplot/options/ignoreNA.title
 #: boxplot/options/ignoreNA.title
 #: linechart/options/ignoreNA.title
+#: mosaic/options/ignoreNA.title
 msgid "Ignore missing values"
 msgstr "Игнорировать пропущенные значения"
 
@@ -2444,6 +2596,8 @@ msgstr "Улучшение отображения меток"
 #: boxplot/ui[1][1][0]/order_increasing.label
 #: lollipop/options/order/increasing.title
 #: lollipop/ui[2][1][0]/order_increasing.label
+#: mosaic/options/order/increasing.title
+#: mosaic/ui[1][1][1]/order_increasing.label
 #: mrcrosstabs/options/order/increasing.title
 #: mrcrosstabs/ui[1][2][0]/order_increasing.label
 #: mrfrequencies/options/order/increasing.title
@@ -2453,7 +2607,7 @@ msgstr "Увеличение"
 
 #: R/multcorresp.b.R
 #: multcorresp/options/method/Indicator.title
-#: multcorresp/ui[3][0][0]/method_indicator.label
+#: multcorresp/ui[4][0][0]/method_indicator.label
 msgid "Indicator matrix"
 msgstr "Матрица индикаторов"
 
@@ -2476,10 +2630,6 @@ msgstr "Начальные собственные значения"
 msgid "Input format"
 msgstr "Формат ввода"
 
-#: package/datasets/Iris.name
-msgid "Iris"
-msgstr "Ирис"
-
 #: areachart/options/dateFormat/iso.title
 #: linechart/options/dateFormat/iso.title
 msgid "ISO (Y-M-D)"
@@ -2491,18 +2641,22 @@ msgstr "ISO (Г-М-Д)"
 #: barchart/options/titleFontFace/italic.title
 #: barchart/options/subtitleFontFace/italic.title
 #: barchart/options/captionFontFace/italic.title
+#: barchart/options/facetFontFace/italic.title
 #: barplot/options/titleFontFace/italic.title
 #: barplot/options/subtitleFontFace/italic.title
 #: barplot/options/captionFontFace/italic.title
+#: barplot/options/facetFontFace/italic.title
 #: boxplot/options/titleFontFace/italic.title
 #: boxplot/options/subtitleFontFace/italic.title
 #: boxplot/options/captionFontFace/italic.title
+#: boxplot/options/facetFontFace/italic.title
 #: corresp/options/titleFontFace/italic.title
 #: corresp/options/subtitleFontFace/italic.title
 #: corresp/options/captionFontFace/italic.title
 #: histogram/options/titleFontFace/italic.title
 #: histogram/options/subtitleFontFace/italic.title
 #: histogram/options/captionFontFace/italic.title
+#: histogram/options/facetFontFace/italic.title
 #: likertplot/options/titleFontFace/italic.title
 #: likertplot/options/subtitleFontFace/italic.title
 #: likertplot/options/captionFontFace/italic.title
@@ -2512,6 +2666,11 @@ msgstr "ISO (Г-М-Д)"
 #: lollipop/options/titleFontFace/italic.title
 #: lollipop/options/subtitleFontFace/italic.title
 #: lollipop/options/captionFontFace/italic.title
+#: lollipop/options/facetFontFace/italic.title
+#: mosaic/options/titleFontFace/italic.title
+#: mosaic/options/subtitleFontFace/italic.title
+#: mosaic/options/captionFontFace/italic.title
+#: mosaic/options/facetFontFace/italic.title
 #: mrcrosstabs/options/titleFontFace/italic.title
 #: mrcrosstabs/options/subtitleFontFace/italic.title
 #: mrcrosstabs/options/captionFontFace/italic.title
@@ -2524,6 +2683,7 @@ msgstr "ISO (Г-М-Д)"
 #: piechart/options/titleFontFace/italic.title
 #: piechart/options/subtitleFontFace/italic.title
 #: piechart/options/captionFontFace/italic.title
+#: piechart/options/facetFontFace/italic.title
 #: principal/options/titleFontFace/italic.title
 #: principal/options/subtitleFontFace/italic.title
 #: principal/options/captionFontFace/italic.title
@@ -2536,6 +2696,7 @@ msgstr "ISO (Г-М-Д)"
 #: scatterplot/options/titleFontFace/italic.title
 #: scatterplot/options/subtitleFontFace/italic.title
 #: scatterplot/options/captionFontFace/italic.title
+#: scatterplot/options/facetFontFace/italic.title
 msgid "Italic"
 msgstr "Курсив"
 
@@ -2564,6 +2725,7 @@ msgstr "jmv Синий"
 #: boxplot/options/colorPalette/jmv.title
 #: histogram/options/colorPalette/jmv.title
 #: linechart/options/colorPalette/jmv.title
+#: mosaic/options/colorPalette/jmv.title
 #: mrcrosstabs/options/colorPalette/jmv.title
 #: mrfrequencies/options/colorPalette/jmv.title
 #: multcorresp/options/colorPalette/jmv.title
@@ -2666,20 +2828,21 @@ msgstr "Тесты Крускала-Уоллиса"
 #: boxplot/options/labSize.title
 #: boxplot/ui[0][2].label
 #: corresp/options/labelSize.title
-#: likertplot/options/textSize.title
 #: likertplot/options/labelSize.title
 #: mrcrosstabs/options/labelFontSize.title
 #: mrfrequencies/options/labelFontSize.title
 #: mrfrequencies/options/textColor.title
 #: multcorresp/options/labelVar.title
-#: multcorresp/ui[0][2].label
+#: multcorresp/options/labelSize.title
+#: multcorresp/ui[1][2].label
 #: piechart/options/labType/label.title
 #: piechart/options/labSize.title
 #: piechart/options/textColor.title
 #: piechart/ui[2][0][0][0]/labType_label.label
 #: principal/options/labelVar.title
-#: principal/ui[0][1].label
+#: principal/ui[1][1].label
 #: scatterplot/options/labelVar.title
+#: scatterplot/options/labelTextSize.title
 #: scatterplot/ui[0][3].label
 msgid "Label"
 msgstr "Этикетка"
@@ -2704,6 +2867,8 @@ msgstr "Цвет метки"
 #: linechart/options/xAxisLabelFontSize.title
 #: lollipop/options/yAxisLabelFontSize.title
 #: lollipop/options/xAxisLabelFontSize.title
+#: mosaic/options/yAxisLabelFontSize.title
+#: mosaic/options/xAxisLabelFontSize.title
 #: mrcrosstabs/options/yAxisLabelFontSize.title
 #: mrcrosstabs/options/xAxisLabelFontSize.title
 #: mrfrequencies/options/yAxisLabelFontSize.title
@@ -2717,6 +2882,11 @@ msgstr "Цвет метки"
 msgid "Label font size"
 msgstr "Размер шрифта меток"
 
+#: mosaic/ui[2][0][1][0].label
+msgid "Label Format"
+msgstr ""
+
+#: mosaic/ui[2].label
 #: piechart/ui[2][0][1][0].label
 msgid "Label Options"
 msgstr "Параметры метки"
@@ -2746,6 +2916,8 @@ msgstr "Положение метки"
 #: linechart/options/xAxisLabelRotation.title
 #: lollipop/options/yAxisLabelRotation.title
 #: lollipop/options/xAxisLabelRotation.title
+#: mosaic/options/yAxisLabelRotation.title
+#: mosaic/options/xAxisLabelRotation.title
 #: mrcrosstabs/options/yAxisLabelRotation.title
 #: mrcrosstabs/options/xAxisLabelRotation.title
 #: mrfrequencies/options/yAxisLabelRotation.title
@@ -2763,7 +2935,11 @@ msgstr "Поворот меток"
 msgid "Label Size"
 msgstr "Размер метки"
 
-#: multcorresp/options/labelSize.title
+#: mosaic/options/labelType.title
+#: mosaic/ui[2][0][0][0].label
+msgid "Label Type"
+msgstr ""
+
 #: piechart/options/labels.title
 #: piechart/ui[1][1][0].label
 #: piechart/ui[2].label
@@ -2779,16 +2955,19 @@ msgstr "Метки"
 #: barchart/options/titleAlign/0.title
 #: barchart/options/subtitleAlign/0.title
 #: barchart/options/captionAlign/0.title
+#: barchart/options/facetAlign/0.title
 #: barchart/options/legendPosition/left.title
 #: barchart/options/xAxisPosition/0.title
 #: barplot/options/titleAlign/0.title
 #: barplot/options/subtitleAlign/0.title
 #: barplot/options/captionAlign/0.title
+#: barplot/options/facetAlign/0.title
 #: barplot/options/legendPosition/left.title
 #: barplot/options/xAxisPosition/0.title
 #: boxplot/options/titleAlign/0.title
 #: boxplot/options/subtitleAlign/0.title
 #: boxplot/options/captionAlign/0.title
+#: boxplot/options/facetAlign/0.title
 #: boxplot/options/legendPosition/left.title
 #: boxplot/options/xAxisPosition/0.title
 #: corresp/options/titleAlign/0.title
@@ -2798,6 +2977,7 @@ msgstr "Метки"
 #: histogram/options/titleAlign/0.title
 #: histogram/options/subtitleAlign/0.title
 #: histogram/options/captionAlign/0.title
+#: histogram/options/facetAlign/0.title
 #: histogram/options/legendPosition/left.title
 #: histogram/options/xAxisPosition/0.title
 #: likertplot/options/titleAlign/0.title
@@ -2812,7 +2992,14 @@ msgstr "Метки"
 #: lollipop/options/titleAlign/0.title
 #: lollipop/options/subtitleAlign/0.title
 #: lollipop/options/captionAlign/0.title
+#: lollipop/options/facetAlign/0.title
 #: lollipop/options/xAxisPosition/0.title
+#: mosaic/options/titleAlign/0.title
+#: mosaic/options/subtitleAlign/0.title
+#: mosaic/options/captionAlign/0.title
+#: mosaic/options/facetAlign/0.title
+#: mosaic/options/legendPosition/left.title
+#: mosaic/options/xAxisPosition/0.title
 #: mrcrosstabs/options/titleAlign/0.title
 #: mrcrosstabs/options/subtitleAlign/0.title
 #: mrcrosstabs/options/captionAlign/0.title
@@ -2830,6 +3017,7 @@ msgstr "Метки"
 #: piechart/options/titleAlign/0.title
 #: piechart/options/subtitleAlign/0.title
 #: piechart/options/captionAlign/0.title
+#: piechart/options/facetAlign/0.title
 #: piechart/options/legendPosition/left.title
 #: principal/options/titleAlign/0.title
 #: principal/options/subtitleAlign/0.title
@@ -2849,6 +3037,7 @@ msgstr "Метки"
 #: scatterplot/options/titleAlign/0.title
 #: scatterplot/options/subtitleAlign/0.title
 #: scatterplot/options/captionAlign/0.title
+#: scatterplot/options/facetAlign/0.title
 #: scatterplot/options/legendPosition/left.title
 #: scatterplot/options/xAxisPosition/0.title
 msgid "Left"
@@ -2861,14 +3050,15 @@ msgstr "Слева"
 #: histogram/ui[6][0].label
 #: likertplot/ui[7][0].label
 #: linechart/ui[3][0].label
+#: mosaic/ui[6][0].label
 #: mrcrosstabs/ui[5][0].label
-#: multcorresp/ui[7][0].label
+#: multcorresp/ui[8][0].label
 #: piechart/ui[5].label
 #: piechart/ui[5][0].label
-#: principal/ui[5][0].label
+#: principal/ui[6][0].label
 #: qqplot/ui[6][0].label
 #: raincloud/ui[3][0].label
-#: scatterplot/ui[4][0].label
+#: scatterplot/ui[5][0].label
 msgid "Legend"
 msgstr "Легенда"
 
@@ -2879,12 +3069,13 @@ msgstr "Легенда"
 #: histogram/ui[6].label
 #: linechart/ui[3].label
 #: lollipop/ui[6].label
+#: mosaic/ui[6].label
 #: mrcrosstabs/ui[5].label
-#: multcorresp/ui[7].label
-#: principal/ui[5].label
+#: multcorresp/ui[8].label
+#: principal/ui[6].label
 #: qqplot/ui[6].label
 #: raincloud/ui[3].label
-#: scatterplot/ui[4].label
+#: scatterplot/ui[5].label
 msgid "Legend & Axis Titles"
 msgstr "Легенды и названия осей"
 
@@ -2898,6 +3089,7 @@ msgstr "Название легенды"
 #: boxplot/options/colorPalette/custom::lemovice.title
 #: histogram/options/colorPalette/custom::lemovice.title
 #: linechart/options/colorPalette/custom::lemovice.title
+#: mosaic/options/colorPalette/custom::lemovice.title
 #: mrcrosstabs/options/colorPalette/custom::lemovice.title
 #: mrfrequencies/options/colorPalette/custom::lemovice.title
 #: multcorresp/options/colorPalette/custom::lemovice.title
@@ -3000,8 +3192,8 @@ msgid "Likert Plot"
 msgstr "График Лайкерта"
 
 #: R/likertplot.b.R
-msgid "Likert Plot requires ordinal (or numeric) variables"
-msgstr "Диаграмма Ликерта требует порядковых (или непрерывных) переменных"
+msgid "Likert Plot requires ordinal (or continuous-integer) variables."
+msgstr ""
 
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
@@ -3027,6 +3219,7 @@ msgid "Line Chart"
 msgstr "Линейный график"
 
 #: barchart/options/errorBarLineSize.title
+#: histogram/options/lineLineSize.title
 #: histogram/options/densityLineSize.title
 #: histogram/options/normalCurveLineSize.title
 msgid "Line size"
@@ -3068,22 +3261,6 @@ msgstr "Размер леденца"
 msgid "Lollipop Size & Colors"
 msgstr "Размер и цвет леденца"
 
-#: package.description
-msgid ""
-"Main statistical charts (histogram, boxplot, point, bar, line, raincloud…) "
-"with many options along with Likert plot, multiple response barplot, "
-"Principal Component and (Multiple) Correspondence Analyses. The module is "
-"available in the <strong>Plots tab</strong>. Project source (and changelog) "
-"is available at <a href=\"https://github.com/vjalby/vijPlots\" "
-"target=\"_blank\">Github</a>."
-msgstr ""
-"Основные статистические диаграммы (гистограмма, бокс, точка, бар, линия, "
-"радужная обложка...) с множеством вариантов, наряду с сюжетом Likert, "
-"множественным блоком ответов, основным компонентом и (Multiple) анализа "
-"соответствия. Модуль доступен на вкладке <strong>Plots</strong>. Источник "
-"проекта (и сменлог) доступен на <a "
-"href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>."
-
 #: likertplot/options/showMannU.title
 msgid "Mann-Whitney U"
 msgstr "Манн-Уитни Ю"
@@ -3118,6 +3295,16 @@ msgstr "U-тесты Манна-Уитни"
 #: scatterplot/options/xAxisRangeType/manual.title
 msgid "Manual"
 msgstr "Вручную"
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "Manual X-axis range doesn't have a valid date format."
+msgstr ""
+
+#: mosaic/options/residualsAsOpacity.title
+#: mosaic/ui[3][0][1][0]/residualsAsOpacity.label
+msgid "Map to residuals"
+msgstr ""
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -3172,7 +3359,7 @@ msgid "Maximum of {var}"
 msgstr "Максимум {var}"
 
 #: qqplot/options/paramEstMethod/mle.title
-#: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mle.label
+#: qqplot/ui[3][0][0]/paramMethod_paraEstimate/paramEstMethod_mle.label
 msgid "Maximum-likelihood (MLE)"
 msgstr "Максимальное правдоподобие (MLE)"
 
@@ -3182,15 +3369,16 @@ msgid "May"
 msgstr "Май"
 
 #: R/multcorresp.b.R
-msgid "MCA Principal Coordinates"
-msgstr "Главные координаты МОС"
+msgid "MCA Principal Coordinates ({method})"
+msgstr ""
 
 #: R/multcorresp.b.R
-msgid "MCA Standard Coordinates"
-msgstr "Стандартные координаты МОС"
+msgid "MCA Standard Coordinates ({method})"
+msgstr ""
 
 #: barchart/options/yaxis/mean.title
 #: barchart/ui[1][0][0][0]/yaxis_mean.label
+#: boxplot/options/showMean.title
 #: lollipop/options/yaxis/mean.title
 #: lollipop/ui[2][0][0][0]/yaxis_mean.label
 msgid "Mean"
@@ -3199,6 +3387,10 @@ msgstr "Среднее"
 #: likertplot/options/showMean.title
 msgid "Mean & SD"
 msgstr "Среднее и стандартное отклонение"
+
+#: histogram/options/meanLine.title
+msgid "Mean line"
+msgstr ""
 
 #: R/barchart.b.R
 #: R/lollipop.b.R
@@ -3217,6 +3409,10 @@ msgstr "Медиана"
 #: R/likertplot.b.R
 msgid "Median and mean require numeric variables"
 msgstr "Медиана и среднее требуют числовых переменных"
+
+#: histogram/options/medianLine.title
+msgid "Median line"
+msgstr ""
 
 #: R/barchart.b.R
 #: R/lollipop.b.R
@@ -3237,19 +3433,19 @@ msgstr "Октябрь"
 
 #: likertplot/options/adjustMethod.title
 #: multcorresp/options/method.title
-#: multcorresp/ui[3][0].label
+#: multcorresp/ui[4][0].label
 #: scatterplot/options/lineMethod.title
 msgid "Method"
 msgstr "Метод"
 
 #: qqplot/options/paramEstMethod/mme.title
-#: qqplot/ui[3][0][0]/paramMethod_paraEstimat/paramEstMethod_mme.label
+#: qqplot/ui[3][0][0]/paramMethod_paraEstimate/paramEstMethod_mme.label
 msgid "Method of moments (MME)"
 msgstr "Метод моментов (ММЕ)"
 
 #: R/multcorresp.b.R
-msgid "Method:"
-msgstr "Метод:"
+msgid "Method: {method}"
+msgstr ""
 
 #: barplot/options/labelPosition/middle.title
 #: barplot/ui[2][0][1][0]/labelPosition_middle.label
@@ -3305,6 +3501,14 @@ msgstr "Минимальная энтропия"
 msgid "Minimum of {var}"
 msgstr "Минимум {var}"
 
+#: package/analyses/mosaic.title
+#: package/analyses/mosaic.menuTitle
+#: mosaic/options.title
+#: mosaic/ui.title
+#: mosaic/results.title
+msgid "Mosaic Plot"
+msgstr ""
+
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
 #: mrcrosstabs/ui/mode/onevar[0][1].label
@@ -3358,12 +3562,17 @@ msgid "Name"
 msgstr "Имя"
 
 #: qqplot/options/transLog.title
-msgid "Natural log tranform"
-msgstr "Преобразование по натуральному логарифму"
+msgid "Natural log transform"
+msgstr ""
 
 #: R/qqplot.b.R
-msgid "Natural Log Tranform requires positive (>0) data."
-msgstr "Преобразование натурального логарифма требует положительных (>0) данных."
+msgid "Natural Log Transform requires positive (>0) data."
+msgstr ""
+
+#: R/mrcrosstabs.b.R
+#: R/mrfrequencies.b.R
+msgid "No distinct values found in the selected variable."
+msgstr ""
 
 #: R/principal.b.R
 msgid "No rotation used."
@@ -3380,13 +3589,16 @@ msgstr "Вращение не используется."
 #: boxplot/ui[1][1][0]/order_none.label
 #: histogram/options/fillColor/none.title
 #: histogram/options/borderColor/none.title
-#: histogram/options/grouping/none.title
 #: likertplot/options/sorting/none.title
 #: likertplot/options/pValue/none.title
 #: likertplot/ui[1][1][0]/sorting_none.label
 #: likertplot/ui[3][0][2][0]/pValue_none.label
 #: lollipop/options/order/none.title
 #: lollipop/ui[2][1][0]/order_none.label
+#: mosaic/options/yAxis/none.title
+#: mosaic/options/order/none.title
+#: mosaic/options/labelType/none.title
+#: mosaic/ui[1][1][1]/order_none.label
 #: mrcrosstabs/options/order/none.title
 #: mrcrosstabs/options/borderColor/none.title
 #: mrcrosstabs/ui[1][2][0]/order_none.label
@@ -3406,18 +3618,22 @@ msgstr "Отсутствует"
 #: barchart/options/titleFontFace/plain.title
 #: barchart/options/subtitleFontFace/plain.title
 #: barchart/options/captionFontFace/plain.title
+#: barchart/options/facetFontFace/plain.title
 #: barplot/options/titleFontFace/plain.title
 #: barplot/options/subtitleFontFace/plain.title
 #: barplot/options/captionFontFace/plain.title
+#: barplot/options/facetFontFace/plain.title
 #: boxplot/options/titleFontFace/plain.title
 #: boxplot/options/subtitleFontFace/plain.title
 #: boxplot/options/captionFontFace/plain.title
+#: boxplot/options/facetFontFace/plain.title
 #: corresp/options/titleFontFace/plain.title
 #: corresp/options/subtitleFontFace/plain.title
 #: corresp/options/captionFontFace/plain.title
 #: histogram/options/titleFontFace/plain.title
 #: histogram/options/subtitleFontFace/plain.title
 #: histogram/options/captionFontFace/plain.title
+#: histogram/options/facetFontFace/plain.title
 #: likertplot/options/titleFontFace/plain.title
 #: likertplot/options/subtitleFontFace/plain.title
 #: likertplot/options/captionFontFace/plain.title
@@ -3427,6 +3643,11 @@ msgstr "Отсутствует"
 #: lollipop/options/titleFontFace/plain.title
 #: lollipop/options/subtitleFontFace/plain.title
 #: lollipop/options/captionFontFace/plain.title
+#: lollipop/options/facetFontFace/plain.title
+#: mosaic/options/titleFontFace/plain.title
+#: mosaic/options/subtitleFontFace/plain.title
+#: mosaic/options/captionFontFace/plain.title
+#: mosaic/options/facetFontFace/plain.title
 #: mrcrosstabs/options/titleFontFace/plain.title
 #: mrcrosstabs/options/subtitleFontFace/plain.title
 #: mrcrosstabs/options/captionFontFace/plain.title
@@ -3439,6 +3660,7 @@ msgstr "Отсутствует"
 #: piechart/options/titleFontFace/plain.title
 #: piechart/options/subtitleFontFace/plain.title
 #: piechart/options/captionFontFace/plain.title
+#: piechart/options/facetFontFace/plain.title
 #: principal/options/titleFontFace/plain.title
 #: principal/options/subtitleFontFace/plain.title
 #: principal/options/captionFontFace/plain.title
@@ -3451,20 +3673,29 @@ msgstr "Отсутствует"
 #: scatterplot/options/titleFontFace/plain.title
 #: scatterplot/options/subtitleFontFace/plain.title
 #: scatterplot/options/captionFontFace/plain.title
+#: scatterplot/options/facetFontFace/plain.title
 msgid "Normal"
 msgstr "Нормальный"
 
-#: histogram/ui[2][1][0].label
+#: histogram/ui[2][1][1].label
 msgid "Normal Curve"
 msgstr "Нормальная кривая"
 
 #: corresp/options/normalization.title
-#: corresp/ui[3][0].label
+#: corresp/ui[4][0].label
 #: multcorresp/options/normalization.title
-#: multcorresp/ui[4][0].label
-#: principal/ui[7][0][0][0].label
+#: multcorresp/ui[5][0].label
+#: principal/ui[8][0][0][0].label
 msgid "Normalization"
 msgstr "Нормализация"
+
+#: R/principal.b.R
+msgid "Not enough complete observations to perform PCA."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Not enough data to compute CA."
+msgstr ""
 
 #: boxplot/options/notchWidth.title
 msgid "Notch width"
@@ -3494,8 +3725,8 @@ msgid "Number of cases"
 msgstr "Количество случаев"
 
 #: R/mrfrequencies.b.R
-msgid "Number of cases:"
-msgstr "Количество случаев:"
+msgid "Number of cases: {n}"
+msgstr ""
 
 #: corresp/options/dimNum.title
 #: multcorresp/options/dimNum.title
@@ -3510,6 +3741,11 @@ msgstr "Количество размерностей должно быть ме
 #: multcorresp/options/obsColor.title
 msgid "Obs color"
 msgstr "Цвет наблюдения"
+
+#: R/principal.b.R
+#: principal/results/obsTable.columns.title
+msgid "Observation"
+msgstr ""
 
 #: multcorresp/results/obsCoordOV.title
 #: principal/results/obsCoordOV.title
@@ -3532,7 +3768,7 @@ msgstr "График наблюдения"
 msgid "Observation plot"
 msgstr "График наблюдения"
 
-#: multcorresp/ui[6][0][1][1].label
+#: multcorresp/ui[7][0][1][1].label
 msgid "Observation Plot Options"
 msgstr "Опции графика наблюдения"
 
@@ -3602,10 +3838,14 @@ msgstr "Одна переменная"
 #: barchart/ui[4][0][0][0]/singleColor/colorNo.suffix
 #: barplot/ui[3][0][0][0]/singleColor/colorNo.suffix
 #: boxplot/ui[2][0][0][0]/singleColor/colorNo.suffix
-#: mrfrequencies/ui[3][0][0][0][1]/colorNo.suffix
+#: mrfrequencies/ui[3][0][0][0]/singleColor/colorNo.suffix
 #: raincloud/ui[1][1][0]/singleColor/colorNo.suffix
 msgid "only"
 msgstr "только"
+
+#: mosaic/ui[3][0][1][0].label
+msgid "Opacity"
+msgstr ""
 
 #: mrcrosstabs/options/optionname.title
 #: mrfrequencies/options/optionname.title
@@ -3648,6 +3888,7 @@ msgstr "Апельсин"
 #: histogram/options/colorPalette/PuOr.title
 #: likertplot/options/plotColor/PuOr.title
 #: linechart/options/colorPalette/PuOr.title
+#: mosaic/options/colorPalette/PuOr.title
 #: mrcrosstabs/options/colorPalette/PuOr.title
 #: mrfrequencies/options/colorPalette/PuOr.title
 #: multcorresp/options/colorPalette/PuOr.title
@@ -3665,6 +3906,7 @@ msgstr "Оранжевый и фиолетовый"
 #: boxplot/options/colorPalette/OrRd.title
 #: histogram/options/colorPalette/OrRd.title
 #: linechart/options/colorPalette/OrRd.title
+#: mosaic/options/colorPalette/OrRd.title
 #: mrcrosstabs/options/colorPalette/OrRd.title
 #: mrfrequencies/options/colorPalette/OrRd.title
 #: multcorresp/options/colorPalette/OrRd.title
@@ -3682,6 +3924,7 @@ msgstr "От оранжевого до красного"
 #: boxplot/options/colorPalette/Oranges.title
 #: histogram/options/colorPalette/Oranges.title
 #: linechart/options/colorPalette/Oranges.title
+#: mosaic/options/colorPalette/Oranges.title
 #: mrcrosstabs/options/colorPalette/Oranges.title
 #: mrfrequencies/options/colorPalette/Oranges.title
 #: multcorresp/options/colorPalette/Oranges.title
@@ -3701,6 +3944,10 @@ msgstr "Исходные собственные значения"
 msgid "Other Options"
 msgstr "Другие варианты"
 
+#: boxplot/options/showOutliers.title
+msgid "Outliers"
+msgstr ""
+
 #: R/mrcrosstabs.b.R
 #: likertplot/options/pValue/overall.title
 #: likertplot/ui[3][0][2][0]/pValue_overall.label
@@ -3712,7 +3959,6 @@ msgid "Overall (all groups)"
 msgstr "Всего (все группы)"
 
 #: areachart/options/position/identity.title
-#: histogram/options/grouping/identity.title
 #: histogram/options/groupingN/identity.title
 #: histogram/ui[1][2][0]/groupingN_identity.label
 msgid "Overlapping"
@@ -3751,6 +3997,7 @@ msgstr "p-значения корректируются с использова�
 #: boxplot/options/colorPalette/Paired.title
 #: histogram/options/colorPalette/Paired.title
 #: linechart/options/colorPalette/Paired.title
+#: mosaic/options/colorPalette/Paired.title
 #: mrcrosstabs/options/colorPalette/Paired.title
 #: mrfrequencies/options/colorPalette/Paired.title
 #: multcorresp/options/colorPalette/Paired.title
@@ -3772,6 +4019,7 @@ msgstr "Попарные сравнения"
 #: boxplot/options/colorPalette.title
 #: likertplot/options/plotColor.title
 #: linechart/options/colorPalette.title
+#: mosaic/options/colorPalette.title
 #: mrcrosstabs/options/colorPalette.title
 #: mrfrequencies/options/colorPalette.title
 #: multcorresp/options/colorPalette.title
@@ -3791,11 +4039,19 @@ msgstr "Параметр 1"
 msgid "Parameter 2"
 msgstr "Параметр 2"
 
-#: R/qqplot.b.R
 #: qqplot/results/paramTable.title
 msgid "Parameter Estimates"
 msgstr "Оценки параметров"
 
+#: R/qqplot.b.R
+msgid "Parameter Estimates (MLE)"
+msgstr ""
+
+#: R/qqplot.b.R
+msgid "Parameter Estimates (MME)"
+msgstr ""
+
+#: R/qqplot.b.R
 #: qqplot/ui[3].label
 msgid "Parameter Values"
 msgstr "Значения параметров"
@@ -3815,6 +4071,7 @@ msgstr "Парсимакс"
 #: boxplot/options/colorPalette/Pastel1.title
 #: histogram/options/colorPalette/Pastel1.title
 #: linechart/options/colorPalette/Pastel1.title
+#: mosaic/options/colorPalette/Pastel1.title
 #: mrcrosstabs/options/colorPalette/Pastel1.title
 #: mrfrequencies/options/colorPalette/Pastel1.title
 #: multcorresp/options/colorPalette/Pastel1.title
@@ -3832,6 +4089,7 @@ msgstr "Пастель 1"
 #: boxplot/options/colorPalette/Pastel2.title
 #: histogram/options/colorPalette/Pastel2.title
 #: linechart/options/colorPalette/Pastel2.title
+#: mosaic/options/colorPalette/Pastel2.title
 #: mrcrosstabs/options/colorPalette/Pastel2.title
 #: mrfrequencies/options/colorPalette/Pastel2.title
 #: multcorresp/options/colorPalette/Pastel2.title
@@ -3848,12 +4106,26 @@ msgid "PCA Principal Coordinates"
 msgstr "Главные координаты МГК (PCA)"
 
 #: R/principal.b.R
+msgid "PCA Principal Coordinates ({rot})"
+msgstr ""
+
+#: R/principal.b.R
 msgid "PCA Standard Coordinates"
 msgstr "Стандартные координаты МГК (PCA)"
+
+#: R/principal.b.R
+msgid "PCA Standard Coordinates ({rot})"
+msgstr ""
+
+#: mosaic/options/labelType/residuals.title
+msgid "Pearson residuals"
+msgstr ""
 
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
 #: barplot/ui[1][0][0]/yaxis_percent.label
+#: mosaic/options/yAxis/percent.title
+#: mosaic/options/labelType/percent.title
 #: piechart/options/labels/percent.title
 msgid "Percent"
 msgstr "Процент"
@@ -3895,6 +4167,7 @@ msgstr "Розовый"
 #: histogram/options/colorPalette/PiYG.title
 #: likertplot/options/plotColor/PiYG.title
 #: linechart/options/colorPalette/PiYG.title
+#: mosaic/options/colorPalette/PiYG.title
 #: mrcrosstabs/options/colorPalette/PiYG.title
 #: mrfrequencies/options/colorPalette/PiYG.title
 #: multcorresp/options/colorPalette/PiYG.title
@@ -3913,13 +4186,17 @@ msgid "Plot"
 msgstr "График"
 
 #: likertplot/ui[4][2][1][0].label
-#: multcorresp/ui[6][0][0][0].label
+#: multcorresp/ui[7][0][0][0].label
 msgid "Plot Color"
 msgstr "Цвет графика"
 
-#: principal/ui[4][0][1][0].label
+#: principal/ui[5][0][1][0].label
 msgid "Plot Colors"
 msgstr "Цвета графика"
+
+#: scatterplot/options/plotBorder.title
+msgid "Plot frame"
+msgstr ""
 
 #: areachart/ui[1][0][0].label
 #: barchart/ui[2].label
@@ -3928,11 +4205,12 @@ msgstr "Цвета графика"
 #: barplot/ui[2][0][0][0].label
 #: boxplot/ui[1][0][0].label
 #: linechart/ui[1][0][0].label
+#: mosaic/ui[1][0][0].label
 #: mrcrosstabs/ui[2].label
 #: mrcrosstabs/ui[2][0][0][0].label
 #: mrfrequencies/ui[2].label
 #: mrfrequencies/ui[2][0][0][0].label
-#: multcorresp/ui[6].label
+#: multcorresp/ui[7].label
 #: piechart/ui[1][0][0].label
 #: qqplot/ui[2][1][0].label
 #: raincloud/ui[1][0][0].label
@@ -3948,18 +4226,19 @@ msgstr "Параметры графика"
 #: likertplot/ui[8].label
 #: linechart/ui[4].label
 #: lollipop/ui[7].label
+#: mosaic/ui[7].label
 #: mrcrosstabs/ui[6].label
 #: mrfrequencies/ui[6].label
 #: piechart/ui[6].label
 #: qqplot/ui[7].label
 #: raincloud/ui[4].label
-#: scatterplot/ui[5].label
+#: scatterplot/ui[6].label
 msgid "Plot Titles"
 msgstr "Названия графика"
 
-#: corresp/ui[7].label
-#: multcorresp/ui[8].label
-#: principal/ui[6].label
+#: corresp/ui[8].label
+#: multcorresp/ui[9].label
+#: principal/ui[7].label
 msgid "Plot Titles & Subtitles"
 msgstr "Заголовки и подписи графика"
 
@@ -3969,10 +4248,10 @@ msgstr "Заголовки и подписи графика"
 msgid "Plot Type"
 msgstr "Тип графика"
 
-#: corresp/ui[4][1][0].label
+#: corresp/ui[5][1][0].label
 #: mrcrosstabs/results/plot.title
-#: multcorresp/ui[5][1][0].label
-#: principal/ui[3][1][0].label
+#: multcorresp/ui[6][1][0].label
+#: principal/ui[4][1][0].label
 msgid "Plots"
 msgstr "Графики"
 
@@ -3992,6 +4271,10 @@ msgstr "Размер точки"
 #: principal/options/obsColor.title
 msgid "Points"
 msgstr "Точки"
+
+#: scatterplot/options/keepNA.title
+msgid "Points with missing group/label"
+msgstr ""
 
 #: qqplot/options/methodQQ/pointwise.title
 msgid "Pointwise"
@@ -4021,6 +4304,9 @@ msgstr "Поточечно"
 #: linechart/options/yAxisPosition.title
 #: lollipop/options/xAxisPosition.title
 #: lollipop/options/yAxisPosition.title
+#: mosaic/options/legendPosition.title
+#: mosaic/options/xAxisPosition.title
+#: mosaic/options/yAxisPosition.title
 #: mrcrosstabs/options/legendPosition.title
 #: mrcrosstabs/options/xAxisPosition.title
 #: mrcrosstabs/options/yAxisPosition.title
@@ -4104,6 +4390,7 @@ msgstr "Фиолетовый"
 #: histogram/options/colorPalette/PRGn.title
 #: likertplot/options/plotColor/PRGn.title
 #: linechart/options/colorPalette/PRGn.title
+#: mosaic/options/colorPalette/PRGn.title
 #: mrcrosstabs/options/colorPalette/PRGn.title
 #: mrfrequencies/options/colorPalette/PRGn.title
 #: multcorresp/options/colorPalette/PRGn.title
@@ -4121,6 +4408,7 @@ msgstr "Фиолетовый и зеленый"
 #: boxplot/options/colorPalette/PuBu.title
 #: histogram/options/colorPalette/PuBu.title
 #: linechart/options/colorPalette/PuBu.title
+#: mosaic/options/colorPalette/PuBu.title
 #: mrcrosstabs/options/colorPalette/PuBu.title
 #: mrfrequencies/options/colorPalette/PuBu.title
 #: multcorresp/options/colorPalette/PuBu.title
@@ -4138,6 +4426,7 @@ msgstr "От фиолетового до синего"
 #: boxplot/options/colorPalette/PuBuGn.title
 #: histogram/options/colorPalette/PuBuGn.title
 #: linechart/options/colorPalette/PuBuGn.title
+#: mosaic/options/colorPalette/PuBuGn.title
 #: mrcrosstabs/options/colorPalette/PuBuGn.title
 #: mrfrequencies/options/colorPalette/PuBuGn.title
 #: multcorresp/options/colorPalette/PuBuGn.title
@@ -4155,6 +4444,7 @@ msgstr "От фиолетового к зеленому"
 #: boxplot/options/colorPalette/PuRd.title
 #: histogram/options/colorPalette/PuRd.title
 #: linechart/options/colorPalette/PuRd.title
+#: mosaic/options/colorPalette/PuRd.title
 #: mrcrosstabs/options/colorPalette/PuRd.title
 #: mrfrequencies/options/colorPalette/PuRd.title
 #: multcorresp/options/colorPalette/PuRd.title
@@ -4172,6 +4462,7 @@ msgstr "От фиолетового к красному"
 #: boxplot/options/colorPalette/Purples.title
 #: histogram/options/colorPalette/Purples.title
 #: linechart/options/colorPalette/Purples.title
+#: mosaic/options/colorPalette/Purples.title
 #: mrcrosstabs/options/colorPalette/Purples.title
 #: mrfrequencies/options/colorPalette/Purples.title
 #: multcorresp/options/colorPalette/Purples.title
@@ -4220,10 +4511,6 @@ msgstr "Квартимакс"
 msgid "Questions"
 msgstr "Вопросы"
 
-#: package/datasets/Raincloud.name
-msgid "Raincloud"
-msgstr "Дождевое облако"
-
 #: package/analyses/raincloud.title
 #: package/analyses/raincloud.menuTitle
 #: raincloud/options.title
@@ -4254,8 +4541,8 @@ msgstr "График дождевых облаков"
 #: qqplot/ui[5][0][1][1].label
 #: raincloud/ui[2][0][0][1].label
 #: raincloud/ui[2][0][1][1].label
-#: scatterplot/ui[3][0][0][1].label
-#: scatterplot/ui[3][0][1][1].label
+#: scatterplot/ui[4][0][0][1].label
+#: scatterplot/ui[4][0][1][1].label
 msgid "Range"
 msgstr "Диапазон"
 
@@ -4279,6 +4566,7 @@ msgstr "Красный"
 #: histogram/options/colorPalette/RdBu.title
 #: likertplot/options/plotColor/RdBu.title
 #: linechart/options/colorPalette/RdBu.title
+#: mosaic/options/colorPalette/RdBu.title
 #: mrcrosstabs/options/colorPalette/RdBu.title
 #: mrfrequencies/options/colorPalette/RdBu.title
 #: multcorresp/options/colorPalette/RdBu.title
@@ -4297,6 +4585,7 @@ msgstr "Красный и Синий"
 #: histogram/options/colorPalette/RdGy.title
 #: likertplot/options/plotColor/RdGy.title
 #: linechart/options/colorPalette/RdGy.title
+#: mosaic/options/colorPalette/RdGy.title
 #: mrcrosstabs/options/colorPalette/RdGy.title
 #: mrfrequencies/options/colorPalette/RdGy.title
 #: multcorresp/options/colorPalette/RdGy.title
@@ -4314,6 +4603,7 @@ msgstr "Красный и Серый"
 #: boxplot/options/colorPalette/RdPu.title
 #: histogram/options/colorPalette/RdPu.title
 #: linechart/options/colorPalette/RdPu.title
+#: mosaic/options/colorPalette/RdPu.title
 #: mrcrosstabs/options/colorPalette/RdPu.title
 #: mrfrequencies/options/colorPalette/RdPu.title
 #: multcorresp/options/colorPalette/RdPu.title
@@ -4339,6 +4629,7 @@ msgstr "Красный, Желтый и Зеленый"
 #: boxplot/options/colorPalette/RdYlBu.title
 #: histogram/options/colorPalette/RdYlBu.title
 #: linechart/options/colorPalette/RdYlBu.title
+#: mosaic/options/colorPalette/RdYlBu.title
 #: mrcrosstabs/options/colorPalette/RdYlBu.title
 #: mrfrequencies/options/colorPalette/RdYlBu.title
 #: multcorresp/options/colorPalette/RdYlBu.title
@@ -4356,6 +4647,7 @@ msgstr "Красный, Желтый, Синий"
 #: boxplot/options/colorPalette/RdYlGn.title
 #: histogram/options/colorPalette/RdYlGn.title
 #: linechart/options/colorPalette/RdYlGn.title
+#: mosaic/options/colorPalette/RdYlGn.title
 #: mrcrosstabs/options/colorPalette/RdYlGn.title
 #: mrfrequencies/options/colorPalette/RdYlGn.title
 #: multcorresp/options/colorPalette/RdYlGn.title
@@ -4373,6 +4665,7 @@ msgstr "Красный, Желтый, Зеленый"
 #: boxplot/options/colorPalette/Reds.title
 #: histogram/options/colorPalette/Reds.title
 #: linechart/options/colorPalette/Reds.title
+#: mosaic/options/colorPalette/Reds.title
 #: mrcrosstabs/options/colorPalette/Reds.title
 #: mrfrequencies/options/colorPalette/Reds.title
 #: multcorresp/options/colorPalette/Reds.title
@@ -4389,13 +4682,18 @@ msgstr "Красные"
 msgid "Reference line"
 msgstr "Опорная линия"
 
-#: scatterplot/ui[1][2][0].label
+#: histogram/ui[2][0][1].label
+#: scatterplot/ui[1][1][0].label
 msgid "Reference Lines"
 msgstr "Опорные линии"
 
-#: scatterplot/ui[1][3][0].label
+#: scatterplot/ui[1][1][1].label
 msgid "Regression Line"
 msgstr "Линия регрессии"
+
+#: R/mosaic.b.R
+msgid "Residuals"
+msgstr ""
 
 #: raincloud/options/reverse.title
 msgid "Reverse disposition"
@@ -4404,6 +4702,7 @@ msgstr "Обратное расположение"
 #: barchart/options/reverseStack.title
 #: barplot/options/reverseStack.title
 #: likertplot/options/reverseLikert.title
+#: mosaic/options/reverseStack.title
 #: mrcrosstabs/options/reverseStack.title
 msgid "Reverse stacking order"
 msgstr "Обратить порядок стека"
@@ -4416,16 +4715,19 @@ msgstr "Обратить порядок стека"
 #: barchart/options/titleAlign/1.title
 #: barchart/options/subtitleAlign/1.title
 #: barchart/options/captionAlign/1.title
+#: barchart/options/facetAlign/1.title
 #: barchart/options/legendPosition/right.title
 #: barchart/options/xAxisPosition/1.title
 #: barplot/options/titleAlign/1.title
 #: barplot/options/subtitleAlign/1.title
 #: barplot/options/captionAlign/1.title
+#: barplot/options/facetAlign/1.title
 #: barplot/options/legendPosition/right.title
 #: barplot/options/xAxisPosition/1.title
 #: boxplot/options/titleAlign/1.title
 #: boxplot/options/subtitleAlign/1.title
 #: boxplot/options/captionAlign/1.title
+#: boxplot/options/facetAlign/1.title
 #: boxplot/options/legendPosition/right.title
 #: boxplot/options/xAxisPosition/1.title
 #: corresp/options/titleAlign/1.title
@@ -4435,6 +4737,7 @@ msgstr "Обратить порядок стека"
 #: histogram/options/titleAlign/1.title
 #: histogram/options/subtitleAlign/1.title
 #: histogram/options/captionAlign/1.title
+#: histogram/options/facetAlign/1.title
 #: histogram/options/legendPosition/right.title
 #: histogram/options/xAxisPosition/1.title
 #: likertplot/options/titleAlign/1.title
@@ -4449,7 +4752,14 @@ msgstr "Обратить порядок стека"
 #: lollipop/options/titleAlign/1.title
 #: lollipop/options/subtitleAlign/1.title
 #: lollipop/options/captionAlign/1.title
+#: lollipop/options/facetAlign/1.title
 #: lollipop/options/xAxisPosition/1.title
+#: mosaic/options/titleAlign/1.title
+#: mosaic/options/subtitleAlign/1.title
+#: mosaic/options/captionAlign/1.title
+#: mosaic/options/facetAlign/1.title
+#: mosaic/options/legendPosition/right.title
+#: mosaic/options/xAxisPosition/1.title
 #: mrcrosstabs/options/titleAlign/1.title
 #: mrcrosstabs/options/subtitleAlign/1.title
 #: mrcrosstabs/options/captionAlign/1.title
@@ -4467,6 +4777,7 @@ msgstr "Обратить порядок стека"
 #: piechart/options/titleAlign/1.title
 #: piechart/options/subtitleAlign/1.title
 #: piechart/options/captionAlign/1.title
+#: piechart/options/facetAlign/1.title
 #: piechart/options/legendPosition/right.title
 #: principal/options/titleAlign/1.title
 #: principal/options/subtitleAlign/1.title
@@ -4486,6 +4797,7 @@ msgstr "Обратить порядок стека"
 #: scatterplot/options/titleAlign/1.title
 #: scatterplot/options/subtitleAlign/1.title
 #: scatterplot/options/captionAlign/1.title
+#: scatterplot/options/facetAlign/1.title
 #: scatterplot/options/legendPosition/right.title
 #: scatterplot/options/xAxisPosition/1.title
 msgid "Right"
@@ -4496,26 +4808,28 @@ msgid "Rotate eigenvectors"
 msgstr "Поворот собственных векторов"
 
 #: principal/options/rotation.title
-#: principal/ui[2][1][0].label
-#: principal/ui[7][0][1][0].label
+#: principal/ui[3][1][0].label
+#: principal/ui[8][0][1][0].label
 msgid "Rotation"
 msgstr "Вращение"
 
 #: barchart/options/facetBy/row.title
 #: barchart/ui[5][0][0][0][0]/facetBy_row.label
 #: barplot/options/facetBy/row.title
-#: barplot/ui[4][0][1][0][0]/facetBy_row.label
+#: barplot/ui[4][0][0][0]/facetBy_row.label
 #: boxplot/options/facetBy/row.title
-#: boxplot/ui[3][0][1][0][0]/facetBy_row.label
+#: boxplot/ui[3][0][0][0]/facetBy_row.label
 #: corresp/options/rowColor.title
 #: histogram/options/facetBy/row.title
 #: histogram/ui[4][0][0][0][0]/facetBy_row.label
 #: lollipop/options/facetBy/row.title
 #: lollipop/ui[4][0][0][0][0]/facetBy_row.label
+#: mosaic/options/facetBy/row.title
+#: mosaic/ui[4][0][0][0][0]/facetBy_row.label
 #: piechart/options/facetBy/row.title
-#: piechart/ui[4][0][1][0][0]/facetBy_row.label
+#: piechart/ui[4][0][0][0]/facetBy_row.label
 #: scatterplot/options/facetBy/row.title
-#: scatterplot/ui[2][0][1][0][0]/facetBy_row.label
+#: scatterplot/ui[3][0][0][0][0]/facetBy_row.label
 msgid "Row"
 msgstr "Строка"
 
@@ -4597,8 +4911,8 @@ msgstr "Образец квантилей"
 msgid "Sample Quantiles Deviation"
 msgstr "Отклонение квантилей выборки"
 
-#: multcorresp/ui[9].label
-#: principal/ui[8].label
+#: multcorresp/ui[10].label
+#: principal/ui[9].label
 msgid "Save"
 msgstr "Сохранять"
 
@@ -4631,15 +4945,26 @@ msgstr "Каменистая осыпь"
 msgid "SD"
 msgstr "SD"
 
+#: R/likertplot.b.R
+msgid ""
+"Select the \"Convert variables to integers\" option when the variables are "
+"not of the same type."
+msgstr ""
+
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "Sep"
+msgstr ""
+
 #: mrcrosstabs/options/separator.title
 #: mrfrequencies/options/separator.title
 msgid "Separator"
 msgstr "Разделитель"
 
-#: R/areachart.b.R
-#: R/linechart.b.R
-msgid "Sept"
-msgstr "Сент"
+#: R/mrcrosstabs.b.R
+#: R/mrfrequencies.b.R
+msgid "Separator string may not be empty."
+msgstr ""
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -4652,6 +4977,7 @@ msgstr "Сентябрь"
 #: boxplot/options/colorPalette/Set1.title
 #: histogram/options/colorPalette/Set1.title
 #: linechart/options/colorPalette/Set1.title
+#: mosaic/options/colorPalette/Set1.title
 #: mrcrosstabs/options/colorPalette/Set1.title
 #: mrfrequencies/options/colorPalette/Set1.title
 #: multcorresp/options/colorPalette/Set1.title
@@ -4669,6 +4995,7 @@ msgstr "Набор 1"
 #: boxplot/options/colorPalette/Set2.title
 #: histogram/options/colorPalette/Set2.title
 #: linechart/options/colorPalette/Set2.title
+#: mosaic/options/colorPalette/Set2.title
 #: mrcrosstabs/options/colorPalette/Set2.title
 #: mrfrequencies/options/colorPalette/Set2.title
 #: multcorresp/options/colorPalette/Set2.title
@@ -4686,6 +5013,7 @@ msgstr "Набор 2"
 #: boxplot/options/colorPalette/Set3.title
 #: histogram/options/colorPalette/Set3.title
 #: linechart/options/colorPalette/Set3.title
+#: mosaic/options/colorPalette/Set3.title
 #: mrcrosstabs/options/colorPalette/Set3.title
 #: mrfrequencies/options/colorPalette/Set3.title
 #: multcorresp/options/colorPalette/Set3.title
@@ -4701,47 +5029,50 @@ msgstr "Набор 3"
 msgid "Several variables"
 msgstr "Несколько переменных"
 
+#: scatterplot/options/groupShapes.title
+msgid "Shape by group"
+msgstr ""
+
 #: likertplot/options/addLabels.title
 msgid "Show % labels"
 msgstr "Показать % меток"
 
-#: barplot/options/showLabels.title
-#: mrcrosstabs/options/showLabels.title
-#: mrfrequencies/options/showLabels.title
-msgid "Show count labels"
-msgstr "Показать метки частот"
+#: histogram/options/showBins.title
+msgid "Show bins"
+msgstr ""
+
+#: mosaic/options/showCategoryPercent.title
+msgid "Show category %"
+msgstr ""
 
 #: histogram/options/density.title
 msgid "Show density"
 msgstr "Показать плотность"
+
+#: histogram/options/summaryLineLabel.title
+msgid "Show label"
+msgstr ""
+
+#: mosaic/options/showOpacityLegend.title
+msgid "Show legend"
+msgstr ""
 
 #: scatterplot/options/regLine.title
 msgid "Show line"
 msgstr "Показать линию"
 
 #: areachart/options/showLine.title
+#: histogram/options/showLines.title
 msgid "Show lines"
 msgstr "Показать линии"
-
-#: boxplot/options/showMean.title
-msgid "Show mean"
-msgstr "Показать среднее"
 
 #: histogram/options/normalCurve.title
 msgid "Show normal curve"
 msgstr "Показать нормальную кривую"
 
-#: boxplot/options/showOutliers.title
-msgid "Show outliers"
-msgstr "Показать выбросы"
-
 #: linechart/options/showPoint.title
 msgid "Show points"
 msgstr "Показать точки"
-
-#: scatterplot/options/keepNA.title
-msgid "Show points with missing group/label"
-msgstr "Показать точки с отсутствующей группой/меткой"
 
 #: likertplot/options/addTotals.title
 msgid "Show totals (Centered only)"
@@ -4762,17 +5093,21 @@ msgstr "Единственное значение"
 #: areachart/options/legendFontSize.title
 #: areachart/options/xAxisFontSize.title
 #: areachart/options/yAxisFontSize.title
+#: barchart/options/facetFontSize.title
 #: barchart/options/legendFontSize.title
 #: barchart/options/xAxisFontSize.title
 #: barchart/options/yAxisFontSize.title
+#: barplot/options/facetFontSize.title
 #: barplot/options/legendFontSize.title
 #: barplot/options/xAxisFontSize.title
 #: barplot/options/yAxisFontSize.title
+#: boxplot/options/facetFontSize.title
 #: boxplot/options/legendFontSize.title
 #: boxplot/options/xAxisFontSize.title
 #: boxplot/options/yAxisFontSize.title
 #: corresp/options/xAxisFontSize.title
 #: corresp/options/yAxisFontSize.title
+#: histogram/options/facetFontSize.title
 #: histogram/options/legendFontSize.title
 #: histogram/options/xAxisFontSize.title
 #: histogram/options/yAxisFontSize.title
@@ -4780,8 +5115,14 @@ msgstr "Единственное значение"
 #: linechart/options/legendFontSize.title
 #: linechart/options/xAxisFontSize.title
 #: linechart/options/yAxisFontSize.title
+#: lollipop/options/facetFontSize.title
 #: lollipop/options/xAxisFontSize.title
 #: lollipop/options/yAxisFontSize.title
+#: mosaic/options/labelFontSize.title
+#: mosaic/options/facetFontSize.title
+#: mosaic/options/legendFontSize.title
+#: mosaic/options/xAxisFontSize.title
+#: mosaic/options/yAxisFontSize.title
 #: mrcrosstabs/options/legendFontSize.title
 #: mrcrosstabs/options/xAxisFontSize.title
 #: mrcrosstabs/options/yAxisFontSize.title
@@ -4790,6 +5131,7 @@ msgstr "Единственное значение"
 #: multcorresp/options/legendFontSize.title
 #: multcorresp/options/xAxisFontSize.title
 #: multcorresp/options/yAxisFontSize.title
+#: piechart/options/facetFontSize.title
 #: piechart/options/legendFontSize.title
 #: principal/options/legendFontSize.title
 #: principal/options/xAxisFontSize.title
@@ -4800,6 +5142,7 @@ msgstr "Единственное значение"
 #: raincloud/options/legendFontSize.title
 #: raincloud/options/xAxisFontSize.title
 #: raincloud/options/yAxisFontSize.title
+#: scatterplot/options/facetFontSize.title
 #: scatterplot/options/legendFontSize.title
 #: scatterplot/options/xAxisFontSize.title
 #: scatterplot/options/yAxisFontSize.title
@@ -4807,23 +5150,27 @@ msgid "Size"
 msgstr "Размер"
 
 #: linechart/ui[1][0][1].label
-#: principal/ui[4].label
+#: principal/ui[5].label
 msgid "Sizes & Colors"
 msgstr "Размеры и цвета"
-
-#: package/datasets/Smoking.name
-msgid "Smoking"
-msgstr "Курение"
 
 #: scatterplot/options/lineMethod/loess.title
 msgid "Smooth"
 msgstr "Гладкий"
 
-#: corresp/ui[1][0].label
-#: multcorresp/ui[2][0].label
-#: principal/ui[2][0][0].label
+#: corresp/ui[2][0].label
+#: multcorresp/ui[3][0].label
+#: principal/ui[3][0][0].label
 msgid "Solution"
 msgstr "Решение"
+
+#: R/corresp.b.R
+msgid "Some categories have zero counts and must be removed."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Some values are missing from the contingency table."
+msgstr ""
 
 #: likertplot/options/sorting.title
 #: likertplot/ui[1][1][0].label
@@ -4855,6 +5202,7 @@ msgstr "Сортировка (по медиане)"
 #: histogram/options/colorPalette/Spectral.title
 #: likertplot/options/plotColor/Spectral.title
 #: linechart/options/colorPalette/Spectral.title
+#: mosaic/options/colorPalette/Spectral.title
 #: mrcrosstabs/options/colorPalette/Spectral.title
 #: mrfrequencies/options/colorPalette/Spectral.title
 #: multcorresp/options/colorPalette/Spectral.title
@@ -4873,7 +5221,6 @@ msgstr "Нагрузки СС"
 #: areachart/options/position/stack.title
 #: barchart/options/barType/stack.title
 #: barplot/options/barType/stack.title
-#: histogram/options/grouping/stack.title
 #: histogram/options/groupingN/stack.title
 #: histogram/ui[1][2][0]/groupingN_stack.label
 #: likertplot/options/type/stacked.title
@@ -4925,6 +5272,10 @@ msgid "Standardize variables"
 msgstr "Стандартизируйте переменные"
 
 #: R/qqplot.b.R
+msgid "Standardized data cannot fit {distrib} distribution."
+msgstr ""
+
+#: R/qqplot.b.R
 msgid "Standardized Sample Quantiles"
 msgstr "Квантили стандартизованной выборки"
 
@@ -4954,6 +5305,17 @@ msgstr "Растянуть стрелки на"
 msgid "Student"
 msgstr "Студент"
 
+#: barchart/options/facetStyle.title
+#: barplot/options/facetStyle.title
+#: boxplot/options/facetStyle.title
+#: histogram/options/facetStyle.title
+#: lollipop/options/facetStyle.title
+#: mosaic/options/facetStyle.title
+#: piechart/options/facetStyle.title
+#: scatterplot/options/facetStyle.title
+msgid "Style"
+msgstr ""
+
 #: areachart/ui[4][1].label
 #: barchart/ui[8][1].label
 #: barplot/ui[7][1].label
@@ -4962,24 +5324,25 @@ msgstr "Студент"
 #: likertplot/ui[8][1].label
 #: linechart/ui[4][1].label
 #: lollipop/ui[7][1].label
+#: mosaic/ui[7][1].label
 #: mrcrosstabs/ui[6][1].label
 #: mrfrequencies/ui[6][1].label
 #: piechart/ui[6][1].label
 #: qqplot/ui[7][1].label
 #: raincloud/ui[4][1].label
-#: scatterplot/ui[5][1].label
+#: scatterplot/ui[6][1].label
 msgid "Subtitle"
 msgstr "Субтитры"
 
-#: corresp/ui[7][1][1][0].label
-#: multcorresp/ui[8][1][1][0].label
-#: principal/ui[6][1][1][0].label
+#: corresp/ui[8][1][1][0].label
+#: multcorresp/ui[9][1][1][0].label
+#: principal/ui[7][1][1][0].label
 msgid "Subtitle Style"
 msgstr "Стиль субтитров"
 
-#: corresp/ui[7][1][0][0].label
-#: multcorresp/ui[8][1][0][0].label
-#: principal/ui[6][1][0][0].label
+#: corresp/ui[8][1][0][0].label
+#: multcorresp/ui[9][1][0][0].label
+#: principal/ui[7][1][0][0].label
 msgid "Subtitle Text"
 msgstr "Текст субтитров"
 
@@ -4999,14 +5362,6 @@ msgstr "Сумма {var}"
 #: principal/results/summaryTable.title
 msgid "Summary"
 msgstr "Краткое содержание"
-
-#: R/corresp.b.R
-msgid "Suppl. Column"
-msgstr "Доп. Столбец"
-
-#: R/corresp.b.R
-msgid "Suppl. Row"
-msgstr "Доп. Строки"
 
 #: R/multcorresp.b.R
 msgid "Suppl. variables"
@@ -5029,7 +5384,7 @@ msgstr "Дополнительные номера столбцов должны 
 msgid "Supplementary columns"
 msgstr "Дополнительные столбцы"
 
-#: corresp/ui[2][0].label
+#: corresp/ui[3][0].label
 msgid "Supplementary Points"
 msgstr "Дополнительные пункты"
 
@@ -5051,17 +5406,13 @@ msgid "Supplementary rows/columns"
 msgstr "Дополнительные строки/столбцы"
 
 #: multcorresp/options/supplVars.title
-#: multcorresp/ui[0][1].label
+#: multcorresp/ui[1][1].label
 msgid "Supplementary Variables"
 msgstr "Дополнительные переменные"
 
 #: R/multcorresp.b.R
 msgid "Supplementary variables"
 msgstr "Дополнительные переменные"
-
-#: R/corresp.b.R
-msgid "Symetric normalization"
-msgstr "Симметрическая нормализация"
 
 #: corresp/options/normalization/symmetric.title
 msgid "Symmetric"
@@ -5078,9 +5429,9 @@ msgstr "Симметричная нормализация"
 msgid "Table"
 msgstr "Таблица"
 
-#: corresp/ui[4][0][0].label
-#: multcorresp/ui[5][0][0].label
-#: principal/ui[3][0][0].label
+#: corresp/ui[5][0][0].label
+#: multcorresp/ui[6][0][0].label
+#: principal/ui[4][0][0].label
 msgid "Tables"
 msgstr "Таблицы"
 
@@ -5098,16 +5449,16 @@ msgstr "Тесты"
 msgid "Text"
 msgstr "Текст"
 
-#: barplot/ui[4][0][0][0].label
-#: boxplot/ui[3][0][0][0].label
-#: corresp/ui[5][0][0][0].label
+#: barplot/ui[2][0][1][1].label
+#: boxplot/ui[2][0][0][1].label
+#: corresp/ui[6][0][0][0].label
 #: likertplot/ui[5].label
 #: likertplot/ui[5][0][0][0].label
 #: mrcrosstabs/ui[2][0][2][1].label
 #: mrfrequencies/ui[2][0][0][1].label
-#: multcorresp/ui[6][0][0][1].label
-#: piechart/ui[4][0][0][0].label
-#: principal/ui[4][0][0][0].label
+#: multcorresp/ui[7][0][0][1].label
+#: piechart/ui[2][0][1][1].label
+#: principal/ui[5][0][0][0].label
 msgid "Text Size"
 msgstr "Размер текста"
 
@@ -5115,31 +5466,45 @@ msgstr "Размер текста"
 msgid "Text size"
 msgstr "Размер текста"
 
-#: corresp/ui[5].label
+#: corresp/ui[6].label
 msgid "Text Size & Colors"
 msgstr "Размер и цвет текста"
 
-#: barplot/ui[4].label
-#: boxplot/ui[3].label
-#: piechart/ui[4].label
-msgid "Text Size & Facets"
-msgstr "Размер текста и фасеты"
+#: R/principal.b.R
+msgid "The correlation matrix is nearly singular. Computations may not be accurate."
+msgstr ""
 
 #: R/principal.b.R
 msgid ""
-"The correlation matrix is not positive definite. Computations may not be "
-"accurate."
+"The following variable(s) are constant and cannot be used in a principal "
+"component analysis: {vars}."
 msgstr ""
-"Корреляционная матрица не является положительно определенной. Расчеты могут "
-"быть неточными."
 
 #: R/multcorresp.b.R
 msgid "The number of dimensions cannot be greater than {max}."
 msgstr "Количество измерений не может превышать {max}."
 
 #: R/principal.b.R
+msgid "The number of dimensions cannot be greater than the number of observations."
+msgstr ""
+
+#: R/principal.b.R
 msgid "The number of dimensions cannot be greater than the number of variables."
 msgstr "Количество измерений не может быть больше количества переменных."
+
+#: R/corresp.b.R
+msgid ""
+"The singular value for dimension {n} is close to zero. The plots may not be "
+"accurate."
+msgstr ""
+
+#: R/qqplot.b.R
+msgid "The variance of the variable is equal to zero."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "The χ2 statistic is equal to zero."
+msgstr ""
 
 #: R/qqplot.b.R
 msgid "Theoretical Probabilities"
@@ -5148,6 +5513,20 @@ msgstr "Теоретические вероятности"
 #: R/qqplot.b.R
 msgid "Theoretical Quantiles"
 msgstr "Теоретические квантили"
+
+#: R/corresp.b.R
+#: R/multcorresp.b.R
+#: R/principal.b.R
+msgid ""
+"This analysis is deprecated and kept only for backward compatibility with "
+"existing documents. Please use vijMulti module instead."
+msgstr ""
+
+#: corresp/ui[0][0].label
+#: multcorresp/ui[0][0].label
+#: principal/ui[0][0].label
+msgid "This analysis is deprecated. Please use vijMulti module instead."
+msgstr ""
 
 #: areachart/options/xTicks.title
 #: areachart/options/yTicks.title
@@ -5163,6 +5542,8 @@ msgstr "Теоретические квантили"
 #: linechart/options/yTicks.title
 #: lollipop/options/xTicks.title
 #: lollipop/options/yTicks.title
+#: mosaic/options/xTicks.title
+#: mosaic/options/yTicks.title
 #: mrcrosstabs/options/xTicks.title
 #: mrcrosstabs/options/yTicks.title
 #: mrfrequencies/options/xTicks.title
@@ -5186,6 +5567,7 @@ msgstr "Упорядочить уровни"
 #: boxplot/options/colorPalette/tidy::alger.title
 #: histogram/options/colorPalette/tidy::alger.title
 #: linechart/options/colorPalette/tidy::alger.title
+#: mosaic/options/colorPalette/tidy::alger.title
 #: mrcrosstabs/options/colorPalette/tidy::alger.title
 #: mrfrequencies/options/colorPalette/tidy::alger.title
 #: multcorresp/options/colorPalette/tidy::alger.title
@@ -5203,6 +5585,7 @@ msgstr "Порядок: Алжир"
 #: boxplot/options/colorPalette/tidy::apple.title
 #: histogram/options/colorPalette/tidy::apple.title
 #: linechart/options/colorPalette/tidy::apple.title
+#: mosaic/options/colorPalette/tidy::apple.title
 #: mrcrosstabs/options/colorPalette/tidy::apple.title
 #: mrfrequencies/options/colorPalette/tidy::apple.title
 #: multcorresp/options/colorPalette/tidy::apple.title
@@ -5220,6 +5603,7 @@ msgstr "Порядок:Яблоко"
 #: boxplot/options/colorPalette/tidy::candy.title
 #: histogram/options/colorPalette/tidy::candy.title
 #: linechart/options/colorPalette/tidy::candy.title
+#: mosaic/options/colorPalette/tidy::candy.title
 #: mrcrosstabs/options/colorPalette/tidy::candy.title
 #: mrfrequencies/options/colorPalette/tidy::candy.title
 #: multcorresp/options/colorPalette/tidy::candy.title
@@ -5237,6 +5621,7 @@ msgstr "Порядок:Конфеты"
 #: boxplot/options/colorPalette/tidy::friendly.title
 #: histogram/options/colorPalette/tidy::friendly.title
 #: linechart/options/colorPalette/tidy::friendly.title
+#: mosaic/options/colorPalette/tidy::friendly.title
 #: mrcrosstabs/options/colorPalette/tidy::friendly.title
 #: mrfrequencies/options/colorPalette/tidy::friendly.title
 #: multcorresp/options/colorPalette/tidy::friendly.title
@@ -5254,6 +5639,7 @@ msgstr "Порядок: Дружелюбный"
 #: boxplot/options/colorPalette/tidy::ibm.title
 #: histogram/options/colorPalette/tidy::ibm.title
 #: linechart/options/colorPalette/tidy::ibm.title
+#: mosaic/options/colorPalette/tidy::ibm.title
 #: mrcrosstabs/options/colorPalette/tidy::ibm.title
 #: mrfrequencies/options/colorPalette/tidy::ibm.title
 #: multcorresp/options/colorPalette/tidy::ibm.title
@@ -5271,6 +5657,7 @@ msgstr "Порядок:lbm"
 #: boxplot/options/colorPalette/tidy::metro.title
 #: histogram/options/colorPalette/tidy::metro.title
 #: linechart/options/colorPalette/tidy::metro.title
+#: mosaic/options/colorPalette/tidy::metro.title
 #: mrcrosstabs/options/colorPalette/tidy::metro.title
 #: mrfrequencies/options/colorPalette/tidy::metro.title
 #: multcorresp/options/colorPalette/tidy::metro.title
@@ -5288,6 +5675,7 @@ msgstr "Порядок:Метро"
 #: boxplot/options/colorPalette/tidy::rainbow.title
 #: histogram/options/colorPalette/tidy::rainbow.title
 #: linechart/options/colorPalette/tidy::rainbow.title
+#: mosaic/options/colorPalette/tidy::rainbow.title
 #: mrcrosstabs/options/colorPalette/tidy::rainbow.title
 #: mrfrequencies/options/colorPalette/tidy::rainbow.title
 #: multcorresp/options/colorPalette/tidy::rainbow.title
@@ -5305,6 +5693,7 @@ msgstr "Порядок:Радуга"
 #: boxplot/options/colorPalette/tidy::seaside.title
 #: histogram/options/colorPalette/tidy::seaside.title
 #: linechart/options/colorPalette/tidy::seaside.title
+#: mosaic/options/colorPalette/tidy::seaside.title
 #: mrcrosstabs/options/colorPalette/tidy::seaside.title
 #: mrfrequencies/options/colorPalette/tidy::seaside.title
 #: multcorresp/options/colorPalette/tidy::seaside.title
@@ -5316,9 +5705,12 @@ msgstr "Порядок:Радуга"
 msgid "Tidy:Seaside"
 msgstr "Порядок:Приморье"
 
+#: mosaic/ui[3].label
+msgid "Tile Options"
+msgstr ""
+
 #: package/analyses/linechart.menuSubgroup
 #: package/analyses/areachart.menuSubgroup
-#: package/datasets/TimeSeries.name
 #: areachart/options.menuSubgroup
 #: linechart/options.menuSubgroup
 msgid "Time Series"
@@ -5332,24 +5724,25 @@ msgstr "Временной ряд"
 #: likertplot/ui[8][0].label
 #: linechart/ui[4][0].label
 #: lollipop/ui[7][0].label
+#: mosaic/ui[7][0].label
 #: mrcrosstabs/ui[6][0].label
 #: mrfrequencies/ui[6][0].label
 #: piechart/ui[6][0].label
 #: qqplot/ui[7][0].label
 #: raincloud/ui[4][0].label
-#: scatterplot/ui[5][0].label
+#: scatterplot/ui[6][0].label
 msgid "Title"
 msgstr "Заголовок"
 
-#: corresp/ui[7][0][1][0].label
-#: multcorresp/ui[8][0][1][0].label
-#: principal/ui[6][0][1][0].label
+#: corresp/ui[8][0][1][0].label
+#: multcorresp/ui[9][0][1][0].label
+#: principal/ui[7][0][1][0].label
 msgid "Title Style"
 msgstr "Стиль заголовка"
 
-#: corresp/ui[7][0][0][0].label
-#: multcorresp/ui[8][0][0][0].label
-#: principal/ui[6][0][0][0].label
+#: corresp/ui[8][0][0][0].label
+#: multcorresp/ui[9][0][0][0].label
+#: principal/ui[7][0][0][0].label
 msgid "Title Text"
 msgstr "Текст заголовка"
 
@@ -5370,6 +5763,8 @@ msgstr "Текст заголовка"
 #: linechart/options/legendPosition/top.title
 #: linechart/options/yAxisPosition/1.title
 #: lollipop/options/yAxisPosition/1.title
+#: mosaic/options/legendPosition/top.title
+#: mosaic/options/yAxisPosition/1.title
 #: mrcrosstabs/options/labelPosition/top.title
 #: mrcrosstabs/options/legendPosition/top.title
 #: mrcrosstabs/options/yAxisPosition/1.title
@@ -5411,9 +5806,33 @@ msgstr "Рассматривать пустые значения как проп
 msgid "Type"
 msgstr "Тип"
 
+#: R/corresp.b.R
+msgid "Unable to compute correspondence analysis for the selected data."
+msgstr ""
+
+#: R/multcorresp.b.R
+msgid "Unable to compute MCA because of too many missing values."
+msgstr ""
+
+#: R/multcorresp.b.R
+msgid "Unable to compute MCA for the selected variables."
+msgstr ""
+
+#: R/principal.b.R
+msgid "Unable to compute principal components for the selected variables."
+msgstr ""
+
+#: R/principal.b.R
+msgid "Unable to compute the correlation matrix."
+msgstr ""
+
+#: R/corresp.b.R
+msgid "Unable to compute the χ2 statistic."
+msgstr ""
+
 #: R/qqplot.b.R
-msgid "Unable to estimate the distribution parameters."
-msgstr "Не возможно оценить параметры распределения."
+msgid "Unable to estimate the distribution parameters using {method} method."
+msgstr ""
 
 #: R/principal.b.R
 msgid "Unable to use {rotation} rotation."
@@ -5455,7 +5874,6 @@ msgid "Use the same color for variables"
 msgstr "Используйте один и тот же цвет для переменных"
 
 #: corresp/options/descAsVarName.title
-#: likertplot/options/descAsVarName.title
 #: multcorresp/options/descAsVarName.title
 #: principal/options/descAsVarName.title
 msgid "Use variable's description as name"
@@ -5492,14 +5910,18 @@ msgstr "Значения"
 msgid "Variable"
 msgstr "Переменная"
 
-#: multcorresp/options/showDiscriminations.title
-#: multcorresp/options/showDiscriminationPlot.title
-msgid "Variable dicriminations"
-msgstr "Переменная дискриминация"
+#: likertplot/options/descAsVarName.title
+msgid "Variable descriptions as names"
+msgstr ""
 
 #: multcorresp/results/discrim.title
 msgid "Variable Discriminations"
 msgstr "Переменная дискриминация"
+
+#: multcorresp/options/showDiscriminations.title
+#: multcorresp/options/showDiscriminationPlot.title
+msgid "Variable discriminations"
+msgstr ""
 
 #: principal/options/varTitleText.title
 #: principal/options/varSubtitleText.title
@@ -5520,12 +5942,12 @@ msgstr "Переменный график"
 #: linechart/options/vars.title
 #: linechart/ui[0][1].label
 #: multcorresp/options/vars.title
-#: multcorresp/ui[0][0].label
+#: multcorresp/ui[1][0].label
 #: principal/options/vars.title
 #: principal/options/showLoadings.title
 #: principal/options/showVarPlot.title
 #: principal/options/varLabelSize.title
-#: principal/ui[0][0].label
+#: principal/ui[1][0].label
 #: principal/results/loadingTable.title
 msgid "Variables"
 msgstr "Переменные"
@@ -5547,6 +5969,7 @@ msgstr "Вертикальная линия на"
 #: package/analyses/raincloud.menuGroup
 #: package/analyses/barplot.menuGroup
 #: package/analyses/piechart.menuGroup
+#: package/analyses/mosaic.menuGroup
 #: package/analyses/likertplot.menuGroup
 #: package/analyses/mrfrequencies.menuGroup
 #: package/analyses/mrcrosstabs.menuGroup
@@ -5556,24 +5979,19 @@ msgstr "Вертикальная линия на"
 #: package/analyses/linechart.menuGroup
 #: package/analyses/areachart.menuGroup
 #: package/analyses/qqplot.menuGroup
-#: package/analyses/principal.menuGroup
-#: package/analyses/corresp.menuGroup
-#: package/analyses/multcorresp.menuGroup
 #: package/datasets/vijPlots.name
 #: areachart/options.menuGroup
 #: barchart/options.menuGroup
 #: barplot/options.menuGroup
 #: boxplot/options.menuGroup
-#: corresp/options.menuGroup
 #: histogram/options.menuGroup
 #: likertplot/options.menuGroup
 #: linechart/options.menuGroup
 #: lollipop/options.menuGroup
+#: mosaic/options.menuGroup
 #: mrcrosstabs/options.menuGroup
 #: mrfrequencies/options.menuGroup
-#: multcorresp/options.menuGroup
 #: piechart/options.menuGroup
-#: principal/options.menuGroup
 #: qqplot/options.menuGroup
 #: raincloud/options.menuGroup
 #: scatterplot/options.menuGroup
@@ -5590,6 +6008,7 @@ msgstr "vijPlots: еще один модуль построения график
 #: boxplot/options/colorPalette/viridis::inferno.title
 #: histogram/options/colorPalette/viridis::inferno.title
 #: linechart/options/colorPalette/viridis::inferno.title
+#: mosaic/options/colorPalette/viridis::inferno.title
 #: mrcrosstabs/options/colorPalette/viridis::inferno.title
 #: mrfrequencies/options/colorPalette/viridis::inferno.title
 #: multcorresp/options/colorPalette/viridis::inferno.title
@@ -5607,6 +6026,7 @@ msgstr "Виридис: Инферно"
 #: boxplot/options/colorPalette/viridis::magma.title
 #: histogram/options/colorPalette/viridis::magma.title
 #: linechart/options/colorPalette/viridis::magma.title
+#: mosaic/options/colorPalette/viridis::magma.title
 #: mrcrosstabs/options/colorPalette/viridis::magma.title
 #: mrfrequencies/options/colorPalette/viridis::magma.title
 #: multcorresp/options/colorPalette/viridis::magma.title
@@ -5624,6 +6044,7 @@ msgstr "Виридис:Магма"
 #: boxplot/options/colorPalette/viridis::plasma.title
 #: histogram/options/colorPalette/viridis::plasma.title
 #: linechart/options/colorPalette/viridis::plasma.title
+#: mosaic/options/colorPalette/viridis::plasma.title
 #: mrcrosstabs/options/colorPalette/viridis::plasma.title
 #: mrfrequencies/options/colorPalette/viridis::plasma.title
 #: multcorresp/options/colorPalette/viridis::plasma.title
@@ -5641,6 +6062,7 @@ msgstr "Виридис:Плазма"
 #: boxplot/options/colorPalette/viridis::turbo.title
 #: histogram/options/colorPalette/viridis::turbo.title
 #: linechart/options/colorPalette/viridis::turbo.title
+#: mosaic/options/colorPalette/viridis::turbo.title
 #: mrcrosstabs/options/colorPalette/viridis::turbo.title
 #: mrfrequencies/options/colorPalette/viridis::turbo.title
 #: multcorresp/options/colorPalette/viridis::turbo.title
@@ -5658,6 +6080,7 @@ msgstr "Виридис:Турбо"
 #: boxplot/options/colorPalette/viridis::viridis.title
 #: histogram/options/colorPalette/viridis::viridis.title
 #: linechart/options/colorPalette/viridis::viridis.title
+#: mosaic/options/colorPalette/viridis::viridis.title
 #: mrcrosstabs/options/colorPalette/viridis::viridis.title
 #: mrfrequencies/options/colorPalette/viridis::viridis.title
 #: multcorresp/options/colorPalette/viridis::viridis.title
@@ -5684,6 +6107,7 @@ msgstr "Вейбулл"
 #: likertplot/options/labelColor/white.title
 #: lollipop/options/dotColor/white.title
 #: lollipop/options/lineColor/white.title
+#: mosaic/options/labelColor/white.title
 #: mrcrosstabs/options/borderColor/white.title
 #: mrcrosstabs/options/textColor/white.title
 #: mrfrequencies/options/borderColor/white.title
@@ -5696,6 +6120,7 @@ msgstr "Белый"
 
 #: barchart/options/errorBarWidth.title
 #: histogram/options/binWidth.title
+#: mosaic/options/borderWidth.title
 msgid "Width"
 msgstr "Ширина"
 
@@ -5729,7 +6154,7 @@ msgstr "Неправильные значения параметров."
 #: boxplot/ui[4][0][0][0].label
 #: boxplot/ui[5][1].label
 #: corresp/options/xaxis.title
-#: corresp/ui[6][0].label
+#: corresp/ui[7][0].label
 #: histogram/ui[5][0][0][0].label
 #: histogram/ui[6][1].label
 #: likertplot/ui[6][0][0][0].label
@@ -5740,6 +6165,9 @@ msgstr "Неправильные значения параметров."
 #: linechart/ui[3][1].label
 #: lollipop/ui[5][0][0][0].label
 #: lollipop/ui[6][0].label
+#: mosaic/ui[1][1][0].label
+#: mosaic/ui[5][0][0][0].label
+#: mosaic/ui[6][1].label
 #: mrcrosstabs/options/xaxis.title
 #: mrcrosstabs/ui[2][0][1][1].label
 #: mrcrosstabs/ui[4][0][0][0].label
@@ -5747,17 +6175,17 @@ msgstr "Неправильные значения параметров."
 #: mrfrequencies/ui[4][0][0][0].label
 #: mrfrequencies/ui[5][0].label
 #: multcorresp/options/xaxis.title
-#: multcorresp/ui[7][1].label
+#: multcorresp/ui[8][1].label
 #: principal/options/xaxis.title
-#: principal/ui[5][1].label
+#: principal/ui[6][1].label
 #: qqplot/ui[5][0][0][0].label
 #: qqplot/ui[6][1].label
 #: raincloud/ui[2][0][0][0].label
 #: raincloud/ui[3][1].label
 #: scatterplot/options/xaxis.title
 #: scatterplot/ui[0][0].label
-#: scatterplot/ui[3][0][0][0].label
-#: scatterplot/ui[4][1].label
+#: scatterplot/ui[4][0][0][0].label
+#: scatterplot/ui[5][1].label
 msgid "X-Axis"
 msgstr "Ось X"
 
@@ -5775,6 +6203,11 @@ msgstr "Оси X и Y не могут быть больше числа разм�
 #: linechart/options/isDate.title
 msgid "X-Axis is a date"
 msgstr "Ось X — это дата"
+
+#: mosaic/options/order.title
+#: mosaic/ui[1][1][1].label
+msgid "X-Axis Order"
+msgstr ""
 
 #: barchart/options/xAxisRangeType.title
 #: barplot/options/xAxisRangeType.title
@@ -5801,7 +6234,7 @@ msgstr "Диапазон оси X"
 #: boxplot/ui[4][0][1][0].label
 #: boxplot/ui[5][2].label
 #: corresp/options/yaxis.title
-#: corresp/ui[6][1].label
+#: corresp/ui[7][1].label
 #: histogram/ui[1][0][0].label
 #: histogram/ui[5][0][1][0].label
 #: histogram/ui[6][2].label
@@ -5812,23 +6245,27 @@ msgstr "Диапазон оси X"
 #: lollipop/ui[2][0][0].label
 #: lollipop/ui[5][0][1][0].label
 #: lollipop/ui[6][1].label
+#: mosaic/options/yAxis.title
+#: mosaic/ui[1][2][0].label
+#: mosaic/ui[5][0][1][0].label
+#: mosaic/ui[6][2].label
 #: mrcrosstabs/ui[4][0][1][0].label
 #: mrcrosstabs/ui[5][2].label
 #: mrfrequencies/options/yaxis.title
 #: mrfrequencies/ui[4][0][1][0].label
 #: mrfrequencies/ui[5][1].label
 #: multcorresp/options/yaxis.title
-#: multcorresp/ui[7][2].label
+#: multcorresp/ui[8][2].label
 #: principal/options/yaxis.title
-#: principal/ui[5][2].label
+#: principal/ui[6][2].label
 #: qqplot/ui[5][0][1][0].label
 #: qqplot/ui[6][2].label
 #: raincloud/ui[2][0][1][0].label
 #: raincloud/ui[3][2].label
 #: scatterplot/options/yaxis.title
 #: scatterplot/ui[0][1].label
-#: scatterplot/ui[3][0][1][0].label
-#: scatterplot/ui[4][2].label
+#: scatterplot/ui[4][0][1][0].label
+#: scatterplot/ui[5][2].label
 msgid "Y-Axis"
 msgstr "Ось Y"
 
@@ -5865,6 +6302,7 @@ msgstr "Желтый"
 #: boxplot/options/colorPalette/YlGnBu.title
 #: histogram/options/colorPalette/YlGnBu.title
 #: linechart/options/colorPalette/YlGnBu.title
+#: mosaic/options/colorPalette/YlGnBu.title
 #: mrcrosstabs/options/colorPalette/YlGnBu.title
 #: mrfrequencies/options/colorPalette/YlGnBu.title
 #: multcorresp/options/colorPalette/YlGnBu.title
@@ -5882,6 +6320,7 @@ msgstr "От желтого до синего"
 #: boxplot/options/colorPalette/YlOrBr.title
 #: histogram/options/colorPalette/YlOrBr.title
 #: linechart/options/colorPalette/YlOrBr.title
+#: mosaic/options/colorPalette/YlOrBr.title
 #: mrcrosstabs/options/colorPalette/YlOrBr.title
 #: mrfrequencies/options/colorPalette/YlOrBr.title
 #: multcorresp/options/colorPalette/YlOrBr.title
@@ -5899,6 +6338,7 @@ msgstr "От желтого до коричневого"
 #: boxplot/options/colorPalette/YlGn.title
 #: histogram/options/colorPalette/YlGn.title
 #: linechart/options/colorPalette/YlGn.title
+#: mosaic/options/colorPalette/YlGn.title
 #: mrcrosstabs/options/colorPalette/YlGn.title
 #: mrfrequencies/options/colorPalette/YlGn.title
 #: multcorresp/options/colorPalette/YlGn.title
@@ -5916,6 +6356,7 @@ msgstr "От желтого к зеленому"
 #: boxplot/options/colorPalette/YlOrRd.title
 #: histogram/options/colorPalette/YlOrRd.title
 #: linechart/options/colorPalette/YlOrRd.title
+#: mosaic/options/colorPalette/YlOrRd.title
 #: mrcrosstabs/options/colorPalette/YlOrRd.title
 #: mrfrequencies/options/colorPalette/YlOrRd.title
 #: multcorresp/options/colorPalette/YlOrRd.title
@@ -5926,3 +6367,7 @@ msgstr "От желтого к зеленому"
 #: scatterplot/options/colorPalette/YlOrRd.title
 msgid "Yellow to Red"
 msgstr "Желтый к красному"
+
+#: R/corresp.b.R
+msgid "χ² = {chisq}, df = {df}, p-value = {pval}"
+msgstr ""
