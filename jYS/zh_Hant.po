@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-07-23 07:15+0000\n"
-"Last-Translator: Jonathon Love <jon@thon.cc>\n"
-"Language-Team: Chinese (Traditional Han script) "
-"<https://hosted.weblate.org/projects/jamovi/module-jys/zh_Hant/>\n"
+"PO-Revision-Date: 2026-10-05 04:18+0000\n"
+"Last-Translator: 陳正昌 <chencc99@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/jamovi/module-jys/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: Weblate 2026.10.1.dev0\n"
 
 #: R/msnp.b.R
 msgid "-log10(p-value)"
@@ -103,6 +103,9 @@ msgid ""
 "patients compared to Treat All, without missing true positive cases: "
 "(NB_model - NB_all) / [pt / (1 - pt)] * 100 evaluated at pt = 0.20."
 msgstr ""
+"<b>在 20% 時避免</b>：與「全部治療」相比，每 100 名患者減少的不必要介入，且未"
+"遺漏真陽性病例：(NB_model - NB_all) / [pt / (1 - pt)] * 100，於 pt = 0.20 評"
+"估。"
 
 #: R/mui.b.R
 msgid ""
@@ -141,6 +144,9 @@ msgid ""
 "combining discrimination and calibration (0 = perfect, 1 = worst). Values "
 "below the cohort incidence indicate informative predictions."
 msgstr ""
+"<b>Brier 分數</b>：預測機率與二元結果之間的平均平方誤差：BS = (1/N) * sum("
+"(p - y)^2)。結合區辨力與校準的整體準確度指標（0 = 完美，1 = 最差）。低於世代"
+"發生率的值表示預測具有資訊量。"
 
 #: R/mpwr.b.R
 msgid "<b>Calculated parameter</b>:"
@@ -153,6 +159,8 @@ msgid ""
 "Negative values indicate systematic overestimation of cohort risk; positive "
 "values indicate underestimation."
 msgstr ""
+"<b>校準截距</b>：整體校準，反映系統性高估或低估，並將斜率固定為 1。理想值為 "
+"0.000。負值表示系統性高估世代風險；正值表示低估。"
 
 #: R/mdca.b.R
 msgid ""
@@ -161,6 +169,9 @@ msgid ""
 "high-risk patients and underestimation in low-risk patients), while values > "
 "1 indicate underfitting (predictions shrunk toward cohort incidence)."
 msgstr ""
+"<b>校準斜率</b>：預測風險對數勝算的迴歸斜率。理想值為 1.000。值 < 1 表示過度"
+"配適（高風險患者風險高估、低風險患者風險低估），而值 > 1 表示配適不足（預測值"
+"向世代發生率收縮）。"
 
 #: R/mui.b.R
 msgid ""
@@ -199,6 +210,9 @@ msgid ""
 "(NB_model > max(NB_all, 0)). Below Min %, Treat All is preferred; above Max "
 "%, Treat None is preferred."
 msgstr ""
+"<b>臨床決策視窗</b>：決策閾值範圍 [最小 %, 最大 %]，在此範圍內模型的淨效益高"
+"於兩種預設策略 (NB_model > max(NB_all, 0))。低於最小 % 時，偏好全部治療；高於"
+"最大 % 時，偏好全部不治療。"
 
 #: R/mdca.b.R
 msgid ""
@@ -207,6 +221,9 @@ msgid ""
 "> NB_all and NB_model > 0). Among competing models, the one with the highest "
 "Net Benefit at the clinically acceptable threshold should be chosen."
 msgstr ""
+"<b>臨床選擇規則</b>：若模型在閾值 pt 的淨效益嚴格高於兩種預設策略 "
+"(NB_model > NB_all 且 NB_model > 0)，則該模型具臨床實用性。在競爭模型中，應選"
+"擇在臨床可接受閾值下淨效益最高者。"
 
 #: R/mdca.b.R
 msgid ""
@@ -215,6 +232,9 @@ msgid ""
 "across a meaningful threshold range; 'No clinical gain' indicates that "
 "testing offers no improvement over default strategies."
 msgstr ""
+"<b>臨床優越性</b>：對模型實用性的整體判定。「優越」表示模型在有意義的閾值範圍"
+"內，相較於兩種預設策略均提供臨床獲益；「無臨床獲益」表示檢測相較於預設策略未"
+"提供改善。"
 
 #: R/mcor.b.R
 msgid ""
@@ -297,6 +317,8 @@ msgid ""
 "LOESS-calibrated probability and predicted risk across all patients. "
 "Reflects average individual risk miscalibration."
 msgstr ""
+"<b>E 平均</b>：所有患者的非參數 LOESS 校準機率與預測風險之間的平均絕對差。反"
+"映平均個別風險校準誤差。"
 
 #: R/mdca.b.R
 msgid ""
@@ -304,6 +326,8 @@ msgid ""
 "probability and predicted risk across the risk spectrum. Reflects the "
 "worst-case local probability error."
 msgstr ""
+"<b>E 最大值</b>：在整個風險譜中，LOESS 校準機率與預測風險之間的最大絕對差。反"
+"映最壞情況的局部機率誤差。"
 
 #: R/mpwr.b.R
 msgid "<b>Effect size measure</b>: Cohen's d"
@@ -685,6 +709,9 @@ msgid ""
 "interventions. The weighting factor [pt / (1 - pt)] reflects the relative "
 "harm of a false positive vs the benefit of a true positive."
 msgstr ""
+"<b>淨效益 (NB)</b>：臨床實用性，計算方式為 NB = (TP/N) - (FP/N) * [pt / (1 - "
+"pt)] - harm。代表在不增加不必要假陽性介入的情況下，每位患者相當於真陽性診斷的"
+"數量。加權因子 [pt / (1 - pt)] 反映假陽性相對於真陽性的相對危害。"
 
 #: R/mui.b.R
 msgid "<b>NPV</b> - Negative Predictive Value of the negative class TN/(TN+FN)"
@@ -731,6 +758,8 @@ msgid ""
 "its maximum Net Benefit (Max Net Benefit). Balances detection of true events "
 "with avoidance of unnecessary interventions in the evaluated cohort."
 msgstr ""
+"<b>最佳閾值</b>：模型達到最大淨效益（最大淨效益）的決策閾值 pt。在評估世代中"
+"平衡真事件的偵測與不必要介入的避免。"
 
 #: R/msnp.b.R
 msgid ""
@@ -816,6 +845,8 @@ msgid ""
 "probabilities to remove systematic bias, adjust slope toward 1.000, and "
 "align intercept to 0.000 while preserving ROC discrimination."
 msgstr ""
+"<b>重新校準</b>：對輸入機率套用 Platt 縮放（邏輯校準），以移除系統性偏差、將"
+"斜率調整至接近 1.000，並使截距對齊 0.000，同時保留 ROC 區辨力。"
 
 #: R/msrv.b.R
 msgid ""
@@ -867,6 +898,8 @@ msgid ""
 "patient to account for financial costs, invasiveness, discomfort, or "
 "procedural complications of testing."
 msgstr ""
+"<b>檢測危害</b>：每名患者扣除 {harm} 淨效益單位的懲罰，以反映檢測的財務成本、"
+"侵入性、不適或程序併發症。"
 
 #: R/msrv.b.R
 msgid ""
@@ -909,6 +942,9 @@ msgid ""
 "increasing pt and produces net clinical harm when unnecessary interventions "
 "outweigh true detections."
 msgstr ""
+"<b>全部治療</b>：不進行診斷檢測即對所有患者提供介入的策略 (NB = 發生率 - "
+"(1 - 發生率) * [pt / (1 - pt)] - harm)。在低閾值時產生高淨效益，但隨 pt 增加"
+"迅速下降，且當不必要介入超過真偵測時，會產生淨臨床危害。"
 
 #: R/mdca.b.R
 msgid ""
@@ -916,6 +952,8 @@ msgid ""
 "Benefit is identically zero (NB = 0) across all decision thresholds pt, as "
 "there are neither true positive benefits nor false positive harms."
 msgstr ""
+"<b>全部不治療</b>：不對任何患者提供介入的策略。在所有決策閾值 pt 下，淨效益恆"
+"為零 (NB = 0)，因為既無真陽性獲益，也無假陽性危害。"
 
 #: R/mui.b.R
 msgid ""
@@ -939,6 +977,8 @@ msgid ""
 "wider span (> 20-30%) demonstrates robustness of the model's clinical "
 "utility across diverse practitioner and patient risk tolerances."
 msgstr ""
+"<b>視窗跨度</b>：臨床決策視窗的寬度（最大 % - 最小 %）。較寬的跨度（> 20-"
+"30%）顯示模型的臨床實用性在各種醫師與患者風險耐受度下具有穩健性。"
 
 #: R/mmf.b.R
 msgid "<h2>Help</h2><div>Please select complete and incomplete variables</div>"
@@ -1132,7 +1172,7 @@ msgstr "一組 MAR (隨機缺失資料) 陣列"
 
 #: mDCA/ui[2].label
 msgid "Analysis & Plot Options"
-msgstr ""
+msgstr "析與繪圖選項"
 
 #: mPCA/ui[3].label
 msgid "Analysis by Groups"
@@ -1219,7 +1259,7 @@ msgstr "平均連結法 (UPGMA)"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Avoided at 20% (per 100)"
-msgstr ""
+msgstr "20% 時避免 (每 100 名)"
 
 #: mLR/ui[3]/show_roc/roc_unit.label
 #: mMLP/ui[3]/show_roc/roc_unit.label
@@ -1362,7 +1402,7 @@ msgstr "Brewer's 分類色盤"
 
 #: mDCA/results/calTable.columns.title
 msgid "Brier Score"
-msgstr ""
+msgstr "Brier 分數"
 
 #: R/msnp.b.R
 msgid "Ca"
@@ -1394,15 +1434,15 @@ msgstr "存活對數秩檢定之計算基於 Schoenfeld 漸進近似法。N1 代
 
 #: mDCA/options/calBins.title
 msgid "Calibration Deciles (Bins)"
-msgstr ""
+msgstr "校準十分位數 (分箱)"
 
 #: mDCA/results/calTable.columns.title
 msgid "Calibration Intercept"
-msgstr ""
+msgstr "校準截距"
 
 #: mDCA/results/calTable.columns.title
 msgid "Calibration Slope"
-msgstr ""
+msgstr "校準斜率"
 
 #: mSNP/results/qcGroup/qcTable.columns.title
 msgid "Call Rate"
@@ -1589,19 +1629,19 @@ msgstr "分類變項"
 
 #: mDCA/results/windowTable.title
 msgid "Clinical Decision Window"
-msgstr ""
+msgstr "臨床決策視窗"
 
 #: mDCA/options/showWindowTable.title
 msgid "Clinical Decision Window Table"
-msgstr ""
+msgstr "臨床決策視窗表"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Clinical Superiority"
-msgstr ""
+msgstr "臨床優越性"
 
 #: mDCA/ui[1].label
 msgid "Clinical Threshold Settings"
-msgstr ""
+msgstr "臨床閾值設定"
 
 #: mLR/options/forestClip.title
 #: mLR/ui[3]/showForest/forestClip.label
@@ -1810,7 +1850,7 @@ msgstr "列聯表 (集群 對 組別)："
 #: mDCA/options/scores.title
 #: mDCA/ui[0][2].label
 msgid "Continuous Predictors / Scores"
-msgstr ""
+msgstr "連續預測因子 / 分數"
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Controls"
@@ -2081,13 +2121,13 @@ msgstr "決策"
 #: mDCA/ui.title
 #: mDCA/results.title
 msgid "Decision Curve Analysis (DCA)"
-msgstr ""
+msgstr "決策曲線分析 (DCA)"
 
 #: package/datasets/DecisionCurveAnalysisCHDmodels.description
 msgid ""
 "Decision Curve Analysis (DCA) and Model Calibration for CHD prediction "
 "models demonstration"
-msgstr ""
+msgstr "用於 CHD 預測模型的決策曲線分析 (DCA) 與模型校準示範"
 
 #: package/analyses/mDCA.description
 #: mDCA/options.description.main
@@ -2096,28 +2136,30 @@ msgid ""
 "benefit (Vickers et al., 2006) and interventions avoided for predictive "
 "models and biomarkers."
 msgstr ""
+"決策曲線分析 (DCA) 與模型校準。評估預測模型與生物標記的臨床淨效益 (Vickers 等"
+"人, 2006) 及避免的介入。"
 
 #: R/mdca.b.R
 msgid ""
 "Decision Curve Analysis (DCA) evaluates the clinical net benefit of "
 "prediction models and biomarkers across a range of decision thresholds."
-msgstr ""
+msgstr "決策曲線分析 (DCA) 評估預測模型與生物標記在各種決策閾值下的臨床淨效益。"
 
 #: R/mdca.b.R
 msgid "Decision Curve Analysis (Net Benefit)"
-msgstr ""
+msgstr "決策曲線分析 (淨效益)"
 
 #: package/datasets/DecisionCurveAnalysisCHDmodels.name
 msgid "Decision Curve Analysis CHD models"
-msgstr ""
+msgstr "決策曲線分析 CHD 模型"
 
 #: mDCA/results/dcaPlot.title
 msgid "Decision Curves (Net Benefit vs Threshold)"
-msgstr ""
+msgstr "決策曲線 (淨效益對閾值)"
 
 #: mDCA/options/showDcaPlot.title
 msgid "Decision Curves Plot (Net Benefit)"
-msgstr ""
+msgstr "決策曲線圖 (淨效益)"
 
 #: mMF/results/estim/mcar.columns.title
 msgid "Degree of Freedom (df)"
@@ -2209,11 +2251,11 @@ msgstr "刪除個案 (%)"
 
 #: mDCA/results/calTable.columns.title
 msgid "E avg"
-msgstr ""
+msgstr "E 平均"
 
 #: mDCA/results/calTable.columns.title
 msgid "E max"
-msgstr ""
+msgstr "E 最大值"
 
 #: mCOR/options/glassoType/ebic.title
 msgid "EBIC"
@@ -2671,7 +2713,7 @@ msgstr "對照組基因型"
 
 #: R/mdca.b.R
 msgid "Getting started:"
-msgstr ""
+msgstr "開始使用："
 
 #: mCOR/options/netMethod/glasso.title
 msgid "Graphical Lasso (GLASSO)"
@@ -2761,7 +2803,7 @@ msgstr "Hardy-Weinberg 平衡統計檢定"
 
 #: mDCA/options/harm.title
 msgid "Harm of Intervention"
-msgstr ""
+msgstr "介入的危害"
 
 #: R/mpwr.b.R
 #: R/msrv.b.R
@@ -3036,7 +3078,7 @@ msgstr "輸入層"
 
 #: mDCA/results/instructions.title
 msgid "Instructions"
-msgstr ""
+msgstr "操作說明"
 
 #: R/msnp.b.R
 msgid "Interaction Order"
@@ -3069,11 +3111,11 @@ msgstr "區間估計"
 
 #: R/mdca.b.R
 msgid "Interventions Avoided (per 100 patients)"
-msgstr ""
+msgstr "避免的介入 (每 100 名患者)"
 
 #: mDCA/options/showAvoidedPlot.title
 msgid "Interventions Avoided Plot"
-msgstr ""
+msgstr "避免介入圖"
 
 #: mPWR/options/icc.title
 #: mPWR/ui[1]/icc.label
@@ -3544,11 +3586,11 @@ msgstr "最大疊代次數 (訓練回合數)"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "Max Net Benefit"
-msgstr ""
+msgstr "最大淨效益"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Max Threshold (%)"
-msgstr ""
+msgstr "最大閾值 (%)"
 
 #: mSRV/options/kmMaxTime.title
 #: mSRV/ui[2]/showKm/kmMaxTime.label
@@ -3561,7 +3603,7 @@ msgstr "最大疊代次數"
 
 #: mDCA/options/threshMax.title
 msgid "Maximum Threshold"
-msgstr ""
+msgstr "最大閾值"
 
 #: mRF/options/maxdepth.title
 #: mRF/ui[1]/maxdepth.label
@@ -3624,7 +3666,7 @@ msgstr "平均準確率下降 (%)"
 
 #: R/mdca.b.R
 msgid "Mean Predicted Probability"
-msgstr ""
+msgstr "平均預測機率"
 
 #: R/mout.b.R
 msgid "Median"
@@ -3663,7 +3705,7 @@ msgstr "指標 / 目標"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Min Threshold (%)"
-msgstr ""
+msgstr "最小閾值 (%)"
 
 #: mPWR/options/es.title
 #: mPWR/ui[1]/es.label
@@ -3703,7 +3745,7 @@ msgstr "最小節點大小"
 
 #: mDCA/options/threshMin.title
 msgid "Minimum Threshold"
-msgstr ""
+msgstr "最小閾值"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -3821,28 +3863,28 @@ msgstr "模型"
 #: mDCA/results/dcaTable.columns.title
 #: mDCA/results/windowTable.columns.title
 msgid "Model / Predictor"
-msgstr ""
+msgstr "模型 / 預測變數"
 
 #: mDCA/ui[3].label
 msgid "Model Calibration"
-msgstr ""
+msgstr "模型校準"
 
 #: R/mdca.b.R
 #: mDCA/results/calPlot.title
 msgid "Model Calibration Curves (Observed vs Predicted)"
-msgstr ""
+msgstr "模型校準曲線 (觀測值對預測值)"
 
 #: mDCA/results/calTable.title
 msgid "Model Calibration Metrics"
-msgstr ""
+msgstr "模型校準指標"
 
 #: mDCA/options/showCalPlot.title
 msgid "Model Calibration Plot"
-msgstr ""
+msgstr "模型校準圖"
 
 #: mDCA/options/showCalTable.title
 msgid "Model Calibration Table"
-msgstr ""
+msgstr "模型校準表"
 
 #: mLR/results/coeffTable.title
 msgid "Model Coefficients (Post-Selection / Refitted Model)"
@@ -3887,7 +3929,7 @@ msgstr "模型效能長條圖"
 #: mDCA/options/probs.title
 #: mDCA/ui[0][1].label
 msgid "Model Probabilities (0 to 1)"
-msgstr ""
+msgstr "模型機率 (0 到 1)"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -3995,19 +4037,19 @@ msgstr "N2"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 10%"
-msgstr ""
+msgstr "10% 時的淨效益"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 20%"
-msgstr ""
+msgstr "20% 時的淨效益"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 30%"
-msgstr ""
+msgstr "30% 時的淨效益"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 40%"
-msgstr ""
+msgstr "40% 時的淨效益"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -4020,23 +4062,23 @@ msgstr "負權重"
 
 #: R/mdca.b.R
 msgid "Net Benefit"
-msgstr ""
+msgstr "淨效益"
 
 #: mDCA/results/dcaTable.title
 msgid "Net Benefit at Key Clinical Thresholds"
-msgstr ""
+msgstr "關鍵臨床閾值下的淨效益"
 
 #: mDCA/options/showDcaTable.title
 msgid "Net Benefit Summary Table"
-msgstr ""
+msgstr "淨效益摘要表"
 
 #: R/mdca.b.R
 msgid "Net Reduction in Interventions"
-msgstr ""
+msgstr "介入的淨減少"
 
 #: mDCA/results/avoidedPlot.title
 msgid "Net Reduction in Interventions (per 100 patients)"
-msgstr ""
+msgstr "介入的淨減少 (每 100 名患者)"
 
 #: R/mcor.b.R
 msgid "Network ("
@@ -4078,7 +4120,7 @@ msgstr "神經網路分類器 (多層感知器) 示範"
 
 #: R/mdca.b.R
 msgid "No clinical gain"
-msgstr ""
+msgstr "無臨床獲益"
 
 #: R/msrv.b.R
 msgid "No complete cases available for time-dependent Cox model."
@@ -4296,7 +4338,7 @@ msgstr "觀察 p 值 (-log10)"
 
 #: R/mdca.b.R
 msgid "Observed Proportion of Events"
-msgstr ""
+msgstr "觀測事件比例"
 
 #: R/msnp.b.R
 #: mSNP/results/assocGroup/assocTable.columns.title
@@ -4373,7 +4415,7 @@ msgstr ""
 
 #: mDCA/results/dcaTable.columns.title
 msgid "Optimal Threshold"
-msgstr ""
+msgstr "最佳閾值"
 
 #: R/msnp.b.R
 #: mSNP/results/assocGroup/assocTable.columns.title
@@ -5110,7 +5152,7 @@ msgstr "等級"
 
 #: mDCA/options/recalibrate.title
 msgid "Recalibrate Probabilities (Platt Scaling)"
-msgstr ""
+msgstr "重新校準機率 (Platt 縮放)"
 
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/recessive.title
@@ -5120,7 +5162,7 @@ msgstr "隱性"
 #: mLR/options/refLevel.title
 #: mLR/ui[0][0]/refLevel.label
 msgid "Reference"
-msgstr ""
+msgstr "參照"
 
 #: mUI/options/refval.title
 #: mUI/ui[0][1]/refval.label
@@ -5474,7 +5516,7 @@ msgstr "Schoenfeld 殘差圖"
 
 #: R/mdca.b.R
 msgid "Score"
-msgstr ""
+msgstr "分數"
 
 #: R/msrv.b.R
 msgid "Score (Log-rank) Test"
@@ -5526,6 +5568,8 @@ msgid ""
 "Select a binary target variable (Outcome), target event level, and at least "
 "one model probability column (values between 0 and 1)."
 msgstr ""
+"選取一個二元目標變數 (結果)、目標事件水準，以及至少一個模型機率欄 (值介於 0 "
+"與 1 之間)。"
 
 #: mCOR/options/selgroup.title
 #: mROC/options/selgroup.title
@@ -5840,7 +5884,7 @@ msgstr ""
 
 #: R/mdca.b.R
 msgid "Strategy / Model"
-msgstr ""
+msgstr "策略 / 模型"
 
 #: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
@@ -5866,7 +5910,7 @@ msgstr "總和"
 
 #: R/mdca.b.R
 msgid "Superior"
-msgstr ""
+msgstr "優越"
 
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/superior.title
@@ -5933,11 +5977,11 @@ msgstr "雙曲正切函數"
 #: mDCA/options/targetLevel.title
 #: mDCA/ui[0][0]/targetLevel.label
 msgid "Target"
-msgstr ""
+msgstr "目標"
 
 #: R/mdca.b.R
 msgid "Target variable must contain both positive and negative cases."
-msgstr ""
+msgstr "目標變數必須同時包含正例與負例。"
 
 #: mSNP/options/ternaryPlot.title
 #: mSNP/results/hweGroup/ternaryPlot.title
@@ -6050,11 +6094,11 @@ msgstr "Youden 閾值"
 
 #: R/mdca.b.R
 msgid "Threshold Probability"
-msgstr ""
+msgstr "閾值機率"
 
 #: mDCA/options/threshStep.title
 msgid "Threshold Step"
-msgstr ""
+msgstr "閾值間距"
 
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "Time"
@@ -6119,7 +6163,7 @@ msgstr "刪除缺失值後觀測值過少 (至少需 5 筆)。"
 msgid ""
 "Too few valid observations for Decision Curve Analysis (at least 10 "
 "required)."
-msgstr ""
+msgstr "有效觀測值太少，無法進行決策曲線分析 (至少需要 10 個)。"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -6188,11 +6232,11 @@ msgstr "測試平衡準確率 (BA)"
 
 #: R/mdca.b.R
 msgid "Treat All"
-msgstr ""
+msgstr "全部治療"
 
 #: R/mdca.b.R
 msgid "Treat None"
-msgstr ""
+msgstr "全部不治療"
 
 #: mSNP/options/assocForestTrunc.title
 msgid "Truncate large confidence intervals"
@@ -6438,7 +6482,7 @@ msgstr "權重衰減 (正則化)"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Window Span (%)"
-msgstr ""
+msgstr "視窗跨度 (%)"
 
 #: mROC/options/cmpDeLong/w05.title
 msgid "With 0.5"
