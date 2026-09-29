@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-07-29 01:01+0000\n"
+"PO-Revision-Date: 2026-09-30 13:51+0000\n"
 "Last-Translator: Yuri Smolyakov <smolyakov@rambler.ru>\n"
-"Language-Team: Russian "
-"<https://hosted.weblate.org/projects/jamovi/module-jys/ru/>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/jamovi/module-"
+"jys/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 #: R/msnp.b.R
 msgid "-log10(p-value)"
@@ -122,6 +122,10 @@ msgid ""
 "patients compared to Treat All, without missing true positive cases: "
 "(NB_model - NB_all) / [pt / (1 - pt)] * 100 evaluated at pt = 0.20."
 msgstr ""
+"<b>Предотвращенные вмешательства (Avoided at 20%)</b>: число предотвращенных "
+"необоснованных вмешательств на 100 пациентов по сравнению со стратегией «"
+"Вмешательство всем» без пропуска истинных случаев: (NB_model - NB_all) / "
+"[pt / (1 - pt)] * 100 при пороге pt = 0.20."
 
 #: R/mui.b.R
 msgid ""
@@ -167,6 +171,10 @@ msgid ""
 "combining discrimination and calibration (0 = perfect, 1 = worst). Values "
 "below the cohort incidence indicate informative predictions."
 msgstr ""
+"<b>Индекс Браера (Brier Score)</b>: среднеквадратичная ошибка прогноза: BS = "
+"(1/N) * sum((p - y)^2). Интегральная мера точности (0 – идеал, 1 – наихудший "
+"результат). Значение ниже частоты события в когорте указывает на "
+"информативность модели."
 
 #: R/mpwr.b.R
 msgid "<b>Calculated parameter</b>:"
@@ -179,6 +187,10 @@ msgid ""
 "Negative values indicate systematic overestimation of cohort risk; positive "
 "values indicate underestimation."
 msgstr ""
+"<b>Свободный член калибровки (Calibration Intercept)</b>: показатель "
+"систематического смещения (calibration-in-the-large) при наклоне, равном 1 "
+"(идеал = 0.000). Отрицательные значения указывают на систематическое "
+"завышение среднего риска по популяции, положительные – на занижение."
 
 #: R/mdca.b.R
 msgid ""
@@ -187,6 +199,11 @@ msgid ""
 "high-risk patients and underestimation in low-risk patients), while values > "
 "1 indicate underfitting (predictions shrunk toward cohort incidence)."
 msgstr ""
+"<b>Наклон калибровки (Calibration Slope)</b>: угловой коэффициент "
+"логистической регрессии логита прогнозируемого риска (идеал = 1.000). Наклон "
+"< 1 отражает переобучение (overfitting: риск завышается у пациентов высокого "
+"риска и занижается у низкого), наклон > 1 – недообучение (underfitting: "
+"сжатие прогнозов к среднему)."
 
 #: R/mui.b.R
 msgid ""
@@ -229,6 +246,11 @@ msgid ""
 "(NB_model > max(NB_all, 0)). Below Min %, Treat All is preferred; above Max "
 "%, Treat None is preferred."
 msgstr ""
+"<b>Окно клинического решения (Clinical Decision Window)</b>: диапазон "
+"пороговых вероятностей [Min %, Max %], внутри которого модель превосходит по "
+"чистой пользе обе стандартные стратегии (NB_model > max(NB_all, 0)). При "
+"порогах ниже Min предпочтительнее вмешиваться всем; при порогах выше Max – "
+"никому."
 
 #: R/mdca.b.R
 msgid ""
@@ -237,6 +259,10 @@ msgid ""
 "> NB_all and NB_model > 0). Among competing models, the one with the highest "
 "Net Benefit at the clinically acceptable threshold should be chosen."
 msgstr ""
+"<b>Правило клинического выбора</b>: модель клинически эффективна при пороге "
+"pt, если ее чистая польза строго выше обеих стандартных стратегий "
+"(NB_model > NB_all и NB_model > 0). Среди нескольких моделей предпочтение "
+"отдается модели с наивысшей чистой пользой при клинически приемлемом пороге."
 
 #: R/mdca.b.R
 msgid ""
@@ -245,6 +271,10 @@ msgid ""
 "across a meaningful threshold range; 'No clinical gain' indicates that "
 "testing offers no improvement over default strategies."
 msgstr ""
+"<b>Клиническое превосходство (Clinical Superiority)</b>: общий вердикт о "
+"применимости модели. Статус «Superior» подтверждает превосходство модели над "
+"стандартными тактиками в клинически значимом диапазоне; статус «No clinical "
+"gain» указывает на отсутствие выигрыша от применения модели."
 
 #: R/mcor.b.R
 msgid ""
@@ -313,6 +343,9 @@ msgid ""
 "LOESS-calibrated probability and predicted risk across all patients. "
 "Reflects average individual risk miscalibration."
 msgstr ""
+"<b>E avg</b>: средняя абсолютная разность между локальной вероятностью "
+"(кривая LOESS) и предсказанным риском по всей выборке. Отражает среднюю "
+"погрешность индивидуальных оценок риска."
 
 #: R/mdca.b.R
 msgid ""
@@ -320,6 +353,9 @@ msgid ""
 "probability and predicted risk across the risk spectrum. Reflects the "
 "worst-case local probability error."
 msgstr ""
+"<b>E max</b>: максимальная абсолютная разность между калибровочной кривой "
+"LOESS и предсказанным риском. Отражает наихудшую погрешность прогнозирования "
+"вероятности на локальных участках шкалы риска."
 
 #: R/mpwr.b.R
 msgid "<b>Effect size measure</b>: Cohen's d"
@@ -749,6 +785,12 @@ msgid ""
 "interventions. The weighting factor [pt / (1 - pt)] reflects the relative "
 "harm of a false positive vs the benefit of a true positive."
 msgstr ""
+"<b>Чистая польза (Net Benefit, NB)</b>: интегральная мера клинической "
+"полезности модели, рассчитываемая как NB = (TP/N) - (FP/N) * [pt / (1 - pt)"
+"] - harm. Показывает эквивалентное число истинно выявленных положительных "
+"случаев на одного пациента без увеличения числа необоснованных вмешательств "
+"(ложноположительных). Весовой множитель [pt / (1 - pt)] отражает соотношение "
+"вреда ложноположительного результата к пользе истинноположительного."
 
 #: R/mui.b.R
 msgid "<b>NPV</b> - Negative Predictive Value of the negative class TN/(TN+FN)"
@@ -802,6 +844,10 @@ msgid ""
 "its maximum Net Benefit (Max Net Benefit). Balances detection of true events "
 "with avoidance of unnecessary interventions in the evaluated cohort."
 msgstr ""
+"<b>Оптимальный порог (Optimal Threshold)</b>: пороговая вероятность pt, при "
+"которой модель достигает максимума чистой пользы (Max Net Benefit). "
+"Обеспечивает наилучший баланс между выявлением истинных событий и "
+"предотвращением лишних вмешательств в когорте."
 
 #: R/msnp.b.R
 msgid ""
@@ -902,6 +948,9 @@ msgid ""
 "probabilities to remove systematic bias, adjust slope toward 1.000, and "
 "align intercept to 0.000 while preserving ROC discrimination."
 msgstr ""
+"<b>Перекалибровка (Recalibration)</b>: логистическая калибровка Платта для "
+"устранения систематического смещения вероятностей, приведения наклона к "
+"1.000 и свободного члена к 0.000 при сохранении дискриминации (ROC/AUC)."
 
 #: R/msrv.b.R
 msgid ""
@@ -962,6 +1011,9 @@ msgid ""
 "patient to account for financial costs, invasiveness, discomfort, or "
 "procedural complications of testing."
 msgstr ""
+"<b>Ущерб от теста (Test Harm)</b>: вычитаемый штраф {harm} ед. чистой пользы "
+"на одного пациента для учета финансовых затрат, инвазивности, дискомфорта "
+"или осложнений диагностической процедуры."
 
 #: R/msrv.b.R
 msgid ""
@@ -1005,6 +1057,11 @@ msgid ""
 "increasing pt and produces net clinical harm when unnecessary interventions "
 "outweigh true detections."
 msgstr ""
+"<b>Вмешательство всем (Treat All)</b>: тактика назначения вмешательства всем "
+"пациентам без диагностического тестирования (NB = Распространенность - (1 - "
+"Распространенность) * [pt / (1 - pt)] - harm). Обладает высокой пользой при "
+"низких порогах, однако быстро снижается с ростом pt и наносит вред, когда "
+"число неоправданных вмешательств превышает число выявленных случаев."
 
 #: R/mdca.b.R
 msgid ""
@@ -1012,6 +1069,10 @@ msgid ""
 "Benefit is identically zero (NB = 0) across all decision thresholds pt, as "
 "there are neither true positive benefits nor false positive harms."
 msgstr ""
+"<b>Не вмешиваться никому (Treat None)</b>: тактика отказа от вмешательства "
+"для всех пациентов. Чистая польза тождественно равна нулю (NB = 0) при всех "
+"порогах pt, так как отсутствуют как выявленные положительные случаи, так и "
+"ущерб от гипердиагностики."
 
 #: R/mui.b.R
 msgid ""
@@ -1039,6 +1100,10 @@ msgid ""
 "wider span (> 20-30%) demonstrates robustness of the model's clinical "
 "utility across diverse practitioner and patient risk tolerances."
 msgstr ""
+"<b>Ширина окна (Window Span)</b>: размах диапазона клинической применимости "
+"(Max % - Min %). Широкий диапазон (> 20-30%) подтверждает устойчивость "
+"клинической полезности модели при различных допустимых уровнях риска врачей "
+"и пациентов."
 
 #: R/mmf.b.R
 msgid "<h2>Help</h2><div>Please select complete and incomplete variables</div>"
@@ -1161,7 +1226,7 @@ msgstr "Тип области принятия"
 
 #: mPCA/results/regTable.columns.title
 msgid "Accuracy"
-msgstr "Точность (Accuracy)"
+msgstr "Аккуратность"
 
 #: mLR/results/misclassifiedTable.columns.title
 #: mMLP/results/matrixTable.columns.title
@@ -1217,7 +1282,7 @@ msgstr "массив MAR"
 
 #: mDCA/ui[2].label
 msgid "Analysis & Plot Options"
-msgstr ""
+msgstr "Параметры анализа и графиков"
 
 #: mPCA/ui[3].label
 msgid "Analysis by Groups"
@@ -1300,7 +1365,7 @@ msgstr "Средней связи"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Avoided at 20% (per 100)"
-msgstr ""
+msgstr "Предотвращено при 20% (на 100)"
 
 #: mLR/ui[3]/show_roc/roc_unit.label
 #: mMLP/ui[3]/show_roc/roc_unit.label
@@ -1439,7 +1504,7 @@ msgstr "Категориальная палитра Брюэр"
 
 #: mDCA/results/calTable.columns.title
 msgid "Brier Score"
-msgstr ""
+msgstr "Индекс Брайера"
 
 #: R/msnp.b.R
 msgid "Ca"
@@ -1467,15 +1532,15 @@ msgstr ""
 
 #: mDCA/options/calBins.title
 msgid "Calibration Deciles (Bins)"
-msgstr ""
+msgstr "Децили калибровки (группы)"
 
 #: mDCA/results/calTable.columns.title
 msgid "Calibration Intercept"
-msgstr ""
+msgstr "Свободный член калибровки"
 
 #: mDCA/results/calTable.columns.title
 msgid "Calibration Slope"
-msgstr ""
+msgstr "Наклон калибровки"
 
 #: R/msnp.b.R
 #: mSNP/results/qcGroup/qcTable.columns.title
@@ -1642,19 +1707,19 @@ msgstr "Классифицирующая переменная"
 
 #: mDCA/results/windowTable.title
 msgid "Clinical Decision Window"
-msgstr ""
+msgstr "Диапазон клинических решений"
 
 #: mDCA/options/showWindowTable.title
 msgid "Clinical Decision Window Table"
-msgstr ""
+msgstr "Таблица диапазона клинических решений"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Clinical Superiority"
-msgstr ""
+msgstr "Клиническое превосходство"
 
 #: mDCA/ui[1].label
 msgid "Clinical Threshold Settings"
-msgstr ""
+msgstr "Настройки клинических порогов"
 
 #: mLR/options/forestClip.title
 #: mLR/ui[3]/showForest/forestClip.label
@@ -1844,7 +1909,7 @@ msgstr "Матрица сопряженности (Кластеры vs Груп�
 #: mDCA/options/scores.title
 #: mDCA/ui[0][2].label
 msgid "Continuous Predictors / Scores"
-msgstr ""
+msgstr "Непрерывные предикторы / шкалы"
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Controls"
@@ -2098,13 +2163,15 @@ msgstr "решение"
 #: mDCA/ui.title
 #: mDCA/results.title
 msgid "Decision Curve Analysis (DCA)"
-msgstr ""
+msgstr "Анализ кривых принятия решений (DCA)"
 
 #: package/datasets/DecisionCurveAnalysisCHDmodels.description
 msgid ""
 "Decision Curve Analysis (DCA) and Model Calibration for CHD prediction "
 "models demonstration"
 msgstr ""
+"Демонстрация анализа кривых решений (DCA) и калибровки моделей "
+"прогнозирования ИБС"
 
 #: package/analyses/mDCA.description
 #: mDCA/options.description.main
@@ -2113,28 +2180,33 @@ msgid ""
 "benefit (Vickers et al., 2006) and interventions avoided for predictive "
 "models and biomarkers."
 msgstr ""
+"Анализ кривых решений (DCA) и калибровка моделей. Оценивает клиническую "
+"чистую пользу (Vickers et al., 2006) и предотвращенные вмешательства для "
+"прогностических моделей и биомаркеров."
 
 #: R/mdca.b.R
 msgid ""
 "Decision Curve Analysis (DCA) evaluates the clinical net benefit of "
 "prediction models and biomarkers across a range of decision thresholds."
 msgstr ""
+"Анализ кривых принятия решений (DCA) оценивает чистую клиническую пользу "
+"прогностических моделей и биомаркеров в диапазоне порогов принятия решений."
 
 #: R/mdca.b.R
 msgid "Decision Curve Analysis (Net Benefit)"
-msgstr ""
+msgstr "Анализ кривых решений (чистая польза)"
 
 #: package/datasets/DecisionCurveAnalysisCHDmodels.name
 msgid "Decision Curve Analysis CHD models"
-msgstr ""
+msgstr "Анализ кривых принятия решений моделей ИБС"
 
 #: mDCA/results/dcaPlot.title
 msgid "Decision Curves (Net Benefit vs Threshold)"
-msgstr ""
+msgstr "Кривые решений (чистая польза vs порог)"
 
 #: mDCA/options/showDcaPlot.title
 msgid "Decision Curves Plot (Net Benefit)"
-msgstr ""
+msgstr "График кривых решений (чистая польза)"
 
 #: mMF/results/estim/mcar.columns.title
 msgid "Degree of Freedom (df)"
@@ -2229,11 +2301,11 @@ msgstr "Доля исключённых наблюдений (%)"
 
 #: mDCA/results/calTable.columns.title
 msgid "E avg"
-msgstr ""
+msgstr "E средн."
 
 #: mDCA/results/calTable.columns.title
 msgid "E max"
-msgstr ""
+msgstr "E макс."
 
 #: mCOR/options/glassoType/ebic.title
 msgid "EBIC"
@@ -2458,6 +2530,15 @@ msgid ""
 "Polymorphism (SNP) association and Hardy-Weinberg equilibrium analysis, and "
 "Decision Curve Analysis (DCA) with model calibration."
 msgstr ""
+"Расширение функциональности популярных методов анализа данных: "
+"корреляционная кластеризация, ROC-классификация, оценка и импутация "
+"пропущенных значений, поиск и удаление одномерных и многомерных выбросов, "
+"оценка порогов методом неопределенного интервала (UI), априорный анализ "
+"мощности, классификатор на основе нейронной сети MLP, логистическая "
+"регрессия с отбором признаков, классификатор Random Forest, анализ "
+"выживаемости (Каплана–Мейера и регрессия Кокса), анализ главных компонент "
+"(PCA), ассоциация однонуклеотидных полиморфизмов (SNP) и равновесие Харди–"
+"Вайнберга, а также анализ кривых решений (DCA) с калибровкой моделей."
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "F_IS"
@@ -2641,7 +2722,7 @@ msgstr "Генотипы Контроль"
 
 #: R/mdca.b.R
 msgid "Getting started:"
-msgstr ""
+msgstr "Начало работы:"
 
 #: mCOR/options/netMethod/glasso.title
 msgid "Graphical Lasso (GLASSO)"
@@ -2717,7 +2798,7 @@ msgstr "Статистические тесты равновесия Харди-
 
 #: mDCA/options/harm.title
 msgid "Harm of Intervention"
-msgstr ""
+msgstr "Вред вмешательства"
 
 #: R/mpwr.b.R
 #: R/msrv.b.R
@@ -2999,7 +3080,7 @@ msgstr "Входной слой"
 
 #: mDCA/results/instructions.title
 msgid "Instructions"
-msgstr ""
+msgstr "Инструкции"
 
 #: R/msnp.b.R
 msgid "Interaction Order"
@@ -3032,11 +3113,11 @@ msgstr "Оценка интервалов"
 
 #: R/mdca.b.R
 msgid "Interventions Avoided (per 100 patients)"
-msgstr ""
+msgstr "Предотвращенные вмешательства (на 100 пациентов)"
 
 #: mDCA/options/showAvoidedPlot.title
 msgid "Interventions Avoided Plot"
-msgstr ""
+msgstr "График предотвращенных вмешательств"
 
 #: mPWR/options/icc.title
 #: mPWR/ui[1]/icc.label
@@ -3494,11 +3575,11 @@ msgstr "Максимальное количество итераций (эпох
 
 #: mDCA/results/dcaTable.columns.title
 msgid "Max Net Benefit"
-msgstr ""
+msgstr "Макс. чистая польза"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Max Threshold (%)"
-msgstr ""
+msgstr "Макс. порог (%)"
 
 #: mMF/options/maxiter.title
 msgid "Maximum number of iterations"
@@ -3506,7 +3587,7 @@ msgstr "Максимальное количество итераций"
 
 #: mDCA/options/threshMax.title
 msgid "Maximum Threshold"
-msgstr ""
+msgstr "Максимальный порог"
 
 #: mRF/options/maxdepth.title
 #: mRF/ui[1]/maxdepth.label
@@ -3563,7 +3644,7 @@ msgstr "Среднее уменьшение точности (%)"
 
 #: R/mdca.b.R
 msgid "Mean Predicted Probability"
-msgstr ""
+msgstr "Средняя предсказанная вероятность"
 
 #: R/mout.b.R
 msgid "Median"
@@ -3602,7 +3683,7 @@ msgstr "Метрика / Объект"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Min Threshold (%)"
-msgstr ""
+msgstr "Мин. порог (%)"
 
 #: mPWR/options/es.title
 #: mPWR/ui[1]/es.label
@@ -3642,7 +3723,7 @@ msgstr "Минимальный размер узла"
 
 #: mDCA/options/threshMin.title
 msgid "Minimum Threshold"
-msgstr ""
+msgstr "Минимальный порог"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -3764,28 +3845,28 @@ msgstr "Модель"
 #: mDCA/results/dcaTable.columns.title
 #: mDCA/results/windowTable.columns.title
 msgid "Model / Predictor"
-msgstr ""
+msgstr "Модель / Предиктор"
 
 #: mDCA/ui[3].label
 msgid "Model Calibration"
-msgstr ""
+msgstr "Калибровка модели"
 
 #: R/mdca.b.R
 #: mDCA/results/calPlot.title
 msgid "Model Calibration Curves (Observed vs Predicted)"
-msgstr ""
+msgstr "Калибровочные кривые моделей (наблюдаемые vs предсказанные)"
 
 #: mDCA/results/calTable.title
 msgid "Model Calibration Metrics"
-msgstr ""
+msgstr "Метрики калибровки моделей"
 
 #: mDCA/options/showCalPlot.title
 msgid "Model Calibration Plot"
-msgstr ""
+msgstr "График калибровки моделей"
 
 #: mDCA/options/showCalTable.title
 msgid "Model Calibration Table"
-msgstr ""
+msgstr "Таблица калибровки моделей"
 
 #: mLR/results/coeffTable.title
 msgid "Model Coefficients (Post-Selection / Refitted Model)"
@@ -3816,7 +3897,7 @@ msgstr "Столбчатая диаграмма эффективности мо�
 #: mDCA/options/probs.title
 #: mDCA/ui[0][1].label
 msgid "Model Probabilities (0 to 1)"
-msgstr ""
+msgstr "Вероятности моделей (от 0 до 1)"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -3882,7 +3963,7 @@ msgstr "Многомерное выявление и удаление выбро
 
 #: R/mdca.b.R
 msgid "must be probabilities between 0 and 1."
-msgstr ""
+msgstr "должны быть вероятностями от 0 до 1."
 
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "N at Risk"
@@ -3923,19 +4004,19 @@ msgstr "N2"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 10%"
-msgstr ""
+msgstr "ЧП при 10%"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 20%"
-msgstr ""
+msgstr "ЧП при 20%"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 30%"
-msgstr ""
+msgstr "ЧП при 30%"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 40%"
-msgstr ""
+msgstr "ЧП при 40%"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -3948,23 +4029,23 @@ msgstr "Отрицательный вес"
 
 #: R/mdca.b.R
 msgid "Net Benefit"
-msgstr ""
+msgstr "Чистая польза"
 
 #: mDCA/results/dcaTable.title
 msgid "Net Benefit at Key Clinical Thresholds"
-msgstr ""
+msgstr "Чистая польза при ключевых клинических порогах"
 
 #: mDCA/options/showDcaTable.title
 msgid "Net Benefit Summary Table"
-msgstr ""
+msgstr "Сводная таблица чистой пользы"
 
 #: R/mdca.b.R
 msgid "Net Reduction in Interventions"
-msgstr ""
+msgstr "Чистое сокращение вмешательств"
 
 #: mDCA/results/avoidedPlot.title
 msgid "Net Reduction in Interventions (per 100 patients)"
-msgstr ""
+msgstr "Чистое сокращение вмешательств (на 100 пациентов)"
 
 #: R/mcor.b.R
 msgid "Network ("
@@ -4006,7 +4087,7 @@ msgstr "Демонстрация классификатора нейронной
 
 #: R/mdca.b.R
 msgid "No clinical gain"
-msgstr ""
+msgstr "Нет клинического выигрыша"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -4220,7 +4301,7 @@ msgstr "Наблюдаемое p-value (-log10)"
 
 #: R/mdca.b.R
 msgid "Observed Proportion of Events"
-msgstr ""
+msgstr "Наблюдаемая доля событий"
 
 #: R/msnp.b.R
 #: mSNP/results/assocGroup/assocTable.columns.title
@@ -4293,7 +4374,7 @@ msgstr "Таблица прогнозируемых ошибок"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "Optimal Threshold"
-msgstr ""
+msgstr "Оптимальный порог"
 
 #: R/msnp.b.R
 #: mSNP/results/assocGroup/assocTable.columns.title
@@ -5046,7 +5127,7 @@ msgstr "Ранг"
 
 #: mDCA/options/recalibrate.title
 msgid "Recalibrate Probabilities (Platt Scaling)"
-msgstr ""
+msgstr "Перекалибровать вероятности (метод Платта)"
 
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/recessive.title
@@ -5060,7 +5141,7 @@ msgstr "Рецессивная"
 #: mLR/options/refLevel.title
 #: mLR/ui[0][0]/refLevel.label
 msgid "Reference"
-msgstr ""
+msgstr "Опорный"
 
 #: mUI/options/refval.title
 msgid "Reference level"
@@ -5407,7 +5488,7 @@ msgstr "Графики остатков Шёнфельда"
 
 #: R/mdca.b.R
 msgid "Score"
-msgstr ""
+msgstr "Шкала"
 
 #: mPCA/options/screePlot.title
 msgid "Scree plot with parallel analysis"
@@ -5447,6 +5528,8 @@ msgid ""
 "Select a binary target variable (Outcome), target event level, and at least "
 "one model probability column (values between 0 and 1)."
 msgstr ""
+"Выберите бинарную целевую переменную (исход), уровень целевого события и "
+"хотя бы один столбец вероятностей модели (значения от 0 до 1)."
 
 #: mCOR/options/selgroup.title
 #: mROC/options/selgroup.title
@@ -5747,7 +5830,7 @@ msgstr "Станд. ошибка"
 
 #: R/mdca.b.R
 msgid "Strategy / Model"
-msgstr ""
+msgstr "Стратегия / Модель"
 
 #: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
@@ -5764,7 +5847,7 @@ msgstr "Сумма"
 
 #: R/mdca.b.R
 msgid "Superior"
-msgstr ""
+msgstr "Превосходство"
 
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/superior.title
@@ -5825,11 +5908,13 @@ msgstr "Гиперб. тангенс"
 #: mDCA/options/targetLevel.title
 #: mDCA/ui[0][0]/targetLevel.label
 msgid "Target"
-msgstr ""
+msgstr "Целевой"
 
 #: R/mdca.b.R
 msgid "Target variable must contain both positive and negative cases."
 msgstr ""
+"Целевая переменная должна содержать как положительные, так и отрицательные "
+"случаи."
 
 #: mSNP/options/ternaryPlot.title
 #: mSNP/results/hweGroup/ternaryPlot.title
@@ -5940,11 +6025,11 @@ msgstr "Порог по Юдену"
 
 #: R/mdca.b.R
 msgid "Threshold Probability"
-msgstr ""
+msgstr "Пороговая вероятность"
 
 #: mDCA/options/threshStep.title
 msgid "Threshold Step"
-msgstr ""
+msgstr "Шаг порога"
 
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "Time"
@@ -5992,6 +6077,8 @@ msgid ""
 "Too few valid observations for Decision Curve Analysis (at least 10 "
 "required)."
 msgstr ""
+"Слишком мало валидных наблюдений для анализа кривых решений (требуется не "
+"менее 10)."
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -6063,11 +6150,11 @@ msgstr "Обучающая BA"
 
 #: R/mdca.b.R
 msgid "Treat All"
-msgstr ""
+msgstr "Лечить всех"
 
 #: R/mdca.b.R
 msgid "Treat None"
-msgstr ""
+msgstr "Не лечить никого"
 
 #: mSNP/options/assocForestTrunc.title
 msgid "Truncate large confidence intervals"
@@ -6205,7 +6292,7 @@ msgstr "Значение / Совпадений"
 
 #: R/mdca.b.R
 msgid "Values of"
-msgstr ""
+msgstr "Значения"
 
 #: R/mpca.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
@@ -6294,7 +6381,7 @@ msgstr "Уменьшение веса (регуляризация)"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Window Span (%)"
-msgstr ""
+msgstr "Ширина диапазона (%)"
 
 #: mROC/options/cmpDeLong/w05.title
 msgid "With 0.5"
