@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-07-07 01:16+0000\n"
-"Last-Translator: Jonathon Love <jon@thon.cc>\n"
-"Language-Team: Russian "
-"<https://hosted.weblate.org/projects/jamovi/module-vijplots/ru/>\n"
+"PO-Revision-Date: 2026-09-30 13:51+0000\n"
+"Last-Translator: Yuri Smolyakov <smolyakov@rambler.ru>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/jamovi/module-"
+"vijplots/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -19,11 +19,14 @@ msgid ""
 "\"Range\" option for the X-axis is only available for numeric and date "
 "variables."
 msgstr ""
+"Опция «Диапазон» для оси X доступна только для числовых переменных и "
+"переменных даты."
 
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "\"Tick Count\" option for the X-axis is only available for numeric variables."
 msgstr ""
+"Опция «Количество тиков» для оси X доступна только для числовых переменных."
 
 #: R/qqplot.b.R
 msgid "{distrib} distribution requires positive (>0) data."
@@ -51,7 +54,7 @@ msgstr "{rotation} было использовано вращение с нор�
 
 #: R/barchart.b.R
 msgid "{var} (Mean ± {level}% CI)"
-msgstr ""
+msgstr "{var} (среднее ± {level}% ДИ)"
 
 #: R/barchart.b.R
 msgid "{var} (Mean ± SD)"
@@ -144,7 +147,7 @@ msgstr "% от дисперсии"
 
 #: R/mrcrosstabs.b.R
 msgid "% within {category}"
-msgstr ""
+msgstr "% в течение {category}"
 
 #: R/likertplot.b.R
 msgid ""
@@ -176,6 +179,37 @@ msgid ""
 "possible.</p>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
 msgstr ""
+"<h3>Данные и сортировка</h3>\n"
+"<ул>\n"
+"<li>Переменные Лайкерта должны иметь порядковый тип меры. (Continual-Integer "
+"тоже работает.)</li>\n"
+"<li>Если вы планируете вычислять среднее/медиану/стандартное отклонение или "
+"использовать сравнительные тесты, они должны иметь целочисленный тип "
+"данных.</li>\n"
+"<li><strong>Упорядочить уровни</strong>. Если этот флажок установлен, "
+"попробуйте исправить порядок меток в таблице и на графике (когда некоторые "
+"переменные пропускают некоторые уровни).</li>\n"
+"<li><strong>Преобразовать переменные в целые числа:</strong> если этот "
+"флажок установлен, метки уровней игнорируются и используются только "
+"целочисленные значения.</li>\n"
+"<li><strong>Сортировка переменных по медиане:</strong> список переменных "
+"Лайкерта упорядочивается по медиане.</li>\n"
+"</ul>\n"
+"<h3>Сравнительные тесты</h3>\n"
+"<p>При использовании групповой переменной доступны несколько тестов:</p>\n"
+"<ул>\n"
+"<li><strong>Манн-Уитни У:</strong> Сравнение двух групп</li>\n"
+"<li><strong>Краскал-Уоллис:</strong> сравнение групп</li>\n"
+"<li><strong>Последующие тесты:</strong> тесты парного сравнения Данна, "
+"Коновера и Дуасса-Стил-Кричлоу-Флиннера (DSCF).</li>\n"
+"</ul>\n"
+"<p>Значения p можно корректировать <strong>по группам</strong> (для каждого "
+"вопроса) для апостериорных тестов или <strong>в целом</strong> (по группам и "
+"по вопросам) для тестов Манна-Уитни У, Крускала-Уоллиса и апостериорных "
+"тестов. P-значения DSCF уже скорректированы (по группам); никакая другая "
+"регулировка невозможна.</p>\n"
+"<p>Пример файла доступен в разделе «Открыть» > «Библиотека данных» > "
+"vijPlots > Likert</p>"
 
 #: package.description
 msgid ""
@@ -190,6 +224,17 @@ msgid ""
 "source (and changelog) is available at <a "
 "href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>.</p>"
 msgstr ""
+"<p>Основные статистические диаграммы, построенные с помощью <b>ggplot2</b> и "
+"предлагающие широкие возможности настройки:</p> <ul> <li><strong>Непрерывные "
+"переменные</strong>: гистограмма, коробчатая диаграмма, диаграмма дождевых "
+"облаков, точечная диаграмма, гистограмма ошибок, график леденца, график QQ</"
+"li> <li><strong>Категорические переменные</strong>: гистограмма, круговая "
+"диаграмма, мозаичный график, график Лайкерта</li> <li><strong>Временные "
+"ряды</strong>: линейная диаграмма, диаграмма с областями</li> <li><strong>"
+"Множественный ответ</strong>: частоты, кросс-таблица</li> </ul> <p>Модуль "
+"доступен на вкладке <strong>Графики</strong>.</p> <p>Исходный код проекта (и "
+"журнал изменений) доступен по адресу <a href=\"https://github.com/vjalby/"
+"vijPlots\" target=\"_blank\">Github</a>.</p>"
 
 #: R/corresp.b.R
 msgid ""
@@ -223,6 +268,35 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
 msgstr ""
+"<p>Этот модуль вычисляет <strong>Анализ соответствия (CA)</strong> для двух "
+"категориальных переменных. Расчеты основаны на пакете <a href = \"https://"
+"CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">FactoMineR<a/> Ф. "
+"Хуссона, Ж. Жосса, С. Ле, Ж. Мазе.</p>\n"
+"<p>Данные могут быть</p>\n"
+"<ул>\n"
+"<li><strong>Таблица наблюдений</strong> (необработанные данные), возможно, "
+"взвешенная с использованием встроенной системы весов <em>jamovi</em> или с "
+"использованием переменной «Counts».</li>\n"
+"<li>или <strong>Таблица непредвиденных обстоятельств</strong></li>\n"
+"</ul>\n"
+"<p><strong>Дополнительные номера строк или столбцов</strong> можно вводить в "
+"виде целых списков: 1,3,6</p>\n"
+"<p>Доступны четыре способа нормализации (масштабирование оценок строк и "
+"столбцов перед построением графика):</p>\n"
+"<ул>\n"
+"<li><strong>Основной принцип:</strong> оценки строк и столбцов "
+"масштабируются по собственным значениям.</li>\n"
+"<li><strong>Симметрично</strong>. Оценки строк и столбцов масштабируются по "
+"квадратному корню из собственных значений. </li>\n"
+"<li><strong>Основная строка:</strong> Только оценки строк масштабируются по "
+"собственным значениям.</li>\n"
+"<li><strong>Основной столбец:</strong> Только оценки столбца масштабируются "
+"по собственным значениям.</li>\n"
+"<li><strong>Стандарт:</strong> необработанные координаты без нормализации.</"
+"li>\n"
+"</ul>\n"
+"<p>Пример файла доступен в разделе «Открыть» > «Библиотека данных» > "
+"vijPlots > «Курение».</p>"
 
 #: R/multcorresp.b.R
 msgid ""
@@ -257,6 +331,36 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
 msgstr ""
+"<p>Этот модуль вычисляет <strong>Анализ множественного соответствия (MCA)</"
+"strong> для нескольких категориальных переменных. Расчеты основаны на пакете "
+"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
+"target=\"_blank\">FactoMineR<a/> Ф. Хуссона, Ж. Жосса, С. Ле, Ж. Мазе.</p>\n"
+"<p>Доступны оба классических метода:</p>\n"
+"<ул>\n"
+"<li><strong>Матрица индикаторов:</strong> CA матрицы индикаторов</li>\n"
+"<li><strong>Матрица Берта:</strong> CA матрицы Берта. Собственные значения "
+"представляют собой квадраты значений метода индикаторной матрицы. </li>\n"
+"</ul>\n"
+"<p>Оба метода дают одни и те же <em>стандартные</em> координаты и различия "
+"(но разные <em>основные</em> координаты).</p>\n"
+"<p>Если этот флажок установлен, <strong>Поправки Бензекри и Гринакра</"
+"strong> применяются только к собственным значениям (<strong>Сводная таблица</"
+"strong>). Главные координаты (и инерция) категорий и наблюдений вычисляются "
+"на основе исходных собственных значений матрицы Берта.</p>\n"
+"<p>Параметры <strong>Нормализация</strong> определяют способ масштабирования "
+"координат (по собственным значениям):</p>\n"
+"<ул>\n"
+"<li><strong>Основной:</strong> Координаты категории и наблюдения "
+"масштабируются.</li>\n"
+"<li><strong>Принцип категории:</strong> Масштабируются только координаты "
+"категории.</li>\n"
+"<li><strong>Принцип наблюдения:</strong> Масштабируются только координаты "
+"наблюдения.</li>\n"
+"<li><strong>Стандарт.</strong> Координаты категории и наблюдения являются "
+"стандартными.</li>\n"
+"</ul>\n"
+"<p>Пример файла доступен в разделе «Открыть» > «Библиотека данных» > "
+"vijPlots > «Автомобили».</p>"
 
 #: R/principal.b.R
 msgid ""
@@ -287,6 +391,36 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
 msgstr ""
+"<p>Этот модуль рассчитывает <strong>Анализ главных компонентов (PCA)</"
+"strong> для нескольких непрерывных переменных. Вычисления основаны на "
+"функции <tt>stats::prcomp</tt>.</p>\n"
+"<p>Хотя повернутые компоненты не являются основными компонентами, они широко "
+"используются. Доступны только ортогональные вращения (из пакета GPArotation)"
+".</p>\n"
+"<p>Нагрузки (переменные координаты) и оценки (координаты наблюдения) "
+"являются основными (масштабируются квадратным корнем собственных значений).</"
+"p>\n"
+"<p>Би-сюжет следует за «Би-сюжетом на практике» (Майкл Гринакр, 2010 г.):</p>"
+"\n"
+"<ул>\n"
+"<li><strong>Форма биплана:</strong> Оценки являются основными "
+"(масштабируются по собственным значениям), а нагрузки являются "
+"стандартными.</li>\n"
+"<li><strong>Диаграмма ковариации</strong>. Нагрузки являются основными, а "
+"оценки стандартными. </li>\n"
+"</ul>\n"
+"<p><strong>Дополнительные параметры</strong>:</p>\n"
+"<ул>\n"
+"<li><strong>Стандартизация нагрузок:</strong> нагрузки нормализуются с "
+"использованием сумм квадратов, равных 1 (вместо собственных значений).</li>\n"
+"<li><strong>Стандартизация оценок:</strong> оценки нормализуются с "
+"дисперсией, равной 1 (вместо собственных значений).</li>\n"
+"<li><strong>Поворот собственных векторов:</strong> поворот (варимакс и т. "
+"д.) применяется к собственным векторам (стандартным нагрузкам) вместо "
+"основных нагрузок (способ STATA).</li>\n"
+"</ul>\n"
+"<p>Пример файла доступен в меню «Открыть» > «Библиотека данных» > vijPlots > "
+"Iris</p>"
 
 #: R/mrfrequencies.b.R
 msgid ""
@@ -554,7 +688,7 @@ msgstr "6 месяцев"
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "A date variable must be in text format."
-msgstr ""
+msgstr "Переменная даты должна быть в текстовом формате."
 
 #: package/datasets/vijPlots.description
 msgid "A demonstration dataset for vijPlots module."
@@ -562,7 +696,7 @@ msgstr "Демонстрационный набор данных для моду
 
 #: package/datasets/Likert.description
 msgid "A demonstration dataset for vijPlots/Likert plot."
-msgstr ""
+msgstr "Демонстрационный набор данных для графика vijPlots/Ликерта."
 
 #: package/datasets/CreditCards.description
 msgid "A demonstration dataset for vijPlots/Multiple Response plots."
@@ -591,7 +725,7 @@ msgstr "Акцент"
 #: mosaic/options/accuracy.title
 #: mosaic/ui[2][0][2][0].label
 msgid "Accuracy"
-msgstr ""
+msgstr "Аккуратность"
 
 #: R/corresp.b.R
 msgid "Active Margin"
@@ -680,7 +814,7 @@ msgstr "Альфа"
 
 #: mosaic/options/alwaysShowGroupLegend.title
 msgid "Always show group legend"
-msgstr ""
+msgstr "Всегда показывать легенду группы"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -837,7 +971,7 @@ msgstr "Цвет контейнера"
 
 #: histogram/options/binOpacity.title
 msgid "Bin opacity"
-msgstr ""
+msgstr "Непрозрачность ячейки"
 
 #: histogram/ui[1][1][0].label
 msgid "Bin Size"
@@ -901,7 +1035,7 @@ msgstr "Черный"
 #: piechart/options/facetStyle/border.title
 #: scatterplot/options/facetStyle/border.title
 msgid "Black border"
-msgstr ""
+msgstr "Черная граница"
 
 #: corresp/options/rowColor/blue.title
 #: corresp/options/colColor/blue.title
@@ -1106,7 +1240,7 @@ msgstr "Бонферрони"
 #: qqplot/options/methodQQ/boot.title
 #: qqplot/options/methodPP/boot.title
 msgid "Bootstrap"
-msgstr ""
+msgstr "Бутстрап"
 
 #: barchart/options/borderColor.title
 #: barplot/options/borderColor.title
@@ -1271,7 +1405,7 @@ msgstr "Текст подписи"
 #: raincloud/options/colorPalette/custom::carbon_dark.title
 #: scatterplot/options/colorPalette/custom::carbon_dark.title
 msgid "Carbon:Dark"
-msgstr ""
+msgstr "Карбон:Темный"
 
 #: areachart/options/colorPalette/custom::carbon_light.title
 #: barchart/options/colorPalette/custom::carbon_light.title
@@ -1289,7 +1423,7 @@ msgstr ""
 #: raincloud/options/colorPalette/custom::carbon_light.title
 #: scatterplot/options/colorPalette/custom::carbon_light.title
 msgid "Carbon:Light"
-msgstr ""
+msgstr "Карбон: Легкий"
 
 #: package/analyses/barplot.menuSubgroup
 #: package/analyses/piechart.menuSubgroup
@@ -1455,7 +1589,7 @@ msgstr "Хи-квадрат"
 
 #: mosaic/options/labelColor.title
 msgid "Color"
-msgstr ""
+msgstr "Цвет"
 
 #: barchart/options/colorNo.title
 #: barplot/options/colorNo.title
@@ -1501,7 +1635,7 @@ msgstr "Цвета"
 
 #: scatterplot/ui[2].label
 msgid "Colors & Element Sizes"
-msgstr ""
+msgstr "Цвета и размеры элементов"
 
 #: boxplot/ui[2].label
 #: qqplot/ui[4].label
@@ -1583,11 +1717,11 @@ msgstr "Сравнительные тесты"
 
 #: R/likertplot.b.R
 msgid "Comparison tests require at least two groups."
-msgstr ""
+msgstr "Сравнительные тесты требуют как минимум двух групп."
 
 #: R/likertplot.b.R
 msgid "Comparison tests require numeric variables."
-msgstr ""
+msgstr "Сравнительные тесты требуют числовых переменных."
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
@@ -1596,7 +1730,7 @@ msgstr "Компонент"
 
 #: R/principal.b.R
 msgid "Component {n} ({perc} %)"
-msgstr ""
+msgstr "Компонент {n} ({perc} %)"
 
 #: R/principal.b.R
 msgid "Component Plot"
@@ -1696,7 +1830,7 @@ msgstr "Количество"
 #: mrcrosstabs/options/showLabels.title
 #: mrfrequencies/options/showLabels.title
 msgid "Count labels"
-msgstr ""
+msgstr "Подсчитайте этикетки"
 
 #: mrcrosstabs/options/endorsed.title
 #: mrfrequencies/options/endorsed.title
@@ -1706,7 +1840,7 @@ msgstr "Подсчитанное значение"
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
 msgid "Counted value string may not be empty."
-msgstr ""
+msgstr "Строка подсчитанного значения не может быть пустой."
 
 #: R/mrfrequencies.b.R
 #: likertplot/options/frequencies/counts.title
@@ -1734,19 +1868,19 @@ msgstr "Счетчики (необязательно)"
 #: R/mosaic.b.R
 #: R/piechart.b.R
 msgid "Counts may not be infinite."
-msgstr ""
+msgstr "Счеты не могут быть бесконечными."
 
 #: R/barplot.b.R
 #: R/corresp.b.R
 #: R/mosaic.b.R
 #: R/piechart.b.R
 msgid "Counts may not be negative."
-msgstr ""
+msgstr "Счетчики не могут быть отрицательными."
 
 #: R/barplot.b.R
 #: R/mosaic.b.R
 msgid "Counts may not contain missing values."
-msgstr ""
+msgstr "Счетчики не могут содержать пропущенных значений."
 
 #: principal/ui[4][2][0]/biplotType_covPlot.label
 msgid "Cov (Loading principal)"
@@ -1896,7 +2030,7 @@ msgstr "по умолчанию"
 #: piechart/options/facetStyle/default.title
 #: scatterplot/options/facetStyle/default.title
 msgid "Default"
-msgstr ""
+msgstr "По умолчанию"
 
 #: R/histogram.b.R
 #: histogram/options/histtype/density.title
@@ -1953,7 +2087,7 @@ msgstr "Dim"
 #: R/multcorresp.b.R
 #: R/principal.b.R
 msgid "Dim {n}"
-msgstr ""
+msgstr "Тусклый {n}"
 
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -1963,7 +2097,7 @@ msgstr "Измерение"
 #: R/corresp.b.R
 #: R/multcorresp.b.R
 msgid "Dimension {n} ({perc} %)"
-msgstr ""
+msgstr "Размерность {n} ({perc} %)"
 
 #: R/multcorresp.b.R
 msgid "Discrimination"
@@ -2071,7 +2205,7 @@ msgstr "Эквамакс"
 #: barchart/ui.title
 #: barchart/results.title
 msgid "Error Bar Chart"
-msgstr ""
+msgstr "Гистограмма ошибок"
 
 #: barchart/ui[3][1][0].label
 msgid "Error Bar Size"
@@ -2104,7 +2238,7 @@ msgstr "Экспоненциальное распределение требуе
 
 #: R/principal.b.R
 msgid "Extraction"
-msgstr ""
+msgstr "Добыча"
 
 #: principal/results/summaryTable.columns.superTitle
 msgid "Extraction Sums of Squared Loadings"
@@ -2142,7 +2276,7 @@ msgstr "Фасет"
 #: piechart/ui[4][1][0].label
 #: scatterplot/ui[3][0][1][0].label
 msgid "Facet Labels"
-msgstr ""
+msgstr "Фасетные метки"
 
 #: barchart/ui[5].label
 #: barchart/ui[5][0][0][0].label
@@ -2339,7 +2473,7 @@ msgstr "Серый"
 #: piechart/options/facetStyle/background.title
 #: scatterplot/options/facetStyle/background.title
 msgid "Gray background"
-msgstr ""
+msgstr "Серый фон"
 
 #: corresp/options/rowColor/forestgreen.title
 #: corresp/options/colColor/forestgreen.title
@@ -2380,7 +2514,7 @@ msgstr "Коррекция Гринакра"
 
 #: R/multcorresp.b.R
 msgid "Greenacre's corrected inertia = {inertia}"
-msgstr ""
+msgstr "Скорректированная инерция Гринакра = {inertia}"
 
 #: areachart/options/colorPalette/Greens.title
 #: barchart/options/colorPalette/Greens.title
@@ -2472,7 +2606,7 @@ msgstr "Группировать по"
 
 #: mosaic/options/yAxis/label.title
 msgid "Group label"
-msgstr ""
+msgstr "Ярлык группы"
 
 #: barchart/options/barType/dodge2.title
 #: barplot/options/barType/dodge2.title
@@ -2514,7 +2648,7 @@ msgstr "Групповой"
 #: multcorresp/options.menuGroup
 #: principal/options.menuGroup
 msgid "hidden"
-msgstr ""
+msgstr "скрытый"
 
 #: likertplot/options/hideLabelsBelow.title
 msgid "Hide % labels below 5%"
@@ -2522,7 +2656,7 @@ msgstr "Скрыть % меток ниже 5%"
 
 #: mosaic/options/hideAxes.title
 msgid "Hide axes"
-msgstr ""
+msgstr "Скрыть оси"
 
 #: package/analyses/histogram.title
 #: package/analyses/histogram.menuTitle
@@ -2884,7 +3018,7 @@ msgstr "Размер шрифта меток"
 
 #: mosaic/ui[2][0][1][0].label
 msgid "Label Format"
-msgstr ""
+msgstr "Формат этикетки"
 
 #: mosaic/ui[2].label
 #: piechart/ui[2][0][1][0].label
@@ -2938,7 +3072,7 @@ msgstr "Размер метки"
 #: mosaic/options/labelType.title
 #: mosaic/ui[2][0][0][0].label
 msgid "Label Type"
-msgstr ""
+msgstr "Тип этикетки"
 
 #: piechart/options/labels.title
 #: piechart/ui[1][1][0].label
@@ -3194,6 +3328,7 @@ msgstr "График Лайкерта"
 #: R/likertplot.b.R
 msgid "Likert Plot requires ordinal (or continuous-integer) variables."
 msgstr ""
+"Для графика Лайкерта требуются порядковые (или целочисленные) переменные."
 
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
@@ -3299,12 +3434,12 @@ msgstr "Вручную"
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "Manual X-axis range doesn't have a valid date format."
-msgstr ""
+msgstr "Диапазон оси X вручную не имеет допустимого формата даты."
 
 #: mosaic/options/residualsAsOpacity.title
 #: mosaic/ui[3][0][1][0]/residualsAsOpacity.label
 msgid "Map to residuals"
-msgstr ""
+msgstr "Сопоставить остатки"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -3370,11 +3505,11 @@ msgstr "Май"
 
 #: R/multcorresp.b.R
 msgid "MCA Principal Coordinates ({method})"
-msgstr ""
+msgstr "Основные координаты MCA ({method})"
 
 #: R/multcorresp.b.R
 msgid "MCA Standard Coordinates ({method})"
-msgstr ""
+msgstr "Стандартные координаты MCA ({method})"
 
 #: barchart/options/yaxis/mean.title
 #: barchart/ui[1][0][0][0]/yaxis_mean.label
@@ -3390,7 +3525,7 @@ msgstr "Среднее и стандартное отклонение"
 
 #: histogram/options/meanLine.title
 msgid "Mean line"
-msgstr ""
+msgstr "Средняя линия"
 
 #: R/barchart.b.R
 #: R/lollipop.b.R
@@ -3412,7 +3547,7 @@ msgstr "Медиана и среднее требуют числовых пер�
 
 #: histogram/options/medianLine.title
 msgid "Median line"
-msgstr ""
+msgstr "Срединная линия"
 
 #: R/barchart.b.R
 #: R/lollipop.b.R
@@ -3445,7 +3580,7 @@ msgstr "Метод моментов (ММЕ)"
 
 #: R/multcorresp.b.R
 msgid "Method: {method}"
-msgstr ""
+msgstr "Метод: {method}"
 
 #: barplot/options/labelPosition/middle.title
 #: barplot/ui[2][0][1][0]/labelPosition_middle.label
@@ -3507,7 +3642,7 @@ msgstr "Минимум {var}"
 #: mosaic/ui.title
 #: mosaic/results.title
 msgid "Mosaic Plot"
-msgstr ""
+msgstr "Мозаичный сюжет"
 
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
@@ -3563,16 +3698,18 @@ msgstr "Имя"
 
 #: qqplot/options/transLog.title
 msgid "Natural log transform"
-msgstr ""
+msgstr "Преобразование натурального бревна"
 
 #: R/qqplot.b.R
 msgid "Natural Log Transform requires positive (>0) data."
 msgstr ""
+"Для естественно-логарифмического преобразования требуются положительные (>0) "
+"данные."
 
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
 msgid "No distinct values found in the selected variable."
-msgstr ""
+msgstr "В выбранной переменной не найдено различных значений."
 
 #: R/principal.b.R
 msgid "No rotation used."
@@ -3691,11 +3828,11 @@ msgstr "Нормализация"
 
 #: R/principal.b.R
 msgid "Not enough complete observations to perform PCA."
-msgstr ""
+msgstr "Недостаточно полных наблюдений для выполнения PCA."
 
 #: R/corresp.b.R
 msgid "Not enough data to compute CA."
-msgstr ""
+msgstr "Недостаточно данных для расчета CA."
 
 #: boxplot/options/notchWidth.title
 msgid "Notch width"
@@ -3726,7 +3863,7 @@ msgstr "Количество случаев"
 
 #: R/mrfrequencies.b.R
 msgid "Number of cases: {n}"
-msgstr ""
+msgstr "Количество случаев: {n}"
 
 #: corresp/options/dimNum.title
 #: multcorresp/options/dimNum.title
@@ -3745,7 +3882,7 @@ msgstr "Цвет наблюдения"
 #: R/principal.b.R
 #: principal/results/obsTable.columns.title
 msgid "Observation"
-msgstr ""
+msgstr "Наблюдение"
 
 #: multcorresp/results/obsCoordOV.title
 #: principal/results/obsCoordOV.title
@@ -3845,7 +3982,7 @@ msgstr "только"
 
 #: mosaic/ui[3][0][1][0].label
 msgid "Opacity"
-msgstr ""
+msgstr "Непрозрачность"
 
 #: mrcrosstabs/options/optionname.title
 #: mrfrequencies/options/optionname.title
@@ -3946,7 +4083,7 @@ msgstr "Другие варианты"
 
 #: boxplot/options/showOutliers.title
 msgid "Outliers"
-msgstr ""
+msgstr "Выбросы"
 
 #: R/mrcrosstabs.b.R
 #: likertplot/options/pValue/overall.title
@@ -4045,11 +4182,11 @@ msgstr "Оценки параметров"
 
 #: R/qqplot.b.R
 msgid "Parameter Estimates (MLE)"
-msgstr ""
+msgstr "Оценки параметров (MLE)"
 
 #: R/qqplot.b.R
 msgid "Parameter Estimates (MME)"
-msgstr ""
+msgstr "Оценки параметров (MME)"
 
 #: R/qqplot.b.R
 #: qqplot/ui[3].label
@@ -4107,7 +4244,7 @@ msgstr "Главные координаты МГК (PCA)"
 
 #: R/principal.b.R
 msgid "PCA Principal Coordinates ({rot})"
-msgstr ""
+msgstr "Главные координаты PCA ({rot})"
 
 #: R/principal.b.R
 msgid "PCA Standard Coordinates"
@@ -4115,11 +4252,11 @@ msgstr "Стандартные координаты МГК (PCA)"
 
 #: R/principal.b.R
 msgid "PCA Standard Coordinates ({rot})"
-msgstr ""
+msgstr "Стандартные координаты PCA ({rot})"
 
 #: mosaic/options/labelType/residuals.title
 msgid "Pearson residuals"
-msgstr ""
+msgstr "Остатки Пирсона"
 
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
@@ -4196,7 +4333,7 @@ msgstr "Цвета графика"
 
 #: scatterplot/options/plotBorder.title
 msgid "Plot frame"
-msgstr ""
+msgstr "Рамка графика"
 
 #: areachart/ui[1][0][0].label
 #: barchart/ui[2].label
@@ -4274,7 +4411,7 @@ msgstr "Точки"
 
 #: scatterplot/options/keepNA.title
 msgid "Points with missing group/label"
-msgstr ""
+msgstr "Точки с отсутствующей группой/меткой"
 
 #: qqplot/options/methodQQ/pointwise.title
 msgid "Pointwise"
@@ -4693,7 +4830,7 @@ msgstr "Линия регрессии"
 
 #: R/mosaic.b.R
 msgid "Residuals"
-msgstr ""
+msgstr "Остатки"
 
 #: raincloud/options/reverse.title
 msgid "Reverse disposition"
@@ -4950,11 +5087,13 @@ msgid ""
 "Select the \"Convert variables to integers\" option when the variables are "
 "not of the same type."
 msgstr ""
+"Выберите опцию «Преобразовать переменные в целые числа», если переменные не "
+"одного типа."
 
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "Sep"
-msgstr ""
+msgstr "Sep"
 
 #: mrcrosstabs/options/separator.title
 #: mrfrequencies/options/separator.title
@@ -4964,7 +5103,7 @@ msgstr "Разделитель"
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
 msgid "Separator string may not be empty."
-msgstr ""
+msgstr "Строка-разделитель не может быть пустой."
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -5031,7 +5170,7 @@ msgstr "Несколько переменных"
 
 #: scatterplot/options/groupShapes.title
 msgid "Shape by group"
-msgstr ""
+msgstr "Форма по группе"
 
 #: likertplot/options/addLabels.title
 msgid "Show % labels"
@@ -5039,11 +5178,11 @@ msgstr "Показать % меток"
 
 #: histogram/options/showBins.title
 msgid "Show bins"
-msgstr ""
+msgstr "Показать корзины"
 
 #: mosaic/options/showCategoryPercent.title
 msgid "Show category %"
-msgstr ""
+msgstr "Показать категорию %"
 
 #: histogram/options/density.title
 msgid "Show density"
@@ -5051,11 +5190,11 @@ msgstr "Показать плотность"
 
 #: histogram/options/summaryLineLabel.title
 msgid "Show label"
-msgstr ""
+msgstr "Показать ярлык"
 
 #: mosaic/options/showOpacityLegend.title
 msgid "Show legend"
-msgstr ""
+msgstr "Показать легенду"
 
 #: scatterplot/options/regLine.title
 msgid "Show line"
@@ -5166,11 +5305,11 @@ msgstr "Решение"
 
 #: R/corresp.b.R
 msgid "Some categories have zero counts and must be removed."
-msgstr ""
+msgstr "Некоторые категории имеют нулевое количество и должны быть удалены."
 
 #: R/corresp.b.R
 msgid "Some values are missing from the contingency table."
-msgstr ""
+msgstr "Некоторые значения отсутствуют в таблице сопряженности."
 
 #: likertplot/options/sorting.title
 #: likertplot/ui[1][1][0].label
@@ -5274,6 +5413,7 @@ msgstr "Стандартизируйте переменные"
 #: R/qqplot.b.R
 msgid "Standardized data cannot fit {distrib} distribution."
 msgstr ""
+"Стандартизированные данные не могут соответствовать распределению {distrib}."
 
 #: R/qqplot.b.R
 msgid "Standardized Sample Quantiles"
@@ -5314,7 +5454,7 @@ msgstr "Студент"
 #: piechart/options/facetStyle.title
 #: scatterplot/options/facetStyle.title
 msgid "Style"
-msgstr ""
+msgstr "Стиль"
 
 #: areachart/ui[4][1].label
 #: barchart/ui[8][1].label
@@ -5472,13 +5612,15 @@ msgstr "Размер и цвет текста"
 
 #: R/principal.b.R
 msgid "The correlation matrix is nearly singular. Computations may not be accurate."
-msgstr ""
+msgstr "Корреляционная матрица почти сингулярна. Расчеты могут быть неточными."
 
 #: R/principal.b.R
 msgid ""
 "The following variable(s) are constant and cannot be used in a principal "
 "component analysis: {vars}."
 msgstr ""
+"Следующие переменные являются постоянными и не могут использоваться в "
+"анализе главных компонент: {vars}."
 
 #: R/multcorresp.b.R
 msgid "The number of dimensions cannot be greater than {max}."
@@ -5486,7 +5628,7 @@ msgstr "Количество измерений не может превышат
 
 #: R/principal.b.R
 msgid "The number of dimensions cannot be greater than the number of observations."
-msgstr ""
+msgstr "Число измерений не может быть больше количества наблюдений."
 
 #: R/principal.b.R
 msgid "The number of dimensions cannot be greater than the number of variables."
@@ -5497,14 +5639,16 @@ msgid ""
 "The singular value for dimension {n} is close to zero. The plots may not be "
 "accurate."
 msgstr ""
+"Единственное значение для измерения {n} близко к нулю. Сюжеты могут быть "
+"неточными."
 
 #: R/qqplot.b.R
 msgid "The variance of the variable is equal to zero."
-msgstr ""
+msgstr "Дисперсия переменной равна нулю."
 
 #: R/corresp.b.R
 msgid "The χ2 statistic is equal to zero."
-msgstr ""
+msgstr "Статистика χ2 равна нулю."
 
 #: R/qqplot.b.R
 msgid "Theoretical Probabilities"
@@ -5521,12 +5665,14 @@ msgid ""
 "This analysis is deprecated and kept only for backward compatibility with "
 "existing documents. Please use vijMulti module instead."
 msgstr ""
+"Этот анализ устарел и сохраняется только для обратной совместимости с "
+"существующими документами. Вместо этого используйте модуль vijMulti."
 
 #: corresp/ui[0][0].label
 #: multcorresp/ui[0][0].label
 #: principal/ui[0][0].label
 msgid "This analysis is deprecated. Please use vijMulti module instead."
-msgstr ""
+msgstr "Этот анализ устарел. Вместо этого используйте модуль vijMulti."
 
 #: areachart/options/xTicks.title
 #: areachart/options/yTicks.title
@@ -5707,7 +5853,7 @@ msgstr "Порядок:Приморье"
 
 #: mosaic/ui[3].label
 msgid "Tile Options"
-msgstr ""
+msgstr "Параметры плитки"
 
 #: package/analyses/linechart.menuSubgroup
 #: package/analyses/areachart.menuSubgroup
@@ -5808,31 +5954,33 @@ msgstr "Тип"
 
 #: R/corresp.b.R
 msgid "Unable to compute correspondence analysis for the selected data."
-msgstr ""
+msgstr "Невозможно выполнить анализ соответствия для выбранных данных."
 
 #: R/multcorresp.b.R
 msgid "Unable to compute MCA because of too many missing values."
 msgstr ""
+"Невозможно вычислить MCA из-за слишком большого количества пропущенных "
+"значений."
 
 #: R/multcorresp.b.R
 msgid "Unable to compute MCA for the selected variables."
-msgstr ""
+msgstr "Невозможно вычислить MCA для выбранных переменных."
 
 #: R/principal.b.R
 msgid "Unable to compute principal components for the selected variables."
-msgstr ""
+msgstr "Невозможно вычислить главные компоненты для выбранных переменных."
 
 #: R/principal.b.R
 msgid "Unable to compute the correlation matrix."
-msgstr ""
+msgstr "Невозможно вычислить корреляционную матрицу."
 
 #: R/corresp.b.R
 msgid "Unable to compute the χ2 statistic."
-msgstr ""
+msgstr "Невозможно вычислить статистику χ2."
 
 #: R/qqplot.b.R
 msgid "Unable to estimate the distribution parameters using {method} method."
-msgstr ""
+msgstr "Невозможно оценить параметры распределения методом {method}."
 
 #: R/principal.b.R
 msgid "Unable to use {rotation} rotation."
@@ -5912,7 +6060,7 @@ msgstr "Переменная"
 
 #: likertplot/options/descAsVarName.title
 msgid "Variable descriptions as names"
-msgstr ""
+msgstr "Описания переменных в виде имен"
 
 #: multcorresp/results/discrim.title
 msgid "Variable Discriminations"
@@ -5921,7 +6069,7 @@ msgstr "Переменная дискриминация"
 #: multcorresp/options/showDiscriminations.title
 #: multcorresp/options/showDiscriminationPlot.title
 msgid "Variable discriminations"
-msgstr ""
+msgstr "Переменная дискриминация"
 
 #: principal/options/varTitleText.title
 #: principal/options/varSubtitleText.title
@@ -6207,7 +6355,7 @@ msgstr "Ось X — это дата"
 #: mosaic/options/order.title
 #: mosaic/ui[1][1][1].label
 msgid "X-Axis Order"
-msgstr ""
+msgstr "Порядок оси X"
 
 #: barchart/options/xAxisRangeType.title
 #: barplot/options/xAxisRangeType.title
@@ -6370,4 +6518,4 @@ msgstr "Желтый к красному"
 
 #: R/corresp.b.R
 msgid "χ² = {chisq}, df = {df}, p-value = {pval}"
-msgstr ""
+msgstr "χ² = {chisq}, df = {df}, значение p = {pval}"
