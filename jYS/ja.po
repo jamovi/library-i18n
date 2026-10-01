@@ -1,20 +1,20 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-07-17 23:52+0000\n"
-"Last-Translator: Jonathon Love <jon@thon.cc>\n"
-"Language-Team: Japanese "
-"<https://hosted.weblate.org/projects/jamovi/module-jys/ja/>\n"
+"PO-Revision-Date: 2026-10-05 04:18+0000\n"
+"Last-Translator: SHIBATA Seiji <contact@sbtseiji.net>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/jamovi/module-"
+"jys/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: Weblate 2026.10.1.dev0\n"
 
 #: R/msnp.b.R
 msgid "-log10(p-value)"
-msgstr ""
+msgstr "-log10（p値）"
 
 #: R/mlr.b.R
 msgid "(Intercept)"
@@ -61,18 +61,18 @@ msgstr "%"
 
 #: mPCA/results/varianceTable.columns.title
 msgid "% of variance"
-msgstr ""
+msgstr "分散%"
 
 #: mMOUT/results/stat.columns.title
 msgid "% Outliers"
-msgstr ""
+msgstr "外れ値率（%）"
 
 #: R/mout.b.R
 #: R/mui.b.R
 msgid ""
 "<b>*p<0.05</b> - The hypothesis of normal distribution was rejected by the "
 "Shapiro-Wilk test"
-msgstr ""
+msgstr "<b>*p<0.05</b> シャピロ=ウィルク検定により、正規性の仮説は棄却されました"
 
 #: R/msnp.b.R
 msgid ""
@@ -80,6 +80,9 @@ msgid ""
 "alleles in the sample. For a biallelic marker with alleles A and B: p = "
 "freq(A) = (2*n_AA + n_AB) / (2*N), q = 1 - p."
 msgstr ""
+"<b>アレル頻度（p, q）</b>は、標本における2つの遺伝子型（アレル）の割合を表し"
+"ます。アレルAとBをもつ二対立遺伝子マーカーの場合、次の通りです：p = freq(A) "
+"= (2*n_AA + n_AB) / (2*N), q = 1 - p。"
 
 #: R/msnp.b.R
 msgid ""
@@ -87,6 +90,9 @@ msgid ""
 "groups using a 2×2 contingency table. Tests whether the minor allele is "
 "significantly more (or less) frequent in cases than controls."
 msgstr ""
+"<b>アレル検定</b>は、2×2分割表を用いて、ケース群と対照群のアレル頻度を比較し"
+"ます。マイナーアレルの頻度が、対照群と比べてケース群で有意に高い（または低い"
+"）かどうかを検定します。"
 
 #: R/mpwr.b.R
 msgid ""
@@ -94,6 +100,9 @@ msgid ""
 "acceptable probability of committing a Type I error (detecting a false "
 "positive difference when none actually exists)."
 msgstr ""
+"<b>アルファ（α）</b>は有意水準であり、第1種の誤り（実際には差がないにもかかわ"
+"らず、差があると誤って判断すること）を犯す確率として許容する最大値を表します"
+"。"
 
 #: R/mdca.b.R
 msgid ""
@@ -107,12 +116,16 @@ msgid ""
 "<b>Balance</b> - balance between correctly and incorrectly classified cases "
 "(TP+TN)/(FP+FN)"
 msgstr ""
+"<b>バランス</b> ― 正しく分類されたケースと誤って分類されたケースの比率  "
+"(TP+TN)/(FP+FN)"
 
 #: R/msnp.b.R
 msgid ""
 "<b>Balanced Accuracy (BA)</b> = (Sensitivity + Specificity) / 2. Accounts "
 "for class imbalance. BA = 0.5 indicates random classification."
 msgstr ""
+"<b>バランス精度（BA） </b> =（感度 + 特異度）/ 2。クラス間の不均衡を考慮した"
+"指標です。BA = 0.5 はランダムな分類を示します。"
 
 #: R/msnp.b.R
 msgid ""
@@ -120,6 +133,9 @@ msgid ""
 "AIC/BIC) is highlighted. This helps identify the most likely mode of "
 "inheritance for the observed association."
 msgstr ""
+"<b>最適モデルの選択</b> ：p値（またはAIC/BIC）が最も低い遺伝モデルが強調表示"
+"されます。これにより、観察された関連性について、最も可能性の高い遺伝形式を特"
+"定できます。"
 
 #: R/mcor.b.R
 msgid ""
@@ -127,6 +143,8 @@ msgid ""
 "pass through this node; shows its importance as a \"bridge\" or transit "
 "point."
 msgstr ""
+"<b>媒介中心性（BETWEENNESS）</b> ：すべてのノードのペア間の最短経路のうち、こ"
+"のノードを通る経路の数です。「橋渡し」や中継点としての重要性を示します。"
 
 #: R/mdca.b.R
 msgid ""
@@ -138,7 +156,7 @@ msgstr ""
 
 #: R/mpwr.b.R
 msgid "<b>Calculated parameter</b>:"
-msgstr ""
+msgstr "<b>算出パラメータ</b> ："
 
 #: R/mdca.b.R
 msgid ""
@@ -160,13 +178,15 @@ msgstr ""
 msgid ""
 "<b>CCR</b> - Correct Classification Rate or accuracy of the positive and "
 "negative classifications (TP+TN)/(TN+FP+FN+TP)"
-msgstr ""
+msgstr "<b>CCR</b> ― 正分類率。陽性・陰性を正しく分類できた割合 (TP+TN)/(TN+FP+FN+TP)"
 
 #: R/mcor.b.R
 msgid ""
 "<b>Centrality metrics</b> (different measures of a node's importance in the "
 "network)."
 msgstr ""
+"<b>中心性指標</b> （ネットワーク内におけるノードの重要性を表すさまざまな指標"
+"）。"
 
 #: R/msnp.b.R
 msgid ""
@@ -174,12 +194,18 @@ msgid ""
 "comparing observed and expected genotype counts under HWE. Suitable for "
 "large sample sizes (N > 50). Asymptotic; may be unreliable for rare alleles."
 msgstr ""
+"<b>χ² 検定</b> は、HWE（ハーディ・ワインベルグ平衡）のもとで観測された遺伝子"
+"型数と期待される遺伝子型数を比較する、古典的なピアソンの適合度検定です。大標"
+"本（N > 50）に適しています。漸近的な検定であるため、まれなアレルでは信頼性が"
+"低くなる場合があります。"
 
 #: R/msnp.b.R
 msgid ""
 "<b>Classification</b> defines the epistatic model: subjects in HR cells are "
 "predicted as cases, LR cells as controls."
 msgstr ""
+"<b>分類</b> はエピスタシスモデルを定義します。HRセルの対象者はケース、LRセル"
+"の対象者は対照と予測されます。"
 
 #: R/mdca.b.R
 msgid ""
@@ -210,6 +236,9 @@ msgid ""
 "<b>CLOSENESS</b>: inverse of the sum of shortest path lengths to all other "
 "nodes; shows how central a node is in terms of distance."
 msgstr ""
+"<b>近接中心性（CLOSENESS）</b>：他のすべてのノードへの最短経路長の合計の逆数"
+"です。距離の観点から、そのノードがネットワークの中心にどの程度位置しているか"
+"を示します。"
 
 #: R/mpwr.b.R
 msgid ""
@@ -218,6 +247,9 @@ msgid ""
 "subjects within the same cluster using the Intraclass Correlation "
 "Coefficient (<b>ICC</b>) and average cluster size via the Design Effect."
 msgstr ""
+"<b>クラスター数（k1/k2）</b>は、各群に必要なクラスター（例：診療所や学校）の"
+"数を表します。同一クラスター内の対象者間の類似性を、級内相関係数（<b>ICC</b>"
+"）と平均クラスターサイズに基づくデザイン効果を用いて調整します。"
 
 #: R/mui.b.R
 msgid ""
@@ -225,10 +257,13 @@ msgid ""
 "chosen subject with the condition is correctly ranked higher than a randomly "
 "chosen subject without the condition"
 msgstr ""
+"<b>一致度</b> ― C統計量またはAUC。疾患ありの対象者をランダムに1人、疾患なしの"
+"対象者をランダムに1人選んだとき、前者の予測値が後者より高く順位づけされる確率"
+"です。"
 
 #: R/mcor.b.R
 msgid "<b>Correlation method</b>: {method}"
-msgstr ""
+msgstr "<b>相関係数の算出方法</b>：{method}"
 
 #: R/msrv.b.R
 msgid ""
@@ -242,6 +277,8 @@ msgid ""
 "in which the model was selected as best. Higher CVC indicates greater "
 "stability of the identified interaction."
 msgstr ""
+"<b>交差検証一貫性（CVC）</b>は、K個の分割のうち、そのモデルが最良として選択さ"
+"れた回数です。CVCが高いほど、特定された交互作用の安定性が高いことを示します。"
 
 #: R/msrv.b.R
 msgid ""
@@ -260,10 +297,13 @@ msgid ""
 "(no recombination observed), <b>D' = 0</b> indicates linkage equilibrium "
 "(independent assortment)."
 msgstr ""
+"<b>D’（標準化LD）</b>は、2つの遺伝子座間の連鎖不平衡の強さを [-1, 1] の範囲で"
+"表す指標です。<b>|D’| = 1 </b>は完全な連鎖不平衡（組換えが観察されない）、<b>"
+"D’ = 0</b> は連鎖平衡（独立した分離）を示します。"
 
 #: R/mpwr.b.R
 msgid "<b>Design</b>:"
-msgstr ""
+msgstr "<b>デザイン</b>："
 
 #: R/msrv.b.R
 msgid ""
@@ -290,31 +330,31 @@ msgstr ""
 
 #: R/mpwr.b.R
 msgid "<b>Effect size measure</b>: Cohen's d"
-msgstr ""
+msgstr "<b>効果量の指標</b>：コーエンのd"
 
 #: R/mpwr.b.R
 msgid "<b>Effect size measure</b>: Cohen's w"
-msgstr ""
+msgstr "<b>効果量の指標</b>：コーエンのw"
 
 #: R/mpwr.b.R
 msgid "<b>Effect size measure</b>: correlation coefficient (r)"
-msgstr ""
+msgstr "<b>効果量の指標</b>：相関係数（r）"
 
 #: R/mpwr.b.R
 msgid "<b>Effect size measure</b>: Eta-squared (η²)"
-msgstr ""
+msgstr "<b>効果量の指標</b>：イータ2乗（η²）"
 
 #: R/mpwr.b.R
 msgid "<b>Effect size measure</b>: Hazard Ratio (HR)"
-msgstr ""
+msgstr "<b>効果量の指標</b>：ハザード比（HR）"
 
 #: R/mpwr.b.R
 msgid "<b>Effect size measure</b>: Odds Ratio"
-msgstr ""
+msgstr "<b>効果量の指標</b>：オッズ比"
 
 #: R/mpwr.b.R
 msgid "<b>Effect size measure</b>: R-squared change (f²)"
-msgstr ""
+msgstr "<b>効果量の指標</b>：決定係数の変化（f²）"
 
 #: R/mpwr.b.R
 msgid ""
@@ -322,6 +362,8 @@ msgid ""
 "association (e.g., Cohen's d for means, or correlation coefficient). Unlike "
 "p-values, it is independent of the sample size."
 msgstr ""
+"<b>効果量</b>は、差や関連の大きさを標準化して表す指標です（例：平均値の差に対"
+"するコーエンのd、相関係数など）。p値とは異なり、標本サイズには依存しません。"
 
 #: R/msnp.b.R
 msgid ""
@@ -329,6 +371,9 @@ msgid ""
 "Ne = 1 / Σ(pi²). Ne = 1 indicates fixation (monomorphic), Ne = 2 indicates "
 "equal allele frequencies for a biallelic marker."
 msgstr ""
+"<b>有効アレル数（Ne）</b>は、ホモ接合度の逆数です：Ne = 1 / Σ(pi²)。Ne = 1 は"
+"固定（単型）、二対立遺伝子マーカーでは Ne = 2 は2つのアレルの頻度が等しいこと"
+"を示します。"
 
 #: R/mpwr.b.R
 msgid ""
@@ -337,6 +382,9 @@ msgid ""
 "statistical power is driven by the number of events rather than the total "
 "number of subjects."
 msgstr ""
+"<b>イベント数（N1）</b>は、必要な検出力を得るために必要な対象イベント（例：死"
+"亡や故障）の数を表します。生存時間分析では、統計的検出力は対象者の総数ではな"
+"く、イベント数によって決まります。"
 
 #: R/msnp.b.R
 msgid ""
@@ -344,12 +392,16 @@ msgid ""
 "observed heterozygote count, conditional on the allele counts. Recommended "
 "for small samples or rare alleles."
 msgstr ""
+"<b>正確検定</b>（Haldane, 1954）は、アレル数を所与として、観測されたヘテロ接"
+"合体数の正確な確率を計算します。小標本やまれなアレルの場合に推奨されます。"
 
 #: R/msnp.b.R
 msgid ""
 "<b>Expected genotype frequencies</b> are the counts predicted under "
 "Hardy-Weinberg equilibrium: E(AA) = p² × N, E(AB) = 2pq × N, E(BB) = q² × N."
 msgstr ""
+"<b>期待遺伝子型頻度</b>は、ハーディ・ワインベルグ平衡のもとで予測される各遺伝"
+"子型の個体数です：E(AA) = p² × N, E(AB) = 2pq × N, E(BB) = q² × N。"
 
 #: R/msnp.b.R
 msgid ""
@@ -357,6 +409,9 @@ msgid ""
 "HWE: H(exp) = 2pq. A significant difference between H(obs) and H(exp) may "
 "indicate inbreeding, population substructure, or selection."
 msgstr ""
+"<b>期待ヘテロ接合度（H(exp)）</b>は、HWEのもとで期待されるヘテロ接合度です：H"
+"(exp) = 2pq。H(obs)とH(exp)の有意な差は、近親交配、集団の下部構造、または自然"
+"選択の影響を示す可能性があります。"
 
 #: R/mcor.b.R
 msgid ""
@@ -364,12 +419,14 @@ msgid ""
 "the node's net impact on the network, considering positive and negative "
 "relations."
 msgstr ""
+"<b>期待影響度</b>：接続するエッジの符号付き重みの合計です。正と負の関係を考慮"
+"した、ネットワークに対するノードの正味の影響を示します。"
 
 #: R/mmf.b.R
 msgid ""
 "<b>Explanatory</b> - variable corresponding to MAR with minimal "
 "p<sub>value</sub>."
-msgstr ""
+msgstr "<b>説明変数</b> ― MARに対応し、p値が最小となる変数です。"
 
 #: R/msrv.b.R
 msgid ""
@@ -387,6 +444,9 @@ msgid ""
 "<b>Recessive</b> (AA+AB vs BB), <b>Overdominant</b> (AA+BB vs AB), "
 "<b>Log-additive</b> (trend test for allele dose 0/1/2)."
 msgstr ""
+"<b>遺伝モデル</b>では、異なる遺伝形式のもとで関連を検定します：<b>共優性</b>"
+"（AA vs AB vs BB）、<b>優性</b>（AA vs AB+BB）、<b>劣性</b>（AA+AB vs BB）"
+"、<b>超優性</b>（AA+BB vs AB）、<b>対数加算</b>（アレル量0/1/2の傾向検定）。"
 
 #: R/msrv.b.R
 msgid ""
@@ -397,11 +457,11 @@ msgstr ""
 
 #: R/mcor.b.R
 msgid "<b>Hₐ</b> is negative correlation"
-msgstr ""
+msgstr "<b>Hₐ</b>は負の相関を示します"
 
 #: R/mcor.b.R
 msgid "<b>Hₐ</b> is positive correlation"
-msgstr ""
+msgstr "<b>Hₐ</b>は正の相関を示します"
 
 #: R/msnp.b.R
 msgid ""
@@ -409,6 +469,9 @@ msgid ""
 "Expectation-Maximization (EM) algorithm from unphased genotype data. The "
 "p-value tests the null hypothesis D = 0 (linkage equilibrium)."
 msgstr ""
+"<b>ハプロタイプ頻度</b>は、フェーズが不明な遺伝子型データから期待値最大化（EM"
+"）アルゴリズムを用いて推定されます。p値は、帰無仮説 D = 0（連鎖平衡）を検定し"
+"ます。"
 
 #: R/mpwr.b.R
 msgid ""
@@ -416,6 +479,9 @@ msgid ""
 "groups. A Hazard Ratio of 1 indicates no difference in risk, while values "
 "further from 1 represent stronger effects."
 msgstr ""
+"<b>ハザード比（HR）</b>は、2群間のイベント発生率の比を表します。ハザード比が1"
+"の場合はリスクに差がないことを示し、1から離れるほど効果が大きいことを示します"
+"。"
 
 #: R/msrv.b.R
 msgid ""
@@ -427,18 +493,25 @@ msgid ""
 "hazard (protective effect). <b>Lower/Upper 95% CI</b> represent the "
 "confidence interval for the Hazard Ratio."
 msgstr ""
+"<b>ハザード比（HR）</b>は、説明変数の2つの水準で表される条件に対応する"
+"ハザード率の比を表します（Cox, 1972）。予測変数が1単位変化したときのイベント"
+"発生の相対リスクを示します。<b>HR > 1</b>はハザードの増加（イベント発生リスク"
+"の上昇）を、<b>HR < 1</b>はハザードの減少（保護効果）を示します。<b>95% CI下"
+"限/上限</b>は、ハザード比の信頼区間を表します。"
 
 #: R/mmlp.b.R
 msgid ""
 "<b>Hidden Layers</b>: network architecture (hidden layer sizes, hidden / "
 "output activation functions)"
-msgstr ""
+msgstr "<b>隠れ層</b>：ネットワーク構造（隠れ層のサイズ、隠れ層／出力層の活性化関数）"
 
 #: R/msnp.b.R
 msgid ""
 "<b>High-Risk (HR)</b> cells have cases/controls ratio ≥ threshold T. "
 "<b>Low-Risk (LR)</b> cells have ratio < T."
 msgstr ""
+"<b>高リスク（HR）</b>セルは、ケース／対照の比が閾値 T 以上のセルです。<b>低"
+"リスク（LR）</b>セルは、この比が T 未満のセルです。"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -446,6 +519,8 @@ msgid ""
 "<b>Hold-out Accuracy</b>: classification accuracy on the hold-out validation "
 "dataset."
 msgstr ""
+"<b>ホールドアウト精度</b>：ホールドアウト検証データセットにおける分類精度です"
+"。"
 
 #: R/msnp.b.R
 msgid ""
@@ -454,13 +529,17 @@ msgid ""
 "(inbreeding), <b>F_IS < 0</b> indicates heterozygote excess (outbreeding), "
 "<b>F_IS = 0</b> indicates Hardy-Weinberg equilibrium."
 msgstr ""
+"<b>近交係数（F_IS）</b>は、HWEからの逸脱を表します：F_IS = 1 - H(obs) / H"
+"(exp)。<b>F_IS > 0</b>はヘテロ接合体の不足（近交）、<b>F_IS < 0</b>はヘテロ接"
+"合体の過剰（異系交配）、<b>F_IS = 0</b>はハーディ・ワインベルグ平衡を示します"
+"。"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid ""
 "<b>K-Fold CV Accuracy</b>: average classification accuracy across "
 "cross-validation folds."
-msgstr ""
+msgstr "<b>K分割交差検証精度</b>：交差検証の各分割における分類精度の平均値です。"
 
 #: R/msrv.b.R
 msgid ""
@@ -471,6 +550,11 @@ msgid ""
 "(survival probability drops to 0.5). <b>Lower/Upper 95% CI</b> represent the "
 "95% confidence interval limits for this median survival time."
 msgstr ""
+"<b>カプラン・マイヤー推定量</b>（Kaplan & Meier, 1958）は、打ち切り観測を考慮"
+"して、生存時間データから生存関数を推定するノンパラメトリックな統計量です。<b>"
+"生存時間中央値</b>は、対象者の50%にイベントが発生する時点（生存確率が0.5まで"
+"低下する時点）の推定値です。<b>95% CI下限/上限</b>は、この生存時間中央値の"
+"95%信頼区間の下限と上限を表します。"
 
 #: R/msrv.b.R
 msgid ""
@@ -480,6 +564,10 @@ msgid ""
 "indicate that the predictors collectively improve the model fit relative to "
 "a null model without covariates."
 msgstr ""
+"<b>尤度比</b>、<b>ワルド</b>、<b>スコア（ログランク）</b>検定は、モデル内のす"
+"べての回帰係数（beta）が0であるという全体的な帰無仮説を検定します。統計的に有"
+"意なp値（p < 0.05）は、予測変数をまとめて考慮することで、共変量を含まない帰無"
+"モデルと比較してモデルの適合度が向上することを示します。"
 
 #: R/msnp.b.R
 msgid ""
@@ -487,6 +575,9 @@ msgid ""
 "versus the saturated model. The test statistic -2 × ln(L_HWE / L_sat) "
 "follows chi-square with 1 df."
 msgstr ""
+"<b>尤度比検定</b>は、HWEのもとでのデータの尤度と飽和モデルのもとでの尤度を比"
+"較します。検定統計量 -2 × ln(L_HWE / L_sat) は、自由度1のカイ二乗分布に従いま"
+"す。"
 
 #: R/msrv.b.R
 msgid ""
@@ -497,6 +588,10 @@ msgid ""
 "vs. expected events, and the <b>p-value</b> indicates the statistical "
 "significance of the differences under the null hypothesis."
 msgstr ""
+"<b>ログランク（マンテル・コックス）検定</b>は、2つ以上の独立した群の生存時間"
+"分布を比較するノンパラメトリック検定です。群間で生存曲線に差がないという帰無"
+"仮説を検定します。<b>カイ二乗値</b>は観測イベント数と期待イベント数に基づく検"
+"定統計量で、<b>p値</b>は帰無仮説のもとでの群間差の統計的有意性を示します。"
 
 #: R/mui.b.R
 msgid ""
@@ -505,6 +600,8 @@ msgid ""
 "classification to the probability of a person without the condition "
 "receiving a negative classification"
 msgstr ""
+"<b>LR-</b> ― 陰性尤度比（P(-|D+) / P(-|D-)）。疾患ありの人が陰性と判定される"
+"確率と、疾患なしの人が陰性と判定される確率の比です。"
 
 #: R/mui.b.R
 msgid ""
@@ -513,6 +610,8 @@ msgid ""
 "classification to the probability of a person without the condition "
 "receiving a positive classification"
 msgstr ""
+"<b>LR+</b> ― 陽性尤度比（P(+|D+) / P(+|D-)）。疾患ありの人が陽性と判定される"
+"確率と、疾患なしの人が陽性と判定される確率の比です。"
 
 #: R/msnp.b.R
 msgid ""
@@ -521,22 +620,29 @@ msgid ""
 "considered monomorphic and may be excluded from analysis. <b>MAF < 0.05</b> "
 "indicates a rare variant."
 msgstr ""
+"<b>MAF（マイナーアレル頻度）</b>は、集団における頻度の低い方のアレルの頻度で"
+"す。<b>MAF < 0.01</b>のマーカーは通常、単型とみなされ、解析から除外される場合"
+"があります。<b>MAF < 0.05</b>は、まれな変異であることを示します。"
 
 #: R/mmf.b.R
 msgid ""
 "<b>MAR</b> - missing at random (if each p<sub>value</sub> is significant, "
 "there is evidence the data is MAR);"
 msgstr ""
+"<b>MAR</b> ― ランダムな欠損（各p<sub>値</sub>が有意であれば、データがMARであ"
+"ることを示す根拠があります）。"
 
 #: R/mmlp.b.R
 msgid "<b>Max Iterations</b>: maximum number of training epochs."
-msgstr ""
+msgstr "<b>最大反復回数</b>：学習エポック数の最大値です。"
 
 #: R/mmf.b.R
 msgid ""
 "<b>MCAR</b> - missing completely at random (if the p<sub>value</sub> is not "
 "significant, there is evidence the data is MCAR)."
 msgstr ""
+"<b>MCAR</b> ― 完全にランダムな欠損（p<sub>値</sub>が有意でなければ、データが"
+"MCARであることを示す根拠があります）。"
 
 #: R/msnp.b.R
 msgid ""
@@ -545,6 +651,9 @@ msgid ""
 "reduces high-dimensional genotype combinations into a binary variable "
 "(high-risk vs. low-risk)."
 msgstr ""
+"<b>MDR（多因子次元削減法）</b>（Ritchie et al., 2001）は、遺伝子間相互作用（"
+"エピスタシス）を検出するためのノンパラメトリック手法です。高次元の遺伝子型の"
+"組み合わせを、二値変数（高リスク vs. 低リスク）に縮約します。"
 
 #: R/mcor.b.R
 msgid ""
@@ -553,6 +662,9 @@ msgid ""
 "controlling for all other variables in the dataset, producing a fully "
 "connected network."
 msgstr ""
+"<b>方法</b>：古典的偏相関（正則化／L1ペナルティなし）。データセット内の他のす"
+"べての変数を統制しながら、各変数ペア間の線形的な関連を算出し、完全結合"
+"ネットワークを構築します。"
 
 #: R/mcor.b.R
 msgid ""
@@ -561,6 +673,9 @@ msgid ""
 "while controlling for all other variables in the dataset from only the "
 "second variable, yielding an asymmetric network."
 msgstr ""
+"<b>方法</b>：古典的半偏相関相関（正則化／L1ペナルティなし）。データセット内の"
+"他のすべての変数の影響を第2変数からのみ統制しながら、各変数ペア間の線形的な関"
+"連を算出し、非対称ネットワークを構築します。"
 
 #: R/mcor.b.R
 msgid ""
@@ -568,6 +683,9 @@ msgid ""
 "= {rho}). GLASSO uses L1 regularization to shrink weak partial correlations "
 "to exactly zero, producing a sparse network."
 msgstr ""
+"<b>方法</b>：ペナルティパラメータを手動で指定したグラフィカル・ラッソ（GLASSO"
+"）（rho = {rho}）。GLASSOはL1正則化を用いて、弱い偏相関を正確に0まで縮小し、"
+"疎なネットワークを構築します。"
 
 #: R/mcor.b.R
 msgid ""
@@ -576,24 +694,29 @@ msgid ""
 "L1 regularization to shrink weak partial correlations to exactly zero, "
 "producing a sparse network."
 msgstr ""
+"<b>方法</b>：拡張ベイズ情報量規準（EBIC）によるチューニングパラメータ選択（"
+"gamma = {gamma}）を用いたグラフィカル・ラッソ（GLASSO）。GLASSOはL1正則化を用"
+"いて、弱い偏相関を正確に0まで縮小し、疎なネットワークを構築します。"
 
 #: R/mui.b.R
 msgid ""
 "<b>More Certain Interval (MCI)</b> is the interval outside the Uncertain "
 "Interval and is divided into low and high parts."
 msgstr ""
+"<b>より確実な区間（MCI）</b>は、不確実区間の外側にある区間で、低値側と高値側"
+"に分けられます。"
 
 #: R/mmf.b.R
 msgid "<b>MSE</b> - mean squared error (for Continuous variables);"
-msgstr ""
+msgstr "<b>MSE</b> ― 平均二乗誤差（連続変数の場合）。"
 
 #: R/mrf.b.R
 msgid "<b>mtry</b>: number of candidate variables randomly sampled at each split."
-msgstr ""
+msgstr "<b>mtry</b>：各分岐でランダムに抽出される候補変数の数です。"
 
 #: R/mmf.b.R
 msgid "<b>N</b> - number of missing values;"
-msgstr ""
+msgstr "<b>N</b> ― 欠損値の数。"
 
 #: R/mpwr.b.R
 msgid ""
@@ -601,12 +724,16 @@ msgid ""
 "and Group 2. The ratio of their sizes is determined by the specified "
 "allocation ratio."
 msgstr ""
+"<b>N1</b>と<b>N2</b>は、グループ1とグループ2に必要な対象者数を表します。両群"
+"の人数比は、指定された割付比によって決まります。"
 
 #: R/mpwr.b.R
 msgid ""
 "<b>N1</b> represents the required sample size (total number of subjects in "
 "the single group, or total number of pairs for paired comparisons)."
 msgstr ""
+"<b>N1</b>は、必要なサンプルサイズ（1群の場合は対象者の総数、対応のある比較の"
+"場合はペアの総数）を表します。"
 
 #: R/mdca.b.R
 msgid ""
@@ -620,22 +747,28 @@ msgstr ""
 #: R/mui.b.R
 msgid "<b>NPV</b> - Negative Predictive Value of the negative class TN/(TN+FN)"
 msgstr ""
+"<b>NPV</b> ― 陰性的中率。陰性と判定された対象者のうち、実際に陰性である割合 "
+"TN/(TN+FN)。"
 
 #: R/mrf.b.R
 msgid "<b>Number of Trees</b>: total number of decision trees grown in the ensemble."
-msgstr ""
+msgstr "<b>決定木の数</b>：アンサンブルで構築される決定木の総数です。"
 
 #: R/msnp.b.R
 msgid ""
 "<b>Observed genotype frequencies</b> are the raw counts and proportions of "
 "each genotype (AA, AB, BB) directly from the data."
 msgstr ""
+"<b>観測遺伝子型頻度</b>は、データから直接得られた各遺伝子型（AA、AB、BB）の度"
+"数と割合です。"
 
 #: R/msnp.b.R
 msgid ""
 "<b>Observed heterozygosity (H(obs))</b> is the proportion of heterozygous "
 "individuals (AB) in the sample: H(obs) = n_AB / N."
 msgstr ""
+"<b>観測ヘテロ接合度（H(obs)）</b>は、標本におけるヘテロ接合体（AB）の割合です"
+"：H(obs) = n_AB / N。"
 
 #: R/msnp.b.R
 msgid ""
@@ -644,12 +777,18 @@ msgid ""
 "<b>OR < 1</b> indicates protective effect, <b>OR = 1</b> indicates no "
 "association. The 95% CI that does not cross 1.0 indicates significance."
 msgstr ""
+"<b>オッズ比（OR）</b>は、アレル／遺伝子型とアウトカムとの関連の強さを表します"
+"。<b>OR > 1</b>はリスクの増加、<b>OR < 1</b>は保護効果、<b>OR = 1</b>は関連が"
+"ないことを示します。95%信頼区間に1.0が含まれない場合、統計的に有意であること"
+"を示します。"
 
 #: R/mrf.b.R
 msgid ""
 "<b>OOB Accuracy</b>: out-of-bag accuracy estimated from bootstrap samples "
 "not used for training each tree."
 msgstr ""
+"<b>OOB精度</b>：各決定木の学習に使用されなかったブートストラップ標本（out-of-"
+"bagデータ）から推定された分類精度です。"
 
 #: R/mdca.b.R
 msgid ""
@@ -664,6 +803,9 @@ msgid ""
 "markers using the selected method (Bonferroni, Holm, or Benjamini–Hochberg "
 "FDR)."
 msgstr ""
+"<b>調整済みp値</b>は、選択した方法（ボンフェロニ、ホルム、またはベンジャミニ"
+"・ホックバーグFDR）を用いて、複数のマーカーにわたる多重検定を補正したp値です"
+"。"
 
 #: R/msnp.b.R
 msgid ""
@@ -671,18 +813,22 @@ msgid ""
 "represents the proportion of permuted datasets that achieved a testing BA ≥ "
 "the observed value."
 msgstr ""
+"<b>置換検定のp値</b>は、アウトカムのラベルをシャッフルすることで得られます。"
+"観測された値以上の検定データのBAが得られた置換データセットの割合を表します。"
 
 #: R/msnp.b.R
 msgid ""
 "<b>Permutation test</b> estimates the p-value by randomly permuting alleles "
 "among genotypes. Distribution-free; valid for any sample size."
 msgstr ""
+"<b>置換検定</b>は、遺伝子型間でアレルをランダムに置換することによりp値を推定"
+"します。分布を仮定せず、どのようなサンプルサイズにも適用できます。"
 
 #: R/mmf.b.R
 msgid ""
 "<b>PFC</b> - proportion of falsely classified (for Nominal and Ordinal "
 "variables);"
-msgstr ""
+msgstr "<b>PFC</b> ― 誤分類率（名義変数および順序変数の場合）。"
 
 #: R/msnp.b.R
 msgid ""
@@ -961,7 +1107,7 @@ msgstr ""
 
 #: mPCA/results/regTable.columns.title
 msgid "Accuracy"
-msgstr ""
+msgstr "精度"
 
 #: mLR/results/misclassifiedTable.columns.title
 #: mMLP/results/matrixTable.columns.title
