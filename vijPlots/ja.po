@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-07-07 01:16+0000\n"
-"Last-Translator: Jonathon Love <jon@thon.cc>\n"
+"PO-Revision-Date: 2026-10-15 03:51+0000\n"
+"Last-Translator: SHIBATA Seiji <sbtseiji@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jamovi/module-"
 "vijplots/ja/>\n"
 "Language: ja\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -22,12 +22,12 @@ msgstr ""
 msgid ""
 "\"Range\" option for the X-axis is only available for numeric and date "
 "variables."
-msgstr ""
+msgstr "X軸の「範囲」オプションは、数値変数と日付変数でのみ使用できます。"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "\"Tick Count\" option for the X-axis is only available for numeric variables."
-msgstr ""
+msgstr "X軸の「目盛り数」オプションは、数値変数でのみ使用できます。"
 
 #: R/qqplot.b.R
 msgid "{distrib} distribution requires positive (>0) data."
@@ -55,7 +55,7 @@ msgstr "カイザー正規化を伴う{rotation}回転が用いられました�
 
 #: R/barchart.b.R
 msgid "{var} (Mean ± {level}% CI)"
-msgstr ""
+msgstr "{var}（平均 ± {level}% CI）"
 
 #: R/barchart.b.R
 msgid "{var} (Mean ± SD)"
@@ -148,7 +148,7 @@ msgstr "分散%"
 
 #: R/mrcrosstabs.b.R
 msgid "% within {category}"
-msgstr ""
+msgstr "{category}内の%"
 
 #: R/likertplot.b.R
 msgid ""
@@ -180,6 +180,33 @@ msgid ""
 "possible.</p>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
 msgstr ""
+"<h3>データと並べ替え</h3>\n"
+"<ul>\n"
+"<li>Likert変数は順序尺度である必要があります（連続・整数でも使用できます）"
+"。</li>\n"
+"<li>平均値・中央値・SDの算出や比較検定を行う場合は、整数型である必要がありま"
+"す。</li>\n"
+"<li><strong>水準を整える：</strong>チェックすると、一部の変数で欠けている水準"
+"がある場合に、表とグラフの水準の順序を揃えようとします。</li>\n"
+"<li><strong>変数を整数型に変換：</strong>チェックすると、水準ラベルを無視し、"
+"整数値のみを使用します。</li>\n"
+"<li><strong>変数を中央値で並べ替え：</strong>Likert変数の一覧を中央値の順に並"
+"べます。</li>\n"
+"</ul>\n"
+"<h3>比較検定</h3>\n"
+"<p>グループ変数を使用する場合、以下の検定を利用できます。</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U検定：</strong>2群の比較</li>\n"
+"<li><strong>Kruskal-Wallis検定：</strong>複数群の比較</li>\n"
+"<li><strong>事後検定：</strong>Dunn、Conover、Dwass-Steel-Critchlow-Fligner（"
+"DSCF）によるペアごとの比較検定。</li>\n"
+"</ul>\n"
+"<p>p値は、事後検定では<strong>設問ごと</strong>（groupwise）、Mann-Whitney U"
+"検定、Kruskal-Wallis検定、事後検定では<strong>全体</strong>（groupwiseおよび"
+"questionwise）で調整できます。DSCFのp値はすでに調整済み（groupwise）で、これ"
+"以上の調整はできません。</p>\n"
+"<p>サンプルファイルは「開く > データライブラリ > vijPlots > Likert」にありま"
+"す。</p>"
 
 #: package.description
 msgid ""
@@ -194,6 +221,20 @@ msgid ""
 "source (and changelog) is available at <a "
 "href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>.</p>"
 msgstr ""
+"<p>主な統計グラフを収録しています。すべて<b>ggplot2</b>で作成されており、豊富"
+"なカスタマイズオプションを利用できます。</p>\n"
+"<ul>\n"
+"<li><strong>連続変数</strong>：ヒストグラム、箱ひげ図、レインクラウドプロット"
+"、散布図、誤差範囲グラフ、ロリポッププロット、Q-Qプロット</li>\n"
+"<li><strong>カテゴリ変数</strong>：棒グラフ、円グラフ、モザイクプロット、"
+"Likertプロット</li>\n"
+"<li><strong>時系列</strong>：折れ線グラフ、面グラフ</li>\n"
+"<li><strong>複数回答</strong>：度数、クロス集計表</li>\n"
+"</ul>\n"
+"<p>このモジュールは<strong>プロット</strong>タブで利用できます。</p>\n"
+"<p>プロジェクトのソースコード（変更履歴を含む）は<a href=\"https://"
+"github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>で公開されています"
+"。</p>"
 
 #: R/corresp.b.R
 msgid ""
@@ -227,6 +268,33 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
 msgstr ""
+"<p>このモジュールは、2つのカテゴリ変数に対して<strong>対応分析（CA）</strong>"
+"を行います。計算には、F. Husson、J. Josse、S. Le、J. Mazetによる<a "
+"href=\"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">"
+"FactoMineR</a>パッケージを使用しています。</p>\n"
+"<p>データには以下の形式を使用できます。</p>\n"
+"<ul>\n"
+"<li><strong>観測値表</strong>（生データ）。<em>jamovi</em>の組み込みの重み付"
+"け機能、または「度数」変数によって重み付けすることもできます。</li>\n"
+"<li><strong>分割表</strong></li>\n"
+"</ul>\n"
+"<p><strong>補助行または補助列</strong>の番号は、1,3,6のような整数リストで指定"
+"できます。</p>\n"
+"<p>プロット前の行・列スコアの正規化（スケーリング）には、以下の5つの方法があ"
+"ります。</p>\n"
+"<ul>\n"
+"<li><strong>主成分：</strong>行・列スコアを固有値でスケーリングします。</li>"
+"\n"
+"<li><strong>対称：</strong>行・列スコアを固有値の平方根でスケーリングします"
+"。</li>\n"
+"<li><strong>行主成分：</strong>行スコアのみを固有値でスケーリングします。</"
+"li>\n"
+"<li><strong>列主成分：</strong>列スコアのみを固有値でスケーリングします。</"
+"li>\n"
+"<li><strong>標準：</strong>正規化せず、元の座標を使用します。</li>\n"
+"</ul>\n"
+"<p>サンプルファイルは「開く &gt; データライブラリ &gt; vijPlots &gt; Smoking"
+"」にあります。</p>"
 
 #: R/multcorresp.b.R
 msgid ""
@@ -261,6 +329,35 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
 msgstr ""
+"<p>このモジュールは、複数のカテゴリ変数に対して<strong>多重対応分析（MCA）</"
+"strong>を行います。計算には、F. Husson、J. Josse、S. Le、J. Mazetによる<a "
+"href=\"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">"
+"FactoMineR</a>パッケージを使用しています。</p>\n"
+"<p>以下の2つの標準的な方法を利用できます。</p>\n"
+"<ul>\n"
+"<li><strong>指示行列：</strong>指示行列に対して対応分析を行います。</li>\n"
+"<li><strong>Burt行列：</strong>Burt行列に対して対応分析を行います。固有値は、"
+"指示行列法で得られる固有値の2乗になります。</li>\n"
+"</ul>\n"
+"<p>どちらの方法でも、<em>標準</em>座標と判別力は同じになります（ただし、<em>"
+"主成分</em>座標は異なります）。</p>\n"
+"<p>選択すると、<strong>Benzécri補正とGreenacre補正</strong>が固有値のみに適用"
+"されます（<strong>要約</strong>表）。カテゴリと観測値の主成分座標（および慣性"
+"）は、補正前のBurt行列の固有値から計算されます。</p>\n"
+"<p><strong>正規化</strong>オプションでは、座標を固有値によってどのように"
+"スケーリングするかを指定します。</p>\n"
+"<ul>\n"
+"<li><strong>主成分：</strong>カテゴリと観測値の両方の座標をスケーリングします"
+"。</li>\n"
+"<li><strong>カテゴリ主成分：</strong>カテゴリの座標のみをスケーリングします"
+"。</li>\n"
+"<li><strong>観測値主成分：</strong>観測値の座標のみをスケーリングします。</"
+"li>\n"
+"<li><strong>標準：</strong>カテゴリと観測値の両方の座標を標準座標とします。</"
+"li>\n"
+"</ul>\n"
+"<p>サンプルファイルは「開く &gt; データライブラリ &gt; vijPlots &gt; Cars」に"
+"あります。</p>"
 
 #: R/principal.b.R
 msgid ""
@@ -291,6 +388,31 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
 msgstr ""
+"<p>このモジュールは、複数の連続変数に対して<strong>主成分分析（PCA）</strong>"
+"を行います。計算には<tt>stats::prcomp</tt>関数を使用しています。</p>\n"
+"<p>回転後の成分は主成分ではありませんが、広く利用されています。利用できるのは"
+"直交回転のみです（GPArotationパッケージを使用）。</p>\n"
+"<p>負荷量（変数座標）とスコア（観測値座標）は主成分座標です（固有値の平方根に"
+"よってスケーリングされています）。</p>\n"
+"<p>バイプロットは「Biplots in Practice」（Michael Greenacre, 2010）に従ってい"
+"ます。</p>\n"
+"<ul>\n"
+"<li><strong>形式バイプロット：</strong>スコアは主成分座標（固有値によって"
+"スケーリング）で、負荷量は標準座標です。</li>\n"
+"<li><strong>共分散バイプロット：</strong>負荷量は主成分座標で、スコアは標準座"
+"標です。</li>\n"
+"</ul>\n"
+"<p><strong>詳細オプション</strong>：</p>\n"
+"<ul>\n"
+"<li><strong>負荷量を標準化：</strong>負荷量の二乗和が1になるように正規化しま"
+"す（固有値ではなく）。</li>\n"
+"<li><strong>スコアを標準化：</strong>スコアの分散が1になるように正規化します"
+"（固有値ではなく）。</li>\n"
+"<li><strong>固有ベクトルを回転：</strong>主成分負荷量ではなく固有ベクトル（標"
+"準負荷量）に回転（varimaxなど）を適用します（STATA方式）。</li>\n"
+"</ul>\n"
+"<p>サンプルファイルは「開く &gt; データライブラリ &gt; vijPlots &gt; Iris」に"
+"あります。</p>"
 
 #: R/mrfrequencies.b.R
 msgid ""
@@ -556,7 +678,7 @@ msgstr "6か月"
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "A date variable must be in text format."
-msgstr ""
+msgstr "日付変数はテキスト形式である必要があります。"
 
 #: package/datasets/vijPlots.description
 msgid "A demonstration dataset for vijPlots module."
@@ -564,7 +686,7 @@ msgstr "vijPlotsモジュールのデモンストレーション用データセ�
 
 #: package/datasets/Likert.description
 msgid "A demonstration dataset for vijPlots/Likert plot."
-msgstr ""
+msgstr "vijPlots/Likertプロット用のデモ用データセット。"
 
 #: package/datasets/CreditCards.description
 msgid "A demonstration dataset for vijPlots/Multiple Response plots."
@@ -591,7 +713,7 @@ msgstr "アクセント"
 #: mosaic/options/accuracy.title
 #: mosaic/ui[2][0][2][0].label
 msgid "Accuracy"
-msgstr ""
+msgstr "精度"
 
 #: R/corresp.b.R
 msgid "Active Margin"
@@ -680,7 +802,7 @@ msgstr "アルファ"
 
 #: mosaic/options/alwaysShowGroupLegend.title
 msgid "Always show group legend"
-msgstr ""
+msgstr "つねにグループの凡例を表示"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -837,7 +959,7 @@ msgstr "階級（ビン）の色"
 
 #: histogram/options/binOpacity.title
 msgid "Bin opacity"
-msgstr ""
+msgstr "ビン不透明度"
 
 #: histogram/ui[1][1][0].label
 msgid "Bin Size"
@@ -901,7 +1023,7 @@ msgstr "黒"
 #: piechart/options/facetStyle/border.title
 #: scatterplot/options/facetStyle/border.title
 msgid "Black border"
-msgstr ""
+msgstr "黒枠"
 
 #: corresp/options/rowColor/blue.title
 #: corresp/options/colColor/blue.title
@@ -1106,7 +1228,7 @@ msgstr "ボンフェローニ"
 #: qqplot/options/methodQQ/boot.title
 #: qqplot/options/methodPP/boot.title
 msgid "Bootstrap"
-msgstr ""
+msgstr "ブートストラップ"
 
 #: barchart/options/borderColor.title
 #: barplot/options/borderColor.title
@@ -1289,7 +1411,7 @@ msgstr ""
 #: raincloud/options/colorPalette/custom::carbon_light.title
 #: scatterplot/options/colorPalette/custom::carbon_light.title
 msgid "Carbon:Light"
-msgstr ""
+msgstr "Carbon：ライト"
 
 #: package/analyses/barplot.menuSubgroup
 #: package/analyses/piechart.menuSubgroup
@@ -1463,7 +1585,7 @@ msgstr ""
 
 #: mosaic/options/labelColor.title
 msgid "Color"
-msgstr ""
+msgstr "色"
 
 #: barchart/options/colorNo.title
 #: barplot/options/colorNo.title
@@ -1509,7 +1631,7 @@ msgstr "配色"
 
 #: scatterplot/ui[2].label
 msgid "Colors & Element Sizes"
-msgstr ""
+msgstr "色と要素 サイズ"
 
 #: boxplot/ui[2].label
 #: qqplot/ui[4].label
@@ -1591,11 +1713,11 @@ msgstr "比較検定"
 
 #: R/likertplot.b.R
 msgid "Comparison tests require at least two groups."
-msgstr ""
+msgstr "比較テストでは、少なくとも2つのグループが必要です."
 
 #: R/likertplot.b.R
 msgid "Comparison tests require numeric variables."
-msgstr ""
+msgstr "比較検定には数値変数が必要です"
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
@@ -1604,7 +1726,7 @@ msgstr "成分"
 
 #: R/principal.b.R
 msgid "Component {n} ({perc} %)"
-msgstr ""
+msgstr "コンポーネント {n} ({perc} %)"
 
 #: R/principal.b.R
 msgid "Component Plot"
@@ -1704,7 +1826,7 @@ msgstr "度数"
 #: mrcrosstabs/options/showLabels.title
 #: mrfrequencies/options/showLabels.title
 msgid "Count labels"
-msgstr ""
+msgstr "度数ラベル"
 
 #: mrcrosstabs/options/endorsed.title
 #: mrfrequencies/options/endorsed.title
@@ -1714,7 +1836,7 @@ msgstr "計数値"
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
 msgid "Counted value string may not be empty."
-msgstr ""
+msgstr "集計値の文字列を空にすることはできません。"
 
 #: R/mrfrequencies.b.R
 #: likertplot/options/frequencies/counts.title
@@ -1748,19 +1870,19 @@ msgstr ""
 #: R/mosaic.b.R
 #: R/piechart.b.R
 msgid "Counts may not be infinite."
-msgstr ""
+msgstr "度数は有限でなくてはなりません。"
 
 #: R/barplot.b.R
 #: R/corresp.b.R
 #: R/mosaic.b.R
 #: R/piechart.b.R
 msgid "Counts may not be negative."
-msgstr ""
+msgstr "度数は正の値でなければなりません。"
 
 #: R/barplot.b.R
 #: R/mosaic.b.R
 msgid "Counts may not contain missing values."
-msgstr ""
+msgstr "度数に欠損値を含めることはできません。"
 
 #: principal/ui[4][2][0]/biplotType_covPlot.label
 msgid "Cov (Loading principal)"
@@ -1910,7 +2032,7 @@ msgstr "初期値"
 #: piechart/options/facetStyle/default.title
 #: scatterplot/options/facetStyle/default.title
 msgid "Default"
-msgstr ""
+msgstr "初期値"
 
 #: R/histogram.b.R
 #: histogram/options/histtype/density.title
@@ -1967,7 +2089,7 @@ msgstr "次元"
 #: R/multcorresp.b.R
 #: R/principal.b.R
 msgid "Dim {n}"
-msgstr ""
+msgstr "次元 {n}"
 
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -1977,7 +2099,7 @@ msgstr "次元"
 #: R/corresp.b.R
 #: R/multcorresp.b.R
 msgid "Dimension {n} ({perc} %)"
-msgstr ""
+msgstr "次元 {n} ({perc} %)"
 
 #: R/multcorresp.b.R
 msgid "Discrimination"
@@ -2085,7 +2207,7 @@ msgstr "エカマックス"
 #: barchart/ui.title
 #: barchart/results.title
 msgid "Error Bar Chart"
-msgstr ""
+msgstr "誤差範囲グラフ"
 
 #: barchart/ui[3][1][0].label
 msgid "Error Bar Size"
@@ -2118,7 +2240,7 @@ msgstr "指数分布は非負（≥0）のデータを必要とします。"
 
 #: R/principal.b.R
 msgid "Extraction"
-msgstr ""
+msgstr "抽出法"
 
 #: principal/results/summaryTable.columns.superTitle
 msgid "Extraction Sums of Squared Loadings"
@@ -2156,7 +2278,7 @@ msgstr "ファセット"
 #: piechart/ui[4][1][0].label
 #: scatterplot/ui[3][0][1][0].label
 msgid "Facet Labels"
-msgstr ""
+msgstr "ファセットラベル"
 
 #: barchart/ui[5].label
 #: barchart/ui[5][0][0][0].label
@@ -2479,7 +2601,7 @@ msgstr "グレー"
 #: piechart/options/facetStyle/background.title
 #: scatterplot/options/facetStyle/background.title
 msgid "Gray background"
-msgstr ""
+msgstr "グレーの背景"
 
 #: corresp/options/rowColor/forestgreen.title
 #: corresp/options/colColor/forestgreen.title
@@ -2520,7 +2642,7 @@ msgstr "グリーンエーカー補正"
 
 #: R/multcorresp.b.R
 msgid "Greenacre's corrected inertia = {inertia}"
-msgstr ""
+msgstr "グリーンエーカーの補正済み慣性 = {inertia}"
 
 #: areachart/options/colorPalette/Greens.title
 #: barchart/options/colorPalette/Greens.title
@@ -2612,7 +2734,7 @@ msgstr "グループ化の基準"
 
 #: mosaic/options/yAxis/label.title
 msgid "Group label"
-msgstr ""
+msgstr "グループラベル"
 
 #: barchart/options/barType/dodge2.title
 #: barplot/options/barType/dodge2.title
@@ -2654,7 +2776,7 @@ msgstr "グループ単位"
 #: multcorresp/options.menuGroup
 #: principal/options.menuGroup
 msgid "hidden"
-msgstr ""
+msgstr "非表示"
 
 #: likertplot/options/hideLabelsBelow.title
 msgid "Hide % labels below 5%"
@@ -2662,7 +2784,7 @@ msgstr "5%未満の％ラベルを非表示"
 
 #: mosaic/options/hideAxes.title
 msgid "Hide axes"
-msgstr ""
+msgstr "軸を隠す"
 
 #: package/analyses/histogram.title
 #: package/analyses/histogram.menuTitle
@@ -3024,7 +3146,7 @@ msgstr "ラベル文字サイズ"
 
 #: mosaic/ui[2][0][1][0].label
 msgid "Label Format"
-msgstr ""
+msgstr "ラベル形式"
 
 #: mosaic/ui[2].label
 #: piechart/ui[2][0][1][0].label
@@ -3078,7 +3200,7 @@ msgstr "ラベル サイズ"
 #: mosaic/options/labelType.title
 #: mosaic/ui[2][0][0][0].label
 msgid "Label Type"
-msgstr ""
+msgstr "ラベルタイプ"
 
 #: piechart/options/labels.title
 #: piechart/ui[1][1][0].label
@@ -3334,7 +3456,7 @@ msgstr "リッカートプロット"
 
 #: R/likertplot.b.R
 msgid "Likert Plot requires ordinal (or continuous-integer) variables."
-msgstr ""
+msgstr "リカート・プロットには、順序尺度（または連続・整数型）の変数が必要です。"
 
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
@@ -3444,7 +3566,7 @@ msgstr "手動"
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "Manual X-axis range doesn't have a valid date format."
-msgstr ""
+msgstr "X軸の手動範囲に有効な日付形式が指定されていません。"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -3520,11 +3642,11 @@ msgstr "5月"
 
 #: R/multcorresp.b.R
 msgid "MCA Principal Coordinates ({method})"
-msgstr ""
+msgstr "MCA主成分座標（{method}）"
 
 #: R/multcorresp.b.R
 msgid "MCA Standard Coordinates ({method})"
-msgstr ""
+msgstr "MCA標準座標（{method}）"
 
 #: R/likertplot.b.R
 #: barchart/options/yaxis/mean.title
@@ -3541,7 +3663,7 @@ msgstr "平均値 & 標準偏差"
 
 #: histogram/options/meanLine.title
 msgid "Mean line"
-msgstr ""
+msgstr "平均線"
 
 #: R/barchart.b.R
 #: R/lollipop.b.R
@@ -3567,7 +3689,7 @@ msgstr "中央値と平均値には数値変数が必要です"
 
 #: histogram/options/medianLine.title
 msgid "Median line"
-msgstr ""
+msgstr "中央値線"
 
 #: R/barchart.b.R
 #: R/lollipop.b.R
@@ -3600,7 +3722,7 @@ msgstr "モーメント法（MME）"
 
 #: R/multcorresp.b.R
 msgid "Method: {method}"
-msgstr ""
+msgstr "方法：{method}"
 
 #: barplot/options/labelPosition/middle.title
 #: barplot/ui[2][0][1][0]/labelPosition_middle.label
@@ -3662,7 +3784,7 @@ msgstr "{var} の最小値"
 #: mosaic/ui.title
 #: mosaic/results.title
 msgid "Mosaic Plot"
-msgstr ""
+msgstr "モザイクプロット"
 
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
@@ -3718,16 +3840,16 @@ msgstr "名前"
 
 #: qqplot/options/transLog.title
 msgid "Natural log transform"
-msgstr ""
+msgstr "自然対数変換"
 
 #: R/qqplot.b.R
 msgid "Natural Log Transform requires positive (>0) data."
-msgstr ""
+msgstr "自然対数変換には、正の値（> 0）のデータが必要です。"
 
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
 msgid "No distinct values found in the selected variable."
-msgstr ""
+msgstr "選択した変数に異なる値がありません。"
 
 #: R/principal.b.R
 msgid "No rotation used."
@@ -3846,11 +3968,11 @@ msgstr "正規化"
 
 #: R/principal.b.R
 msgid "Not enough complete observations to perform PCA."
-msgstr ""
+msgstr "PCAを実行するための完全な観測値が不足しています。"
 
 #: R/corresp.b.R
 msgid "Not enough data to compute CA."
-msgstr ""
+msgstr "CAを計算するためのデータが不足しています。"
 
 #: boxplot/options/notchWidth.title
 msgid "Notch width"
@@ -3881,7 +4003,7 @@ msgstr "ケース数"
 
 #: R/mrfrequencies.b.R
 msgid "Number of cases: {n}"
-msgstr ""
+msgstr "ケース数：{n}"
 
 #: corresp/options/dimNum.title
 #: multcorresp/options/dimNum.title
@@ -3900,7 +4022,7 @@ msgstr "観測値の色"
 #: R/principal.b.R
 #: principal/results/obsTable.columns.title
 msgid "Observation"
-msgstr ""
+msgstr "観測値"
 
 #: multcorresp/results/obsCoordOV.title
 #: principal/results/obsCoordOV.title
@@ -4000,7 +4122,7 @@ msgstr "のみ"
 
 #: mosaic/ui[3][0][1][0].label
 msgid "Opacity"
-msgstr ""
+msgstr "不透明度"
 
 #: mrcrosstabs/options/optionname.title
 #: mrfrequencies/options/optionname.title
@@ -4101,7 +4223,7 @@ msgstr "その他のオプション"
 
 #: boxplot/options/showOutliers.title
 msgid "Outliers"
-msgstr ""
+msgstr "外れ値"
 
 #: R/mrcrosstabs.b.R
 #: likertplot/options/pValue/overall.title
@@ -4200,11 +4322,11 @@ msgstr "パラメーター推定値"
 
 #: R/qqplot.b.R
 msgid "Parameter Estimates (MLE)"
-msgstr ""
+msgstr "パラメータ推定値（最尤法）"
 
 #: R/qqplot.b.R
 msgid "Parameter Estimates (MME)"
-msgstr ""
+msgstr "パラメータ推定値（MME）"
 
 #: R/qqplot.b.R
 #: qqplot/ui[3].label
@@ -4262,7 +4384,7 @@ msgstr "PCA 主座標"
 
 #: R/principal.b.R
 msgid "PCA Principal Coordinates ({rot})"
-msgstr ""
+msgstr "PCA主成分座標（{rot}）"
 
 #: R/principal.b.R
 msgid "PCA Standard Coordinates"
@@ -4270,12 +4392,12 @@ msgstr "PCA標準座標"
 
 #: R/principal.b.R
 msgid "PCA Standard Coordinates ({rot})"
-msgstr ""
+msgstr "PCA標準座標（{rot}）"
 
 #: R/mosaic.b.R
 #: mosaic/options/labelType/residuals.title
 msgid "Pearson residuals"
-msgstr ""
+msgstr "Pearson残差"
 
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
@@ -4350,7 +4472,7 @@ msgstr "プロットの色"
 
 #: scatterplot/options/plotBorder.title
 msgid "Plot frame"
-msgstr ""
+msgstr "プロット枠"
 
 #: areachart/ui[1][0][0].label
 #: barchart/ui[2].label
@@ -4428,7 +4550,7 @@ msgstr "点"
 
 #: scatterplot/options/keepNA.title
 msgid "Points with missing group/label"
-msgstr ""
+msgstr "グループ／ラベル欠損点"
 
 #: qqplot/options/methodQQ/pointwise.title
 msgid "Pointwise"
