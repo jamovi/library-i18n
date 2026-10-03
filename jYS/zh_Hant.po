@@ -50,24 +50,15 @@ msgid "{varType} without outliers"
 msgstr "{varType} 沒有離群值"
 
 #: R/mmf.b.R
-msgid "**connection of a variable's observed data"
-msgstr "**變項觀測資料的關聯"
-
-#: R/mmf.b.R
-msgid "*connection of a variable's missingness indicator"
-msgstr "*變項缺失指標之間的關聯"
-
-#: R/mmf.b.R
 msgid "*pairwise complete observations"
 msgstr "*成對完整觀測值"
 
 #: mCOR/ui[4][0]/tables/ci/ciWidth.suffix
-#: mROC/ui[2]/ciAUC/ciWidth.suffix
-#: mSRV/ui[5]/showRoc/rocCI/rocWidth.suffix
+#: mROC/ui[1]/ciAUC/ciWidth.suffix
+#: mSRV/ui[7]/showRoc/rocCI/rocWidth.suffix
 msgid "%"
 msgstr "%"
 
-#: R/mpca.b.R
 #: mPCA/results/varianceTable.columns.title
 msgid "% of variance"
 msgstr "% 的變異量"
@@ -252,6 +243,12 @@ msgstr "<b>一致性</b>：C 統計量或 AUC。表示隨機選取一名具有�
 msgid "<b>Correlation method</b>: {method}"
 msgstr "<b>相關方法</b>：{method}"
 
+#: R/msrv.b.R
+msgid ""
+"<b>Counting process / Delayed entry</b>: Kaplan–Meier curves estimated with "
+"left truncation Surv(tstart, time, event)."
+msgstr ""
+
 #: R/msnp.b.R
 msgid ""
 "<b>Cross-Validation Consistency (CVC)</b> is the number of folds (out of K) "
@@ -260,6 +257,16 @@ msgid ""
 msgstr ""
 "<b>交叉驗證一致性 (Cross-Validation Consistency, CVC)</b> 是指模型在 K "
 "個交叉驗證折中，被選為最佳模型的次數。CVC 越高，表示所辨識之交互作用具有越高的穩定性。"
+
+#: R/msrv.b.R
+msgid ""
+"<b>Cumulative Incidence Function (CIF)</b> estimated via the non-parametric "
+"Aalen–Johansen estimator (Aalen & Johansen, 1978) calculates the probability "
+"of experiencing a specific event over time in the presence of competing "
+"risks. Unlike Kaplan–Meier survival (1 – KM), which overestimates risk by "
+"treating competing events as censored, CIF properly accounts for competing "
+"failure types."
+msgstr ""
 
 #: R/msnp.b.R
 msgid ""
@@ -274,6 +281,15 @@ msgstr ""
 #: R/mpwr.b.R
 msgid "<b>Design</b>:"
 msgstr "<b>設計</b>："
+
+#: R/msrv.b.R
+msgid ""
+"<b>Direct adjustment (G-computation)</b> calculates counterfactual survival "
+"curves for each exposure level by averaging individual predicted survival "
+"curves over the empirical covariate distribution of the sample (Denz et al., "
+"2023). <b>RMST</b> represents the Restricted Mean Survival Time evaluated up "
+"to τ (area under the adjusted survival curve)."
+msgstr ""
 
 #: R/mdca.b.R
 msgid ""
@@ -382,6 +398,15 @@ msgid ""
 "p<sub>value</sub>."
 msgstr "<b>解釋性變項</b>：對應 MAR 且具有最小 p 值的變項。"
 
+#: R/msrv.b.R
+msgid ""
+"<b>Fine–Gray proportional subdistribution hazards regression</b> (Fine & "
+"Gray, 1999) models the effect of covariates directly on the cumulative "
+"incidence function of the event of interest. <b>sHR</b> (subdistribution "
+"Hazard Ratio) represents the relative change in the subdistribution hazard. "
+"Robust standard errors are used to account for inverse-probability weighting."
+msgstr ""
+
 #: R/msnp.b.R
 msgid ""
 "<b>Genetic models</b> test the association under different inheritance "
@@ -393,6 +418,13 @@ msgstr ""
 "(Codominant)</b> (AA vs AB vs BB)、<b>顯性模型 (Dominant)</b> (AA vs "
 "AB+BB)、<b>隱性模型 (Recessive)</b> (AA+AB vs BB)、<b>超顯性模型 (Overdominant)</b> "
 "(AA+BB vs AB)、<b>對數加成模型 (Log-additive)</b> (針對等位基因劑量 0/1/2 的趨勢檢定)。"
+
+#: R/msrv.b.R
+msgid ""
+"<b>Gray's test</b> (Gray, 1988) is a non-parametric K-sample test for "
+"comparing cumulative incidence functions of a specific cause between groups. "
+"It evaluates subdistribution hazards under competing risks."
+msgstr ""
 
 #: R/mcor.b.R
 msgid "<b>Hₐ</b> is negative correlation"
@@ -838,18 +870,23 @@ msgstr ""
 
 #: R/msrv.b.R
 msgid ""
-"<b>Time-dependent ROC</b> analysis (Heagerty et al., 2000) evaluates the "
-"predictive accuracy of continuous markers for time-to-event outcomes at a "
-"specific time point <i>t</i>, classifying patients into event-occurring or "
-"event-free states. <b>AUC</b> (Area Under the Curve) measures the "
-"discriminative ability (ranging from 0.5 to 1.0). <b>Cut-off</b> represents "
-"the optimal threshold determined by the Youden index (J = Sensitivity + "
-"Specificity - 1)."
+"<b>Time-dependent Cox regression</b> models non-proportional hazards by "
+"interacting covariates with a function of time (Therneau & Grambsch, 2000). "
+"The hazard function is modeled as λ(t; z) = λ₀(t) exp(β₀ z + β_td [z × "
+"f(t)]). A statistically significant time interaction (β_td, p < 0.05) "
+"indicates that the hazard ratio changes over time: β_td < 0 indicates "
+"diminishing relative risk, while β_td > 0 indicates increasing relative risk."
 msgstr ""
-"<b>時間相依 ROC</b>分析 (Heagerty et al., 2000) 用於評估連續指標在特定時間點 <i>t</i> "
-"對時間至事件結果的預測準確性，將受試者分類為事件已發生或事件未發生兩種狀態。<b>AUC</b>（曲線下面積）衡量模型的區辨能力 (範圍為 0.5 至 "
-"1.0)。<b>Cut-off</b>表示依據 Youden 指數 (J = Sensitivity + Specificity − 1) "
-"所決定的最佳截斷值。"
+
+#: R/msrv.b.R
+msgid ""
+"<b>Time-dependent ROC</b> analysis evaluates the predictive accuracy of "
+"continuous markers for time-to-event outcomes via landmark dichotomization "
+"at a specific time point <i>t</i> (subjects censored prior to <i>t</i> are "
+"excluded). <b>AUC</b> measures the discriminative ability. <b>Cut-off</b> "
+"represents the optimal threshold determined by the Youden index (J = "
+"Sensitivity + Specificity – 1)."
+msgstr ""
 
 #: R/mmlp.b.R
 msgid "<b>Training Accuracy</b>: classification accuracy on the training dataset."
@@ -911,18 +948,11 @@ msgstr "<h2>幫助</h2><div>請選擇完整變項與不完整變項</div>"
 msgid "0 - auto"
 msgstr "0 - 自動"
 
-#: mUI/ui[0][1]/refval.label
-msgid "0 ="
-msgstr "0 ="
-
 #: mMOUT/options/alpha/0.01.title
 msgid "0.01 (standard)"
 msgstr "0.01 (標準)"
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
 #: R/mroc.b.R
 #: R/msrv.b.R
 #: mLR/options/roc_x/1spec.title
@@ -944,10 +974,7 @@ msgstr "10 折"
 msgid "10,5"
 msgstr "10,5"
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
 #: R/mroc.b.R
 msgid "100 - Specificity (%)"
 msgstr "100 - 特異性 (%)"
@@ -998,6 +1025,10 @@ msgstr ""
 msgid "a correlation matrix table"
 msgstr "相關矩陣表"
 
+#: R/msrv.b.R
+msgid "A grouping variable with at least 2 levels is required for Gray's test."
+msgstr ""
+
 #: package/analyses/mPWR.title
 #: package/analyses/mPWR.menuTitle
 #: mPWR/options.title
@@ -1036,9 +1067,31 @@ msgstr "準確度"
 msgid "Actual Class"
 msgstr "實際類別"
 
+#: mSRV/results/adjSection/adjSummaryTable.columns.title
+msgid "Adjusted Median Survival"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Adjusted Rand Index (ARI)"
 msgstr "調整後 Rand 指數 (ARI)"
+
+#: mSRV/results/adjSection/adjSummaryTable.columns.title
+msgid "Adjusted RMST"
+msgstr ""
+
+#: mSRV/ui[5].label
+#: mSRV/results/adjSection.title
+#: mSRV/results/adjSection/adjPlot.title
+msgid "Adjusted Survival Curves (Direct / G-computation)"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Adjusted Survival Probability"
+msgstr ""
+
+#: mSRV/results/adjSection/adjSummaryTable.title
+msgid "Adjusted Survival Summary"
+msgstr ""
 
 #: mCOR/options/clustMet.title
 msgid "Agglomeration method"
@@ -1048,6 +1101,7 @@ msgstr "凝聚法"
 msgid "Algorithm"
 msgstr "演算法"
 
+#: R/msrv.b.R
 #: mCOR/options/signif/all.title
 msgid "All"
 msgstr "全部"
@@ -1063,10 +1117,6 @@ msgstr "等位基因分析"
 #: mSNP/options/freqTable.title
 msgid "Allele and genotype frequencies"
 msgstr "等位基因頻率與基因型頻率"
-
-#: R/msnp.b.R
-msgid "Allelic abbreviation"
-msgstr "等位基因模型縮寫"
 
 #: mCOR/options/plotOrder/alphabet.title
 msgid "Alphabetical"
@@ -1132,6 +1182,12 @@ msgstr "漸近卡方 女性 (3)"
 msgid "Asymptotic Likelihood-ratio (5)"
 msgstr "漸近概似比 (5)"
 
+#: R/msrv.b.R
+msgid ""
+"At least one predictor (group or covariate) is required for Fine–Gray "
+"regression."
+msgstr ""
+
 #: R/mroc.b.R
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
@@ -1192,6 +1248,10 @@ msgstr "平衡準確率 (BA)"
 #: mPWR/ui[1]/base_prob.label
 msgid "Base probability"
 msgstr "基礎機率"
+
+#: R/msrv.b.R
+msgid "baseline"
+msgstr ""
 
 #: package/datasets/BCModelsROCEstimation.name
 msgid "BC Models ROC Estimation"
@@ -1316,9 +1376,15 @@ msgstr "計算總計"
 msgid "Calculated fences for outliers"
 msgstr "離群值的計算柵欄"
 
+#: R/msnp.b.R
+msgid ""
+"Calculating Polygenic Risk Score (PRS) requires specifying a "
+"dependent/outcome variable to estimate SNP weights."
+msgstr ""
+
 #: R/mpwr.b.R
-msgid "Calculation error:"
-msgstr "計算錯誤："
+msgid "Calculation error: {err}"
+msgstr ""
 
 #: R/mpwr.b.R
 msgid ""
@@ -1338,7 +1404,6 @@ msgstr ""
 msgid "Calibration Slope"
 msgstr ""
 
-#: R/msnp.b.R
 #: mSNP/results/qcGroup/qcTable.columns.title
 msgid "Call Rate"
 msgstr "檢出率"
@@ -1359,9 +1424,29 @@ msgstr "病例組"
 msgid "Cases/Controls Ratio"
 msgstr "病例組/對照組比例"
 
+#: R/msrv.b.R
+msgid "Cause"
+msgstr ""
+
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
+#: mSRV/results/compRisksSection/grayTestTable.columns.title
+msgid "Cause / Event"
+msgstr ""
+
 #: mUI/results/stat/mcistat.columns.title
 msgid "CCR"
 msgstr "正確分類率 (CCR)"
+
+#: mSRV/options/compCensor.title
+#: mSRV/ui[6]/showCompRisks/compCensor.label
+msgid "Censored Level"
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"Censored level ('{censor}') and Event of interest ('{event}') cannot be the "
+"same value. Please select distinct levels in Competing Risks options."
+msgstr ""
 
 #: R/mcor.b.R
 msgid "Centrality correlation"
@@ -1390,6 +1475,7 @@ msgstr "CHD 模型 ROC 估計"
 
 #: mSRV/results/logRankTable.columns.title
 #: mSRV/results/coxSection/coxAssumpTable.columns.title
+#: mSRV/results/compRisksSection/grayTestTable.columns.title
 msgid "Chi-Square"
 msgstr "卡方"
 
@@ -1578,7 +1664,12 @@ msgstr "共顯性 (AB 對 AA)"
 msgid "Codominant (BB vs AA)"
 msgstr "共顯性 (BB 對 AA)"
 
+#: mSRV/results/compRisksSection/fineGrayTable.columns.title
+msgid "Coefficient"
+msgstr ""
+
 #: mSRV/results/coxSection/coxCoefTable.columns.title
+#: mSRV/results/coxSection/timeDepTable.columns.title
 msgid "Coefficient (Estimate)"
 msgstr "係數 (估計值)"
 
@@ -1618,13 +1709,15 @@ msgstr "合併 ROC 曲線－訓練資料"
 msgid "Combined ROC - Validation"
 msgstr "合併 ROC 曲線－驗證資料"
 
-#: R/mpca.b.R
-msgid "comp.)"
-msgstr "比較)"
-
 #: mLR/results/coeffTable.columns.title
 msgid "Comparison Level"
 msgstr "比較水準"
+
+#: mSRV/options/showCompRisks.title
+#: mSRV/ui[6].label
+#: mSRV/results/compRisksSection.title
+msgid "Competing Risks Analysis"
+msgstr ""
 
 #: mCOR/options/clustMet/complete.title
 msgid "Complete Linkage"
@@ -1655,22 +1748,16 @@ msgstr "成分編號"
 msgid "Concordance"
 msgstr "和諧性"
 
-#: mMLP/results/text.title
-#: mRF/results/text.title
 #: mROC/results/text.title
 msgid "Conditions"
 msgstr "條件"
-
-#: mLR/results/text.title
-msgid "Conditions & Diagnostics"
-msgstr "條件與診斷"
 
 #: mLR/results/misclassifiedTable.columns.title
 msgid "Confidence"
 msgstr "信賴"
 
 #: mROC/options/ciAUC.title
-#: mROC/ui[2]/ciAUC.label
+#: mROC/ui[1]/ciAUC.label
 msgid "Confidence interval"
 msgstr "信賴區間"
 
@@ -1687,6 +1774,14 @@ msgstr "信賴區間 (ROC)"
 msgid "Confidence interval width"
 msgstr "信賴區間寬度"
 
+#: mSRV/options/adjCI.title
+msgid "Confidence Intervals (Bootstrap)"
+msgstr ""
+
+#: mSRV/options/cifCI.title
+msgid "Confidence Intervals (CIF)"
+msgstr ""
+
 #: mSRV/options/kmCI.title
 msgid "Confidence Intervals (KM)"
 msgstr "信賴區間 (KM)"
@@ -1697,6 +1792,16 @@ msgstr "信賴區間 (KM)"
 #: mRF/results/matrixTable.title
 msgid "Confusion Matrix"
 msgstr "混淆矩陣"
+
+#: R/mmf.b.R
+msgid ""
+"Connection of a variable's missingness indicator with observed data on other "
+"variables"
+msgstr ""
+
+#: R/mmf.b.R
+msgid "Connection of a variable's observed data with missing data on other variables"
+msgstr ""
 
 #: R/mpca.b.R
 msgid "Contingency Matrix (Clusters vs Groups):"
@@ -1710,10 +1815,6 @@ msgstr ""
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Controls"
 msgstr "對照組"
-
-#: mSNP/options/polyDf1.title
-msgid "Controversial df for polymorphism"
-msgstr "多型性之爭議自由度"
 
 #: package/datasets/RandomForestCHDclassification.description
 msgid "Coronary Heart Disease classification using Random Forest"
@@ -1764,10 +1865,6 @@ msgstr "相關矩陣"
 msgid "Correlation matrix contains missing values. Cannot compute Graphical Lasso."
 msgstr "相關矩陣含有缺失值，無法計算圖形化 Lasso。"
 
-#: mCOR/results/text.title
-msgid "Correlations"
-msgstr "相關性"
-
 #: mMF/results/estim/cplot.title
 msgid "Correlations between variables"
 msgstr "變項間的相關"
@@ -1783,10 +1880,18 @@ msgid "Count"
 msgstr "計數"
 
 #: R/msrv.b.R
+msgid "Counting process formulation with left-truncation (tstart, elapsed)."
+msgstr ""
+
+#: R/msrv.b.R
 #: mSNP/options/covs.title
 #: mSNP/ui[0][2].label
 msgid "Covariates"
 msgstr "共變量"
+
+#: mSRV/ui[0][5].label
+msgid "Covariates (Adjustment / Confounders)"
+msgstr ""
 
 #: mLR/options/covs.title
 #: mLR/ui[0][1].label
@@ -1798,7 +1903,6 @@ msgid "Covariates (Continuous Predictors)"
 msgstr "共變量（連續型預測變項）"
 
 #: mSRV/options/covariates.title
-#: mSRV/ui[0][3].label
 msgid "Covariates (Cox regression)"
 msgstr "共變量 (Cox 迴歸)"
 
@@ -1862,6 +1966,21 @@ msgstr "累積百分比"
 #: mSRV/options/kmType/hazard.title
 msgid "Cumulative hazard"
 msgstr "累積風險"
+
+#: R/msrv.b.R
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
+msgid "Cumulative Incidence"
+msgstr ""
+
+#: mSRV/options/showCifPlot.title
+#: mSRV/results/compRisksSection/cifPlot.title
+msgid "Cumulative Incidence Curves (Aalen-Johansen)"
+msgstr ""
+
+#: mSRV/options/showCifTable.title
+#: mSRV/results/compRisksSection/cifSummaryTable.title
+msgid "Cumulative Incidence Summary"
+msgstr ""
 
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
@@ -1934,10 +2053,15 @@ msgstr "暗色系2"
 msgid "Data Preprocessing"
 msgstr "資料前處理"
 
+#: R/msrv.b.R
+msgid "Data weighting for Fine–Gray model failed."
+msgstr ""
+
+#: R/mcor.b.R
 #: R/mlr.b.R
 #: R/mpca.b.R
-msgid "Dataset restricted to group:"
-msgstr "資料集限制為組別："
+msgid "Dataset restricted to group: {g}"
+msgstr ""
 
 #: mLR/options/roc_unit/decimal.title
 #: mMLP/options/roc_unit/decimal.title
@@ -2034,6 +2158,7 @@ msgstr "詳細單元風險分類"
 #: mSRV/results/logRankTable.columns.title
 #: mSRV/results/coxSection/coxFitTable.columns.title
 #: mSRV/results/coxSection/coxAssumpTable.columns.title
+#: mSRV/results/compRisksSection/grayTestTable.columns.title
 msgid "df"
 msgstr "自由度"
 
@@ -2073,10 +2198,6 @@ msgstr "分布模型"
 #: mSNP/options/geneticModel/dominant.title
 msgid "Dominant"
 msgstr "顯性"
-
-#: R/msnp.b.R
-msgid "Dominant abbreviation"
-msgstr "顯性模型縮寫"
 
 #: mROC/options/dotline.title
 msgid "Dotted line"
@@ -2170,6 +2291,23 @@ msgstr "空白"
 msgid "Empty data table"
 msgstr "空白資料表"
 
+#: mSRV/options/tstart.title
+#: mSRV/ui[0][1].label
+msgid "Entry / Start Time (optional)"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Entry / Start time must be non-negative (>= 0)."
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Entry / Start time must be strictly less than elapsed time (start < stop)."
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Entry / Start time variable must be numeric."
+msgstr ""
+
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/equivalent.title
 msgid "equivalence"
@@ -2181,12 +2319,12 @@ msgid "Equivalence / Non-Inferiority / Superiority margin"
 msgstr "等價性 / 非劣性 / 優越性邊界"
 
 #: R/mmlp.b.R
-msgid "Error during neural network fitting:"
-msgstr "神經網路擬合過程中發生錯誤："
+msgid "Error during neural network fitting: {err}"
+msgstr ""
 
 #: R/mrf.b.R
-msgid "Error during Random Forest fitting:"
-msgstr "隨機森林配適期間發生錯誤："
+msgid "Error during Random Forest fitting: {err}"
+msgstr ""
 
 #: R/mcor.b.R
 msgid "Error in Classical Partial Correlation calculation: {}"
@@ -2227,7 +2365,14 @@ msgstr "估計方法"
 msgid "Evaluation of MAR explainers"
 msgstr "MAR 解釋器評估"
 
+#: mSRV/options/compEvent.title
+#: mSRV/ui[6]/showCompRisks/compEvent.label
+msgid "Event of Interest"
+msgstr ""
+
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
+#: mSRV/results/adjSection/adjSummaryTable.columns.title
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 msgid "Events"
 msgstr "事件數"
 
@@ -2262,8 +2407,20 @@ msgid "Exact p-adj"
 msgstr "精確校正 p 值"
 
 #: R/msnp.b.R
-msgid "Excluded"
-msgstr "已排除"
+msgid "Excluded {n} heterozygous male genotype call(s) for X-linked analysis."
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Excluded: Call Rate < {val}"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Excluded: HWE p < {val}"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Excluded: MAF < {val}"
+msgstr ""
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
@@ -2305,6 +2462,11 @@ msgstr "解釋性"
 msgid "Exploratory & Factor Analysis"
 msgstr "探索性與因素分析"
 
+#: mSRV/options/adjExposure.title
+#: mSRV/ui[0][6].label
+msgid "Exposure Variable (Adjusted Curves)"
+msgstr ""
+
 #: package.description
 msgid ""
 "Extensions of the functionality of popular data analysis methods: "
@@ -2312,10 +2474,11 @@ msgid ""
 "imputation, univariate and multivariate outliers identification and removal, "
 "Uncertain Interval (UI) threshold estimation, a priori power analysis, MLP "
 "neural network classifier, logistic regression with feature selection, "
-"Random Forest classifier, survival analysis (Kaplan-Meier and Cox "
-"regression), Principal Component Analysis (PCA), Single Nucleotide "
-"Polymorphism (SNP) association and Hardy-Weinberg equilibrium analysis, and "
-"Decision Curve Analysis (DCA) with model calibration."
+"Random Forest classifier, survival analysis (Kaplan-Meier, Cox regression, "
+"adjusted curves, competing risks, time-dependent effects), Principal "
+"Component Analysis (PCA), Single Nucleotide Polymorphism (SNP) association "
+"and Hardy-Weinberg equilibrium analysis, and Decision Curve Analysis (DCA) "
+"with model calibration."
 msgstr ""
 
 #: mSNP/results/hweGroup/hwTable.columns.title
@@ -2381,6 +2544,10 @@ msgstr "特徵選取方法"
 msgid "Feature Selection Settings"
 msgstr "特徵選取設定"
 
+#: mSNP/options/femaleLevel.title
+msgid "Female level"
+msgstr ""
+
 #: mLR/options/group.title
 #: mLR/ui[0][3].label
 #: mPCA/options/group.title
@@ -2392,6 +2559,14 @@ msgstr "篩選變數"
 #: mCOR/ui[0][1].label
 msgid "Filtering Variable"
 msgstr "篩選變數"
+
+#: mSRV/options/showFineGray.title
+msgid "Fine-Gray Subdistribution Hazard Model"
+msgstr ""
+
+#: mSRV/results/compRisksSection/fineGrayTable.title
+msgid "Fine-Gray Subdistribution Hazard Regression"
+msgstr ""
 
 #: mCOR/options/plotOrder/FPC.title
 msgid "First principal component"
@@ -2436,10 +2611,6 @@ msgstr "以百分比 (%) 表示的頻率"
 #: mSNP/ui[1].label
 msgid "Frequency Tables"
 msgstr "次數表"
-
-#: R/mpca.b.R
-msgid "Full dataset used in analysis"
-msgstr "分析中使用完整資料集"
 
 #: mSNP/results/assocGroup/assocTable.title
 msgid "Genetic Association Analysis"
@@ -2506,6 +2677,17 @@ msgstr ""
 msgid "Graphical Lasso (GLASSO)"
 msgstr "圖形化 Lasso (GLASSO)"
 
+#: R/msrv.b.R
+msgid ""
+"Gray's test does not support delayed entry / left-truncation and evaluates "
+"event times from origin."
+msgstr ""
+
+#: mSRV/options/showGrayTest.title
+#: mSRV/results/compRisksSection/grayTestTable.title
+msgid "Gray's Test for Group Differences"
+msgstr ""
+
 #: R/mout.b.R
 #: mMOUT/results/stat.columns.title
 #: mMOUT/results/oind.columns.title
@@ -2513,6 +2695,8 @@ msgstr "圖形化 Lasso (GLASSO)"
 #: mSNP/ui[0][3].label
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/kmSection/kmRiskTable.columns.title
+#: mSRV/results/adjSection/adjSummaryTable.columns.title
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 msgid "Group"
 msgstr "組別"
 
@@ -2532,8 +2716,8 @@ msgid "Group Projection in PCA Space"
 msgstr "PCA 空間中的組別投影"
 
 #: R/mpca.b.R
-msgid "Group:"
-msgstr "組別："
+msgid "Group: {group} (Permutation {p})"
+msgstr ""
 
 #: mMOUT/options/group.title
 #: mMOUT/ui[0][1].label
@@ -2544,9 +2728,13 @@ msgstr "組別："
 #: mROC/options/groups.title
 #: mROC/ui[0][2].label
 #: mSRV/options/group.title
-#: mSRV/ui[0][2].label
+#: mSRV/ui[0][4].label
 msgid "Grouping Variable"
 msgstr "分組變項"
+
+#: R/msrv.b.R
+msgid "Grouping variable must have at least 2 levels for Gray's test."
+msgstr ""
 
 #: mCOR/options/glassoLayout/groups.title
 msgid "Groups"
@@ -2581,6 +2769,7 @@ msgid "Hazard Ratio"
 msgstr "風險比"
 
 #: mSRV/results/coxSection/coxCoefTable.columns.title
+#: mSRV/results/coxSection/timeDepTable.columns.title
 msgid "Hazard Ratio (HR)"
 msgstr "風險比 (HR)"
 
@@ -2678,12 +2867,9 @@ msgstr "留出法準確率 (%)"
 msgid "Hold-out Validation"
 msgstr "保留樣本驗證"
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
-msgid "Hold-out Validation (AUC ="
-msgstr "保留樣本驗證 (AUC ="
+msgid "Hold-out Validation (AUC = {auc})"
+msgstr ""
 
 #: mLR/options/partition/holdout.title
 #: mMLP/options/partition/holdout.title
@@ -2715,6 +2901,10 @@ msgstr "Hommel (1988)"
 #: mCOR/options/glassoHub.title
 msgid "Hub markers table"
 msgstr "樞紐標記表格"
+
+#: R/msrv.b.R
+msgid "Huber–White robust sandwich estimator"
+msgstr ""
 
 #: R/msnp.b.R
 msgid "HWE compliant"
@@ -2823,6 +3013,10 @@ msgstr "索引 (列)"
 msgid "Influence vectors (Biplot)"
 msgstr "影響向量 (雙標圖)"
 
+#: R/mmf.b.R
+msgid "Influx"
+msgstr ""
+
 #: mMF/results/estim/fplot.title
 msgid "Influx-outflux plot"
 msgstr "流入-流出圖"
@@ -2830,14 +3024,6 @@ msgstr "流入-流出圖"
 #: mMF/options/fluxplot.title
 msgid "Influx-outflux plot for missing data patterns"
 msgstr "缺失資料型態之流入-流出圖"
-
-#: R/mmf.b.R
-msgid "Influx*"
-msgstr "流入量*"
-
-#: mPCA/results/text.title
-msgid "Info"
-msgstr "資訊"
 
 #: mMLP/options/rang.title
 #: mMLP/ui[1]/rang.label
@@ -2867,8 +3053,8 @@ msgid "Intersection"
 msgstr "交集"
 
 #: mCOR/ui[4][0]/tables/ci/ciWidth.label
-#: mROC/ui[2]/ciAUC/ciWidth.label
-#: mSRV/ui[5]/showRoc/rocCI/rocWidth.label
+#: mROC/ui[1]/ciAUC/ciWidth.label
+#: mSRV/ui[7]/showRoc/rocCI/rocWidth.label
 msgid "Interval"
 msgstr "區間"
 
@@ -2962,9 +3148,12 @@ msgid "K-Fold CV"
 msgstr "K 折交叉驗證"
 
 #: R/mlr.b.R
-#: R/mpca.b.R
 msgid "K-Fold CV (AUC ="
 msgstr "K 折交叉驗證 (AUC ="
+
+#: R/mpca.b.R
+msgid "K-Fold CV (AUC = {auc})"
+msgstr ""
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -3011,6 +3200,10 @@ msgstr "Kaplan-Meier 存活分析"
 #: mSRV/options/showKm.title
 msgid "Kaplan-Meier Survival Curves"
 msgstr "Kaplan-Meier 存活曲線"
+
+#: mSRV/options/kmPlot.title
+msgid "Kaplan-Meier Survival Plot"
+msgstr ""
 
 #: mSRV/results/kmSection/kmSummaryTable.title
 msgid "Kaplan-Meier Survival Summary"
@@ -3065,10 +3258,14 @@ msgid "Legend Box"
 msgstr "圖例方塊"
 
 #: mSRV/options/statusEvent.title
-#: mSRV/ui[0][1]/statusEvent.label
+#: mSRV/ui[0][2]/statusEvent.label
 #: mUI/results/stat/intstat.columns.title
 msgid "Level"
 msgstr "水準"
+
+#: R/msrv.b.R
+msgid "Likelihood Ratio Test"
+msgstr ""
 
 #: mROC/options/lwd.title
 msgid "Line width"
@@ -3096,10 +3293,6 @@ msgstr "連鎖不平衡 (LD) 表"
 msgid "Loading"
 msgstr "負荷量"
 
-#: mPWR/results/text.title
-msgid "Log / Errors"
-msgstr "日誌 / 錯誤"
-
 #: mLR/ui[3]/showForest/forestLog.label
 msgid "Log scale"
 msgstr "對數尺度"
@@ -3124,6 +3317,10 @@ msgstr "組間比較之對數秩檢定"
 #: R/mlr.b.R
 msgid "Log(OR)"
 msgstr "對數勝算比"
+
+#: mSRV/options/timeDepFunc/log.title
+msgid "log(t) (Logarithmic time)"
+msgstr ""
 
 #: package/analyses/mLR.title
 #: package/analyses/mLR.menuTitle
@@ -3163,8 +3360,9 @@ msgstr "邏輯斯迴歸預測機率"
 #: mLR/options.description.main
 msgid ""
 "Logistic Regression with feature selection. Note that cross-validation fold "
-"partitioning uses a hardcoded random seed (42) for reproducibility."
-msgstr "具特徵選取之邏輯斯迴歸。請注意，交叉驗證折數分割使用固定隨機種子 (42) 以確保可重現性。"
+"partitioning uses a random seed (default 42, configurable under Validation "
+"Settings) for reproducibility."
+msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -3188,6 +3386,9 @@ msgstr "低穩定性 (CS < 0.25)。解釋中心性時需謹慎。"
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
+#: mSRV/results/coxSection/timeDepTable.columns.title
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
+#: mSRV/results/compRisksSection/fineGrayTable.columns.title
 msgid "Lower 95% CI"
 msgstr "95% 信賴區間下限"
 
@@ -3288,6 +3489,12 @@ msgstr "**標記顯著性 *<0.05, **<0.01, *<0.001"
 msgid "Marker"
 msgstr "標記"
 
+#: R/msnp.b.R
+msgid ""
+"Marker '{marker}' has more than two distinct alleles ({alleles}). Only "
+"bi-allelic markers are supported."
+msgstr ""
+
 #: mSNP/results/ldGroup/ldTable.columns.title
 msgid "Marker 1"
 msgstr "標記 1"
@@ -3343,6 +3550,11 @@ msgstr ""
 msgid "Max Threshold (%)"
 msgstr ""
 
+#: mSRV/options/kmMaxTime.title
+#: mSRV/ui[2]/showKm/kmMaxTime.label
+msgid "Max time (0 = unlimited)"
+msgstr ""
+
 #: mMF/options/maxiter.title
 msgid "Maximum number of iterations"
 msgstr "最大疊代次數"
@@ -3379,6 +3591,12 @@ msgstr "McQuitty 連結法 (WPGMA)"
 #: mSNP/options/mdrEnable.title
 msgid "MDR analysis"
 msgstr "多因子降維 (MDR) 分析"
+
+#: R/msnp.b.R
+msgid ""
+"MDR analysis requires a binary outcome (2 levels), but '{var}' has {n} "
+"levels."
+msgstr ""
 
 #: mSNP/results/mdrGroup/mdrHeatmap.title
 msgid "MDR Interaction Heatmap"
@@ -3590,8 +3808,9 @@ msgstr "多層感知機 (MLP) 網路拓撲"
 #: mMLP/options.description.main
 msgid ""
 "MLP Neural Network Classifier. Note that weight initialization and data "
-"partitioning use a hardcoded random seed (42) for reproducibility."
-msgstr "MLP 神經網路分類器。請注意，為了確保結果可重現，權重初始化與資料分割均使用固定的隨機種子 (42)。"
+"partitioning use a random seed (default 42, configurable under Validation "
+"Settings) for reproducibility."
+msgstr ""
 
 #: R/mdca.b.R
 #: R/msnp.b.R
@@ -3629,9 +3848,23 @@ msgstr ""
 msgid "Model Coefficients (Post-Selection / Refitted Model)"
 msgstr "模型係數 (選擇後 / 重新擬合模型)"
 
+#: R/msrv.b.R
+msgid ""
+"Model fit (Wald test): χ² = {stat}, df = {df}, p = {p}; Events of interest = "
+"{nev}"
+msgstr ""
+
 #: mLR/results/infoTable.title
 msgid "Model Fit & Predictive Performance"
 msgstr "模型配適度與預測表現"
+
+#: R/msrv.b.R
+msgid "Model fitting failed to converge:"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Model fitting failed to converge."
+msgstr ""
 
 #: mLR/options/show_formula.title
 msgid "Model formula"
@@ -3679,6 +3912,12 @@ msgstr "更確定區間 (MCI)"
 msgid "MSE"
 msgstr "均方誤差 (MSE)"
 
+#: R/msrv.b.R
+msgid ""
+"Multi-row data collapsed to unique subjects based on '{subjectId}' with "
+"baseline marker values."
+msgstr ""
+
 #: mLR/options/multiclass_roc_type.title
 #: mLR/ui[3]/show_roc/multiclass_roc_type.label
 #: mMLP/options/multiclass_roc_type.title
@@ -3706,7 +3945,6 @@ msgid "Multiple imputation for missing data"
 msgstr "缺失資料的多重插補"
 
 #: mSNP/options/adjust.title
-#: mSNP/ui[11].label
 msgid "Multiple testing correction"
 msgstr "多重檢定校正"
 
@@ -3717,10 +3955,6 @@ msgstr "多重檢定校正"
 #: mMOUT/results.title
 msgid "Multivariate outliers identification and removal"
 msgstr "多變量離群值辨識與移除"
-
-#: R/mdca.b.R
-msgid "must be probabilities between 0 and 1."
-msgstr ""
 
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "N at Risk"
@@ -3846,11 +4080,23 @@ msgstr "神經網路分類器 (多層感知器) 示範"
 msgid "No clinical gain"
 msgstr ""
 
+#: R/msrv.b.R
+msgid "No complete cases available for time-dependent Cox model."
+msgstr ""
+
+#: R/msrv.b.R
+msgid "No events of the target cause observed for Fine–Gray regression."
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "No misclassified cases found."
 msgstr "未發現錯誤分類個案。"
+
+#: R/msrv.b.R
+msgid "No valid predictors found for time-dependent Cox model."
+msgstr ""
 
 #: R/mcor.b.R
 msgid "Node Strength Stability"
@@ -4121,6 +4367,10 @@ msgstr "袋外錯誤收斂曲線"
 msgid "OOB errors table"
 msgstr "OOB袋外誤差表"
 
+#: mROC/options/theBest.title
+msgid "Optimal cut-off"
+msgstr ""
+
 #: mDCA/results/dcaTable.columns.title
 msgid "Optimal Threshold"
 msgstr ""
@@ -4160,8 +4410,8 @@ msgid "Outcome Variable (Case/Control)"
 msgstr "結果變項 (病例組/對照組)"
 
 #: R/mmf.b.R
-msgid "OutFlux**"
-msgstr "流出量**"
+msgid "OutFlux"
+msgstr ""
 
 #: R/mmout.b.R
 #: R/mout.b.R
@@ -4251,10 +4501,6 @@ msgid "Overdominant"
 msgstr "過度顯性"
 
 #: R/msnp.b.R
-msgid "Overdominant abbreviation"
-msgstr "超顯性縮寫"
-
-#: R/msnp.b.R
 msgid "p"
 msgstr "p"
 
@@ -4327,6 +4573,7 @@ msgstr "偏相關矩陣"
 msgid "Partial correlation network"
 msgstr "偏相關網路"
 
+#: mCOR/ui[6].label
 #: mCOR/results/glassoGroup.title
 msgid "Partial Correlation Network"
 msgstr "偏相關網路"
@@ -4439,10 +4686,6 @@ msgstr "執行置換檢定"
 msgid "Performance Statistics"
 msgstr "效能統計量"
 
-#: R/mpca.b.R
-msgid "Permutation"
-msgstr "置換"
-
 #: R/mrf.b.R
 #: mMLP/options/show_imp.title
 #: mRF/options/imp_type/permutation.title
@@ -4476,11 +4719,11 @@ msgstr "多型性資訊含量 (PIC)"
 msgid "Pie"
 msgstr "圓餅"
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
-#: R/mrf.b.R
-msgid "Please select a dependent variable (target)."
-msgstr "請選擇依變項 (目標變數)。"
+#: R/msrv.b.R
+msgid ""
+"Please select a Grouping Variable or Exposure Variable to compute adjusted "
+"survival curves."
+msgstr ""
 
 #: R/mmout.b.R
 msgid "Please select at least 2 variables for multivariate analysis."
@@ -4490,14 +4733,9 @@ msgstr "請至少選取 2 個變項以進行多變量分析。"
 msgid "Please select at least 2 variables for PCA."
 msgstr "請至少選取 2 個變項以進行主成分分析。"
 
-#: R/mmlp.b.R
-#: R/mrf.b.R
-msgid "Please select at least one predictor variable (factor or covariate)."
-msgstr "請至少選擇一個預測變項 (因子或共變量)。"
-
-#: R/mlr.b.R
-msgid "Please select at least one predictor variable."
-msgstr "請至少選取一個預測變項。"
+#: R/msrv.b.R
+msgid "Please specify one or more time-dependent covariates."
+msgstr ""
 
 #: mUI/options/isTGR.title
 msgid "Plot"
@@ -4660,6 +4898,7 @@ msgstr "預測平均數配對 (PMM) 步驟"
 #: mMLP/results/importanceTable.columns.title
 #: mRF/results/importanceTable.columns.title
 #: mROC/results/rocTable.columns.title
+#: mSRV/results/compRisksSection/fineGrayTable.columns.title
 #: mSRV/results/rocSection/rocTable.columns.title
 #: mUI/results/stat/uistat.columns.title
 #: mUI/results/stat/mcistat.columns.title
@@ -4697,6 +4936,10 @@ msgstr "盛行率"
 msgid "Principal Component"
 msgstr "主成分"
 
+#: R/mpca.b.R
+msgid "Principal Component {i} (PC{i}) – {pct}% of variance"
+msgstr ""
+
 #: package/analyses/mPCA.title
 #: package/analyses/mPCA.menuTitle
 #: mPCA/options.title
@@ -4713,8 +4956,9 @@ msgstr "主成分分析 (PCA) 示範"
 #: mPCA/options.description.main
 msgid ""
 "Principal Component Analysis (PCA). Note that parallel analysis and "
-"cross-validation use a hardcoded random seed (42) for reproducibility."
-msgstr "主成分分析 (PCA)。請注意，平行分析與交叉驗證使用固定的隨機種子 (42) 以確保結果可重現性。"
+"cross-validation use a random seed (default 42, configurable under PCA "
+"Configuration) for reproducibility."
+msgstr ""
 
 #: mMLP/results/misclassifiedTable.columns.title
 #: mRF/results/misclassifiedTable.columns.title
@@ -4843,8 +5087,9 @@ msgstr "隨機森林分類器"
 #: mRF/options.description.main
 msgid ""
 "Random Forest Classifier using the ranger package. Note that data "
-"partitioning uses a hardcoded random seed (42) for reproducibility."
-msgstr "使用 ranger 套件的隨機森林分類器。請注意，資料分割使用固定的隨機種子 (42)，以確保結果可重現。"
+"partitioning uses a random seed (default 42, configurable under Validation "
+"Settings) for reproducibility."
+msgstr ""
 
 #: R/mrf.b.R
 msgid "Random Forest Predicted Class"
@@ -4872,16 +5117,13 @@ msgstr ""
 msgid "Recessive"
 msgstr "隱性"
 
-#: R/msnp.b.R
-msgid "Recessive abbreviation"
-msgstr "隱性縮寫"
-
 #: mLR/options/refLevel.title
 #: mLR/ui[0][0]/refLevel.label
 msgid "Reference"
 msgstr ""
 
 #: mUI/options/refval.title
+#: mUI/ui[0][1]/refval.label
 msgid "Reference level"
 msgstr "參照基準"
 
@@ -4963,10 +5205,9 @@ msgstr "重複交叉驗證"
 msgid "Repeated Stratified CV"
 msgstr "重複分層交叉驗證"
 
-#: R/mlr.b.R
 #: R/mpca.b.R
-msgid "Repeated Stratified CV (AUC ="
-msgstr "重複分層交叉驗證 (AUC ="
+msgid "Repeated Stratified CV (AUC = {auc})"
+msgstr ""
 
 #: mLR/options/partition/repeated_kfold.title
 msgid "Repeated Stratified K-Fold CV"
@@ -4979,6 +5220,10 @@ msgstr "表徵品質 (Cos²)"
 #: mMF/options/setseed.title
 msgid "Reproducible random number generation (RNG) results"
 msgstr "可重現的隨機數 (RNG) 生成結果"
+
+#: R/msrv.b.R
+msgid "Restricted mean survival time evaluated up to τ = {tau}."
+msgstr ""
 
 #: mCOR/options/clPos/r.title
 msgid "Right"
@@ -5032,6 +5277,10 @@ msgstr "穩健 MCD 共變異數估計失敗 (可能因樣本數過小或共線�
 #: R/mmout.b.R
 msgid "Robust Outlier"
 msgstr "穩健離群值"
+
+#: mSRV/results/compRisksSection/fineGrayTable.columns.title
+msgid "Robust SE"
+msgstr ""
 
 #: R/mmout.b.R
 msgid "Robust Squared Mahalanobis Distance"
@@ -5105,7 +5354,7 @@ msgstr "ROC 曲線"
 msgid "ROC estimation for binomial logistic models demonstration"
 msgstr "二元邏輯斯迴歸模型的 ROC 估計示範"
 
-#: mROC/ui[2].label
+#: mROC/ui[1].label
 msgid "ROC graphs"
 msgstr "ROC 圖"
 
@@ -5133,15 +5382,11 @@ msgstr "ROC 結果"
 #: mPCA/ui[3][0]/rocPlot/show_roc_table.label
 #: mRF/options/show_roc_table.title
 #: mRF/ui[3]/show_roc/show_roc_table.label
+#: mROC/options/showTable.title
+#: mROC/ui[1]/showTable.label
 #: mUI/options/show_roc_table.title
 msgid "ROC table"
 msgstr "ROC 表"
-
-#: mROC/options/showTable.title
-#: mROC/ui[1].label
-#: mROC/ui[1]/showTable.label
-msgid "ROC Tables"
-msgstr "ROC 表格"
 
 #: mLR/options/roc_x.title
 #: mMLP/options/roc_x.title
@@ -5164,6 +5409,10 @@ msgstr "樣本比例 (自助抽樣)"
 #: R/mpwr.b.R
 msgid "Sample Size (N)"
 msgstr "樣本數 (N)"
+
+#: R/msrv.b.R
+msgid "Sample size (n) and events count unique subjects."
+msgstr ""
 
 #: R/mpwr.b.R
 msgid "Sample Size (N1)"
@@ -5211,6 +5460,10 @@ msgstr "以中心性調整節點大小"
 msgid "Scale position"
 msgstr "尺度位置"
 
+#: R/msrv.b.R
+msgid "Schoenfeld residuals"
+msgstr ""
+
 #: mSRV/options/showSchoenfeldPlot.title
 msgid "Schoenfeld Residuals Plot"
 msgstr "Schoenfeld 殘差圖"
@@ -5221,6 +5474,16 @@ msgstr "Schoenfeld 殘差圖"
 
 #: R/mdca.b.R
 msgid "Score"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Score (Log-rank) Test"
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"Score (log-rank) test from Cox model is reported, as standard Mantel–Cox "
+"log-rank is not defined for counting process data."
 msgstr ""
 
 #: mPCA/options/screePlot.title
@@ -5241,6 +5504,8 @@ msgid "Se"
 msgstr "敏感度 (Se)"
 
 #: mSRV/results/coxSection/coxCoefTable.columns.title
+#: mSRV/results/coxSection/timeDepTable.columns.title
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 msgid "SE"
 msgstr "標準誤 (SE)"
 
@@ -5280,10 +5545,7 @@ msgstr "選取之因子：{factors}；選取之共變量：{covs}"
 msgid "Selection"
 msgstr "選擇"
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
 #: R/mroc.b.R
 #: R/msrv.b.R
 #: R/mui.b.R
@@ -5292,10 +5554,7 @@ msgstr "選擇"
 msgid "Sensitivity"
 msgstr "敏感性"
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
 #: R/mroc.b.R
 msgid "Sensitivity (%)"
 msgstr "敏感性 (%)"
@@ -5376,6 +5635,10 @@ msgstr "陰影"
 #: mSNP/results/popGroup/popTable.columns.title
 msgid "Shannon Index (I)"
 msgstr "Shannon 指數 (I)"
+
+#: mSRV/options/showAdjCurves.title
+msgid "Show Adjusted Survival Curves"
+msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -5460,7 +5723,6 @@ msgstr "Spearman 等級相關 (ρ)"
 msgid "Spearman's ρ"
 msgstr "Spearman's ρ"
 
-#: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
 #: R/mrf.b.R
@@ -5475,10 +5737,7 @@ msgstr "Spearman's ρ"
 msgid "Specificity"
 msgstr "特異性"
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
 #: R/mroc.b.R
 msgid "Specificity (%)"
 msgstr "特異性 (%)"
@@ -5532,6 +5791,10 @@ msgstr "平方"
 msgid "Stability Assessment"
 msgstr "穩定性評估"
 
+#: R/msrv.b.R
+msgid "Standard errors and confidence intervals are adjusted for clustering by"
+msgstr ""
+
 #: mLR/results/coeffTable.columns.title
 msgid "Standardized Beta"
 msgstr "標準化 Beta 係數"
@@ -5545,17 +5808,35 @@ msgid "Status"
 msgstr "狀態"
 
 #: mSRV/options/status.title
-#: mSRV/ui[0][1].label
+#: mSRV/ui[0][2].label
 msgid "Status / Event Variable"
 msgstr "狀態 / 事件變數"
+
+#: R/msrv.b.R
+msgid ""
+"Status variable has only one event type; cumulative incidence is equal to 1 "
+"– KM survival."
+msgstr ""
 
 #: R/msrv.b.R
 msgid "Status variable must be factor, character, or numeric."
 msgstr "狀態變數必須為因子、字元或數值型態。"
 
+#: R/msrv.b.R
+msgid ""
+"Status variable must have at least two distinct values for Competing Risks "
+"analysis."
+msgstr ""
+
 #: mLR/results/coeffTable.columns.title
 msgid "Std. Error"
 msgstr "標準誤"
+
+#: R/mlr.b.R
+msgid ""
+"Stepwise selection failed to retain any predictors or encountered an error; "
+"falling back to all predictors."
+msgstr ""
 
 #: R/mdca.b.R
 msgid "Strategy / Model"
@@ -5565,6 +5846,15 @@ msgstr ""
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Strength"
 msgstr "強度"
+
+#: mSRV/results/compRisksSection/fineGrayTable.columns.title
+msgid "Subdistribution HR (sHR)"
+msgstr ""
+
+#: mSRV/options/subjectId.title
+#: mSRV/ui[0][3].label
+msgid "Subject ID / Cluster (optional)"
+msgstr ""
 
 #: mROC/options/cmpDeLong/succ.title
 msgid "Successively"
@@ -5597,14 +5887,18 @@ msgid "Survival Analysis"
 msgstr "存活分析"
 
 #: package/datasets/SurvivalAnalysisKaggle.description
-msgid "Survival Analysis (Kaplan-Meier and Cox regression) demonstration"
-msgstr "存活分析 (Kaplan-Meier 與 Cox 迴歸) 示範"
+msgid ""
+"Survival Analysis (Kaplan-Meier, Cox regression, Adjusted Curves, Competing "
+"Risks, and Time-Dependent Effects) demonstration"
+msgstr ""
 
 #: package/analyses/mSRV.description
 msgid ""
 "Survival Analysis including Kaplan-Meier curves, log-rank tests, Cox "
-"proportional hazards regression, and time-dependent ROC curves."
-msgstr "存活分析，包含 Kaplan-Meier 曲線、對數秩檢定、Cox 比例風險迴歸及時間相依 ROC 曲線。"
+"proportional hazards regression, adjusted survival curves, competing risks "
+"analysis (Aalen-Johansen CIF, Gray's test, Fine-Gray model), time-dependent "
+"covariates, and time-dependent ROC curves."
+msgstr ""
 
 #: package/datasets/SurvivalAnalysisKaggle.name
 msgid "Survival Analysis Kaggle"
@@ -5614,6 +5908,10 @@ msgstr "Kaggle 存活分析"
 #: mSRV/options/kmType/survival.title
 msgid "Survival probability"
 msgstr "存活機率"
+
+#: mSRV/options/timeDepFunc/linear.title
+msgid "t (Linear time)"
+msgstr ""
 
 #: mCOR/ui[4].label
 msgid "Tables"
@@ -5679,10 +5977,6 @@ msgstr "尚未安裝「pwrss」套件。請在 R 中安裝它。"
 msgid "The 'ranger' package is required. Please install it."
 msgstr "需要使用 'ranger' 套件。請安裝該套件。"
 
-#: mROC/options/theBest.title
-msgid "The Best point on ROC"
-msgstr "ROC 曲線最佳點"
-
 #: R/mroc.b.R
 msgid ""
 "The classifying variable '{}' does not have exactly two levels; ROC "
@@ -5715,6 +6009,16 @@ msgstr "資料集中可用於完整分析的樣本數過少，無法訓練神經
 msgid "The dependent variable must have at least 2 levels."
 msgstr "依變項必須至少有 2 個水準。"
 
+#: R/msrv.b.R
+msgid "The exposure variable must have at least two distinct levels."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"The selected exposure variable must be categorical or have 10 or fewer "
+"distinct values."
+msgstr ""
+
 #: R/mmout.b.R
 msgid "Theoretical Chi-Square Quantiles"
 msgstr "理論卡方分位數"
@@ -5724,15 +6028,18 @@ msgid "Three-Way threshold determination in test results"
 msgstr "檢定結果中的三向度閾值決定"
 
 #: R/mpca.b.R
-msgid "Threshold (K ="
-msgstr "閾值 (K ="
+msgid "Threshold (K = {optimal} comp.)"
+msgstr ""
 
 #: R/mcor.b.R
 msgid "Threshold (r = 0.70)"
 msgstr "閥值 (r = 0.70)"
 
-#: mOUT/options/tholdZS.title
 #: mOUT/options/tholdmZS.title
+msgid "Threshold for modified Z-score"
+msgstr ""
+
+#: mOUT/options/tholdZS.title
 msgid "Threshold for Z-score"
 msgstr "Z 分數閾值"
 
@@ -5757,6 +6064,10 @@ msgstr "時間"
 msgid "Time Point t"
 msgstr "時間點 t"
 
+#: mSRV/options/timeDepFunc.title
+msgid "Time Transform Function"
+msgstr ""
+
 #: mSRV/options/elapsed.title
 #: mSRV/ui[0][0].label
 msgid "Time Variable (elapsed time)"
@@ -5766,8 +6077,24 @@ msgstr "時間變數 (經過時間)"
 msgid "Time variable must be numeric."
 msgstr "時間變項必須為數值型態。"
 
+#: mSRV/options/timeDepVars.title
+msgid "Time-dependent Covariates"
+msgstr ""
+
+#: mSRV/ui[0][7].label
+msgid "Time-dependent Covariates (Cox)"
+msgstr ""
+
+#: mSRV/options/showTimeDepEffects.title
+msgid "Time-dependent effects (time-varying coefficients)"
+msgstr ""
+
+#: mSRV/results/coxSection/timeDepTable.title
+msgid "Time-dependent Effects in Cox Model"
+msgstr ""
+
 #: mSRV/options/showRoc.title
-#: mSRV/ui[5].label
+#: mSRV/ui[7].label
 #: mSRV/results/rocSection.title
 msgid "Time-dependent ROC Analysis"
 msgstr "時間相依 ROC 分析"
@@ -5846,12 +6173,9 @@ msgstr "訓練 AUC"
 msgid "Training"
 msgstr "訓練"
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
-msgid "Training (AUC ="
-msgstr "訓練 (AUC ="
+msgid "Training (AUC = {auc})"
+msgstr ""
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -5942,6 +6266,9 @@ msgstr "單變量離群值識別與移除"
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
+#: mSRV/results/coxSection/timeDepTable.columns.title
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
+#: mSRV/results/compRisksSection/fineGrayTable.columns.title
 msgid "Upper 95% CI"
 msgstr "95% 信賴區間上限"
 
@@ -5960,6 +6287,10 @@ msgstr "上半部"
 #: mUI/results/stat/uistat.columns.title
 msgid "Upper threshold"
 msgstr "上閾值"
+
+#: mSNP/options/polyDf1.title
+msgid "Use df = 1 for polymorphism"
+msgstr ""
 
 #: mPWR/results/powerTable.columns.superTitle
 msgid "User Defined"
@@ -6005,7 +6336,7 @@ msgid "Value / Match count"
 msgstr "數值 / 配對計數"
 
 #: R/mdca.b.R
-msgid "Values of"
+msgid "Values of '{var}' must be probabilities between 0 and 1."
 msgstr ""
 
 #: R/mpca.b.R
@@ -6023,6 +6354,10 @@ msgstr "變項"
 #: mMF/results/estim/fMARtab.template.title
 msgid "Variable - $key"
 msgstr "變項 - $key"
+
+#: mSRV/results/coxSection/timeDepTable.columns.title
+msgid "Variable / Term"
+msgstr ""
 
 #: R/mrf.b.R
 #: mRF/options/show_imp.title
@@ -6069,13 +6404,21 @@ msgstr "每次分割使用的變項數 (mtry)"
 msgid "Variance ratio (SD₁² / SD₂²)"
 msgstr "變異數比率 (SD₁² / SD₂²)"
 
+#: R/msrv.b.R
+msgid "vs"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Wald Test"
+msgstr ""
+
 #: mCOR/options/clustMet/ward.D2.title
-msgid "Ward´s D2 Linkage"
-msgstr "Ward D2 連結法"
+msgid "Ward's D2 Linkage"
+msgstr ""
 
 #: mCOR/options/clustMet/ward.D.title
-msgid "Ward´s Linkage"
-msgstr "Ward 連結法"
+msgid "Ward's Linkage"
+msgstr ""
 
 #: R/mpca.b.R
 msgid "Warning: Grouping variable must have at least 2 levels."
@@ -6104,14 +6447,6 @@ msgstr "設為 0.5"
 #: mROC/options/cmpDeLong/wcontr.title
 msgid "With control"
 msgstr "含控制項"
-
-#: R/mmf.b.R
-msgid "with missing data on other variables"
-msgstr "在其他變項上有缺失資料"
-
-#: R/mmf.b.R
-msgid "with observed data on other variables"
-msgstr "在其他變項上有觀察資料"
 
 #: mLR/ui[3]/show_roc/roc_x.label
 #: mMLP/ui[3]/show_roc/roc_x.label

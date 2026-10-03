@@ -51,24 +51,15 @@ msgid "{varType} without outliers"
 msgstr "{varType} aykırı değerler olmadan"
 
 #: R/mmf.b.R
-msgid "**connection of a variable's observed data"
-msgstr "**bir değişkenin gözlemlenmiş verilerinin bağlantısı"
-
-#: R/mmf.b.R
-msgid "*connection of a variable's missingness indicator"
-msgstr "*bir değişkenin eksiklik göstergesinin bağlantısı"
-
-#: R/mmf.b.R
 msgid "*pairwise complete observations"
 msgstr "*ikili tam gözlemler"
 
 #: mCOR/ui[4][0]/tables/ci/ciWidth.suffix
-#: mROC/ui[2]/ciAUC/ciWidth.suffix
-#: mSRV/ui[5]/showRoc/rocCI/rocWidth.suffix
+#: mROC/ui[1]/ciAUC/ciWidth.suffix
+#: mSRV/ui[7]/showRoc/rocCI/rocWidth.suffix
 msgid "%"
 msgstr "%"
 
-#: R/mpca.b.R
 #: mPCA/results/varianceTable.columns.title
 msgid "% of variance"
 msgstr ""
@@ -240,11 +231,27 @@ msgstr ""
 msgid "<b>Correlation method</b>: {method}"
 msgstr ""
 
+#: R/msrv.b.R
+msgid ""
+"<b>Counting process / Delayed entry</b>: Kaplan–Meier curves estimated with "
+"left truncation Surv(tstart, time, event)."
+msgstr ""
+
 #: R/msnp.b.R
 msgid ""
 "<b>Cross-Validation Consistency (CVC)</b> is the number of folds (out of K) "
 "in which the model was selected as best. Higher CVC indicates greater "
 "stability of the identified interaction."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Cumulative Incidence Function (CIF)</b> estimated via the non-parametric "
+"Aalen–Johansen estimator (Aalen & Johansen, 1978) calculates the probability "
+"of experiencing a specific event over time in the presence of competing "
+"risks. Unlike Kaplan–Meier survival (1 – KM), which overestimates risk by "
+"treating competing events as censored, CIF properly accounts for competing "
+"failure types."
 msgstr ""
 
 #: R/msnp.b.R
@@ -257,6 +264,15 @@ msgstr ""
 
 #: R/mpwr.b.R
 msgid "<b>Design</b>:"
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Direct adjustment (G-computation)</b> calculates counterfactual survival "
+"curves for each exposure level by averaging individual predicted survival "
+"curves over the empirical covariate distribution of the sample (Denz et al., "
+"2023). <b>RMST</b> represents the Restricted Mean Survival Time evaluated up "
+"to τ (area under the adjusted survival curve)."
 msgstr ""
 
 #: R/mdca.b.R
@@ -356,12 +372,28 @@ msgid ""
 "p<sub>value</sub>."
 msgstr ""
 
+#: R/msrv.b.R
+msgid ""
+"<b>Fine–Gray proportional subdistribution hazards regression</b> (Fine & "
+"Gray, 1999) models the effect of covariates directly on the cumulative "
+"incidence function of the event of interest. <b>sHR</b> (subdistribution "
+"Hazard Ratio) represents the relative change in the subdistribution hazard. "
+"Robust standard errors are used to account for inverse-probability weighting."
+msgstr ""
+
 #: R/msnp.b.R
 msgid ""
 "<b>Genetic models</b> test the association under different inheritance "
 "patterns: <b>Codominant</b> (AA vs AB vs BB), <b>Dominant</b> (AA vs AB+BB), "
 "<b>Recessive</b> (AA+AB vs BB), <b>Overdominant</b> (AA+BB vs AB), "
 "<b>Log-additive</b> (trend test for allele dose 0/1/2)."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Gray's test</b> (Gray, 1988) is a non-parametric K-sample test for "
+"comparing cumulative incidence functions of a specific cause between groups. "
+"It evaluates subdistribution hazards under competing risks."
 msgstr ""
 
 #: R/mcor.b.R
@@ -747,13 +779,22 @@ msgstr ""
 
 #: R/msrv.b.R
 msgid ""
-"<b>Time-dependent ROC</b> analysis (Heagerty et al., 2000) evaluates the "
-"predictive accuracy of continuous markers for time-to-event outcomes at a "
-"specific time point <i>t</i>, classifying patients into event-occurring or "
-"event-free states. <b>AUC</b> (Area Under the Curve) measures the "
-"discriminative ability (ranging from 0.5 to 1.0). <b>Cut-off</b> represents "
-"the optimal threshold determined by the Youden index (J = Sensitivity + "
-"Specificity - 1)."
+"<b>Time-dependent Cox regression</b> models non-proportional hazards by "
+"interacting covariates with a function of time (Therneau & Grambsch, 2000). "
+"The hazard function is modeled as λ(t; z) = λ₀(t) exp(β₀ z + β_td [z × "
+"f(t)]). A statistically significant time interaction (β_td, p < 0.05) "
+"indicates that the hazard ratio changes over time: β_td < 0 indicates "
+"diminishing relative risk, while β_td > 0 indicates increasing relative risk."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"<b>Time-dependent ROC</b> analysis evaluates the predictive accuracy of "
+"continuous markers for time-to-event outcomes via landmark dichotomization "
+"at a specific time point <i>t</i> (subjects censored prior to <i>t</i> are "
+"excluded). <b>AUC</b> measures the discriminative ability. <b>Cut-off</b> "
+"represents the optimal threshold determined by the Youden index (J = "
+"Sensitivity + Specificity – 1)."
 msgstr ""
 
 #: R/mmlp.b.R
@@ -814,19 +855,11 @@ msgstr "<h2>Yardım</h2><div>Lütfen tam ve eksik değişkenleri seçin</div>"
 msgid "0 - auto"
 msgstr "0 - otomatik"
 
-#: mUI/ui[0][1]/refval.label
-#, fuzzy
-msgid "0 ="
-msgstr "0 ="
-
 #: mMOUT/options/alpha/0.01.title
 msgid "0.01 (standard)"
 msgstr ""
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
 #: R/mroc.b.R
 #: R/msrv.b.R
 #: mLR/options/roc_x/1spec.title
@@ -849,10 +882,7 @@ msgstr ""
 msgid "10,5"
 msgstr "10,5"
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
 #: R/mroc.b.R
 msgid "100 - Specificity (%)"
 msgstr "100 - Özgüllük (%)"
@@ -901,6 +931,10 @@ msgstr ""
 msgid "a correlation matrix table"
 msgstr "bir korelasyon matris tablosu"
 
+#: R/msrv.b.R
+msgid "A grouping variable with at least 2 levels is required for Gray's test."
+msgstr ""
+
 #: package/analyses/mPWR.title
 #: package/analyses/mPWR.menuTitle
 #: mPWR/options.title
@@ -943,8 +977,30 @@ msgstr ""
 msgid "Actual Class"
 msgstr ""
 
+#: mSRV/results/adjSection/adjSummaryTable.columns.title
+msgid "Adjusted Median Survival"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Adjusted Rand Index (ARI)"
+msgstr ""
+
+#: mSRV/results/adjSection/adjSummaryTable.columns.title
+msgid "Adjusted RMST"
+msgstr ""
+
+#: mSRV/ui[5].label
+#: mSRV/results/adjSection.title
+#: mSRV/results/adjSection/adjPlot.title
+msgid "Adjusted Survival Curves (Direct / G-computation)"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Adjusted Survival Probability"
+msgstr ""
+
+#: mSRV/results/adjSection/adjSummaryTable.title
+msgid "Adjusted Survival Summary"
 msgstr ""
 
 #: mCOR/options/clustMet.title
@@ -955,6 +1011,7 @@ msgstr "Kümeleme yöntemi"
 msgid "Algorithm"
 msgstr ""
 
+#: R/msrv.b.R
 #: mCOR/options/signif/all.title
 msgid "All"
 msgstr "Tümü"
@@ -969,10 +1026,6 @@ msgstr ""
 
 #: mSNP/options/freqTable.title
 msgid "Allele and genotype frequencies"
-msgstr ""
-
-#: R/msnp.b.R
-msgid "Allelic abbreviation"
 msgstr ""
 
 #: mCOR/options/plotOrder/alphabet.title
@@ -1041,6 +1094,12 @@ msgstr ""
 msgid "Asymptotic Likelihood-ratio (5)"
 msgstr ""
 
+#: R/msrv.b.R
+msgid ""
+"At least one predictor (group or covariate) is required for Fine–Gray "
+"regression."
+msgstr ""
+
 #: R/mroc.b.R
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
@@ -1104,6 +1163,10 @@ msgstr ""
 #, fuzzy
 msgid "Base probability"
 msgstr "Temel olasılık"
+
+#: R/msrv.b.R
+msgid "baseline"
+msgstr ""
 
 #: package/datasets/BCModelsROCEstimation.name
 msgid "BC Models ROC Estimation"
@@ -1229,10 +1292,15 @@ msgstr ""
 msgid "Calculated fences for outliers"
 msgstr "Aykırı değerler için hesaplanan sınırlar"
 
+#: R/msnp.b.R
+msgid ""
+"Calculating Polygenic Risk Score (PRS) requires specifying a "
+"dependent/outcome variable to estimate SNP weights."
+msgstr ""
+
 #: R/mpwr.b.R
-#, fuzzy
-msgid "Calculation error:"
-msgstr "Hesaplama hatası:"
+msgid "Calculation error: {err}"
+msgstr ""
 
 #: R/mpwr.b.R
 msgid ""
@@ -1252,7 +1320,6 @@ msgstr ""
 msgid "Calibration Slope"
 msgstr ""
 
-#: R/msnp.b.R
 #: mSNP/results/qcGroup/qcTable.columns.title
 msgid "Call Rate"
 msgstr ""
@@ -1273,8 +1340,28 @@ msgstr ""
 msgid "Cases/Controls Ratio"
 msgstr ""
 
+#: R/msrv.b.R
+msgid "Cause"
+msgstr ""
+
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
+#: mSRV/results/compRisksSection/grayTestTable.columns.title
+msgid "Cause / Event"
+msgstr ""
+
 #: mUI/results/stat/mcistat.columns.title
 msgid "CCR"
+msgstr ""
+
+#: mSRV/options/compCensor.title
+#: mSRV/ui[6]/showCompRisks/compCensor.label
+msgid "Censored Level"
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"Censored level ('{censor}') and Event of interest ('{event}') cannot be the "
+"same value. Please select distinct levels in Competing Risks options."
 msgstr ""
 
 #: R/mcor.b.R
@@ -1304,6 +1391,7 @@ msgstr "CHD Modelleri ROC Tahmini"
 
 #: mSRV/results/logRankTable.columns.title
 #: mSRV/results/coxSection/coxAssumpTable.columns.title
+#: mSRV/results/compRisksSection/grayTestTable.columns.title
 msgid "Chi-Square"
 msgstr ""
 
@@ -1494,7 +1582,12 @@ msgstr ""
 msgid "Codominant (BB vs AA)"
 msgstr ""
 
+#: mSRV/results/compRisksSection/fineGrayTable.columns.title
+msgid "Coefficient"
+msgstr ""
+
 #: mSRV/results/coxSection/coxCoefTable.columns.title
+#: mSRV/results/coxSection/timeDepTable.columns.title
 msgid "Coefficient (Estimate)"
 msgstr ""
 
@@ -1534,12 +1627,14 @@ msgstr ""
 msgid "Combined ROC - Validation"
 msgstr ""
 
-#: R/mpca.b.R
-msgid "comp.)"
-msgstr ""
-
 #: mLR/results/coeffTable.columns.title
 msgid "Comparison Level"
+msgstr ""
+
+#: mSRV/options/showCompRisks.title
+#: mSRV/ui[6].label
+#: mSRV/results/compRisksSection.title
+msgid "Competing Risks Analysis"
 msgstr ""
 
 #: mCOR/options/clustMet/complete.title
@@ -1572,22 +1667,16 @@ msgstr ""
 msgid "Concordance"
 msgstr "Uyum"
 
-#: mMLP/results/text.title
-#: mRF/results/text.title
 #: mROC/results/text.title
 msgid "Conditions"
 msgstr "Koşullar"
-
-#: mLR/results/text.title
-msgid "Conditions & Diagnostics"
-msgstr ""
 
 #: mLR/results/misclassifiedTable.columns.title
 msgid "Confidence"
 msgstr ""
 
 #: mROC/options/ciAUC.title
-#: mROC/ui[2]/ciAUC.label
+#: mROC/ui[1]/ciAUC.label
 msgid "Confidence interval"
 msgstr "Güven aralığı"
 
@@ -1604,6 +1693,14 @@ msgstr ""
 msgid "Confidence interval width"
 msgstr "Güven aralığı genişliği"
 
+#: mSRV/options/adjCI.title
+msgid "Confidence Intervals (Bootstrap)"
+msgstr ""
+
+#: mSRV/options/cifCI.title
+msgid "Confidence Intervals (CIF)"
+msgstr ""
+
 #: mSRV/options/kmCI.title
 msgid "Confidence Intervals (KM)"
 msgstr ""
@@ -1616,6 +1713,16 @@ msgstr ""
 msgid "Confusion Matrix"
 msgstr "Karmaşık Matrisi"
 
+#: R/mmf.b.R
+msgid ""
+"Connection of a variable's missingness indicator with observed data on other "
+"variables"
+msgstr ""
+
+#: R/mmf.b.R
+msgid "Connection of a variable's observed data with missing data on other variables"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Contingency Matrix (Clusters vs Groups):"
 msgstr ""
@@ -1627,10 +1734,6 @@ msgstr ""
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Controls"
-msgstr ""
-
-#: mSNP/options/polyDf1.title
-msgid "Controversial df for polymorphism"
 msgstr ""
 
 #: package/datasets/RandomForestCHDclassification.description
@@ -1682,10 +1785,6 @@ msgstr "Korelasyon matrisi"
 msgid "Correlation matrix contains missing values. Cannot compute Graphical Lasso."
 msgstr ""
 
-#: mCOR/results/text.title
-msgid "Correlations"
-msgstr "Korelasyonlar"
-
 #: mMF/results/estim/cplot.title
 msgid "Correlations between variables"
 msgstr "Değişkenler arası korelasyonlar"
@@ -1701,9 +1800,17 @@ msgid "Count"
 msgstr ""
 
 #: R/msrv.b.R
+msgid "Counting process formulation with left-truncation (tstart, elapsed)."
+msgstr ""
+
+#: R/msrv.b.R
 #: mSNP/options/covs.title
 #: mSNP/ui[0][2].label
 msgid "Covariates"
+msgstr ""
+
+#: mSRV/ui[0][5].label
+msgid "Covariates (Adjustment / Confounders)"
 msgstr ""
 
 #: mLR/options/covs.title
@@ -1717,7 +1824,6 @@ msgid "Covariates (Continuous Predictors)"
 msgstr "EŞ Değişkenler (Sürekli Tahmin Ediciler)"
 
 #: mSRV/options/covariates.title
-#: mSRV/ui[0][3].label
 msgid "Covariates (Cox regression)"
 msgstr ""
 
@@ -1783,6 +1889,21 @@ msgstr ""
 #: R/msrv.b.R
 #: mSRV/options/kmType/hazard.title
 msgid "Cumulative hazard"
+msgstr ""
+
+#: R/msrv.b.R
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
+msgid "Cumulative Incidence"
+msgstr ""
+
+#: mSRV/options/showCifPlot.title
+#: mSRV/results/compRisksSection/cifPlot.title
+msgid "Cumulative Incidence Curves (Aalen-Johansen)"
+msgstr ""
+
+#: mSRV/options/showCifTable.title
+#: mSRV/results/compRisksSection/cifSummaryTable.title
+msgid "Cumulative Incidence Summary"
 msgstr ""
 
 #: mLR/results/rocTable.columns.title
@@ -1856,9 +1977,14 @@ msgstr "Karanlık2"
 msgid "Data Preprocessing"
 msgstr ""
 
+#: R/msrv.b.R
+msgid "Data weighting for Fine–Gray model failed."
+msgstr ""
+
+#: R/mcor.b.R
 #: R/mlr.b.R
 #: R/mpca.b.R
-msgid "Dataset restricted to group:"
+msgid "Dataset restricted to group: {g}"
 msgstr ""
 
 #: mLR/options/roc_unit/decimal.title
@@ -1963,6 +2089,7 @@ msgstr ""
 #: mSRV/results/logRankTable.columns.title
 #: mSRV/results/coxSection/coxFitTable.columns.title
 #: mSRV/results/coxSection/coxAssumpTable.columns.title
+#: mSRV/results/compRisksSection/grayTestTable.columns.title
 msgid "df"
 msgstr ""
 
@@ -2003,10 +2130,6 @@ msgstr "Dağılım modeli"
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/dominant.title
 msgid "Dominant"
-msgstr ""
-
-#: R/msnp.b.R
-msgid "Dominant abbreviation"
 msgstr ""
 
 #: mROC/options/dotline.title
@@ -2103,6 +2226,23 @@ msgstr ""
 msgid "Empty data table"
 msgstr "Boş veri tablosu"
 
+#: mSRV/options/tstart.title
+#: mSRV/ui[0][1].label
+msgid "Entry / Start Time (optional)"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Entry / Start time must be non-negative (>= 0)."
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Entry / Start time must be strictly less than elapsed time (start < stop)."
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Entry / Start time variable must be numeric."
+msgstr ""
+
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/equivalent.title
 msgid "equivalence"
@@ -2114,11 +2254,11 @@ msgid "Equivalence / Non-Inferiority / Superiority margin"
 msgstr ""
 
 #: R/mmlp.b.R
-msgid "Error during neural network fitting:"
+msgid "Error during neural network fitting: {err}"
 msgstr ""
 
 #: R/mrf.b.R
-msgid "Error during Random Forest fitting:"
+msgid "Error during Random Forest fitting: {err}"
 msgstr ""
 
 #: R/mcor.b.R
@@ -2160,7 +2300,14 @@ msgstr ""
 msgid "Evaluation of MAR explainers"
 msgstr "MAR açıklayıcılarının değerlendirilmesi"
 
+#: mSRV/options/compEvent.title
+#: mSRV/ui[6]/showCompRisks/compEvent.label
+msgid "Event of Interest"
+msgstr ""
+
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
+#: mSRV/results/adjSection/adjSummaryTable.columns.title
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 msgid "Events"
 msgstr ""
 
@@ -2195,7 +2342,19 @@ msgid "Exact p-adj"
 msgstr ""
 
 #: R/msnp.b.R
-msgid "Excluded"
+msgid "Excluded {n} heterozygous male genotype call(s) for X-linked analysis."
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Excluded: Call Rate < {val}"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Excluded: HWE p < {val}"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Excluded: MAF < {val}"
 msgstr ""
 
 #: R/msnp.b.R
@@ -2238,6 +2397,11 @@ msgstr "Açıklayıcı"
 msgid "Exploratory & Factor Analysis"
 msgstr ""
 
+#: mSRV/options/adjExposure.title
+#: mSRV/ui[0][6].label
+msgid "Exposure Variable (Adjusted Curves)"
+msgstr ""
+
 #: package.description
 msgid ""
 "Extensions of the functionality of popular data analysis methods: "
@@ -2245,10 +2409,11 @@ msgid ""
 "imputation, univariate and multivariate outliers identification and removal, "
 "Uncertain Interval (UI) threshold estimation, a priori power analysis, MLP "
 "neural network classifier, logistic regression with feature selection, "
-"Random Forest classifier, survival analysis (Kaplan-Meier and Cox "
-"regression), Principal Component Analysis (PCA), Single Nucleotide "
-"Polymorphism (SNP) association and Hardy-Weinberg equilibrium analysis, and "
-"Decision Curve Analysis (DCA) with model calibration."
+"Random Forest classifier, survival analysis (Kaplan-Meier, Cox regression, "
+"adjusted curves, competing risks, time-dependent effects), Principal "
+"Component Analysis (PCA), Single Nucleotide Polymorphism (SNP) association "
+"and Hardy-Weinberg equilibrium analysis, and Decision Curve Analysis (DCA) "
+"with model calibration."
 msgstr ""
 
 #: mSNP/results/hweGroup/hwTable.columns.title
@@ -2316,6 +2481,10 @@ msgstr ""
 msgid "Feature Selection Settings"
 msgstr ""
 
+#: mSNP/options/femaleLevel.title
+msgid "Female level"
+msgstr ""
+
 #: mLR/options/group.title
 #: mLR/ui[0][3].label
 #: mPCA/options/group.title
@@ -2326,6 +2495,14 @@ msgstr ""
 #: mCOR/options/group.title
 #: mCOR/ui[0][1].label
 msgid "Filtering Variable"
+msgstr ""
+
+#: mSRV/options/showFineGray.title
+msgid "Fine-Gray Subdistribution Hazard Model"
+msgstr ""
+
+#: mSRV/results/compRisksSection/fineGrayTable.title
+msgid "Fine-Gray Subdistribution Hazard Regression"
 msgstr ""
 
 #: mCOR/options/plotOrder/FPC.title
@@ -2370,10 +2547,6 @@ msgstr ""
 
 #: mSNP/ui[1].label
 msgid "Frequency Tables"
-msgstr ""
-
-#: R/mpca.b.R
-msgid "Full dataset used in analysis"
 msgstr ""
 
 #: mSNP/results/assocGroup/assocTable.title
@@ -2441,6 +2614,17 @@ msgstr ""
 msgid "Graphical Lasso (GLASSO)"
 msgstr ""
 
+#: R/msrv.b.R
+msgid ""
+"Gray's test does not support delayed entry / left-truncation and evaluates "
+"event times from origin."
+msgstr ""
+
+#: mSRV/options/showGrayTest.title
+#: mSRV/results/compRisksSection/grayTestTable.title
+msgid "Gray's Test for Group Differences"
+msgstr ""
+
 #: R/mout.b.R
 #: mMOUT/results/stat.columns.title
 #: mMOUT/results/oind.columns.title
@@ -2448,6 +2632,8 @@ msgstr ""
 #: mSNP/ui[0][3].label
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/kmSection/kmRiskTable.columns.title
+#: mSRV/results/adjSection/adjSummaryTable.columns.title
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 msgid "Group"
 msgstr "Grup"
 
@@ -2467,7 +2653,7 @@ msgid "Group Projection in PCA Space"
 msgstr ""
 
 #: R/mpca.b.R
-msgid "Group:"
+msgid "Group: {group} (Permutation {p})"
 msgstr ""
 
 #: mMOUT/options/group.title
@@ -2479,9 +2665,13 @@ msgstr ""
 #: mROC/options/groups.title
 #: mROC/ui[0][2].label
 #: mSRV/options/group.title
-#: mSRV/ui[0][2].label
+#: mSRV/ui[0][4].label
 msgid "Grouping Variable"
 msgstr "Gruplama Değişkeni"
+
+#: R/msrv.b.R
+msgid "Grouping variable must have at least 2 levels for Gray's test."
+msgstr ""
 
 #: mCOR/options/glassoLayout/groups.title
 msgid "Groups"
@@ -2516,6 +2706,7 @@ msgid "Hazard Ratio"
 msgstr ""
 
 #: mSRV/results/coxSection/coxCoefTable.columns.title
+#: mSRV/results/coxSection/timeDepTable.columns.title
 msgid "Hazard Ratio (HR)"
 msgstr ""
 
@@ -2619,11 +2810,8 @@ msgstr "Tutma Dışı Doğruluk (%)"
 msgid "Hold-out Validation"
 msgstr ""
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
-msgid "Hold-out Validation (AUC ="
+msgid "Hold-out Validation (AUC = {auc})"
 msgstr ""
 
 #: mLR/options/partition/holdout.title
@@ -2657,6 +2845,10 @@ msgstr "Hommel (1988)"
 
 #: mCOR/options/glassoHub.title
 msgid "Hub markers table"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Huber–White robust sandwich estimator"
 msgstr ""
 
 #: R/msnp.b.R
@@ -2772,6 +2964,10 @@ msgstr "İndeksler (Satırlar)"
 msgid "Influence vectors (Biplot)"
 msgstr ""
 
+#: R/mmf.b.R
+msgid "Influx"
+msgstr ""
+
 #: mMF/results/estim/fplot.title
 msgid "Influx-outflux plot"
 msgstr "Giriş-çıkış grafiği"
@@ -2779,14 +2975,6 @@ msgstr "Giriş-çıkış grafiği"
 #: mMF/options/fluxplot.title
 msgid "Influx-outflux plot for missing data patterns"
 msgstr "Eksik veri desenleri için giriş-çıkış grafiği"
-
-#: R/mmf.b.R
-msgid "Influx*"
-msgstr "Giriş*"
-
-#: mPCA/results/text.title
-msgid "Info"
-msgstr ""
 
 #: mMLP/options/rang.title
 #: mMLP/ui[1]/rang.label
@@ -2820,8 +3008,8 @@ msgid "Intersection"
 msgstr "Yön"
 
 #: mCOR/ui[4][0]/tables/ci/ciWidth.label
-#: mROC/ui[2]/ciAUC/ciWidth.label
-#: mSRV/ui[5]/showRoc/rocCI/rocWidth.label
+#: mROC/ui[1]/ciAUC/ciWidth.label
+#: mSRV/ui[7]/showRoc/rocCI/rocWidth.label
 msgid "Interval"
 msgstr "Aralık"
 
@@ -2923,8 +3111,11 @@ msgid "K-Fold CV"
 msgstr ""
 
 #: R/mlr.b.R
-#: R/mpca.b.R
 msgid "K-Fold CV (AUC ="
+msgstr ""
+
+#: R/mpca.b.R
+msgid "K-Fold CV (AUC = {auc})"
 msgstr ""
 
 #: R/mmlp.b.R
@@ -2972,6 +3163,10 @@ msgstr ""
 
 #: mSRV/options/showKm.title
 msgid "Kaplan-Meier Survival Curves"
+msgstr ""
+
+#: mSRV/options/kmPlot.title
+msgid "Kaplan-Meier Survival Plot"
 msgstr ""
 
 #: mSRV/results/kmSection/kmSummaryTable.title
@@ -3028,11 +3223,15 @@ msgid "Legend Box"
 msgstr "Açıklama Kutusu"
 
 #: mSRV/options/statusEvent.title
-#: mSRV/ui[0][1]/statusEvent.label
+#: mSRV/ui[0][2]/statusEvent.label
 #: mUI/results/stat/intstat.columns.title
 #, fuzzy
 msgid "Level"
 msgstr "Seviye"
+
+#: R/msrv.b.R
+msgid "Likelihood Ratio Test"
+msgstr ""
 
 #: mROC/options/lwd.title
 msgid "Line width"
@@ -3061,11 +3260,6 @@ msgstr ""
 msgid "Loading"
 msgstr ""
 
-#: mPWR/results/text.title
-#, fuzzy
-msgid "Log / Errors"
-msgstr "Günlük / Hatalar"
-
 #: mLR/ui[3]/showForest/forestLog.label
 msgid "Log scale"
 msgstr ""
@@ -3089,6 +3283,10 @@ msgstr ""
 
 #: R/mlr.b.R
 msgid "Log(OR)"
+msgstr ""
+
+#: mSRV/options/timeDepFunc/log.title
+msgid "log(t) (Logarithmic time)"
 msgstr ""
 
 #: package/analyses/mLR.title
@@ -3130,7 +3328,8 @@ msgstr ""
 #: mLR/options.description.main
 msgid ""
 "Logistic Regression with feature selection. Note that cross-validation fold "
-"partitioning uses a hardcoded random seed (42) for reproducibility."
+"partitioning uses a random seed (default 42, configurable under Validation "
+"Settings) for reproducibility."
 msgstr ""
 
 #: R/mlr.b.R
@@ -3155,6 +3354,9 @@ msgstr ""
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
+#: mSRV/results/coxSection/timeDepTable.columns.title
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
+#: mSRV/results/compRisksSection/fineGrayTable.columns.title
 msgid "Lower 95% CI"
 msgstr ""
 
@@ -3256,6 +3458,12 @@ msgstr "Anlamlılık işareti *<0.05, **<0.01, ***<0.001"
 msgid "Marker"
 msgstr ""
 
+#: R/msnp.b.R
+msgid ""
+"Marker '{marker}' has more than two distinct alleles ({alleles}). Only "
+"bi-allelic markers are supported."
+msgstr ""
+
 #: mSNP/results/ldGroup/ldTable.columns.title
 msgid "Marker 1"
 msgstr ""
@@ -3313,6 +3521,11 @@ msgstr ""
 msgid "Max Threshold (%)"
 msgstr ""
 
+#: mSRV/options/kmMaxTime.title
+#: mSRV/ui[2]/showKm/kmMaxTime.label
+msgid "Max time (0 = unlimited)"
+msgstr ""
+
 #: mMF/options/maxiter.title
 msgid "Maximum number of iterations"
 msgstr "Maksimum yineleme sayısı"
@@ -3348,6 +3561,12 @@ msgstr "McQuitty Bağlantısı (WPGMA)"
 
 #: mSNP/options/mdrEnable.title
 msgid "MDR analysis"
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"MDR analysis requires a binary outcome (2 levels), but '{var}' has {n} "
+"levels."
 msgstr ""
 
 #: mSNP/results/mdrGroup/mdrHeatmap.title
@@ -3572,7 +3791,8 @@ msgstr "MLP Ağ Topolojisi"
 #: mMLP/options.description.main
 msgid ""
 "MLP Neural Network Classifier. Note that weight initialization and data "
-"partitioning use a hardcoded random seed (42) for reproducibility."
+"partitioning use a random seed (default 42, configurable under Validation "
+"Settings) for reproducibility."
 msgstr ""
 
 #: R/mdca.b.R
@@ -3611,8 +3831,22 @@ msgstr ""
 msgid "Model Coefficients (Post-Selection / Refitted Model)"
 msgstr ""
 
+#: R/msrv.b.R
+msgid ""
+"Model fit (Wald test): χ² = {stat}, df = {df}, p = {p}; Events of interest = "
+"{nev}"
+msgstr ""
+
 #: mLR/results/infoTable.title
 msgid "Model Fit & Predictive Performance"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Model fitting failed to converge:"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Model fitting failed to converge."
 msgstr ""
 
 #: mLR/options/show_formula.title
@@ -3665,6 +3899,12 @@ msgstr "Aralık"
 msgid "MSE"
 msgstr ""
 
+#: R/msrv.b.R
+msgid ""
+"Multi-row data collapsed to unique subjects based on '{subjectId}' with "
+"baseline marker values."
+msgstr ""
+
 #: mLR/options/multiclass_roc_type.title
 #: mLR/ui[3]/show_roc/multiclass_roc_type.label
 #: mMLP/options/multiclass_roc_type.title
@@ -3692,7 +3932,6 @@ msgid "Multiple imputation for missing data"
 msgstr "Eksik veriler için çoklu doldurma"
 
 #: mSNP/options/adjust.title
-#: mSNP/ui[11].label
 msgid "Multiple testing correction"
 msgstr ""
 
@@ -3702,10 +3941,6 @@ msgstr ""
 #: mMOUT/ui.title
 #: mMOUT/results.title
 msgid "Multivariate outliers identification and removal"
-msgstr ""
-
-#: R/mdca.b.R
-msgid "must be probabilities between 0 and 1."
 msgstr ""
 
 #: mSRV/results/kmSection/kmRiskTable.columns.title
@@ -3848,10 +4083,22 @@ msgstr "Sınır Öge Sınıflandırıcı (çok katmanlı perceptron) gösterimi"
 msgid "No clinical gain"
 msgstr ""
 
+#: R/msrv.b.R
+msgid "No complete cases available for time-dependent Cox model."
+msgstr ""
+
+#: R/msrv.b.R
+msgid "No events of the target cause observed for Fine–Gray regression."
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "No misclassified cases found."
+msgstr ""
+
+#: R/msrv.b.R
+msgid "No valid predictors found for time-dependent Cox model."
 msgstr ""
 
 #: R/mcor.b.R
@@ -4135,6 +4382,10 @@ msgstr ""
 msgid "OOB errors table"
 msgstr "OOB hataları tablosu"
 
+#: mROC/options/theBest.title
+msgid "Optimal cut-off"
+msgstr ""
+
 #: mDCA/results/dcaTable.columns.title
 msgid "Optimal Threshold"
 msgstr ""
@@ -4174,8 +4425,8 @@ msgid "Outcome Variable (Case/Control)"
 msgstr ""
 
 #: R/mmf.b.R
-msgid "OutFlux**"
-msgstr "Çıkış**"
+msgid "OutFlux"
+msgstr ""
 
 #: R/mmout.b.R
 #: R/mout.b.R
@@ -4270,10 +4521,6 @@ msgid "Overdominant"
 msgstr ""
 
 #: R/msnp.b.R
-msgid "Overdominant abbreviation"
-msgstr ""
-
-#: R/msnp.b.R
 msgid "p"
 msgstr ""
 
@@ -4348,6 +4595,7 @@ msgstr ""
 msgid "Partial correlation network"
 msgstr ""
 
+#: mCOR/ui[6].label
 #: mCOR/results/glassoGroup.title
 msgid "Partial Correlation Network"
 msgstr ""
@@ -4463,10 +4711,6 @@ msgstr ""
 msgid "Performance Statistics"
 msgstr "Performans İstatistikleri"
 
-#: R/mpca.b.R
-msgid "Permutation"
-msgstr ""
-
 #: R/mrf.b.R
 #: mMLP/options/show_imp.title
 #: mRF/options/imp_type/permutation.title
@@ -4501,12 +4745,11 @@ msgstr ""
 msgid "Pie"
 msgstr "Pasta"
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
-#: R/mrf.b.R
-#, fuzzy
-msgid "Please select a dependent variable (target)."
-msgstr "Lütfen bir bağımlı değişken (hedef) seçiniz."
+#: R/msrv.b.R
+msgid ""
+"Please select a Grouping Variable or Exposure Variable to compute adjusted "
+"survival curves."
+msgstr ""
 
 #: R/mmout.b.R
 msgid "Please select at least 2 variables for multivariate analysis."
@@ -4516,14 +4759,8 @@ msgstr ""
 msgid "Please select at least 2 variables for PCA."
 msgstr ""
 
-#: R/mmlp.b.R
-#: R/mrf.b.R
-#, fuzzy
-msgid "Please select at least one predictor variable (factor or covariate)."
-msgstr "Lütfen en az bir tahminci değişkeni (faktör veya kovaryant) seçiniz."
-
-#: R/mlr.b.R
-msgid "Please select at least one predictor variable."
+#: R/msrv.b.R
+msgid "Please specify one or more time-dependent covariates."
 msgstr ""
 
 #: mUI/options/isTGR.title
@@ -4698,6 +4935,7 @@ msgstr "Tahmini Ortalama Eşleştirme (PMM) adımları"
 #: mMLP/results/importanceTable.columns.title
 #: mRF/results/importanceTable.columns.title
 #: mROC/results/rocTable.columns.title
+#: mSRV/results/compRisksSection/fineGrayTable.columns.title
 #: mSRV/results/rocSection/rocTable.columns.title
 #: mUI/results/stat/uistat.columns.title
 #: mUI/results/stat/mcistat.columns.title
@@ -4740,6 +4978,10 @@ msgstr "Sıklık"
 msgid "Principal Component"
 msgstr ""
 
+#: R/mpca.b.R
+msgid "Principal Component {i} (PC{i}) – {pct}% of variance"
+msgstr ""
+
 #: package/analyses/mPCA.title
 #: package/analyses/mPCA.menuTitle
 #: mPCA/options.title
@@ -4756,7 +4998,8 @@ msgstr ""
 #: mPCA/options.description.main
 msgid ""
 "Principal Component Analysis (PCA). Note that parallel analysis and "
-"cross-validation use a hardcoded random seed (42) for reproducibility."
+"cross-validation use a random seed (default 42, configurable under PCA "
+"Configuration) for reproducibility."
 msgstr ""
 
 #: mMLP/results/misclassifiedTable.columns.title
@@ -4891,7 +5134,8 @@ msgstr ""
 #: mRF/options.description.main
 msgid ""
 "Random Forest Classifier using the ranger package. Note that data "
-"partitioning uses a hardcoded random seed (42) for reproducibility."
+"partitioning uses a random seed (default 42, configurable under Validation "
+"Settings) for reproducibility."
 msgstr ""
 
 #: R/mrf.b.R
@@ -4921,16 +5165,13 @@ msgstr ""
 msgid "Recessive"
 msgstr ""
 
-#: R/msnp.b.R
-msgid "Recessive abbreviation"
-msgstr ""
-
 #: mLR/options/refLevel.title
 #: mLR/ui[0][0]/refLevel.label
 msgid "Reference"
 msgstr ""
 
 #: mUI/options/refval.title
+#: mUI/ui[0][1]/refval.label
 #, fuzzy
 msgid "Reference level"
 msgstr "Referans dönemi"
@@ -5015,9 +5256,8 @@ msgstr ""
 msgid "Repeated Stratified CV"
 msgstr ""
 
-#: R/mlr.b.R
 #: R/mpca.b.R
-msgid "Repeated Stratified CV (AUC ="
+msgid "Repeated Stratified CV (AUC = {auc})"
 msgstr ""
 
 #: mLR/options/partition/repeated_kfold.title
@@ -5031,6 +5271,10 @@ msgstr ""
 #: mMF/options/setseed.title
 msgid "Reproducible random number generation (RNG) results"
 msgstr "Tekrarlanabilir rastgele sayı üretimi (RNG) sonuçları"
+
+#: R/msrv.b.R
+msgid "Restricted mean survival time evaluated up to τ = {tau}."
+msgstr ""
 
 #: mCOR/options/clPos/r.title
 msgid "Right"
@@ -5083,6 +5327,10 @@ msgstr ""
 
 #: R/mmout.b.R
 msgid "Robust Outlier"
+msgstr ""
+
+#: mSRV/results/compRisksSection/fineGrayTable.columns.title
+msgid "Robust SE"
 msgstr ""
 
 #: R/mmout.b.R
@@ -5162,7 +5410,7 @@ msgstr "Eğrileri ayır"
 msgid "ROC estimation for binomial logistic models demonstration"
 msgstr ""
 
-#: mROC/ui[2].label
+#: mROC/ui[1].label
 msgid "ROC graphs"
 msgstr "ROC grafikleri"
 
@@ -5190,14 +5438,10 @@ msgstr ""
 #: mPCA/ui[3][0]/rocPlot/show_roc_table.label
 #: mRF/options/show_roc_table.title
 #: mRF/ui[3]/show_roc/show_roc_table.label
+#: mROC/options/showTable.title
+#: mROC/ui[1]/showTable.label
 #: mUI/options/show_roc_table.title
 msgid "ROC table"
-msgstr ""
-
-#: mROC/options/showTable.title
-#: mROC/ui[1].label
-#: mROC/ui[1]/showTable.label
-msgid "ROC Tables"
 msgstr ""
 
 #: mLR/options/roc_x.title
@@ -5223,6 +5467,10 @@ msgstr ""
 #, fuzzy
 msgid "Sample Size (N)"
 msgstr "Örnek Boyutu (N)"
+
+#: R/msrv.b.R
+msgid "Sample size (n) and events count unique subjects."
+msgstr ""
 
 #: R/mpwr.b.R
 #, fuzzy
@@ -5273,6 +5521,10 @@ msgstr ""
 msgid "Scale position"
 msgstr "Ölçek konumu"
 
+#: R/msrv.b.R
+msgid "Schoenfeld residuals"
+msgstr ""
+
 #: mSRV/options/showSchoenfeldPlot.title
 msgid "Schoenfeld Residuals Plot"
 msgstr ""
@@ -5283,6 +5535,16 @@ msgstr ""
 
 #: R/mdca.b.R
 msgid "Score"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Score (Log-rank) Test"
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"Score (log-rank) test from Cox model is reported, as standard Mantel–Cox "
+"log-rank is not defined for counting process data."
 msgstr ""
 
 #: mPCA/options/screePlot.title
@@ -5303,6 +5565,8 @@ msgid "Se"
 msgstr ""
 
 #: mSRV/results/coxSection/coxCoefTable.columns.title
+#: mSRV/results/coxSection/timeDepTable.columns.title
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 msgid "SE"
 msgstr ""
 
@@ -5342,10 +5606,7 @@ msgstr ""
 msgid "Selection"
 msgstr ""
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
 #: R/mroc.b.R
 #: R/msrv.b.R
 #: R/mui.b.R
@@ -5354,10 +5615,7 @@ msgstr ""
 msgid "Sensitivity"
 msgstr "Duyarlılık"
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
 #: R/mroc.b.R
 msgid "Sensitivity (%)"
 msgstr "Duyarlılık (%)"
@@ -5442,6 +5700,10 @@ msgstr "Gölge"
 
 #: mSNP/results/popGroup/popTable.columns.title
 msgid "Shannon Index (I)"
+msgstr ""
+
+#: mSRV/options/showAdjCurves.title
+msgid "Show Adjusted Survival Curves"
 msgstr ""
 
 #: R/mlr.b.R
@@ -5529,7 +5791,6 @@ msgstr "Spearman (ρ)"
 msgid "Spearman's ρ"
 msgstr ""
 
-#: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
 #: R/mrf.b.R
@@ -5544,10 +5805,7 @@ msgstr ""
 msgid "Specificity"
 msgstr "Özgüllük"
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
 #: R/mroc.b.R
 msgid "Specificity (%)"
 msgstr "Özgüllük (%)"
@@ -5605,6 +5863,10 @@ msgstr "Kare"
 msgid "Stability Assessment"
 msgstr ""
 
+#: R/msrv.b.R
+msgid "Standard errors and confidence intervals are adjusted for clustering by"
+msgstr ""
+
 #: mLR/results/coeffTable.columns.title
 msgid "Standardized Beta"
 msgstr ""
@@ -5618,16 +5880,34 @@ msgid "Status"
 msgstr ""
 
 #: mSRV/options/status.title
-#: mSRV/ui[0][1].label
+#: mSRV/ui[0][2].label
 msgid "Status / Event Variable"
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"Status variable has only one event type; cumulative incidence is equal to 1 "
+"– KM survival."
 msgstr ""
 
 #: R/msrv.b.R
 msgid "Status variable must be factor, character, or numeric."
 msgstr ""
 
+#: R/msrv.b.R
+msgid ""
+"Status variable must have at least two distinct values for Competing Risks "
+"analysis."
+msgstr ""
+
 #: mLR/results/coeffTable.columns.title
 msgid "Std. Error"
+msgstr ""
+
+#: R/mlr.b.R
+msgid ""
+"Stepwise selection failed to retain any predictors or encountered an error; "
+"falling back to all predictors."
 msgstr ""
 
 #: R/mdca.b.R
@@ -5637,6 +5917,15 @@ msgstr ""
 #: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Strength"
+msgstr ""
+
+#: mSRV/results/compRisksSection/fineGrayTable.columns.title
+msgid "Subdistribution HR (sHR)"
+msgstr ""
+
+#: mSRV/options/subjectId.title
+#: mSRV/ui[0][3].label
+msgid "Subject ID / Cluster (optional)"
 msgstr ""
 
 #: mROC/options/cmpDeLong/succ.title
@@ -5671,13 +5960,17 @@ msgid "Survival Analysis"
 msgstr ""
 
 #: package/datasets/SurvivalAnalysisKaggle.description
-msgid "Survival Analysis (Kaplan-Meier and Cox regression) demonstration"
+msgid ""
+"Survival Analysis (Kaplan-Meier, Cox regression, Adjusted Curves, Competing "
+"Risks, and Time-Dependent Effects) demonstration"
 msgstr ""
 
 #: package/analyses/mSRV.description
 msgid ""
 "Survival Analysis including Kaplan-Meier curves, log-rank tests, Cox "
-"proportional hazards regression, and time-dependent ROC curves."
+"proportional hazards regression, adjusted survival curves, competing risks "
+"analysis (Aalen-Johansen CIF, Gray's test, Fine-Gray model), time-dependent "
+"covariates, and time-dependent ROC curves."
 msgstr ""
 
 #: package/datasets/SurvivalAnalysisKaggle.name
@@ -5687,6 +5980,10 @@ msgstr ""
 #: R/msrv.b.R
 #: mSRV/options/kmType/survival.title
 msgid "Survival probability"
+msgstr ""
+
+#: mSRV/options/timeDepFunc/linear.title
+msgid "t (Linear time)"
 msgstr ""
 
 #: mCOR/ui[4].label
@@ -5757,10 +6054,6 @@ msgstr "'pwrss' paketi kurulmamış. Lütfen R'de kurun."
 msgid "The 'ranger' package is required. Please install it."
 msgstr ""
 
-#: mROC/options/theBest.title
-msgid "The Best point on ROC"
-msgstr "ROC üzerinde En İyi nokta"
-
 #: R/mroc.b.R
 msgid ""
 "The classifying variable '{}' does not have exactly two levels; ROC "
@@ -5797,6 +6090,16 @@ msgstr "Veri seti, sınır öge ağını eğitmek için çok az tam vaka içeriy
 msgid "The dependent variable must have at least 2 levels."
 msgstr ""
 
+#: R/msrv.b.R
+msgid "The exposure variable must have at least two distinct levels."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"The selected exposure variable must be categorical or have 10 or fewer "
+"distinct values."
+msgstr ""
+
 #: R/mmout.b.R
 msgid "Theoretical Chi-Square Quantiles"
 msgstr ""
@@ -5807,15 +6110,18 @@ msgid "Three-Way threshold determination in test results"
 msgstr "Test sonuçlarında üçlü eşik belirlenmesi"
 
 #: R/mpca.b.R
-msgid "Threshold (K ="
+msgid "Threshold (K = {optimal} comp.)"
 msgstr ""
 
 #: R/mcor.b.R
 msgid "Threshold (r = 0.70)"
 msgstr ""
 
-#: mOUT/options/tholdZS.title
 #: mOUT/options/tholdmZS.title
+msgid "Threshold for modified Z-score"
+msgstr ""
+
+#: mOUT/options/tholdZS.title
 msgid "Threshold for Z-score"
 msgstr "Z-skoru için eşik"
 
@@ -5842,6 +6148,10 @@ msgstr ""
 msgid "Time Point t"
 msgstr ""
 
+#: mSRV/options/timeDepFunc.title
+msgid "Time Transform Function"
+msgstr ""
+
 #: mSRV/options/elapsed.title
 #: mSRV/ui[0][0].label
 msgid "Time Variable (elapsed time)"
@@ -5851,8 +6161,24 @@ msgstr ""
 msgid "Time variable must be numeric."
 msgstr ""
 
+#: mSRV/options/timeDepVars.title
+msgid "Time-dependent Covariates"
+msgstr ""
+
+#: mSRV/ui[0][7].label
+msgid "Time-dependent Covariates (Cox)"
+msgstr ""
+
+#: mSRV/options/showTimeDepEffects.title
+msgid "Time-dependent effects (time-varying coefficients)"
+msgstr ""
+
+#: mSRV/results/coxSection/timeDepTable.title
+msgid "Time-dependent Effects in Cox Model"
+msgstr ""
+
 #: mSRV/options/showRoc.title
-#: mSRV/ui[5].label
+#: mSRV/ui[7].label
 #: mSRV/results/rocSection.title
 msgid "Time-dependent ROC Analysis"
 msgstr ""
@@ -5933,11 +6259,8 @@ msgstr ""
 msgid "Training"
 msgstr "Eğitim"
 
-#: R/mlr.b.R
-#: R/mmlp.b.R
 #: R/mpca.b.R
-#: R/mrf.b.R
-msgid "Training (AUC ="
+msgid "Training (AUC = {auc})"
 msgstr ""
 
 #: R/mmlp.b.R
@@ -6037,6 +6360,9 @@ msgstr "Tek değişkenli aykırı değer tanımlama ve kaldırma"
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
+#: mSRV/results/coxSection/timeDepTable.columns.title
+#: mSRV/results/compRisksSection/cifSummaryTable.columns.title
+#: mSRV/results/compRisksSection/fineGrayTable.columns.title
 msgid "Upper 95% CI"
 msgstr ""
 
@@ -6056,6 +6382,10 @@ msgstr "Üst kısım"
 #, fuzzy
 msgid "Upper threshold"
 msgstr "Üst eşik"
+
+#: mSNP/options/polyDf1.title
+msgid "Use df = 1 for polymorphism"
+msgstr ""
 
 #: mPWR/results/powerTable.columns.superTitle
 #, fuzzy
@@ -6104,7 +6434,7 @@ msgid "Value / Match count"
 msgstr ""
 
 #: R/mdca.b.R
-msgid "Values of"
+msgid "Values of '{var}' must be probabilities between 0 and 1."
 msgstr ""
 
 #: R/mpca.b.R
@@ -6122,6 +6452,10 @@ msgstr "Değişken"
 #: mMF/results/estim/fMARtab.template.title
 msgid "Variable - $key"
 msgstr "Değişken - $key"
+
+#: mSRV/results/coxSection/timeDepTable.columns.title
+msgid "Variable / Term"
+msgstr ""
 
 #: R/mrf.b.R
 #: mRF/options/show_imp.title
@@ -6169,13 +6503,21 @@ msgstr ""
 msgid "Variance ratio (SD₁² / SD₂²)"
 msgstr "Varyans oranı (SD₁² / SD₂²)"
 
+#: R/msrv.b.R
+msgid "vs"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Wald Test"
+msgstr ""
+
 #: mCOR/options/clustMet/ward.D2.title
-msgid "Ward´s D2 Linkage"
-msgstr "Ward'ın D2 Bağlantısı"
+msgid "Ward's D2 Linkage"
+msgstr ""
 
 #: mCOR/options/clustMet/ward.D.title
-msgid "Ward´s Linkage"
-msgstr "Ward'ın Bağlantısı"
+msgid "Ward's Linkage"
+msgstr ""
 
 #: R/mpca.b.R
 msgid "Warning: Grouping variable must have at least 2 levels."
@@ -6208,14 +6550,6 @@ msgstr "0.5 ile"
 #: mROC/options/cmpDeLong/wcontr.title
 msgid "With control"
 msgstr "Kontrol ile"
-
-#: R/mmf.b.R
-msgid "with missing data on other variables"
-msgstr "diğer değişkenlerde eksik veri ile"
-
-#: R/mmf.b.R
-msgid "with observed data on other variables"
-msgstr "diğer değişkenlerde gözlemlenmiş veri ile"
 
 #: mLR/ui[3]/show_roc/roc_x.label
 #: mMLP/ui[3]/show_roc/roc_x.label
