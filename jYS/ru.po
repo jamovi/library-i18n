@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-09-30 13:51+0000\n"
+"PO-Revision-Date: 2026-10-07 12:58+0000\n"
 "Last-Translator: Yuri Smolyakov <smolyakov@rambler.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jamovi/module-"
 "jys/ru/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.10.dev0\n"
+"X-Generator: Weblate 2026.10.1.dev0\n"
 
 #: R/msnp.b.R
 msgid "-log10(p-value)"
@@ -307,6 +307,8 @@ msgid ""
 "<b>Counting process / Delayed entry</b>: Kaplan–Meier curves estimated with "
 "left truncation Surv(tstart, time, event)."
 msgstr ""
+"<b>Процесс подсчета / отложенный вход</b>: кривые Каплана–Мейера оценены с "
+"учетом усечения слева Surv(tstart, time, event)."
 
 #: R/msnp.b.R
 msgid ""
@@ -327,6 +329,12 @@ msgid ""
 "treating competing events as censored, CIF properly accounts for competing "
 "failure types."
 msgstr ""
+"<b>Функция кумулятивной инцидентности (CIF)</b>, оцениваемая с помощью "
+"непараметрического метода Аалена–Йохансена (Aalen & Johansen, 1978), "
+"вычисляет вероятность наступления определенного события во времени при "
+"наличии конкурирующих рисков. В отличие от выживаемости Каплана–Мейера (1 – "
+"KM), завышающей риск из-за трактовки конкурирующих событий как "
+"цензурированных, CIF корректно учитывает конкурирующие исходы."
 
 #: R/msnp.b.R
 msgid ""
@@ -352,6 +360,12 @@ msgid ""
 "2023). <b>RMST</b> represents the Restricted Mean Survival Time evaluated up "
 "to τ (area under the adjusted survival curve)."
 msgstr ""
+"<b>Прямая стандартизация (G-компутация)</b> рассчитывает контрфактические "
+"кривые выживаемости для каждого уровня воздействия путем усреднения "
+"индивидуальных прогнозируемых кривых выживаемости по эмпирическому "
+"распределению ковариат выборки (Denz et al., 2023). <b>RMST</b> представляет "
+"собой ограниченное среднее время выживаемости, оцениваемое до τ (площадь под "
+"скорректированной кривой выживаемости)."
 
 #: R/mdca.b.R
 msgid ""
@@ -486,6 +500,12 @@ msgid ""
 "Hazard Ratio) represents the relative change in the subdistribution hazard. "
 "Robust standard errors are used to account for inverse-probability weighting."
 msgstr ""
+"<b>Регрессия пропорциональных субраспределений рисков Файна–Грея</b> (Fine & "
+"Gray, 1999) моделирует влияние предикторов непосредственно на функцию "
+"кумулятивной инцидентности целевого события. <b>sHR</b> (отношение "
+"субраспределения рисков) отражает относительное изменение функции "
+"субраспределения. Для учета обратного вероятностного взвешивания "
+"используются робастные стандартные ошибки."
 
 #: R/msnp.b.R
 msgid ""
@@ -505,6 +525,9 @@ msgid ""
 "comparing cumulative incidence functions of a specific cause between groups. "
 "It evaluates subdistribution hazards under competing risks."
 msgstr ""
+"<b>Критерий Грея</b> (Gray, 1988) – непараметрический критерий для сравнения "
+"функций кумулятивной инцидентности целевой причины между группами при "
+"наличии конкурирующих рисков."
 
 #: R/mcor.b.R
 msgid "<b>Hₐ</b> is negative correlation"
@@ -1057,6 +1080,13 @@ msgid ""
 "indicates that the hazard ratio changes over time: β_td < 0 indicates "
 "diminishing relative risk, while β_td > 0 indicates increasing relative risk."
 msgstr ""
+"<b>Кокс-регрессия с переменными, зависящими от времени</b> моделирует "
+"непропорциональность рисков через взаимодействие ковариат с функцией времени "
+"(Therneau & Grambsch, 2000). Функция риска моделируется как λ(t; z) = λ₀(t) "
+"exp(β₀ z + β_td [z × f(t)]). Статистически значимое взаимодействие со "
+"временем (β_td, p < 0.05) указывает на то, что отношение рисков меняется во "
+"времени: β_td < 0 означает снижение относительного риска со временем, а "
+"β_td > 0 – повышение относительного риска."
 
 #: R/msrv.b.R
 msgid ""
@@ -1067,6 +1097,12 @@ msgid ""
 "represents the optimal threshold determined by the Youden index (J = "
 "Sensitivity + Specificity – 1)."
 msgstr ""
+"<b>Зависимый от времени ROC-анализ</b> оценивает прогностическую точность "
+"непрерывных маркеров для исходов типа «время до события» посредством "
+"дихотомизации (landmark) в заданный момент времени <i>t</i> (наблюдения, "
+"цензурированные ранее <i>t</i>, исключаются). <b>AUC</b> измеряет "
+"разделяющую способность теста. <b>Порог отсечения</b> – оптимальный порог, "
+"определяемый по индексу Юдена (J = Чувствительность + Специфичность – 1)."
 
 #: R/mmlp.b.R
 msgid "<b>Training Accuracy</b>: classification accuracy on the training dataset."
@@ -1227,6 +1263,8 @@ msgstr "таблица корреляционной матрицы"
 #: R/msrv.b.R
 msgid "A grouping variable with at least 2 levels is required for Gray's test."
 msgstr ""
+"Для применения критерия Грея требуется группирующая переменная минимум с 2 "
+"уровнями."
 
 #: package/analyses/mPWR.title
 #: package/analyses/mPWR.menuTitle
@@ -1268,7 +1306,7 @@ msgstr "Наблюдаемый класс"
 
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
 msgid "Adjusted Median Survival"
-msgstr ""
+msgstr "Скорректированная медиана выживаемости"
 
 #: R/mpca.b.R
 msgid "Adjusted Rand Index (ARI)"
@@ -1276,21 +1314,21 @@ msgstr "Коэффициент согласованности ARI (Adjusted Rand
 
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
 msgid "Adjusted RMST"
-msgstr ""
+msgstr "Скорректированное RMST"
 
 #: mSRV/ui[5].label
 #: mSRV/results/adjSection.title
 #: mSRV/results/adjSection/adjPlot.title
 msgid "Adjusted Survival Curves (Direct / G-computation)"
-msgstr ""
+msgstr "Скорректированные кривые выживаемости (G-компутация)"
 
 #: R/msrv.b.R
 msgid "Adjusted Survival Probability"
-msgstr ""
+msgstr "Скорректированная вероятность выживаемости"
 
 #: mSRV/results/adjSection/adjSummaryTable.title
 msgid "Adjusted Survival Summary"
-msgstr ""
+msgstr "Сводка скорректированной выживаемости"
 
 #: mCOR/options/clustMet.title
 msgid "Agglomeration method"
@@ -1388,6 +1426,8 @@ msgid ""
 "At least one predictor (group or covariate) is required for Fine–Gray "
 "regression."
 msgstr ""
+"Для регрессии Файна–Грея требуется как минимум один предиктор (группа или "
+"ковариата)."
 
 #: R/mroc.b.R
 #: mLR/results/rocTable.columns.title
@@ -1452,7 +1492,7 @@ msgstr "Базовая вероятность"
 
 #: R/msrv.b.R
 msgid "baseline"
-msgstr ""
+msgstr "исходный"
 
 #: package/datasets/BCModelsROCEstimation.name
 msgid "BC Models ROC Estimation"
@@ -1582,10 +1622,12 @@ msgid ""
 "Calculating Polygenic Risk Score (PRS) requires specifying a "
 "dependent/outcome variable to estimate SNP weights."
 msgstr ""
+"Для расчета показателя полигенного риска (PRS) требуется указать зависимую/"
+"результатную переменную для оценки весов SNP."
 
 #: R/mpwr.b.R
 msgid "Calculation error: {err}"
-msgstr ""
+msgstr "Ошибка расчета: {err}"
 
 #: R/mpwr.b.R
 msgid ""
@@ -1629,12 +1671,12 @@ msgstr "Отношение Случаи/Контроль"
 
 #: R/msrv.b.R
 msgid "Cause"
-msgstr ""
+msgstr "Причина"
 
 #: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 #: mSRV/results/compRisksSection/grayTestTable.columns.title
 msgid "Cause / Event"
-msgstr ""
+msgstr "Причина / Событие"
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "CCR"
@@ -1643,13 +1685,16 @@ msgstr "CCR"
 #: mSRV/options/compCensor.title
 #: mSRV/ui[6]/showCompRisks/compCensor.label
 msgid "Censored Level"
-msgstr ""
+msgstr "Уровень цензурирования"
 
 #: R/msrv.b.R
 msgid ""
 "Censored level ('{censor}') and Event of interest ('{event}') cannot be the "
 "same value. Please select distinct levels in Competing Risks options."
 msgstr ""
+"Цензурированный уровень ('{censor}') и интересующее событие ('{event}') не "
+"могут иметь одно и то же значение. Пожалуйста, выберите отдельные уровни в "
+"опциях «Конкурирующие риски»."
 
 #: R/mcor.b.R
 msgid "Centrality correlation"
@@ -1869,7 +1914,7 @@ msgstr "Кодоминантная (BB vs AA)"
 
 #: mSRV/results/compRisksSection/fineGrayTable.columns.title
 msgid "Coefficient"
-msgstr ""
+msgstr "Коэффициент"
 
 #: mSRV/results/coxSection/coxCoefTable.columns.title
 #: mSRV/results/coxSection/timeDepTable.columns.title
@@ -1920,7 +1965,7 @@ msgstr "Уровень сравнения"
 #: mSRV/ui[6].label
 #: mSRV/results/compRisksSection.title
 msgid "Competing Risks Analysis"
-msgstr ""
+msgstr "Анализ конкурирующих рисков"
 
 #: mCOR/options/clustMet/complete.title
 msgid "Complete Linkage"
@@ -1979,11 +2024,11 @@ msgstr "Ширина доверительного интервала"
 
 #: mSRV/options/adjCI.title
 msgid "Confidence Intervals (Bootstrap)"
-msgstr ""
+msgstr "Доверительные интервалы (бутстреп)"
 
 #: mSRV/options/cifCI.title
 msgid "Confidence Intervals (CIF)"
-msgstr ""
+msgstr "Доверительные интервалы (CIF)"
 
 #: mSRV/options/kmCI.title
 msgid "Confidence Intervals (KM)"
@@ -2001,10 +2046,14 @@ msgid ""
 "Connection of a variable's missingness indicator with observed data on other "
 "variables"
 msgstr ""
+"Связь показателя пропусков переменной с наблюдаемыми данными по другим "
+"переменным"
 
 #: R/mmf.b.R
 msgid "Connection of a variable's observed data with missing data on other variables"
 msgstr ""
+"Связь наблюдаемых данных переменной с отсутствующими данными по другим "
+"переменным"
 
 #: R/mpca.b.R
 msgid "Contingency Matrix (Clusters vs Groups):"
@@ -2086,7 +2135,7 @@ msgstr "Частота"
 
 #: R/msrv.b.R
 msgid "Counting process formulation with left-truncation (tstart, elapsed)."
-msgstr ""
+msgstr "Формулировка процесса подсчета с усечением слева (tstart, elapsed)."
 
 #: R/msrv.b.R
 #: mSNP/options/covs.title
@@ -2096,7 +2145,7 @@ msgstr "Ковариаты"
 
 #: mSRV/ui[0][5].label
 msgid "Covariates (Adjustment / Confounders)"
-msgstr ""
+msgstr "Ковариаты (стандартизация / вмешивающиеся факторы)"
 
 #: mLR/options/covs.title
 #: mLR/ui[0][1].label
@@ -2175,17 +2224,17 @@ msgstr "Кумулятивный риск"
 #: R/msrv.b.R
 #: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 msgid "Cumulative Incidence"
-msgstr ""
+msgstr "Кумулятивная инцидентность"
 
 #: mSRV/options/showCifPlot.title
 #: mSRV/results/compRisksSection/cifPlot.title
 msgid "Cumulative Incidence Curves (Aalen-Johansen)"
-msgstr ""
+msgstr "Кривые кумулятивной инцидентности (Аалена–Йохансена)"
 
 #: mSRV/options/showCifTable.title
 #: mSRV/results/compRisksSection/cifSummaryTable.title
 msgid "Cumulative Incidence Summary"
-msgstr ""
+msgstr "Сводка кумулятивной инцидентности"
 
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
@@ -2260,13 +2309,13 @@ msgstr "Предобработка данных"
 
 #: R/msrv.b.R
 msgid "Data weighting for Fine–Gray model failed."
-msgstr ""
+msgstr "Ошибка взвешивания данных для модели Файна–Грея."
 
 #: R/mcor.b.R
 #: R/mlr.b.R
 #: R/mpca.b.R
 msgid "Dataset restricted to group: {g}"
-msgstr ""
+msgstr "Набор данных ограничен группой: {g}"
 
 #: mLR/options/roc_unit/decimal.title
 #: mMLP/options/roc_unit/decimal.title
@@ -2506,19 +2555,21 @@ msgstr "Пустая таблица данных"
 #: mSRV/options/tstart.title
 #: mSRV/ui[0][1].label
 msgid "Entry / Start Time (optional)"
-msgstr ""
+msgstr "Время входа / начала (опционально)"
 
 #: R/msrv.b.R
 msgid "Entry / Start time must be non-negative (>= 0)."
-msgstr ""
+msgstr "Время входа / начала должно быть неотрицательным (>= 0)."
 
 #: R/msrv.b.R
 msgid "Entry / Start time must be strictly less than elapsed time (start < stop)."
 msgstr ""
+"Время входа / начала должно быть строго меньше времени наблюдения (start < "
+"stop)."
 
 #: R/msrv.b.R
 msgid "Entry / Start time variable must be numeric."
-msgstr ""
+msgstr "Переменная времени входа / начала должна быть числовой."
 
 #: R/mpwr.b.R
 #: mPWR/ui[1]/alt/equivalent.title
@@ -2532,11 +2583,11 @@ msgstr "Граница эквивалентности / неполноценно
 
 #: R/mmlp.b.R
 msgid "Error during neural network fitting: {err}"
-msgstr ""
+msgstr "Ошибка при обучении нейронной сети: {err}"
 
 #: R/mrf.b.R
 msgid "Error during Random Forest fitting: {err}"
-msgstr ""
+msgstr "Ошибка при подгонке Random Forest: {err}"
 
 #: R/mcor.b.R
 msgid "Error in Classical Partial Correlation calculation: {}"
@@ -2580,7 +2631,7 @@ msgstr "Оценка определителей MAR"
 #: mSRV/options/compEvent.title
 #: mSRV/ui[6]/showCompRisks/compEvent.label
 msgid "Event of Interest"
-msgstr ""
+msgstr "Целевое событие"
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
@@ -2621,18 +2672,20 @@ msgstr "Скорр. точное p-value"
 #: R/msnp.b.R
 msgid "Excluded {n} heterozygous male genotype call(s) for X-linked analysis."
 msgstr ""
+"Исключены {n} вызов(ы) гетерозиготного мужского генотипа для Х-сцепленного "
+"анализа."
 
 #: R/msnp.b.R
 msgid "Excluded: Call Rate < {val}"
-msgstr ""
+msgstr "Исключено: Call Rate < {val}"
 
 #: R/msnp.b.R
 msgid "Excluded: HWE p < {val}"
-msgstr ""
+msgstr "Исключено: HWE p < {val}"
 
 #: R/msnp.b.R
 msgid "Excluded: MAF < {val}"
-msgstr ""
+msgstr "Исключено: MAF < {val}"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
@@ -2677,7 +2730,7 @@ msgstr "Факторный и корреляционный анализ"
 #: mSRV/options/adjExposure.title
 #: mSRV/ui[0][6].label
 msgid "Exposure Variable (Adjusted Curves)"
-msgstr ""
+msgstr "Переменная воздействия (скорректированные кривые)"
 
 #: package.description
 msgid ""
@@ -2692,6 +2745,16 @@ msgid ""
 "and Hardy-Weinberg equilibrium analysis, and Decision Curve Analysis (DCA) "
 "with model calibration."
 msgstr ""
+"Расширение функциональности популярных методов анализа данных: "
+"корреляционная кластеризация, классификация ROC, оценка и вменение "
+"пропущенных значений, идентификация и удаление одномерных и многомерных "
+"выбросов, оценка порога неопределенного интервала (UI), априорный анализ "
+"мощности, классификатор нейронной сети MLP, логистическая регрессия с "
+"выбором признаков, классификатор случайного леса, анализ выживаемости "
+"(регрессия Каплана-Мейера, Кокса, скорректированные кривые, конкурирующие "
+"риски, временные эффекты), анализ главных компонентов (PCA), ассоциация "
+"однонуклеотидного полиморфизма (SNP) и анализ равновесия Харди-Вайнберга, а "
+"также анализ кривой решения (DCA) с калибровкой модели."
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "F_IS"
@@ -2758,7 +2821,7 @@ msgstr "Настройки отбора факторов"
 
 #: mSNP/options/femaleLevel.title
 msgid "Female level"
-msgstr ""
+msgstr "Уровень женского пола"
 
 #: mLR/options/group.title
 #: mLR/ui[0][3].label
@@ -2774,11 +2837,11 @@ msgstr "Фильтрующая переменная"
 
 #: mSRV/options/showFineGray.title
 msgid "Fine-Gray Subdistribution Hazard Model"
-msgstr ""
+msgstr "Модель субраспределения рисков Файна–Грея"
 
 #: mSRV/results/compRisksSection/fineGrayTable.title
 msgid "Fine-Gray Subdistribution Hazard Regression"
-msgstr ""
+msgstr "Регрессия субраспределения рисков Файна–Грея"
 
 #: mCOR/options/plotOrder/FPC.title
 msgid "First principal component"
@@ -2894,11 +2957,13 @@ msgid ""
 "Gray's test does not support delayed entry / left-truncation and evaluates "
 "event times from origin."
 msgstr ""
+"Тест Грея не поддерживает отложенный вход/усечение влево и оценивает время "
+"события от источника."
 
 #: mSRV/options/showGrayTest.title
 #: mSRV/results/compRisksSection/grayTestTable.title
 msgid "Gray's Test for Group Differences"
-msgstr ""
+msgstr "Критерий Грея для сравнения групп"
 
 #: R/mout.b.R
 #: mMOUT/results/stat.columns.title
@@ -2932,7 +2997,7 @@ msgstr "Проекция групп в пространстве PCA"
 
 #: R/mpca.b.R
 msgid "Group: {group} (Permutation {p})"
-msgstr ""
+msgstr "Группа: {group} (Перестановка {p})"
 
 #: mMOUT/options/group.title
 #: mMOUT/ui[0][1].label
@@ -2950,6 +3015,7 @@ msgstr "Группирующая переменная"
 #: R/msrv.b.R
 msgid "Grouping variable must have at least 2 levels for Gray's test."
 msgstr ""
+"Группирующая переменная должна иметь как минимум 2 уровня для критерия Грея."
 
 #: mCOR/options/glassoLayout/groups.title
 msgid "Groups"
@@ -3086,7 +3152,7 @@ msgstr "Hold-out валидация"
 
 #: R/mpca.b.R
 msgid "Hold-out Validation (AUC = {auc})"
-msgstr ""
+msgstr "Отложенная валидация (AUC = {auc})"
 
 #: mLR/options/partition/holdout.title
 #: mMLP/options/partition/holdout.title
@@ -3121,7 +3187,7 @@ msgstr "Таблица хаб-маркеров"
 
 #: R/msrv.b.R
 msgid "Huber–White robust sandwich estimator"
-msgstr ""
+msgstr "робастный сэндвич-оценщик Хьюбера–Уайта"
 
 #: R/msnp.b.R
 msgid "HWE compliant"
@@ -3235,7 +3301,7 @@ msgstr "Векторы влияния (Биплот)"
 
 #: R/mmf.b.R
 msgid "Influx"
-msgstr ""
+msgstr "Приток"
 
 #: mMF/results/estim/fplot.title
 msgid "Influx-outflux plot"
@@ -3376,7 +3442,7 @@ msgstr "K-Fold кросс-проверка (AUC ="
 
 #: R/mpca.b.R
 msgid "K-Fold CV (AUC = {auc})"
-msgstr ""
+msgstr "K-блочная кросс-валидация (AUC = {auc})"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -3426,7 +3492,7 @@ msgstr "Кривые выживаемости Каплана-Мейера"
 
 #: mSRV/options/kmPlot.title
 msgid "Kaplan-Meier Survival Plot"
-msgstr ""
+msgstr "График выживаемости Каплана–Мейера"
 
 #: mSRV/results/kmSection/kmSummaryTable.title
 msgid "Kaplan-Meier Survival Summary"
@@ -3488,7 +3554,7 @@ msgstr "Уровень"
 
 #: R/msrv.b.R
 msgid "Likelihood Ratio Test"
-msgstr ""
+msgstr "Критерий отношения правдоподобия"
 
 #: mROC/options/lwd.title
 msgid "Line width"
@@ -3543,7 +3609,7 @@ msgstr "Log(ОШ)"
 
 #: mSRV/options/timeDepFunc/log.title
 msgid "log(t) (Logarithmic time)"
-msgstr ""
+msgstr "log(t) (логарифмическое время)"
 
 #: package/analyses/mLR.title
 #: package/analyses/mLR.menuTitle
@@ -3586,6 +3652,9 @@ msgid ""
 "partitioning uses a random seed (default 42, configurable under Validation "
 "Settings) for reproducibility."
 msgstr ""
+"Логистическая регрессия с отбором переменных. Разбиение на блоки кросс-"
+"валидации использует случайное начальное число (по умолчанию 42, "
+"настраивается в блоке «Настройки валидации») для воспроизводимости."
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -3719,6 +3788,8 @@ msgid ""
 "Marker '{marker}' has more than two distinct alleles ({alleles}). Only "
 "bi-allelic markers are supported."
 msgstr ""
+"Маркер «{marker}» имеет более двух различных аллелей ({alleles}). "
+"Поддерживаются только биаллельные маркеры."
 
 #: mSNP/results/ldGroup/ldTable.columns.title
 msgid "Marker 1"
@@ -3778,7 +3849,7 @@ msgstr "Макс. порог (%)"
 #: mSRV/options/kmMaxTime.title
 #: mSRV/ui[2]/showKm/kmMaxTime.label
 msgid "Max time (0 = unlimited)"
-msgstr ""
+msgstr "Макс. время (0 = без огр.)"
 
 #: mMF/options/maxiter.title
 msgid "Maximum number of iterations"
@@ -3822,6 +3893,8 @@ msgid ""
 "MDR analysis requires a binary outcome (2 levels), but '{var}' has {n} "
 "levels."
 msgstr ""
+"Для анализа MDR требуется бинарный результат (2 уровня), но «{var}» имеет "
+"{n} уровней."
 
 #: mSNP/results/mdrGroup/mdrHeatmap.title
 msgid "MDR Interaction Heatmap"
@@ -4038,6 +4111,9 @@ msgid ""
 "partitioning use a random seed (default 42, configurable under Validation "
 "Settings) for reproducibility."
 msgstr ""
+"Классификатор на основе многослойного персептрона (MLP). Инициализация весов "
+"и разбиение данных используют случайное начальное число (по умолчанию 42, "
+"настраивается в блоке «Настройки валидации») для воспроизводимости."
 
 #: R/mdca.b.R
 #: R/msnp.b.R
@@ -4080,6 +4156,8 @@ msgid ""
 "Model fit (Wald test): χ² = {stat}, df = {df}, p = {p}; Events of interest = "
 "{nev}"
 msgstr ""
+"Согласие модели (критерий Вальда): χ² = {stat}, df = {df}, p = {p}; Целевых "
+"событий = {nev}"
 
 #: mLR/results/infoTable.title
 msgid "Model Fit & Predictive Performance"
@@ -4087,11 +4165,11 @@ msgstr "Соответствие модели и прогностическая 
 
 #: R/msrv.b.R
 msgid "Model fitting failed to converge:"
-msgstr ""
+msgstr "Не удалось достичь сходимости при подгонке модели:"
 
 #: R/msrv.b.R
 msgid "Model fitting failed to converge."
-msgstr ""
+msgstr "Оценка модели не сошлась."
 
 #: mLR/options/show_formula.title
 msgid "Model formula"
@@ -4144,6 +4222,8 @@ msgid ""
 "Multi-row data collapsed to unique subjects based on '{subjectId}' with "
 "baseline marker values."
 msgstr ""
+"Многострочные данные свернуты в уникальные субъекты на основе «{subjectId}» "
+"со значениями базового маркера."
 
 #: mLR/options/multiclass_roc_type.title
 #: mLR/ui[3]/show_roc/multiclass_roc_type.label
@@ -4310,10 +4390,11 @@ msgstr "Нет клинического выигрыша"
 #: R/msrv.b.R
 msgid "No complete cases available for time-dependent Cox model."
 msgstr ""
+"Нет полных наблюдений для модели Кокса с переменными, зависящими от времени."
 
 #: R/msrv.b.R
 msgid "No events of the target cause observed for Fine–Gray regression."
-msgstr ""
+msgstr "Не зафиксировано ни одного целевого события для регрессии Файна–Грея."
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -4324,6 +4405,8 @@ msgstr "Ошибочно классифицированных объектов �
 #: R/msrv.b.R
 msgid "No valid predictors found for time-dependent Cox model."
 msgstr ""
+"Не найдено подходящих предикторов для модели Кокса с переменными, зависящими "
+"от времени."
 
 #: R/mcor.b.R
 msgid "Node Strength Stability"
@@ -4605,7 +4688,7 @@ msgstr "Таблица прогнозируемых ошибок"
 
 #: mROC/options/theBest.title
 msgid "Optimal cut-off"
-msgstr ""
+msgstr "Оптимальная точка отсечения"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "Optimal Threshold"
@@ -4647,7 +4730,7 @@ msgstr "Переменная исхода (Фенотип)"
 
 #: R/mmf.b.R
 msgid "OutFlux"
-msgstr ""
+msgstr "Отток"
 
 #: R/mmout.b.R
 #: R/mout.b.R
@@ -4964,6 +5047,8 @@ msgid ""
 "Please select a Grouping Variable or Exposure Variable to compute adjusted "
 "survival curves."
 msgstr ""
+"Пожалуйста, выберите группирующую переменную или переменную воздействия для "
+"расчета скорректированных кривых выживаемости."
 
 #: R/mmout.b.R
 msgid "Please select at least 2 variables for multivariate analysis."
@@ -4975,7 +5060,7 @@ msgstr "Пожалуйста, выберите как минимум 2 пере�
 
 #: R/msrv.b.R
 msgid "Please specify one or more time-dependent covariates."
-msgstr ""
+msgstr "Пожалуйста, укажите одну или несколько ковариат, зависящих от времени."
 
 #: mUI/options/isTGR.title
 msgid "Plot"
@@ -5180,7 +5265,7 @@ msgstr "Главная компонента"
 
 #: R/mpca.b.R
 msgid "Principal Component {i} (PC{i}) – {pct}% of variance"
-msgstr ""
+msgstr "Главная компонента {i} (ГК{i}) – {pct}% дисперсии"
 
 #: package/analyses/mPCA.title
 #: package/analyses/mPCA.menuTitle
@@ -5201,6 +5286,9 @@ msgid ""
 "cross-validation use a random seed (default 42, configurable under PCA "
 "Configuration) for reproducibility."
 msgstr ""
+"Анализ главных компонент (PCA). Параллельный анализ и кросс-валидация "
+"используют случайное начальное число (по умолчанию 42, настраивается в блоке "
+"«Конфигурация PCA») для воспроизводимости."
 
 #: mMLP/results/misclassifiedTable.columns.title
 #: mRF/results/misclassifiedTable.columns.title
@@ -5332,6 +5420,9 @@ msgid ""
 "partitioning uses a random seed (default 42, configurable under Validation "
 "Settings) for reproducibility."
 msgstr ""
+"Классификатор случайного леса на базе пакета ranger. Обратите внимание, что "
+"для воспроизводимости результатов используется случайное начальное значение "
+"(по умолчанию 42, настраивается в блоке «Настройки валидации»)."
 
 #: R/mrf.b.R
 msgid "Random Forest Predicted Class"
@@ -5449,7 +5540,7 @@ msgstr "Повторная стратифицированная кросс-пр�
 
 #: R/mpca.b.R
 msgid "Repeated Stratified CV (AUC = {auc})"
-msgstr ""
+msgstr "Повторная стратифицированная кросс-валидация (AUC = {auc})"
 
 #: mLR/options/partition/repeated_kfold.title
 msgid "Repeated Stratified K-Fold CV"
@@ -5465,7 +5556,7 @@ msgstr "Воспроизводимые результаты генерации �
 
 #: R/msrv.b.R
 msgid "Restricted mean survival time evaluated up to τ = {tau}."
-msgstr ""
+msgstr "Ограниченное среднее время выживаемости рассчитано до τ = {tau}."
 
 #: mCOR/options/clPos/r.title
 msgid "Right"
@@ -5525,7 +5616,7 @@ msgstr "Робастный выброс"
 
 #: mSRV/results/compRisksSection/fineGrayTable.columns.title
 msgid "Robust SE"
-msgstr ""
+msgstr "Робастная SE"
 
 #: R/mmout.b.R
 msgid "Robust Squared Mahalanobis Distance"
@@ -5657,7 +5748,7 @@ msgstr "Размер выборки (N)"
 
 #: R/msrv.b.R
 msgid "Sample size (n) and events count unique subjects."
-msgstr ""
+msgstr "Размер выборки (n) и события учитывают уникальных субъектов."
 
 #: R/mpwr.b.R
 msgid "Sample Size (N1)"
@@ -5710,7 +5801,7 @@ msgstr "Позиция шкалы"
 
 #: R/msrv.b.R
 msgid "Schoenfeld residuals"
-msgstr ""
+msgstr "Остатки Шенфельда"
 
 #: mSRV/options/showSchoenfeldPlot.title
 msgid "Schoenfeld Residuals Plot"
@@ -5726,13 +5817,15 @@ msgstr "Шкала"
 
 #: R/msrv.b.R
 msgid "Score (Log-rank) Test"
-msgstr ""
+msgstr "Критерий Score (лог-ранговый)"
 
 #: R/msrv.b.R
 msgid ""
 "Score (log-rank) test from Cox model is reported, as standard Mantel–Cox "
 "log-rank is not defined for counting process data."
 msgstr ""
+"Приводится критерий Score (log-rank) модели Кокса, поскольку стандартный лог-"
+"ранговый критерий Мантеля–Кокса не определен для данных процесса подсчета."
 
 #: mPCA/options/screePlot.title
 msgid "Scree plot with parallel analysis"
@@ -5888,7 +5981,7 @@ msgstr "Индекс Шеннона (I)"
 
 #: mSRV/options/showAdjCurves.title
 msgid "Show Adjusted Survival Curves"
-msgstr ""
+msgstr "Скорректированные кривые выживаемости"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -6047,6 +6140,8 @@ msgstr "Оценка стабильности"
 #: R/msrv.b.R
 msgid "Standard errors and confidence intervals are adjusted for clustering by"
 msgstr ""
+"Стандартные ошибки и доверительные интервалы скорректированы с учетом "
+"кластеризации по"
 
 #: mLR/results/coeffTable.columns.title
 msgid "Standardized Beta"
@@ -6070,6 +6165,8 @@ msgid ""
 "Status variable has only one event type; cumulative incidence is equal to 1 "
 "– KM survival."
 msgstr ""
+"Переменная статуса содержит только один тип события; кумулятивная "
+"инцидентность эквивалентна 1 – KM выживаемости."
 
 #: R/msrv.b.R
 msgid "Status variable must be factor, character, or numeric."
@@ -6080,6 +6177,8 @@ msgid ""
 "Status variable must have at least two distinct values for Competing Risks "
 "analysis."
 msgstr ""
+"Переменная статуса должна иметь как минимум два различных значения для "
+"анализа конкурирующих рисков."
 
 #: mLR/results/coeffTable.columns.title
 msgid "Std. Error"
@@ -6090,6 +6189,8 @@ msgid ""
 "Stepwise selection failed to retain any predictors or encountered an error; "
 "falling back to all predictors."
 msgstr ""
+"Пошаговый отбор не смог сохранить ни одного предиктора или обнаружил ошибку; "
+"возвращение ко всем предикторам."
 
 #: R/mdca.b.R
 msgid "Strategy / Model"
@@ -6102,12 +6203,12 @@ msgstr "Сила связи"
 
 #: mSRV/results/compRisksSection/fineGrayTable.columns.title
 msgid "Subdistribution HR (sHR)"
-msgstr ""
+msgstr "Отношение субраспределения рисков (sHR)"
 
 #: mSRV/options/subjectId.title
 #: mSRV/ui[0][3].label
 msgid "Subject ID / Cluster (optional)"
-msgstr ""
+msgstr "ID субъекта / кластер (опционально)"
 
 #: mROC/options/cmpDeLong/succ.title
 msgid "Successively"
@@ -6144,6 +6245,9 @@ msgid ""
 "Survival Analysis (Kaplan-Meier, Cox regression, Adjusted Curves, Competing "
 "Risks, and Time-Dependent Effects) demonstration"
 msgstr ""
+"Демонстрация анализа выживания (регрессия Каплана-Мейера, Кокса, "
+"скорректированные кривые, конкурирующие риски и эффекты, зависящие от "
+"времени)"
 
 #: package/analyses/mSRV.description
 msgid ""
@@ -6152,6 +6256,11 @@ msgid ""
 "analysis (Aalen-Johansen CIF, Gray's test, Fine-Gray model), time-dependent "
 "covariates, and time-dependent ROC curves."
 msgstr ""
+"Анализ выживаемости, включая кривые Каплана-Мейера, лог-ранговые тесты, "
+"регрессию пропорциональных рисков Кокса, скорректированные кривые "
+"выживаемости, анализ конкурирующих рисков (CIF Аалена-Йохансена, тест Грея, "
+"модель Fine-Gray), зависящие от времени ковариаты и зависимые от времени "
+"кривые ROC."
 
 #: package/datasets/SurvivalAnalysisKaggle.name
 msgid "Survival Analysis Kaggle"
@@ -6164,7 +6273,7 @@ msgstr "Вероятность выживания"
 
 #: mSRV/options/timeDepFunc/linear.title
 msgid "t (Linear time)"
-msgstr ""
+msgstr "t (линейное время)"
 
 #: mCOR/ui[4].label
 msgid "Tables"
@@ -6273,13 +6382,15 @@ msgstr "Зависимая переменная должна иметь не м�
 
 #: R/msrv.b.R
 msgid "The exposure variable must have at least two distinct levels."
-msgstr ""
+msgstr "Переменная воздействия должна содержать не менее двух уровней."
 
 #: R/msrv.b.R
 msgid ""
 "The selected exposure variable must be categorical or have 10 or fewer "
 "distinct values."
 msgstr ""
+"Выбранная переменная воздействия должна быть категориальной или содержать не "
+"более 10 уникальных значений."
 
 #: R/mmout.b.R
 msgid "Theoretical Chi-Square Quantiles"
@@ -6291,7 +6402,7 @@ msgstr "Трихотомическое определение порогов в 
 
 #: R/mpca.b.R
 msgid "Threshold (K = {optimal} comp.)"
-msgstr ""
+msgstr "Порог (K = {optimal} комп.)"
 
 #: R/mcor.b.R
 msgid "Threshold (r = 0.70)"
@@ -6299,7 +6410,7 @@ msgstr "Порог (r = 0.70)"
 
 #: mOUT/options/tholdmZS.title
 msgid "Threshold for modified Z-score"
-msgstr ""
+msgstr "Порог для модифицированной Z-оценки"
 
 #: mOUT/options/tholdZS.title
 msgid "Threshold for Z-score"
@@ -6328,7 +6439,7 @@ msgstr "Временная точка t"
 
 #: mSRV/options/timeDepFunc.title
 msgid "Time Transform Function"
-msgstr ""
+msgstr "Функция трансформации времени"
 
 #: mSRV/options/elapsed.title
 #: mSRV/ui[0][0].label
@@ -6341,19 +6452,19 @@ msgstr "Переменная времени должна быть числово
 
 #: mSRV/options/timeDepVars.title
 msgid "Time-dependent Covariates"
-msgstr ""
+msgstr "Ковариаты, зависящие от времени"
 
 #: mSRV/ui[0][7].label
 msgid "Time-dependent Covariates (Cox)"
-msgstr ""
+msgstr "Ковариаты, зависящие от времени (Кокс)"
 
 #: mSRV/options/showTimeDepEffects.title
 msgid "Time-dependent effects (time-varying coefficients)"
-msgstr ""
+msgstr "Зависящие от времени эффекты (изменяющиеся во времени коэффициенты)"
 
 #: mSRV/results/coxSection/timeDepTable.title
 msgid "Time-dependent Effects in Cox Model"
-msgstr ""
+msgstr "Зависящие от времени эффекты в модели Кокса"
 
 #: mSRV/options/showRoc.title
 #: mSRV/ui[7].label
@@ -6441,7 +6552,7 @@ msgstr "Обучение"
 
 #: R/mpca.b.R
 msgid "Training (AUC = {auc})"
-msgstr ""
+msgstr "Обучение (AUC = {auc})"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -6557,7 +6668,7 @@ msgstr "Верхний порог"
 
 #: mSNP/options/polyDf1.title
 msgid "Use df = 1 for polymorphism"
-msgstr ""
+msgstr "Использовать df = 1 для полиморфизма"
 
 #: mPWR/results/powerTable.columns.superTitle
 msgid "User Defined"
@@ -6604,7 +6715,7 @@ msgstr "Значение / Совпадений"
 
 #: R/mdca.b.R
 msgid "Values of '{var}' must be probabilities between 0 and 1."
-msgstr ""
+msgstr "Значения '{var}' должны быть вероятностями от 0 до 1."
 
 #: R/mpca.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
@@ -6624,7 +6735,7 @@ msgstr "Переменная - $key"
 
 #: mSRV/results/coxSection/timeDepTable.columns.title
 msgid "Variable / Term"
-msgstr ""
+msgstr "Переменная / член"
 
 #: R/mrf.b.R
 #: mRF/options/show_imp.title
@@ -6673,19 +6784,19 @@ msgstr "Отношение дисперсий (SD₁² / SD₂²)"
 
 #: R/msrv.b.R
 msgid "vs"
-msgstr ""
+msgstr "против"
 
 #: R/msrv.b.R
 msgid "Wald Test"
-msgstr ""
+msgstr "Критерий Вальда"
 
 #: mCOR/options/clustMet/ward.D2.title
 msgid "Ward's D2 Linkage"
-msgstr ""
+msgstr "Метод связывания Уорда D2"
 
 #: mCOR/options/clustMet/ward.D.title
 msgid "Ward's Linkage"
-msgstr ""
+msgstr "Метод связывания Уорда"
 
 #: R/mpca.b.R
 msgid "Warning: Grouping variable must have at least 2 levels."
