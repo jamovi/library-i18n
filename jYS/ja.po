@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-10-05 04:18+0000\n"
-"Last-Translator: Jonathon Love <jon@thon.cc>\n"
+"PO-Revision-Date: 2026-10-15 03:52+0000\n"
+"Last-Translator: SHIBATA Seiji <sbtseiji@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jamovi/module-"
 "jys/ja/>\n"
 "Language: ja\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.10.1.dev0\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 #: R/msnp.b.R
 msgid "-log10(p-value)"
@@ -136,6 +136,9 @@ msgid ""
 "patients compared to Treat All, without missing true positive cases: "
 "(NB_model - NB_all) / [pt / (1 - pt)] * 100 evaluated at pt = 0.20."
 msgstr ""
+"<b>20%時点で回避</b>：Treat Allと比較して、真陽性の症例を見逃すことなく、100"
+"人あたりで回避できる不要な介入の減少数：(NB_model - NB_all) / [pt / (1 - pt)"
+"] * 100（pt = 0.20で評価）。"
 
 #: R/mui.b.R
 msgid ""
@@ -187,6 +190,9 @@ msgid ""
 "combining discrimination and calibration (0 = perfect, 1 = worst). Values "
 "below the cohort incidence indicate informative predictions."
 msgstr ""
+"<b>ブライアー・スコア</b>：予測確率と二値の実測値との平均二乗誤差：BS = (1/"
+"N) * sum((p - y)^2)。識別能と較正能を組み合わせた総合的な予測精度指標（0 = 完"
+"璧、1 = 最悪）。コホートの発生率を下回る値は、情報量のある予測を示します。"
 
 #: R/mpwr.b.R
 msgid "<b>Calculated parameter</b>:"
@@ -199,6 +205,9 @@ msgid ""
 "Negative values indicate systematic overestimation of cohort risk; positive "
 "values indicate underestimation."
 msgstr ""
+"<b>較正切片</b>：傾きを1に固定した場合の、予測リスクの系統的な過大・過小評価"
+"を示す指標です。理想値は0.000です。負の値はコホートのリスクを系統的に過大評価"
+"していることを、正の値は過小評価していることを示します。"
 
 #: R/mdca.b.R
 msgid ""
@@ -207,6 +216,10 @@ msgid ""
 "high-risk patients and underestimation in low-risk patients), while values > "
 "1 indicate underfitting (predictions shrunk toward cohort incidence)."
 msgstr ""
+"<b>較正傾き</b>：予測リスクの対数オッズに対する回帰直線の傾きです。理想値は"
+"1.000です。1未満は過適合を示し、高リスク者ではリスクを過大評価し、低リスク者"
+"では過小評価します。1を超える場合は過少適合を示し、予測値がコホート全体の発生"
+"率に近づきます。"
 
 #: R/mui.b.R
 msgid ""
@@ -248,6 +261,9 @@ msgid ""
 "(NB_model > max(NB_all, 0)). Below Min %, Treat All is preferred; above Max "
 "%, Treat None is preferred."
 msgstr ""
+"<b>臨床判断範囲</b>：モデルの純利益が、いずれの既定戦略よりも高くなる判断閾値"
+"の範囲［最小％、最大％］（NB_model > max(NB_all, 0)）。最小％未満では「全員に"
+"介入」が、最大％を超えると「誰にも介入しない」が推奨されます。"
 
 #: R/mdca.b.R
 msgid ""
@@ -256,6 +272,10 @@ msgid ""
 "> NB_all and NB_model > 0). Among competing models, the one with the highest "
 "Net Benefit at the clinically acceptable threshold should be chosen."
 msgstr ""
+"<b>臨床選択基準</b>：判断閾値ptにおいて、モデルの純利益がいずれの既定戦略より"
+"も明確に高い場合（NB_model > NB_all かつ NB_model > 0）、そのモデルは臨床的に"
+"有用です。複数のモデルを比較する場合は、臨床的に許容できる判断閾値において純"
+"利益が最も高いモデルを選択します。"
 
 #: R/mdca.b.R
 msgid ""
@@ -264,6 +284,10 @@ msgid ""
 "across a meaningful threshold range; 'No clinical gain' indicates that "
 "testing offers no improvement over default strategies."
 msgstr ""
+"<b>臨床的優位性</b>：モデルの臨床的有用性についての総合的な判定です。「優れて"
+"いる」は、意味のある判断閾値の範囲で、モデルがいずれの既定戦略よりも臨床的な"
+"利益をもたらすことを示します。「臨床的利益なし」は、検査を行っても既定戦略を"
+"上回る改善がないことを示します。"
 
 #: R/mcor.b.R
 msgid ""
@@ -327,6 +351,8 @@ msgid ""
 "<b>Counting process / Delayed entry</b>: Kaplan–Meier curves estimated with "
 "left truncation Surv(tstart, time, event)."
 msgstr ""
+"<b>計数過程／遅延エントリー</b>：左切断を考慮して推定した カプラン・マイヤー"
+"曲線。Surv(tstart, time, event)を使用します。"
 
 #: R/msnp.b.R
 msgid ""
@@ -346,6 +372,11 @@ msgid ""
 "treating competing events as censored, CIF properly accounts for competing "
 "failure types."
 msgstr ""
+"累積発生関数（CIF）：ノンパラメトリックなアーレン・ヨハンセン推定量（Aalen & "
+"Johansen, 1978）によって推定され、競合リスクが存在する場合に、時間の経過に伴"
+"って特定のイベントが発生する確率を算出します。競合イベントを打ち切りとして扱"
+"うことでリスクを過大評価するカプラン・マイヤー生存確率（1 − KM）とは異なり、"
+"CIFは競合するイベントの種類を適切に考慮します。"
 
 #: R/msnp.b.R
 msgid ""
@@ -370,6 +401,10 @@ msgid ""
 "2023). <b>RMST</b> represents the Restricted Mean Survival Time evaluated up "
 "to τ (area under the adjusted survival curve)."
 msgstr ""
+"<b>直接調整（G計算）</b>：対象者ごとに予測した生存曲線を、標本の経験的な共変"
+"量分布にわたって平均することにより、各曝露水準における反実仮想的な生存曲線を"
+"算出します（Denz et al., 2023）。<b>RMST</b>は、τまでの制限平均生存時間を表し"
+"ます（調整済み生存曲線の下の面積）。"
 
 #: R/mdca.b.R
 msgid ""
@@ -377,6 +412,9 @@ msgid ""
 "LOESS-calibrated probability and predicted risk across all patients. "
 "Reflects average individual risk miscalibration."
 msgstr ""
+"<b>E avg</b>：すべての対象者について、ノンパラメトリックなLOESSで較正した確率"
+"と予測リスクとの差の絶対値を平均したものです。個人レベルでの予測リスクの平均"
+"的な較正誤差を示します。"
 
 #: R/mdca.b.R
 msgid ""
@@ -384,6 +422,8 @@ msgid ""
 "probability and predicted risk across the risk spectrum. Reflects the "
 "worst-case local probability error."
 msgstr ""
+"<b>E max</b>：リスク全体の範囲における、LOESSで較正した確率と予測リスクとの差"
+"の絶対値の最大値です。局所的な確率誤差の最悪値を示します。"
 
 #: R/mpwr.b.R
 msgid "<b>Effect size measure</b>: Cohen's d"
@@ -500,6 +540,11 @@ msgid ""
 "Hazard Ratio) represents the relative change in the subdistribution hazard. "
 "Robust standard errors are used to account for inverse-probability weighting."
 msgstr ""
+"<b>ファイン・グレイ比例サブディストリビューションハザード回帰</b>（Fine & "
+"Gray, 1999）：対象イベントの累積発生関数に対する共変量の影響を直接モデル化し"
+"ます。<b>sHR</b>（サブディストリビューション・ハザード比）は、"
+"サブディストリビューション・ハザードの相対的な変化を表します。逆確率重み付け"
+"を考慮するため、ロバスト標準誤差を使用します。"
 
 #: R/msnp.b.R
 msgid ""
@@ -518,6 +563,9 @@ msgid ""
 "comparing cumulative incidence functions of a specific cause between groups. "
 "It evaluates subdistribution hazards under competing risks."
 msgstr ""
+"<b>グレイ検定</b>（Gray, 1988）は、群間で特定の原因による累積発生関数を比較す"
+"るためのノンパラメトリックなK標本検定です。競合リスクのもとで"
+"サブディストリビューション・ハザードを評価します。"
 
 #: R/mcor.b.R
 msgid "<b>Hₐ</b> is negative correlation"
@@ -847,6 +895,10 @@ msgid ""
 "interventions. The weighting factor [pt / (1 - pt)] reflects the relative "
 "harm of a false positive vs the benefit of a true positive."
 msgstr ""
+"<b>純利益（NB）</b>：NB = (TP/N) − (FP/N) * [pt / (1 − pt)] − harmとして算出"
+"される臨床的有用性の指標です。不要な偽陽性の介入を増やすことなく、患者1人あた"
+"りの真陽性診断に相当する利益を表します。重み付け係数［pt / (1 − pt)］は、偽陽"
+"性による害と真陽性による利益との相対的な大きさを反映します。"
 
 #: R/mui.b.R
 msgid "<b>NPV</b> - Negative Predictive Value of the negative class TN/(TN+FN)"
@@ -900,6 +952,9 @@ msgid ""
 "its maximum Net Benefit (Max Net Benefit). Balances detection of true events "
 "with avoidance of unnecessary interventions in the evaluated cohort."
 msgstr ""
+"<b>最適閾値</b>：モデルの純利益（最大純利益）が最大となる判断閾値ptです。評価"
+"対象のコホートにおいて、真のイベントの検出と不要な介入の回避とのバランスが最"
+"もよくなる閾値を示します。"
 
 #: R/msnp.b.R
 msgid ""
@@ -941,6 +996,9 @@ msgid ""
 "0.5</b> is moderately informative, <b>PIC < 0.25</b> is slightly informative "
 "(Botstein et al., 1980)."
 msgstr ""
+"<b>PIC（多型情報量）</b>：遺伝マーカーの情報量を測定する指標です。<b>PIC > "
+"0.5</b>は情報量が高く、<b>0.25 < PIC < 0.5</b>は情報量が中程度、<b>PIC < "
+"0.25</b>は情報量が低いことを示します（Botstein et al., 1980）。"
 
 #: R/mpwr.b.R
 msgid ""
@@ -948,16 +1006,18 @@ msgid ""
 "significant difference when a true difference exists in the population (1 - "
 "Type II error rate, or the probability of avoiding a false negative)."
 msgstr ""
+"<b>検定力</b>：母集団に真の差が存在する場合に、その統計的に有意な差を正しく検"
+"出する確率です（1 − 第2種過誤率、または偽陰性を回避する確率）。"
 
 #: R/mui.b.R
 msgid "<b>PPV</b> - Positive Predictive Value of the positive class TP/(TP+FP)"
-msgstr ""
+msgstr "<b>PPV</b>：陽性適中率（陽性クラスのPPV）TP/(TP+FP)"
 
 #: R/mmf.b.R
 msgid ""
 "<b>PVU</b> - proportion of variance unexplained 1-R² (for Continuous "
 "variables);"
-msgstr ""
+msgstr "<b>PVU</b>：未説明分散の割合 1 − R²（連続変数の場合）。"
 
 #: R/msnp.b.R
 msgid ""
@@ -967,12 +1027,17 @@ msgid ""
 "strong LD in GWAS tag-SNP selection. r² is preferred over D' for association "
 "study design because it directly relates to statistical power."
 msgstr ""
+"<b>r²（相関係数二乗）</b>：連鎖不平衡（LD）の強さとアレル頻度の類似性の両方を"
+"測定します。<b>r² = 1</b>は完全なLD（完全な相互予測可能性）を示します。<b>r"
+"² > 0.8</b>は、GWASにおけるタグSNP選択で強いLDとみなすための一般的な閾値です"
+"。r²は統計的検出力と直接関連するため、関連研究のデザインではD'よりも好まれま"
+"す。"
 
 #: R/msnp.b.R
 msgid ""
 "<b>Ratio</b> = Cases / Controls. Empty cells (no observations) are left "
 "unclassified."
-msgstr ""
+msgstr "<b>比率</b> = 症例数 / 対照数。空のセル（観測値がないセル）は分類されません。"
 
 #: R/mdca.b.R
 msgid ""
@@ -980,6 +1045,9 @@ msgid ""
 "probabilities to remove systematic bias, adjust slope toward 1.000, and "
 "align intercept to 0.000 while preserving ROC discrimination."
 msgstr ""
+"<b>再較正</b>：入力された予測確率にプラット・スケーリング（ロジスティック較正"
+"）を適用し、系統的なバイアスを除去するとともに、傾きを1.000に近づけ、切片を"
+"0.000に近づけます。ROCによる識別能は維持されます。"
 
 #: R/mstab.b.R
 msgid ""
@@ -1019,10 +1087,15 @@ msgid ""
 "statistically significant <b>p-value (p < 0.05)</b> indicates a violation of "
 "the PH assumption, meaning the hazard ratio changes over time."
 msgstr ""
+"<b>シェーンフェルド残差検定</b>：コックス・モデルにおける比例ハザード（PH）仮"
+"定を、各共変量について個別に、またモデル全体について評価します。共変量の効果"
+"が時間の経過にかかわらず一定であるかどうかを検定します。統計的に有意な<b>p値"
+"（p < 0.05）</b>は、PH仮定に違反していること、すなわちハザード比が時間ととも"
+"に変化することを示します。"
 
 #: R/mui.b.R
 msgid "<b>Se</b> - sensitivity of the positive class TP/(TP+FN)"
-msgstr ""
+msgstr "<b>Se</b>：感度（陽性クラスの感度）TP/(TP+FN)"
 
 #: R/msnp.b.R
 msgid ""
@@ -1030,6 +1103,9 @@ msgid ""
 "values indicate greater diversity. For a biallelic marker, maximum I = ln(2) "
 "≈ 0.693 when allele frequencies are equal."
 msgstr ""
+"<b>シャノン情報指数（I）</b>：アレル多様性を定量化する指標です。値が大きいほ"
+"ど多様性が高いことを示します。二対立遺伝子マーカーでは、アレル頻度が等しい場"
+"合に最大値I = ln(2) ≈ 0.693となります。"
 
 #: R/mstab.b.R
 msgid ""
@@ -1048,15 +1124,15 @@ msgstr ""
 
 #: R/mui.b.R
 msgid "<b>SNPV</b> - standardized negative predictive value of the negative class"
-msgstr ""
+msgstr "<b>SNPV</b>：標準化陰性適中率（陰性クラスの標準化陰性適中率）"
 
 #: R/mui.b.R
 msgid "<b>Sp</b> - specificity of the negative class TN/(TN+FP)"
-msgstr ""
+msgstr "<b>Sp</b>：特異度（陰性クラスの特異度）TN/(TN+FP)"
 
 #: R/mui.b.R
 msgid "<b>SPPV</b> - standardized positive predictive value of the positive class"
-msgstr ""
+msgstr "<b>SPPV</b>：標準化陽性適中率（陽性クラスの標準化陽性適中率）"
 
 #: R/mstab.b.R
 msgid ""
@@ -1088,6 +1164,8 @@ msgid ""
 "<b>STRENGTH</b>: sum of absolute weights of connected edges; shows how "
 "strongly a node is directly connected to its neighbors."
 msgstr ""
+"<b>ストレングス</b>：接続するエッジの重みの絶対値の合計です。ノードが隣接"
+"ノードとどの程度強く直接つながっているかを示します。"
 
 #: R/mdca.b.R
 msgid ""
@@ -1095,6 +1173,8 @@ msgid ""
 "patient to account for financial costs, invasiveness, discomfort, or "
 "procedural complications of testing."
 msgstr ""
+"<b>検査の負担</b>：検査に伴う経済的コスト、侵襲性、不快感、処置上の合併症など"
+"を考慮し、患者1人あたり{harm}単位の純利益をペナルティとして差し引きます。"
 
 #: R/msrv.b.R
 msgid ""
@@ -1105,6 +1185,12 @@ msgid ""
 "indicates that the hazard ratio changes over time: β_td < 0 indicates "
 "diminishing relative risk, while β_td > 0 indicates increasing relative risk."
 msgstr ""
+"<b>時間依存コックス回帰</b>：共変量と時間の関数との交互作用によって非比例"
+"ハザードをモデル化します（Therneau & Grambsch, 2000）。ハザード関数はλ(t; z) "
+"= λ₀(t) exp(β₀ z + β_td [z × f(t)])としてモデル化されます。時間との交互作用が"
+"統計的に有意である場合（β_td, p < 0.05）、ハザード比が時間とともに変化するこ"
+"とを示します。β_td < 0は相対リスクの低下、β_td > 0は相対リスクの上昇を示しま"
+"す。"
 
 #: R/msrv.b.R
 msgid ""
@@ -1115,10 +1201,15 @@ msgid ""
 "represents the optimal threshold determined by the Youden index (J = "
 "Sensitivity + Specificity – 1)."
 msgstr ""
+"<b>時間依存ROC</b>：特定の時点<i>t</i>におけるランドマーク二分化によって、時"
+"間-イベントデータに対する連続マーカーの予測精度を評価します（<i>t</i>より前に"
+"打ち切られた対象者は除外されます）。<b>AUC</b>は識別能を示します。<b>"
+"カットオフ値</b>は、ヨーデン指数（J = 感度 + 特異度 − 1）によって決定される最"
+"適な閾値を表します。"
 
 #: R/mmlp.b.R
 msgid "<b>Training Accuracy</b>: classification accuracy on the training dataset."
-msgstr ""
+msgstr "<b>訓練精度</b>：訓練データセットにおける分類精度です。"
 
 #: R/msnp.b.R
 msgid ""
@@ -1126,6 +1217,9 @@ msgid ""
 "computed on the held-out fold and provides an unbiased estimate of "
 "predictive performance."
 msgstr ""
+"<b>訓練BA</b>は楽観的バイアスを含む可能性があります。<b>テストBA</b>は"
+"ホールドアウトしたフォールドで算出され、予測性能の偏りのない推定値を提供しま"
+"す。"
 
 #: R/mdca.b.R
 msgid ""
@@ -1135,6 +1229,10 @@ msgid ""
 "increasing pt and produces net clinical harm when unnecessary interventions "
 "outweigh true detections."
 msgstr ""
+"<b>全員に介入</b>：診断検査を行わず、すべての患者に介入を行う戦略です（NB = "
+"有病率 − (1 − 有病率) * [pt / (1 − pt)] − harm）。低い判断閾値では高い純利益"
+"が得られますが、ptの上昇に伴って急速に低下し、不要な介入による害が真の"
+"イベントの検出による利益を上回ると、臨床的な純害が生じます。"
 
 #: R/mdca.b.R
 msgid ""
@@ -1142,22 +1240,28 @@ msgid ""
 "Benefit is identically zero (NB = 0) across all decision thresholds pt, as "
 "there are neither true positive benefits nor false positive harms."
 msgstr ""
+"<b>介入しない</b>：どの患者にも介入を行わない戦略です。真陽性による利益も偽陽"
+"性による害もないため、すべての判断閾値ptにおいて純利益は常に0です（NB = 0）。"
 
 #: R/mui.b.R
 msgid ""
 "<b>Uncertain Interval (UI)</b> is placed around the point of intersection "
 "between the two distributions with and without the targeted state."
 msgstr ""
+"<b>不確実区間（UI）</b>は、対象状態ありと対象状態なしの2つの分布が交差する点"
+"の周囲に設定されます。"
 
 #: R/mui.b.R
 msgid ""
 "<b>Uncertain Interval</b> is considered to be a range of test scores that is "
 "inconclusive and does not warrant a right decision."
 msgstr ""
+"<b>不確実区間</b>：判定がつかず、明確な判断を下すことができない検査得点の範囲"
+"です。"
 
 #: R/mmlp.b.R
 msgid "<b>Weight Decay</b>: L2 regularization penalty parameter."
-msgstr ""
+msgstr "<b>重み減衰</b>：L2正則化のペナルティパラメータです。"
 
 #: R/mdca.b.R
 msgid ""
@@ -1165,6 +1269,9 @@ msgid ""
 "wider span (> 20-30%) demonstrates robustness of the model's clinical "
 "utility across diverse practitioner and patient risk tolerances."
 msgstr ""
+"<b>ウィンドウ幅</b>：臨床判断範囲の幅（最大％ − 最小％）です。幅が広い（> 20"
+"～30%）場合、さまざまな医療者や患者のリスク許容度に対して、モデルの臨床的有用"
+"性が頑健であることを示します。"
 
 #: R/mmf.b.R
 msgid "<h2>Help</h2><div>Please select complete and incomplete variables</div>"
@@ -1176,7 +1283,7 @@ msgstr "0 − 自動"
 
 #: mMOUT/options/alpha/0.01.title
 msgid "0.01 (standard)"
-msgstr ""
+msgstr "0.01（標準）"
 
 #: R/mpca.b.R
 #: R/mroc.b.R
@@ -1190,11 +1297,11 @@ msgstr "1 − 特異度"
 
 #: mSNP/options/mdrOrder/1.title
 msgid "1-way"
-msgstr ""
+msgstr "1要因"
 
 #: mSNP/options/mdrFolds/10.title
 msgid "10 folds"
-msgstr ""
+msgstr "10分割"
 
 #: mMLP/options/hidden_structure.default
 msgid "10,5"
@@ -1207,15 +1314,15 @@ msgstr "100 − 特異度 (%)"
 
 #: mSNP/options/mdrOrder/2.title
 msgid "2-way"
-msgstr ""
+msgstr "2要因"
 
 #: mSNP/options/mdrFolds/3.title
 msgid "3 folds"
-msgstr ""
+msgstr "3分割"
 
 #: mSNP/options/mdrOrder/3.title
 msgid "3-way"
-msgstr ""
+msgstr "3要因"
 
 #: mOUT/options/tholdZS/3.0.title
 msgid "3.0 (standard)"
@@ -1227,11 +1334,11 @@ msgstr "3.5（標準）"
 
 #: mSNP/options/mdrOrder/4.title
 msgid "4-way"
-msgstr ""
+msgstr "4要因"
 
 #: mSNP/options/mdrFolds/5.title
 msgid "5 folds"
-msgstr ""
+msgstr "5分割"
 
 #: mSTAB/results/coefTable.columns.title
 msgid "95% CI Lower"
@@ -1243,15 +1350,15 @@ msgstr ""
 
 #: mLR/results/coeffTable.columns.title
 msgid "95% OR CI Lower"
-msgstr ""
+msgstr "オッズ比95%信頼区間下限"
 
 #: mLR/results/coeffTable.columns.title
 msgid "95% OR CI Upper"
-msgstr ""
+msgstr "オッズ比95%信頼区間上限"
 
 #: R/msnp.b.R
 msgid "A – Allelic, D – Dominant, OD – Overdominant, R – Recessive"
-msgstr ""
+msgstr "A – アレルモデル、D – 優性モデル、OD – 過剰優性モデル、R – 劣性モデル"
 
 #: mCOR/results/matrix.description
 msgid "a correlation matrix table"
@@ -1259,7 +1366,7 @@ msgstr "相関行列"
 
 #: R/msrv.b.R
 msgid "A grouping variable with at least 2 levels is required for Gray's test."
-msgstr ""
+msgstr "グレイ検定には、少なくとも2水準を持つグループ化変数が必要です。"
 
 #: package/analyses/mPWR.title
 #: package/analyses/mPWR.menuTitle
@@ -1289,7 +1396,7 @@ msgstr "アクセント"
 
 #: mSNP/options/ternaryRegion.title
 msgid "Acceptance region type"
-msgstr ""
+msgstr "受容域の種類"
 
 #: mPCA/results/regTable.columns.title
 msgid "Accuracy"
@@ -1301,11 +1408,11 @@ msgstr "精度"
 #: mRF/results/matrixTable.columns.title
 #: mRF/results/misclassifiedTable.columns.title
 msgid "Actual Class"
-msgstr ""
+msgstr "実際のクラス"
 
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
 msgid "Adjusted Median Survival"
-msgstr ""
+msgstr "調整済み生存期間中央値"
 
 #: R/mstab.b.R
 msgid "Adjusted R²"
@@ -1313,11 +1420,11 @@ msgstr ""
 
 #: R/mpca.b.R
 msgid "Adjusted Rand Index (ARI)"
-msgstr ""
+msgstr "調整ランド指数（ARI）"
 
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
 msgid "Adjusted RMST"
-msgstr ""
+msgstr "調整済RMST"
 
 #: R/msrv.b.R
 msgid "Adjusted survival baseline hazard estimation failed:"
@@ -1331,15 +1438,15 @@ msgstr ""
 #: mSRV/results/adjSection.title
 #: mSRV/results/adjSection/adjPlot.title
 msgid "Adjusted Survival Curves (Direct / G-computation)"
-msgstr ""
+msgstr "調整済生存曲線（直接法／G計算）"
 
 #: R/msrv.b.R
 msgid "Adjusted Survival Probability"
-msgstr ""
+msgstr "調整済生存確率"
 
 #: mSRV/results/adjSection/adjSummaryTable.title
 msgid "Adjusted Survival Summary"
-msgstr ""
+msgstr "調整済生存要約"
 
 #: R/mstab.b.R
 msgid "Adopt Model 1"
@@ -1367,7 +1474,7 @@ msgstr "集塊法"
 
 #: mMF/options/alg.title
 msgid "Algorithm"
-msgstr ""
+msgstr "アルゴリズム"
 
 #: R/msrv.b.R
 #: mCOR/options/signif/all.title
@@ -1376,15 +1483,15 @@ msgstr "すべて"
 
 #: mSNP/options/geneticModel/all.title
 msgid "All models"
-msgstr ""
+msgstr "全モデル"
 
 #: mSNP/options/groupAlleles.title
 msgid "Allele analysis"
-msgstr ""
+msgstr "アレル解析"
 
 #: mSNP/options/freqTable.title
 msgid "Allele and genotype frequencies"
-msgstr ""
+msgstr "アレル頻度・遺伝子型頻度"
 
 #: mCOR/options/plotOrder/alphabet.title
 msgid "Alphabetical"
@@ -1400,30 +1507,32 @@ msgstr "MARの配列"
 
 #: mDCA/ui[2].label
 msgid "Analysis & Plot Options"
-msgstr ""
+msgstr "解析・作図オプション"
 
 #: mPCA/ui[3].label
 msgid "Analysis by Groups"
-msgstr ""
+msgstr "グループ別解析"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/groupAnalysisTable.title
 msgid "Analysis of Alleles and Genotypes by Outcome Variable"
-msgstr ""
+msgstr "結果変数によるアレルおよび遺伝子型の解析"
 
 #: package/analyses/mSNP.description
 msgid ""
 "Analysis of genetic polymorphisms (SNP) including Hardy-Weinberg "
 "Equilibrium, Association Tests, Population Genetics metrics, MDR, and LD."
 msgstr ""
+"SNP（単一塩基多型）の遺伝子多型解析（ハーディ・ワインベルグ平衡、関連検定、集"
+"団遺伝学指標、MDR、LDを含む）"
 
 #: R/msnp.b.R
 msgid "Analysis of Genotypes by Outcome Variable"
-msgstr ""
+msgstr "結果変数による遺伝子型の解析"
 
 #: mSRV/options/rocTime.title
 msgid "Analysis Time Point t"
-msgstr ""
+msgstr "解析時点t"
 
 #: mSTAB/results/poolTable.title
 msgid "ANCOVA Poolability Testing and Model Selection"
@@ -1448,19 +1557,19 @@ msgstr ""
 
 #: mSNP/options/assocEnable.title
 msgid "Association tests"
-msgstr ""
+msgstr "関連検定"
 
 #: mSNP/options/ternaryRegion/1.title
 msgid "Asymptotic Chi-square (1)"
-msgstr ""
+msgstr "漸近カイ二乗（1）"
 
 #: mSNP/options/ternaryRegion/3.title
 msgid "Asymptotic Chi-square female (3)"
-msgstr ""
+msgstr "漸近カイ二乗（女性）（3）"
 
 #: mSNP/options/ternaryRegion/5.title
 msgid "Asymptotic Likelihood-ratio (5)"
-msgstr ""
+msgstr "漸近尤度比（5）"
 
 #: R/msnp.b.R
 msgid ""
@@ -1473,6 +1582,8 @@ msgid ""
 "At least one predictor (group or covariate) is required for Fine–Gray "
 "regression."
 msgstr ""
+"ファイン・グレイ回帰には、少なくとも1つの予測変数（グループまたは共変量）が必"
+"要です。"
 
 #: R/mroc.b.R
 #: mLR/results/rocTable.columns.title
@@ -1484,11 +1595,11 @@ msgstr ""
 #: mSRV/results/rocSection/rocTable.columns.title
 #: mUI/results/stat/rocTable.columns.title
 msgid "AUC"
-msgstr ""
+msgstr "AUC"
 
 #: mRF/options/mtry_method/auto.title
 msgid "Auto (sqrt for classification)"
-msgstr ""
+msgstr "自動（分類：平方根）"
 
 #: R/mstab.b.R
 msgid "Autocorrelation (Durbin-Watson d)"
@@ -1500,12 +1611,12 @@ msgstr ""
 
 #: R/mpca.b.R
 msgid "Average (Mean)"
-msgstr ""
+msgstr "平均（算術平均）"
 
 #: mPWR/options/cluster_size.title
 #: mPWR/ui[2]/cluster_size.label
 msgid "Average cluster size (m)"
-msgstr ""
+msgstr "平均クラスターサイズ（m）"
 
 #: mCOR/options/clustMet/average.title
 msgid "Average Linkage (UPGMA)"
@@ -1513,7 +1624,7 @@ msgstr "平均連結法（UPGMA）"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Avoided at 20% (per 100)"
-msgstr ""
+msgstr "20%時点で回避（100人あたり）"
 
 #: mLR/ui[3]/show_roc/roc_unit.label
 #: mMLP/ui[3]/show_roc/roc_unit.label
@@ -1524,11 +1635,11 @@ msgstr "軸の単位"
 
 #: R/mlr.b.R
 msgid "Backward (AIC)"
-msgstr ""
+msgstr "後退法（AIC）"
 
 #: mLR/options/method/backward.title
 msgid "Backward Stepwise Elimination (AIC)"
-msgstr ""
+msgstr "後退ステップワイズ法（AIC）"
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "Balance"
@@ -1536,7 +1647,7 @@ msgstr "バランス"
 
 #: R/msnp.b.R
 msgid "Balanced Accuracy (BA)"
-msgstr ""
+msgstr "バランス精度（BA）"
 
 #: mPWR/options/base_prob.title
 #: mPWR/ui[1]/base_prob.label
@@ -1545,7 +1656,7 @@ msgstr "基準確率"
 
 #: R/msrv.b.R
 msgid "baseline"
-msgstr ""
+msgstr "ベースライン"
 
 #: R/mstab.b.R
 msgid "Batch"
@@ -1583,33 +1694,33 @@ msgstr "Benjamini-Yekutieli (2001)"
 
 #: mSNP/options/adjust/fdr.title
 msgid "Benjamini–Hochberg (FDR)"
-msgstr ""
+msgstr "ベンジャミニ・ホッホベルグ法（FDR）"
 
 #: mSNP/results/mdrGroup/mdrBestTable.columns.title
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Best Combination"
-msgstr ""
+msgstr "最適組み合わせ"
 
 #: mSNP/results/mdrGroup/mdrBestTable.title
 msgid "Best MDR Models by Order"
-msgstr ""
+msgstr "次数別最適MDRモデル"
 
 #: R/msnp.b.R
 msgid "Beta"
-msgstr ""
+msgstr "ベータ"
 
 #: R/msnp.b.R
 msgid "Beta Lower 95% CI"
-msgstr ""
+msgstr "ベータ95%信頼区間下限"
 
 #: R/msnp.b.R
 msgid "Beta Upper 95% CI"
-msgstr ""
+msgstr "ベータ95%信頼区間上限"
 
 #: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Betweenness"
-msgstr ""
+msgstr "媒介中心性"
 
 #: mUI/options/model/binormal.title
 msgid "Binormal"
@@ -1625,7 +1736,7 @@ msgstr "血球のマルチROC分類デモ"
 
 #: mSNP/options/adjust/bonferroni.title
 msgid "Bonferroni"
-msgstr ""
+msgstr "ボンフェローニ"
 
 #: mCOR/options/adjust/bonferroni.title
 msgid "Bonferroni (1961)"
@@ -1633,11 +1744,11 @@ msgstr "Bonferroni (1961)"
 
 #: mCOR/options/glassoBootN.title
 msgid "Bootstrap samples (N)"
-msgstr ""
+msgstr "ブートストラップ標本数（N）"
 
 #: mCOR/options/glassoBootType.title
 msgid "Bootstrap type"
-msgstr ""
+msgstr "ブートストラップの種類"
 
 #: R/mcor.b.R
 msgid "Bootstrapped Edge Weights 95% CI"
@@ -7416,7 +7527,7 @@ msgstr ""
 
 #: mCOR/options/clustMet/ward.D.title
 msgid "Ward's Linkage"
-msgstr ""
+msgstr "Ward法"
 
 #: R/mmlp.b.R
 msgid "Weight Decay"
