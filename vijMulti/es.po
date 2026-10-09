@@ -54,9 +54,8 @@ msgstr ""
 msgid ""
 "<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
 "two categorical variables. Computations are based on <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR</a> package by F. Husson, J. Josse, S. Le, J. "
-"Mazet.</p>\n"
+"\"https://CRAN.R-project.org/package=ca\" target=\"_blank\">ca package</a> "
+"by M. Greenacre, O. Nenadic, M. Friendly.</p>\n"
 "<p>The data can be</p>\n"
 "<ul>\n"
 "<li>an <strong>Observation table</strong> (raw data), possibly weighted "
@@ -82,43 +81,13 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Smoking</p>"
 msgstr ""
-"<p>Este módulo calcula el <strong>Análisis de correspondencias (AC)</strong> "
-"para dos variables categóricas. Los cálculos se basan en el paquete <a href "
-"= \"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">"
-"FactoMineR</a> de F. Husson, J. Josse, S. Le, J. Mazet.</p>\n"
-"<p>Los datos pueden ser</p>\n"
-"<ul>\n"
-"<li>una <strong>tabla de observaciones</strong> (datos brutos), posiblemente "
-"ponderados utilizando el sistema de ponderación integrado de <em>jamovi</em> "
-"o utilizando la variable \"Recuentos\"</li>\n"
-"<li>o una <strong>tabla de contingencia</strong></li>\n"
-"</ul>\n"
-"<p>Los números de <strong>filas o columnas suplementarias</strong> pueden "
-"introducirse como listas de enteros: 1,3,6</p>\n"
-"<p>Están disponibles las siguientes normalizaciones (escalado de las "
-"puntuaciones de filas y columnas antes de representarlas):</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> Las puntuaciones de filas y columnas se "
-"escalan por los valores propios.</li>\n"
-"<li><strong>Simétrica:</strong> Las puntuaciones de filas y columnas se "
-"escalan por la raíz cuadrada de los valores propios.</li>\n"
-"<li><strong>Principal de filas:</strong> Solo las puntuaciones de filas se "
-"escalan por los valores propios.</li>\n"
-"<li><strong>Principal de columnas:</strong> Solo las puntuaciones de "
-"columnas se escalan por los valores propios.</li>\n"
-"<li><strong>Estándar:</strong> Las coordenadas originales sin "
-"normalización.</li>\n"
-"</ul>\n"
-"<p>Se incluye un archivo de ejemplo en Abrir > Biblioteca de datos > "
-"vijMulti > Smoking</p>"
 
 #: R/multcorresp.b.R
 msgid ""
 "<p>This module computes <strong>Multiple Correspondence Analysis "
 "(MCA)</strong> for several categorical variables. Computations are based on "
-"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR</a> package by F. Husson, J. Josse, S. Le, J. "
-"Mazet.</p>\n"
+"<a href = \"https://CRAN.R-project.org/package=ca\" target=\"_blank\">ca "
+"package</a> by M. Greenacre, O. Nenadic, M. Friendly.</p>\n"
 "<p>Both classic methods are available:</p>\n"
 "<ul>\n"
 "<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
@@ -126,13 +95,17 @@ msgid ""
 "the squares of those of the indicator matrix method. </li>\n"
 "</ul>\n"
 "<p>Both methods give the same <em>standard</em> coordinates and "
-"discriminations (but different <em>principal</em> coordinates).</p>\n"
+"discriminations, but different <em>principal</em> coordinates.</p>\n"
+"<p>With the <strong>Burt method</strong>, since observations are not part of "
+"the Burt matrix, their standard coordinates come from the indicator method\n"
+"and their principal coordinates are scaled like those of the categories. "
+"Cos² and QLT are then computed in the Burt space.</p>\n"
 "<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
 "applied to eigenvalues only (<strong>Summary</strong> table). Principal "
 "coordinates (and inertia) of categories and observations are computed from "
 "the original eigenvalues of the Burt matrix.</p>\n"
 "<p>The <strong>Normalization</strong> options specify how the coordinates "
-"are scaled (by eigenvalues):</p>\n"
+"are scaled (by the square roots of the eigenvalues):</p>\n"
 "<ul>\n"
 "<li><strong>Principal:</strong> Both category and observation coordinates "
 "are scaled.</li>\n"
@@ -145,37 +118,6 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Cars</p>"
 msgstr ""
-"<p>Este módulo realiza un <strong>Análisis de correspondencias múltiples "
-"(ACM)</strong> para varias variables categóricas. Los cálculos se basan en "
-"el paquete <a href=\"https://CRAN.R-project.org/package=FactoMineR\">"
-"FactoMineR</a> de F. Husson, J. Josse, S. Le, J. Mazet.</p>\n"
-"<p>Están disponibles ambos métodos clásicos:</p>\n"
-"<ul>\n"
-"<li><strong>Matriz indicadora:</strong> AC de la matriz indicadora.</li>\n"
-"<li><strong>Matriz de Burt:</strong> AC de la matriz de Burt. Los valores "
-"propios son los cuadrados de los del método de la matriz indicadora.</li>\n"
-"</ul>\n"
-"<p>Ambos métodos dan las mismas coordenadas <em>estándar</em> y "
-"discriminaciones (pero distintas coordenadas <em>principales</em>).</p>\n"
-"<p>Cuando se seleccionan, las correcciones de <strong>Benzécri y Greenacre</"
-"strong> se aplican solo a los valores propios (tabla de <strong>resumen</"
-"strong>). Las coordenadas principales (y la inercia) de las categorías y las "
-"observaciones se calculan a partir de los valores propios originales de la "
-"matriz de Burt.</p>\n"
-"<p>Las opciones de <strong>normalización</strong> especifican cómo se "
-"escalan las coordenadas (mediante valores propios):</p>\n"
-"<ul>\n"
-"<li><strong>Principal:</strong> se escalan tanto las coordenadas de las "
-"categorías como las de las observaciones.</li>\n"
-"<li><strong>Principal de categorías:</strong> solo se escalan las "
-"coordenadas de las categorías.</li>\n"
-"<li><strong>Principal de observaciones:</strong> solo se escalan las "
-"coordenadas de las observaciones.</li>\n"
-"<li><strong>Estándar:</strong> tanto las coordenadas de las categorías como "
-"las de las observaciones son estándar.</li>\n"
-"</ul>\n"
-"<p>Se incluye un archivo de ejemplo en Abrir > Biblioteca de datos > "
-"vijMulti > Cars</p>"
 
 #: R/principal.b.R
 msgid ""
@@ -189,8 +131,8 @@ msgid ""
 "principal (scaled by the square root of eigenvalues).</p>\n"
 "<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
 "<ul>\n"
-"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
-"eigenvalues) while loadings are standard.</li>\n"
+"<li><strong>Form biplot:</strong> Scores are principal while loadings are "
+"standard.</li>\n"
 "<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
 "are standard. </li>\n"
 "</ul>\n"
@@ -206,39 +148,9 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Iris</p>"
 msgstr ""
-"<p>Este módulo realiza un <strong>Análisis de Componentes Principales (ACP)</"
-"strong> para varias variables continuas. Los cálculos se basan en la función "
-"<tt>stats::prcomp</tt>.</p>\n"
-"<p>Aunque los componentes rotados no son componentes principales, se usan "
-"ampliamente. Solo están disponibles rotaciones ortogonales (del paquete "
-"GPArotation).</p>\n"
-"<p>Las cargas (coordenadas de las variables) y las puntuaciones (coordenadas "
-"de las observaciones) están en escala principal (multiplicadas por la raíz "
-"cuadrada de los valores propios).</p>\n"
-"<p>El biplot sigue \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
-"<ul>\n"
-"<li><strong>Biplot de forma:</strong> las puntuaciones están en escala "
-"principal (escaladas por los valores propios), mientras que las cargas son "
-"estándar.</li>\n"
-"<li><strong>Biplot de covarianza:</strong> las cargas están en escala "
-"principal, mientras que las puntuaciones son estándar.</li>\n"
-"</ul>\n"
-"<p><strong>Opciones avanzadas</strong>:</p>\n"
-"<ul>\n"
-"<li><strong>Estandarizar cargas:</strong> las cargas se normalizan para que "
-"la suma de cuadrados sea igual a 1 (en lugar de a los valores propios).</li>"
-"\n"
-"<li><strong>Estandarizar puntuaciones:</strong> las puntuaciones se "
-"normalizan para que las varianzas sean iguales a 1 (en lugar de a los "
-"valores propios).</li>\n"
-"<li><strong>Rotar vectores propios:</strong> la rotación (varimax, etc.) se "
-"aplica a los vectores propios (cargas estándar) en lugar de a las cargas "
-"principales (al estilo de Stata).</li>\n"
-"</ul>\n"
-"<p>Se incluye un archivo de ejemplo en Abrir > Biblioteca de datos > "
-"vijMulti > Iris</p>"
 
 #: package/datasets/Smoking.description
+#: package/datasets/Smoking(contingencytable).description
 msgid "A demonstration dataset for vijMulti/Correspondence Analysis."
 msgstr ""
 "Conjunto de datos de ejemplo para el módulo vijMulti/Análisis de "
@@ -774,6 +686,41 @@ msgstr ""
 msgid "Form Biplot"
 msgstr "Biplot de forma"
 
+#: multcorresp/options/colorPalette/ggsci::aaas.title
+#: principal/options/colorPalette/ggsci::aaas.title
+msgid "Ggsci:AAAS"
+msgstr ""
+
+#: multcorresp/options/colorPalette/ggsci::bmj.title
+#: principal/options/colorPalette/ggsci::bmj.title
+msgid "Ggsci:BMJ"
+msgstr ""
+
+#: multcorresp/options/colorPalette/ggsci::jama.title
+#: principal/options/colorPalette/ggsci::jama.title
+msgid "Ggsci:JAMA"
+msgstr ""
+
+#: multcorresp/options/colorPalette/ggsci::jco.title
+#: principal/options/colorPalette/ggsci::jco.title
+msgid "Ggsci:JCO"
+msgstr ""
+
+#: multcorresp/options/colorPalette/ggsci::lancet.title
+#: principal/options/colorPalette/ggsci::lancet.title
+msgid "Ggsci:Lancet"
+msgstr ""
+
+#: multcorresp/options/colorPalette/ggsci::nejm.title
+#: principal/options/colorPalette/ggsci::nejm.title
+msgid "Ggsci:NEJM"
+msgstr ""
+
+#: multcorresp/options/colorPalette/ggsci::npg.title
+#: principal/options/colorPalette/ggsci::npg.title
+msgid "Ggsci:NPG"
+msgstr ""
+
 #: corresp/options/supColor/darkgray.title
 #: multcorresp/options/obsColor/gray.title
 #: principal/options/varColor/#999999.title
@@ -826,11 +773,9 @@ msgstr "Grupo"
 msgid "Indicator matrix"
 msgstr "Matriz indicadora"
 
-#: R/corresp.b.R
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
-#: multcorresp/results/categories.columns.title
 msgid "Inertia"
 msgstr "Inercia"
 
@@ -1330,8 +1275,8 @@ msgid "Purples"
 msgstr "Morados"
 
 #: R/corresp.b.R
-#: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
+#: multcorresp/results/observations.columns.title
 msgid "QLT"
 msgstr "Calidad"
 
@@ -1376,6 +1321,12 @@ msgstr "Rojo, amarillo y verde"
 #: principal/options/colorPalette/Reds.title
 msgid "Reds"
 msgstr "Rojos"
+
+#: R/corresp.b.R
+#: multcorresp/results/categories.columns.title
+#: multcorresp/results/observations.columns.title
+msgid "Rel. Inertia"
+msgstr ""
 
 #: corresp/options/titleAlign/1.title
 #: corresp/options/subtitleAlign/1.title
@@ -1464,6 +1415,10 @@ msgstr "Perfiles de filas"
 msgid "Row Summary"
 msgstr "Resumen de filas"
 
+#: R/corresp.b.R
+msgid "Row weights are ignored when the data is a contingency table."
+msgstr ""
+
 #: corresp/options/rows.title
 #: corresp/ui/mode/obsTable[0][0][0].label
 msgid "Rows"
@@ -1533,6 +1488,10 @@ msgstr "Tamaños y colores"
 msgid "Smoking"
 msgstr "Smoking"
 
+#: package/datasets/Smoking(contingencytable).name
+msgid "Smoking (contingency table)"
+msgstr ""
+
 #: corresp/ui[1][0].label
 #: multcorresp/ui[2][0].label
 #: principal/ui[2][0][0].label
@@ -1542,6 +1501,12 @@ msgstr "Solución"
 #: R/corresp.b.R
 msgid "Some categories have zero counts and must be removed."
 msgstr "Algunas categorías tienen recuentos nulos y deben eliminarse."
+
+#: R/corresp.b.R
+msgid ""
+"Some row or column names end with \"*\", which is also used to mark "
+"supplementary rows and columns. Consider renaming them to avoid confusion."
+msgstr ""
 
 #: R/corresp.b.R
 msgid "Some values are missing from the contingency table."

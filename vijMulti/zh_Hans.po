@@ -51,9 +51,8 @@ msgstr ""
 msgid ""
 "<p>This module computes <strong>Correspondence Analysis (CA)</strong> for "
 "two categorical variables. Computations are based on <a href = "
-"\"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR</a> package by F. Husson, J. Josse, S. Le, J. "
-"Mazet.</p>\n"
+"\"https://CRAN.R-project.org/package=ca\" target=\"_blank\">ca package</a> "
+"by M. Greenacre, O. Nenadic, M. Friendly.</p>\n"
 "<p>The data can be</p>\n"
 "<ul>\n"
 "<li>an <strong>Observation table</strong> (raw data), possibly weighted "
@@ -79,33 +78,13 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Smoking</p>"
 msgstr ""
-"<p>此模块计算两个分类变量的 <strong>相应分析 (CA)</strong>。计算基于 <a href "
-"= \"https://CRAN.R-project.org/package=FactoMineR\" target=\"_blank\">"
-"FactoMineR</a> 包，由 F. Husson, J. Josse, S. Le, J. Mazet 创建。</p>\n"
-"<p>数据可以是</p>\n"
-"<ul>\n"
-"<li>一个 <strong>观察表</strong> (原始数据)，可能使用 <em>jamovi</em> 内置权"
-"重系统或使用 \"计数\" 变量进行加权</li>\n"
-"<li>或一个 <strong>联表</strong></li>\n"
-"</ul>\n"
-"<p><strong>补充行或列</strong> 数字可以作为整数列表输入：1,3,6</p>\n"
-"<p>有四种归一化（在绘图前对行和列评分进行缩放）可用：</p>\n"
-"<ul>\n"
-"<li><strong>主导:</strong> 行和列评分按特征值缩放。</li>\n"
-"<li><strong>对称:</strong> 行和列评分按特征值平方根缩放。</li>\n"
-"<li><strong>行主导:</strong> 仅行评分按特征值缩放。</li>\n"
-"<li><strong>列主导:</strong> 仅列评分按特征值缩放。</li>\n"
-"<li><strong>标准:</strong> 原始坐标，无归一化。</li>\n"
-"</ul>\n"
-"<p>示例文件包含在 Open > 数据库 > vijMulti > Smoking 中</p>"
 
 #: R/multcorresp.b.R
 msgid ""
 "<p>This module computes <strong>Multiple Correspondence Analysis "
 "(MCA)</strong> for several categorical variables. Computations are based on "
-"<a href = \"https://CRAN.R-project.org/package=FactoMineR\" "
-"target=\"_blank\">FactoMineR</a> package by F. Husson, J. Josse, S. Le, J. "
-"Mazet.</p>\n"
+"<a href = \"https://CRAN.R-project.org/package=ca\" target=\"_blank\">ca "
+"package</a> by M. Greenacre, O. Nenadic, M. Friendly.</p>\n"
 "<p>Both classic methods are available:</p>\n"
 "<ul>\n"
 "<li><strong>Indicator matrix:</strong> CA of the indicator matrix</li>\n"
@@ -113,13 +92,17 @@ msgid ""
 "the squares of those of the indicator matrix method. </li>\n"
 "</ul>\n"
 "<p>Both methods give the same <em>standard</em> coordinates and "
-"discriminations (but different <em>principal</em> coordinates).</p>\n"
+"discriminations, but different <em>principal</em> coordinates.</p>\n"
+"<p>With the <strong>Burt method</strong>, since observations are not part of "
+"the Burt matrix, their standard coordinates come from the indicator method\n"
+"and their principal coordinates are scaled like those of the categories. "
+"Cos² and QLT are then computed in the Burt space.</p>\n"
 "<p>When selected, <strong>Benzécri and Greenacre corrections</strong> are "
 "applied to eigenvalues only (<strong>Summary</strong> table). Principal "
 "coordinates (and inertia) of categories and observations are computed from "
 "the original eigenvalues of the Burt matrix.</p>\n"
 "<p>The <strong>Normalization</strong> options specify how the coordinates "
-"are scaled (by eigenvalues):</p>\n"
+"are scaled (by the square roots of the eigenvalues):</p>\n"
 "<ul>\n"
 "<li><strong>Principal:</strong> Both category and observation coordinates "
 "are scaled.</li>\n"
@@ -132,33 +115,6 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Cars</p>"
 msgstr ""
-"<p>此模块对多个分类变量进行<strong>多重对应分析 (MCA)</strong>。计算基于 F. "
-"Husson, J. Josse, S. Le, J. Mazet 开发的 <a href = \"https://CRAN.R-"
-"project.org/package=FactoMineR\" target=\"_blank\">FactoMineR</a> 软件包。</"
-"p>\n"
-"<p>提供以下两种经典方法：</p>\n"
-"<ul>\n"
-"<li><strong>指示矩阵 (Indicator matrix)：</strong> 指示矩阵的 CA 分析</li>\n"
-"<li><strong>Burt 矩阵 (Burt matrix)：</strong> Burt 矩阵的 CA 分析。其特征值"
-"是指示矩阵法特征值的平方。</li>\n"
-"</ul>\n"
-"<p>两种方法得到相同的<em>标准 (standard)</em> 坐标及判别结果（但<em>主 "
-"(principal)</em> 坐标不同）。</p>\n"
-"<p>选中时，<strong>Benzécri 和 Greenacre 校正</strong>仅应用于特征值"
-"（<strong>摘要</strong>表）。类别和观测值的主坐标（及惯量）根据 Burt 矩阵的原"
-"始特征值计算。</p>\n"
-"<p><strong>标准化 (Normalization)</strong> 选项指定坐标如何缩放（按特征值）"
-"：</p>\n"
-"<ul>\n"
-"<li><strong>主坐标 (Principal)：</strong> 类别和观测值坐标均进行缩放。</li>\n"
-"<li><strong>类别主坐标 (Category principal)：</strong> 仅对类别坐标进行缩放"
-"。</li>\n"
-"<li><strong>观测值主坐标 (Observation principal)：</strong> 仅对观测值坐标进"
-"行缩放。</li>\n"
-"<li><strong>标准坐标 (Standard)：</strong> 类别和观测值坐标均为标准坐标。</"
-"li>\n"
-"</ul>\n"
-"<p>示例文件位于：Open > Data Library > vijMulti > Cars</p>"
 
 #: R/principal.b.R
 msgid ""
@@ -172,8 +128,8 @@ msgid ""
 "principal (scaled by the square root of eigenvalues).</p>\n"
 "<p>Biplot follows \"Biplots in Practice\" (Michael Greenacre, 2010):</p>\n"
 "<ul>\n"
-"<li><strong>Form biplot:</strong> Scores are principal (scaled by "
-"eigenvalues) while loadings are standard.</li>\n"
+"<li><strong>Form biplot:</strong> Scores are principal while loadings are "
+"standard.</li>\n"
 "<li><strong>Covariance biplot:</strong> Loadings are principal while scores "
 "are standard. </li>\n"
 "</ul>\n"
@@ -189,31 +145,9 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Iris</p>"
 msgstr ""
-"<p>本模块对多个连续变量进行<strong>主成分分析 (PCA)</strong>。计算基于 <tt>"
-"stats::prcomp</tt> 函数。</p>\n"
-"<p>虽然旋转后的成分不再是主成分，但其应用非常广泛。目前仅支持正交旋转（由 "
-"GPArotation 包提供）。</p>\n"
-"<p>载荷（变量坐标）和得分（观测值坐标）均为“主坐标”（按特征值的平方根缩放）"
-"。</p>\n"
-"<p>双标图遵循《双标图实践》(Michael Greenacre, 2010) 的标准：</p>\n"
-"<ul>\n"
-"<li><strong>形状双标图 (Form biplot)：</strong> 得分为主坐标（按特征值缩放）"
-"，载荷为标准坐标。</li>\n"
-"<li><strong>协方差双标图 (Covariance biplot)：</strong> 载荷为主坐标，得分为"
-"标准坐标。</li>\n"
-"</ul>\n"
-"<p><strong>高级选项</strong>：</p>\n"
-"<ul>\n"
-"<li><strong>标准化载荷：</strong> 对载荷进行归一化处理，使其平方和等于 1（而"
-"非特征值）。</li>\n"
-"<li><strong>标准化得分：</strong> 对得分进行归一化处理，使其方差等于 1（而非"
-"特征值）。</li>\n"
-"<li><strong>旋转特征向量：</strong> 对特征向量（标准载荷）而非主载荷进行旋转"
-"（如方差最大化旋转等），这是 Stata 的处理方式。</li>\n"
-"</ul>\n"
-"<p>示例文件见：打开 > 数据库 > vijMulti > Iris</p>"
 
 #: package/datasets/Smoking.description
+#: package/datasets/Smoking(contingencytable).description
 msgid "A demonstration dataset for vijMulti/Correspondence Analysis."
 msgstr "vijMulti/对应分析 演示数据集。"
 
@@ -741,6 +675,41 @@ msgstr ""
 msgid "Form Biplot"
 msgstr "Biplot 形式"
 
+#: multcorresp/options/colorPalette/ggsci::aaas.title
+#: principal/options/colorPalette/ggsci::aaas.title
+msgid "Ggsci:AAAS"
+msgstr ""
+
+#: multcorresp/options/colorPalette/ggsci::bmj.title
+#: principal/options/colorPalette/ggsci::bmj.title
+msgid "Ggsci:BMJ"
+msgstr ""
+
+#: multcorresp/options/colorPalette/ggsci::jama.title
+#: principal/options/colorPalette/ggsci::jama.title
+msgid "Ggsci:JAMA"
+msgstr ""
+
+#: multcorresp/options/colorPalette/ggsci::jco.title
+#: principal/options/colorPalette/ggsci::jco.title
+msgid "Ggsci:JCO"
+msgstr ""
+
+#: multcorresp/options/colorPalette/ggsci::lancet.title
+#: principal/options/colorPalette/ggsci::lancet.title
+msgid "Ggsci:Lancet"
+msgstr ""
+
+#: multcorresp/options/colorPalette/ggsci::nejm.title
+#: principal/options/colorPalette/ggsci::nejm.title
+msgid "Ggsci:NEJM"
+msgstr ""
+
+#: multcorresp/options/colorPalette/ggsci::npg.title
+#: principal/options/colorPalette/ggsci::npg.title
+msgid "Ggsci:NPG"
+msgstr ""
+
 #: corresp/options/supColor/darkgray.title
 #: multcorresp/options/obsColor/gray.title
 #: principal/options/varColor/#999999.title
@@ -793,11 +762,9 @@ msgstr "分组"
 msgid "Indicator matrix"
 msgstr "指示矩阵"
 
-#: R/corresp.b.R
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
-#: multcorresp/results/categories.columns.title
 msgid "Inertia"
 msgstr "惯性"
 
@@ -1297,8 +1264,8 @@ msgid "Purples"
 msgstr "紫色"
 
 #: R/corresp.b.R
-#: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
+#: multcorresp/results/observations.columns.title
 msgid "QLT"
 msgstr "QLT"
 
@@ -1343,6 +1310,12 @@ msgstr "红、黄、绿"
 #: principal/options/colorPalette/Reds.title
 msgid "Reds"
 msgstr "红色"
+
+#: R/corresp.b.R
+#: multcorresp/results/categories.columns.title
+#: multcorresp/results/observations.columns.title
+msgid "Rel. Inertia"
+msgstr ""
 
 #: corresp/options/titleAlign/1.title
 #: corresp/options/subtitleAlign/1.title
@@ -1431,6 +1404,10 @@ msgstr "行剖面"
 msgid "Row Summary"
 msgstr "行摘要"
 
+#: R/corresp.b.R
+msgid "Row weights are ignored when the data is a contingency table."
+msgstr ""
+
 #: corresp/options/rows.title
 #: corresp/ui/mode/obsTable[0][0][0].label
 msgid "Rows"
@@ -1500,6 +1477,10 @@ msgstr "大小和颜色"
 msgid "Smoking"
 msgstr "吸烟"
 
+#: package/datasets/Smoking(contingencytable).name
+msgid "Smoking (contingency table)"
+msgstr ""
+
 #: corresp/ui[1][0].label
 #: multcorresp/ui[2][0].label
 #: principal/ui[2][0][0].label
@@ -1509,6 +1490,12 @@ msgstr "解决方案"
 #: R/corresp.b.R
 msgid "Some categories have zero counts and must be removed."
 msgstr "部分类别的计数为零，必须删除。"
+
+#: R/corresp.b.R
+msgid ""
+"Some row or column names end with \"*\", which is also used to mark "
+"supplementary rows and columns. Consider renaming them to avoid confusion."
+msgstr ""
 
 #: R/corresp.b.R
 msgid "Some values are missing from the contingency table."
