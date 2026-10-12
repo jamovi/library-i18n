@@ -6,11 +6,11 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: ru\n"
-"PO-Revision-Date: 2026-10-04 03:51+0000\n"
-"Last-Translator: Yuri Smolyakov <smolyakov@rambler.ru>\n"
+"PO-Revision-Date: 2026-10-12 14:33+0000\n"
+"Last-Translator: Yuri Smolyakov <smoyur@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jamovi/module-"
 "vijmulti/ru/>\n"
-"X-Generator: Weblate 2026.10.1.dev0\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 #: R/principal.b.R
 msgid "{rotation} rotation"
@@ -85,6 +85,37 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Smoking</p>"
 msgstr ""
+"<p>Этот модуль вычисляет <strong>Анализ соответствия (CA)</strong> для двух "
+"категориальных переменных. Вычисления основаны на <a href = \"https://CRAN.R-"
+"project.org/package=ca\" target=\"_blank\">пакете ca</a> М. Гринакра, О. "
+"Ненадика, М. Френдли.</p>\n"
+"<p>Данные могут быть</p>\n"
+"<ул>\n"
+"<li><strong>Таблица наблюдений</strong> (необработанные данные), возможно, "
+"взвешенная с использованием встроенной системы весов <em>jamovi</em> или с "
+"использованием переменной «Counts».</li>\n"
+"<li>или <strong>Таблица непредвиденных обстоятельств</strong></li>\n"
+"</ul>\n"
+"<p><strong>Дополнительные номера строк или столбцов</strong> можно вводить в "
+"виде целых списков: 1,3,6</p>\n"
+"<p>Доступны пять способов нормализации (масштабирование оценок строк и "
+"столбцов перед построением графика):</p>\n"
+"<ул>\n"
+"<li><strong>Основной.</strong> Оценки строк и столбцов указаны в основных "
+"координатах, т. е. стандартных координатах, масштабированных по сингулярным "
+"значениям.</li>\n"
+"<li><strong>Симметрично</strong>. Оценки строк и столбцов представляют собой "
+"стандартные координаты, масштабированные по квадратному корню из сингулярных "
+"значений.</li>\n"
+"<li><strong>Основная строка.</strong> Оценки строк указаны в основных "
+"координатах, оценки столбцов – в стандартных координатах.</li>\n"
+"<li><strong>Основной столбец</strong>. Оценки столбцов указаны в основных "
+"координатах, оценки строк – в стандартных координатах.</li>\n"
+"<li><strong>Стандарт.</strong> Оценки строк и столбцов указаны в стандартных "
+"координатах (единичная взвешенная дисперсия по каждому измерению).</li>\n"
+"</ul>\n"
+"<p>Пример файла доступен в разделе «Открыть» > «Библиотека данных» > "
+"vijMulti > «Курение».</p>"
 
 #: R/multcorresp.b.R
 msgid ""
@@ -122,6 +153,41 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Cars</p>"
 msgstr ""
+"<p>Этот модуль вычисляет <strong>Анализ множественного соответствия (MCA)</"
+"strong> для нескольких категориальных переменных. Вычисления основаны на <a "
+"href = \"https://CRAN.R-project.org/package=ca\" target=\"_blank\">пакете "
+"ca</a> М. Гринакра, О. Ненадика, М. Френдли.</p>\n"
+"<p>Доступны оба классических метода:</p>\n"
+"<ул>\n"
+"<li><strong>Матрица индикаторов:</strong> CA матрицы индикаторов</li>\n"
+"<li><strong>Матрица Берта:</strong> CA матрицы Берта. Собственные значения "
+"представляют собой квадраты значений метода индикаторной матрицы. </li>\n"
+"</ul>\n"
+"<p>Оба метода дают одни и те же <em>стандартные</em> координаты и различия, "
+"но разные <em>основные</em> координаты.</p>\n"
+"<p>При использовании <strong>метода Берта</strong>, поскольку наблюдения не "
+"являются частью матрицы Берта, их стандартные координаты берутся из "
+"индикаторного метода.\n"
+"и их основные координаты масштабируются так же, как и у категорий. Затем Cos"
+"² и QLT вычисляются в пространстве Берта.</p>\n"
+"<p>Если этот флажок установлен, <strong>Поправки Бензекри и Гринакра</"
+"strong> применяются только к собственным значениям (<strong>Сводная таблица</"
+"strong>). Главные координаты (и инерция) категорий и наблюдений вычисляются "
+"на основе исходных собственных значений матрицы Берта.</p>\n"
+"<p>Параметры <strong>Нормализация</strong> определяют способ масштабирования "
+"координат (по квадратным корням собственных значений):</p>\n"
+"<ул>\n"
+"<li><strong>Основной:</strong> Координаты категории и наблюдения "
+"масштабируются.</li>\n"
+"<li><strong>Принцип категории:</strong> Масштабируются только координаты "
+"категории.</li>\n"
+"<li><strong>Принцип наблюдения:</strong> Масштабируются только координаты "
+"наблюдения.</li>\n"
+"<li><strong>Стандарт.</strong> Координаты категории и наблюдения являются "
+"стандартными.</li>\n"
+"</ul>\n"
+"<p>Пример файла доступен в разделе «Открыть» > «Библиотека данных» > "
+"vijMulti > «Автомобили».</p>"
 
 #: R/principal.b.R
 msgid ""
@@ -152,6 +218,35 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Iris</p>"
 msgstr ""
+"<p>Этот модуль рассчитывает <strong>Анализ главных компонентов (PCA)</"
+"strong> для нескольких непрерывных переменных. Вычисления основаны на "
+"функции <tt>stats::prcomp</tt>.</p>\n"
+"<p>Хотя повернутые компоненты не являются основными компонентами, они широко "
+"используются. Доступны только ортогональные вращения (из пакета GPArotation)"
+".</p>\n"
+"<p>Нагрузки (переменные координаты) и оценки (координаты наблюдения) "
+"являются основными (масштабируются квадратным корнем собственных значений).</"
+"p>\n"
+"<p>Би-сюжет следует за «Би-сюжетом на практике» (Майкл Гринакр, 2010 г.):</p>"
+"\n"
+"<ул>\n"
+"<li><strong>Двойной сюжет формы:</strong> Оценки являются основными, а "
+"загрузки стандартными.</li>\n"
+"<li><strong>Диаграмма ковариации</strong>. Нагрузки являются основными, а "
+"оценки стандартными. </li>\n"
+"</ul>\n"
+"<p><strong>Дополнительные параметры</strong>:</p>\n"
+"<ул>\n"
+"<li><strong>Стандартизация нагрузок:</strong> нагрузки нормализуются с "
+"использованием сумм квадратов, равных 1 (вместо собственных значений).</li>\n"
+"<li><strong>Стандартизация оценок:</strong> оценки нормализуются с "
+"дисперсией, равной 1 (вместо собственных значений).</li>\n"
+"<li><strong>Поворот собственных векторов:</strong> вращение (варимакс и т. "
+"д.) применяется к собственным векторам (стандартным нагрузкам) вместо "
+"главных нагрузок (способ Stata).</li>\n"
+"</ul>\n"
+"<p>Пример файла доступен в разделе «Открыть» > «Библиотека данных» > "
+"vijMulti > Iris</p>"
 
 #: package/datasets/Smoking.description
 #: package/datasets/Smoking(contingencytable).description
@@ -687,37 +782,37 @@ msgstr "Форма биграфика"
 #: multcorresp/options/colorPalette/ggsci::aaas.title
 #: principal/options/colorPalette/ggsci::aaas.title
 msgid "Ggsci:AAAS"
-msgstr ""
+msgstr "Ggsci:AAAS"
 
 #: multcorresp/options/colorPalette/ggsci::bmj.title
 #: principal/options/colorPalette/ggsci::bmj.title
 msgid "Ggsci:BMJ"
-msgstr ""
+msgstr "Ggsci:BMJ"
 
 #: multcorresp/options/colorPalette/ggsci::jama.title
 #: principal/options/colorPalette/ggsci::jama.title
 msgid "Ggsci:JAMA"
-msgstr ""
+msgstr "Ggsci:JAMA"
 
 #: multcorresp/options/colorPalette/ggsci::jco.title
 #: principal/options/colorPalette/ggsci::jco.title
 msgid "Ggsci:JCO"
-msgstr ""
+msgstr "Ggsci:JCO"
 
 #: multcorresp/options/colorPalette/ggsci::lancet.title
 #: principal/options/colorPalette/ggsci::lancet.title
 msgid "Ggsci:Lancet"
-msgstr ""
+msgstr "Ggsci:Ланцет"
 
 #: multcorresp/options/colorPalette/ggsci::nejm.title
 #: principal/options/colorPalette/ggsci::nejm.title
 msgid "Ggsci:NEJM"
-msgstr ""
+msgstr "Ggsci:NEJM"
 
 #: multcorresp/options/colorPalette/ggsci::npg.title
 #: principal/options/colorPalette/ggsci::npg.title
 msgid "Ggsci:NPG"
-msgstr ""
+msgstr "Ggsci:НПГ"
 
 #: corresp/options/supColor/darkgray.title
 #: multcorresp/options/obsColor/gray.title
@@ -1324,7 +1419,7 @@ msgstr "Красные"
 #: multcorresp/results/categories.columns.title
 #: multcorresp/results/observations.columns.title
 msgid "Rel. Inertia"
-msgstr ""
+msgstr "Отн. Инерция"
 
 #: corresp/options/titleAlign/1.title
 #: corresp/options/subtitleAlign/1.title
@@ -1416,6 +1511,8 @@ msgstr "Сводка строк"
 #: R/corresp.b.R
 msgid "Row weights are ignored when the data is a contingency table."
 msgstr ""
+"Веса строк игнорируются, если данные представляют собой таблицу "
+"сопряженности."
 
 #: corresp/options/rows.title
 #: corresp/ui/mode/obsTable[0][0][0].label
@@ -1488,7 +1585,7 @@ msgstr "Курение"
 
 #: package/datasets/Smoking(contingencytable).name
 msgid "Smoking (contingency table)"
-msgstr ""
+msgstr "Курение (таблица непредвиденных обстоятельств)"
 
 #: corresp/ui[1][0].label
 #: multcorresp/ui[2][0].label
@@ -1505,6 +1602,9 @@ msgid ""
 "Some row or column names end with \"*\", which is also used to mark "
 "supplementary rows and columns. Consider renaming them to avoid confusion."
 msgstr ""
+"Имена некоторых строк или столбцов заканчиваются знаком «*», который также "
+"используется для обозначения дополнительных строк и столбцов. Попробуйте "
+"переименовать их, чтобы избежать путаницы."
 
 #: R/corresp.b.R
 msgid "Some values are missing from the contingency table."
