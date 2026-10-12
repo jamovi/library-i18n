@@ -77,6 +77,24 @@ msgstr ""
 "<b>*p<0.05</b> - Гипотеза о нормальности распределения отвергнута тестом "
 "Шапиро-Уилка"
 
+#: R/mstab.b.R
+msgid ""
+"<b>Adopted Structure</b>: Model 1 (Separate slopes and separate intercepts). "
+"Batches degrade at different rates."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Adopted Structure</b>: Model 2 (Common slope, separate intercepts). "
+"Batches degrade at a parallel rate but start at different initial levels."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Adopted Structure</b>: Model 3 (Common slope, common intercept). All "
+"batches are fully pooled into a single regression line."
+msgstr ""
+
 #: R/msnp.b.R
 msgid ""
 "<b>Allele frequencies (p, q)</b> represent the proportions of the two "
@@ -107,6 +125,14 @@ msgstr ""
 "допустимую вероятность совершить ошибку I рода (найти ложноположительный "
 "эффект там, где его на самом деле нет)."
 
+#: R/mstab.b.R
+msgid ""
+"<b>Autocorrelation (Durbin-Watson d)</b>: Tests for first-order "
+"autocorrelation in residuals across sequential test intervals. Values near "
+"2.0 indicate independent errors; values substantially below 1.5 suggest "
+"positive serial correlation."
+msgstr ""
+
 #: R/mdca.b.R
 msgid ""
 "<b>Avoided at 20%</b>: reduction in unnecessary interventions per 100 "
@@ -134,6 +160,14 @@ msgstr ""
 "<b>Сбалансированная точность (BA)</b> = (Чувствительность + Специфичность) / "
 "2. Учитывает дисбаланс классов. BA = 0.5 указывает на случайную "
 "классификацию."
+
+#: R/mstab.b.R
+msgid ""
+"<b>Batch Minimum Principle</b>: When batch-specific estimates remain "
+"(separate slopes or separate intercepts), ICH Q1E mandates that the overall "
+"estimated shelf life / retest period is governed by the shortest (earliest) "
+"estimate among all evaluated batches."
+msgstr ""
 
 #: R/msnp.b.R
 msgid ""
@@ -288,6 +322,13 @@ msgstr ""
 "коэффициента корреляции (<b>ICC</b>) и среднего размера кластера через "
 "эффект дизайна."
 
+#: R/mstab.b.R
+msgid ""
+"<b>Coefficient of Determination (R² / Adj R²)</b>: Measures the proportion "
+"of total variance in the stability attribute accounted for by storage time "
+"and batch factors. Adjusted R² penalizes for model complexity."
+msgstr ""
+
 #: R/mui.b.R
 msgid ""
 "<b>Concordance</b> - C-Statistic or AUC. The probability that a randomly "
@@ -297,6 +338,22 @@ msgstr ""
 "<b>Конкордантность</b> - C-статистика или AUC. Вероятность того, что "
 "случайно выбранный объект с данным признаком будет правильно ранжирован "
 "выше, чем случайно выбранный объект без данного признака"
+
+#: R/mstab.b.R
+msgid ""
+"<b>Confidence Bound Direction (ICH Q1E Section 2.4)</b>: For decreasing "
+"attributes (e.g., Assay), the 95% lower one-sided confidence bound is used. "
+"For increasing attributes (e.g., Impurities / Degradants), the 95% upper "
+"one-sided confidence bound is used. If the direction of change is unknown, a "
+"95% two-sided bound is applied."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Confidence Intervals & Standard Errors</b>: Standard errors and 95% "
+"confidence intervals reflect parameter estimation precision computed from "
+"the model covariance matrix and residual degrees of freedom."
+msgstr ""
 
 #: R/mcor.b.R
 msgid "<b>Correlation method</b>: {method}"
@@ -492,6 +549,13 @@ msgstr ""
 "<b>Определитель</b> - переменная, соответствующая MAR с минимальным p<sub>"
 "value</sub>."
 
+#: R/mstab.b.R
+msgid ""
+"<b>Extrapolation Cap Active</b>: Statistical intersection ({stat} months) "
+"exceeds the allowable ICH Q1E extrapolation limit ({cap} months). Permitted "
+"shelf life is capped at {cap} months."
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "<b>Fine–Gray proportional subdistribution hazards regression</b> (Fine & "
@@ -599,6 +663,32 @@ msgstr ""
 "<b>Точность на Hold-out</b>: точность классификации на валидационном наборе "
 "данных."
 
+#: R/mstab.b.R
+msgid ""
+"<b>Homoscedasticity</b>: Evaluates whether residual variance remains "
+"constant over time (H0: constant variance). Confirms suitability of linear "
+"least-squares regression without weighted errors."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>ICH Q1E Appendix A Extrapolation</b>: Permitted shelf life may extend "
+"beyond real-time data if accelerated stability demonstrates little or no "
+"change. Under favorable conditions, maximum extrapolation is capped at 2x "
+"observed duration (up to Y + 12 months), or 1.5x observed duration (up to Y "
+"+ 6 months) if accelerated data show change. Extrapolation is never "
+"permitted beyond the statistical intersection."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>ICH Q1E Poolability Hierarchy</b>: ANCOVA evaluates whether stability "
+"batches can be pooled into a common regression model. Testing proceeds "
+"sequentially: Step 1 tests equality of degradation rates (slopes; Batch * "
+"Time interaction); Step 2 tests equality of initial levels (intercepts; "
+"Batch main effect)."
+msgstr ""
+
 #: R/msnp.b.R
 msgid ""
 "<b>Inbreeding coefficient (F_IS)</b> measures deviation from HWE: F_IS = 1 - "
@@ -660,6 +750,12 @@ msgstr ""
 "<b>Критерий отношения правдоподобия</b> сравнивает правдоподобие данных при "
 "HWE с насыщенной моделью. Статистика критерия -2 × ln(L_HWE / L_sat) "
 "распределена как хи-квадрат с 1 ст.св."
+
+#: R/mstab.b.R
+msgid ""
+"<b>Limiting Batch</b>: Overall shelf life is determined by {batch} ({months} "
+"months), which represents the earliest intersection among all batches."
+msgstr ""
 
 #: R/msrv.b.R
 msgid ""
@@ -789,6 +885,14 @@ msgstr ""
 "расширенному информационному критерию Байеса (EBIC) (gamma = {gamma}). "
 "GLASSO использует L1-регуляризацию для сжатия слабых частных корреляций до "
 "точного нуля, создавая разреженную сеть."
+
+#: R/mstab.b.R
+msgid ""
+"<b>Model Parameters</b>: Intercept represents the estimated mean attribute "
+"value at time zero (t = 0 months). Time slope represents the mean rate of "
+"degradation or accumulation per month. Batch terms represent deviations of "
+"each batch relative to the reference batch."
+msgstr ""
 
 #: R/mui.b.R
 msgid ""
@@ -1008,6 +1112,36 @@ msgstr ""
 "устранения систематического смещения вероятностей, приведения наклона к "
 "1.000 и свободного члена к 0.000 при сохранении дискриминации (ROC/AUC)."
 
+#: R/mstab.b.R
+msgid ""
+"<b>Residual Mean Square (MSE)</b>: When separate slopes are required, ICH "
+"Q1E recommends testing each batch against specifications using the pooled "
+"residual mean square error across all batches if batch error variances are "
+"homogeneous."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Residual Normality (Shapiro-Wilk)</b>: Tests whether regression residuals "
+"follow a normal distribution (H0: normal). Validates the use of the standard "
+"t-distribution for 95% confidence bounds (p >= 0.05 indicates conformity)."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Residual Standard Error (s)</b>: Estimate of residual standard deviation "
+"(square root of MSE). Reflects unexplained analytical measurement "
+"variability and within-batch variation."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Retest Period vs Shelf Life</b>: Retest period applies to drug substances "
+"(active pharmaceutical ingredients), after which material must be re-tested "
+"before use. Shelf life / expiry dating applies to final marketed drug "
+"products."
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "<b>Schoenfeld residuals test</b> evaluates the proportional hazards (PH) "
@@ -1037,6 +1171,21 @@ msgstr ""
 "двухаллельного маркера максимум I = ln(2) ≈ 0.693 при равных частотах "
 "аллелей."
 
+#: R/mstab.b.R
+msgid ""
+"<b>Significance Level (alpha = 0.25)</b>: In accordance with ICH Q1E "
+"Appendix B, a conservative significance level of alpha = 0.25 (rather than "
+"0.05) is employed to minimize Type II error (erroneously pooling batches "
+"with clinically relevant differences)."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Slope Interpretation</b>: A negative slope indicates loss of active "
+"substance over storage time; a positive slope indicates accumulation of "
+"degradation impurities or breakdown products."
+msgstr ""
+
 #: R/mui.b.R
 msgid "<b>SNPV</b> - standardized negative predictive value of the negative class"
 msgstr ""
@@ -1052,6 +1201,31 @@ msgid "<b>SPPV</b> - standardized positive predictive value of the positive clas
 msgstr ""
 "<b>SPPV</b> - стандартизированная положительная прогностическая ценность "
 "положительного класса"
+
+#: R/mstab.b.R
+msgid ""
+"<b>Statistical Shelf Life / Retest Period</b>: Determined by the earliest "
+"time point where the appropriate 95% confidence bound for the mean "
+"degradation line intersects the specification limit (LSL and/or USL)."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Step 1 (Equality of Slopes)</b>: Tests H<sub>0</sub>: β<sub>1,1</sub> = "
+"β<sub>1,2</sub> = ... = β<sub>1,k</sub>. If p >= 0.25, batch degradation "
+"rates are statistically comparable (parallel lines). If p < 0.25, "
+"degradation rates differ significantly, requiring separate slopes for each "
+"batch."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Step 2 (Equality of Intercepts)</b>: Evaluated only when slopes are "
+"pooled (p >= 0.25 in Step 1). Tests H<sub>0</sub>: β<sub>0,1</sub> = "
+"β<sub>0,2</sub> = ... = β<sub>0,k</sub>. If p >= 0.25, batches share a "
+"single common regression line. If p < 0.25, batches differ in initial "
+"release values, requiring separate intercepts with a common slope."
+msgstr ""
 
 #: R/mcor.b.R
 msgid ""
@@ -1244,6 +1418,14 @@ msgstr "4-факторная"
 msgid "5 folds"
 msgstr "5 блоков"
 
+#: mSTAB/results/coefTable.columns.title
+msgid "95% CI Lower"
+msgstr ""
+
+#: mSTAB/results/coefTable.columns.title
+msgid "95% CI Upper"
+msgstr ""
+
 #: mLR/results/coeffTable.columns.title
 msgid "95% OR CI Lower"
 msgstr "95% ДИ ОШ нижний"
@@ -1278,6 +1460,10 @@ msgstr "Априорный анализ мощности"
 msgid "A Priori Power Analysis Results"
 msgstr "Результаты априорного анализа мощности"
 
+#: mSTAB/options/accelCondition.title
+msgid "Accelerated Testing Support (ICH Q1E App. A)"
+msgstr ""
+
 #: mDCA/options/palBrewer/Accent.title
 #: mLR/options/palBrewer/Accent.title
 #: mMLP/options/palBrewer/Accent.title
@@ -1308,6 +1494,10 @@ msgstr "Наблюдаемый класс"
 msgid "Adjusted Median Survival"
 msgstr "Скорректированная медиана выживаемости"
 
+#: R/mstab.b.R
+msgid "Adjusted R²"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Adjusted Rand Index (ARI)"
 msgstr "Коэффициент согласованности ARI (Adjusted Rand Index)"
@@ -1315,6 +1505,14 @@ msgstr "Коэффициент согласованности ARI (Adjusted Rand
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
 msgid "Adjusted RMST"
 msgstr "Скорректированное RMST"
+
+#: R/msrv.b.R
+msgid "Adjusted survival baseline hazard estimation failed:"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Adjusted survival curve model fitting failed:"
+msgstr ""
 
 #: mSRV/ui[5].label
 #: mSRV/results/adjSection.title
@@ -1329,6 +1527,26 @@ msgstr "Скорректированная вероятность выживае
 #: mSRV/results/adjSection/adjSummaryTable.title
 msgid "Adjusted Survival Summary"
 msgstr "Сводка скорректированной выживаемости"
+
+#: R/mstab.b.R
+msgid "Adopt Model 1"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Adopt Model 2"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Adopt Model 3 (Common line)"
+msgstr ""
+
+#: mSTAB/results/shelfTable.columns.title
+msgid "Adopted Model"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Adopted:"
+msgstr ""
 
 #: mCOR/options/clustMet.title
 msgid "Agglomeration method"
@@ -1396,6 +1614,14 @@ msgstr "Анализ генетических моделей по перемен
 msgid "Analysis Time Point t"
 msgstr "Временная точка анализа t"
 
+#: mSTAB/results/poolTable.title
+msgid "ANCOVA Poolability Testing and Model Selection"
+msgstr ""
+
+#: mSTAB/options/showPoolTable.title
+msgid "ANCOVA Poolability Testing Table"
+msgstr ""
+
 #: mCOR/options/plotOrder/AOE.title
 msgid "Angular order eigenvectors"
 msgstr "Угловой порядок собственных векторов"
@@ -1404,6 +1630,10 @@ msgstr "Угловой порядок собственных векторов"
 #: mPWR/options/design/anova.title
 msgid "ANOVA / ANCOVA (F-Test)"
 msgstr "ANOVA / ANCOVA (F-критерий)"
+
+#: mSTAB/results/diagTable.columns.title
+msgid "Assessment / Criteria"
+msgstr ""
 
 #: mSNP/options/assocEnable.title
 msgid "Association tests"
@@ -1420,6 +1650,12 @@ msgstr "Асимптотический хи-квадрат для женщин (
 #: mSNP/options/ternaryRegion/5.title
 msgid "Asymptotic Likelihood-ratio (5)"
 msgstr "Асимптотическое отношение правдоподобия (5)"
+
+#: R/msnp.b.R
+msgid ""
+"At least 2 markers passing Quality Control are required for Linkage "
+"Disequilibrium analysis."
+msgstr ""
 
 #: R/msrv.b.R
 msgid ""
@@ -1445,12 +1681,20 @@ msgstr "AUC"
 msgid "Auto (sqrt for classification)"
 msgstr "Авто (sqrt для классификации)"
 
+#: R/mstab.b.R
+msgid "Autocorrelation (Durbin-Watson d)"
+msgstr ""
+
+#: mSTAB/options/modelChoice/auto.title
+msgid "Automatic (ICH Q1E Decision Tree)"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Average (Mean)"
 msgstr "Среднее (Mean)"
 
 #: mPWR/options/cluster_size.title
-#: mPWR/ui[1]/cluster_size.label
+#: mPWR/ui[2]/cluster_size.label
 msgid "Average cluster size (m)"
 msgstr "Средний размер кластера (m)"
 
@@ -1493,6 +1737,24 @@ msgstr "Базовая вероятность"
 #: R/msrv.b.R
 msgid "baseline"
 msgstr "исходный"
+
+#: R/mstab.b.R
+msgid "Batch"
+msgstr ""
+
+#: mSTAB/results/shelfTable.columns.title
+msgid "Batch / Cohort"
+msgstr ""
+
+#: mSTAB/options/batch.title
+#: mSTAB/ui[0][2].label
+msgid "Batch / Lot"
+msgstr ""
+
+#: R/mstab.b.R
+#: mSTAB/results/ratePlot.title
+msgid "Batch Degradation Rates & ANCOVA Slope Comparison"
+msgstr ""
 
 #: package/datasets/BCModelsROCEstimation.name
 msgid "BC Models ROC Estimation"
@@ -1576,6 +1838,10 @@ msgstr "95% ДИ весов рёбер (бутстреп)"
 msgid "Bootstrapped stability analysis"
 msgstr "Бутстреп-анализ стабильности сети"
 
+#: mSTAB/options/specType/both.title
+msgid "Both limits (Two-sided / Unknown direction)"
+msgstr ""
+
 #: mMOUT/options/plotType/both.title
 msgid "Both Plots"
 msgstr "Оба графика"
@@ -1617,6 +1883,10 @@ msgstr "Подсчет итогов"
 msgid "Calculated fences for outliers"
 msgstr "Рассчитанные заборы для выбросов"
 
+#: R/mstab.b.R
+msgid "Calculated SRL:"
+msgstr ""
+
 #: R/msnp.b.R
 msgid ""
 "Calculating Polygenic Risk Score (PRS) requires specifying a "
@@ -1653,6 +1923,22 @@ msgstr "Наклон калибровки"
 msgid "Call Rate"
 msgstr "Частота генотипирования"
 
+#: R/mstab.b.R
+msgid "Cannot evaluate homoscedasticity"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Cannot evaluate normality (insufficient variance)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Capped by extrapolation rule"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Capped by ICH Q1E extrapolation limit"
+msgstr ""
+
 #: mCOR/options/glassoBootType/casedrop.title
 msgid "Case-dropping (centrality stability)"
 msgstr "Case-dropping (устойчивость центральности)"
@@ -1688,13 +1974,8 @@ msgid "Censored Level"
 msgstr "Уровень цензурирования"
 
 #: R/msrv.b.R
-msgid ""
-"Censored level ('{censor}') and Event of interest ('{event}') cannot be the "
-"same value. Please select distinct levels in Competing Risks options."
+msgid "Censored level"
 msgstr ""
-"Цензурированный уровень ('{censor}') и интересующее событие ('{event}') не "
-"могут иметь одно и то же значение. Пожалуйста, выберите отдельные уровни в "
-"опциях «Конкурирующие риски»."
 
 #: R/mcor.b.R
 msgid "Centrality correlation"
@@ -1752,6 +2033,10 @@ msgstr "Диаграмма Q-Q Хи-квадрат"
 #: R/mmout.b.R
 msgid "Chi-Square Q-Q Plot ({method})"
 msgstr "Диаграмма Q-Q Хи-квадрат ({method})"
+
+#: R/msrv.b.R
+msgid "Choose different levels for the censoring code and the event of interest."
+msgstr ""
 
 #: mROC/results/rocTable.columns.title
 msgid "CI"
@@ -1879,9 +2164,13 @@ msgid "Cluster {i}"
 msgstr "Кластер {i}"
 
 #: mPWR/options/crt.title
-#: mPWR/ui[1]/crt.label
+#: mPWR/ui[2]/crt.label
 msgid "Cluster / Multilevel Randomized Trial (CRT/MST)"
 msgstr "Кластерное / многоуровневое рандомизированное исследование (CRT/MST)"
+
+#: mPWR/ui[2].label
+msgid "Cluster Randomized Trials"
+msgstr ""
 
 #: mCOR/options/numClust.title
 msgid "Clusters"
@@ -1921,6 +2210,10 @@ msgstr "Коэффициент"
 msgid "Coefficient (Estimate)"
 msgstr "Коэффициент (Оценка)"
 
+#: R/mstab.b.R
+msgid "Coefficient of Determination (R²)"
+msgstr ""
+
 #: mCOR/options/plotMetU/color.title
 #: mCOR/options/plotMetL/color.title
 msgid "Color"
@@ -1945,6 +2238,10 @@ msgstr "На одних осях"
 msgid "Combined ROC - Cross-Validation"
 msgstr "Комбинированная ROC-кривая - Кросс-валидация"
 
+#: R/mrf.b.R
+msgid "Combined ROC - Out-of-Bag (OOB)"
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -1957,6 +2254,30 @@ msgstr "Комбинированная ROC-кривая - Обучение"
 msgid "Combined ROC - Validation"
 msgstr "Комбинированная ROC-кривая - Валидация"
 
+#: R/mstab.b.R
+msgid "Common slope & common intercept (Model 3)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Common slope & intercept (Pooled)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Common slope & separate intercepts"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Common slope & separate intercepts (Model 2)"
+msgstr ""
+
+#: mSTAB/options/modelChoice/common_slope_common_int.title
+msgid "Common slope and common intercept (Model 3)"
+msgstr ""
+
+#: mSTAB/options/modelChoice/common_slope_sep_int.title
+msgid "Common slope with separate intercepts (Model 2)"
+msgstr ""
+
 #: mLR/results/coeffTable.columns.title
 msgid "Comparison Level"
 msgstr "Уровень сравнения"
@@ -1966,6 +2287,10 @@ msgstr "Уровень сравнения"
 #: mSRV/results/compRisksSection.title
 msgid "Competing Risks Analysis"
 msgstr "Анализ конкурирующих рисков"
+
+#: R/msrv.b.R
+msgid "Competing risks levels were automatically assigned:"
+msgstr ""
 
 #: mCOR/options/clustMet/complete.title
 msgid "Complete Linkage"
@@ -2034,6 +2359,14 @@ msgstr "Доверительные интервалы (CIF)"
 msgid "Confidence Intervals (KM)"
 msgstr "Доверительные интервалы (КМ)"
 
+#: mSTAB/options/confLevel.title
+msgid "Confidence Level for Shelf Life"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Conforming"
+msgstr ""
+
 #: mMLP/options/show_matrix.title
 #: mMLP/results/matrixTable.title
 #: mRF/options/show_matrix.title
@@ -2054,6 +2387,10 @@ msgid "Connection of a variable's observed data with missing data on other varia
 msgstr ""
 "Связь наблюдаемых данных переменной с отсутствующими данными по другим "
 "переменным"
+
+#: R/mstab.b.R
+msgid "Constant variance met (p >= 0.05)"
+msgstr ""
 
 #: R/mpca.b.R
 msgid "Contingency Matrix (Clusters vs Groups):"
@@ -2168,6 +2505,10 @@ msgstr "Forest plot отношений рисков Кокса"
 msgid "Cox Model Fit Statistics"
 msgstr "Статистика согласия модели Кокса"
 
+#: R/msrv.b.R
+msgid "Cox proportional hazards model fitting failed:"
+msgstr ""
+
 #: mSRV/options/showCox.title
 #: mSRV/ui[4].label
 #: mSRV/results/coxSection.title
@@ -2225,6 +2566,10 @@ msgstr "Кумулятивный риск"
 #: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 msgid "Cumulative Incidence"
 msgstr "Кумулятивная инцидентность"
+
+#: R/msrv.b.R
+msgid "Cumulative incidence (Aalen–Johansen) model fitting failed:"
+msgstr ""
 
 #: mSRV/options/showCifPlot.title
 #: mSRV/results/compRisksSection/cifPlot.title
@@ -2380,6 +2725,14 @@ msgstr "Кривые решений (чистая польза vs порог)"
 msgid "Decision Curves Plot (Net Benefit)"
 msgstr "График кривых решений (чистая польза)"
 
+#: R/mstab.b.R
+msgid "Degradation Rate"
+msgstr ""
+
+#: mSTAB/options/showRatePlot.title
+msgid "Degradation Rates / Slopes Comparison"
+msgstr ""
+
 #: mMF/results/estim/mcar.columns.title
 msgid "Degree of Freedom (df)"
 msgstr "Степени свободы (df)"
@@ -2408,6 +2761,10 @@ msgstr "Зависимая переменная должна иметь не м�
 msgid "Design"
 msgstr "Дизайн"
 
+#: mPWR/ui[1].label
+msgid "Design Parameters"
+msgstr ""
+
 #: mSNP/options/mdrCellTable.title
 msgid "Detailed cell classification table"
 msgstr "Детальная таблица ячеек"
@@ -2420,8 +2777,17 @@ msgstr "Детальная классификация риска ячеек"
 #: mSRV/results/coxSection/coxFitTable.columns.title
 #: mSRV/results/coxSection/coxAssumpTable.columns.title
 #: mSRV/results/compRisksSection/grayTestTable.columns.title
+#: mSTAB/results/poolTable.columns.title
 msgid "df"
 msgstr "df"
+
+#: mSTAB/results/diagTable.columns.title
+msgid "df / Parameter"
+msgstr ""
+
+#: mSTAB/results/diagTable.columns.title
+msgid "Diagnostic / Assumption Test"
+msgstr ""
 
 #: package/analyses/mUI.menuSubgroup
 #: package/analyses/mSNP.menuSubgroup
@@ -2571,13 +2937,25 @@ msgstr ""
 msgid "Entry / Start time variable must be numeric."
 msgstr "Переменная времени входа / начала должна быть числовой."
 
+#: R/mstab.b.R
+msgid "Equal intercepts"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Equal slopes"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Equality of Slopes:"
+msgstr ""
+
 #: R/mpwr.b.R
-#: mPWR/ui[1]/alt/equivalent.title
+#: mPWR/ui[0]/alt/equivalent.title
 msgid "equivalence"
 msgstr "эквивалентность"
 
 #: mPWR/options/margin.title
-#: mPWR/ui[1]/margin.label
+#: mPWR/ui[0]/margin.label
 msgid "Equivalence / Non-Inferiority / Superiority margin"
 msgstr "Граница эквивалентности / неполноценности / превосходства"
 
@@ -2611,6 +2989,10 @@ msgstr "Произошла ошибка при вычислении PCA. Пож�
 msgid "Error Type"
 msgstr "Тип ошибки"
 
+#: mSTAB/results/coefTable.columns.title
+msgid "Estimate"
+msgstr ""
+
 #: mLR/results/coeffTable.columns.title
 msgid "Estimate (B)"
 msgstr "Оценка (B)"
@@ -2623,15 +3005,39 @@ msgstr "Прогноз ошибки вне-мешка (out-of-bag, OOB)"
 msgid "Estimation method"
 msgstr "Метод оценки"
 
+#: R/mstab.b.R
+msgid ""
+"Evaluates drug substance or drug product stability data and estimates shelf "
+"life / retest period according to the ICH Q1E guideline."
+msgstr ""
+
 #: mMF/options/fullmars.title
 #: mMF/results/estim/fMARtab.title
 msgid "Evaluation of MAR explainers"
 msgstr "Оценка определителей MAR"
 
+#: package/datasets/StabilityAnalysisICHQ1E.description
+msgid ""
+"Evaluation of stability data and shelf life estimation according to ICH Q1E "
+"guideline demonstration"
+msgstr ""
+
+#: package/analyses/mSTAB.description
+#: mSTAB/options.description.main
+msgid ""
+"Evaluation of stability data and shelf life estimation according to the ICH "
+"Q1E guideline using ANCOVA poolability testing and one-sided 95% confidence "
+"intervals."
+msgstr ""
+
 #: mSRV/options/compEvent.title
 #: mSRV/ui[6]/showCompRisks/compEvent.label
 msgid "Event of Interest"
 msgstr "Целевое событие"
+
+#: R/msrv.b.R
+msgid "Event of interest"
+msgstr ""
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
@@ -2742,19 +3148,14 @@ msgid ""
 "Random Forest classifier, survival analysis (Kaplan-Meier, Cox regression, "
 "adjusted curves, competing risks, time-dependent effects), Principal "
 "Component Analysis (PCA), Single Nucleotide Polymorphism (SNP) association "
-"and Hardy-Weinberg equilibrium analysis, and Decision Curve Analysis (DCA) "
-"with model calibration."
+"and Hardy-Weinberg equilibrium analysis, Decision Curve Analysis (DCA) with "
+"model calibration, and Stability Analysis according to ICH Q1E guideline "
+"with ANCOVA poolability testing and shelf life estimation."
 msgstr ""
-"Расширение функциональности популярных методов анализа данных: "
-"корреляционная кластеризация, классификация ROC, оценка и вменение "
-"пропущенных значений, идентификация и удаление одномерных и многомерных "
-"выбросов, оценка порога неопределенного интервала (UI), априорный анализ "
-"мощности, классификатор нейронной сети MLP, логистическая регрессия с "
-"выбором признаков, классификатор случайного леса, анализ выживаемости "
-"(регрессия Каплана-Мейера, Кокса, скорректированные кривые, конкурирующие "
-"риски, временные эффекты), анализ главных компонентов (PCA), ассоциация "
-"однонуклеотидного полиморфизма (SNP) и анализ равновесия Харди-Вайнберга, а "
-"также анализ кривой решения (DCA) с калибровкой модели."
+
+#: R/mstab.b.R
+msgid "Extrapolation Cap"
+msgstr ""
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "F_IS"
@@ -2823,6 +3224,12 @@ msgstr "Настройки отбора факторов"
 msgid "Female level"
 msgstr "Уровень женского пола"
 
+#: R/msnp.b.R
+msgid ""
+"Fewer than 10 complete cases available; MDR analysis cannot be reliably "
+"performed."
+msgstr ""
+
 #: mLR/options/group.title
 #: mLR/ui[0][3].label
 #: mPCA/options/group.title
@@ -2843,9 +3250,17 @@ msgstr "Модель субраспределения рисков Файна–
 msgid "Fine-Gray Subdistribution Hazard Regression"
 msgstr "Регрессия субраспределения рисков Файна–Грея"
 
+#: R/msrv.b.R
+msgid "Fine–Gray model fitting failed to converge."
+msgstr ""
+
 #: mCOR/options/plotOrder/FPC.title
 msgid "First principal component"
 msgstr "Первая главная компонента"
+
+#: R/mstab.b.R
+msgid "Fitted values"
+msgstr ""
 
 #: mCOR/options/flag.title
 msgid "Flag significant correlations"
@@ -2883,7 +3298,7 @@ msgstr "Пошаговое включение факторов (AIC)"
 msgid "Frequencies as percentages (%)"
 msgstr "Частоты в процентах (%)"
 
-#: mSNP/ui[1].label
+#: mSNP/ui[2].label
 msgid "Frequency Tables"
 msgstr "Таблицы частот"
 
@@ -2945,6 +3360,7 @@ msgid "Genotypes Controls"
 msgstr "Генотипы Контроль"
 
 #: R/mdca.b.R
+#: R/mstab.b.R
 msgid "Getting started:"
 msgstr "Начало работы:"
 
@@ -2952,18 +3368,16 @@ msgstr "Начало работы:"
 msgid "Graphical Lasso (GLASSO)"
 msgstr "Сеть частных корреляций (GLASSO)"
 
-#: R/msrv.b.R
-msgid ""
-"Gray's test does not support delayed entry / left-truncation and evaluates "
-"event times from origin."
-msgstr ""
-"Тест Грея не поддерживает отложенный вход/усечение влево и оценивает время "
-"события от источника."
-
 #: mSRV/options/showGrayTest.title
 #: mSRV/results/compRisksSection/grayTestTable.title
 msgid "Gray's Test for Group Differences"
 msgstr "Критерий Грея для сравнения групп"
+
+#: R/msrv.b.R
+msgid ""
+"Gray's test is not supported for counting-process / delayed entry data "
+"(start time specified)."
+msgstr ""
 
 #: R/mout.b.R
 #: mMOUT/results/stat.columns.title
@@ -3017,6 +3431,12 @@ msgid "Grouping variable must have at least 2 levels for Gray's test."
 msgstr ""
 "Группирующая переменная должна иметь как минимум 2 уровня для критерия Грея."
 
+#: R/mpca.b.R
+msgid ""
+"Grouping variable must have at least 2 levels for regression and ROC "
+"analysis."
+msgstr ""
+
 #: mCOR/options/glassoLayout/groups.title
 msgid "Groups"
 msgstr "Групповой"
@@ -3031,7 +3451,7 @@ msgstr "H(ожид)"
 msgid "H(obs)"
 msgstr "H(obs)"
 
-#: mSNP/ui[2].label
+#: mSNP/ui[3].label
 #: mSNP/results/hweGroup.title
 msgid "Hardy-Weinberg Equilibrium (HWE) Analysis"
 msgstr "Анализ равновесия Харди-Вайнберга (HWE)"
@@ -3181,6 +3601,10 @@ msgstr "Холм (1979)"
 msgid "Hommel (1988)"
 msgstr "Хоммель (1988)"
 
+#: R/mstab.b.R
+msgid "Homoscedasticity (|e| vs Time correlation)"
+msgstr ""
+
 #: mCOR/options/glassoHub.title
 msgid "Hub markers table"
 msgstr "Таблица хаб-маркеров"
@@ -3209,12 +3633,15 @@ msgstr "Статистические тесты HWE"
 msgid "Hypothesis"
 msgstr "Гипотеза"
 
+#: mSTAB/results/shelfTable.columns.title
+msgid "ICH Q1E Permitted Shelf Life (months)"
+msgstr ""
+
 #: package/datasets/Outliersidentificationandremoval.description
 msgid "Identification, analysis and removal of data outliers by groups"
 msgstr "Выявление, анализ и удаление выбросов данных по группам"
 
 #: R/mmlp.b.R
-#: mMLP/options/out_activation/identity.title
 msgid "Identity (Linear)"
 msgstr "Идентичность (линейная)"
 
@@ -3294,6 +3721,23 @@ msgstr "Индексы"
 msgid "Indices (Rows)"
 msgstr "Индексы (Строки)"
 
+#: R/mstab.b.R
+msgid "Individual Batch"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Individual Batch Trajectories"
+msgstr ""
+
+#: mSTAB/options/showFacetPlot.title
+#: mSTAB/results/facetPlot.title
+msgid "Individual Batch Trajectories (Faceted)"
+msgstr ""
+
+#: mSTAB/results/predPlot.title
+msgid "Individual Prediction Intervals & Release Limits (SRL)"
+msgstr ""
+
 #: mPCA/options/biplot.title
 #: mPCA/results/biplot.title
 msgid "Influence vectors (Biplot)"
@@ -3321,12 +3765,29 @@ msgid "Input Layer"
 msgstr "Входной слой"
 
 #: mDCA/results/instructions.title
+#: mSTAB/results/instructions.title
 msgid "Instructions"
 msgstr "Инструкции"
+
+#: R/mstab.b.R
+msgid "Insufficient degrees of freedom for intercepts test"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Insufficient degrees of freedom for slopes test"
+msgstr ""
 
 #: R/msnp.b.R
 msgid "Interaction Order"
 msgstr "Порядок взаимодействия"
+
+#: mSTAB/results/shelfTable.columns.title
+msgid "Intercept (t = 0)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Intercepts differ"
+msgstr ""
 
 #: mCOR/options/clustMat.title
 #: mCOR/results/rplots.title
@@ -3362,7 +3823,7 @@ msgid "Interventions Avoided Plot"
 msgstr "График предотвращенных вмешательств"
 
 #: mPWR/options/icc.title
-#: mPWR/ui[1]/icc.label
+#: mPWR/ui[2]/icc.label
 msgid "Intraclass correlation (ICC)"
 msgstr "Внутриклассовая корреляция (ICC)"
 
@@ -3397,6 +3858,7 @@ msgstr "IQR заборы Тьюки"
 #: package/analyses/mUI.menuGroup
 #: package/analyses/mSNP.menuGroup
 #: package/analyses/mPWR.menuSubgroup
+#: package/analyses/mSTAB.menuGroup
 #: mCOR/options.menuGroup
 #: mDCA/options.menuGroup
 #: mLR/options.menuGroup
@@ -3410,6 +3872,7 @@ msgstr "IQR заборы Тьюки"
 #: mROC/options.menuGroup
 #: mSNP/options.menuGroup
 #: mSRV/options.menuGroup
+#: mSTAB/options.menuGroup
 #: mUI/options.menuGroup
 msgid "jYS"
 msgstr "jЮС"
@@ -3466,6 +3929,10 @@ msgstr "Сопоставление «слепой» кластеризации K
 msgid "K-Means Cluster"
 msgstr "Кластер K-Means"
 
+#: R/mpca.b.R
+msgid "K-Means clustering failed:"
+msgstr ""
+
 #: mPCA/options/kmeansTable.title
 msgid "K-Means contingency/ARI comparison"
 msgstr "Сопоставление K-Means с группами"
@@ -3497,6 +3964,10 @@ msgstr "График выживаемости Каплана–Мейера"
 #: mSRV/results/kmSection/kmSummaryTable.title
 msgid "Kaplan-Meier Survival Summary"
 msgstr "Сводная таблица выживаемости Каплана-Мейера"
+
+#: R/msrv.b.R
+msgid "Kaplan–Meier estimation failed:"
+msgstr ""
 
 #: mCOR/options/method/kendall.title
 msgid "Kendall (τ)"
@@ -3556,6 +4027,14 @@ msgstr "Уровень"
 msgid "Likelihood Ratio Test"
 msgstr "Критерий отношения правдоподобия"
 
+#: R/mstab.b.R
+msgid "Limiting batch"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Limiting Batch:"
+msgstr ""
+
 #: mROC/options/lwd.title
 msgid "Line width"
 msgstr "Ширина линии"
@@ -3569,7 +4048,7 @@ msgstr "Линейная регрессия (F-критерий)"
 msgid "Linkage Disequilibrium (LD) analysis"
 msgstr "Анализ неравновесия по сцеплению (LD)"
 
-#: mSNP/ui[9].label
+#: mSNP/ui[10].label
 #: mSNP/results/ldGroup.title
 msgid "Linkage Disequilibrium (LD) Analysis"
 msgstr "Анализ неравновесия по сцеплению (LD)"
@@ -3590,6 +4069,12 @@ msgstr "Логарифмический масштаб"
 msgid "Log scale for Odds Ratios"
 msgstr "Логарифмический масштаб для ОШ"
 
+#: R/mstab.b.R
+msgid ""
+"Log transformation requires strictly positive values of the response "
+"variable."
+msgstr ""
+
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/log-additive.title
 msgid "Log-additive"
@@ -3598,6 +4083,10 @@ msgstr "Аддитивная (log-additive)"
 #: mSRV/results/logRankTable.title
 msgid "Log-rank Test (Group Comparison)"
 msgstr "Логранговый тест (сравнение групп)"
+
+#: R/msrv.b.R
+msgid "Log-rank test could not be computed: {err}"
+msgstr ""
 
 #: mSRV/options/showLogRank.title
 msgid "Log-rank Test for Group Comparison"
@@ -3656,6 +4145,10 @@ msgstr ""
 "валидации использует случайное начальное число (по умолчанию 42, "
 "настраивается в блоке «Настройки валидации») для воспроизводимости."
 
+#: mSTAB/options/studyDuration.title
+msgid "Long-term Study Duration (0 - auto)"
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -3694,9 +4187,17 @@ msgstr "Нижний ДИ"
 msgid "Lower fence"
 msgstr "Нижний забор"
 
+#: mSTAB/options/specType/lower.title
+msgid "Lower limit only (Decreasing attribute / Assay)"
+msgstr ""
+
 #: mCOR/options/plotMetL.title
 msgid "Lower part"
 msgstr "Нижняя часть"
+
+#: mSTAB/options/lsl.title
+msgid "Lower Specification Limit (LSL)"
+msgstr ""
 
 #: mUI/results/stat/uistat.columns.title
 msgid "Lower threshold"
@@ -3851,6 +4352,12 @@ msgstr "Макс. порог (%)"
 msgid "Max time (0 = unlimited)"
 msgstr "Макс. время (0 = без огр.)"
 
+#: R/msnp.b.R
+msgid ""
+"Maximum interaction order was reduced from {user_ord} to {max_ord} (the "
+"number of available markers)."
+msgstr ""
+
 #: mMF/options/maxiter.title
 msgid "Maximum number of iterations"
 msgstr "Максимальное количество итераций"
@@ -3924,6 +4431,10 @@ msgstr "Среднее уменьшение точности (%)"
 msgid "Mean Predicted Probability"
 msgstr "Средняя предсказанная вероятность"
 
+#: mSTAB/results/poolTable.columns.title
+msgid "Mean Square"
+msgstr ""
+
 #: R/mout.b.R
 msgid "Median"
 msgstr "Медиана"
@@ -3964,7 +4475,7 @@ msgid "Min Threshold (%)"
 msgstr "Мин. порог (%)"
 
 #: mPWR/options/es.title
-#: mPWR/ui[1]/es.label
+#: mPWR/ui[0]/es.label
 msgid "Minimally-interesting effect size"
 msgstr "Минимально интересующий размер эффекта"
 
@@ -3981,7 +4492,7 @@ msgid "Minimum Call Rate"
 msgstr "Минимальный Call Rate"
 
 #: mPWR/options/power.title
-#: mPWR/ui[1]/power.label
+#: mPWR/ui[0]/power.label
 msgid "Minimum desired power"
 msgstr "Минимальная желаемая мощность"
 
@@ -4151,6 +4662,18 @@ msgstr "Таблица калибровки моделей"
 msgid "Model Coefficients (Post-Selection / Refitted Model)"
 msgstr "Коэффициенты модели (после отбора факторов / переобученная модель)"
 
+#: mSTAB/options/showDiagTable.title
+msgid "Model Diagnostics & Assumptions Table"
+msgstr ""
+
+#: mSTAB/results/diagTable.title
+msgid "Model Diagnostics & Goodness of Fit"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Model explained variance"
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "Model fit (Wald test): χ² = {stat}, df = {df}, p = {p}; Events of interest = "
@@ -4162,14 +4685,6 @@ msgstr ""
 #: mLR/results/infoTable.title
 msgid "Model Fit & Predictive Performance"
 msgstr "Соответствие модели и прогностическая способность"
-
-#: R/msrv.b.R
-msgid "Model fitting failed to converge:"
-msgstr "Не удалось достичь сходимости при подгонке модели:"
-
-#: R/msrv.b.R
-msgid "Model fitting failed to converge."
-msgstr "Оценка модели не сошлась."
 
 #: mLR/options/show_formula.title
 msgid "Model formula"
@@ -4194,6 +4709,10 @@ msgstr "Столбчатая диаграмма эффективности мо�
 msgid "Model Probabilities (0 to 1)"
 msgstr "Вероятности моделей (от 0 до 1)"
 
+#: mSTAB/options/modelChoice.title
+msgid "Model Selection Strategy"
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -4207,6 +4726,10 @@ msgstr "Умеренная стабильность (0.25 ≤ CS < 0.5)"
 #: mOUT/options/outlcheck/mZS.title
 msgid "Modified Z-score (Hampel filter)"
 msgstr "Модифицированная Z-оценка (фильтр Хампеля)"
+
+#: R/mstab.b.R
+msgid "months"
+msgstr ""
 
 #: mUI/options/isMCI.title
 #: mUI/results/stat/mcistat.title
@@ -4234,7 +4757,7 @@ msgstr ""
 msgid "Multiclass ROC Layout"
 msgstr "Компоновка многоклассовой ROC"
 
-#: mSNP/ui[7].label
+#: mSNP/ui[8].label
 #: mSNP/results/mdrGroup.title
 msgid "Multifactor Dimensionality Reduction (MDR)"
 msgstr "Снижение размерности многофакторных признаков (MDR)"
@@ -4250,6 +4773,10 @@ msgstr "Коррекция множественного сравнения"
 #: mMF/options/imputeOV.title
 msgid "Multiple imputation for missing data"
 msgstr "Множественное восстановление пропусков данных"
+
+#: mSNP/ui[1].label
+msgid "Multiple Testing"
+msgstr ""
 
 #: mSNP/options/adjust.title
 msgid "Multiple testing correction"
@@ -4280,7 +4807,7 @@ msgstr "Кривая N от размера эффекта"
 msgid "N Events"
 msgstr "Число событий"
 
-#: mPWR/ui[1]/n.label
+#: mPWR/ui[0]/n.label
 msgid "N for group 1"
 msgstr "Размер группы 1"
 
@@ -4299,6 +4826,10 @@ msgstr "N1"
 #: mPWR/results/powerTable.columns.title
 msgid "N2"
 msgstr "N2"
+
+#: mSTAB/options/trans/log.title
+msgid "Natural logarithm ln(Y) (First-order kinetics)"
+msgstr ""
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 10%"
@@ -4346,8 +4877,8 @@ msgid "Net Reduction in Interventions (per 100 patients)"
 msgstr "Чистое сокращение вмешательств (на 100 пациентов)"
 
 #: R/mcor.b.R
-msgid "Network ("
-msgstr "Сеть ("
+msgid "Network"
+msgstr ""
 
 #: mCOR/options/glassoLayout.title
 msgid "Network layout"
@@ -4396,11 +4927,31 @@ msgstr ""
 msgid "No events of the target cause observed for Fine–Gray regression."
 msgstr "Не зафиксировано ни одного целевого события для регрессии Файна–Грея."
 
+#: R/msnp.b.R
+msgid "No markers remained after Quality Control filters for association analysis."
+msgstr ""
+
+#: R/msnp.b.R
+msgid "No markers remained after Quality Control filters for MDR analysis."
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "No misclassified cases found."
 msgstr "Ошибочно классифицированных объектов не обнаружено."
+
+#: R/mstab.b.R
+msgid "No significant autocorrelation"
+msgstr ""
+
+#: mSTAB/options/accelCondition/no_change.title
+msgid "No significant change at accelerated condition (Extrapolation allowed)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "No valid batch levels found."
+msgstr ""
 
 #: R/msrv.b.R
 msgid "No valid predictors found for time-dependent Cox model."
@@ -4417,7 +4968,7 @@ msgid "Noise (95th percentile)"
 msgstr "Шум (95-й процентиль)"
 
 #: R/mpwr.b.R
-#: mPWR/ui[1]/alt/non-inferior.title
+#: mPWR/ui[0]/alt/non-inferior.title
 msgid "non-inferiority"
 msgstr "неполноценность"
 
@@ -4458,9 +5009,25 @@ msgstr "Отсутствует"
 msgid "None (0)"
 msgstr "Нет (0)"
 
+#: mSTAB/options/trans/none.title
+msgid "None (Zero-order linear kinetics)"
+msgstr ""
+
 #: R/mmout.b.R
 msgid "Normal"
 msgstr "Норма"
+
+#: R/mstab.b.R
+msgid "Normal Q-Q"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Normality assumption met (p >= 0.05)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Normality of Residuals (Shapiro-Wilk)"
+msgstr ""
 
 #: R/mout.b.R
 #: R/mui.b.R
@@ -4474,6 +5041,14 @@ msgid ""
 msgstr ""
 "Недостаточно событий или выживших в выбранной временной точке t для "
 "выполнения ROC-анализа."
+
+#: mSTAB/options/accelCondition/none.title
+msgid "Not evaluated / None"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Not tested (slopes are unequal)"
+msgstr ""
 
 #: R/msnp.b.R
 msgid ""
@@ -4596,6 +5171,7 @@ msgstr "Набл. BB"
 
 #: R/mmf.b.R
 #: R/msnp.b.R
+#: R/mstab.b.R
 msgid "Observed"
 msgstr "Наблюдаемые"
 
@@ -4636,12 +5212,12 @@ msgid "Odds Ratio Forest Plot"
 msgstr "Forest plot отношений шансов"
 
 #: R/mpwr.b.R
-#: mPWR/options/design/one.sample.title
+#: mPWR/options/design/one_sample.title
 msgid "One Sample (Student)"
 msgstr "Одна выборка (Стьюдент)"
 
 #: R/mpwr.b.R
-#: mPWR/options/design/one.sample_np.title
+#: mPWR/options/design/one_sample_np.title
 msgid "One Sample (Wilcoxon)"
 msgstr "Одна выборка (Вилкоксон)"
 
@@ -4657,7 +5233,7 @@ msgstr "Корреляция одной выборки (Спирмен)"
 
 #: R/mcor.b.R
 #: R/mpwr.b.R
-#: mPWR/ui[1]/alt/one.sided.title
+#: mPWR/ui[0]/alt/one.sided.title
 msgid "one-tailed"
 msgstr "односторонний"
 
@@ -4690,6 +5266,12 @@ msgstr "Таблица прогнозируемых ошибок"
 msgid "Optimal cut-off"
 msgstr "Оптимальная точка отсечения"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
+msgid "Optimal cutoff for '{part}' could not be computed: {err}"
+msgstr ""
+
 #: mDCA/results/dcaTable.columns.title
 msgid "Optimal Threshold"
 msgstr "Оптимальный порог"
@@ -4712,6 +5294,14 @@ msgstr "Порядок"
 msgid "Original"
 msgstr "Оригинальное"
 
+#: R/mstab.b.R
+msgid "Other batches"
+msgstr ""
+
+#: R/mrf.b.R
+msgid "Out-of-Bag (OOB)"
+msgstr ""
+
 #: mRF/options/partition/oob.title
 msgid "Out-of-Bag (OOB) Estimation"
 msgstr "OOB-оценка (Out-of-Bag)"
@@ -4727,6 +5317,14 @@ msgstr "Исход (Фенотип)"
 #: mSNP/ui[0][1].label
 msgid "Outcome Variable (Case/Control)"
 msgstr "Переменная исхода (Фенотип)"
+
+#: R/msnp.b.R
+msgid "Outcome variable must have 2 levels for MDR analysis."
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Outcome variable must have at least 2 levels for association tests."
+msgstr ""
 
 #: R/mmf.b.R
 msgid "OutFlux"
@@ -4808,11 +5406,19 @@ msgstr "Выходная информация"
 msgid "Output Layer"
 msgstr "Выходной слой"
 
+#: mSTAB/ui[3].label
+msgid "Output Tables & Plots"
+msgstr ""
+
 #: mLR/ui[3].label
 #: mMLP/ui[3].label
 #: mRF/ui[3].label
 msgid "Outputs & Evaluation"
 msgstr "Выходы и оценка"
+
+#: R/mstab.b.R
+msgid "OVERALL / PROPOSED"
+msgstr ""
 
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/overdominant.title
@@ -4886,6 +5492,10 @@ msgstr "Связанные выборки (Стьюдент)"
 #: mPWR/options/design/paired_np.title
 msgid "Paired Samples (Wilcoxon)"
 msgstr "Связанные выборки (Вилкоксон)"
+
+#: mSTAB/results/coefTable.columns.title
+msgid "Parameter"
+msgstr ""
 
 #: mCOR/options/glassoTable.title
 #: mCOR/results/glassoGroup/glassoTable.title
@@ -4985,6 +5595,10 @@ msgstr "Корреляция Пирсона не может быть рассч�
 msgid "Pearson's r"
 msgstr "r Пирсона"
 
+#: R/mstab.b.R
+msgid "Penalized for parameter count"
+msgstr ""
+
 #: R/mmf.b.R
 msgid "per pattern"
 msgstr "на паттерн"
@@ -5009,6 +5623,14 @@ msgstr "Выполнить пермутационный тест"
 msgid "Performance Statistics"
 msgstr "Статистика производительности"
 
+#: R/mstab.b.R
+msgid "Permitted Shelf Life"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Permitted Shelf Life:"
+msgstr ""
+
 #: R/mrf.b.R
 #: mMLP/options/show_imp.title
 #: mRF/options/imp_type/permutation.title
@@ -5024,11 +5646,15 @@ msgstr "Перестановочный p"
 msgid "Permutation p-adj"
 msgstr "Скорр. пермутационное p-value"
 
+#: R/mpca.b.R
+msgid "Permutation separation test calculation failed: {err}"
+msgstr ""
+
 #: mMF/results/imput/errors.columns.title
 msgid "PFC"
 msgstr "PFC"
 
-#: mSNP/ui[3].label
+#: mSNP/ui[4].label
 #: mSNP/results/assocGroup.title
 msgid "Phenotype Association Tests"
 msgstr "Тесты ассоциации с фенотипом"
@@ -5090,7 +5716,7 @@ msgstr "Тип графика"
 #: mMF/ui[1][0][1].label
 #: mMOUT/options/showPlots.title
 #: mMOUT/ui[2].label
-#: mPWR/ui[2].label
+#: mPWR/ui[3].label
 #: mUI/ui[1][4].label
 msgid "Plots"
 msgstr "Графики"
@@ -5112,6 +5738,18 @@ msgstr "Полиморфизм"
 msgid "Polymorphism test"
 msgstr "Тест полиморфизма"
 
+#: mSTAB/options/alphaPool.title
+msgid "Poolability Alpha Level (α)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Pooled residual variance across batches"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Pooled Slope"
+msgstr ""
+
 #: mSNP/results/hweGroup/freqTable.columns.title
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "Population"
@@ -5121,7 +5759,7 @@ msgstr "Популяция"
 msgid "Population genetic metrics"
 msgstr "Популяционно-генетические метрики"
 
-#: mSNP/ui[5].label
+#: mSNP/ui[6].label
 #: mSNP/results/popGroup.title
 msgid "Population genetics metrics"
 msgstr "Популяционно-генетические метрики"
@@ -5129,6 +5767,14 @@ msgstr "Популяционно-генетические метрики"
 #: R/mmlp.b.R
 msgid "Positive Weight"
 msgstr "Положительный вес"
+
+#: R/mstab.b.R
+msgid "Possible non-normality (p < 0.05)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Possible residual autocorrelation"
+msgstr ""
 
 #: R/mpwr.b.R
 #: package/analyses/mPWR.menuGroup
@@ -5214,6 +5860,14 @@ msgstr "Предсказанный класс"
 #: mRF/results/predProb.title
 msgid "Predicted Probability"
 msgstr "Прогнозируемая вероятность"
+
+#: mSTAB/options/showPredPlot.title
+msgid "Prediction Intervals & Release Limits (SRL)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Prediction Intervals & Shelf-Life Release Limits (SRL)"
+msgstr ""
 
 #: mMF/options/pmmk.title
 msgid "Predictive Mean Matching (PMM) steps"
@@ -5309,6 +5963,10 @@ msgstr "Вероятностные модели"
 msgid "Probability Range"
 msgstr "Интервал вероятности"
 
+#: R/mstab.b.R
+msgid "Proceed to Step 2"
+msgstr ""
+
 #: mSRV/results/coxSection/coxAssumpTable.title
 msgid "Proportional Hazards Assumption (Schoenfeld Residuals Test)"
 msgstr "Допущение пропорциональности рисков (Тест остатков Шёнфельда)"
@@ -5366,7 +6024,7 @@ msgstr "Качественная палитра"
 msgid "Quality Control (QC) Analysis"
 msgstr "Контроль качества (QC)"
 
-#: mSNP/ui[6].label
+#: mSNP/ui[7].label
 msgid "Quality Control (QC) Filters"
 msgstr "Фильтры контроля качества (QC)"
 
@@ -5389,6 +6047,11 @@ msgstr "Тепловая карта качествf представления (
 #: mPCA/options/cos2Table.title
 msgid "Quality of representation (Cos²) table"
 msgstr "Таблица качества репрезентации (Cos²)"
+
+#: mSTAB/options/dep.title
+#: mSTAB/ui[0][0].label
+msgid "Quantitative Attribute / Response"
+msgstr ""
 
 #: mSNP/options/ldMetric/r2.title
 #: mSNP/results/ldGroup/ldTable.columns.title
@@ -5470,18 +6133,32 @@ msgstr "Опорный уровень: {ref}"
 #: package/analyses/mSRV.menuSubgroup
 #: package/analyses/mROC.menuSubgroup
 #: package/analyses/mDCA.menuSubgroup
+#: package/analyses/mSTAB.menuSubgroup
 #: mDCA/options.menuSubgroup
 #: mLR/options.menuSubgroup
 #: mMLP/options.menuSubgroup
 #: mRF/options.menuSubgroup
 #: mROC/options.menuSubgroup
 #: mSRV/options.menuSubgroup
+#: mSTAB/options.menuSubgroup
 msgid "Regression & Classification"
 msgstr "Регрессия и классификация"
+
+#: R/mpca.b.R
+msgid "Regression and ROC validation failed:"
+msgstr ""
+
+#: mSTAB/options/showCoefTable.title
+msgid "Regression Coefficients Table"
+msgstr ""
 
 #: mPCA/ui[3][0][3].label
 msgid "Regression Model & Validation"
 msgstr "Регрессионная модель и валидация"
+
+#: mSTAB/results/coefTable.title
+msgid "Regression Model Coefficients"
+msgstr ""
 
 #: mPCA/results/regTable.title
 msgid "Regression Model Performance (K-fold Cross-Validation)"
@@ -5510,6 +6187,10 @@ msgstr "Оптимизация штрафа регуляризации"
 #: mPWR/ui[1]/n_ratio.label
 msgid "Relative size of group 2 to group 1"
 msgstr "Относительный размер 2-й группы к 1-й"
+
+#: R/mstab.b.R
+msgid "Release Limit (SRL)"
+msgstr ""
 
 #: mMLP/options/activation/relu.title
 msgid "ReLU"
@@ -5553,6 +6234,42 @@ msgstr "Качество представления (Cos²)"
 #: mMF/options/setseed.title
 msgid "Reproducible random number generation (RNG) results"
 msgstr "Воспроизводимые результаты генерации случайных чисел (ГСЧ)"
+
+#: mSTAB/results/diagPlot.title
+msgid "Residual Diagnostic Plots"
+msgstr ""
+
+#: mSTAB/options/showDiagPlot.title
+msgid "Residual Diagnostics Plots"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Residual Error (Full Model)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Residual Standard Error (s)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Residual variability estimate"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Residuals"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Residuals vs Fitted"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Residuals vs Time"
+msgstr ""
+
+#: mSTAB/options/trans.title
+msgid "Response Transformation"
+msgstr ""
 
 #: R/msrv.b.R
 msgid "Restricted mean survival time evaluated up to τ = {tau}."
@@ -5642,6 +6359,13 @@ msgstr "Кривые ROC-анализа"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mpca.b.R
+#: R/mrf.b.R
+msgid "ROC analysis for '{part}' could not be computed: {err}"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "ROC Analysis for {class}"
 msgstr "ROC-анализ для {class}"
@@ -5724,6 +6448,13 @@ msgstr "Результаты ROC"
 msgid "ROC table"
 msgstr "Таблица РПЦ"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
+#: R/mrf.b.R
+msgid "ROC table calculation for '{part}' failed: {err}"
+msgstr ""
+
 #: mLR/options/roc_x.title
 #: mMLP/options/roc_x.title
 #: mPCA/options/roc_x.title
@@ -5799,6 +6530,10 @@ msgstr "Масштабировать размер узлов по централ
 msgid "Scale position"
 msgstr "Позиция шкалы"
 
+#: R/mstab.b.R
+msgid "Scale-Location"
+msgstr ""
+
 #: R/msrv.b.R
 msgid "Schoenfeld residuals"
 msgstr "Остатки Шенфельда"
@@ -5870,6 +6605,13 @@ msgstr ""
 "Выберите бинарную целевую переменную (исход), уровень целевого события и "
 "хотя бы один столбец вероятностей модели (значения от 0 до 1)."
 
+#: R/mstab.b.R
+msgid ""
+"Select a quantitative attribute (e.g. Assay % or Impurities %), a continuous "
+"time variable (e.g. Months), and a batch/lot factor variable. Specify your "
+"acceptance criteria (LSL and/or USL)."
+msgstr ""
+
 #: mCOR/options/selgroup.title
 #: mROC/options/selgroup.title
 msgid "Select group"
@@ -5932,6 +6674,18 @@ msgstr "Раздельно"
 msgid "Separate Plots (Class-Specific)"
 msgstr "Отдельно по классам"
 
+#: R/mstab.b.R
+msgid "Separate slopes & intercepts"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Separate slopes & separate intercepts (Model 1)"
+msgstr ""
+
+#: mSTAB/options/modelChoice/sep_slopes_sep_int.title
+msgid "Separate slopes and separate intercepts (Model 1)"
+msgstr ""
+
 #: mDCA/options/palBrewer/Set1.title
 #: mLR/options/palBrewer/Set1.title
 #: mMLP/options/palBrewer/Set1.title
@@ -5979,6 +6733,38 @@ msgstr "Тень"
 msgid "Shannon Index (I)"
 msgstr "Индекс Шеннона (I)"
 
+#: R/mstab.b.R
+msgid "Shelf Life"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Shelf Life (months)"
+msgstr ""
+
+#: mSTAB/results/shelfTable.title
+msgid "Shelf Life / Retest Period Estimation Summary"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Shelf Life Comparison & Extrapolation Horizon"
+msgstr ""
+
+#: mSTAB/options/showShelfPlot.title
+msgid "Shelf Life Comparison & Horizon Plot"
+msgstr ""
+
+#: mSTAB/results/shelfPlot.title
+msgid "Shelf Life Comparison & ICH Q1E Extrapolation Horizon"
+msgstr ""
+
+#: mSTAB/options/showShelfTable.title
+msgid "Shelf Life Summary Table"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Shortest batch"
+msgstr ""
+
 #: mSRV/options/showAdjCurves.title
 msgid "Show Adjusted Survival Curves"
 msgstr "Скорректированные кривые выживаемости"
@@ -6009,6 +6795,10 @@ msgstr "Уровень значимости (альфа)"
 msgid "Significance markers"
 msgstr "Маркеры значимости"
 
+#: mSTAB/options/accelCondition/change_observed.title
+msgid "Significant change observed at accelerated condition (No extrapolation)"
+msgstr ""
+
 #: R/msnp.b.R
 msgid "Significant HWE deviation"
 msgstr "Значимое отклонение от HWE"
@@ -6018,6 +6808,10 @@ msgid "Simultaneous multiple correlation comparisons using {n} method"
 msgstr ""
 "Одновременные множественные корреляционные сравнения с использованием метода "
 "{n}"
+
+#: R/mstab.b.R
+msgid "Single batch – poolability test not applicable"
+msgstr ""
 
 #: mCOR/options/clustMet/single.title
 msgid "Single Linkage"
@@ -6034,6 +6828,22 @@ msgstr "Однонуклеотидный полиморфизм"
 #: mMF/options/anghead.title
 msgid "Slanted Titles"
 msgstr "Наклоненные надписи"
+
+#: mSTAB/results/shelfTable.columns.title
+msgid "Slope (rate / month)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Slopes are poolable"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Slopes differ"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Slopes differ significantly"
+msgstr ""
 
 #: package/datasets/SNPandHWEanalysis.name
 msgid "SNP and HWE analysis"
@@ -6068,6 +6878,14 @@ msgstr "Спирман (ρ)"
 #: R/mcor.b.R
 msgid "Spearman's ρ"
 msgstr "ρ Спирмена"
+
+#: mSTAB/options/specType.title
+msgid "Specification Limit Type"
+msgstr ""
+
+#: mSTAB/ui[1].label
+msgid "Specification Limits & Criteria"
+msgstr ""
 
 #: R/mmlp.b.R
 #: R/mpca.b.R
@@ -6133,9 +6951,35 @@ msgstr "Пружинный"
 msgid "Square"
 msgstr "Квадрат"
 
+#: mSTAB/options/showStabPlot.title
+msgid "Stability & Shelf Life Plot"
+msgstr ""
+
+#: R/mstab.b.R
+#: package/analyses/mSTAB.title
+#: package/analyses/mSTAB.menuTitle
+#: mSTAB/options.title
+#: mSTAB/options.menuTitle
+#: mSTAB/ui.title
+#: mSTAB/results.title
+msgid "Stability Analysis (ICH Q1E)"
+msgstr ""
+
+#: package/datasets/StabilityAnalysisICHQ1E.name
+msgid "Stability Analysis ICH Q1E"
+msgstr ""
+
 #: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
 msgid "Stability Assessment"
 msgstr "Оценка стабильности"
+
+#: mSTAB/results/stabPlot.title
+msgid "Stability Plot with Confidence Bounds and Specification Limits"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Stability Profile & Shelf Life Estimation"
+msgstr ""
 
 #: R/msrv.b.R
 msgid "Standard errors and confidence intervals are adjusted for clustering by"
@@ -6147,9 +6991,33 @@ msgstr ""
 msgid "Standardized Beta"
 msgstr "Стандартизированный бета-коэффициент"
 
+#: R/mstab.b.R
+msgid "Standardized Residuals"
+msgstr ""
+
 #: mSRV/results/coxSection/coxFitTable.columns.title
 msgid "Statistic"
 msgstr "Статистика"
+
+#: mSTAB/results/diagTable.columns.title
+msgid "Statistic / Value"
+msgstr ""
+
+#: mSTAB/ui[2].label
+msgid "Statistical & Regulatory Settings (ICH Q1E)"
+msgstr ""
+
+#: mSTAB/results/poolTable.columns.title
+msgid "Statistical Decision (ICH Q1E)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Statistical intersection"
+msgstr ""
+
+#: mSTAB/results/shelfTable.columns.title
+msgid "Statistical Shelf Life (months)"
+msgstr ""
 
 #: mSNP/results/qcGroup/qcTable.columns.title
 msgid "Status"
@@ -6159,6 +7027,10 @@ msgstr "Статус"
 #: mSRV/ui[0][2].label
 msgid "Status / Event Variable"
 msgstr "Переменная статуса / события"
+
+#: mSTAB/results/shelfTable.columns.title
+msgid "Status / Limiting Factor"
+msgstr ""
 
 #: R/msrv.b.R
 msgid ""
@@ -6181,8 +7053,17 @@ msgstr ""
 "анализа конкурирующих рисков."
 
 #: mLR/results/coeffTable.columns.title
+#: mSTAB/results/coefTable.columns.title
 msgid "Std. Error"
 msgstr "Станд. ошибка"
+
+#: R/mstab.b.R
+msgid "Step 1: Slopes (Batch * Time)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Step 2: Intercepts (Batch)"
+msgstr ""
 
 #: R/mlr.b.R
 msgid ""
@@ -6218,12 +7099,16 @@ msgstr "Последовательно"
 msgid "Sum"
 msgstr "Сумма"
 
+#: mSTAB/results/poolTable.columns.title
+msgid "Sum of Squares"
+msgstr ""
+
 #: R/mdca.b.R
 msgid "Superior"
 msgstr "Превосходство"
 
 #: R/mpwr.b.R
-#: mPWR/ui[1]/alt/superior.title
+#: mPWR/ui[0]/alt/superior.title
 msgid "superiority"
 msgstr "превосходство"
 
@@ -6284,7 +7169,7 @@ msgid "Tables and Visualizations"
 msgstr "Таблицы и графики"
 
 #: mPWR/options/alt.title
-#: mPWR/ui[1]/alt.label
+#: mPWR/ui[0]/alt.label
 msgid "Tails"
 msgstr "Хвосты"
 
@@ -6319,6 +7204,10 @@ msgstr "Оценка нормальности"
 #: mSRV/options/coxAssump.title
 msgid "Test Proportional Hazards Assumption"
 msgstr "Проверка допущения пропорциональности"
+
+#: mSTAB/results/poolTable.columns.title
+msgid "Test Step / Source"
+msgstr ""
 
 #: mPWR/options/k_tested.title
 #: mPWR/ui[1]/k_tested.label
@@ -6396,6 +7285,10 @@ msgstr ""
 msgid "Theoretical Chi-Square Quantiles"
 msgstr "Теоретические квантили Хи-квадрат"
 
+#: R/mstab.b.R
+msgid "Theoretical Quantiles"
+msgstr ""
+
 #: package/datasets/UncertainInterval(UI).description
 msgid "Three-Way threshold determination in test results"
 msgstr "Трихотомическое определение порогов в результатах теста"
@@ -6441,6 +7334,11 @@ msgstr "Временная точка t"
 msgid "Time Transform Function"
 msgstr "Функция трансформации времени"
 
+#: mSTAB/options/time.title
+#: mSTAB/ui[0][1].label
+msgid "Time Variable"
+msgstr ""
+
 #: mSRV/options/elapsed.title
 #: mSRV/ui[0][0].label
 msgid "Time Variable (elapsed time)"
@@ -6449,14 +7347,6 @@ msgstr "Переменная времени (прошедшее время)"
 #: R/msrv.b.R
 msgid "Time variable must be numeric."
 msgstr "Переменная времени должна быть числовой."
-
-#: mSRV/options/timeDepVars.title
-msgid "Time-dependent Covariates"
-msgstr "Ковариаты, зависящие от времени"
-
-#: mSRV/ui[0][7].label
-msgid "Time-dependent Covariates (Cox)"
-msgstr "Ковариаты, зависящие от времени (Кокс)"
 
 #: mSRV/options/showTimeDepEffects.title
 msgid "Time-dependent effects (time-varying coefficients)"
@@ -6484,6 +7374,15 @@ msgstr "Зависимые от времени ROC-кривые (t = {time})"
 msgid "Time-dependent ROC Results"
 msgstr "Результаты зависимого от времени ROC-анализа"
 
+#: mSRV/options/timeDepVars.title
+#: mSRV/ui[0][7].label
+msgid "Time-varying Effects (Cox)"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Time-varying effects model fitting failed to converge:"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Too few observations after removing missing values (minimum 5 required)."
 msgstr ""
@@ -6497,6 +7396,12 @@ msgid ""
 msgstr ""
 "Слишком мало валидных наблюдений для анализа кривых решений (требуется не "
 "менее 10)."
+
+#: R/mstab.b.R
+msgid ""
+"Too few valid observations for stability analysis (at least 4 observations "
+"required)."
+msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -6593,7 +7498,7 @@ msgid "Two-graph ROC curves"
 msgstr "Двойные ROC кривые"
 
 #: R/mpwr.b.R
-#: mPWR/ui[1]/alt/two.sided.title
+#: mPWR/ui[0]/alt/two.sided.title
 msgid "two-tailed"
 msgstr "двусторонний"
 
@@ -6634,6 +7539,10 @@ msgstr ""
 msgid "Uncertainty interval polygon"
 msgstr "Полигон интервала неопределенности"
 
+#: R/mstab.b.R
+msgid "Undefined (zero residual variance)"
+msgstr ""
+
 #: package/analyses/mOUT.title
 #: package/analyses/mOUT.menuTitle
 #: mOUT/options.title
@@ -6658,9 +7567,17 @@ msgstr "Верхний ДИ"
 msgid "Upper fence"
 msgstr "Верхний забор"
 
+#: mSTAB/options/specType/upper.title
+msgid "Upper limit only (Increasing attribute / Impurity)"
+msgstr ""
+
 #: mCOR/options/plotMetU.title
 msgid "Upper part"
 msgstr "Верхняя часть"
+
+#: mSTAB/options/usl.title
+msgid "Upper Specification Limit (USL)"
+msgstr ""
 
 #: mUI/results/stat/uistat.columns.title
 msgid "Upper threshold"
@@ -6777,6 +7694,10 @@ msgstr "Переменные для PCA"
 msgid "Variables per Split (mtry)"
 msgstr "Переменных на разбиение (mtry)"
 
+#: R/mstab.b.R
+msgid "Variance may change over time"
+msgstr ""
+
 #: mPWR/options/var_ratio.title
 #: mPWR/ui[1]/var_ratio.label
 msgid "Variance ratio (SD₁² / SD₂²)"
@@ -6797,11 +7718,6 @@ msgstr "Метод связывания Уорда D2"
 #: mCOR/options/clustMet/ward.D.title
 msgid "Ward's Linkage"
 msgstr "Метод связывания Уорда"
-
-#: R/mpca.b.R
-msgid "Warning: Grouping variable must have at least 2 levels."
-msgstr ""
-"Предупреждение: Группирующая переменная должна иметь не менее 2 уровней."
 
 #: R/mmlp.b.R
 msgid "Weight Decay"
@@ -6851,7 +7767,7 @@ msgid "z-value"
 msgstr "z-значение"
 
 #: mPWR/options/alpha.title
-#: mPWR/ui[1]/alpha.label
+#: mPWR/ui[0]/alpha.label
 msgid "α (type I error rate)"
 msgstr "α (ошибка первого рода)"
 

@@ -74,6 +74,24 @@ msgid ""
 "Shapiro-Wilk test"
 msgstr "<b>*p < 0.05</b>：Shapiro-Wilk 檢定拒絕常態分布假設"
 
+#: R/mstab.b.R
+msgid ""
+"<b>Adopted Structure</b>: Model 1 (Separate slopes and separate intercepts). "
+"Batches degrade at different rates."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Adopted Structure</b>: Model 2 (Common slope, separate intercepts). "
+"Batches degrade at a parallel rate but start at different initial levels."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Adopted Structure</b>: Model 3 (Common slope, common intercept). All "
+"batches are fully pooled into a single regression line."
+msgstr ""
+
 #: R/msnp.b.R
 msgid ""
 "<b>Allele frequencies (p, q)</b> represent the proportions of the two "
@@ -102,6 +120,14 @@ msgstr ""
 "<b>Alpha (α)</b>：顯著水準，表示可接受的第一類型錯誤最大機率，即在實際不存在"
 "差異時，卻誤判為存在差異 (偽陽性) 的機率上限。"
 
+#: R/mstab.b.R
+msgid ""
+"<b>Autocorrelation (Durbin-Watson d)</b>: Tests for first-order "
+"autocorrelation in residuals across sequential test intervals. Values near "
+"2.0 indicate independent errors; values substantially below 1.5 suggest "
+"positive serial correlation."
+msgstr ""
+
 #: R/mdca.b.R
 msgid ""
 "<b>Avoided at 20%</b>: reduction in unnecessary interventions per 100 "
@@ -127,6 +153,14 @@ msgid ""
 msgstr ""
 "<b>平衡準確率 (Balanced Accuracy, BA)</b> = (敏感度 + 特異度) / 2。此指標可校"
 "正類別不平衡（class imbalance）的影響。BA = 0.5 表示分類結果相當於隨機分類。"
+
+#: R/mstab.b.R
+msgid ""
+"<b>Batch Minimum Principle</b>: When batch-specific estimates remain "
+"(separate slopes or separate intercepts), ICH Q1E mandates that the overall "
+"estimated shelf life / retest period is governed by the shortest (earliest) "
+"estimate among all evaluated batches."
+msgstr ""
 
 #: R/msnp.b.R
 msgid ""
@@ -267,6 +301,13 @@ msgstr ""
 "群內受試者的相似性進行調整，調整方式使用組內相關係數及設計效應，並考量平均集"
 "群大小。"
 
+#: R/mstab.b.R
+msgid ""
+"<b>Coefficient of Determination (R² / Adj R²)</b>: Measures the proportion "
+"of total variance in the stability attribute accounted for by storage time "
+"and batch factors. Adjusted R² penalizes for model complexity."
+msgstr ""
+
 #: R/mui.b.R
 msgid ""
 "<b>Concordance</b> - C-Statistic or AUC. The probability that a randomly "
@@ -275,6 +316,22 @@ msgid ""
 msgstr ""
 "<b>一致性</b>：C 統計量或 AUC。表示隨機選取一名具有該疾病的個體，其預測分數高"
 "於隨機選取一名無該疾病個體的機率"
+
+#: R/mstab.b.R
+msgid ""
+"<b>Confidence Bound Direction (ICH Q1E Section 2.4)</b>: For decreasing "
+"attributes (e.g., Assay), the 95% lower one-sided confidence bound is used. "
+"For increasing attributes (e.g., Impurities / Degradants), the 95% upper "
+"one-sided confidence bound is used. If the direction of change is unknown, a "
+"95% two-sided bound is applied."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Confidence Intervals & Standard Errors</b>: Standard errors and 95% "
+"confidence intervals reflect parameter estimation precision computed from "
+"the model covariance matrix and residual degrees of freedom."
+msgstr ""
 
 #: R/mcor.b.R
 msgid "<b>Correlation method</b>: {method}"
@@ -449,6 +506,13 @@ msgid ""
 "p<sub>value</sub>."
 msgstr "<b>解釋性變項</b>：對應 MAR 且具有最小 p 值的變項。"
 
+#: R/mstab.b.R
+msgid ""
+"<b>Extrapolation Cap Active</b>: Statistical intersection ({stat} months) "
+"exceeds the allowable ICH Q1E extrapolation limit ({cap} months). Permitted "
+"shelf life is capped at {cap} months."
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "<b>Fine–Gray proportional subdistribution hazards regression</b> (Fine & "
@@ -541,6 +605,32 @@ msgid ""
 "dataset."
 msgstr "<b>留出法準確率</b>：在留出驗證資料集上的分類準確率。"
 
+#: R/mstab.b.R
+msgid ""
+"<b>Homoscedasticity</b>: Evaluates whether residual variance remains "
+"constant over time (H0: constant variance). Confirms suitability of linear "
+"least-squares regression without weighted errors."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>ICH Q1E Appendix A Extrapolation</b>: Permitted shelf life may extend "
+"beyond real-time data if accelerated stability demonstrates little or no "
+"change. Under favorable conditions, maximum extrapolation is capped at 2x "
+"observed duration (up to Y + 12 months), or 1.5x observed duration (up to Y "
+"+ 6 months) if accelerated data show change. Extrapolation is never "
+"permitted beyond the statistical intersection."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>ICH Q1E Poolability Hierarchy</b>: ANCOVA evaluates whether stability "
+"batches can be pooled into a common regression model. Testing proceeds "
+"sequentially: Step 1 tests equality of degradation rates (slopes; Batch * "
+"Time interaction); Step 2 tests equality of initial levels (intercepts; "
+"Batch main effect)."
+msgstr ""
+
 #: R/msnp.b.R
 msgid ""
 "<b>Inbreeding coefficient (F_IS)</b> measures deviation from HWE: F_IS = 1 - "
@@ -595,6 +685,12 @@ msgstr ""
 "<b>概似比檢定 (Likelihood-ratio test)</b> 比較資料在 Hardy-Weinberg 平衡 "
 "(HWE) 模型與飽和模型 (saturated model) 下的概似值。其檢定統計量 -2 × ln"
 "(L_HWE / L_sat) 服從自由度為 1 的卡方分配。"
+
+#: R/mstab.b.R
+msgid ""
+"<b>Limiting Batch</b>: Overall shelf life is determined by {batch} ({months} "
+"months), which represents the earliest intersection among all batches."
+msgstr ""
 
 #: R/msrv.b.R
 msgid ""
@@ -716,6 +812,14 @@ msgstr ""
 "<b>方法</b>：圖形化 Lasso（Graphical Lasso, GLASSO），採用延伸貝葉斯資訊準則"
 "（Extended Bayesian Information Criterion, EBIC）進行調整參數選擇（gamma = "
 "{gamma}）。GLASSO 使用 L1 正則化將較弱的偏相關收縮至 0，以產生稀疏網絡。"
+
+#: R/mstab.b.R
+msgid ""
+"<b>Model Parameters</b>: Intercept represents the estimated mean attribute "
+"value at time zero (t = 0 months). Time slope represents the mean rate of "
+"degradation or accumulation per month. Batch terms represent deviations of "
+"each batch relative to the reference batch."
+msgstr ""
 
 #: R/mui.b.R
 msgid ""
@@ -912,6 +1016,36 @@ msgstr ""
 "<b>重新校準</b>：對輸入機率套用 Platt 縮放（邏輯校準），以移除系統性偏差、將"
 "斜率調整至接近 1.000，並使截距對齊 0.000，同時保留 ROC 區辨力。"
 
+#: R/mstab.b.R
+msgid ""
+"<b>Residual Mean Square (MSE)</b>: When separate slopes are required, ICH "
+"Q1E recommends testing each batch against specifications using the pooled "
+"residual mean square error across all batches if batch error variances are "
+"homogeneous."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Residual Normality (Shapiro-Wilk)</b>: Tests whether regression residuals "
+"follow a normal distribution (H0: normal). Validates the use of the standard "
+"t-distribution for 95% confidence bounds (p >= 0.05 indicates conformity)."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Residual Standard Error (s)</b>: Estimate of residual standard deviation "
+"(square root of MSE). Reflects unexplained analytical measurement "
+"variability and within-batch variation."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Retest Period vs Shelf Life</b>: Retest period applies to drug substances "
+"(active pharmaceutical ingredients), after which material must be re-tested "
+"before use. Shelf life / expiry dating applies to final marketed drug "
+"products."
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "<b>Schoenfeld residuals test</b> evaluates the proportional hazards (PH) "
@@ -938,6 +1072,21 @@ msgstr ""
 "(allelic diversity)。數值越高表示多樣性越高。對於雙等位基因標記 (biallelic "
 "marker)，當 2 種等位基因的頻率相等時，I 的最大值為 ln(2) ≈ 0.693。"
 
+#: R/mstab.b.R
+msgid ""
+"<b>Significance Level (alpha = 0.25)</b>: In accordance with ICH Q1E "
+"Appendix B, a conservative significance level of alpha = 0.25 (rather than "
+"0.05) is employed to minimize Type II error (erroneously pooling batches "
+"with clinically relevant differences)."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Slope Interpretation</b>: A negative slope indicates loss of active "
+"substance over storage time; a positive slope indicates accumulation of "
+"degradation impurities or breakdown products."
+msgstr ""
+
 #: R/mui.b.R
 msgid "<b>SNPV</b> - standardized negative predictive value of the negative class"
 msgstr "<b>SNPV</b>：標準化陰性預測值"
@@ -949,6 +1098,31 @@ msgstr "<b>Sp</b> - 特異度 (Specificity)，表示陰性類別的特異度：T
 #: R/mui.b.R
 msgid "<b>SPPV</b> - standardized positive predictive value of the positive class"
 msgstr "<b>SPPV</b>：標準化陽性預測值"
+
+#: R/mstab.b.R
+msgid ""
+"<b>Statistical Shelf Life / Retest Period</b>: Determined by the earliest "
+"time point where the appropriate 95% confidence bound for the mean "
+"degradation line intersects the specification limit (LSL and/or USL)."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Step 1 (Equality of Slopes)</b>: Tests H<sub>0</sub>: β<sub>1,1</sub> = "
+"β<sub>1,2</sub> = ... = β<sub>1,k</sub>. If p >= 0.25, batch degradation "
+"rates are statistically comparable (parallel lines). If p < 0.25, "
+"degradation rates differ significantly, requiring separate slopes for each "
+"batch."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"<b>Step 2 (Equality of Intercepts)</b>: Evaluated only when slopes are "
+"pooled (p >= 0.25 in Step 1). Tests H<sub>0</sub>: β<sub>0,1</sub> = "
+"β<sub>0,2</sub> = ... = β<sub>0,k</sub>. If p >= 0.25, batches share a "
+"single common regression line. If p < 0.25, batches differ in initial "
+"release values, requiring separate intercepts with a common slope."
+msgstr ""
 
 #: R/mcor.b.R
 msgid ""
@@ -1116,6 +1290,14 @@ msgstr "四因子"
 msgid "5 folds"
 msgstr "5 折"
 
+#: mSTAB/results/coefTable.columns.title
+msgid "95% CI Lower"
+msgstr ""
+
+#: mSTAB/results/coefTable.columns.title
+msgid "95% CI Upper"
+msgstr ""
+
 #: mLR/results/coeffTable.columns.title
 msgid "95% OR CI Lower"
 msgstr "95% 勝算比 (OR) 信賴區間下限"
@@ -1150,6 +1332,10 @@ msgstr "先驗檢定力分析"
 msgid "A Priori Power Analysis Results"
 msgstr "先驗檢定力分析結果"
 
+#: mSTAB/options/accelCondition.title
+msgid "Accelerated Testing Support (ICH Q1E App. A)"
+msgstr ""
+
 #: mDCA/options/palBrewer/Accent.title
 #: mLR/options/palBrewer/Accent.title
 #: mMLP/options/palBrewer/Accent.title
@@ -1180,12 +1366,24 @@ msgstr "實際類別"
 msgid "Adjusted Median Survival"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Adjusted R²"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Adjusted Rand Index (ARI)"
 msgstr "調整後 Rand 指數 (ARI)"
 
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
 msgid "Adjusted RMST"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Adjusted survival baseline hazard estimation failed:"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Adjusted survival curve model fitting failed:"
 msgstr ""
 
 #: mSRV/ui[5].label
@@ -1200,6 +1398,26 @@ msgstr ""
 
 #: mSRV/results/adjSection/adjSummaryTable.title
 msgid "Adjusted Survival Summary"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Adopt Model 1"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Adopt Model 2"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Adopt Model 3 (Common line)"
+msgstr ""
+
+#: mSTAB/results/shelfTable.columns.title
+msgid "Adopted Model"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Adopted:"
 msgstr ""
 
 #: mCOR/options/clustMet.title
@@ -1268,6 +1486,14 @@ msgstr "依結果變數分析基因型"
 msgid "Analysis Time Point t"
 msgstr "分析時間點 t"
 
+#: mSTAB/results/poolTable.title
+msgid "ANCOVA Poolability Testing and Model Selection"
+msgstr ""
+
+#: mSTAB/options/showPoolTable.title
+msgid "ANCOVA Poolability Testing Table"
+msgstr ""
+
 #: mCOR/options/plotOrder/AOE.title
 msgid "Angular order eigenvectors"
 msgstr "特徵向量的角度順序排列"
@@ -1276,6 +1502,10 @@ msgstr "特徵向量的角度順序排列"
 #: mPWR/options/design/anova.title
 msgid "ANOVA / ANCOVA (F-Test)"
 msgstr "變異數分析 / 共變數分析（F檢定）"
+
+#: mSTAB/results/diagTable.columns.title
+msgid "Assessment / Criteria"
+msgstr ""
 
 #: mSNP/options/assocEnable.title
 msgid "Association tests"
@@ -1292,6 +1522,12 @@ msgstr "漸近卡方 女性 (3)"
 #: mSNP/options/ternaryRegion/5.title
 msgid "Asymptotic Likelihood-ratio (5)"
 msgstr "漸近概似比 (5)"
+
+#: R/msnp.b.R
+msgid ""
+"At least 2 markers passing Quality Control are required for Linkage "
+"Disequilibrium analysis."
+msgstr ""
 
 #: R/msrv.b.R
 msgid ""
@@ -1315,12 +1551,20 @@ msgstr "AUC 曲線下面積"
 msgid "Auto (sqrt for classification)"
 msgstr "自動 (分類使用平方根)"
 
+#: R/mstab.b.R
+msgid "Autocorrelation (Durbin-Watson d)"
+msgstr ""
+
+#: mSTAB/options/modelChoice/auto.title
+msgid "Automatic (ICH Q1E Decision Tree)"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Average (Mean)"
 msgstr "平均數 (Mean)"
 
 #: mPWR/options/cluster_size.title
-#: mPWR/ui[1]/cluster_size.label
+#: mPWR/ui[2]/cluster_size.label
 msgid "Average cluster size (m)"
 msgstr "平均集群大小 (m)"
 
@@ -1362,6 +1606,24 @@ msgstr "基礎機率"
 
 #: R/msrv.b.R
 msgid "baseline"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Batch"
+msgstr ""
+
+#: mSTAB/results/shelfTable.columns.title
+msgid "Batch / Cohort"
+msgstr ""
+
+#: mSTAB/options/batch.title
+#: mSTAB/ui[0][2].label
+msgid "Batch / Lot"
+msgstr ""
+
+#: R/mstab.b.R
+#: mSTAB/results/ratePlot.title
+msgid "Batch Degradation Rates & ANCOVA Slope Comparison"
 msgstr ""
 
 #: package/datasets/BCModelsROCEstimation.name
@@ -1446,6 +1708,10 @@ msgstr "自助抽樣邊權重 95% 信賴區間"
 msgid "Bootstrapped stability analysis"
 msgstr "自助抽樣穩定性分析"
 
+#: mSTAB/options/specType/both.title
+msgid "Both limits (Two-sided / Unknown direction)"
+msgstr ""
+
 #: mMOUT/options/plotType/both.title
 msgid "Both Plots"
 msgstr "兩種圖形"
@@ -1487,6 +1753,10 @@ msgstr "計算總計"
 msgid "Calculated fences for outliers"
 msgstr "離群值的計算柵欄"
 
+#: R/mstab.b.R
+msgid "Calculated SRL:"
+msgstr ""
+
 #: R/msnp.b.R
 msgid ""
 "Calculating Polygenic Risk Score (PRS) requires specifying a "
@@ -1518,6 +1788,22 @@ msgstr "校準斜率"
 #: mSNP/results/qcGroup/qcTable.columns.title
 msgid "Call Rate"
 msgstr "檢出率"
+
+#: R/mstab.b.R
+msgid "Cannot evaluate homoscedasticity"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Cannot evaluate normality (insufficient variance)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Capped by extrapolation rule"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Capped by ICH Q1E extrapolation limit"
+msgstr ""
 
 #: mCOR/options/glassoBootType/casedrop.title
 msgid "Case-dropping (centrality stability)"
@@ -1554,9 +1840,7 @@ msgid "Censored Level"
 msgstr ""
 
 #: R/msrv.b.R
-msgid ""
-"Censored level ('{censor}') and Event of interest ('{event}') cannot be the "
-"same value. Please select distinct levels in Competing Risks options."
+msgid "Censored level"
 msgstr ""
 
 #: R/mcor.b.R
@@ -1615,6 +1899,10 @@ msgstr "卡方 Q-Q 圖"
 #: R/mmout.b.R
 msgid "Chi-Square Q-Q Plot ({method})"
 msgstr "卡方 Q-Q 圖 ({method})"
+
+#: R/msrv.b.R
+msgid "Choose different levels for the censoring code and the event of interest."
+msgstr ""
 
 #: mROC/results/rocTable.columns.title
 msgid "CI"
@@ -1742,9 +2030,13 @@ msgid "Cluster {i}"
 msgstr "集群 {i}"
 
 #: mPWR/options/crt.title
-#: mPWR/ui[1]/crt.label
+#: mPWR/ui[2]/crt.label
 msgid "Cluster / Multilevel Randomized Trial (CRT/MST)"
 msgstr "集群 / 多層隨機試驗 (CRT/MST)"
+
+#: mPWR/ui[2].label
+msgid "Cluster Randomized Trials"
+msgstr ""
 
 #: mCOR/options/numClust.title
 msgid "Clusters"
@@ -1784,6 +2076,10 @@ msgstr ""
 msgid "Coefficient (Estimate)"
 msgstr "係數 (估計值)"
 
+#: R/mstab.b.R
+msgid "Coefficient of Determination (R²)"
+msgstr ""
+
 #: mCOR/options/plotMetU/color.title
 #: mCOR/options/plotMetL/color.title
 msgid "Color"
@@ -1808,6 +2104,10 @@ msgstr "合併圖 (單一坐標軸)"
 msgid "Combined ROC - Cross-Validation"
 msgstr "合併ROC曲線－交叉驗證結果"
 
+#: R/mrf.b.R
+msgid "Combined ROC - Out-of-Bag (OOB)"
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -1820,6 +2120,30 @@ msgstr "合併 ROC 曲線－訓練資料"
 msgid "Combined ROC - Validation"
 msgstr "合併 ROC 曲線－驗證資料"
 
+#: R/mstab.b.R
+msgid "Common slope & common intercept (Model 3)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Common slope & intercept (Pooled)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Common slope & separate intercepts"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Common slope & separate intercepts (Model 2)"
+msgstr ""
+
+#: mSTAB/options/modelChoice/common_slope_common_int.title
+msgid "Common slope and common intercept (Model 3)"
+msgstr ""
+
+#: mSTAB/options/modelChoice/common_slope_sep_int.title
+msgid "Common slope with separate intercepts (Model 2)"
+msgstr ""
+
 #: mLR/results/coeffTable.columns.title
 msgid "Comparison Level"
 msgstr "比較水準"
@@ -1828,6 +2152,10 @@ msgstr "比較水準"
 #: mSRV/ui[6].label
 #: mSRV/results/compRisksSection.title
 msgid "Competing Risks Analysis"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Competing risks levels were automatically assigned:"
 msgstr ""
 
 #: mCOR/options/clustMet/complete.title
@@ -1897,6 +2225,14 @@ msgstr ""
 msgid "Confidence Intervals (KM)"
 msgstr "信賴區間 (KM)"
 
+#: mSTAB/options/confLevel.title
+msgid "Confidence Level for Shelf Life"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Conforming"
+msgstr ""
+
 #: mMLP/options/show_matrix.title
 #: mMLP/results/matrixTable.title
 #: mRF/options/show_matrix.title
@@ -1912,6 +2248,10 @@ msgstr ""
 
 #: R/mmf.b.R
 msgid "Connection of a variable's observed data with missing data on other variables"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Constant variance met (p >= 0.05)"
 msgstr ""
 
 #: R/mpca.b.R
@@ -2025,6 +2365,10 @@ msgstr "Cox 風險比森林圖"
 msgid "Cox Model Fit Statistics"
 msgstr "Cox 模型適配統計量"
 
+#: R/msrv.b.R
+msgid "Cox proportional hazards model fitting failed:"
+msgstr ""
+
 #: mSRV/options/showCox.title
 #: mSRV/ui[4].label
 #: mSRV/results/coxSection.title
@@ -2081,6 +2425,10 @@ msgstr "累積風險"
 #: R/msrv.b.R
 #: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 msgid "Cumulative Incidence"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Cumulative incidence (Aalen–Johansen) model fitting failed:"
 msgstr ""
 
 #: mSRV/options/showCifPlot.title
@@ -2232,6 +2580,14 @@ msgstr "決策曲線 (淨效益對閾值)"
 msgid "Decision Curves Plot (Net Benefit)"
 msgstr "決策曲線圖 (淨效益)"
 
+#: R/mstab.b.R
+msgid "Degradation Rate"
+msgstr ""
+
+#: mSTAB/options/showRatePlot.title
+msgid "Degradation Rates / Slopes Comparison"
+msgstr ""
+
 #: mMF/results/estim/mcar.columns.title
 msgid "Degree of Freedom (df)"
 msgstr "自由度 (df)"
@@ -2260,6 +2616,10 @@ msgstr "依變項必須至少有兩個水準。"
 msgid "Design"
 msgstr "設計"
 
+#: mPWR/ui[1].label
+msgid "Design Parameters"
+msgstr ""
+
 #: mSNP/options/mdrCellTable.title
 msgid "Detailed cell classification table"
 msgstr "詳細單元分類表"
@@ -2272,8 +2632,17 @@ msgstr "詳細單元風險分類"
 #: mSRV/results/coxSection/coxFitTable.columns.title
 #: mSRV/results/coxSection/coxAssumpTable.columns.title
 #: mSRV/results/compRisksSection/grayTestTable.columns.title
+#: mSTAB/results/poolTable.columns.title
 msgid "df"
 msgstr "自由度"
+
+#: mSTAB/results/diagTable.columns.title
+msgid "df / Parameter"
+msgstr ""
+
+#: mSTAB/results/diagTable.columns.title
+msgid "Diagnostic / Assumption Test"
+msgstr ""
 
 #: package/analyses/mUI.menuSubgroup
 #: package/analyses/mSNP.menuSubgroup
@@ -2421,13 +2790,25 @@ msgstr ""
 msgid "Entry / Start time variable must be numeric."
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Equal intercepts"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Equal slopes"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Equality of Slopes:"
+msgstr ""
+
 #: R/mpwr.b.R
-#: mPWR/ui[1]/alt/equivalent.title
+#: mPWR/ui[0]/alt/equivalent.title
 msgid "equivalence"
 msgstr "等價性"
 
 #: mPWR/options/margin.title
-#: mPWR/ui[1]/margin.label
+#: mPWR/ui[0]/margin.label
 msgid "Equivalence / Non-Inferiority / Superiority margin"
 msgstr "等價性 / 非劣性 / 優越性邊界"
 
@@ -2461,6 +2842,10 @@ msgstr "計算 PCA 時發生錯誤，請檢查您的變數。"
 msgid "Error Type"
 msgstr "錯誤類型"
 
+#: mSTAB/results/coefTable.columns.title
+msgid "Estimate"
+msgstr ""
+
 #: mLR/results/coeffTable.columns.title
 msgid "Estimate (B)"
 msgstr "估計值 (B)"
@@ -2473,14 +2858,38 @@ msgstr "估計的袋外(OOB)插補誤差"
 msgid "Estimation method"
 msgstr "估計方法"
 
+#: R/mstab.b.R
+msgid ""
+"Evaluates drug substance or drug product stability data and estimates shelf "
+"life / retest period according to the ICH Q1E guideline."
+msgstr ""
+
 #: mMF/options/fullmars.title
 #: mMF/results/estim/fMARtab.title
 msgid "Evaluation of MAR explainers"
 msgstr "MAR 解釋器評估"
 
+#: package/datasets/StabilityAnalysisICHQ1E.description
+msgid ""
+"Evaluation of stability data and shelf life estimation according to ICH Q1E "
+"guideline demonstration"
+msgstr ""
+
+#: package/analyses/mSTAB.description
+#: mSTAB/options.description.main
+msgid ""
+"Evaluation of stability data and shelf life estimation according to the ICH "
+"Q1E guideline using ANCOVA poolability testing and one-sided 95% confidence "
+"intervals."
+msgstr ""
+
 #: mSRV/options/compEvent.title
 #: mSRV/ui[6]/showCompRisks/compEvent.label
 msgid "Event of Interest"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Event of interest"
 msgstr ""
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
@@ -2590,8 +2999,13 @@ msgid ""
 "Random Forest classifier, survival analysis (Kaplan-Meier, Cox regression, "
 "adjusted curves, competing risks, time-dependent effects), Principal "
 "Component Analysis (PCA), Single Nucleotide Polymorphism (SNP) association "
-"and Hardy-Weinberg equilibrium analysis, and Decision Curve Analysis (DCA) "
-"with model calibration."
+"and Hardy-Weinberg equilibrium analysis, Decision Curve Analysis (DCA) with "
+"model calibration, and Stability Analysis according to ICH Q1E guideline "
+"with ANCOVA poolability testing and shelf life estimation."
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Extrapolation Cap"
 msgstr ""
 
 #: mSNP/results/hweGroup/hwTable.columns.title
@@ -2661,6 +3075,12 @@ msgstr "特徵選取設定"
 msgid "Female level"
 msgstr ""
 
+#: R/msnp.b.R
+msgid ""
+"Fewer than 10 complete cases available; MDR analysis cannot be reliably "
+"performed."
+msgstr ""
+
 #: mLR/options/group.title
 #: mLR/ui[0][3].label
 #: mPCA/options/group.title
@@ -2681,9 +3101,17 @@ msgstr ""
 msgid "Fine-Gray Subdistribution Hazard Regression"
 msgstr ""
 
+#: R/msrv.b.R
+msgid "Fine–Gray model fitting failed to converge."
+msgstr ""
+
 #: mCOR/options/plotOrder/FPC.title
 msgid "First principal component"
 msgstr "第一主成分"
+
+#: R/mstab.b.R
+msgid "Fitted values"
+msgstr ""
 
 #: mCOR/options/flag.title
 msgid "Flag significant correlations"
@@ -2721,7 +3149,7 @@ msgstr "向前逐步選取法 (AIC)"
 msgid "Frequencies as percentages (%)"
 msgstr "以百分比 (%) 表示的頻率"
 
-#: mSNP/ui[1].label
+#: mSNP/ui[2].label
 msgid "Frequency Tables"
 msgstr "次數表"
 
@@ -2783,6 +3211,7 @@ msgid "Genotypes Controls"
 msgstr "對照組基因型"
 
 #: R/mdca.b.R
+#: R/mstab.b.R
 msgid "Getting started:"
 msgstr "開始使用："
 
@@ -2790,15 +3219,15 @@ msgstr "開始使用："
 msgid "Graphical Lasso (GLASSO)"
 msgstr "圖形化 Lasso (GLASSO)"
 
-#: R/msrv.b.R
-msgid ""
-"Gray's test does not support delayed entry / left-truncation and evaluates "
-"event times from origin."
-msgstr ""
-
 #: mSRV/options/showGrayTest.title
 #: mSRV/results/compRisksSection/grayTestTable.title
 msgid "Gray's Test for Group Differences"
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"Gray's test is not supported for counting-process / delayed entry data "
+"(start time specified)."
 msgstr ""
 
 #: R/mout.b.R
@@ -2851,6 +3280,12 @@ msgstr "分組變項"
 msgid "Grouping variable must have at least 2 levels for Gray's test."
 msgstr ""
 
+#: R/mpca.b.R
+msgid ""
+"Grouping variable must have at least 2 levels for regression and ROC "
+"analysis."
+msgstr ""
+
 #: mCOR/options/glassoLayout/groups.title
 msgid "Groups"
 msgstr "組別"
@@ -2865,7 +3300,7 @@ msgstr "預期雜合度 (H(exp))"
 msgid "H(obs)"
 msgstr "觀察雜合度 (H(obs))"
 
-#: mSNP/ui[2].label
+#: mSNP/ui[3].label
 #: mSNP/results/hweGroup.title
 msgid "Hardy-Weinberg Equilibrium (HWE) Analysis"
 msgstr "Hardy-Weinberg 平衡 (HWE) 分析"
@@ -3013,6 +3448,10 @@ msgstr "Holm (1979)"
 msgid "Hommel (1988)"
 msgstr "Hommel (1988)"
 
+#: R/mstab.b.R
+msgid "Homoscedasticity (|e| vs Time correlation)"
+msgstr ""
+
 #: mCOR/options/glassoHub.title
 msgid "Hub markers table"
 msgstr "樞紐標記表格"
@@ -3041,12 +3480,15 @@ msgstr "HWE 統計檢定"
 msgid "Hypothesis"
 msgstr "假設"
 
+#: mSTAB/results/shelfTable.columns.title
+msgid "ICH Q1E Permitted Shelf Life (months)"
+msgstr ""
+
 #: package/datasets/Outliersidentificationandremoval.description
 msgid "Identification, analysis and removal of data outliers by groups"
 msgstr "依組別進行資料離群值之識別、分析與移除"
 
 #: R/mmlp.b.R
-#: mMLP/options/out_activation/identity.title
 msgid "Identity (Linear)"
 msgstr "單位函數 (線性)"
 
@@ -3125,6 +3567,23 @@ msgstr "指標"
 msgid "Indices (Rows)"
 msgstr "索引 (列)"
 
+#: R/mstab.b.R
+msgid "Individual Batch"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Individual Batch Trajectories"
+msgstr ""
+
+#: mSTAB/options/showFacetPlot.title
+#: mSTAB/results/facetPlot.title
+msgid "Individual Batch Trajectories (Faceted)"
+msgstr ""
+
+#: mSTAB/results/predPlot.title
+msgid "Individual Prediction Intervals & Release Limits (SRL)"
+msgstr ""
+
 #: mPCA/options/biplot.title
 #: mPCA/results/biplot.title
 msgid "Influence vectors (Biplot)"
@@ -3152,12 +3611,29 @@ msgid "Input Layer"
 msgstr "輸入層"
 
 #: mDCA/results/instructions.title
+#: mSTAB/results/instructions.title
 msgid "Instructions"
 msgstr "操作說明"
+
+#: R/mstab.b.R
+msgid "Insufficient degrees of freedom for intercepts test"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Insufficient degrees of freedom for slopes test"
+msgstr ""
 
 #: R/msnp.b.R
 msgid "Interaction Order"
 msgstr "交互作用階數"
+
+#: mSTAB/results/shelfTable.columns.title
+msgid "Intercept (t = 0)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Intercepts differ"
+msgstr ""
 
 #: mCOR/options/clustMat.title
 #: mCOR/results/rplots.title
@@ -3193,7 +3669,7 @@ msgid "Interventions Avoided Plot"
 msgstr "避免介入圖"
 
 #: mPWR/options/icc.title
-#: mPWR/ui[1]/icc.label
+#: mPWR/ui[2]/icc.label
 msgid "Intraclass correlation (ICC)"
 msgstr "組內相關係數 (ICC)"
 
@@ -3225,6 +3701,7 @@ msgstr "IQR Tukey's 圍籬"
 #: package/analyses/mUI.menuGroup
 #: package/analyses/mSNP.menuGroup
 #: package/analyses/mPWR.menuSubgroup
+#: package/analyses/mSTAB.menuGroup
 #: mCOR/options.menuGroup
 #: mDCA/options.menuGroup
 #: mLR/options.menuGroup
@@ -3238,6 +3715,7 @@ msgstr "IQR Tukey's 圍籬"
 #: mROC/options.menuGroup
 #: mSNP/options.menuGroup
 #: mSRV/options.menuGroup
+#: mSTAB/options.menuGroup
 #: mUI/options.menuGroup
 msgid "jYS"
 msgstr "jYS"
@@ -3294,6 +3772,10 @@ msgstr "K 均值 «盲» 集群 對 真實組別"
 msgid "K-Means Cluster"
 msgstr "K 均值集群"
 
+#: R/mpca.b.R
+msgid "K-Means clustering failed:"
+msgstr ""
+
 #: mPCA/options/kmeansTable.title
 msgid "K-Means contingency/ARI comparison"
 msgstr "K 均值列聯表 / ARI 比較"
@@ -3325,6 +3807,10 @@ msgstr ""
 #: mSRV/results/kmSection/kmSummaryTable.title
 msgid "Kaplan-Meier Survival Summary"
 msgstr "Kaplan-Meier 存活摘要"
+
+#: R/msrv.b.R
+msgid "Kaplan–Meier estimation failed:"
+msgstr ""
 
 #: mCOR/options/method/kendall.title
 msgid "Kendall (τ)"
@@ -3384,6 +3870,14 @@ msgstr "水準"
 msgid "Likelihood Ratio Test"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Limiting batch"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Limiting Batch:"
+msgstr ""
+
 #: mROC/options/lwd.title
 msgid "Line width"
 msgstr "線條寬度"
@@ -3397,7 +3891,7 @@ msgstr "線性迴歸 (F檢定)"
 msgid "Linkage Disequilibrium (LD) analysis"
 msgstr "連鎖不平衡 (LD) 分析"
 
-#: mSNP/ui[9].label
+#: mSNP/ui[10].label
 #: mSNP/results/ldGroup.title
 msgid "Linkage Disequilibrium (LD) Analysis"
 msgstr "連鎖不平衡 (LD) 分析"
@@ -3418,6 +3912,12 @@ msgstr "對數尺度"
 msgid "Log scale for Odds Ratios"
 msgstr "勝算比之對數尺度"
 
+#: R/mstab.b.R
+msgid ""
+"Log transformation requires strictly positive values of the response "
+"variable."
+msgstr ""
+
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/log-additive.title
 msgid "Log-additive"
@@ -3426,6 +3926,10 @@ msgstr "對數加成模型"
 #: mSRV/results/logRankTable.title
 msgid "Log-rank Test (Group Comparison)"
 msgstr "對數秩檢定 (組間比較)"
+
+#: R/msrv.b.R
+msgid "Log-rank test could not be computed: {err}"
+msgstr ""
 
 #: mSRV/options/showLogRank.title
 msgid "Log-rank Test for Group Comparison"
@@ -3481,6 +3985,10 @@ msgid ""
 "Settings) for reproducibility."
 msgstr ""
 
+#: mSTAB/options/studyDuration.title
+msgid "Long-term Study Duration (0 - auto)"
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -3517,9 +4025,17 @@ msgstr "信賴區間下限"
 msgid "Lower fence"
 msgstr "下圍籬"
 
+#: mSTAB/options/specType/lower.title
+msgid "Lower limit only (Decreasing attribute / Assay)"
+msgstr ""
+
 #: mCOR/options/plotMetL.title
 msgid "Lower part"
 msgstr "下半部"
+
+#: mSTAB/options/lsl.title
+msgid "Lower Specification Limit (LSL)"
+msgstr ""
 
 #: mUI/results/stat/uistat.columns.title
 msgid "Lower threshold"
@@ -3672,6 +4188,12 @@ msgstr "最大閾值 (%)"
 msgid "Max time (0 = unlimited)"
 msgstr ""
 
+#: R/msnp.b.R
+msgid ""
+"Maximum interaction order was reduced from {user_ord} to {max_ord} (the "
+"number of available markers)."
+msgstr ""
+
 #: mMF/options/maxiter.title
 msgid "Maximum number of iterations"
 msgstr "最大疊代次數"
@@ -3743,6 +4265,10 @@ msgstr "平均準確率下降 (%)"
 msgid "Mean Predicted Probability"
 msgstr "平均預測機率"
 
+#: mSTAB/results/poolTable.columns.title
+msgid "Mean Square"
+msgstr ""
+
 #: R/mout.b.R
 msgid "Median"
 msgstr "中位數"
@@ -3783,7 +4309,7 @@ msgid "Min Threshold (%)"
 msgstr "最小閾值 (%)"
 
 #: mPWR/options/es.title
-#: mPWR/ui[1]/es.label
+#: mPWR/ui[0]/es.label
 msgid "Minimally-interesting effect size"
 msgstr "最小有意義效果量"
 
@@ -3800,7 +4326,7 @@ msgid "Minimum Call Rate"
 msgstr "最低判讀/檢出率"
 
 #: mPWR/options/power.title
-#: mPWR/ui[1]/power.label
+#: mPWR/ui[0]/power.label
 msgid "Minimum desired power"
 msgstr "最低期望檢定力"
 
@@ -3965,6 +4491,18 @@ msgstr "模型校準表"
 msgid "Model Coefficients (Post-Selection / Refitted Model)"
 msgstr "模型係數 (選擇後 / 重新擬合模型)"
 
+#: mSTAB/options/showDiagTable.title
+msgid "Model Diagnostics & Assumptions Table"
+msgstr ""
+
+#: mSTAB/results/diagTable.title
+msgid "Model Diagnostics & Goodness of Fit"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Model explained variance"
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "Model fit (Wald test): χ² = {stat}, df = {df}, p = {p}; Events of interest = "
@@ -3974,14 +4512,6 @@ msgstr ""
 #: mLR/results/infoTable.title
 msgid "Model Fit & Predictive Performance"
 msgstr "模型配適度與預測表現"
-
-#: R/msrv.b.R
-msgid "Model fitting failed to converge:"
-msgstr ""
-
-#: R/msrv.b.R
-msgid "Model fitting failed to converge."
-msgstr ""
 
 #: mLR/options/show_formula.title
 msgid "Model formula"
@@ -4006,6 +4536,10 @@ msgstr "模型效能長條圖"
 msgid "Model Probabilities (0 to 1)"
 msgstr "模型機率 (0 到 1)"
 
+#: mSTAB/options/modelChoice.title
+msgid "Model Selection Strategy"
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -4019,6 +4553,10 @@ msgstr "中度穩定性 (0.25 <= CS < 0.5)"
 #: mOUT/options/outlcheck/mZS.title
 msgid "Modified Z-score (Hampel filter)"
 msgstr "修正 Z 分數 (Hampel 過濾器)"
+
+#: R/mstab.b.R
+msgid "months"
+msgstr ""
 
 #: mUI/options/isMCI.title
 #: mUI/results/stat/mcistat.title
@@ -4044,7 +4582,7 @@ msgstr ""
 msgid "Multiclass ROC Layout"
 msgstr "多分類 ROC 版面配置"
 
-#: mSNP/ui[7].label
+#: mSNP/ui[8].label
 #: mSNP/results/mdrGroup.title
 msgid "Multifactor Dimensionality Reduction (MDR)"
 msgstr "多因子降維分析 (MDR)"
@@ -4060,6 +4598,10 @@ msgstr "多重比較校正"
 #: mMF/options/imputeOV.title
 msgid "Multiple imputation for missing data"
 msgstr "缺失資料的多重插補"
+
+#: mSNP/ui[1].label
+msgid "Multiple Testing"
+msgstr ""
 
 #: mSNP/options/adjust.title
 msgid "Multiple testing correction"
@@ -4090,7 +4632,7 @@ msgstr "樣本數 (N) 對效果量曲線"
 msgid "N Events"
 msgstr "事件數"
 
-#: mPWR/ui[1]/n.label
+#: mPWR/ui[0]/n.label
 msgid "N for group 1"
 msgstr "第 1 組樣本數"
 
@@ -4109,6 +4651,10 @@ msgstr "N1"
 #: mPWR/results/powerTable.columns.title
 msgid "N2"
 msgstr "N2"
+
+#: mSTAB/options/trans/log.title
+msgid "Natural logarithm ln(Y) (First-order kinetics)"
+msgstr ""
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 10%"
@@ -4156,8 +4702,8 @@ msgid "Net Reduction in Interventions (per 100 patients)"
 msgstr "介入的淨減少 (每 100 名患者)"
 
 #: R/mcor.b.R
-msgid "Network ("
-msgstr "網路 ("
+msgid "Network"
+msgstr ""
 
 #: mCOR/options/glassoLayout.title
 msgid "Network layout"
@@ -4205,11 +4751,31 @@ msgstr ""
 msgid "No events of the target cause observed for Fine–Gray regression."
 msgstr ""
 
+#: R/msnp.b.R
+msgid "No markers remained after Quality Control filters for association analysis."
+msgstr ""
+
+#: R/msnp.b.R
+msgid "No markers remained after Quality Control filters for MDR analysis."
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "No misclassified cases found."
 msgstr "未發現錯誤分類個案。"
+
+#: R/mstab.b.R
+msgid "No significant autocorrelation"
+msgstr ""
+
+#: mSTAB/options/accelCondition/no_change.title
+msgid "No significant change at accelerated condition (Extrapolation allowed)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "No valid batch levels found."
+msgstr ""
 
 #: R/msrv.b.R
 msgid "No valid predictors found for time-dependent Cox model."
@@ -4224,7 +4790,7 @@ msgid "Noise (95th percentile)"
 msgstr "雜訊 (第 95 百分位數)"
 
 #: R/mpwr.b.R
-#: mPWR/ui[1]/alt/non-inferior.title
+#: mPWR/ui[0]/alt/non-inferior.title
 msgid "non-inferiority"
 msgstr "非劣性"
 
@@ -4263,9 +4829,25 @@ msgstr "無"
 msgid "None (0)"
 msgstr "無 (0)"
 
+#: mSTAB/options/trans/none.title
+msgid "None (Zero-order linear kinetics)"
+msgstr ""
+
 #: R/mmout.b.R
 msgid "Normal"
 msgstr "常態"
+
+#: R/mstab.b.R
+msgid "Normal Q-Q"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Normality assumption met (p >= 0.05)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Normality of Residuals (Shapiro-Wilk)"
+msgstr ""
 
 #: R/mout.b.R
 #: R/mui.b.R
@@ -4277,6 +4859,14 @@ msgid ""
 "Not enough events or survivors at the selected analysis time point t to "
 "perform ROC analysis."
 msgstr "在所選分析時間點 t，事件或存活個體數不足，無法進行 ROC 分析。"
+
+#: mSTAB/options/accelCondition/none.title
+msgid "Not evaluated / None"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Not tested (slopes are unequal)"
+msgstr ""
 
 #: R/msnp.b.R
 msgid ""
@@ -4394,6 +4984,7 @@ msgstr "BB 基因型觀察值"
 
 #: R/mmf.b.R
 #: R/msnp.b.R
+#: R/mstab.b.R
 msgid "Observed"
 msgstr "觀察值"
 
@@ -4434,12 +5025,12 @@ msgid "Odds Ratio Forest Plot"
 msgstr "勝算比森林圖"
 
 #: R/mpwr.b.R
-#: mPWR/options/design/one.sample.title
+#: mPWR/options/design/one_sample.title
 msgid "One Sample (Student)"
 msgstr "單一樣本 (Student)"
 
 #: R/mpwr.b.R
-#: mPWR/options/design/one.sample_np.title
+#: mPWR/options/design/one_sample_np.title
 msgid "One Sample (Wilcoxon)"
 msgstr "單一樣本 (Wilcoxon)"
 
@@ -4455,7 +5046,7 @@ msgstr "單一樣本相關 (Spearman)"
 
 #: R/mcor.b.R
 #: R/mpwr.b.R
-#: mPWR/ui[1]/alt/one.sided.title
+#: mPWR/ui[0]/alt/one.sided.title
 msgid "one-tailed"
 msgstr "單尾"
 
@@ -4488,6 +5079,12 @@ msgstr "OOB袋外誤差表"
 msgid "Optimal cut-off"
 msgstr ""
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
+msgid "Optimal cutoff for '{part}' could not be computed: {err}"
+msgstr ""
+
 #: mDCA/results/dcaTable.columns.title
 msgid "Optimal Threshold"
 msgstr "最佳閾值"
@@ -4510,6 +5107,14 @@ msgstr "階數"
 msgid "Original"
 msgstr "原始"
 
+#: R/mstab.b.R
+msgid "Other batches"
+msgstr ""
+
+#: R/mrf.b.R
+msgid "Out-of-Bag (OOB)"
+msgstr ""
+
 #: mRF/options/partition/oob.title
 msgid "Out-of-Bag (OOB) Estimation"
 msgstr "袋外 (OOB) 估計"
@@ -4525,6 +5130,14 @@ msgstr "結果變項 (病例組/對照組)"
 #: mSNP/ui[0][1].label
 msgid "Outcome Variable (Case/Control)"
 msgstr "結果變項 (病例組/對照組)"
+
+#: R/msnp.b.R
+msgid "Outcome variable must have 2 levels for MDR analysis."
+msgstr ""
+
+#: R/msnp.b.R
+msgid "Outcome variable must have at least 2 levels for association tests."
+msgstr ""
 
 #: R/mmf.b.R
 msgid "OutFlux"
@@ -4606,11 +5219,19 @@ msgstr "輸出資訊"
 msgid "Output Layer"
 msgstr "輸出層"
 
+#: mSTAB/ui[3].label
+msgid "Output Tables & Plots"
+msgstr ""
+
 #: mLR/ui[3].label
 #: mMLP/ui[3].label
 #: mRF/ui[3].label
 msgid "Outputs & Evaluation"
 msgstr "輸出與評估"
+
+#: R/mstab.b.R
+msgid "OVERALL / PROPOSED"
+msgstr ""
 
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/overdominant.title
@@ -4680,6 +5301,10 @@ msgstr "成對樣本 (Student)"
 #: mPWR/options/design/paired_np.title
 msgid "Paired Samples (Wilcoxon)"
 msgstr "成對樣本 (Wilcoxon)"
+
+#: mSTAB/results/coefTable.columns.title
+msgid "Parameter"
+msgstr ""
 
 #: mCOR/options/glassoTable.title
 #: mCOR/results/glassoGroup/glassoTable.title
@@ -4779,6 +5404,10 @@ msgstr "無法為非數值計算 Pearson 相關"
 msgid "Pearson's r"
 msgstr "Pearson's r 相關係數"
 
+#: R/mstab.b.R
+msgid "Penalized for parameter count"
+msgstr ""
+
 #: R/mmf.b.R
 msgid "per pattern"
 msgstr "按型態"
@@ -4803,6 +5432,14 @@ msgstr "執行置換檢定"
 msgid "Performance Statistics"
 msgstr "效能統計量"
 
+#: R/mstab.b.R
+msgid "Permitted Shelf Life"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Permitted Shelf Life:"
+msgstr ""
+
 #: R/mrf.b.R
 #: mMLP/options/show_imp.title
 #: mRF/options/imp_type/permutation.title
@@ -4818,11 +5455,15 @@ msgstr "置換檢定 p 值"
 msgid "Permutation p-adj"
 msgstr "置換檢定調整後 p 值"
 
+#: R/mpca.b.R
+msgid "Permutation separation test calculation failed: {err}"
+msgstr ""
+
 #: mMF/results/imput/errors.columns.title
 msgid "PFC"
 msgstr "PFC"
 
-#: mSNP/ui[3].label
+#: mSNP/ui[4].label
 #: mSNP/results/assocGroup.title
 msgid "Phenotype Association Tests"
 msgstr "表現型關聯性檢定"
@@ -4882,7 +5523,7 @@ msgstr "圖類型"
 #: mMF/ui[1][0][1].label
 #: mMOUT/options/showPlots.title
 #: mMOUT/ui[2].label
-#: mPWR/ui[2].label
+#: mPWR/ui[3].label
 #: mUI/ui[1][4].label
 msgid "Plots"
 msgstr "圖"
@@ -4904,6 +5545,18 @@ msgstr "多型性"
 msgid "Polymorphism test"
 msgstr "多型性檢定"
 
+#: mSTAB/options/alphaPool.title
+msgid "Poolability Alpha Level (α)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Pooled residual variance across batches"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Pooled Slope"
+msgstr ""
+
 #: mSNP/results/hweGroup/freqTable.columns.title
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "Population"
@@ -4913,7 +5566,7 @@ msgstr "族群"
 msgid "Population genetic metrics"
 msgstr "族群遺傳指標"
 
-#: mSNP/ui[5].label
+#: mSNP/ui[6].label
 #: mSNP/results/popGroup.title
 msgid "Population genetics metrics"
 msgstr "族群遺傳指標"
@@ -4921,6 +5574,14 @@ msgstr "族群遺傳指標"
 #: R/mmlp.b.R
 msgid "Positive Weight"
 msgstr "正權重"
+
+#: R/mstab.b.R
+msgid "Possible non-normality (p < 0.05)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Possible residual autocorrelation"
+msgstr ""
 
 #: R/mpwr.b.R
 #: package/analyses/mPWR.menuGroup
@@ -5006,6 +5667,14 @@ msgstr "預測類別"
 #: mRF/results/predProb.title
 msgid "Predicted Probability"
 msgstr "預測機率"
+
+#: mSTAB/options/showPredPlot.title
+msgid "Prediction Intervals & Release Limits (SRL)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Prediction Intervals & Shelf-Life Release Limits (SRL)"
+msgstr ""
 
 #: mMF/options/pmmk.title
 msgid "Predictive Mean Matching (PMM) steps"
@@ -5098,6 +5767,10 @@ msgstr "機率模型"
 msgid "Probability Range"
 msgstr "機率範圍"
 
+#: R/mstab.b.R
+msgid "Proceed to Step 2"
+msgstr ""
+
 #: mSRV/results/coxSection/coxAssumpTable.title
 msgid "Proportional Hazards Assumption (Schoenfeld Residuals Test)"
 msgstr "比例風險假設 (Schoenfeld 殘差檢定)"
@@ -5155,7 +5828,7 @@ msgstr "定性調色盤"
 msgid "Quality Control (QC) Analysis"
 msgstr "品質管制 (QC) 分析"
 
-#: mSNP/ui[6].label
+#: mSNP/ui[7].label
 msgid "Quality Control (QC) Filters"
 msgstr "品質控制 (QC) 篩選條件"
 
@@ -5178,6 +5851,11 @@ msgstr "表示品質 (Cos²) 熱圖"
 #: mPCA/options/cos2Table.title
 msgid "Quality of representation (Cos²) table"
 msgstr "表示品質 (Cos²) 表"
+
+#: mSTAB/options/dep.title
+#: mSTAB/ui[0][0].label
+msgid "Quantitative Attribute / Response"
+msgstr ""
 
 #: mSNP/options/ldMetric/r2.title
 #: mSNP/results/ldGroup/ldTable.columns.title
@@ -5256,18 +5934,32 @@ msgstr "參考水準：{ref}"
 #: package/analyses/mSRV.menuSubgroup
 #: package/analyses/mROC.menuSubgroup
 #: package/analyses/mDCA.menuSubgroup
+#: package/analyses/mSTAB.menuSubgroup
 #: mDCA/options.menuSubgroup
 #: mLR/options.menuSubgroup
 #: mMLP/options.menuSubgroup
 #: mRF/options.menuSubgroup
 #: mROC/options.menuSubgroup
 #: mSRV/options.menuSubgroup
+#: mSTAB/options.menuSubgroup
 msgid "Regression & Classification"
 msgstr "迴歸與分類"
+
+#: R/mpca.b.R
+msgid "Regression and ROC validation failed:"
+msgstr ""
+
+#: mSTAB/options/showCoefTable.title
+msgid "Regression Coefficients Table"
+msgstr ""
 
 #: mPCA/ui[3][0][3].label
 msgid "Regression Model & Validation"
 msgstr "迴歸模型與驗證"
+
+#: mSTAB/results/coefTable.title
+msgid "Regression Model Coefficients"
+msgstr ""
 
 #: mPCA/results/regTable.title
 msgid "Regression Model Performance (K-fold Cross-Validation)"
@@ -5296,6 +5988,10 @@ msgstr "正則化懲罰最佳化"
 #: mPWR/ui[1]/n_ratio.label
 msgid "Relative size of group 2 to group 1"
 msgstr "第 2 組相對於第 1 組的規模大小"
+
+#: R/mstab.b.R
+msgid "Release Limit (SRL)"
+msgstr ""
 
 #: mMLP/options/activation/relu.title
 msgid "ReLU"
@@ -5339,6 +6035,42 @@ msgstr "表徵品質 (Cos²)"
 #: mMF/options/setseed.title
 msgid "Reproducible random number generation (RNG) results"
 msgstr "可重現的隨機數 (RNG) 生成結果"
+
+#: mSTAB/results/diagPlot.title
+msgid "Residual Diagnostic Plots"
+msgstr ""
+
+#: mSTAB/options/showDiagPlot.title
+msgid "Residual Diagnostics Plots"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Residual Error (Full Model)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Residual Standard Error (s)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Residual variability estimate"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Residuals"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Residuals vs Fitted"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Residuals vs Time"
+msgstr ""
+
+#: mSTAB/options/trans.title
+msgid "Response Transformation"
+msgstr ""
 
 #: R/msrv.b.R
 msgid "Restricted mean survival time evaluated up to τ = {tau}."
@@ -5425,6 +6157,13 @@ msgstr "ROC 分析曲線"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mpca.b.R
+#: R/mrf.b.R
+msgid "ROC analysis for '{part}' could not be computed: {err}"
+msgstr ""
+
+#: R/mlr.b.R
+#: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "ROC Analysis for {class}"
 msgstr "{class} 之 ROC 分析"
@@ -5507,6 +6246,13 @@ msgstr "ROC 結果"
 msgid "ROC table"
 msgstr "ROC 表"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
+#: R/mpca.b.R
+#: R/mrf.b.R
+msgid "ROC table calculation for '{part}' failed: {err}"
+msgstr ""
+
 #: mLR/options/roc_x.title
 #: mMLP/options/roc_x.title
 #: mPCA/options/roc_x.title
@@ -5579,6 +6325,10 @@ msgstr "以中心性調整節點大小"
 msgid "Scale position"
 msgstr "尺度位置"
 
+#: R/mstab.b.R
+msgid "Scale-Location"
+msgstr ""
+
 #: R/msrv.b.R
 msgid "Schoenfeld residuals"
 msgstr ""
@@ -5648,6 +6398,13 @@ msgstr ""
 "選取一個二元目標變數 (結果)、目標事件水準，以及至少一個模型機率欄 (值介於 0 "
 "與 1 之間)。"
 
+#: R/mstab.b.R
+msgid ""
+"Select a quantitative attribute (e.g. Assay % or Impurities %), a continuous "
+"time variable (e.g. Months), and a batch/lot factor variable. Specify your "
+"acceptance criteria (LSL and/or USL)."
+msgstr ""
+
 #: mCOR/options/selgroup.title
 #: mROC/options/selgroup.title
 msgid "Select group"
@@ -5710,6 +6467,18 @@ msgstr "分離"
 msgid "Separate Plots (Class-Specific)"
 msgstr "分離圖 (依類別)"
 
+#: R/mstab.b.R
+msgid "Separate slopes & intercepts"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Separate slopes & separate intercepts (Model 1)"
+msgstr ""
+
+#: mSTAB/options/modelChoice/sep_slopes_sep_int.title
+msgid "Separate slopes and separate intercepts (Model 1)"
+msgstr ""
+
 #: mDCA/options/palBrewer/Set1.title
 #: mLR/options/palBrewer/Set1.title
 #: mMLP/options/palBrewer/Set1.title
@@ -5757,6 +6526,38 @@ msgstr "陰影"
 msgid "Shannon Index (I)"
 msgstr "Shannon 指數 (I)"
 
+#: R/mstab.b.R
+msgid "Shelf Life"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Shelf Life (months)"
+msgstr ""
+
+#: mSTAB/results/shelfTable.title
+msgid "Shelf Life / Retest Period Estimation Summary"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Shelf Life Comparison & Extrapolation Horizon"
+msgstr ""
+
+#: mSTAB/options/showShelfPlot.title
+msgid "Shelf Life Comparison & Horizon Plot"
+msgstr ""
+
+#: mSTAB/results/shelfPlot.title
+msgid "Shelf Life Comparison & ICH Q1E Extrapolation Horizon"
+msgstr ""
+
+#: mSTAB/options/showShelfTable.title
+msgid "Shelf Life Summary Table"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Shortest batch"
+msgstr ""
+
 #: mSRV/options/showAdjCurves.title
 msgid "Show Adjusted Survival Curves"
 msgstr ""
@@ -5786,6 +6587,10 @@ msgstr "顯著水準 (alpha)"
 msgid "Significance markers"
 msgstr "顯著性標記"
 
+#: mSTAB/options/accelCondition/change_observed.title
+msgid "Significant change observed at accelerated condition (No extrapolation)"
+msgstr ""
+
 #: R/msnp.b.R
 msgid "Significant HWE deviation"
 msgstr "顯著 HWE 偏差"
@@ -5793,6 +6598,10 @@ msgstr "顯著 HWE 偏差"
 #: R/mcor.b.R
 msgid "Simultaneous multiple correlation comparisons using {n} method"
 msgstr "使用 {n} 方法進行同步多重相關比較"
+
+#: R/mstab.b.R
+msgid "Single batch – poolability test not applicable"
+msgstr ""
 
 #: mCOR/options/clustMet/single.title
 msgid "Single Linkage"
@@ -5809,6 +6618,22 @@ msgstr "單核苷酸多型性 (SNP)"
 #: mMF/options/anghead.title
 msgid "Slanted Titles"
 msgstr "傾斜標題"
+
+#: mSTAB/results/shelfTable.columns.title
+msgid "Slope (rate / month)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Slopes are poolable"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Slopes differ"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Slopes differ significantly"
+msgstr ""
 
 #: package/datasets/SNPandHWEanalysis.name
 msgid "SNP and HWE analysis"
@@ -5843,6 +6668,14 @@ msgstr "Spearman 等級相關 (ρ)"
 #: R/mcor.b.R
 msgid "Spearman's ρ"
 msgstr "Spearman's ρ"
+
+#: mSTAB/options/specType.title
+msgid "Specification Limit Type"
+msgstr ""
+
+#: mSTAB/ui[1].label
+msgid "Specification Limits & Criteria"
+msgstr ""
 
 #: R/mmlp.b.R
 #: R/mpca.b.R
@@ -5908,9 +6741,35 @@ msgstr "彈性布局"
 msgid "Square"
 msgstr "平方"
 
+#: mSTAB/options/showStabPlot.title
+msgid "Stability & Shelf Life Plot"
+msgstr ""
+
+#: R/mstab.b.R
+#: package/analyses/mSTAB.title
+#: package/analyses/mSTAB.menuTitle
+#: mSTAB/options.title
+#: mSTAB/options.menuTitle
+#: mSTAB/ui.title
+#: mSTAB/results.title
+msgid "Stability Analysis (ICH Q1E)"
+msgstr ""
+
+#: package/datasets/StabilityAnalysisICHQ1E.name
+msgid "Stability Analysis ICH Q1E"
+msgstr ""
+
 #: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
 msgid "Stability Assessment"
 msgstr "穩定性評估"
+
+#: mSTAB/results/stabPlot.title
+msgid "Stability Plot with Confidence Bounds and Specification Limits"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Stability Profile & Shelf Life Estimation"
+msgstr ""
 
 #: R/msrv.b.R
 msgid "Standard errors and confidence intervals are adjusted for clustering by"
@@ -5920,9 +6779,33 @@ msgstr ""
 msgid "Standardized Beta"
 msgstr "標準化 Beta 係數"
 
+#: R/mstab.b.R
+msgid "Standardized Residuals"
+msgstr ""
+
 #: mSRV/results/coxSection/coxFitTable.columns.title
 msgid "Statistic"
 msgstr "統計量"
+
+#: mSTAB/results/diagTable.columns.title
+msgid "Statistic / Value"
+msgstr ""
+
+#: mSTAB/ui[2].label
+msgid "Statistical & Regulatory Settings (ICH Q1E)"
+msgstr ""
+
+#: mSTAB/results/poolTable.columns.title
+msgid "Statistical Decision (ICH Q1E)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Statistical intersection"
+msgstr ""
+
+#: mSTAB/results/shelfTable.columns.title
+msgid "Statistical Shelf Life (months)"
+msgstr ""
 
 #: mSNP/results/qcGroup/qcTable.columns.title
 msgid "Status"
@@ -5932,6 +6815,10 @@ msgstr "狀態"
 #: mSRV/ui[0][2].label
 msgid "Status / Event Variable"
 msgstr "狀態 / 事件變數"
+
+#: mSTAB/results/shelfTable.columns.title
+msgid "Status / Limiting Factor"
+msgstr ""
 
 #: R/msrv.b.R
 msgid ""
@@ -5950,8 +6837,17 @@ msgid ""
 msgstr ""
 
 #: mLR/results/coeffTable.columns.title
+#: mSTAB/results/coefTable.columns.title
 msgid "Std. Error"
 msgstr "標準誤"
+
+#: R/mstab.b.R
+msgid "Step 1: Slopes (Batch * Time)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Step 2: Intercepts (Batch)"
+msgstr ""
 
 #: R/mlr.b.R
 msgid ""
@@ -5985,12 +6881,16 @@ msgstr "依序"
 msgid "Sum"
 msgstr "總和"
 
+#: mSTAB/results/poolTable.columns.title
+msgid "Sum of Squares"
+msgstr ""
+
 #: R/mdca.b.R
 msgid "Superior"
 msgstr "優越"
 
 #: R/mpwr.b.R
-#: mPWR/ui[1]/alt/superior.title
+#: mPWR/ui[0]/alt/superior.title
 msgid "superiority"
 msgstr "優越性"
 
@@ -6043,7 +6943,7 @@ msgid "Tables and Visualizations"
 msgstr "表格與視覺化圖表"
 
 #: mPWR/options/alt.title
-#: mPWR/ui[1]/alt.label
+#: mPWR/ui[0]/alt.label
 msgid "Tails"
 msgstr "尾數"
 
@@ -6076,6 +6976,10 @@ msgstr "常態性檢定"
 #: mSRV/options/coxAssump.title
 msgid "Test Proportional Hazards Assumption"
 msgstr "檢定比例風險假設"
+
+#: mSTAB/results/poolTable.columns.title
+msgid "Test Step / Source"
+msgstr ""
 
 #: mPWR/options/k_tested.title
 #: mPWR/ui[1]/k_tested.label
@@ -6144,6 +7048,10 @@ msgstr ""
 msgid "Theoretical Chi-Square Quantiles"
 msgstr "理論卡方分位數"
 
+#: R/mstab.b.R
+msgid "Theoretical Quantiles"
+msgstr ""
+
 #: package/datasets/UncertainInterval(UI).description
 msgid "Three-Way threshold determination in test results"
 msgstr "檢定結果中的三向度閾值決定"
@@ -6189,6 +7097,11 @@ msgstr "時間點 t"
 msgid "Time Transform Function"
 msgstr ""
 
+#: mSTAB/options/time.title
+#: mSTAB/ui[0][1].label
+msgid "Time Variable"
+msgstr ""
+
 #: mSRV/options/elapsed.title
 #: mSRV/ui[0][0].label
 msgid "Time Variable (elapsed time)"
@@ -6197,14 +7110,6 @@ msgstr "時間變數 (經過時間)"
 #: R/msrv.b.R
 msgid "Time variable must be numeric."
 msgstr "時間變項必須為數值型態。"
-
-#: mSRV/options/timeDepVars.title
-msgid "Time-dependent Covariates"
-msgstr ""
-
-#: mSRV/ui[0][7].label
-msgid "Time-dependent Covariates (Cox)"
-msgstr ""
 
 #: mSRV/options/showTimeDepEffects.title
 msgid "Time-dependent effects (time-varying coefficients)"
@@ -6232,6 +7137,15 @@ msgstr "時間相依 ROC 曲線 (t = {time})"
 msgid "Time-dependent ROC Results"
 msgstr "時間相依 ROC 結果"
 
+#: mSRV/options/timeDepVars.title
+#: mSRV/ui[0][7].label
+msgid "Time-varying Effects (Cox)"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Time-varying effects model fitting failed to converge:"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Too few observations after removing missing values (minimum 5 required)."
 msgstr "刪除缺失值後觀測值過少 (至少需 5 筆)。"
@@ -6241,6 +7155,12 @@ msgid ""
 "Too few valid observations for Decision Curve Analysis (at least 10 "
 "required)."
 msgstr "有效觀測值太少，無法進行決策曲線分析 (至少需要 10 個)。"
+
+#: R/mstab.b.R
+msgid ""
+"Too few valid observations for stability analysis (at least 4 observations "
+"required)."
+msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -6337,7 +7257,7 @@ msgid "Two-graph ROC curves"
 msgstr "雙圖 ROC 曲線"
 
 #: R/mpwr.b.R
-#: mPWR/ui[1]/alt/two.sided.title
+#: mPWR/ui[0]/alt/two.sided.title
 msgid "two-tailed"
 msgstr "雙尾"
 
@@ -6377,6 +7297,10 @@ msgstr "二元邏輯斯模型之不確定區間估計"
 msgid "Uncertainty interval polygon"
 msgstr "不確定區間多邊圖"
 
+#: R/mstab.b.R
+msgid "Undefined (zero residual variance)"
+msgstr ""
+
 #: package/analyses/mOUT.title
 #: package/analyses/mOUT.menuTitle
 #: mOUT/options.title
@@ -6401,9 +7325,17 @@ msgstr "信賴區間上限"
 msgid "Upper fence"
 msgstr "上圍籬"
 
+#: mSTAB/options/specType/upper.title
+msgid "Upper limit only (Increasing attribute / Impurity)"
+msgstr ""
+
 #: mCOR/options/plotMetU.title
 msgid "Upper part"
 msgstr "上半部"
+
+#: mSTAB/options/usl.title
+msgid "Upper Specification Limit (USL)"
+msgstr ""
 
 #: mUI/results/stat/uistat.columns.title
 msgid "Upper threshold"
@@ -6520,6 +7452,10 @@ msgstr "主成分分析之變項"
 msgid "Variables per Split (mtry)"
 msgstr "每次分割使用的變項數 (mtry)"
 
+#: R/mstab.b.R
+msgid "Variance may change over time"
+msgstr ""
+
 #: mPWR/options/var_ratio.title
 #: mPWR/ui[1]/var_ratio.label
 msgid "Variance ratio (SD₁² / SD₂²)"
@@ -6540,10 +7476,6 @@ msgstr ""
 #: mCOR/options/clustMet/ward.D.title
 msgid "Ward's Linkage"
 msgstr ""
-
-#: R/mpca.b.R
-msgid "Warning: Grouping variable must have at least 2 levels."
-msgstr "警告：分組變項必須至少有 2 個水準。"
 
 #: R/mmlp.b.R
 msgid "Weight Decay"
@@ -6593,7 +7525,7 @@ msgid "z-value"
 msgstr "z 值"
 
 #: mPWR/options/alpha.title
-#: mPWR/ui[1]/alpha.label
+#: mPWR/ui[0]/alpha.label
 msgid "α (type I error rate)"
 msgstr "α (型 I 誤差率)"
 
