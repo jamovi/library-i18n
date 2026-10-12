@@ -10,6 +10,11 @@ msgstr ""
 
 #: R/areachart.b.R
 #: R/linechart.b.R
+msgid "\"{var}\" is a reserved name. Please rename this variable."
+msgstr "« {var} » est un nom réservé. Veuillez renommer cette variable."
+
+#: R/areachart.b.R
+#: R/linechart.b.R
 msgid ""
 "\"Range\" option for the X-axis is only available for numeric and date "
 "variables."
@@ -201,7 +206,7 @@ msgstr ""
 "</ul>\n"
 "<p>Les p-valeurs peuvent être corrigées <strong>par groupe</strong> (pour "
 "chaque variable) pour les tests post-hoc ou <strong>globalement</strong> "
-"(par groupe et par variable) pour les tests Mann-Withney U, Kruskal-Wallis "
+"(par groupe et par variable) pour les tests Mann-Whitney U, Kruskal-Wallis "
 "et post-hoc. Les p-valeurs du test DSCF sont toujours corrigées par groupe ; "
 "aucune autre correction n'est possible.</p>\n"
 "<p>Un fichier de démonstration est disponible dans Ouvrir > Bibliothèque de "
@@ -446,10 +451,12 @@ msgstr ""
 "(CATA).</p>\n"
 "<p>Les questions peuvent être codées comme suit :</p>\n"
 "<ul>\n"
-"<li>plusieurs variables dichotomiques (ou variables indicatrices) utilisant "
-"0/1, 1/2 ou O/N pour chaque réponse possible ;</li>\n"
-"<li>une seule variable à valeurs multiples contenant les réponses cochées, "
-"séparées par un symbole (généralement « , » ou « ; »).</li>\n"
+"<li>plusieurs <strong>variables dichotomiques (ou variables "
+"indicatrices)</strong> utilisant 0/1, 1/2 ou O/N pour chaque réponse "
+"possible ;</li>\n"
+"<li>une seule <strong>variable à valeurs multiples</strong> contenant les "
+"réponses cochées, séparées par un symbole (généralement « , » ou « ; "
+"»).</li>\n"
 "</ul>\n"
 "<p>Un fichier de démonstration est disponible dans Ouvrir > Bibliothèque de "
 "données > vijPlots > Credit Cards</p>"
@@ -473,10 +480,12 @@ msgstr ""
 "s'appliquent » (CATA).</p>\n"
 "<p>Les questions peuvent être codées comme suit :</p>\n"
 "<ul>\n"
-"<li>plusieurs variables dichotomiques (ou variables indicatrices) utilisant "
-"0/1, 1/2 ou O/N pour chaque réponse possible ;</li>\n"
-"<li>une seule variable à valeurs multiples contenant les réponses cochées, "
-"séparées par un symbole (généralement « , » ou « ; »).</li>\n"
+"<li>plusieurs <strong>variables dichotomiques (ou variables "
+"indicatrices)</strong> utilisant 0/1, 1/2 ou O/N pour chaque réponse "
+"possible ;</li>\n"
+"<li>une seule <strong>variable à valeurs multiples</strong> contenant les "
+"réponses cochées, séparées par un symbole (généralement « , » ou « ; "
+"»).</li>\n"
 "</ul>\n"
 "<p>Un fichier de démonstration est disponible dans Ouvrir > Bibliothèque de "
 "données > vijPlots > Credit Cards</p>"
@@ -1449,6 +1458,10 @@ msgstr "Variables qualitatives"
 msgid "Categories"
 msgstr "Catégories"
 
+#: mosaic/options/showCategoryPercent.title
+msgid "Category %"
+msgstr "% des catégories"
+
 #: barplot/options/rows.title
 #: barplot/ui[0][0].label
 #: mosaic/options/category.title
@@ -1594,6 +1607,10 @@ msgstr "Centré"
 #: qqplot/options/distrib/chisq.title
 msgid "Chi-squared"
 msgstr "Khi-deux"
+
+#: piechart/options/clockwise.title
+msgid "Clockwise"
+msgstr "Modalités dans le sens horaire"
 
 #: mosaic/options/labelColor.title
 msgid "Color"
@@ -1870,6 +1887,12 @@ msgstr "Effectifs"
 #: piechart/ui[0][1].label
 msgid "Counts (optional)"
 msgstr "Effectifs (optionnel)"
+
+#: R/barplot.b.R
+#: R/mosaic.b.R
+#: R/piechart.b.R
+msgid "Counts may not all be zero."
+msgstr "Les effectifs ne peuvent pas être tous nuls."
 
 #: R/barplot.b.R
 #: R/corresp.b.R
@@ -2454,6 +2477,132 @@ msgstr "Type de fréquences"
 #: qqplot/options/distrib/gamma.title
 msgid "Gamma"
 msgstr "Gamma"
+
+#: areachart/options/colorPalette/ggsci::aaas.title
+#: barchart/options/colorPalette/ggsci::aaas.title
+#: barplot/options/colorPalette/ggsci::aaas.title
+#: boxplot/options/colorPalette/ggsci::aaas.title
+#: histogram/options/colorPalette/ggsci::aaas.title
+#: linechart/options/colorPalette/ggsci::aaas.title
+#: mosaic/options/colorPalette/ggsci::aaas.title
+#: mrcrosstabs/options/colorPalette/ggsci::aaas.title
+#: mrfrequencies/options/colorPalette/ggsci::aaas.title
+#: multcorresp/options/colorPalette/ggsci::aaas.title
+#: piechart/options/colorPalette/ggsci::aaas.title
+#: principal/options/colorPalette/ggsci::aaas.title
+#: qqplot/options/colorPalette/ggsci::aaas.title
+#: raincloud/options/colorPalette/ggsci::aaas.title
+#: scatterplot/options/colorPalette/ggsci::aaas.title
+msgid "Ggsci:AAAS"
+msgstr "Ggsci:AAAS"
+
+#: areachart/options/colorPalette/ggsci::bmj.title
+#: barchart/options/colorPalette/ggsci::bmj.title
+#: barplot/options/colorPalette/ggsci::bmj.title
+#: boxplot/options/colorPalette/ggsci::bmj.title
+#: histogram/options/colorPalette/ggsci::bmj.title
+#: linechart/options/colorPalette/ggsci::bmj.title
+#: mosaic/options/colorPalette/ggsci::bmj.title
+#: mrcrosstabs/options/colorPalette/ggsci::bmj.title
+#: mrfrequencies/options/colorPalette/ggsci::bmj.title
+#: multcorresp/options/colorPalette/ggsci::bmj.title
+#: piechart/options/colorPalette/ggsci::bmj.title
+#: principal/options/colorPalette/ggsci::bmj.title
+#: qqplot/options/colorPalette/ggsci::bmj.title
+#: raincloud/options/colorPalette/ggsci::bmj.title
+#: scatterplot/options/colorPalette/ggsci::bmj.title
+msgid "Ggsci:BMJ"
+msgstr "Ggsci:BMJ"
+
+#: areachart/options/colorPalette/ggsci::jama.title
+#: barchart/options/colorPalette/ggsci::jama.title
+#: barplot/options/colorPalette/ggsci::jama.title
+#: boxplot/options/colorPalette/ggsci::jama.title
+#: histogram/options/colorPalette/ggsci::jama.title
+#: linechart/options/colorPalette/ggsci::jama.title
+#: mosaic/options/colorPalette/ggsci::jama.title
+#: mrcrosstabs/options/colorPalette/ggsci::jama.title
+#: mrfrequencies/options/colorPalette/ggsci::jama.title
+#: multcorresp/options/colorPalette/ggsci::jama.title
+#: piechart/options/colorPalette/ggsci::jama.title
+#: principal/options/colorPalette/ggsci::jama.title
+#: qqplot/options/colorPalette/ggsci::jama.title
+#: raincloud/options/colorPalette/ggsci::jama.title
+#: scatterplot/options/colorPalette/ggsci::jama.title
+msgid "Ggsci:JAMA"
+msgstr "Ggsci:JAMA"
+
+#: areachart/options/colorPalette/ggsci::jco.title
+#: barchart/options/colorPalette/ggsci::jco.title
+#: barplot/options/colorPalette/ggsci::jco.title
+#: boxplot/options/colorPalette/ggsci::jco.title
+#: histogram/options/colorPalette/ggsci::jco.title
+#: linechart/options/colorPalette/ggsci::jco.title
+#: mosaic/options/colorPalette/ggsci::jco.title
+#: mrcrosstabs/options/colorPalette/ggsci::jco.title
+#: mrfrequencies/options/colorPalette/ggsci::jco.title
+#: multcorresp/options/colorPalette/ggsci::jco.title
+#: piechart/options/colorPalette/ggsci::jco.title
+#: principal/options/colorPalette/ggsci::jco.title
+#: qqplot/options/colorPalette/ggsci::jco.title
+#: raincloud/options/colorPalette/ggsci::jco.title
+#: scatterplot/options/colorPalette/ggsci::jco.title
+msgid "Ggsci:JCO"
+msgstr "Ggsci:JCO"
+
+#: areachart/options/colorPalette/ggsci::lancet.title
+#: barchart/options/colorPalette/ggsci::lancet.title
+#: barplot/options/colorPalette/ggsci::lancet.title
+#: boxplot/options/colorPalette/ggsci::lancet.title
+#: histogram/options/colorPalette/ggsci::lancet.title
+#: linechart/options/colorPalette/ggsci::lancet.title
+#: mosaic/options/colorPalette/ggsci::lancet.title
+#: mrcrosstabs/options/colorPalette/ggsci::lancet.title
+#: mrfrequencies/options/colorPalette/ggsci::lancet.title
+#: multcorresp/options/colorPalette/ggsci::lancet.title
+#: piechart/options/colorPalette/ggsci::lancet.title
+#: principal/options/colorPalette/ggsci::lancet.title
+#: qqplot/options/colorPalette/ggsci::lancet.title
+#: raincloud/options/colorPalette/ggsci::lancet.title
+#: scatterplot/options/colorPalette/ggsci::lancet.title
+msgid "Ggsci:Lancet"
+msgstr "Ggsci:Lancet"
+
+#: areachart/options/colorPalette/ggsci::nejm.title
+#: barchart/options/colorPalette/ggsci::nejm.title
+#: barplot/options/colorPalette/ggsci::nejm.title
+#: boxplot/options/colorPalette/ggsci::nejm.title
+#: histogram/options/colorPalette/ggsci::nejm.title
+#: linechart/options/colorPalette/ggsci::nejm.title
+#: mosaic/options/colorPalette/ggsci::nejm.title
+#: mrcrosstabs/options/colorPalette/ggsci::nejm.title
+#: mrfrequencies/options/colorPalette/ggsci::nejm.title
+#: multcorresp/options/colorPalette/ggsci::nejm.title
+#: piechart/options/colorPalette/ggsci::nejm.title
+#: principal/options/colorPalette/ggsci::nejm.title
+#: qqplot/options/colorPalette/ggsci::nejm.title
+#: raincloud/options/colorPalette/ggsci::nejm.title
+#: scatterplot/options/colorPalette/ggsci::nejm.title
+msgid "Ggsci:NEJM"
+msgstr "Ggsci:NEJM"
+
+#: areachart/options/colorPalette/ggsci::npg.title
+#: barchart/options/colorPalette/ggsci::npg.title
+#: barplot/options/colorPalette/ggsci::npg.title
+#: boxplot/options/colorPalette/ggsci::npg.title
+#: histogram/options/colorPalette/ggsci::npg.title
+#: linechart/options/colorPalette/ggsci::npg.title
+#: mosaic/options/colorPalette/ggsci::npg.title
+#: mrcrosstabs/options/colorPalette/ggsci::npg.title
+#: mrfrequencies/options/colorPalette/ggsci::npg.title
+#: multcorresp/options/colorPalette/ggsci::npg.title
+#: piechart/options/colorPalette/ggsci::npg.title
+#: principal/options/colorPalette/ggsci::npg.title
+#: qqplot/options/colorPalette/ggsci::npg.title
+#: raincloud/options/colorPalette/ggsci::npg.title
+#: scatterplot/options/colorPalette/ggsci::npg.title
+msgid "Ggsci:NPG"
+msgstr "Ggsci:NPG"
 
 #: barchart/options/borderColor/gray.title
 #: barplot/options/borderColor/gray.title
@@ -3192,6 +3341,7 @@ msgstr "Gauche"
 #: histogram/ui[6][0].label
 #: likertplot/ui[7][0].label
 #: linechart/ui[3][0].label
+#: mosaic/options/showOpacityLegend.title
 #: mosaic/ui[6][0].label
 #: mrcrosstabs/ui[5][0].label
 #: multcorresp/ui[8][0].label
@@ -3405,6 +3555,10 @@ msgstr "Taille des sucettes"
 msgid "Lollipop Size & Colors"
 msgstr "Taille et couleurs des sucettes"
 
+#: R/likertplot.b.R
+msgid "Mann-Whitney tests require two groups"
+msgstr "Les test de Mann-Whitney nécessitent deux groupes."
+
 #: likertplot/options/showMannU.title
 msgid "Mann-Whitney U"
 msgstr "Mann-Whitney U"
@@ -3445,10 +3599,15 @@ msgstr "Manuel"
 msgid "Manual X-axis range doesn't have a valid date format."
 msgstr "L'intervalle manuel de l'axe X n'a pas un format de date valide."
 
+#: R/areachart.b.R
+#: R/linechart.b.R
+msgid "Manual X-axis range is invalid."
+msgstr "L'intervalle manuel de l'axe X n'est pas valide."
+
 #: mosaic/options/residualsAsOpacity.title
 #: mosaic/ui[3][0][1][0]/residualsAsOpacity.label
-msgid "Map to residuals"
-msgstr "Liée aux résidus"
+msgid "Map to Pearson residuals"
+msgstr "Liée aux résidus de Pearson"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -3520,6 +3679,7 @@ msgstr "Coordonnées principales ACM ({method})"
 msgid "MCA Standard Coordinates ({method})"
 msgstr "Coordonnées standardisées ACM ({method})"
 
+#: R/likertplot.b.R
 #: barchart/options/yaxis/mean.title
 #: barchart/ui[1][0][0][0]/yaxis_mean.label
 #: boxplot/options/showMean.title
@@ -3540,6 +3700,10 @@ msgstr "Moyenne"
 #: R/lollipop.b.R
 msgid "Mean of {var}"
 msgstr "Moyenne de {var}"
+
+#: R/histogram.b.R
+msgid "Med"
+msgstr "Méd"
 
 #: R/likertplot.b.R
 #: barchart/options/yaxis/median.title
@@ -4265,6 +4429,7 @@ msgstr "Coordonnées standardisées ACP"
 msgid "PCA Standard Coordinates ({rot})"
 msgstr "Coordonnées standardisées ACP ({rot})"
 
+#: R/mosaic.b.R
 #: mosaic/options/labelType/residuals.title
 msgid "Pearson residuals"
 msgstr "Résidus de Pearson"
@@ -4839,10 +5004,6 @@ msgstr "Lignes de référence"
 msgid "Regression Line"
 msgstr "Courbe de régression"
 
-#: R/mosaic.b.R
-msgid "Residuals"
-msgstr "Résidus"
-
 #: raincloud/options/reverse.title
 msgid "Reverse disposition"
 msgstr "Renverser la disposition"
@@ -5191,10 +5352,6 @@ msgstr "Afficher les %"
 msgid "Show bins"
 msgstr "Afficher les bâtons"
 
-#: mosaic/options/showCategoryPercent.title
-msgid "Show category %"
-msgstr "Afficher les %"
-
 #: histogram/options/density.title
 msgid "Show density"
 msgstr "Afficher la densité"
@@ -5202,10 +5359,6 @@ msgstr "Afficher la densité"
 #: histogram/options/summaryLineLabel.title
 msgid "Show label"
 msgstr "Afficher les étiquettes"
-
-#: mosaic/options/showOpacityLegend.title
-msgid "Show legend"
-msgstr "Afficher la légende"
 
 #: scatterplot/options/regLine.title
 msgid "Show line"
@@ -6104,6 +6257,7 @@ msgstr "Graphique des variables"
 msgid "Variable plot"
 msgstr "Variables"
 
+#: R/areachart.b.R
 #: R/linechart.b.R
 #: R/multcorresp.b.R
 #: areachart/options/vars.title
