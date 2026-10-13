@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-07-07 01:16+0000\n"
-"Last-Translator: Jonathon Love <jon@thon.cc>\n"
+"PO-Revision-Date: 2026-10-15 03:52+0000\n"
+"Last-Translator: 陳正昌 <chencc99@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/jamovi/module-vijplots/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -10,24 +10,24 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "\"{var}\" is a reserved name. Please rename this variable."
-msgstr ""
+msgstr "「{var}」是保留名稱。請重新命名此變數。"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid ""
 "\"Range\" option for the X-axis is only available for numeric and date "
 "variables."
-msgstr ""
+msgstr "X 軸的「範圍」選項僅適用於數值與日期變數。"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "\"Tick Count\" option for the X-axis is only available for numeric variables."
-msgstr ""
+msgstr "X 軸的「刻度數量」選項僅適用於數值變數。"
 
 #: R/qqplot.b.R
 msgid "{distrib} distribution requires positive (>0) data."
@@ -55,7 +55,7 @@ msgstr "{rotation} 旋轉，使用 Kaiser 標準化。"
 
 #: R/barchart.b.R
 msgid "{var} (Mean ± {level}% CI)"
-msgstr ""
+msgstr "{var} (平均值 ± {level}% 信賴區間)"
 
 #: R/barchart.b.R
 msgid "{var} (Mean ± SD)"
@@ -148,7 +148,7 @@ msgstr "% 的變異量"
 
 #: R/mrcrosstabs.b.R
 msgid "% within {category}"
-msgstr ""
+msgstr "{category} 內的百分比"
 
 #: R/likertplot.b.R
 msgid ""
@@ -180,6 +180,29 @@ msgid ""
 "possible.</p>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
 msgstr ""
+"<h3>資料與排序</h3>\n"
+"<ul>\n"
+"<li>Likert 變數必須為次序測量類型。（連續整數亦可。）</li>\n"
+"<li>若您打算計算平均數／中位數／標準差或使用比較檢定，則必須為整數資料類型"
+"。</li>\n"
+"<li><strong>整理水準：</strong>勾選時，嘗試修正表格與圖形中的標籤順序（當某些"
+"變數缺少某些水準時）。</li>\n"
+"<li><strong>將變數轉換為整數：</strong>勾選時，忽略水準標籤，僅使用整數值。</"
+"li>\n"
+"<li><strong>依中位數排序變數：</strong>依中位數排序 Likert 變數清單。</li>\n"
+"</ul>\n"
+"<h3>比較檢定</h3>\n"
+"<p>使用群組變數時，有以下幾種檢定可供使用：</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U：</strong>兩組比較</li>\n"
+"<li><strong>Kruskal-Wallis：</strong>n 組比較</li>\n"
+"<li><strong>事後檢定：</strong>Dunn、Conover 與 Dwass-Steel-Critchlow-"
+"Fligner (DSCF) 成對比較檢定。</li>\n"
+"</ul>\n"
+"<p>p 值可針對事後檢定以<strong>群組方式</strong>（針對每個問題）調整，或針對 "
+"Mann-Whitney U、Kruskal-Wallis 及事後檢定以<strong>整體方式</strong>（群組與"
+"問題）調整。DSCF p 值已調整（群組方式）；無法進行其他調整。</p>\n"
+"<p>範例檔案收錄於 Open > Data Library > vijPlots > Likert</p>"
 
 #: package.description
 msgid ""
@@ -194,6 +217,14 @@ msgid ""
 "source (and changelog) is available at <a "
 "href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>.</p>"
 msgstr ""
+"<p>主要統計圖表，全部以 <b>ggplot2</b> 建構，並提供豐富的自訂選項：</p> <ul> "
+"<li><strong>連續變數</strong>：直方圖、盒鬚圖、雨雲圖、散佈圖、誤差長條圖、棒"
+"糖圖、QQ 圖</li> <li><strong>類別變數</strong>：長條圖、圓餅圖、馬賽克圖、"
+"Likert 圖</li> <li><strong>時間序列</strong>：折線圖、面積圖</li> <li>"
+"<strong>多重回應</strong>：次數、交叉表</li> </ul> <p>此模組位於 <strong>"
+"Plots</strong> 索引標籤中。</p> <p>專案原始碼（與更新日誌）可於 <a "
+"href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a> 取得"
+"。</p>"
 
 #: R/corresp.b.R
 msgid ""
@@ -227,6 +258,24 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
 msgstr ""
+"<p>此模組為兩個類別變數計算 <strong>對應分析 (CA)</strong>。計算基於 F. "
+"Husson、J. Josse、S. Le、J. Mazet 的 <a href=\"https://CRAN.R-project.org/"
+"package=FactoMineR\" target=\"_blank\">FactoMineR</a> 套件。</p>\n"
+"<p>資料可以是</p>\n"
+"<ul>\n"
+"<li><strong>觀測表</strong>（原始資料），可能使用 <em>jamovi</em> 內建的加權"
+"系統或使用「計數」變數加權</li>\n"
+"<li>或<strong>列聯表</strong></li>\n"
+"</ul>\n"
+"<p><strong>補充列或欄</strong>編號可以整數列表輸入：1,3,6</p>\n"
+"<p>有四種正規化（繪圖前列與欄分數的縮放）可供使用：</p>\n"
+"<ul> <li><strong>主成分：</strong>列與欄分數以特徵值縮放。</li>\n"
+"<li><strong>對稱：</strong>列與欄分數以特徵值的平方根縮放。</li>\n"
+"<li><strong>列主成分：</strong>僅列分數以特徵值縮放。</li>\n"
+"<li><strong>欄主成分：</strong>僅欄分數以特徵值縮放。</li>\n"
+"<li><strong>標準：</strong>未經正規化的原始坐標。</li>\n"
+"</ul>\n"
+"<p>範例檔案收錄於 Open > Data Library > vijPlots > Smoking</p>"
 
 #: R/multcorresp.b.R
 msgid ""
@@ -261,6 +310,28 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Cars</p>"
 msgstr ""
+"<p>此模組為多個類別變數計算 <strong>多重對應分析 (MCA)</strong>。計算基於 F. "
+"Husson、J. Josse、S. Le、J. Mazet 的 <a href=\"https://CRAN.R-project.org/"
+"package=FactoMineR\" target=\"_blank\">FactoMineR</a> 套件。</p>\n"
+"<p>兩種經典方法均可使用：</p>\n"
+"<ul>\n"
+"<li><strong>指示矩陣：</strong>指示矩陣的 CA</li>\n"
+"<li><strong>Burt 矩陣：</strong>Burt 矩陣的 CA。其特徵值為指示矩陣法特徵值的"
+"平方。</li>\n"
+"</ul>\n"
+"<p>兩種方法產生相同的<em>標準</em>坐標與區辨力（但<em>主</em>坐標不同）。</p>"
+"\n"
+"<p>勾選時，<strong>Benzécri 與 Greenacre 校正</strong>僅套用於特徵值"
+"（<strong>摘要</strong>表）。類別與觀測值的主坐標（及慣性）則由 Burt 矩陣的原"
+"始特徵值計算。</p>\n"
+"<p><strong>正規化</strong>選項指定坐標如何縮放（依特徵值）：</p>\n"
+"<ul>\n"
+"<li><strong>主成分：</strong>類別與觀測值坐標均縮放。</li>\n"
+"<li><strong>類別主成分：</strong>僅類別坐標縮放。</li>\n"
+"<li><strong>觀測值主成分：</strong>僅觀測值坐標縮放。</li>\n"
+"<li><strong>標準：</strong>類別與觀測值坐標均為標準。</li>\n"
+"</ul>\n"
+"<p>範例檔案收錄於 Open > Data Library > vijPlots > Cars</p>"
 
 #: R/principal.b.R
 msgid ""
@@ -291,6 +362,28 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Iris</p>"
 msgstr ""
+"<p>此模組為多個連續變數計算 <strong>主成分分析 (PCA)</strong>。計算基於 <tt>"
+"stats::prcomp</tt> 函式。</p>\n"
+"<p>雖然旋轉後成分並非主成分，但它們被廣泛使用。僅提供正交旋轉（來自 "
+"GPArotation 套件）。</p>\n"
+"<p>負荷量（變數坐標）與分數（觀測值坐標）為主成分（以特徵值的平方根縮放）。</"
+"p>\n"
+"<p>雙標圖依循「Biplots in Practice」（Michael Greenacre, 2010）：</p>\n"
+"<ul>\n"
+"<li><strong>Form 雙標圖：</strong>分數為主成分（以特徵值縮放），而負荷量為標"
+"準。</li>\n"
+"<li><strong>共變數雙標圖：</strong>負荷量為主成分，而分數為標準。</li>\n"
+"</ul>\n"
+"<p><strong>進階選項</strong>：</p>\n"
+"<ul>\n"
+"<li><strong>標準化負荷量：</strong>負荷量以平方和等於 1 進行正規化（而非特徵"
+"值）</li>\n"
+"<li><strong>標準化分數：</strong>分數以變異數等於 1 進行正規化（而非特徵值"
+"）</li>\n"
+"<li><strong>旋轉特徵向量：</strong>旋轉（varimax 等）套用於特徵向量（標準負荷"
+"量）而非主負荷量（STATA 方式）。</li>\n"
+"</ul>\n"
+"<p>範例檔案收錄於 Open > Data Library > vijPlots > Iris</p>"
 
 #: R/mrfrequencies.b.R
 msgid ""
@@ -546,7 +639,7 @@ msgstr "6 個月"
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "A date variable must be in text format."
-msgstr ""
+msgstr "日期變數必須為文字格式。"
 
 #: package/datasets/vijPlots.description
 msgid "A demonstration dataset for vijPlots module."
@@ -554,7 +647,7 @@ msgstr "vijPlots 模組的示範資料集。"
 
 #: package/datasets/Likert.description
 msgid "A demonstration dataset for vijPlots/Likert plot."
-msgstr ""
+msgstr "用於 vijPlots/Likert 圖的示範資料集。"
 
 #: package/datasets/CreditCards.description
 msgid "A demonstration dataset for vijPlots/Multiple Response plots."
@@ -581,7 +674,7 @@ msgstr "強調色"
 #: mosaic/options/accuracy.title
 #: mosaic/ui[2][0][2][0].label
 msgid "Accuracy"
-msgstr ""
+msgstr "準確度"
 
 #: R/corresp.b.R
 msgid "Active Margin"
@@ -670,7 +763,7 @@ msgstr "Alpha"
 
 #: mosaic/options/alwaysShowGroupLegend.title
 msgid "Always show group legend"
-msgstr ""
+msgstr "一律顯示群組圖例"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -827,7 +920,7 @@ msgstr "區間顏色"
 
 #: histogram/options/binOpacity.title
 msgid "Bin opacity"
-msgstr ""
+msgstr "區間透明度"
 
 #: histogram/ui[1][1][0].label
 msgid "Bin Size"
@@ -891,7 +984,7 @@ msgstr "黑色"
 #: piechart/options/facetStyle/border.title
 #: scatterplot/options/facetStyle/border.title
 msgid "Black border"
-msgstr ""
+msgstr "黑色邊框"
 
 #: corresp/options/rowColor/blue.title
 #: corresp/options/colColor/blue.title
@@ -1096,7 +1189,7 @@ msgstr "Bonferroni"
 #: qqplot/options/methodQQ/boot.title
 #: qqplot/options/methodPP/boot.title
 msgid "Bootstrap"
-msgstr ""
+msgstr "自助法"
 
 #: barchart/options/borderColor.title
 #: barplot/options/borderColor.title
@@ -1261,7 +1354,7 @@ msgstr "標題文字"
 #: raincloud/options/colorPalette/custom::carbon_dark.title
 #: scatterplot/options/colorPalette/custom::carbon_dark.title
 msgid "Carbon:Dark"
-msgstr ""
+msgstr "Carbon：深色"
 
 #: areachart/options/colorPalette/custom::carbon_light.title
 #: barchart/options/colorPalette/custom::carbon_light.title
@@ -1279,7 +1372,7 @@ msgstr ""
 #: raincloud/options/colorPalette/custom::carbon_light.title
 #: scatterplot/options/colorPalette/custom::carbon_light.title
 msgid "Carbon:Light"
-msgstr ""
+msgstr "Carbon：淺色"
 
 #: package/analyses/barplot.menuSubgroup
 #: package/analyses/piechart.menuSubgroup
@@ -1299,7 +1392,7 @@ msgstr "類別"
 
 #: mosaic/options/showCategoryPercent.title
 msgid "Category %"
-msgstr ""
+msgstr "類別 %"
 
 #: barplot/options/rows.title
 #: barplot/ui[0][0].label
@@ -1449,11 +1542,11 @@ msgstr "卡方"
 
 #: piechart/options/clockwise.title
 msgid "Clockwise"
-msgstr ""
+msgstr "順時針"
 
 #: mosaic/options/labelColor.title
 msgid "Color"
-msgstr ""
+msgstr "顏色"
 
 #: barchart/options/colorNo.title
 #: barplot/options/colorNo.title
@@ -1499,7 +1592,7 @@ msgstr "顏色"
 
 #: scatterplot/ui[2].label
 msgid "Colors & Element Sizes"
-msgstr ""
+msgstr "顏色與元素大小"
 
 #: boxplot/ui[2].label
 #: qqplot/ui[4].label
@@ -1581,11 +1674,11 @@ msgstr "比較檢定"
 
 #: R/likertplot.b.R
 msgid "Comparison tests require at least two groups."
-msgstr ""
+msgstr "比較檢定至少需要兩個群組。"
 
 #: R/likertplot.b.R
 msgid "Comparison tests require numeric variables."
-msgstr ""
+msgstr "比較檢定需要數值變數。"
 
 #: R/principal.b.R
 #: principal/results/summaryTable.columns.title
@@ -1594,7 +1687,7 @@ msgstr "成分"
 
 #: R/principal.b.R
 msgid "Component {n} ({perc} %)"
-msgstr ""
+msgstr "成分 {n} ({perc} %)"
 
 #: R/principal.b.R
 msgid "Component Plot"
@@ -1694,7 +1787,7 @@ msgstr "計數"
 #: mrcrosstabs/options/showLabels.title
 #: mrfrequencies/options/showLabels.title
 msgid "Count labels"
-msgstr ""
+msgstr "計數標籤"
 
 #: mrcrosstabs/options/endorsed.title
 #: mrfrequencies/options/endorsed.title
@@ -1704,7 +1797,7 @@ msgstr "計數值"
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
 msgid "Counted value string may not be empty."
-msgstr ""
+msgstr "計數值字串不得為空。"
 
 #: R/mrfrequencies.b.R
 #: likertplot/options/frequencies/counts.title
@@ -1731,26 +1824,26 @@ msgstr "次數 (可選)"
 #: R/mosaic.b.R
 #: R/piechart.b.R
 msgid "Counts may not all be zero."
-msgstr ""
+msgstr "計數不可全部為零。"
 
 #: R/barplot.b.R
 #: R/corresp.b.R
 #: R/mosaic.b.R
 #: R/piechart.b.R
 msgid "Counts may not be infinite."
-msgstr ""
+msgstr "計數不得為無限值。"
 
 #: R/barplot.b.R
 #: R/corresp.b.R
 #: R/mosaic.b.R
 #: R/piechart.b.R
 msgid "Counts may not be negative."
-msgstr ""
+msgstr "計數不得為負值。"
 
 #: R/barplot.b.R
 #: R/mosaic.b.R
 msgid "Counts may not contain missing values."
-msgstr ""
+msgstr "計數不得包含缺失值。"
 
 #: principal/ui[4][2][0]/biplotType_covPlot.label
 msgid "Cov (Loading principal)"
@@ -1900,7 +1993,7 @@ msgstr "預設"
 #: piechart/options/facetStyle/default.title
 #: scatterplot/options/facetStyle/default.title
 msgid "Default"
-msgstr ""
+msgstr "預設"
 
 #: R/histogram.b.R
 #: histogram/options/histtype/density.title
@@ -1957,7 +2050,7 @@ msgstr "Dim"
 #: R/multcorresp.b.R
 #: R/principal.b.R
 msgid "Dim {n}"
-msgstr ""
+msgstr "維度 {n}"
 
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
@@ -1967,7 +2060,7 @@ msgstr "維度"
 #: R/corresp.b.R
 #: R/multcorresp.b.R
 msgid "Dimension {n} ({perc} %)"
-msgstr ""
+msgstr "維度 {n} ({perc} %)"
 
 #: R/multcorresp.b.R
 msgid "Discrimination"
@@ -2075,7 +2168,7 @@ msgstr "Equamax"
 #: barchart/ui.title
 #: barchart/results.title
 msgid "Error Bar Chart"
-msgstr ""
+msgstr "誤差長條圖"
 
 #: barchart/ui[3][1][0].label
 msgid "Error Bar Size"
@@ -2108,7 +2201,7 @@ msgstr "指數分布需要非負值資料 (≥0)。"
 
 #: R/principal.b.R
 msgid "Extraction"
-msgstr ""
+msgstr "萃取"
 
 #: principal/results/summaryTable.columns.superTitle
 msgid "Extraction Sums of Squared Loadings"
@@ -2146,7 +2239,7 @@ msgstr "分面"
 #: piechart/ui[4][1][0].label
 #: scatterplot/ui[3][0][1][0].label
 msgid "Facet Labels"
-msgstr ""
+msgstr "分面標籤"
 
 #: barchart/ui[5].label
 #: barchart/ui[5][0][0][0].label
@@ -2333,7 +2426,7 @@ msgstr "Gamma"
 #: raincloud/options/colorPalette/ggsci::aaas.title
 #: scatterplot/options/colorPalette/ggsci::aaas.title
 msgid "Ggsci:AAAS"
-msgstr ""
+msgstr "Ggsci:AAAS"
 
 #: areachart/options/colorPalette/ggsci::bmj.title
 #: barchart/options/colorPalette/ggsci::bmj.title
@@ -2351,7 +2444,7 @@ msgstr ""
 #: raincloud/options/colorPalette/ggsci::bmj.title
 #: scatterplot/options/colorPalette/ggsci::bmj.title
 msgid "Ggsci:BMJ"
-msgstr ""
+msgstr "Ggsci:BMJ"
 
 #: areachart/options/colorPalette/ggsci::jama.title
 #: barchart/options/colorPalette/ggsci::jama.title
@@ -2369,7 +2462,7 @@ msgstr ""
 #: raincloud/options/colorPalette/ggsci::jama.title
 #: scatterplot/options/colorPalette/ggsci::jama.title
 msgid "Ggsci:JAMA"
-msgstr ""
+msgstr "Ggsci:JAMA"
 
 #: areachart/options/colorPalette/ggsci::jco.title
 #: barchart/options/colorPalette/ggsci::jco.title
@@ -2387,7 +2480,7 @@ msgstr ""
 #: raincloud/options/colorPalette/ggsci::jco.title
 #: scatterplot/options/colorPalette/ggsci::jco.title
 msgid "Ggsci:JCO"
-msgstr ""
+msgstr "Ggsci:JCO"
 
 #: areachart/options/colorPalette/ggsci::lancet.title
 #: barchart/options/colorPalette/ggsci::lancet.title
@@ -2405,7 +2498,7 @@ msgstr ""
 #: raincloud/options/colorPalette/ggsci::lancet.title
 #: scatterplot/options/colorPalette/ggsci::lancet.title
 msgid "Ggsci:Lancet"
-msgstr ""
+msgstr "Ggsci:Lancet"
 
 #: areachart/options/colorPalette/ggsci::nejm.title
 #: barchart/options/colorPalette/ggsci::nejm.title
@@ -2423,7 +2516,7 @@ msgstr ""
 #: raincloud/options/colorPalette/ggsci::nejm.title
 #: scatterplot/options/colorPalette/ggsci::nejm.title
 msgid "Ggsci:NEJM"
-msgstr ""
+msgstr "Ggsci:NEJM"
 
 #: areachart/options/colorPalette/ggsci::npg.title
 #: barchart/options/colorPalette/ggsci::npg.title
@@ -2441,7 +2534,7 @@ msgstr ""
 #: raincloud/options/colorPalette/ggsci::npg.title
 #: scatterplot/options/colorPalette/ggsci::npg.title
 msgid "Ggsci:NPG"
-msgstr ""
+msgstr "Ggsci:NPG"
 
 #: barchart/options/borderColor/gray.title
 #: barplot/options/borderColor/gray.title
@@ -2469,7 +2562,7 @@ msgstr "灰色"
 #: piechart/options/facetStyle/background.title
 #: scatterplot/options/facetStyle/background.title
 msgid "Gray background"
-msgstr ""
+msgstr "灰色背景"
 
 #: corresp/options/rowColor/forestgreen.title
 #: corresp/options/colColor/forestgreen.title
@@ -2510,7 +2603,7 @@ msgstr "Greenacre 校正"
 
 #: R/multcorresp.b.R
 msgid "Greenacre's corrected inertia = {inertia}"
-msgstr ""
+msgstr "Greenacre 校正慣性 = {inertia}"
 
 #: areachart/options/colorPalette/Greens.title
 #: barchart/options/colorPalette/Greens.title
@@ -2602,7 +2695,7 @@ msgstr "分組依據"
 
 #: mosaic/options/yAxis/label.title
 msgid "Group label"
-msgstr ""
+msgstr "組別標籤"
 
 #: barchart/options/barType/dodge2.title
 #: barplot/options/barType/dodge2.title
@@ -2644,7 +2737,7 @@ msgstr "按組別"
 #: multcorresp/options.menuGroup
 #: principal/options.menuGroup
 msgid "hidden"
-msgstr ""
+msgstr "隱藏"
 
 #: likertplot/options/hideLabelsBelow.title
 msgid "Hide % labels below 5%"
@@ -2652,7 +2745,7 @@ msgstr "隱藏小於 5% 的標籤"
 
 #: mosaic/options/hideAxes.title
 msgid "Hide axes"
-msgstr ""
+msgstr "隱藏坐標軸"
 
 #: package/analyses/histogram.title
 #: package/analyses/histogram.menuTitle
@@ -3014,7 +3107,7 @@ msgstr "標籤字型大小"
 
 #: mosaic/ui[2][0][1][0].label
 msgid "Label Format"
-msgstr ""
+msgstr "標籤格式"
 
 #: mosaic/ui[2].label
 #: piechart/ui[2][0][1][0].label
@@ -3068,7 +3161,7 @@ msgstr "標籤大小"
 #: mosaic/options/labelType.title
 #: mosaic/ui[2][0][0][0].label
 msgid "Label Type"
-msgstr ""
+msgstr "標籤類型"
 
 #: piechart/options/labels.title
 #: piechart/ui[1][1][0].label
@@ -3324,7 +3417,7 @@ msgstr "Likert 圖"
 
 #: R/likertplot.b.R
 msgid "Likert Plot requires ordinal (or continuous-integer) variables."
-msgstr ""
+msgstr "Likert 圖需要次序 (或連續—整數) 變數。"
 
 #: likertplot/options/liks.title
 #: likertplot/ui[0][0].label
@@ -3394,7 +3487,7 @@ msgstr "棒棒糖大小和顏色"
 
 #: R/likertplot.b.R
 msgid "Mann-Whitney tests require two groups"
-msgstr ""
+msgstr "Mann-Whitney 檢定需要兩組"
 
 #: likertplot/options/showMannU.title
 msgid "Mann-Whitney U"
@@ -3434,17 +3527,17 @@ msgstr "手動"
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "Manual X-axis range doesn't have a valid date format."
-msgstr ""
+msgstr "手動 X 軸範圍沒有有效的日期格式。"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "Manual X-axis range is invalid."
-msgstr ""
+msgstr "手動 X 軸範圍無效。"
 
 #: mosaic/options/residualsAsOpacity.title
 #: mosaic/ui[3][0][1][0]/residualsAsOpacity.label
 msgid "Map to Pearson residuals"
-msgstr ""
+msgstr "對應至 Pearson 殘差"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -3510,11 +3603,11 @@ msgstr "五月"
 
 #: R/multcorresp.b.R
 msgid "MCA Principal Coordinates ({method})"
-msgstr ""
+msgstr "MCA 主坐標 ({method})"
 
 #: R/multcorresp.b.R
 msgid "MCA Standard Coordinates ({method})"
-msgstr ""
+msgstr "MCA 標準坐標 ({method})"
 
 #: R/likertplot.b.R
 #: barchart/options/yaxis/mean.title
@@ -3531,7 +3624,7 @@ msgstr "平均數與標準差"
 
 #: histogram/options/meanLine.title
 msgid "Mean line"
-msgstr ""
+msgstr "平均數線"
 
 #: R/barchart.b.R
 #: R/lollipop.b.R
@@ -3540,7 +3633,7 @@ msgstr "{var} 的平均數"
 
 #: R/histogram.b.R
 msgid "Med"
-msgstr ""
+msgstr "中位數"
 
 #: R/likertplot.b.R
 #: barchart/options/yaxis/median.title
@@ -3557,7 +3650,7 @@ msgstr "中位數與平均數需要數值型變項"
 
 #: histogram/options/medianLine.title
 msgid "Median line"
-msgstr ""
+msgstr "中位數線"
 
 #: R/barchart.b.R
 #: R/lollipop.b.R
@@ -3590,7 +3683,7 @@ msgstr "動差法 (MME)"
 
 #: R/multcorresp.b.R
 msgid "Method: {method}"
-msgstr ""
+msgstr "方法：{method}"
 
 #: barplot/options/labelPosition/middle.title
 #: barplot/ui[2][0][1][0]/labelPosition_middle.label
@@ -3652,7 +3745,7 @@ msgstr "{var} 的最小值"
 #: mosaic/ui.title
 #: mosaic/results.title
 msgid "Mosaic Plot"
-msgstr ""
+msgstr "馬賽克圖"
 
 #: mrcrosstabs/options/mode/onevar.title
 #: mrcrosstabs/ui/mode/onevar[0][0][0].label
@@ -3708,16 +3801,16 @@ msgstr "名稱"
 
 #: qqplot/options/transLog.title
 msgid "Natural log transform"
-msgstr ""
+msgstr "自然對數轉換"
 
 #: R/qqplot.b.R
 msgid "Natural Log Transform requires positive (>0) data."
-msgstr ""
+msgstr "自然對數轉換需要正值 (>0) 資料。"
 
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
 msgid "No distinct values found in the selected variable."
-msgstr ""
+msgstr "在所選變數中找不到相異值。"
 
 #: R/principal.b.R
 msgid "No rotation used."
@@ -3836,11 +3929,11 @@ msgstr "正規化"
 
 #: R/principal.b.R
 msgid "Not enough complete observations to perform PCA."
-msgstr ""
+msgstr "沒有足夠的完整觀測值可執行 PCA。"
 
 #: R/corresp.b.R
 msgid "Not enough data to compute CA."
-msgstr ""
+msgstr "沒有足夠的資料可計算 CA。"
 
 #: boxplot/options/notchWidth.title
 msgid "Notch width"
@@ -3871,7 +3964,7 @@ msgstr "案例個數"
 
 #: R/mrfrequencies.b.R
 msgid "Number of cases: {n}"
-msgstr ""
+msgstr "案例數：{n}"
 
 #: corresp/options/dimNum.title
 #: multcorresp/options/dimNum.title
@@ -3890,7 +3983,7 @@ msgstr "觀察值顏色"
 #: R/principal.b.R
 #: principal/results/obsTable.columns.title
 msgid "Observation"
-msgstr ""
+msgstr "觀測值"
 
 #: multcorresp/results/obsCoordOV.title
 #: principal/results/obsCoordOV.title
@@ -3990,7 +4083,7 @@ msgstr "僅"
 
 #: mosaic/ui[3][0][1][0].label
 msgid "Opacity"
-msgstr ""
+msgstr "不透明度"
 
 #: mrcrosstabs/options/optionname.title
 #: mrfrequencies/options/optionname.title
@@ -4091,7 +4184,7 @@ msgstr "其他選項"
 
 #: boxplot/options/showOutliers.title
 msgid "Outliers"
-msgstr ""
+msgstr "離群值"
 
 #: R/mrcrosstabs.b.R
 #: likertplot/options/pValue/overall.title
@@ -4190,11 +4283,11 @@ msgstr "參數估計值"
 
 #: R/qqplot.b.R
 msgid "Parameter Estimates (MLE)"
-msgstr ""
+msgstr "參數估計 (MLE)"
 
 #: R/qqplot.b.R
 msgid "Parameter Estimates (MME)"
-msgstr ""
+msgstr "參數估計 (MME)"
 
 #: R/qqplot.b.R
 #: qqplot/ui[3].label
@@ -4252,7 +4345,7 @@ msgstr "PCA 主坐標"
 
 #: R/principal.b.R
 msgid "PCA Principal Coordinates ({rot})"
-msgstr ""
+msgstr "PCA 主坐標 ({rot})"
 
 #: R/principal.b.R
 msgid "PCA Standard Coordinates"
@@ -4260,12 +4353,12 @@ msgstr "PCA 標準坐標"
 
 #: R/principal.b.R
 msgid "PCA Standard Coordinates ({rot})"
-msgstr ""
+msgstr "PCA 標準坐標 ({rot})"
 
 #: R/mosaic.b.R
 #: mosaic/options/labelType/residuals.title
 msgid "Pearson residuals"
-msgstr ""
+msgstr "Pearson 殘差"
 
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
@@ -4340,7 +4433,7 @@ msgstr "圖顏色"
 
 #: scatterplot/options/plotBorder.title
 msgid "Plot frame"
-msgstr ""
+msgstr "繪圖框架"
 
 #: areachart/ui[1][0][0].label
 #: barchart/ui[2].label
@@ -4418,7 +4511,7 @@ msgstr "點"
 
 #: scatterplot/options/keepNA.title
 msgid "Points with missing group/label"
-msgstr ""
+msgstr "缺少群組 / 標籤的點"
 
 #: qqplot/options/methodQQ/pointwise.title
 msgid "Pointwise"
@@ -5089,12 +5182,12 @@ msgstr "標準差"
 msgid ""
 "Select the \"Convert variables to integers\" option when the variables are "
 "not of the same type."
-msgstr ""
+msgstr "當變數類型不同時，請選取「將變數轉換為整數」選項。"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "Sep"
-msgstr ""
+msgstr "Sep"
 
 #: mrcrosstabs/options/separator.title
 #: mrfrequencies/options/separator.title
@@ -5104,7 +5197,7 @@ msgstr "分隔符號"
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
 msgid "Separator string may not be empty."
-msgstr ""
+msgstr "分隔符號字串不得為空。"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -5171,7 +5264,7 @@ msgstr "多個變項"
 
 #: scatterplot/options/groupShapes.title
 msgid "Shape by group"
-msgstr ""
+msgstr "依群組區分形狀"
 
 #: likertplot/options/addLabels.title
 msgid "Show % labels"
@@ -5179,7 +5272,7 @@ msgstr "顯示百分比標籤"
 
 #: histogram/options/showBins.title
 msgid "Show bins"
-msgstr ""
+msgstr "顯示區間"
 
 #: histogram/options/density.title
 msgid "Show density"
@@ -5187,7 +5280,7 @@ msgstr "顯示密度"
 
 #: histogram/options/summaryLineLabel.title
 msgid "Show label"
-msgstr ""
+msgstr "顯示標籤"
 
 #: scatterplot/options/regLine.title
 msgid "Show line"
@@ -5298,11 +5391,11 @@ msgstr "解"
 
 #: R/corresp.b.R
 msgid "Some categories have zero counts and must be removed."
-msgstr ""
+msgstr "某些類別的計數為零，必須移除。"
 
 #: R/corresp.b.R
 msgid "Some values are missing from the contingency table."
-msgstr ""
+msgstr "列聯表中有部分數值缺失。"
 
 #: likertplot/options/sorting.title
 #: likertplot/ui[1][1][0].label
@@ -5405,7 +5498,7 @@ msgstr "標準化變項"
 
 #: R/qqplot.b.R
 msgid "Standardized data cannot fit {distrib} distribution."
-msgstr ""
+msgstr "標準化資料無法配適 {distrib} 分布。"
 
 #: R/qqplot.b.R
 msgid "Standardized Sample Quantiles"
@@ -5446,7 +5539,7 @@ msgstr "Student"
 #: piechart/options/facetStyle.title
 #: scatterplot/options/facetStyle.title
 msgid "Style"
-msgstr ""
+msgstr "樣式"
 
 #: areachart/ui[4][1].label
 #: barchart/ui[8][1].label
@@ -5604,13 +5697,13 @@ msgstr "文字大小與顏色"
 
 #: R/principal.b.R
 msgid "The correlation matrix is nearly singular. Computations may not be accurate."
-msgstr ""
+msgstr "相關矩陣接近奇異。計算結果可能不準確。"
 
 #: R/principal.b.R
 msgid ""
 "The following variable(s) are constant and cannot be used in a principal "
 "component analysis: {vars}."
-msgstr ""
+msgstr "下列變數為常數，無法用於主成分分析：{vars}。"
 
 #: R/multcorresp.b.R
 msgid "The number of dimensions cannot be greater than {max}."
@@ -5618,7 +5711,7 @@ msgstr "維度數量不能大於 {max}。"
 
 #: R/principal.b.R
 msgid "The number of dimensions cannot be greater than the number of observations."
-msgstr ""
+msgstr "維度數不得大於觀測值數。"
 
 #: R/principal.b.R
 msgid "The number of dimensions cannot be greater than the number of variables."
@@ -5628,15 +5721,15 @@ msgstr "維度數量不可大於變項數量。"
 msgid ""
 "The singular value for dimension {n} is close to zero. The plots may not be "
 "accurate."
-msgstr ""
+msgstr "維度 {n} 的奇異值接近零。圖形可能不準確。"
 
 #: R/qqplot.b.R
 msgid "The variance of the variable is equal to zero."
-msgstr ""
+msgstr "變數的變異數等於零。"
 
 #: R/corresp.b.R
 msgid "The χ2 statistic is equal to zero."
-msgstr ""
+msgstr "卡方統計量等於零。"
 
 #: R/qqplot.b.R
 msgid "Theoretical Probabilities"
@@ -5652,13 +5745,13 @@ msgstr "理論分位數"
 msgid ""
 "This analysis is deprecated and kept only for backward compatibility with "
 "existing documents. Please use vijMulti module instead."
-msgstr ""
+msgstr "此分析已淘汰，僅為與現有文件保持向後相容而保留。請改用 vijMulti 模組。"
 
 #: corresp/ui[0][0].label
 #: multcorresp/ui[0][0].label
 #: principal/ui[0][0].label
 msgid "This analysis is deprecated. Please use vijMulti module instead."
-msgstr ""
+msgstr "此分析已淘汰。請改用 vijMulti 模組。"
 
 #: areachart/options/xTicks.title
 #: areachart/options/yTicks.title
@@ -5839,7 +5932,7 @@ msgstr "整潔:海濱"
 
 #: mosaic/ui[3].label
 msgid "Tile Options"
-msgstr ""
+msgstr "磚塊選項"
 
 #: package/analyses/linechart.menuSubgroup
 #: package/analyses/areachart.menuSubgroup
@@ -5940,31 +6033,31 @@ msgstr "類型"
 
 #: R/corresp.b.R
 msgid "Unable to compute correspondence analysis for the selected data."
-msgstr ""
+msgstr "無法為所選資料計算對應分析。"
 
 #: R/multcorresp.b.R
 msgid "Unable to compute MCA because of too many missing values."
-msgstr ""
+msgstr "由於缺失值過多，無法計算 MCA。"
 
 #: R/multcorresp.b.R
 msgid "Unable to compute MCA for the selected variables."
-msgstr ""
+msgstr "無法為所選變數計算 MCA。"
 
 #: R/principal.b.R
 msgid "Unable to compute principal components for the selected variables."
-msgstr ""
+msgstr "無法為所選變數計算主成分。"
 
 #: R/principal.b.R
 msgid "Unable to compute the correlation matrix."
-msgstr ""
+msgstr "無法計算相關矩陣。"
 
 #: R/corresp.b.R
 msgid "Unable to compute the χ2 statistic."
-msgstr ""
+msgstr "無法計算卡方統計量。"
 
 #: R/qqplot.b.R
 msgid "Unable to estimate the distribution parameters using {method} method."
-msgstr ""
+msgstr "無法使用 {method} 方法估計分布參數。"
 
 #: R/principal.b.R
 msgid "Unable to use {rotation} rotation."
@@ -6044,7 +6137,7 @@ msgstr "變項"
 
 #: likertplot/options/descAsVarName.title
 msgid "Variable descriptions as names"
-msgstr ""
+msgstr "以變數描述作為名稱"
 
 #: multcorresp/results/discrim.title
 msgid "Variable Discriminations"
@@ -6053,7 +6146,7 @@ msgstr "變項之區別"
 #: multcorresp/options/showDiscriminations.title
 #: multcorresp/options/showDiscriminationPlot.title
 msgid "Variable discriminations"
-msgstr ""
+msgstr "變數區辨力"
 
 #: principal/options/varTitleText.title
 #: principal/options/varSubtitleText.title
@@ -6340,7 +6433,7 @@ msgstr "X 軸為日期"
 #: mosaic/options/order.title
 #: mosaic/ui[1][1][1].label
 msgid "X-Axis Order"
-msgstr ""
+msgstr "X 軸順序"
 
 #: barchart/options/xAxisRangeType.title
 #: barplot/options/xAxisRangeType.title
@@ -6503,4 +6596,4 @@ msgstr "黃色到紅色"
 
 #: R/corresp.b.R
 msgid "χ² = {chisq}, df = {df}, p-value = {pval}"
-msgstr ""
+msgstr "χ² = {chisq}，df = {df}，p 值 = {pval}"
