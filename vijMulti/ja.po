@@ -6,7 +6,7 @@ msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Language: ja\n"
-"PO-Revision-Date: 2026-10-15 03:53+0000\n"
+"PO-Revision-Date: 2026-10-21 23:51+0000\n"
 "Last-Translator: SHIBATA Seiji <sbtseiji@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jamovi/module-"
 "vijmulti/ja/>\n"
@@ -85,6 +85,34 @@ msgid ""
 "<p>Sample files are included at Open > Data Library > vijMulti > Smoking "
 "(observation table) and Smoking (contingency table)</p>"
 msgstr ""
+"<p>このモジュールは、2つのカテゴリ変数に対する<strong>コレスポンデンス分析（"
+"CA）</strong>を実行します。計算には、M. Greenacre、O. Nenadic、M. Friendly に"
+"よる<a href=\"https://CRAN.R-project.org/package=ca\" target=\"_blank\">ca"
+"パッケージ</a>を使用します。</p>\n"
+"<p>データには、次のいずれかを使用できます。</p>\n"
+"<ul>\n"
+"<li><strong>観測データ表</strong>（生データ）。<em>jamovi</em>組み込みの重み"
+"付け機能、または「度数」変数による重み付けが可能です。</li>\n"
+"<li><strong>分割表</strong></li>\n"
+"</ul>\n"
+"<p><strong>補助行または補助列</strong>の番号は、1,3,6のように整数をカンマで区"
+"切って指定できます。</p>\n"
+"<p>プロット前の行スコアと列スコアの尺度化方法として、次の5種類が用意されてい"
+"ます。</p>\n"
+"<ul>\n"
+"<li><strong>主座標</strong>：行スコアと列スコアを主座標（標準座標に特異値を乗"
+"じたもの）で表します。</li>\n"
+"<li><strong>対称</strong>：行スコアと列スコアを、標準座標に特異値の平方根を乗"
+"じたもので表します。</li>\n"
+"<li><strong>行主座標</strong>：行スコアを主座標、列スコアを標準座標で表します"
+"。</li>\n"
+"<li><strong>列主座標</strong>：列スコアを主座標、行スコアを標準座標で表します"
+"。</li>\n"
+"<li><strong>標準</strong>：行スコアと列スコアを標準座標で表します（各次元の重"
+"み付き分散は1になります）。</li>\n"
+"</ul>\n"
+"<p>サンプルファイルは「開く」>「データライブラリ」>「vijMulti」>「Smoking」に"
+"あります。</p>"
 
 #: R/multcorresp.b.R
 msgid ""
@@ -122,6 +150,37 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Cars</p>"
 msgstr ""
+"<p>このモジュールは、複数のカテゴリ変数に対する<strong>多重コレスポンデンス分"
+"析（MCA）</strong>を実行します。計算には、M. Greenacre、O. Nenadic、M. "
+"Friendly による<a href=\"https://CRAN.R-project.org/package=ca\" "
+"target=\"_blank\">caパッケージ</a>を使用します。</p>\n"
+"<p>従来の2つの方法を利用できます。</p>\n"
+"<ul>\n"
+"<li><strong>指示行列法：</strong>指示行列に対してコレスポンデンス分析を行いま"
+"す。</li>\n"
+"<li><strong>バート行列法：</strong>バート行列に対してコレスポンデンス分析を行"
+"います。固有値は、指示行列法で得られる固有値の2乗になります。</li>\n"
+"</ul>\n"
+"<p>どちらの方法でも、<em>標準</em>座標と識別力は同じになりますが、<em>主</em>"
+"座標は異なります。</p>\n"
+"<p><strong>バート行列法</strong>では、観測はバート行列に含まれないため、観測"
+"の標準座標には指示行列法の結果を使用し、主座標はカテゴリの主座標と同じ尺度で"
+"表します。Cos²とQLTは、バート行列の空間で計算されます。</p>\n"
+"<p><strong>ベンゼクリ補正とグリーンエーカー補正</strong>を選択すると、固有値"
+"のみに補正が適用されます（<strong>要約</strong>表）。カテゴリと観測の主座標（"
+"および慣性）は、補正前のバート行列の固有値に基づいて計算されます。</p>\n"
+"<p><strong>正規化</strong>では、固有値の平方根を用いた座標の尺度化方法を指定"
+"します。</p>\n"
+"<ul>\n"
+"<li><strong>主座標：</strong>カテゴリと観測の両方の座標を尺度化します。</li>"
+"\n"
+"<li><strong>カテゴリ主座標：</strong>カテゴリの座標のみを尺度化します。</li>"
+"\n"
+"<li><strong>観測主座標：</strong>観測の座標のみを尺度化します。</li>\n"
+"<li><strong>標準：</strong>カテゴリと観測の両方を標準座標で表します。</li>\n"
+"</ul>\n"
+"<p>サンプルファイルは「開く」>「データライブラリ」>「vijMulti」>「Cars」にあ"
+"ります。</p>"
 
 #: R/principal.b.R
 msgid ""
@@ -152,6 +211,32 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijMulti > Iris</p>"
 msgstr ""
+"<p>このモジュールは、複数の連続変数に対する<strong>主成分分析（PCA）</strong>"
+"を実行します。計算には、<tt>stats::prcomp</tt>関数を使用します。</p>\n"
+"<p>回転後の成分は主成分ではありませんが、広く利用されています。利用できる回転"
+"法は直交回転のみです（GPArotationパッケージを使用）。</p>\n"
+"<p>負荷量（変数の座標）と主成分得点（観測の座標）は、主座標（固有値の平方根を"
+"乗じた座標）で表されます。</p>\n"
+"<p>バイプロットは、Michael Greenacre（2010）の「Biplots in Practice」に準拠し"
+"ています。</p>\n"
+"<ul>\n"
+"<li><strong>形式バイプロット：</strong>主座標で表した主成分得点と、標準座標で"
+"表した負荷量を使用します。</li>\n"
+"<li><strong>共分散バイプロット：</strong>主座標で表した負荷量と、標準座標で表"
+"した主成分得点を使用します。</li>\n"
+"</ul>\n"
+"<p><strong>詳細オプション</strong>：</p>\n"
+"<ul>\n"
+"<li><strong>負荷量を標準化：</strong>固有値ではなく、負荷量の二乗和が1になる"
+"ように正規化します。</li>\n"
+"<li><strong>主成分得点を標準化：</strong>固有値ではなく、分散が1になるように"
+"主成分得点を正規化します。</li>\n"
+"<li><strong>固有ベクトルを回転：</strong>主座標の負荷量ではなく、固有ベクトル"
+"（標準座標の負荷量）に回転（バリマックス回転など）を適用します（Stata方式）"
+"。</li>\n"
+"</ul>\n"
+"<p>サンプルファイルは「開く」>「データライブラリ」>「vijMulti」>「Iris」にあ"
+"ります。</p>"
 
 #: package/datasets/Smoking(contingencytable).description
 msgid ""
@@ -696,37 +781,37 @@ msgstr "形式バイプロット"
 #: multcorresp/options/colorPalette/ggsci::aaas.title
 #: principal/options/colorPalette/ggsci::aaas.title
 msgid "Ggsci:AAAS"
-msgstr ""
+msgstr "Ggsci：AAAS"
 
 #: multcorresp/options/colorPalette/ggsci::bmj.title
 #: principal/options/colorPalette/ggsci::bmj.title
 msgid "Ggsci:BMJ"
-msgstr ""
+msgstr "Ggsci：BMJ"
 
 #: multcorresp/options/colorPalette/ggsci::jama.title
 #: principal/options/colorPalette/ggsci::jama.title
 msgid "Ggsci:JAMA"
-msgstr ""
+msgstr "Ggsci：JAMA"
 
 #: multcorresp/options/colorPalette/ggsci::jco.title
 #: principal/options/colorPalette/ggsci::jco.title
 msgid "Ggsci:JCO"
-msgstr ""
+msgstr "Ggsci：JCO"
 
 #: multcorresp/options/colorPalette/ggsci::lancet.title
 #: principal/options/colorPalette/ggsci::lancet.title
 msgid "Ggsci:Lancet"
-msgstr ""
+msgstr "Ggsci：Lancet"
 
 #: multcorresp/options/colorPalette/ggsci::nejm.title
 #: principal/options/colorPalette/ggsci::nejm.title
 msgid "Ggsci:NEJM"
-msgstr ""
+msgstr "Ggsci：NEJM"
 
 #: multcorresp/options/colorPalette/ggsci::npg.title
 #: principal/options/colorPalette/ggsci::npg.title
 msgid "Ggsci:NPG"
-msgstr ""
+msgstr "Ggsci：NPG"
 
 #: corresp/options/supColor/darkgray.title
 #: multcorresp/options/obsColor/gray.title
@@ -1329,7 +1414,7 @@ msgstr "赤系"
 #: multcorresp/results/categories.columns.title
 #: multcorresp/results/observations.columns.title
 msgid "Rel. Inertia"
-msgstr ""
+msgstr "相対慣性"
 
 #: corresp/options/titleAlign/1.title
 #: corresp/options/subtitleAlign/1.title
@@ -1420,7 +1505,7 @@ msgstr "行の要約"
 
 #: R/corresp.b.R
 msgid "Row weights are ignored when the data is a contingency table."
-msgstr ""
+msgstr "データが分割表の場合、行の重みは無視されます。"
 
 #: corresp/options/rows.title
 #: corresp/ui/mode/obsTable[0][0][0].label
@@ -1489,7 +1574,7 @@ msgstr "サイズと色"
 
 #: package/datasets/Smoking(contingencytable).name
 msgid "Smoking (contingency table)"
-msgstr ""
+msgstr "喫煙（分割表）"
 
 #: package/datasets/Smoking(observationtable).name
 msgid "Smoking (observation table)"
@@ -1510,6 +1595,8 @@ msgid ""
 "Some row or column names end with \"*\", which is also used to mark "
 "supplementary rows and columns. Consider renaming them to avoid confusion."
 msgstr ""
+"末尾に「*」が付いた行名または列名があります。「*」は補助行・補助列を示す記号"
+"としても使われるため、混同を避けるために名前を変更することをお勧めします。"
 
 #: R/corresp.b.R
 msgid "Some values are missing from the contingency table."
