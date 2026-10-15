@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-10-15 03:51+0000\n"
+"PO-Revision-Date: 2026-10-21 23:51+0000\n"
 "Last-Translator: Watchman89 <watchman89@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jamovi/module-"
 "vijplots/nl/>\n"
@@ -15,7 +15,7 @@ msgstr ""
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "\"{var}\" is a reserved name. Please rename this variable."
-msgstr ""
+msgstr "\"{var}\" is een gereserveerde naam. Hernoem deze variabele."
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -23,59 +23,54 @@ msgid ""
 "\"Range\" option for the X-axis is only available for numeric and date "
 "variables."
 msgstr ""
+"\"Bereik\"-optie voor de X-as is alleen beschikbaar voor numerieke en "
+"datumvariabelen."
 
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "\"Tick Count\" option for the X-axis is only available for numeric variables."
 msgstr ""
+"\"Streepjesaantal\"-optie voor de X-as is alleen beschikbaar voor numerieke "
+"variabelen."
 
 #: R/qqplot.b.R
-#, fuzzy
 msgid "{distrib} distribution requires positive (>0) data."
 msgstr "{distrib} verdeling vereist positieve (>0) gegevens."
 
 #: R/qqplot.b.R
-#, fuzzy
 msgid "{distribStr} {typeStr} Plot of {varStr}"
 msgstr "{distribStr} {typeStr} Plot van {varStr}"
 
 #: R/principal.b.R
-#, fuzzy
 msgid "{rotation} rotation"
 msgstr "{rotation} rotatie"
 
 #: R/principal.b.R
-#, fuzzy
 msgid "{rotation} rotation was used."
 msgstr "{rotation} rotatie is gebruikt."
 
 #: R/principal.b.R
-#, fuzzy
 msgid "{rotation} rotation with Kaiser normalization"
 msgstr "{rotation} rotatie met Kaiser-normalisatie"
 
 #: R/principal.b.R
-#, fuzzy
 msgid "{rotation} rotation with Kaiser normalization was used."
 msgstr "{rotation} rotatie met Kaiser-normalisatie is gebruikt."
 
 #: R/barchart.b.R
 msgid "{var} (Mean ± {level}% CI)"
-msgstr ""
+msgstr "{var} (Gemiddelde ± {level}% Betrouwbaarheidsinterval)"
 
 #: R/barchart.b.R
-#, fuzzy
 msgid "{var} (Mean ± SD)"
 msgstr "{var} (Gemiddelde ± SD)"
 
 #: R/barchart.b.R
-#, fuzzy
 msgid "{var} (Mean ± SE)"
 msgstr "{var} (Gemiddelde ± SE)"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
-#, fuzzy
 msgid "{var} doesn't have a valid date format."
 msgstr "{var} heeft geen geldig datumformaat."
 
@@ -87,7 +82,6 @@ msgstr "{var} heeft geen geldig datumformaat."
 #: mosaic/options/facetNumber.title
 #: piechart/options/facetNumber.title
 #: scatterplot/options/facetNumber.title
-#, fuzzy
 msgid "# of rows/columns"
 msgstr "# rijen/kolommen"
 
@@ -105,70 +99,60 @@ msgstr "%"
 #: mrfrequencies/ui[2][0][2][0].label
 #: piechart/options/accuracy.title
 #: piechart/ui[2][0][2][0].label
-#, fuzzy
 msgid "% Accuracy"
-msgstr "% Accuratesse"
+msgstr "% Accuraatheid"
 
 #: mrcrosstabs/options/computedValues/options.title
-#, fuzzy
 msgid "% by row"
 msgstr "% per rij"
 
 #: R/corresp.b.R
 #: R/multcorresp.b.R
 #: multcorresp/results/categories.columns.title
-#, fuzzy
 msgid "% Inertia"
 msgstr "% Inertie"
 
 #: likertplot/ui[4][1][0][0].label
-#, fuzzy
 msgid "% Labels"
 msgstr "% Labels"
 
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
 #: mrfrequencies/results/responses.columns.title
-#, fuzzy
 msgid "% of Cases"
-msgstr "% van gevallen"
+msgstr "% van Gevallen"
 
 #: mrcrosstabs/options/computedValues/cases.title
 #: mrfrequencies/options/showCases.title
 #: mrfrequencies/options/yaxis/cases.title
-#, fuzzy
 msgid "% of cases"
 msgstr "% van gevallen"
 
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
-#, fuzzy
 msgid "% of Inertia"
 msgstr "% van Inertie"
 
 #: R/mrcrosstabs.b.R
 #: R/mrfrequencies.b.R
 #: mrfrequencies/results/responses.columns.title
-#, fuzzy
 msgid "% of Responses"
 msgstr "% van Antwoorden"
 
 #: mrcrosstabs/options/computedValues/responses.title
 #: mrfrequencies/options/showResponses.title
 #: mrfrequencies/options/yaxis/responses.title
-#, fuzzy
 msgid "% of responses"
-msgstr "% van de antwoorden"
+msgstr "% van antwoorden"
 
 #: principal/results/summaryTable.columns.title
-#, fuzzy
 msgid "% of Variance"
-msgstr "% van de variantie"
+msgstr "% van variantie"
 
 #: R/mrcrosstabs.b.R
 msgid "% within {category}"
-msgstr ""
+msgstr "% binnen {category}"
 
 #: R/likertplot.b.R
 msgid ""
@@ -200,6 +184,37 @@ msgid ""
 "possible.</p>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
 msgstr ""
+"<h3> Gegevens & Sorteren</h3>\n"
+"<ul>\n"
+"<li>Likert-variabelen moeten van een ordinaal meettype zijn. (Continue "
+"getallen werken ook.)</li>\n"
+"<li>Als u van plan bent om gemiddelde/mediaan/sd te berekenen of om "
+"vergelijkingstoetsen uit te voeren moeten deze gegevens uit gehele getallen "
+"bestaan, ze moeten het gehele getallen-datattype zijn.</li>\n"
+"<li><strong>Niveaus opschonen:</strong> als aangetikt, probeer de "
+"labelvolgorde in de tabel en grafiek te verbeteren (als sommige variabelen "
+"sommige niveaus missen).</li>\n"
+"<li><strong>Variabelen omzetten tot geheel getal:</strong> als aangetikt "
+"worden niveaulabels genegeerd en alleen gehele getalwaardes gebruikt.</li>\n"
+"<li><strong>Sorteer Variabelen per Mediaan:</strong> sorteert de lijst "
+"Likert-variabelen per mediaan.</li>\n"
+"</ul>\n"
+"<h3>Vergelijkingstoetsen</h3>\n"
+"<p>Als een gegroepeerde variabelen wordt gebruikt zijn verschillende toetsen "
+"beschikbaar:</p>\n"
+"<ul>\n"
+"<li><strong>Mann-Whitney U:</strong> Twee- groepen vergelijking</li>\n"
+"<li><strong>Kruskal-Wallis:</strong> n-groep vergelijking</li>\n"
+"<li><strong>Post-hoc Toetsen:</strong> Dunn, Conover en Dwass-Steel-"
+"Critchlow-Fligner (DSCF) paarsgewijze vergelijkingstoetsen.</li>\n"
+"</ul>\n"
+"<p>De p-waardes kunnen <strong>groepsgewijs</strong> worden aangepast (voor "
+"elke vraag) voor post-hoc toetsen of <strong>in hun geheel</strong> "
+"(groepsgewijs en per vraag) voor Mann-Whitney U, Kruskal-Wallis en post-hoc "
+"toetsen. DSCF p-waardes zijn al aangepast (groepsgewijs); geen andere "
+"aanpassing is mogelijk.</p>\n"
+"<p>Een eenvoudig bestand is bijgevoegd in Open > Data Library > vijPlots > "
+"Likert</p>"
 
 #: package.description
 msgid ""
@@ -473,45 +488,38 @@ msgstr ""
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
-#, fuzzy
 msgid "1 day"
 msgstr "1 dag"
 
 #: areachart/options/dateBreak/1month.title
 #: linechart/options/dateBreak/1month.title
-#, fuzzy
 msgid "1 month"
 msgstr "1 maand"
 
 #: areachart/options/dateBreak/1week.title
 #: linechart/options/dateBreak/1week.title
-#, fuzzy
 msgid "1 week"
 msgstr "1 week"
 
 #: areachart/options/dateBreak/1year.title
 #: linechart/options/dateBreak/1year.title
-#, fuzzy
 msgid "1 year"
 msgstr "1 jaar"
 
 #: areachart/options/dateBreak/10year.title
 #: linechart/options/dateBreak/10year.title
-#, fuzzy
 msgid "10 years"
 msgstr "10 jaar"
 
 #: areachart/options/displayFormat/%m-%d-%Y.title
 #: linechart/options/displayFormat/%m-%d-%Y.title
-#, fuzzy
 msgid "10-20-2035"
-msgstr "10-20-2035"
+msgstr "20-10-2035"
 
 #: areachart/options/displayFormat/%m/%d/%y.title
 #: linechart/options/displayFormat/%m/%d/%y.title
-#, fuzzy
 msgid "10/20/35"
-msgstr "10/20/35"
+msgstr "20/10/35"
 
 #: areachart/options/dateBreak/100year.title
 #: linechart/options/dateBreak/100year.title
@@ -520,15 +528,13 @@ msgstr "100 jaar"
 
 #: areachart/options/dateBreak/2week.title
 #: linechart/options/dateBreak/2week.title
-#, fuzzy
 msgid "2 weeks"
 msgstr "2 weken"
 
 #: areachart/options/displayFormat/%e%B%Y.title
 #: linechart/options/displayFormat/%e%B%Y.title
-#, fuzzy
 msgid "20 October 2035"
-msgstr "20 October 2035"
+msgstr "20 oktober 2035"
 
 #: areachart/options/dateBreak/20year.title
 #: linechart/options/dateBreak/20year.title
@@ -537,37 +543,31 @@ msgstr "20 jaar"
 
 #: areachart/options/displayFormat/%d-%m-%Y.title
 #: linechart/options/displayFormat/%d-%m-%Y.title
-#, fuzzy
 msgid "20-10-2035"
 msgstr "20-10-2035"
 
 #: areachart/options/displayFormat/%d/%m/%y.title
 #: linechart/options/displayFormat/%d/%m/%y.title
-#, fuzzy
 msgid "20/10/35"
 msgstr "20/10/35"
 
 #: areachart/options/displayFormat/%Y%b.title
 #: linechart/options/displayFormat/%Y%b.title
-#, fuzzy
 msgid "2035 Oct"
-msgstr "2035 Oct"
+msgstr "2035 okt"
 
 #: areachart/options/displayFormat/%Y%B.title
 #: linechart/options/displayFormat/%Y%B.title
-#, fuzzy
 msgid "2035 October"
-msgstr "2035 October"
+msgstr "oktober 2035"
 
 #: areachart/options/displayFormat/%Y%B%e.title
 #: linechart/options/displayFormat/%Y%B%e.title
-#, fuzzy
 msgid "2035 October 20"
-msgstr "2035 October 20"
+msgstr "2035 oktober 20"
 
 #: areachart/options/displayFormat/%Y-%m-%d.title
 #: linechart/options/displayFormat/%Y-%m-%d.title
-#, fuzzy
 msgid "2035-10-20"
 msgstr "2035-10-20"
 
@@ -578,7 +578,6 @@ msgstr "25 jaar"
 
 #: areachart/options/dateBreak/3month.title
 #: linechart/options/dateBreak/3month.title
-#, fuzzy
 msgid "3 months"
 msgstr "3 maanden"
 
@@ -594,7 +593,6 @@ msgstr "50 jaar"
 
 #: areachart/options/dateBreak/6month.title
 #: linechart/options/dateBreak/6month.title
-#, fuzzy
 msgid "6 months"
 msgstr "6 maanden"
 
