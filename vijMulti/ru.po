@@ -83,39 +83,9 @@ msgid ""
 "<li><strong>Standard:</strong> Row and column scores are in standard "
 "coordinates (unit weighted variance on each dimension).</li>\n"
 "</ul>\n"
-"<p>A sample file is included at Open > Data Library > vijMulti > Smoking</p>"
+"<p>Sample files are included at Open > Data Library > vijMulti > Smoking "
+"(observation table) and Smoking (contingency table)</p>"
 msgstr ""
-"<p>Этот модуль вычисляет <strong>Анализ соответствия (CA)</strong> для двух "
-"категориальных переменных. Вычисления основаны на <a href = \"https://CRAN.R-"
-"project.org/package=ca\" target=\"_blank\">пакете ca</a> М. Гринакра, О. "
-"Ненадика, М. Френдли.</p>\n"
-"<p>Данные могут быть</p>\n"
-"<ул>\n"
-"<li><strong>Таблица наблюдений</strong> (необработанные данные), возможно, "
-"взвешенная с использованием встроенной системы весов <em>jamovi</em> или с "
-"использованием переменной «Counts».</li>\n"
-"<li>или <strong>Таблица непредвиденных обстоятельств</strong></li>\n"
-"</ul>\n"
-"<p><strong>Дополнительные номера строк или столбцов</strong> можно вводить в "
-"виде целых списков: 1,3,6</p>\n"
-"<p>Доступны пять способов нормализации (масштабирование оценок строк и "
-"столбцов перед построением графика):</p>\n"
-"<ул>\n"
-"<li><strong>Основной.</strong> Оценки строк и столбцов указаны в основных "
-"координатах, т. е. стандартных координатах, масштабированных по сингулярным "
-"значениям.</li>\n"
-"<li><strong>Симметрично</strong>. Оценки строк и столбцов представляют собой "
-"стандартные координаты, масштабированные по квадратному корню из сингулярных "
-"значений.</li>\n"
-"<li><strong>Основная строка.</strong> Оценки строк указаны в основных "
-"координатах, оценки столбцов – в стандартных координатах.</li>\n"
-"<li><strong>Основной столбец</strong>. Оценки столбцов указаны в основных "
-"координатах, оценки строк – в стандартных координатах.</li>\n"
-"<li><strong>Стандарт.</strong> Оценки строк и столбцов указаны в стандартных "
-"координатах (единичная взвешенная дисперсия по каждому измерению).</li>\n"
-"</ul>\n"
-"<p>Пример файла доступен в разделе «Открыть» > «Библиотека данных» > "
-"vijMulti > «Курение».</p>"
 
 #: R/multcorresp.b.R
 msgid ""
@@ -248,10 +218,17 @@ msgstr ""
 "<p>Пример файла доступен в разделе «Открыть» > «Библиотека данных» > "
 "vijMulti > Iris</p>"
 
-#: package/datasets/Smoking.description
 #: package/datasets/Smoking(contingencytable).description
-msgid "A demonstration dataset for vijMulti/Correspondence Analysis."
-msgstr "Демонстрационный набор данных для vijMulti/Анализ соответствия."
+msgid ""
+"A demonstration dataset for vijMulti/Correspondence Analysis (contingency "
+"table)."
+msgstr ""
+
+#: package/datasets/Smoking(observationtable).description
+msgid ""
+"A demonstration dataset for vijMulti/Correspondence Analysis (observation "
+"table with a Counts variable)."
+msgstr ""
 
 #: package/datasets/Cars.description
 msgid "A demonstration dataset for vijMulti/Multiple Correspondence Analysis."
@@ -429,6 +406,10 @@ msgstr "Коричневый и Зеленый"
 #: multcorresp/ui[3][0][0]/method_burt.label
 msgid "Burt matrix"
 msgstr "Матрица Берта"
+
+#: R/multcorresp.b.R
+msgid "Burt matrix method"
+msgstr ""
 
 #: corresp/ui[7][2][1][0].label
 #: multcorresp/ui[8][2][1][0].label
@@ -841,10 +822,6 @@ msgstr "Исправление Гринакра"
 msgid "Greenacre correction"
 msgstr "Коррекция Гринакра"
 
-#: R/multcorresp.b.R
-msgid "Greenacre's corrected inertia = {inertia}"
-msgstr "Скорректированная инерция Гринакра = {inertia}"
-
 #: multcorresp/options/colorPalette/Greens.title
 #: principal/options/colorPalette/Greens.title
 msgid "Greens"
@@ -865,6 +842,10 @@ msgstr "Группа"
 #: multcorresp/ui[3][0][0]/method_indicator.label
 msgid "Indicator matrix"
 msgstr "Матрица индикаторов"
+
+#: R/multcorresp.b.R
+msgid "Indicator matrix method"
+msgstr ""
 
 #: R/multcorresp.b.R
 #: corresp/results/eigenvalues.columns.title
@@ -1060,10 +1041,6 @@ msgstr "Стандартные координаты МОС ({method})"
 #: multcorresp/ui[3][0].label
 msgid "Method"
 msgstr "Метод"
-
-#: R/multcorresp.b.R
-msgid "Method: {method}"
-msgstr "Метод: {method}"
 
 #: principal/options/rotation/entropy.title
 msgid "Minimum entropy"
@@ -1579,13 +1556,13 @@ msgstr "Размер"
 msgid "Sizes & Colors"
 msgstr "Размеры и цвета"
 
-#: package/datasets/Smoking.name
-msgid "Smoking"
-msgstr "Курение"
-
 #: package/datasets/Smoking(contingencytable).name
 msgid "Smoking (contingency table)"
 msgstr "Курение (таблица непредвиденных обстоятельств)"
+
+#: package/datasets/Smoking(observationtable).name
+msgid "Smoking (observation table)"
+msgstr ""
 
 #: corresp/ui[1][0].label
 #: multcorresp/ui[2][0].label
