@@ -16,6 +16,10 @@ msgstr ""
 msgid "-log10(p-value)"
 msgstr "-log10(p-hodnota)"
 
+#: R/mmnv.b.R
+msgid "(compound symmetry) on the error variance-covariance matrix."
+msgstr ""
+
 #: R/mlr.b.R
 msgid "(Intercept)"
 msgstr "(Konstanta)"
@@ -76,6 +80,28 @@ msgstr ""
 "<b>*p<0.05</b> - Hypotéza normálního rozdělení byla zamítnuta Shapiro-"
 "Wilkovým testem"
 
+#: R/mmnv.b.R
+msgid ""
+"<b>1. Parallelism (Group × Time Interaction)</b>: Tests whether response "
+"trajectories over time are parallel across groups. If rejected (p < .05), "
+"groups change differently over time, demonstrating differential treatment "
+"efficacy."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"<b>2. Equal Levels (Coincidence / Between-Group Main Effect)</b>: Tests "
+"whether overall mean responses across all time points are identical across "
+"groups (between-subjects main effect)."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"<b>3. Flatness (Within-Subject Change over Time)</b>: Tests whether mean "
+"response levels remain constant across time points regardless of group "
+"(within-subjects main effect)."
+msgstr ""
+
 #: R/mstab.b.R
 msgid ""
 "<b>Adopted Structure</b>: Model 1 (Separate slopes and separate intercepts). "
@@ -100,6 +126,12 @@ msgid ""
 msgstr ""
 "<b>Zvolená struktura</b>: Model 3 (společná směrnice, společná konstanta). "
 "Všechny šarže jsou plně sloučeny do jediné regresní přímky."
+
+#: R/mstab.b.R
+msgid ""
+"<b>Adopted Structure</b>: Single batch linear regression. No poolability "
+"testing."
+msgstr ""
 
 #: R/msnp.b.R
 msgid ""
@@ -201,6 +233,14 @@ msgstr ""
 "<b>MEZILEHLOST</b>: počet nejkratších cest mezi všemi dvojicemi uzlů, které "
 "procházejí tímto uzlem; ukazuje jeho důležitost jako \"mostu\" nebo "
 "průchozího bodu."
+
+#: R/mmnv.b.R
+msgid ""
+"<b>Box's M Test</b>: Tests equality of covariance matrices across "
+"between-subjects groups using Box's exact F-approximation (Box, 1949). "
+"Highly sensitive to departures from normality; alpha = .001 is "
+"conventionally used."
+msgstr ""
 
 #: R/mdca.b.R
 msgid ""
@@ -512,6 +552,13 @@ msgstr ""
 "1 / Σ(pi²). Ne = 1 znamená fixaci (monomorfismus), Ne = 2 znamená stejné "
 "frekvence alel bialelického markeru."
 
+#: R/mmnv.b.R
+msgid ""
+"<b>Epsilon Bounds</b>: Epsilon ranges from 1 / (k - 1) (lower bound, severe "
+"violation) to 1.0 (perfect sphericity). Values below 0.75 strongly favor the "
+"multivariate MANOVA approach."
+msgstr ""
+
 #: R/mpwr.b.R
 msgid ""
 "<b>Events (N1)</b> represents the required number of target events (e.g., "
@@ -579,6 +626,12 @@ msgstr ""
 "překračuje povolenou mez extrapolace podle ICH Q1E ({cap} měsíců). Povolená "
 "doba použitelnosti je omezena na {cap} měsíců."
 
+#: R/mmnv.b.R
+msgid ""
+"<b>F-Approximation</b>: Multidimensional test criteria are converted to "
+"exact or approximate F-statistics using Rao's or Pillai's approximations."
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "<b>Fine–Gray proportional subdistribution hazards regression</b> (Fine & "
@@ -614,6 +667,13 @@ msgstr ""
 "<b>Grayův test</b> (Gray, 1988) je neparametrický test pro K výběrů "
 "porovnávající funkce kumulativní incidence určité příčiny mezi skupinami. "
 "Posuzuje subdistribuční rizika za přítomnosti konkurujících rizik."
+
+#: R/mmnv.b.R
+msgid ""
+"<b>Greenhouse-Geisser (ε_GG)</b>: Conservative epsilon adjustment applied to "
+"degrees of freedom when sphericity is violated (Greenhouse & Geisser, 1959). "
+"Recommended when true epsilon < 0.75."
+msgstr ""
 
 #: R/mcor.b.R
 msgid "<b>Hₐ</b> is negative correlation"
@@ -695,22 +755,29 @@ msgstr ""
 "konstantní (H0: konstantní rozptyl). Potvrzuje vhodnost lineární regrese "
 "metodou nejmenších čtverců bez vážení chyb."
 
+#: R/mmnv.b.R
+msgid ""
+"<b>Hotelling-Lawley Trace</b>: Sum of eigenvalues of HE^-1. Directly "
+"reflects multidimensional variance explained by hypothesis relative to error."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"<b>Huynh-Feldt (ε_HF)</b>: Less conservative epsilon adjustment suitable "
+"when sample size is moderate and true epsilon >= 0.75 (Huynh & Feldt, 1976)."
+msgstr ""
+
 #: R/mstab.b.R
 msgid ""
 "<b>ICH Q1E Appendix A Extrapolation</b>: Permitted shelf life may extend "
-"beyond real-time data if accelerated stability demonstrates little or no "
-"change. Under favorable conditions, maximum extrapolation is capped at 2x "
-"observed duration (up to Y + 12 months), or 1.5x observed duration (up to Y "
-"+ 6 months) if accelerated data show change. Extrapolation is never "
-"permitted beyond the statistical intersection."
+"beyond real-time data when supported by accelerated (and, if applicable, "
+"intermediate) stability data. Up to 2x observed duration (capped at X + 12 "
+"months) is allowed if accelerated data show no significant change; up to "
+"1.5x (capped at X + 6 months) if significant change occurs at accelerated "
+"but not intermediate conditions. If not evaluated or change is observed "
+"without intermediate support, no extrapolation beyond observed duration X is "
+"permitted. Extrapolation is never permitted beyond the statistical estimate."
 msgstr ""
-"<b>Extrapolace podle přílohy A ICH Q1E</b>: Povolená doba použitelnosti může "
-"přesáhnout dobu pokrytou daty získanými v reálném čase, pokud zrychlená "
-"studie stability prokazuje malé nebo žádné změny. Za příznivých podmínek je "
-"maximální extrapolace omezena na 2x pozorovanou dobu (nejvýše Y + 12 měsíců)"
-", nebo na 1.5x pozorovanou dobu (nejvýše Y + 6 měsíců), pokud data ze "
-"zrychlené studie vykazují změnu. Extrapolace nikdy není povolena za "
-"statistický průsečík."
 
 #: R/mstab.b.R
 msgid ""
@@ -853,6 +920,28 @@ msgstr ""
 "<b>MAR</b> - náhodné chybění (pokud je každá p<sub>hodnota</sub> významná, "
 "existují důkazy, že data jsou MAR);"
 
+#: R/mmnv.b.R
+msgid ""
+"<b>Mardia's Multivariate Normality</b>: Computes multivariate skewness "
+"(b1,p; asymptotic chi-square) and multivariate kurtosis (b2,p; asymptotic "
+"standard normal z) (Mardia, 1970). Values p >= .05 indicate conformity with "
+"multivariate normality."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"<b>Marginal Means & Error Bounds</b>: Displays estimated marginal means, "
+"standard errors (SE), standard deviations (SD), and 95% confidence intervals "
+"for each factor combination across repeated measures cells."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"<b>Mauchly's Sphericity Test</b>: Tests H0 that the covariance matrix of "
+"orthonormal contrasts has equal variances (compound symmetry). A significant "
+"result (p < .05) indicates violation of sphericity."
+msgstr ""
+
 #: R/mmlp.b.R
 msgid "<b>Max Iterations</b>: maximum number of training epochs."
 msgstr "<b>Maximální počet iterací</b>: maximální počet trénovacích epoch."
@@ -922,6 +1011,14 @@ msgstr ""
 "pomocí regularizace L1 zmenšuje slabé parciální korelace přesně na nulu a "
 "vytváří řídkou síť."
 
+#: R/mmnv.b.R
+msgid ""
+"<b>Methodological Recommendation</b>: In repeated measures designs with "
+"sphericity violations (p < .05, ε < .75), the MANOVA approach (Multivariate "
+"Table) is preferred over uncorrected Univariate ANOVA (O'Brien & Kaiser, "
+"1985)."
+msgstr ""
+
 #: R/mstab.b.R
 msgid ""
 "<b>Model Parameters</b>: Intercept represents the estimated mean attribute "
@@ -951,6 +1048,13 @@ msgid "<b>mtry</b>: number of candidate variables randomly sampled at each split
 msgstr ""
 "<b>mtry</b>: počet kandidátních proměnných náhodně vybraných při každém "
 "dělení."
+
+#: R/mmnv.b.R
+msgid ""
+"<b>Multivariate Outliers (Mahalanobis D²)</b>: Evaluates squared distance "
+"from group centroid against the chi-square distribution (df = p, alpha = "
+".001). Observations exceeding critical threshold warrant inspection."
+msgstr ""
 
 #: R/mmf.b.R
 msgid "<b>N</b> - number of missing values;"
@@ -1043,6 +1147,13 @@ msgstr ""
 "maximálního čistého přínosu (maximální čistý přínos). Vyvažuje detekci "
 "skutečných událostí a předcházení zbytečným intervencím v hodnocené kohortě."
 
+#: R/mmnv.b.R
+msgid ""
+"<b>Orthogonal Polynomial Contrasts</b>: Decompose the within-subject factor "
+"into orthogonal trends: Linear (constant rate of change), Quadratic "
+"(curvature/plateau), and Cubic (inflection points)."
+msgstr ""
+
 #: R/msnp.b.R
 msgid ""
 "<b>p-adjusted</b> is the p-value corrected for multiple testing across "
@@ -1090,6 +1201,13 @@ msgstr ""
 "markeru. <b>PIC > 0.5</b> je vysoce informativní, <b>0.25 < PIC < 0.5</b> je "
 "středně informativní, <b>PIC < 0.25</b> je mírně informativní (Botstein et "
 "al., 1980)."
+
+#: R/mmnv.b.R
+msgid ""
+"<b>Pillai's Trace</b>: Most robust statistic against departures from "
+"multivariate normality and homogeneity of covariance matrices (Olson, 1974; "
+"O'Brien & Kaiser, 1985). Recommended as primary test criterion."
+msgstr ""
 
 #: R/mpwr.b.R
 msgid ""
@@ -1187,6 +1305,13 @@ msgstr ""
 "musí být materiál před použitím znovu přezkoušen. Doba použitelnosti / "
 "stanovení data exspirace se vztahuje na konečné léčivé přípravky uváděné na "
 "trh."
+
+#: R/mmnv.b.R
+msgid ""
+"<b>Roy's Largest Root</b>: Based on the maximum eigenvalue. Most powerful "
+"when the effect is concentrated along a single dimension, but sensitive to "
+"departures from assumptions."
+msgstr ""
 
 #: R/msrv.b.R
 msgid ""
@@ -1380,6 +1505,12 @@ msgstr ""
 "prazích pt, protože nevzniká ani přínos skutečně pozitivních výsledků, ani "
 "újma falešně pozitivních výsledků."
 
+#: R/mmnv.b.R
+msgid ""
+"<b>Trend Interpretation</b>: Evaluates the functional mathematical "
+"trajectory of the response across repeated measurement intervals."
+msgstr ""
+
 #: R/mui.b.R
 msgid ""
 "<b>Uncertain Interval (UI)</b> is placed around the point of intersection "
@@ -1396,9 +1527,23 @@ msgstr ""
 "<b>Interval nejistoty</b> se považuje za rozsah testových skóre, který je "
 "neprůkazný a neopravňuje ke správnému rozhodnutí."
 
+#: R/mmnv.b.R
+msgid ""
+"<b>Univariate Repeated Measures ANOVA</b>: Tests within-subjects effects "
+"assuming sphericity. When Mauchly's test is violated (p < .05), uncorrected "
+"F-tests inflate Type I error; epsilon-adjusted degrees of freedom and "
+"p-values must be used instead."
+msgstr ""
+
 #: R/mmlp.b.R
 msgid "<b>Weight Decay</b>: L2 regularization penalty parameter."
 msgstr "<b>Penalizace vah</b>: parametr penalizace regularizace L2."
+
+#: R/mmnv.b.R
+msgid ""
+"<b>Wilks' Lambda</b>: Classic likelihood-ratio criterion (U-statistic). "
+"Values closer to 0 represent stronger multivariate effects."
+msgstr ""
 
 #: R/mdca.b.R
 msgid ""
@@ -1436,6 +1581,10 @@ msgstr "1 - Specifita"
 msgid "1-way"
 msgstr "1. řád"
 
+#: R/mmnv.b.R
+msgid "1. Parallelism (Time × Group Interaction)"
+msgstr ""
+
 #: mSNP/options/mdrFolds/10.title
 msgid "10 folds"
 msgstr "10 částí"
@@ -1453,6 +1602,10 @@ msgstr "100 - Specifita (%)"
 msgid "2-way"
 msgstr "2. řád"
 
+#: R/mmnv.b.R
+msgid "2. Equal Levels (Coincidence / Between-Group Main Effect)"
+msgstr ""
+
 #: mSNP/options/mdrFolds/3.title
 msgid "3 folds"
 msgstr "3 části"
@@ -1460,6 +1613,10 @@ msgstr "3 části"
 #: mSNP/options/mdrOrder/3.title
 msgid "3-way"
 msgstr "3. řád"
+
+#: R/mmnv.b.R
+msgid "3. Flatness (Within-Subjects Change over Time)"
+msgstr ""
 
 #: mOUT/options/tholdZS/3.0.title
 msgid "3.0 (standard)"
@@ -1477,13 +1634,19 @@ msgstr "4. řád"
 msgid "5 folds"
 msgstr "5 částí"
 
+#: mMNV/results/meansTable.columns.title
 #: mSTAB/results/coefTable.columns.title
 msgid "95% CI Lower"
 msgstr "Dolní mez 95% intervalu spolehlivosti"
 
+#: mMNV/results/meansTable.columns.title
 #: mSTAB/results/coefTable.columns.title
 msgid "95% CI Upper"
 msgstr "Horní mez 95% intervalu spolehlivosti"
+
+#: mMNV/options/plotError/ci.title
+msgid "95% Confidence Interval"
+msgstr ""
 
 #: mLR/results/coeffTable.columns.title
 msgid "95% OR CI Lower"
@@ -1516,6 +1679,12 @@ msgstr "Apriorní analýza síly testu"
 #: mPWR/results/powerTable.title
 msgid "A Priori Power Analysis Results"
 msgstr "Výsledky apriorní analýzy síly testu"
+
+#: R/mmnv.b.R
+msgid ""
+"A significant p-value (p < .05) indicates violation of sphericity, "
+"demonstrating why the MANOVA approach is required."
+msgstr ""
 
 #: mSTAB/options/accelCondition.title
 msgid "Accelerated Testing Support (ICH Q1E App. A)"
@@ -1650,6 +1819,14 @@ msgstr "Možnosti analýzy a grafů"
 msgid "Analysis by Groups"
 msgstr "Analýza podle skupin"
 
+#: mMNV/options/mode.title
+msgid "Analysis Mode"
+msgstr ""
+
+#: mMNV/ui[1].label
+msgid "Analysis Mode & Design"
+msgstr ""
+
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/groupAnalysisTable.title
 msgid "Analysis of Alleles and Genotypes by Outcome Variable"
@@ -1688,13 +1865,25 @@ msgstr "Úhlové pořadí vlastních vektorů"
 msgid "ANOVA / ANCOVA (F-Test)"
 msgstr "ANOVA / ANCOVA (F-test)"
 
+#: mMNV/results/sphericityTable.columns.title
+msgid "Approx. χ²"
+msgstr ""
+
 #: mSTAB/results/diagTable.columns.title
 msgid "Assessment / Criteria"
 msgstr "Posouzení / kritéria"
 
+#: mMNV/results/assumptionsTable.columns.title
+msgid "Assessment & Recommendation"
+msgstr ""
+
 #: mSNP/options/assocEnable.title
 msgid "Association tests"
 msgstr "Asociační testy"
+
+#: mMNV/ui[4].label
+msgid "Assumptions & Diagnostics"
+msgstr ""
 
 #: mSNP/options/ternaryRegion/1.title
 msgid "Asymptotic Chi-square (1)"
@@ -1715,6 +1904,10 @@ msgid ""
 msgstr ""
 "Pro analýzu vazebné nerovnováhy jsou vyžadovány alespoň 2 markery, které "
 "prošly kontrolou kvality."
+
+#: R/mstab.b.R
+msgid "At least 3 valid observations are required for stability analysis."
+msgstr ""
 
 #: R/msrv.b.R
 msgid ""
@@ -1797,10 +1990,6 @@ msgstr "Základní pravděpodobnost"
 msgid "baseline"
 msgstr "výchozí"
 
-#: R/mstab.b.R
-msgid "Batch"
-msgstr "Šarže"
-
 #: mSTAB/results/shelfTable.columns.title
 msgid "Batch / Cohort"
 msgstr "Šarže / kohorta"
@@ -1810,7 +1999,6 @@ msgstr "Šarže / kohorta"
 msgid "Batch / Lot"
 msgstr "Šarže / výrobní dávka"
 
-#: R/mstab.b.R
 #: mSTAB/results/ratePlot.title
 msgid "Batch Degradation Rates & ANCOVA Slope Comparison"
 msgstr "Rychlosti rozkladu šarží a porovnání směrnic pomocí ANCOVA"
@@ -1855,6 +2043,11 @@ msgstr "Dolní mez 95% intervalu spolehlivosti beta"
 #: R/msnp.b.R
 msgid "Beta Upper 95% CI"
 msgstr "Horní mez 95% intervalu spolehlivosti beta"
+
+#: mMNV/options/between.title
+#: mMNV/ui[0][2].label
+msgid "Between-Subjects Factors"
+msgstr ""
 
 #: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
@@ -1909,6 +2102,10 @@ msgstr "Oba grafy"
 msgid "Bottom"
 msgstr "Dole"
 
+#: R/mmnv.b.R
+msgid "Box's M (Equality of Covariance Matrices)"
+msgstr ""
+
 #: mOUT/options/boxpl.title
 #: mOUT/results/plots.title
 msgid "Boxplots with outliers"
@@ -1941,10 +2138,6 @@ msgstr "Vypočítat součty"
 #: mOUT/results/stat/outstat.description
 msgid "Calculated fences for outliers"
 msgstr "Vypočítané hranice odlehlých hodnot"
-
-#: R/mstab.b.R
-msgid "Calculated SRL:"
-msgstr "Vypočtená SRL:"
 
 #: R/msnp.b.R
 msgid ""
@@ -1981,6 +2174,12 @@ msgstr "Kalibrační směrnice"
 #: mSNP/results/qcGroup/qcTable.columns.title
 msgid "Call Rate"
 msgstr "Podíl určených genotypů"
+
+#: R/mstab.b.R
+msgid ""
+"Cannot estimate shelf life: zero residual degrees of freedom in the full "
+"model."
+msgstr ""
 
 #: R/mstab.b.R
 msgid "Cannot evaluate homoscedasticity"
@@ -2134,6 +2333,11 @@ msgstr "Klasická odlehlá hodnota"
 #: R/mmout.b.R
 msgid "Classical"
 msgstr "Klasická"
+
+#: package/analyses/mMNV.menuSubgroup
+#: mMNV/options.menuSubgroup
+msgid "Classical & Advanced ANOVA"
+msgstr ""
 
 #: mMOUT/options/method/classic.title
 msgid "Classical Mahalanobis distance"
@@ -2457,6 +2661,14 @@ msgstr "Kontingenční matice (shluky a skupiny):"
 msgid "Continuous Predictors / Scores"
 msgstr "Spojité prediktory / skóre"
 
+#: mMNV/results/contrastsTable.columns.title
+msgid "Contrast / Trend"
+msgstr ""
+
+#: mMNV/options/contrastType.title
+msgid "Contrast Type"
+msgstr ""
+
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Controls"
 msgstr "Kontroly"
@@ -2530,6 +2742,8 @@ msgid "Counting process formulation with left-truncation (tstart, elapsed)."
 msgstr "Formulace čítacího procesu s levostranným useknutím (tstart, elapsed)."
 
 #: R/msrv.b.R
+#: mMNV/options/covs.title
+#: mMNV/ui[0][3].label
 #: mSNP/options/covs.title
 #: mSNP/ui[0][2].label
 msgid "Covariates"
@@ -2574,6 +2788,10 @@ msgstr "Coxova regrese proporcionálních rizik"
 msgid "Cox Regression Coefficients"
 msgstr "Koeficienty Coxovy regrese"
 
+#: R/mmnv.b.R
+msgid "Critical threshold (p < .001)"
+msgstr ""
+
 #: R/mmlp.b.R
 msgid "Cross-Entropy Loss"
 msgstr "Ztráta křížové entropie"
@@ -2607,6 +2825,10 @@ msgstr "Počet opakování křížové validace (R)"
 #: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
 msgid "CS-coefficient (cor = 0.7)"
 msgstr "Koeficient CS (cor = 0.7)"
+
+#: R/mmnv.b.R
+msgid "Cubic"
+msgstr ""
 
 #: mPCA/results/varianceTable.columns.title
 msgid "Cumulative %"
@@ -2780,12 +3002,13 @@ msgid "Decision Curves Plot (Net Benefit)"
 msgstr "Graf rozhodovacích křivek (čistý přínos)"
 
 #: R/mstab.b.R
-msgid "Degradation Rate"
-msgstr "Rychlost rozkladu"
-
 #: mSTAB/options/showRatePlot.title
 msgid "Degradation Rates / Slopes Comparison"
 msgstr "Porovnání rychlostí rozkladu / směrnic"
+
+#: R/mstab.b.R
+msgid "Degradation rates across evaluated batches"
+msgstr ""
 
 #: mMF/results/estim/mcar.columns.title
 msgid "Degree of Freedom (df)"
@@ -2811,6 +3034,15 @@ msgstr "Závislá proměnná (cíl)"
 msgid "Dependent variable must have at least two levels."
 msgstr "Závislá proměnná musí mít alespoň dvě úrovně."
 
+#: mMNV/options/deps.title
+#: mMNV/ui[0][1].label
+msgid "Dependent Variables (Factorial MANOVA)"
+msgstr ""
+
+#: mMNV/ui[5].label
+msgid "Descriptives & Plots"
+msgstr ""
+
 #: mPWR/options/design.title
 msgid "Design"
 msgstr "Uspořádání"
@@ -2827,6 +3059,9 @@ msgstr "Podrobná tabulka klasifikace buněk"
 msgid "Detailed Cell Risk Classification"
 msgstr "Podrobná klasifikace rizika buněk"
 
+#: mMNV/results/univariateTable.columns.title
+#: mMNV/results/sphericityTable.columns.title
+#: mMNV/results/contrastsTable.columns.title
 #: mSRV/results/logRankTable.columns.title
 #: mSRV/results/coxSection/coxFitTable.columns.title
 #: mSRV/results/coxSection/coxAssumpTable.columns.title
@@ -2839,9 +3074,25 @@ msgstr "df"
 msgid "df / Parameter"
 msgstr "df / parametr"
 
+#: mMNV/results/multivariateTable.columns.title
+#: mMNV/results/profileTable.columns.title
+#: mMNV/results/assumptionsTable.columns.title
+msgid "df1"
+msgstr ""
+
+#: mMNV/results/multivariateTable.columns.title
+#: mMNV/results/profileTable.columns.title
+#: mMNV/results/assumptionsTable.columns.title
+msgid "df2"
+msgstr ""
+
 #: mSTAB/results/diagTable.columns.title
 msgid "Diagnostic / Assumption Test"
 msgstr "Diagnostika / test předpokladu"
+
+#: mMNV/results/assumptionsTable.columns.title
+msgid "Diagnostic Test"
+msgstr ""
 
 #: package/analyses/mUI.menuSubgroup
 #: package/analyses/mSNP.menuSubgroup
@@ -2853,6 +3104,10 @@ msgstr "Diagnostika a genetika"
 #: mUI/options/UImethod/noUI.title
 msgid "Dichotomization (no uncertainty)"
 msgstr "Dichotomizace (bez nejistoty)"
+
+#: mMNV/options/contrastType/difference.title
+msgid "Difference (Reverse Helmert)"
+msgstr ""
 
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
@@ -2911,6 +3166,11 @@ msgstr "Popisky hran"
 #: R/mcor.b.R
 msgid "Edge Weights Bootstrap"
 msgstr "Bootstrap vah hran"
+
+#: mMNV/results/multivariateTable.columns.title
+#: mMNV/results/univariateTable.columns.title
+msgid "Effect / Source"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/options/calc/es.title
@@ -2998,10 +3258,6 @@ msgstr "Shodné konstanty"
 msgid "Equal slopes"
 msgstr "Shodné směrnice"
 
-#: R/mstab.b.R
-msgid "Equality of Slopes:"
-msgstr "Rovnost směrnic:"
-
 #: R/mpwr.b.R
 #: mPWR/ui[0]/alt/equivalent.title
 msgid "equivalence"
@@ -3019,6 +3275,10 @@ msgstr "Chyba při odhadu neuronové sítě: {err}"
 #: R/mrf.b.R
 msgid "Error during Random Forest fitting: {err}"
 msgstr "Chyba při odhadu náhodného lesa: {err}"
+
+#: R/mmnv.b.R
+msgid "Error evaluating MANOVA model"
+msgstr ""
 
 #: R/mcor.b.R
 msgid "Error in Classical Partial Correlation calculation: {}"
@@ -3228,6 +3488,14 @@ msgstr ""
 msgid "Extrapolation Cap"
 msgstr "Mez extrapolace"
 
+#: R/mstab.b.R
+msgid "Extrapolation Limit:"
+msgstr ""
+
+#: mMNV/results/assumptionsTable.columns.title
+msgid "F / χ²"
+msgstr ""
+
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "F_IS"
 msgstr "F_IS"
@@ -3256,6 +3524,10 @@ msgstr "Matice faktorových zátěží"
 #: mPCA/options/loadingsTable.title
 msgid "Factor loadings table"
 msgstr "Tabulka faktorových zátěží"
+
+#: mMNV/options/mode/factorial.title
+msgid "Factorial MANOVA / MANCOVA (Between-Subjects Multiple DVs)"
+msgstr ""
 
 #: mLR/options/factors.title
 #: mLR/ui[0][2].label
@@ -3454,7 +3726,16 @@ msgstr ""
 "Grayův test není podporován pro data ve formátu procesu čítání / s opožděným "
 "vstupem (zadaný počáteční čas)."
 
+#: R/mmnv.b.R
+msgid "Greenhouse-Geisser"
+msgstr ""
+
+#: mMNV/results/sphericityTable.columns.title
+msgid "Greenhouse-Geisser ε"
+msgstr ""
+
 #: R/mout.b.R
+#: mMNV/results/meansTable.columns.title
 #: mMOUT/results/stat.columns.title
 #: mMOUT/results/oind.columns.title
 #: mSNP/options/group.title
@@ -3561,6 +3842,16 @@ msgstr "Ukázka klasifikace ROC zdravých/nemocných"
 #: mSNP/options/ldMetric.title
 msgid "Heatmap metric"
 msgstr "Míra pro teplotní mapu"
+
+#: mMNV/options/contrastType/helmert.title
+msgid "Helmert"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"Heterogeneous covariance matrices (p < .001). Rely primarily on Pillai's "
+"Trace."
+msgstr ""
 
 #: package/datasets/HIROCclassification.name
 msgid "HI ROC classification"
@@ -3677,9 +3968,18 @@ msgstr "Holm (1979)"
 msgid "Hommel (1988)"
 msgstr "Hommel (1988)"
 
+#: R/mmnv.b.R
+msgid "Homogeneity of covariance matrices supported (assumption met)."
+msgstr ""
+
 #: R/mstab.b.R
 msgid "Homoscedasticity (|e| vs Time correlation)"
 msgstr "Homoskedasticita (korelace |e| s časem)"
+
+#: R/mmnv.b.R
+#: mMNV/options/testHotelling.title
+msgid "Hotelling-Lawley Trace"
+msgstr ""
 
 #: mCOR/options/glassoHub.title
 msgid "Hub markers table"
@@ -3688,6 +3988,14 @@ msgstr "Tabulka ukazatelů významných uzlů"
 #: R/msrv.b.R
 msgid "Huber–White robust sandwich estimator"
 msgstr "Huberův–Whiteův robustní sendvičový odhad"
+
+#: R/mmnv.b.R
+msgid "Huynh-Feldt"
+msgstr ""
+
+#: mMNV/results/sphericityTable.columns.title
+msgid "Huynh-Feldt ε"
+msgstr ""
 
 #: R/msnp.b.R
 msgid "HWE compliant"
@@ -3708,6 +4016,19 @@ msgstr "Statistické testy HWE"
 #: mCOR/options/hyp.title
 msgid "Hypothesis"
 msgstr "Hypotéza"
+
+#: mMNV/results/profileTable.columns.title
+msgid "Hypothesis / Question"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Hypothesis-Error (HE) Multivariate Scatter & Ellipses"
+msgstr ""
+
+#: mMNV/options/showHePlot.title
+#: mMNV/results/hePlot.title
+msgid "Hypothesis-Error (HE) Plot"
+msgstr ""
 
 #: mSTAB/results/shelfTable.columns.title
 msgid "ICH Q1E Permitted Shelf Life (months)"
@@ -3801,8 +4122,8 @@ msgid "Individual Batch"
 msgstr "Jednotlivá šarže"
 
 #: R/mstab.b.R
-msgid "Individual Batch Trajectories"
-msgstr "Trajektorie jednotlivých šarží"
+msgid "Individual Batch Stability Trajectories"
+msgstr ""
 
 #: mSTAB/options/showFacetPlot.title
 #: mSTAB/results/facetPlot.title
@@ -3844,6 +4165,10 @@ msgstr "Vstupní vrstva"
 msgid "Instructions"
 msgstr "Pokyny"
 
+#: mMNV/results/instructions.title
+msgid "Instructions & Methodological Guidance"
+msgstr ""
+
 #: R/mstab.b.R
 msgid "Insufficient degrees of freedom for intercepts test"
 msgstr "Nedostatek stupňů volnosti pro test konstant"
@@ -3868,6 +4193,10 @@ msgstr "Konstanty se liší"
 #: mCOR/results/rplots.title
 msgid "Intercluster Matrices"
 msgstr "Matice mezi shluky"
+
+#: mMNV/results/profileTable.columns.title
+msgid "Interpretation & Decision"
+msgstr ""
 
 #: R/mui.b.R
 #: mUI/results/stat/uistat.columns.title
@@ -3933,11 +4262,13 @@ msgstr "Tukeyho hranice IQR"
 #: package/analyses/mSNP.menuGroup
 #: package/analyses/mPWR.menuSubgroup
 #: package/analyses/mSTAB.menuGroup
+#: package/analyses/mMNV.menuGroup
 #: mCOR/options.menuGroup
 #: mDCA/options.menuGroup
 #: mLR/options.menuGroup
 #: mMF/options.menuGroup
 #: mMLP/options.menuGroup
+#: mMNV/options.menuGroup
 #: mMOUT/options.menuGroup
 #: mOUT/options.menuGroup
 #: mPCA/options.menuGroup
@@ -4113,6 +4444,10 @@ msgstr "Limitující šarže:"
 msgid "Line width"
 msgstr "Tloušťka čáry"
 
+#: R/mmnv.b.R
+msgid "Linear"
+msgstr ""
+
 #: R/mpwr.b.R
 #: mPWR/options/design/linear.title
 msgid "Linear Regression (F-Test)"
@@ -4252,6 +4587,10 @@ msgstr "Nízká stabilita (CS < 0.25). Centralitu interpretujte obezřetně."
 msgid "Lower 95% CI"
 msgstr "Dolní mez 95% intervalu spolehlivosti"
 
+#: mMNV/results/sphericityTable.columns.title
+msgid "Lower Bound ε"
+msgstr ""
+
 #: mSRV/results/rocSection/rocTable.columns.title
 msgid "Lower CI"
 msgstr "Dolní mez intervalu spolehlivosti"
@@ -4271,6 +4610,10 @@ msgstr "Dolní část"
 #: mSTAB/options/lsl.title
 msgid "Lower Specification Limit (LSL)"
 msgstr "Dolní specifikační mez (LSL)"
+
+#: R/mstab.b.R
+msgid "Lower SRL:"
+msgstr ""
 
 #: mUI/results/stat/uistat.columns.title
 msgid "Lower threshold"
@@ -4313,6 +4656,32 @@ msgstr "Hraniční čáry prahu MAF"
 msgid "MAF threshold for warnings"
 msgstr "Práh MAF pro upozornění"
 
+#: R/mmnv.b.R
+msgid "Mahalanobis Distance (Multivariate Outliers)"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Mahalanobis Distance D²"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Mahalanobis Distance D² (Multivariate Outliers)"
+msgstr ""
+
+#: package/analyses/mMNV.title
+#: package/analyses/mMNV.menuTitle
+#: package/datasets/MANOVA&RepeatedMeasures.name
+#: mMNV/options.title
+#: mMNV/options.menuTitle
+#: mMNV/ui.title
+#: mMNV/results.title
+msgid "MANOVA & Repeated Measures"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "MANOVA & Repeated Measures: Methodological Guide"
+msgstr ""
+
 #: R/mlr.b.R
 #: mRF/options/mtry_method/manual.title
 msgid "Manual"
@@ -4343,6 +4712,22 @@ msgstr "Ruční penalizace (ρ)"
 #: mMF/results/estim/mars.description
 msgid "MAR classification table"
 msgstr "Klasifikační tabulka MAR"
+
+#: R/mmnv.b.R
+msgid "Mardia Multivariate Kurtosis"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Mardia Multivariate Skewness"
+msgstr ""
+
+#: mMNV/results/meansTable.title
+msgid "Marginal Means & Descriptives"
+msgstr ""
+
+#: mMNV/options/showMeansTable.title
+msgid "Marginal Means & Descriptives Table"
+msgstr ""
 
 #: mROC/options/mAst.title
 msgid "Mark significance *<0.05, **<0.01, ***<0.001"
@@ -4397,6 +4782,15 @@ msgstr "Matematický vzorec modelu"
 #: R/mcor.b.R
 msgid "Matrix #{i}"
 msgstr "Matice #{i}"
+
+#: mMNV/options/showSphericity.title
+#: mMNV/results/sphericityTable.title
+msgid "Mauchly's Sphericity Test & Epsilon Estimates"
+msgstr ""
+
+#: mMNV/results/sphericityTable.columns.title
+msgid "Mauchly's W"
+msgstr ""
 
 #: mSNP/options/mdrOrder.title
 msgid "Max interaction order"
@@ -4490,6 +4884,7 @@ msgid "MDR Model Performance Comparison"
 msgstr "Porovnání výkonnosti modelů MDR"
 
 #: R/mout.b.R
+#: mMNV/results/meansTable.columns.title
 msgid "Mean"
 msgstr "Průměr"
 
@@ -4505,6 +4900,12 @@ msgstr "Průměrný pokles přesnosti (%)"
 msgid "Mean Predicted Probability"
 msgstr "Průměrná predikovaná pravděpodobnost"
 
+#: R/mmnv.b.R
+msgid "Mean Response"
+msgstr ""
+
+#: mMNV/results/univariateTable.columns.title
+#: mMNV/results/contrastsTable.columns.title
 #: mSTAB/results/poolTable.columns.title
 msgid "Mean Square"
 msgstr "Průměrný čtverec"
@@ -4698,6 +5099,10 @@ msgstr ""
 "inicializace vah a rozdělení dat počáteční hodnotu generátoru náhodných "
 "čísel (výchozí 42, nastavitelná v Nastavení validace)."
 
+#: R/mstab.b.R
+msgid "mo"
+msgstr ""
+
 #: R/mdca.b.R
 #: R/msnp.b.R
 #: mDCA/results/calTable.columns.title
@@ -4733,6 +5138,11 @@ msgstr "Tabulka kalibrace modelu"
 #: mLR/results/coeffTable.title
 msgid "Model Coefficients (Post-Selection / Refitted Model)"
 msgstr "Koeficienty modelu (po výběru / znovu odhadnutý model)"
+
+#: mMNV/options/showAssumptionChecks.title
+#: mMNV/results/assumptionsTable.title
+msgid "Model Diagnostics & Assumption Checks"
+msgstr ""
 
 #: mSTAB/options/showDiagTable.title
 msgid "Model Diagnostics & Assumptions Table"
@@ -4854,6 +5264,36 @@ msgstr "Vícenásobné testování"
 msgid "Multiple testing correction"
 msgstr "Korekce na vícenásobné testování"
 
+#: mMNV/results/multivariateTable.columns.title
+msgid "Multiv. Test"
+msgstr ""
+
+#: package/analyses/mMNV.description
+#: mMNV/options.description.main
+msgid ""
+"Multivariate Analysis of Variance (MANOVA), Repeated Measures MANOVA without "
+"sphericity assumption (O'Brien & Kaiser, 1985), and Profile Analysis."
+msgstr ""
+
+#: package/datasets/MANOVA&RepeatedMeasures.description
+msgid ""
+"Multivariate Analysis of Variance (MANOVA), Repeated Measures, and Profile "
+"Analysis demonstration"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Multivariate kurtosis normal."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Multivariate kurtosis significant."
+msgstr ""
+
+#: mMNV/options/showOutlierPlot.title
+#: mMNV/results/outlierPlot.title
+msgid "Multivariate Outliers (Mahalanobis Distance) Plot"
+msgstr ""
+
 #: package/analyses/mMOUT.title
 #: package/analyses/mMOUT.menuTitle
 #: mMOUT/options.title
@@ -4861,6 +5301,33 @@ msgstr "Korekce na vícenásobné testování"
 #: mMOUT/results.title
 msgid "Multivariate outliers identification and removal"
 msgstr "Identifikace a odstranění vícerozměrných odlehlých hodnot"
+
+#: R/mmnv.b.R
+msgid "Multivariate skewness normal."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Multivariate skewness significant."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Multivariate Test Criteria:"
+msgstr ""
+
+#: mMNV/ui[2].label
+msgid "Multivariate Tests"
+msgstr ""
+
+#: mMNV/results/multivariateTable.title
+msgid "Multivariate Tests (MANOVA)"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"Multivariate tests make no sphericity assumption on the covariance matrix "
+"(O'Brien & Kaiser, 1985). Pillai's trace is robust to heterogeneity of "
+"covariance matrices."
+msgstr ""
 
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "N at Risk"
@@ -4986,6 +5453,10 @@ msgstr "Klasifikace neuronovou sítí"
 msgid "Neural Network Classifier (multilayer perceptron) demonstration"
 msgstr "Ukázka klasifikátoru s neuronovou sítí (vícevrstvý perceptron)"
 
+#: R/mmnv.b.R
+msgid "NO assumption of sphericity"
+msgstr ""
+
 #: R/mdca.b.R
 msgid "No clinical gain"
 msgstr "Bez klinického přínosu"
@@ -5014,14 +5485,19 @@ msgstr "Po filtrech kontroly kvality nezůstaly žádné markery pro analýzu MD
 msgid "No misclassified cases found."
 msgstr "Nebyly nalezeny žádné chybně klasifikované případy."
 
+#: R/mmnv.b.R
+msgid "No multivariate outliers detected at critical threshold (p < .001)."
+msgstr ""
+
 #: R/mstab.b.R
 msgid "No significant autocorrelation"
 msgstr "Bez významné autokorelace"
 
 #: mSTAB/options/accelCondition/no_change.title
-msgid "No significant change at accelerated condition (Extrapolation allowed)"
+msgid ""
+"No significant change at accelerated condition (Extrapolation up to 2X, max "
+"X + 12 mo)"
 msgstr ""
-"Bez významné změny za podmínek zrychleného zkoušení (extrapolace povolena)"
 
 #: R/mstab.b.R
 msgid "No valid batch levels found."
@@ -5063,6 +5539,7 @@ msgstr ""
 #: mCOR/options/clPos/n.title
 #: mLR/options/palBrewer/none.title
 #: mMLP/options/palBrewer/none.title
+#: mMNV/options/plotError/none.title
 #: mPCA/options/palBrewer/none.title
 #: mRF/options/palBrewer/none.title
 #: mROC/options/theBest/none.title
@@ -5084,6 +5561,10 @@ msgstr "Žádná (0)"
 #: mSTAB/options/trans/none.title
 msgid "None (Zero-order linear kinetics)"
 msgstr "Žádná (lineární kinetika nultého řádu)"
+
+#: mSTAB/options/accelCondition/none.title
+msgid "None / Not evaluated (No extrapolation)"
+msgstr ""
 
 #: R/mmout.b.R
 msgid "Normal"
@@ -5113,10 +5594,6 @@ msgid ""
 msgstr ""
 "V časovém bodě analýzy t není dostatek událostí nebo přeživších k provedení "
 "analýzy ROC."
-
-#: mSTAB/options/accelCondition/none.title
-msgid "Not evaluated / None"
-msgstr "Nehodnoceno / žádné"
 
 #: R/mstab.b.R
 msgid "Not tested (slopes are unequal)"
@@ -5240,6 +5717,14 @@ msgstr "Pozor. AB"
 msgid "Obs BB"
 msgstr "Pozor. BB"
 
+#: R/mmnv.b.R
+msgid "Observation Index"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "observation(s) exceed critical Mahalanobis D² (p < .001)."
+msgstr ""
+
 #: R/mmf.b.R
 #: R/msnp.b.R
 #: R/mstab.b.R
@@ -5249,6 +5734,10 @@ msgstr "Pozorováno"
 #: R/mpca.b.R
 msgid "Observed Data"
 msgstr "Pozorovaná data"
+
+#: R/mstab.b.R
+msgid "Observed data, regression fits, and 95% confidence bands per batch"
+msgstr ""
 
 #: mLR/results/riskTable.columns.title
 #: mMLP/results/riskTable.columns.title
@@ -5307,6 +5796,12 @@ msgstr "Korelace v jednom výběru (Spearman)"
 #: mPWR/ui[0]/alt/one.sided.title
 msgid "one-tailed"
 msgstr "jednostranný"
+
+#: R/mstab.b.R
+msgid ""
+"Only a single batch provided; ANCOVA poolability is not evaluated. Single "
+"linear regression is fitted."
+msgstr ""
 
 #: R/mrf.b.R
 msgid "OOB"
@@ -5601,6 +6096,12 @@ msgstr "Grafy parciální závislosti (nejdůležitější prediktory)"
 msgid "Partial Dependence: {var}"
 msgstr "Parciální závislost: {var}"
 
+#: mMNV/results/multivariateTable.columns.title
+#: mMNV/results/univariateTable.columns.title
+#: mMNV/results/contrastsTable.columns.title
+msgid "Partial η²"
+msgstr ""
+
 #: mMLP/options/partition.title
 #: mMLP/ui[2]/partition.label
 #: mRF/options/partition.title
@@ -5738,6 +6239,22 @@ msgstr "PIC"
 msgid "Pie"
 msgstr "Výseč"
 
+#: R/mmnv.b.R
+msgid "Pillai / Univariate"
+msgstr ""
+
+#: R/mmnv.b.R
+#: mMNV/options/testPillai.title
+msgid "Pillai's Trace"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"Pillai's Trace is the most robust statistic against violations of "
+"homogeneity of covariance matrices. Wilks' Lambda is the standard "
+"likelihood-ratio criterion reported in psychological and medical literature."
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "Please select a Grouping Variable or Exposure Variable to compute adjusted "
@@ -5765,6 +6282,10 @@ msgstr "Graf"
 #: mMF/options/corplot.title
 msgid "Plot correlations between variables"
 msgstr "Zobrazit korelace mezi proměnnými"
+
+#: mMNV/options/plotError.title
+msgid "Plot Error Bars"
+msgstr ""
 
 #: mMF/ui[1][0][2].label
 msgid "Plot options"
@@ -5808,6 +6329,14 @@ msgstr "Polymorfismus"
 msgid "Polymorphism test"
 msgstr "Test polymorfismu"
 
+#: mMNV/options/contrastType/polynomial.title
+msgid "Polynomial (Linear, Quadratic, etc.)"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Polynomial Degree"
+msgstr ""
+
 #: mSTAB/options/alphaPool.title
 msgid "Poolability Alpha Level (α)"
 msgstr "Hladina alfa pro slučitelnost (α)"
@@ -5819,6 +6348,10 @@ msgstr "Sdružený reziduální rozptyl napříč šaržemi"
 #: R/mstab.b.R
 msgid "Pooled Slope"
 msgstr "Sdružená směrnice"
+
+#: R/mstab.b.R
+msgid "Pooled slope"
+msgstr ""
 
 #: mSNP/results/hweGroup/freqTable.columns.title
 #: mSNP/results/hweGroup/hwTable.columns.title
@@ -6037,6 +6570,48 @@ msgstr "Rozsah pravděpodobnosti"
 msgid "Proceed to Step 2"
 msgstr "Pokračovat ke kroku 2"
 
+#: mMNV/options/showProfileAnalysis.title
+msgid "Profile Analysis (Parallelism, Coincidence, Flatness)"
+msgstr ""
+
+#: mMNV/results/profileTable.title
+msgid "Profile Analysis Summary"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Profiles are flat (no significant change across repeated measures over time)."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"Profiles are NOT flat (significant change across repeated measures over "
+"time)."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"Profiles are NOT parallel (groups change differently over time; interaction "
+"is significant)."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"Profiles are parallel (no significant difference in trajectory over time "
+"between groups)."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"Profiles coincide (no significant overall elevation difference between "
+"groups)."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"Profiles do NOT coincide (significant overall elevation difference between "
+"groups)."
+msgstr ""
+
 #: mSRV/results/coxSection/coxAssumpTable.title
 msgid "Proportional Hazards Assumption (Schoenfeld Residuals Test)"
 msgstr "Předpoklad proporcionálních rizik (test Schoenfeldových reziduí)"
@@ -6085,6 +6660,10 @@ msgstr "Q-Q graf pro HWE"
 msgid "Q-Q plot of HWE p-values"
 msgstr "Q-Q graf p-hodnot HWE"
 
+#: R/mmnv.b.R
+msgid "Quadratic"
+msgstr ""
+
 #: mDCA/options/palBrewer.title
 #: mSRV/options/palBrewer.title
 msgid "Qualitative Palette"
@@ -6122,6 +6701,14 @@ msgstr "Tabulka kvality reprezentace (Cos²)"
 #: mSTAB/ui[0][0].label
 msgid "Quantitative Attribute / Response"
 msgstr "Kvantitativní ukazatel / závislá proměnná"
+
+#: R/mmnv.b.R
+msgid "Quartic"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Quintic"
+msgstr ""
 
 #: mSNP/options/ldMetric/r2.title
 #: mSNP/results/ldGroup/ldTable.columns.title
@@ -6173,6 +6760,10 @@ msgstr "Počáteční hodnota generátoru náhodných čísel"
 #: mRF/results/importanceTable.columns.title
 msgid "Rank"
 msgstr "Pořadí"
+
+#: R/mstab.b.R
+msgid "Rate of Change"
+msgstr ""
 
 #: mDCA/options/recalibrate.title
 msgid "Recalibrate Probabilities (Platt Scaling)"
@@ -6258,10 +6849,6 @@ msgstr "Optimalizace regularizační penalizace"
 msgid "Relative size of group 2 to group 1"
 msgstr "Relativní velikost skupiny 2 vůči skupině 1"
 
-#: R/mstab.b.R
-msgid "Release Limit (SRL)"
-msgstr "Mez při propuštění (SRL)"
-
 #: mMLP/options/activation/relu.title
 msgid "ReLU"
 msgstr "ReLU"
@@ -6281,9 +6868,29 @@ msgstr "Změnit pořadí"
 msgid "Rep {k}-Fold CV (x{r})"
 msgstr "Opakovaná {k}-násobná CV (x{r})"
 
+#: mMNV/options/contrastType/repeated.title
+msgid "Repeated (Successive differences)"
+msgstr ""
+
 #: R/mlr.b.R
 msgid "Repeated CV"
 msgstr "Opakovaná CV"
+
+#: mMNV/ui[0][0].label
+msgid "Repeated Measures Cells (Within-Subjects)"
+msgstr ""
+
+#: mMNV/options/mode/rm.title
+msgid "Repeated Measures MANOVA (Within-Subjects / Mixed Design)"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Repeated Measures Trajectory Profile"
+msgstr ""
+
+#: mMNV/options/rmCells.title
+msgid "Repeated Measures Variables / Time Points"
+msgstr ""
 
 #: R/mlr.b.R
 msgid "Repeated Stratified CV"
@@ -6538,6 +7145,11 @@ msgstr "Souřadnice osy X ROC"
 msgid "Row"
 msgstr "Řádek"
 
+#: R/mmnv.b.R
+#: mMNV/options/testRoy.title
+msgid "Roy's Largest Root"
+msgstr ""
+
 #: mRF/options/sample_fraction.title
 #: mRF/ui[1]/sample_fraction.label
 msgid "Sample Fraction (Bootstrap)"
@@ -6638,6 +7250,10 @@ msgstr "Sutinový graf s paralelní analýzou"
 msgid "Scree Plot with Parallel Analysis"
 msgstr "Sutinový graf s paralelní analýzou"
 
+#: mMNV/results/meansTable.columns.title
+msgid "SD"
+msgstr ""
+
 #: package/datasets/SDIROCclassification.name
 msgid "SDI ROC classification"
 msgstr "Klasifikace ROC SDI"
@@ -6647,6 +7263,7 @@ msgstr "Klasifikace ROC SDI"
 msgid "Se"
 msgstr "Se"
 
+#: mMNV/results/meansTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
 #: mSRV/results/coxSection/timeDepTable.columns.title
 #: mSRV/results/compRisksSection/cifSummaryTable.columns.title
@@ -6817,6 +7434,12 @@ msgid "Shelf Life / Retest Period Estimation Summary"
 msgstr "Souhrn odhadu doby použitelnosti / doby do přezkoušení"
 
 #: R/mstab.b.R
+msgid ""
+"Shelf life cannot be estimated: at least 2 distinct time points per batch "
+"are required."
+msgstr ""
+
+#: R/mstab.b.R
 msgid "Shelf Life Comparison & Extrapolation Horizon"
 msgstr "Porovnání doby použitelnosti a horizont extrapolace"
 
@@ -6827,6 +7450,12 @@ msgstr "Porovnání doby použitelnosti a graf horizontu"
 #: mSTAB/results/shelfPlot.title
 msgid "Shelf Life Comparison & ICH Q1E Extrapolation Horizon"
 msgstr "Porovnání doby použitelnosti a horizont extrapolace podle ICH Q1E"
+
+#: R/mstab.b.R
+msgid ""
+"Shelf life for batch '{batch}' cannot be computed (insufficient time points "
+"or degrees of freedom)."
+msgstr ""
 
 #: mSTAB/options/showShelfTable.title
 msgid "Shelf Life Summary Table"
@@ -6866,9 +7495,14 @@ msgid "Significance markers"
 msgstr "Značky významnosti"
 
 #: mSTAB/options/accelCondition/change_observed.title
-msgid "Significant change observed at accelerated condition (No extrapolation)"
+msgid "Significant change at accelerated condition (No extrapolation)"
 msgstr ""
-"Významná změna pozorovaná za podmínek zrychleného zkoušení (bez extrapolace)"
+
+#: mSTAB/options/accelCondition/intermediate_ok.title
+msgid ""
+"Significant change at accelerated, none at intermediate (Extrapolation up to "
+"1.5X, max X + 6 mo)"
+msgstr ""
 
 #: R/msnp.b.R
 msgid "Significant HWE deviation"
@@ -6881,6 +7515,14 @@ msgstr "Současné mnohonásobné porovnávání korelací pomocí metody {n}"
 #: R/mstab.b.R
 msgid "Single batch – poolability test not applicable"
 msgstr "Jediná šarže – test slučitelnosti nelze použít"
+
+#: R/mstab.b.R
+msgid "Single batch degradation rate with 95% confidence interval"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Single batch linear regression"
+msgstr ""
 
 #: mCOR/options/clustMet/single.title
 msgid "Single Linkage"
@@ -6901,6 +7543,10 @@ msgstr "Šikmé nadpisy"
 #: mSTAB/results/shelfTable.columns.title
 msgid "Slope (rate / month)"
 msgstr "Směrnice (rychlost / měsíc)"
+
+#: R/mstab.b.R
+msgid "Slopes ANCOVA Test:"
+msgstr ""
 
 #: R/mstab.b.R
 msgid "Slopes are poolable"
@@ -6995,6 +7641,14 @@ msgstr "Specifita mimo UI >"
 msgid "Sperm Deformity Index ROC Classification demonstration"
 msgstr "Ukázka klasifikace ROC indexu deformity spermií"
 
+#: R/mmnv.b.R
+msgid "Sphericity Assumed"
+msgstr ""
+
+#: mMNV/results/univariateTable.columns.title
+msgid "Sphericity Correction"
+msgstr ""
+
 #: mROC/options/splitROC.title
 msgid "Split curves"
 msgstr "Rozdělit křivky"
@@ -7050,6 +7704,10 @@ msgstr "Graf stability s mezemi spolehlivosti a specifikačními mezemi"
 msgid "Stability Profile & Shelf Life Estimation"
 msgstr "Profil stability a odhad doby použitelnosti"
 
+#: mMNV/options/plotError/se.title
+msgid "Standard Error (SE)"
+msgstr ""
+
 #: R/msrv.b.R
 msgid "Standard errors and confidence intervals are adjusted for clustering by"
 msgstr ""
@@ -7063,6 +7721,7 @@ msgstr "Standardizovaná beta"
 msgid "Standardized Residuals"
 msgstr "Standardizovaná rezidua"
 
+#: mMNV/results/assumptionsTable.columns.title
 #: mSRV/results/coxSection/coxFitTable.columns.title
 msgid "Statistic"
 msgstr "Statistika"
@@ -7167,6 +7826,8 @@ msgstr "Postupně"
 msgid "Sum"
 msgstr "Součet"
 
+#: mMNV/results/univariateTable.columns.title
+#: mMNV/results/contrastsTable.columns.title
 #: mSTAB/results/poolTable.columns.title
 msgid "Sum of Squares"
 msgstr "Součet čtverců"
@@ -7265,6 +7926,10 @@ msgstr "Test"
 msgid "Test for normality"
 msgstr "Test normality"
 
+#: mMNV/results/profileTable.columns.title
+msgid "Test Method"
+msgstr ""
+
 #: mSRV/options/coxAssump.title
 msgid "Test Proportional Hazards Assumption"
 msgstr "Testovat předpoklad proporcionálních rizik"
@@ -7285,6 +7950,14 @@ msgstr "Testování"
 #: mSNP/results/mdrGroup/mdrBestTable.columns.title
 msgid "Testing BA"
 msgstr "Testovací BA"
+
+#: mMNV/results/contrastsTable.title
+msgid "Tests of Within-Subjects Contrasts"
+msgstr ""
+
+#: mMNV/results/univariateTable.title
+msgid "Tests of Within-Subjects Effects (Univariate ANOVA)"
+msgstr ""
 
 #: R/mpwr.b.R
 msgid "The 'pwrss' package is not installed. Please install it in R."
@@ -7339,6 +8012,12 @@ msgstr "Závislá proměnná musí mít alespoň 2 úrovně."
 msgid "The exposure variable must have at least two distinct levels."
 msgstr "Proměnná expozice musí mít alespoň dvě různé úrovně."
 
+#: R/mmnv.b.R
+msgid ""
+"The Multivariate Analysis of Variance (MANOVA) approach to repeated measures "
+"designs"
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "The selected exposure variable must be categorical or have 10 or fewer "
@@ -7388,9 +8067,18 @@ msgstr "Prahová pravděpodobnost"
 msgid "Threshold Step"
 msgstr "Krok prahu"
 
+#: mMNV/options/rmFactorName.default
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "Time"
 msgstr "Čas"
+
+#: mMNV/results/meansTable.columns.title
+msgid "Time / Condition"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Time and response variables must contain valid finite numbers."
+msgstr ""
 
 #: mSRV/results/rocSection/rocTable.columns.title
 msgid "Time Point t"
@@ -7399,6 +8087,10 @@ msgstr "Časový bod t"
 #: mSRV/options/timeDepFunc.title
 msgid "Time Transform Function"
 msgstr "Funkce transformace času"
+
+#: R/mstab.b.R
+msgid "Time values cannot be negative."
+msgstr ""
 
 #: mSTAB/options/time.title
 #: mSTAB/ui[0][1].label
@@ -7449,6 +8141,14 @@ msgstr "Účinky proměnlivé v čase (Cox)"
 msgid "Time-varying effects model fitting failed to converge:"
 msgstr "Odhad modelu účinků proměnlivých v čase nekonvergoval:"
 
+#: R/mmnv.b.R
+msgid "Too few complete observations (minimum 3 required)."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Too few complete observations (minimum 4 required)."
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Too few observations after removing missing values (minimum 5 required)."
 msgstr ""
@@ -7463,16 +8163,9 @@ msgstr ""
 "Příliš málo platných pozorování pro analýzu rozhodovacích křivek (vyžaduje "
 "se alespoň 10)."
 
-#: R/mstab.b.R
-msgid ""
-"Too few valid observations for stability analysis (at least 4 observations "
-"required)."
-msgstr ""
-"Příliš málo platných pozorování pro analýzu stability (vyžadována alespoň 4 "
-"pozorování)."
-
 #: R/mlr.b.R
 #: R/mmlp.b.R
+#: R/mmnv.b.R
 #: R/mrf.b.R
 #: R/msnp.b.R
 msgid "Total"
@@ -7536,6 +8229,11 @@ msgstr "Přesnost trénování (%)"
 msgid "Training BA"
 msgstr "Trénovací BA"
 
+#: mMNV/options/showProfilePlot.title
+#: mMNV/results/profilePlot.title
+msgid "Trajectory / Profile Plot"
+msgstr ""
+
 #: R/mdca.b.R
 msgid "Treat All"
 msgstr "Intervence u všech"
@@ -7543,6 +8241,16 @@ msgstr "Intervence u všech"
 #: R/mdca.b.R
 msgid "Treat None"
 msgstr "Intervence u nikoho"
+
+#: mMNV/options/contrastType/treatment.title
+msgid "Treatment (Compare to baseline)"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"treats repeated measurements as a multivariate vector of dependent "
+"variables. Unlike classical univariate RM-ANOVA, the MANOVA approach makes"
+msgstr ""
 
 #: mSNP/options/assocForestTrunc.title
 msgid "Truncate large confidence intervals"
@@ -7571,6 +8279,7 @@ msgid "two-tailed"
 msgstr "oboustranný"
 
 #: R/msnp.b.R
+#: R/mstab.b.R
 msgid "Type"
 msgstr "Typ"
 
@@ -7610,6 +8319,10 @@ msgstr "Mnohoúhelník intervalu nejistoty"
 msgid "Undefined (zero residual variance)"
 msgstr "Nedefinováno (nulový reziduální rozptyl)"
 
+#: R/mstab.b.R
+msgid "Undetermined"
+msgstr ""
+
 #: package/analyses/mOUT.title
 #: package/analyses/mOUT.menuTitle
 #: mOUT/options.title
@@ -7617,6 +8330,14 @@ msgstr "Nedefinováno (nulový reziduální rozptyl)"
 #: mOUT/results.title
 msgid "Univariate outliers identification and removal"
 msgstr "Identifikace a odstranění jednorozměrných odlehlých hodnot"
+
+#: mMNV/options/showUnivariate.title
+msgid "Univariate Tests (with Sphericity Corrections)"
+msgstr ""
+
+#: mMNV/ui[3].label
+msgid "Univariate Tests & Contrasts"
+msgstr ""
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
@@ -7645,6 +8366,10 @@ msgstr "Horní část"
 #: mSTAB/options/usl.title
 msgid "Upper Specification Limit (USL)"
 msgstr "Horní specifikační mez (USL)"
+
+#: R/mstab.b.R
+msgid "Upper SRL:"
+msgstr ""
 
 #: mUI/results/stat/uistat.columns.title
 msgid "Upper threshold"
@@ -7689,6 +8414,8 @@ msgstr "Nastavení validace"
 
 #: mLR/results/infoTable.columns.title
 #: mMLP/results/infoTable.columns.title
+#: mMNV/results/multivariateTable.columns.title
+#: mMNV/results/profileTable.columns.title
 #: mRF/results/infoTable.columns.title
 msgid "Value"
 msgstr "Hodnota"
@@ -7798,6 +8525,32 @@ msgstr "Penalizace vah (regularizace L2)"
 msgid "Weight Decay (Regularization)"
 msgstr "Penalizace vah (regularizace)"
 
+#: R/mmnv.b.R
+msgid ""
+"When sample size is very small (N < k), where MANOVA cannot be computed "
+"because error degrees of freedom are insufficient."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"When sample size per group exceeds the number of repeated measures by at "
+"least 10 to 15 (N - g >= k + 10) and the sphericity assumption is violated "
+"(Mauchly's p < .05, epsilon < .75)."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "When to prefer MANOVA:"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "When to prefer Univariate ANOVA:"
+msgstr ""
+
+#: R/mmnv.b.R
+#: mMNV/options/testWilks.title
+msgid "Wilks' Lambda"
+msgstr ""
+
 #: mDCA/results/windowTable.columns.title
 msgid "Window Span (%)"
 msgstr "Šířka okna (%)"
@@ -7809,6 +8562,18 @@ msgstr "S 0.5"
 #: mROC/options/cmpDeLong/wcontr.title
 msgid "With control"
 msgstr "S kontrolou"
+
+#: mMNV/options/showContrastsTable.title
+msgid "Within-Subjects Contrasts Table"
+msgstr ""
+
+#: mMNV/results/sphericityTable.columns.title
+msgid "Within-Subjects Effect"
+msgstr ""
+
+#: mMNV/options/rmFactorName.title
+msgid "Within-Subjects Factor Name"
+msgstr ""
 
 #: mLR/ui[3]/show_roc/roc_x.label
 #: mMLP/ui[3]/show_roc/roc_x.label
