@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-10-15 03:52+0000\n"
+"PO-Revision-Date: 2026-10-24 09:51+0000\n"
 "Last-Translator: Yuri Smolyakov <smoyur@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jamovi/module-"
 "jys/ru/>\n"
@@ -19,7 +19,7 @@ msgstr "-log10(p-значение)"
 
 #: R/mmnv.b.R
 msgid "(compound symmetry) on the error variance-covariance matrix."
-msgstr ""
+msgstr "(составной симметрии) ковариационной матрицы ошибок."
 
 #: R/mlr.b.R
 msgid "(Intercept)"
@@ -39,11 +39,11 @@ msgstr "{ciWidth}% ДИ верхний"
 
 #: R/msnp.b.R
 msgid "{females} F"
-msgstr ""
+msgstr "{females} Ж"
 
 #: R/msnp.b.R
 msgid "{females} F / {males} M"
-msgstr ""
+msgstr "{females} Ж / {males} М"
 
 #: R/mlr.b.R
 msgid "{k}-Fold CV"
@@ -51,11 +51,11 @@ msgstr "{k}-кратная КВ"
 
 #: R/msrv.b.R
 msgid "{pred} (AUC = {auc})"
-msgstr ""
+msgstr "{pred} (AUC = {auc})"
 
 #: R/msnp.b.R
 msgid "{val} F"
-msgstr ""
+msgstr "{val} Ж"
 
 #: R/mui.b.R
 msgid "{varType} proposed decision"
@@ -127,6 +127,8 @@ msgid ""
 "<b>Adopted Structure</b>: Single batch linear regression. No poolability "
 "testing."
 msgstr ""
+"<b>Принятая структура</b>: Линейная регрессия для одной серии. Проверка "
+"объединяемости не проводилась."
 
 #: R/msnp.b.R
 msgid ""
@@ -192,6 +194,9 @@ msgid ""
 "highlighted. This helps identify the most likely mode of inheritance for the "
 "observed association."
 msgstr ""
+"<b>Выбор лучшей модели</b>: выделяется генетическая модель с наименьшим "
+"значением p-value. Это помогает определить наиболее вероятный тип "
+"наследования для наблюдаемой ассоциации."
 
 #: R/mcor.b.R
 msgid ""
@@ -389,6 +394,8 @@ msgid ""
 "<b>Difference Contrasts</b>: Compare each time point to the average of "
 "preceding time points (reverse Helmert)."
 msgstr ""
+"<b>Разностные контрасты</b>: Сравнение каждой временной точки со средним "
+"значением предшествующих (обратный Хельмерт)."
 
 #: R/mdca.b.R
 msgid ""
@@ -521,6 +528,9 @@ msgid ""
 "specification limits within 240 months. Permitted shelf life is governed by "
 "the allowable ICH Q1E extrapolation limit ({cap} months)."
 msgstr ""
+"<b>Активно ограничение экстраполяции</b>: Граница деградации не пересекает "
+"пределы спецификации в пределах 240 месяцев. Допустимый срок годности "
+"ограничен лимитом экстраполяции ICH Q1E ({cap} мес.)."
 
 #: R/mstab.b.R
 msgid ""
@@ -539,6 +549,10 @@ msgid ""
 "and 95% hazard ratio confidence intervals are estimated using penalized "
 "profile likelihood."
 msgstr ""
+"<b>Штрафное правдоподобие Фирта</b> (Firth, 1993) снижает смещение оценок в "
+"малых выборках и устраняет проблему монотонного правдоподобия (разделения) в "
+"регрессии Кокса. Оценки параметров и 95% доверительные интервалы отношений "
+"рисков рассчитаны методом штрафного профильного правдоподобия."
 
 #: R/mlr.b.R
 msgid ""
@@ -546,6 +560,10 @@ msgid ""
 "and addresses separation. Parameters and 95% confidence intervals are "
 "estimated using penalized profile likelihood."
 msgstr ""
+"<b>Штрафное правдоподобие Фирта</b> (Firth, 1993) снижает смещение оценок в "
+"малых выборках и решает проблему разделения (separation). Оценки параметров "
+"и 95% доверительные интервалы рассчитаны методом штрафного профильного "
+"правдоподобия."
 
 #: R/mlr.b.R
 msgid ""
@@ -553,6 +571,10 @@ msgid ""
 "eliminate small-sample bias and prevent infinite odds ratios when events are "
 "rare or data are separated."
 msgstr ""
+"<b>Штрафное правдоподобие Фирта</b>: Метод вводит штрафную поправку "
+"(априорное распределение Джеффриса), которая устраняет смещение в малых "
+"выборках и предотвращает появление бесконечных отношений шансов (OR) при "
+"редких событиях или разделении данных (separation)."
 
 #: R/msrv.b.R
 msgid ""
@@ -560,6 +582,9 @@ msgid ""
 "the overall significance of the model (joint effect of all predictors) using "
 "penalized likelihood."
 msgstr ""
+"<b>Штрафное правдоподобие Фирта</b>: Критерии отношения правдоподобия и "
+"Вальда оценивают общую значимость модели (совместное влияние всех "
+"предикторов на исход) с учетом штрафной поправки Фирта."
 
 #: R/msnp.b.R
 msgid ""
@@ -606,6 +631,8 @@ msgid ""
 "<b>Helmert Contrasts</b>: Compare each time point to the average of "
 "subsequent time points."
 msgstr ""
+"<b>Контрасты Хельмерта</b>: Сравнение каждой временной точки со средним "
+"значением последующих."
 
 #: R/mmlp.b.R
 msgid ""
@@ -905,12 +932,17 @@ msgid ""
 "into orthogonal trends: Linear (constant rate of change), Quadratic "
 "(curvature/plateau), and Cubic (inflection points)."
 msgstr ""
+"<b>Ортогональные полиномиальные контрасты</b>: Разлагают внутрисубъектный "
+"фактор на ортогональные тренды: линейный (постоянная скорость изменения), "
+"квадратичный (кривизна/плато) и кубический (точки перегиба)."
 
 #: R/mstab.b.R
 msgid ""
 "<b>Overall Shelf Life Undetermined</b>: Cannot be proposed because shelf "
 "life for batch(es) {batches} could not be estimated."
 msgstr ""
+"<b>Общий срок годности не определен</b>: не может быть предложен, так как "
+"срок годности для серии(й) {batches} не может быть оценен."
 
 #: R/msnp.b.R
 msgid ""
@@ -1021,6 +1053,8 @@ msgid ""
 "<b>Repeated Contrasts</b>: Compare each successive time point / condition to "
 "the immediately preceding one."
 msgstr ""
+"<b>Повторные контрасты</b>: Сравнение каждой последующей временной точки с "
+"непосредственно предшествующей."
 
 #: R/mui.b.R
 msgid "<b>Se</b> - sensitivity of the positive class TP/(TP+FN)"
@@ -1117,6 +1151,8 @@ msgid ""
 "<b>Treatment Contrasts</b>: Compare each subsequent time point / condition "
 "to the first (baseline)."
 msgstr ""
+"<b>Контрасты с контролем</b>: Сравнение каждой последующей временной точки с "
+"первой (базовой)."
 
 #: R/mui.b.R
 msgid ""
@@ -1173,7 +1209,7 @@ msgstr "1 - Специфичность"
 
 #: R/msrv.b.R
 msgid "1 – Specificity"
-msgstr ""
+msgstr "1 – Специфичность"
 
 #: mSNP/options/mdrOrder/1.title
 msgid "1-way"
@@ -1181,7 +1217,7 @@ msgstr "1-факторная"
 
 #: R/mmnv.b.R
 msgid "1. Parallelism ({time} × {group} Interaction)"
-msgstr ""
+msgstr "1. Параллелизм (взаимодействие {time} × {group})"
 
 #: mSNP/options/mdrFolds/10.title
 msgid "10 folds"
@@ -1202,19 +1238,19 @@ msgstr "2-факторная"
 
 #: R/mmnv.b.R
 msgid "2. Equal Levels (Coincidence / {group} Main Effect)"
-msgstr ""
+msgstr "2. Совпадение уровней (главный эффект {group})"
 
 #: R/mstab.b.R
 msgid "2°C – 8°C Protected"
-msgstr ""
+msgstr "2°C – 8°C с защитой"
 
 #: R/mstab.b.R
 msgid "25°C / 60% RH (Long-term)"
-msgstr ""
+msgstr "25°C / 60% RH (долгосрочное)"
 
 #: R/mstab.b.R
 msgid "25°C Long-term"
-msgstr ""
+msgstr "25°C долгосрочное"
 
 #: mSNP/options/mdrFolds/3.title
 msgid "3 folds"
@@ -1226,7 +1262,7 @@ msgstr "3-факторная"
 
 #: R/mmnv.b.R
 msgid "3. Flatness (Within-Subjects Change over {time})"
-msgstr ""
+msgstr "3. Горизонтальность профилей (внутригрупповое изменение по {time})"
 
 #: mOUT/options/tholdZS/3.0.title
 msgid "3.0 (standard)"
@@ -1238,11 +1274,11 @@ msgstr "3,5 (стандарт)"
 
 #: R/mstab.b.R
 msgid "30°C / 65% RH (Intermediate)"
-msgstr ""
+msgstr "30°C / 65% RH (промежуточное)"
 
 #: R/mstab.b.R
 msgid "30°C Intermediate"
-msgstr ""
+msgstr "30°C промежуточное"
 
 #: mSNP/options/mdrOrder/4.title
 msgid "4-way"
@@ -1250,11 +1286,11 @@ msgstr "4-факторная"
 
 #: R/mstab.b.R
 msgid "40°C / 75% RH (Accelerated)"
-msgstr ""
+msgstr "40°C / 75% RH (ускоренное)"
 
 #: R/mstab.b.R
 msgid "40°C Accelerated"
-msgstr ""
+msgstr "40°C ускоренное"
 
 #: mSNP/options/mdrFolds/5.title
 msgid "5 folds"
@@ -1262,7 +1298,7 @@ msgstr "5 блоков"
 
 #: R/mstab.b.R
 msgid "5°C Refrigerated"
-msgstr ""
+msgstr "5°C в холодильнике"
 
 #: mMNV/results/meansTable.columns.title
 #: mSTAB/results/coefTable.columns.title
@@ -1277,7 +1313,7 @@ msgstr "95% ДИ верхняя"
 #: mMNV/options/plotError/ci.title
 #: mSTAB/results/arrhRegTable.columns.title
 msgid "95% Confidence Interval"
-msgstr ""
+msgstr "95% доверительный интервал"
 
 #: mLR/results/coeffTable.columns.title
 msgid "95% OR CI Lower"
@@ -1318,18 +1354,20 @@ msgid ""
 "A significant p-value (p < .05) indicates violation of sphericity, "
 "demonstrating why the MANOVA approach is required."
 msgstr ""
+"Статистически значимое p-значение (p < .05) указывает на нарушение "
+"сферичности, подтверждая необходимость использования подхода MANOVA."
 
 #: R/mstab.b.R
 msgid "Accelerated Condition (Reference)"
-msgstr ""
+msgstr "Ускоренные условия (референс)"
 
 #: mSTAB/options/arrhRhAcc.title
 msgid "Accelerated Relative Humidity (%)"
-msgstr ""
+msgstr "Относительная влажность при ускоренных испытаниях (%)"
 
 #: mSTAB/options/arrhTempAcc.title
 msgid "Accelerated Study Temperature (°C)"
-msgstr ""
+msgstr "Температура при ускоренных испытаниях (°C)"
 
 #: mSTAB/options/accelCondition.title
 msgid "Accelerated Testing Support (ICH Q1E App. A)"
@@ -1337,7 +1375,7 @@ msgstr "Поддержка ускоренных испытаний (ICH Q1E Пр
 
 #: mSTAB/results/arrhTable.columns.title
 msgid "Acceleration Factor (AF)"
-msgstr ""
+msgstr "Фактор ускорения (AF)"
 
 #: mDCA/options/palBrewer/Accent.title
 #: mLR/options/palBrewer/Accent.title
@@ -1351,7 +1389,7 @@ msgstr "Акцент"
 
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Acceptance Criteria"
-msgstr ""
+msgstr "Критерии приемлемости"
 
 #: mSNP/options/ternaryRegion.title
 msgid "Acceptance region type"
@@ -1363,20 +1401,20 @@ msgstr "Аккуратность"
 
 #: R/mstab.b.R
 msgid "Activation Energy (Ea, kJ/mol)"
-msgstr ""
+msgstr "Энергия активации (Ea, кДж/моль)"
 
 #: mSTAB/options/showArrhSens.title
 #: mSTAB/results/arrhSensTable.title
 msgid "Activation Energy (Ea) Sensitivity Analysis Table"
-msgstr ""
+msgstr "Таблица анализа чувствительности к энергии активации (Ea)"
 
 #: R/mstab.b.R
 msgid "Activation Energy (Ea):"
-msgstr ""
+msgstr "Энергия активации (Ea):"
 
 #: mSTAB/options/arrhEa.title
 msgid "Activation Energy Ea (kJ/mol)"
-msgstr ""
+msgstr "Энергия активации Ea (кДж/моль)"
 
 #: mLR/results/misclassifiedTable.columns.title
 #: mMLP/results/matrixTable.columns.title
@@ -1405,14 +1443,17 @@ msgstr "Скорректированное RMST"
 #: R/msrv.b.R
 msgid "Adjusted survival baseline hazard estimation failed: {reason}"
 msgstr ""
+"Оценка базовой функции риска для скорректированных кривых выживаемости не "
+"удалась: {reason}"
 
 #: R/msrv.b.R
 msgid "Adjusted survival curve model fitting failed: {reason}"
 msgstr ""
+"Построение модели скорректированных кривых выживаемости не удалось: {reason}"
 
 #: mSRV/options/showAdjCurves.title
 msgid "Adjusted survival curves"
-msgstr ""
+msgstr "Скорректированные кривые выживаемости"
 
 #: mSRV/ui[4].label
 #: mSRV/results/adjSection.title
@@ -1452,11 +1493,11 @@ msgstr "Все"
 
 #: mSTAB/options/detailAttr/all.title
 msgid "All Attributes (Sequential Tables)"
-msgstr ""
+msgstr "Все показатели (последовательные таблицы)"
 
 #: R/mstab.b.R
 msgid "All CQAs Met"
-msgstr ""
+msgstr "Все показатели в норме"
 
 #: mSNP/options/geneticModel/all.title
 msgid "All models"
@@ -1509,7 +1550,7 @@ msgstr "Анализ генетических моделей по перемен
 
 #: mSRV/options/rocTime.title
 msgid "Analysis time point t"
-msgstr ""
+msgstr "Временная точка анализа t"
 
 #: mSTAB/results/poolTable.title
 msgid "ANCOVA Poolability Testing and Model Selection"
@@ -1524,10 +1565,12 @@ msgid ""
 "ANCOVA poolability tests evaluate whether stability batches can share common "
 "slopes and intercepts according to ICH Q1E."
 msgstr ""
+"Тесты применимости ANCOVA оценивают возможность объединения серий по общим "
+"углам наклона и отсечениям согласно ICH Q1E."
 
 #: R/mstab.b.R
 msgid "ANCOVA Poolability:"
-msgstr ""
+msgstr "Объединение данных (ANCOVA):"
 
 #: mCOR/options/plotOrder/AOE.title
 msgid "Angular order eigenvectors"
@@ -1540,38 +1583,40 @@ msgstr "ANOVA / ANCOVA (F-критерий)"
 
 #: mMNV/results/sphericityTable.columns.title
 msgid "Approx. χ²"
-msgstr ""
+msgstr "Приближ. χ²"
 
 #: mSTAB/ui[6].label
 msgid "Arrhenius Accelerated Kinetics (ICH Q1A / ASAP)"
-msgstr ""
+msgstr "Кинетика Аррениуса при ускоренных испытаниях (ICH Q1A / ASAP)"
 
 #: mSTAB/options/showArrh.title
 msgid "Arrhenius Accelerated Stability Kinetics Recalculation"
-msgstr ""
+msgstr "Пересчет кинетики ускоренной стабильности по уравнению Аррениуса"
 
 #: mSTAB/results/arrhTable.title
 msgid "Arrhenius Accelerated Stability Recalculation Table"
-msgstr ""
+msgstr "Таблица пересчета ускоренной стабильности по уравнению Аррениуса"
 
 #: R/mstab.b.R
 msgid "Arrhenius Degradation Kinetics Plot"
-msgstr ""
+msgstr "График кинетики деградации Аррениуса"
 
 #: mSTAB/options/showArrhPlot.title
 #: mSTAB/results/arrhPlot.title
 msgid "Arrhenius Degradation Kinetics Plot (ln(k) vs 1000/T)"
-msgstr ""
+msgstr "График кинетики деградации Аррениуса (ln(k) от 1000/T)"
 
 #: R/mstab.b.R
 msgid ""
 "Arrhenius kinetics and humidity acceleration factor model for accelerated "
 "stability projections."
 msgstr ""
+"Кинетика Аррениуса и модель коэффициента ускорения влажности для "
+"прогнозирования ускоренной стабильности."
 
 #: mSTAB/results/arrhRegTable.title
 msgid "Arrhenius Multi-Temperature Regression Model"
-msgstr ""
+msgstr "Модель регрессии Аррениуса по нескольким температурам"
 
 #: mSTAB/results/diagTable.columns.title
 msgid "Assessment / Criteria"
@@ -1579,7 +1624,7 @@ msgstr "Оценка / Критерий"
 
 #: mMNV/results/assumptionsTable.columns.title
 msgid "Assessment & Recommendation"
-msgstr ""
+msgstr "Оценка и рекомендация"
 
 #: mSNP/options/assocEnable.title
 msgid "Association tests"
@@ -1587,23 +1632,23 @@ msgstr "Тесты ассоциации"
 
 #: mSTAB/results/arrhSensTable.columns.title
 msgid "Assumed Ea (kJ/mol)"
-msgstr ""
+msgstr "Принятая Ea (кДж/моль)"
 
 #: mMNV/ui[4].label
 msgid "Assumptions & Diagnostics"
-msgstr ""
+msgstr "Допущения и диагностика"
 
 #: mSNP/options/ternaryRegion/1.title
 msgid "Asymptotic chi-square"
-msgstr ""
+msgstr "Асимптотический хи-квадрат"
 
 #: mSNP/options/ternaryRegion/3.title
 msgid "Asymptotic chi-square (females)"
-msgstr ""
+msgstr "Асимптотический хи-квадрат (женщины)"
 
 #: mSNP/options/ternaryRegion/5.title
 msgid "Asymptotic likelihood ratio"
-msgstr ""
+msgstr "Асимптотическое отношение правдоподобия"
 
 #: R/msnp.b.R
 msgid ""
@@ -1615,7 +1660,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "At least 3 valid observations are required for stability analysis."
-msgstr ""
+msgstr "Для анализа стабильности требуется не менее 3 валидных наблюдений."
 
 #: R/msrv.b.R
 msgid ""
@@ -1627,96 +1672,96 @@ msgstr ""
 
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Attribute / Parameter"
-msgstr ""
+msgstr "Показатель / Параметр"
 
 #: mSTAB/options/dep.title
 msgid "Attribute / Response"
-msgstr ""
+msgstr "Показатель / Отклик"
 
 #: R/mstab.b.R
 #: mSTAB/options/detailAttr/dep.title
 msgid "Attribute 1 (Assay / Primary)"
-msgstr ""
+msgstr "Показатель 1 (количественное определение / основной)"
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Attribute 1 (months)"
-msgstr ""
+msgstr "Показатель 1 (мес.)"
 
 #: mSTAB/ui[0][0].label
 msgid "Attribute 1 (Primary / Assay)"
-msgstr ""
+msgstr "Показатель 1 (основной / содержание)"
 
 #: mSTAB/ui[1].label
 msgid "Attribute 1 Specifications (Assay / Primary)"
-msgstr ""
+msgstr "Спецификация показателя 1 (количественное определение / основной)"
 
 #: mSTAB/options/detailAttr/dep2.title
 msgid "Attribute 2"
-msgstr ""
+msgstr "Показатель 2"
 
 #: R/mstab.b.R
 #: mSTAB/options/dep2.title
 #: mSTAB/ui[0][3].label
 msgid "Attribute 2 (Impurities / Degradants)"
-msgstr ""
+msgstr "Показатель 2 (примеси / продукты деградации)"
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Attribute 2 (months)"
-msgstr ""
+msgstr "Показатель 2 (мес.)"
 
 #: mSTAB/ui[2].label
 msgid "Attribute 2 Specifications (Impurities / Degradants)"
-msgstr ""
+msgstr "Спецификация показателя 2 (примеси / продукты деградации)"
 
 #: mSTAB/options/detailAttr/dep3.title
 msgid "Attribute 3"
-msgstr ""
+msgstr "Показатель 3"
 
 #: R/mstab.b.R
 #: mSTAB/options/dep3.title
 #: mSTAB/ui[0][4].label
 msgid "Attribute 3 (Dissolution / Physical)"
-msgstr ""
+msgstr "Показатель 3 (растворение / физический)"
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Attribute 3 (months)"
-msgstr ""
+msgstr "Показатель 3 (мес.)"
 
 #: mSTAB/ui[3].label
 msgid "Attribute 3 Specifications (Dissolution / Physical)"
-msgstr ""
+msgstr "Спецификация показателя 3 (растворение / физический)"
 
 #: mSTAB/options/detailAttr/dep4.title
 msgid "Attribute 4"
-msgstr ""
+msgstr "Показатель 4"
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Attribute 4 (months)"
-msgstr ""
+msgstr "Показатель 4 (мес.)"
 
 #: R/mstab.b.R
 #: mSTAB/options/dep4.title
 #: mSTAB/ui[0][5].label
 msgid "Attribute 4 (Optional)"
-msgstr ""
+msgstr "Показатель 4 (дополнительный)"
 
 #: mSTAB/options/detailAttr/dep5.title
 msgid "Attribute 5"
-msgstr ""
+msgstr "Показатель 5"
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Attribute 5 (months)"
-msgstr ""
+msgstr "Показатель 5 (мес.)"
 
 #: R/mstab.b.R
 #: mSTAB/options/dep5.title
 #: mSTAB/ui[0][6].label
 msgid "Attribute 5 (Optional)"
-msgstr ""
+msgstr "Показатель 5 (дополнительный)"
 
 #: mSTAB/ui[4].label
 msgid "Attributes 4 & 5 Specifications (Optional)"
-msgstr ""
+msgstr "Спецификации показателей 4 и 5 (дополнительные)"
 
 #: R/mroc.b.R
 #: mLR/results/rocTable.columns.title
@@ -1793,11 +1838,11 @@ msgstr "исходный"
 
 #: R/mstab.b.R
 msgid "Baseline rate (40°C):"
-msgstr ""
+msgstr "Базовая скорость (40°C):"
 
 #: R/mstab.b.R
 msgid "Batch"
-msgstr ""
+msgstr "Серия"
 
 #: mSTAB/results/shelfTable.columns.title
 #: mSTAB/results/multiBatchTable.columns.title
@@ -1815,7 +1860,7 @@ msgstr "Скорости деградации серий и сравнение �
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Batch Minimum Shelf Life (months)"
-msgstr ""
+msgstr "Минимальный срок годности серии (мес.)"
 
 #: package/datasets/BCModelsROCEstimation.name
 msgid "BC Models ROC Estimation"
@@ -1860,12 +1905,12 @@ msgstr "Верхняя граница 95% ДИ Бета"
 
 #: R/msrv.b.R
 msgid "Beta(t) for {var}"
-msgstr ""
+msgstr "Бета(t) для {var}"
 
 #: mMNV/options/between.title
 #: mMNV/ui[0][1].label
 msgid "Between-Subjects Factors"
-msgstr ""
+msgstr "Межсубъектные факторы"
 
 #: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
@@ -1917,7 +1962,7 @@ msgstr "Оба предела (Двусторонний / Неизвестное
 #: mSTAB/options/specType4/both.title
 #: mSTAB/options/specType5/both.title
 msgid "Both limits (Two-sided)"
-msgstr ""
+msgstr "Оба предела (двусторонний)"
 
 #: mMOUT/options/plotType/both.title
 msgid "Both Plots"
@@ -1929,13 +1974,15 @@ msgstr "Снизу"
 
 #: R/mmnv.b.R
 msgid "Box's M (Equality of Covariance Matrices)"
-msgstr ""
+msgstr "М-критерий Бокса (равенство ковариационных матриц)"
 
 #: R/mmnv.b.R
 msgid ""
 "Box's M evaluates covariance homogeneity across levels of primary factor "
 "'{factor}'."
 msgstr ""
+"Критерий Бокса оценивает однородность ковариационных матриц по уровням "
+"основного фактора '{factor}'."
 
 #: mOUT/options/boxpl.title
 #: mOUT/results/plots.title
@@ -2020,7 +2067,7 @@ msgstr "Ограничено правилом экстраполяции"
 
 #: R/mstab.b.R
 msgid "Capped by ICH Q1E extrapolation limit ({cap} months)"
-msgstr ""
+msgstr "Ограничено пределом экстраполяции ICH Q1E ({cap} мес.)"
 
 #: mCOR/options/glassoBootType/casedrop.title
 msgid "Case-dropping (centrality stability)"
@@ -2057,6 +2104,9 @@ msgid ""
 "intervals. If covariates are present, model tests are evaluated at mean "
 "covariate values."
 msgstr ""
+"Выборочные средние и стандартные отклонения с 95% доверительными интервалами "
+"t-распределения Стьюдента. При наличии ковариат тесты модели оцениваются при "
+"их средних значениях."
 
 #: mSRV/options/compCensor.title
 #: mSRV/ui[5]/showCompRisks/compCensor.label
@@ -2162,7 +2212,7 @@ msgstr "Классический"
 #: package/analyses/mMNV.menuSubgroup
 #: mMNV/options.menuSubgroup
 msgid "Classical & Advanced ANOVA"
-msgstr ""
+msgstr "Классический и продвинутый ANOVA"
 
 #: mMOUT/options/method/classic.title
 msgid "Classical Mahalanobis distance"
@@ -2265,6 +2315,8 @@ msgid ""
 "Clustering is not supported with Firth's penalized Cox regression; cluster "
 "adjustment was omitted."
 msgstr ""
+"Кластеризация не поддерживается в регрессии Кокса со штрафным правдоподобием "
+"Фирта; поправка на кластеризацию пропущена."
 
 #: mCOR/options/numClust.title
 msgid "Clusters"
@@ -2350,15 +2402,15 @@ msgstr "Комбинированная ROC-кривая - Валидация"
 
 #: R/mstab.b.R
 msgid "Common line"
-msgstr ""
+msgstr "Общая линия"
 
 #: R/mstab.b.R
 msgid "Common line across all batches"
-msgstr ""
+msgstr "Общая прямая для всех серий"
 
 #: R/mstab.b.R
 msgid "Common line across batches"
-msgstr ""
+msgstr "Общая прямая для всех серий"
 
 #: R/mstab.b.R
 msgid "Common slope & common intercept (Model 3)"
@@ -2389,12 +2441,16 @@ msgid ""
 "Compares cumulative incidence functions between groups in the presence of "
 "competing risks."
 msgstr ""
+"Сравнивает кумулятивные функции заболеваемости между группами при наличии "
+"конкурирующих рисков."
 
 #: R/msrv.b.R
 msgid ""
 "Compares survival distributions between groups. Significant p-value (p < "
 "0.05) indicates difference in survival."
 msgstr ""
+"Сравнивает распределение выживаемости между группами. Значительное значение "
+"p (p <0,05) указывает на разницу в выживаемости."
 
 #: mLR/results/coeffTable.columns.title
 msgid "Comparison Level"
@@ -2407,13 +2463,15 @@ msgstr "Анализ конкурирующих рисков"
 
 #: mSRV/options/showCompRisks.title
 msgid "Competing risks analysis"
-msgstr ""
+msgstr "Анализ конкурирующих рисков"
 
 #: R/msrv.b.R
 msgid ""
 "Competing risks levels were automatically assigned: Event of interest = "
 "'{event}', Censored level = '{censor}'."
 msgstr ""
+"Уровни конкурирующих рисков назначены автоматически: целевое событие = '"
+"{event}', цензурирование = '{censor}'."
 
 #: mCOR/options/clustMet/complete.title
 msgid "Complete Linkage"
@@ -2430,7 +2488,7 @@ msgstr "Полные переменные в графиках"
 
 #: R/mstab.b.R
 msgid "Compliant"
-msgstr ""
+msgstr "Соответствует"
 
 #: mPCA/results/varianceTable.columns.title
 msgid "Component"
@@ -2472,27 +2530,28 @@ msgstr "Ширина доверительного интервала"
 
 #: mSRV/options/adjCI.title
 msgid "Confidence intervals (bootstrap)"
-msgstr ""
+msgstr "Доверительные интервалы (бутстреп)"
 
 #: mSRV/options/cifCI.title
 msgid "Confidence intervals (CIF)"
-msgstr ""
+msgstr "Доверительные интервалы (CIF)"
 
 #: mSRV/options/kmCI.title
 msgid "Confidence intervals (KM)"
-msgstr ""
+msgstr "Доверительные интервалы (КМ)"
 
 #: mSRV/options/rocCI.title
 msgid "Confidence intervals (ROC)"
-msgstr ""
+msgstr "Доверительные интервалы (ROC)"
 
 #: R/mmnv.b.R
 msgid "Confidence intervals are 95% Student's t intervals."
 msgstr ""
+"Доверительные интервалы рассчитаны на основе t-распределения Стьюдента (95%)."
 
 #: mSRV/options/rocWidth.title
 msgid "Confidence level (%)"
-msgstr ""
+msgstr "Уровень доверия (%)"
 
 #: mSTAB/options/confLevel.title
 msgid "Confidence Level for Shelf Life"
@@ -2525,7 +2584,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Consensus Benchmark (20 kcal/mol)"
-msgstr ""
+msgstr "Консенсусный ориентир (20 ккал/моль)"
 
 #: R/mstab.b.R
 msgid "Constant variance met (p >= 0.05)"
@@ -2542,17 +2601,19 @@ msgstr "Непрерывные предикторы / шкалы"
 
 #: mMNV/results/contrastsTable.columns.title
 msgid "Contrast / Trend"
-msgstr ""
+msgstr "Контраст / Тренд"
 
 #: mMNV/options/contrastType.title
 msgid "Contrast Type"
-msgstr ""
+msgstr "Тип контрастов"
 
 #: R/mmnv.b.R
 msgid ""
 "Contrasts compare specific trajectories across time points (e.g., linear "
 "trends or step-by-step changes)."
 msgstr ""
+"Контрасты оценивают конкретный характер изменений во времени (например, "
+"линейный тренд или последовательные различия между замерами)."
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Controls"
@@ -2630,6 +2691,8 @@ msgstr "Формулировка процесса подсчета с усече
 #: R/mmnv.b.R
 msgid "Covariance matrix in one or more groups is singular or non-positive definite."
 msgstr ""
+"Ковариационная матрица в одной или нескольких группах вырождена или не "
+"является положительно определенной."
 
 #: R/msrv.b.R
 #: mMNV/options/covs.title
@@ -2666,7 +2729,7 @@ msgstr "Статистика согласия модели Кокса"
 
 #: R/msrv.b.R
 msgid "Cox proportional hazards model fitting failed: {reason}"
-msgstr ""
+msgstr "Не удалось подобрать модель пропорциональных рисков Кокса: {reason}"
 
 #: mSRV/ui[3].label
 #: mSRV/results/coxSection.title
@@ -2675,7 +2738,7 @@ msgstr "Регрессия пропорциональных рисков Кок�
 
 #: mSRV/options/showCox.title
 msgid "Cox proportional hazards regression"
-msgstr ""
+msgstr "Регрессия пропорциональных рисков Кокса"
 
 #: mSRV/results/coxSection/coxCoefTable.title
 msgid "Cox Regression Coefficients"
@@ -2683,7 +2746,7 @@ msgstr "Коэффициенты регрессии Кокса"
 
 #: R/mmnv.b.R
 msgid "Critical threshold (p < .001)"
-msgstr ""
+msgstr "Критический порог (p < .001)"
 
 #: R/mmlp.b.R
 msgid "Cross-Entropy Loss"
@@ -2721,7 +2784,7 @@ msgstr "CS-коэффициент (cor = 0.7)"
 
 #: R/mmnv.b.R
 msgid "Cubic"
-msgstr ""
+msgstr "Кубический"
 
 #: mPCA/results/varianceTable.columns.title
 msgid "Cumulative %"
@@ -2740,20 +2803,24 @@ msgstr "Кумулятивная инцидентность"
 #: R/msrv.b.R
 msgid "Cumulative incidence (Aalen–Johansen) model fitting failed: {reason}"
 msgstr ""
+"Построение модели кумулятивной инцидентности (Аалена–Йохансена) не удалось: "
+"{reason}"
 
 #: mSRV/options/showCifPlot.title
 msgid "Cumulative incidence curves (Aalen–Johansen)"
-msgstr ""
+msgstr "Кривые кумулятивной инцидентности (Аалена–Йохансена)"
 
 #: mSRV/results/compRisksSection/cifPlot.title
 msgid "Cumulative Incidence Curves (Aalen–Johansen)"
-msgstr ""
+msgstr "Кривые кумулятивной инцидентности (Аалена–Йохансена)"
 
 #: R/msrv.b.R
 msgid ""
 "Cumulative incidence function (Aalen–Johansen) estimates event probability "
 "accounting for competing risks."
 msgstr ""
+"Функция кумулятивной заболеваемости (Аалена-Йохансена) оценивает вероятность "
+"события с учетом конкурирующих рисков."
 
 #: mSRV/results/compRisksSection/cifSummaryTable.title
 msgid "Cumulative Incidence Summary"
@@ -2761,7 +2828,7 @@ msgstr "Сводка кумулятивной инцидентности"
 
 #: mSRV/options/showCifTable.title
 msgid "Cumulative incidence summary"
-msgstr ""
+msgstr "Сводка кумулятивной инцидентности"
 
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
@@ -2827,7 +2894,7 @@ msgstr "Темная 2"
 
 #: R/mmnv.b.R
 msgid "Data ellipses (68% dashed, 95% solid) for '{v1}' and '{v2}'"
-msgstr ""
+msgstr "Эллипсы данных (68% пунктир, 95% сплошная) для '{v1}' и '{v2}'"
 
 #: package/analyses/mMF.menuSubgroup
 #: package/analyses/mOUT.menuSubgroup
@@ -2840,7 +2907,7 @@ msgstr "Предобработка данных"
 
 #: R/msrv.b.R
 msgid "Data weighting for Fine–Gray model failed: {reason}"
-msgstr ""
+msgstr "Взвешивание данных для модели Файна–Грея не удалось: {reason}"
 
 #: R/mcor.b.R
 #: R/mlr.b.R
@@ -2913,7 +2980,7 @@ msgstr "График кривых решений (чистая польза)"
 
 #: mSTAB/results/arrhTable.columns.title
 msgid "Degradation Rate (k / month)"
-msgstr ""
+msgstr "Скорость деградации (k / месяц)"
 
 #: R/mstab.b.R
 #: mSTAB/options/showRatePlot.title
@@ -2922,11 +2989,11 @@ msgstr "Сравнение скоростей деградации / накло�
 
 #: R/mstab.b.R
 msgid "Degradation rates across evaluated batches"
-msgstr ""
+msgstr "Скорости деградации для оцениваемых серий"
 
 #: R/mmnv.b.R
 msgid "Degree"
-msgstr ""
+msgstr "Степень"
 
 #: mMF/results/estim/mcar.columns.title
 msgid "Degree of Freedom (df)"
@@ -2954,7 +3021,7 @@ msgstr "Зависимая переменная должна иметь не м�
 
 #: mMNV/ui[5].label
 msgid "Descriptives & Plots"
-msgstr ""
+msgstr "Описательные статистики и графики"
 
 #: mPWR/options/design.title
 msgid "Design"
@@ -2966,7 +3033,7 @@ msgstr "Параметры дизайна"
 
 #: mSTAB/options/detailAttr.title
 msgid "Detailed Analysis Display"
-msgstr ""
+msgstr "Отображение подробного анализа"
 
 #: mSNP/options/mdrCellTable.title
 msgid "Detailed cell classification table"
@@ -2978,13 +3045,15 @@ msgstr "Детальная классификация риска ячеек"
 
 #: R/mstab.b.R
 msgid "Detailed results shown for attribute:"
-msgstr ""
+msgstr "Подробные результаты показаны для показателя:"
 
 #: R/mstab.b.R
 msgid ""
 "Determined by the earliest time point where the confidence bound for the "
 "mean intersects the specification limit, governed by the worst-case batch."
 msgstr ""
+"Определяется самой ранней точкой пересечения доверительной границы среднего "
+"с пределом спецификации, ориентируясь на наихудшую серию."
 
 #: mMNV/results/sphericityTable.columns.title
 #: mMNV/results/contrastsTable.columns.title
@@ -3005,14 +3074,14 @@ msgstr "df / Параметр"
 #: mMNV/results/profileTable.columns.title
 #: mMNV/results/assumptionsTable.columns.title
 msgid "df1"
-msgstr ""
+msgstr "df1"
 
 #: mMNV/results/multivariateTable.columns.title
 #: mMNV/results/univariateTable.columns.title
 #: mMNV/results/profileTable.columns.title
 #: mMNV/results/assumptionsTable.columns.title
 msgid "df2"
-msgstr ""
+msgstr "df2"
 
 #: mSTAB/results/diagTable.columns.title
 msgid "Diagnostic / Assumption Test"
@@ -3020,7 +3089,7 @@ msgstr "Диагностика / Тест допущения"
 
 #: mMNV/results/assumptionsTable.columns.title
 msgid "Diagnostic Test"
-msgstr ""
+msgstr "Диагностический критерий"
 
 #: package/analyses/mUI.menuSubgroup
 #: package/analyses/mSNP.menuSubgroup
@@ -3035,13 +3104,16 @@ msgstr "Дихотомизация (без неопределенности)"
 
 #: mMNV/options/contrastType/difference.title
 msgid "Difference (Reverse Helmert)"
-msgstr ""
+msgstr "Разностные (обратные Хелмерта)"
 
 #: R/msrv.b.R
 msgid ""
 "Direct adjustment (G-computation) averages predicted survival over sample "
 "covariates. RMST is restricted mean survival time up to τ."
 msgstr ""
+"Средние значения прямой корректировки (G-вычисления) предсказывали "
+"выживаемость по выборочным ковариатам. RMST ограничивает среднее время "
+"выживания до τ."
 
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
@@ -3104,7 +3176,7 @@ msgstr "Бутстреп весов рёбер"
 #: mMNV/results/multivariateTable.columns.title
 #: mMNV/results/univariateTable.columns.title
 msgid "Effect / Source"
-msgstr ""
+msgstr "Эффект / Источник"
 
 #: R/mpwr.b.R
 #: mPWR/options/calc/es.title
@@ -3155,13 +3227,15 @@ msgstr "Эллипс"
 
 #: R/mstab.b.R
 msgid "Empirical Baseline (Study Condition)"
-msgstr ""
+msgstr "Эмпирический базис (условия испытания)"
 
 #: R/mstab.b.R
 msgid ""
 "Empirical estimation of activation energy (Ea) and pre-exponential factor "
 "from multi-temperature regression."
 msgstr ""
+"Эмпирическая оценка энергии активации (Ea) и предэкспоненциального множителя "
+"по многотемпературной регрессии."
 
 #: R/mmout.b.R
 msgid "Empirical Squared Mahalanobis Distances"
@@ -3197,11 +3271,11 @@ msgstr "Переменная времени входа / начала должн
 
 #: R/mstab.b.R
 msgid "Equal intercepts (p > {alpha}) -> Adopt Model 3"
-msgstr ""
+msgstr "Отсечения равны (p > {alpha}) -> Принимается Модель 3"
 
 #: R/mstab.b.R
 msgid "Equal slopes (p > {alpha}) -> Proceed to Step 2"
-msgstr ""
+msgstr "Наклоны равны (p > {alpha}) -> Переход к Шагу 2"
 
 #: R/mpwr.b.R
 #: mPWR/ui[0]/alt/equivalent.title
@@ -3223,7 +3297,7 @@ msgstr "Ошибка при подгонке Random Forest: {err}"
 
 #: R/mmnv.b.R
 msgid "Error evaluating MANOVA model"
-msgstr ""
+msgstr "Ошибка при оценке модели MANOVA"
 
 #: R/mcor.b.R
 msgid "Error in Classical Partial Correlation calculation: {}"
@@ -3266,7 +3340,7 @@ msgstr "Метод оценки"
 
 #: R/mstab.b.R
 msgid "Evaluated Batch:"
-msgstr ""
+msgstr "Оцениваемая серия:"
 
 #: R/mstab.b.R
 msgid ""
@@ -3281,12 +3355,16 @@ msgid ""
 "Evaluates individual batch shelf lives across all quality attributes "
 "simultaneously."
 msgstr ""
+"Оценка индивидуальных сроков годности серий одновременно по всем показателям "
+"качества."
 
 #: R/msrv.b.R
 msgid ""
 "Evaluates marker discriminative accuracy (AUC) at time t. Cut-off is "
 "determined by the Youden index."
 msgstr ""
+"Оценивает дискриминационную точность маркера (AUC) в момент времени t. "
+"Отсечение определяется индексом Юдена."
 
 #: R/mmnv.b.R
 msgid ""
@@ -3294,12 +3372,17 @@ msgid ""
 "(Box's M), multivariate normality (Mardia), and multivariate outliers "
 "(Mahalanobis D²)."
 msgstr ""
+"Проверка условий применимости на остатках модели: равенство ковариационных "
+"матриц (критерий Бокса), многомерная нормальность (критерии Мардиа) и "
+"многомерные выбросы (расстояние Махаланобиса)."
 
 #: R/mstab.b.R
 msgid ""
 "Evaluates regression assumptions: goodness of fit, residual normality "
 "(Shapiro-Wilk), homoscedasticity, and autocorrelation (Durbin-Watson)."
 msgstr ""
+"Оценка условий применимости регрессии: качество подгонки, нормальность "
+"остатков (Шапиро–Уилк), гомоскедастичность и автокорреляция (Дарбин–Уотсон)."
 
 #: mMF/options/fullmars.title
 #: mMF/results/estim/fMARtab.title
@@ -3321,11 +3404,14 @@ msgid ""
 "Q1E guideline using ANCOVA poolability testing and specification-directed "
 "confidence bounds."
 msgstr ""
+"Оценка данных о стабильности и срок годности в соответствии с рекомендациями "
+"ICH Q1E с использованием тестирования возможности объединения ANCOVA и "
+"доверительных границ, определяемых спецификациями."
 
 #: mSRV/options/statusEvent.title
 #: mSRV/ui[0][2]/statusEvent.label
 msgid "Event level"
-msgstr ""
+msgstr "Уровень события"
 
 #: mSRV/options/compEvent.title
 #: mSRV/ui[5]/showCompRisks/compEvent.label
@@ -3346,19 +3432,19 @@ msgstr "События (n)"
 
 #: mSNP/options/ternaryRegion/4.title
 msgid "Exact (females)"
-msgstr ""
+msgstr "Точный (женщины)"
 
 #: mSNP/options/ternaryRegion/7.title
 msgid "Exact autosomal"
-msgstr ""
+msgstr "Точный аутосомный"
 
 #: mSNP/options/ternaryRegion/2.title
 msgid "Exact joint (males & females)"
-msgstr ""
+msgstr "Точный совместный (мужчины и женщины)"
 
 #: mSNP/options/ternaryRegion/6.title
 msgid "Exact joint permutation"
-msgstr ""
+msgstr "Точный совместный перестановочный"
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "Exact p"
@@ -3393,7 +3479,7 @@ msgstr "Ожид. AA"
 
 #: R/msnp.b.R
 msgid "Exp AA (n, %)"
-msgstr ""
+msgstr "Ожид. AA (n, %)"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
@@ -3402,7 +3488,7 @@ msgstr "Ожид. AB"
 
 #: R/msnp.b.R
 msgid "Exp AB (n, %)"
-msgstr ""
+msgstr "Ожид. AB (n, %)"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
@@ -3411,7 +3497,7 @@ msgstr "Ожид. BB"
 
 #: R/msnp.b.R
 msgid "Exp BB (n, %)"
-msgstr ""
+msgstr "Ожид. BB (n, %)"
 
 #: R/msnp.b.R
 msgid "Expected"
@@ -3444,7 +3530,7 @@ msgstr "Переменная воздействия (скорректирова�
 
 #: mSRV/options/adjExposure.title
 msgid "Exposure variable (adjusted curves)"
-msgstr ""
+msgstr "Переменная воздействия (скорректированные кривые)"
 
 #: package.description
 msgid ""
@@ -3479,15 +3565,15 @@ msgstr "Предел экстраполяции"
 
 #: R/mstab.b.R
 msgid "Extrapolation Limit:"
-msgstr ""
+msgstr "Предел экстраполяции:"
 
 #: R/mstab.b.R
 msgid "Extreme Climates"
-msgstr ""
+msgstr "Экстремальный климат"
 
 #: mMNV/results/assumptionsTable.columns.title
 msgid "F / χ²"
-msgstr ""
+msgstr "F / χ²"
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "F_IS"
@@ -3529,7 +3615,7 @@ msgstr "Факторы (качественные предикторы)"
 
 #: R/msnp.b.R
 msgid "Failed QC ({label})"
-msgstr ""
+msgstr "Не прошел QC ({label})"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -3578,15 +3664,15 @@ msgstr "Фильтрующая переменная"
 
 #: R/msrv.b.R
 msgid "Fine–Gray model fitting failed to converge: {reason}"
-msgstr ""
+msgstr "Модель Файна–Грея не сошлась: {reason}"
 
 #: mSRV/options/showFineGray.title
 msgid "Fine–Gray subdistribution hazard model"
-msgstr ""
+msgstr "Модель подраспределения рисков Файна–Грея"
 
 #: mSRV/results/compRisksSection/fineGrayTable.title
 msgid "Fine–Gray Subdistribution Hazard Regression"
-msgstr ""
+msgstr "Регрессия подраспределения рисков Файна–Грея"
 
 #: mCOR/options/plotOrder/FPC.title
 msgid "First principal component"
@@ -3598,13 +3684,16 @@ msgstr "Первая главная компонента"
 #: mSRV/options/coxFirth.title
 #: mSRV/ui[3]/showCox/coxFirth.label
 msgid "Firth's penalized likelihood"
-msgstr ""
+msgstr "Штрафное правдоподобие Фирта"
 
 #: R/mlr.b.R
 msgid ""
 "Firth's penalized likelihood is currently only supported for binary logistic "
 "regression. Falling back to standard multinomial model."
 msgstr ""
+"Штрафное правдоподобие Фирта в настоящее время поддерживается только для "
+"бинарной логистической регрессии. Выполнен возврат к стандартной "
+"мультиномиальной модели."
 
 #: R/mstab.b.R
 msgid "Fitted values"
@@ -3621,7 +3710,7 @@ msgstr "Фолд"
 
 #: mSRV/options/coxForest.title
 msgid "Forest plot of hazard ratios"
-msgstr ""
+msgstr "Форест-график отношений рисков"
 
 #: R/mlr.b.R
 #: mLR/results/forestPlot.title
@@ -3661,7 +3750,7 @@ msgstr "Генетическая модель"
 
 #: R/msnp.b.R
 msgid "Genetic model: {model}"
-msgstr ""
+msgstr "Генетическая модель: {model}"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/groupAnalysisTable.columns.title
@@ -3718,22 +3807,24 @@ msgid ""
 "Global tests assess whether predictors collectively improve model fit (p < "
 "0.05 indicates significant improvement)."
 msgstr ""
+"Глобальные тесты оценивают, улучшают ли предикторы в совокупности "
+"соответствие модели (p <0,05 указывает на значительное улучшение)."
 
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Governing Batch"
-msgstr ""
+msgstr "Определяющая серия"
 
 #: R/mstab.b.R
 msgid "Governing Expiry Date"
-msgstr ""
+msgstr "Определяющий срок годности"
 
 #: R/mstab.b.R
 msgid "Governing worst-case"
-msgstr ""
+msgstr "Лимитирующий (наихудший случай)"
 
 #: mSTAB/options/detailAttr/worst.title
 msgid "Governing Worst-Case Attribute"
-msgstr ""
+msgstr "Определяющий показатель наихудшего случая"
 
 #: mCOR/options/netMethod/glasso.title
 msgid "Graphical Lasso (GLASSO)"
@@ -3745,7 +3836,7 @@ msgstr "Критерий Грея для сравнения групп"
 
 #: mSRV/options/showGrayTest.title
 msgid "Gray's test for group differences"
-msgstr ""
+msgstr "Критерий Грея для сравнения групп"
 
 #: R/msrv.b.R
 msgid ""
@@ -3757,11 +3848,11 @@ msgstr ""
 
 #: R/mmnv.b.R
 msgid "Greenhouse-Geisser"
-msgstr ""
+msgstr "Гринхауз–Гейссер"
 
 #: mMNV/results/sphericityTable.columns.title
 msgid "Greenhouse-Geisser ε"
-msgstr ""
+msgstr "Гринхаус–Гейссер ε"
 
 #: R/mout.b.R
 #: mMNV/results/meansTable.columns.title
@@ -3794,7 +3885,7 @@ msgstr "Проекция групп в пространстве PCA"
 #: mMNV/options/showHePlot.title
 #: mMNV/results/hePlot.title
 msgid "Group Scatter with Data Ellipses"
-msgstr ""
+msgstr "Групповая диаграмма рассеяния с эллипсами данных"
 
 #: R/mpca.b.R
 msgid "Group: {group} (Permutation {p})"
@@ -3837,7 +3928,7 @@ msgstr "H(ожид)"
 
 #: R/msnp.b.R
 msgid "H(exp) (%)"
-msgstr ""
+msgstr "H(ожид.) (%)"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
@@ -3846,7 +3937,7 @@ msgstr "H(obs)"
 
 #: R/msnp.b.R
 msgid "H(obs) (%)"
-msgstr ""
+msgstr "H(набл.) (%)"
 
 #: mSNP/ui[3].label
 #: mSNP/results/hweGroup.title
@@ -3885,13 +3976,15 @@ msgstr "Метрика для тепловой карты"
 
 #: mMNV/options/contrastType/helmert.title
 msgid "Helmert"
-msgstr ""
+msgstr "Хелмерта"
 
 #: R/mmnv.b.R
 msgid ""
 "Heterogeneous covariance matrices (p < .001). Rely primarily on Pillai's "
 "Trace."
 msgstr ""
+"Ковариационные матрицы неоднородны (p < .001). Рекомендуется ориентироваться "
+"на след Пиллая."
 
 #: package/datasets/HIROCclassification.name
 msgid "HI ROC classification"
@@ -3956,7 +4049,7 @@ msgstr "Высокая стабильность (CS ≥ 0.5)"
 
 #: R/mstab.b.R
 msgid "Highly Conservative (Low thermal sensitivity)"
-msgstr ""
+msgstr "Высококонсервативная оценка (низкая термочувствительность)"
 
 #: mCOR/options/adjust/hochberg.title
 msgid "Hochberg (1988)"
@@ -4014,7 +4107,7 @@ msgstr "Хоммель (1988)"
 
 #: R/mmnv.b.R
 msgid "Homogeneity of covariance matrices supported (assumption met)."
-msgstr ""
+msgstr "Однородность ковариационных матриц подтверждена (допущение выполнено)."
 
 #: R/mstab.b.R
 msgid "Homoscedasticity (|e| vs Time correlation)"
@@ -4022,18 +4115,20 @@ msgstr "Гомоскедастичность (корреляция |e| со вр
 
 #: R/mstab.b.R
 msgid "Hot & Humid Condition (Zone IVb)"
-msgstr ""
+msgstr "Жаркие и влажные условия (Зона IVb)"
 
 #: R/mmnv.b.R
 #: mMNV/options/testHotelling.title
 msgid "Hotelling-Lawley Trace"
-msgstr ""
+msgstr "След Хотеллинга–Лоули"
 
 #: R/msrv.b.R
 msgid ""
 "HR > 1 indicates increased risk of event, HR < 1 indicates lower risk "
 "(protective effect)."
 msgstr ""
+"HR > 1 указывает на повышенный риск события, HR < 1 указывает на более "
+"низкий риск (защитный эффект)."
 
 #: mCOR/options/glassoHub.title
 msgid "Hub markers table"
@@ -4041,11 +4136,11 @@ msgstr "Таблица хаб-маркеров"
 
 #: R/mmnv.b.R
 msgid "Huynh-Feldt"
-msgstr ""
+msgstr "Хаунх–Фельдт"
 
 #: mMNV/results/sphericityTable.columns.title
 msgid "Huynh-Feldt ε"
-msgstr ""
+msgstr "Хейн–Фельдт ε"
 
 #: R/msnp.b.R
 msgid "HWE compliant"
@@ -4069,11 +4164,11 @@ msgstr "Гипотеза"
 
 #: mMNV/results/profileTable.columns.title
 msgid "Hypothesis / Question"
-msgstr ""
+msgstr "Гипотеза / Вопрос"
 
 #: R/mstab.b.R
 msgid "ICH Q1E Extrapolation:"
-msgstr ""
+msgstr "Экстраполяция по ICH Q1E:"
 
 #: mSTAB/results/shelfTable.columns.title
 #: mSTAB/results/multiShelfTable.columns.title
@@ -4170,7 +4265,7 @@ msgstr "Отдельная серия"
 
 #: R/mstab.b.R
 msgid "Individual Batch Stability Trajectories"
-msgstr ""
+msgstr "Индивидуальные траектории стабильности серий"
 
 #: mSTAB/options/showFacetPlot.title
 #: mSTAB/results/facetPlot.title
@@ -4214,7 +4309,7 @@ msgstr "Инструкции"
 
 #: mMNV/results/instructions.title
 msgid "Instructions & Methodological Guidance"
-msgstr ""
+msgstr "Инструкции и методологическое руководство"
 
 #: R/mstab.b.R
 msgid "Insufficient degrees of freedom for intercepts test"
@@ -4234,7 +4329,7 @@ msgstr "Константа (t = 0)"
 
 #: R/mstab.b.R
 msgid "Intercepts differ (p <= {alpha}) -> Adopt Model 2"
-msgstr ""
+msgstr "Отсечения различаются (p <= {alpha}) -> Принимается Модель 2"
 
 #: mCOR/options/clustMat.title
 #: mCOR/results/rplots.title
@@ -4243,11 +4338,11 @@ msgstr "Межкластерные матрицы"
 
 #: R/mstab.b.R
 msgid "Intermediate Condition (Zone IVa)"
-msgstr ""
+msgstr "Промежуточные условия (Зона IVa)"
 
 #: mMNV/results/profileTable.columns.title
 msgid "Interpretation & Decision"
-msgstr ""
+msgstr "Интерпретация и решение"
 
 #: R/mui.b.R
 #: mUI/results/stat/uistat.columns.title
@@ -4293,7 +4388,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Inverse Absolute Temperature"
-msgstr ""
+msgstr "Обратная абсолютная температура"
 
 #: mOUT/options/fence.title
 msgid "IQR fence height"
@@ -4400,35 +4495,35 @@ msgstr "Сопоставление K-Means с группами"
 
 #: mSRV/results/kmSection/kmPlot.title
 msgid "Kaplan–Meier Curve"
-msgstr ""
+msgstr "Кривая Каплана–Мейера"
 
 #: mSRV/ui[1].label
 msgid "Kaplan–Meier Curves & Estimation"
-msgstr ""
+msgstr "Кривые Каплана–Мейера и оценка"
 
 #: mSRV/options/showKm.title
 msgid "Kaplan–Meier estimation"
-msgstr ""
+msgstr "Оценка Каплана–Мейера"
 
 #: R/msrv.b.R
 msgid "Kaplan–Meier estimation failed: {reason}"
-msgstr ""
+msgstr "Оценка Каплана-Мейера не удалась: {reason}"
 
 #: mSRV/results/kmSection/kmRiskTable.title
 msgid "Kaplan–Meier Risk Table"
-msgstr ""
+msgstr "Таблица риска Каплана–Мейера"
 
 #: mSRV/results/kmSection.title
 msgid "Kaplan–Meier Survival Analysis"
-msgstr ""
+msgstr "Анализ выживаемости Каплана–Мейера"
 
 #: mSRV/options/kmPlot.title
 msgid "Kaplan–Meier survival plot"
-msgstr ""
+msgstr "График выживаемости Каплана–Мейера"
 
 #: mSRV/results/kmSection/kmSummaryTable.title
 msgid "Kaplan–Meier Survival Summary"
-msgstr ""
+msgstr "Сводка выживаемости Каплана–Мейера"
 
 #: mCOR/options/method/kendall.title
 msgid "Kendall (τ)"
@@ -4440,7 +4535,7 @@ msgstr "Тау Кендалла"
 
 #: mSTAB/results/arrhRegTable.columns.title
 msgid "Kinetic Parameter"
-msgstr ""
+msgstr "Кинетический параметр"
 
 #: mLR/options/lasso_penalty/1se.title
 msgid "Lambda 1SE (Most Sparse Model)"
@@ -4492,7 +4587,7 @@ msgstr "Критерий отношения правдоподобия"
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Limiting Attribute"
-msgstr ""
+msgstr "Лимитирующий показатель"
 
 #: R/mstab.b.R
 msgid "Limiting batch"
@@ -4504,7 +4599,7 @@ msgstr "Лимитирующая серия:"
 
 #: R/mstab.b.R
 msgid "Limiting CQA:"
-msgstr ""
+msgstr "Лимитирующий показатель (CQA):"
 
 #: mROC/options/lwd.title
 msgid "Line width"
@@ -4512,7 +4607,7 @@ msgstr "Ширина линии"
 
 #: R/mmnv.b.R
 msgid "Linear"
-msgstr ""
+msgstr "Линейный"
 
 #: R/mpwr.b.R
 #: mPWR/options/design/linear.title
@@ -4538,7 +4633,7 @@ msgstr "Нагрузка"
 
 #: R/mstab.b.R
 msgid "Log Degradation Rate"
-msgstr ""
+msgstr "Логарифм скорости деградации"
 
 #: mLR/ui[3]/showForest/forestLog.label
 msgid "Log scale"
@@ -4550,13 +4645,16 @@ msgstr "Логарифмический масштаб для ОШ"
 
 #: R/mstab.b.R
 msgid "Log transformation for attribute"
-msgstr ""
+msgstr "Логарифмическая трансформация для показателя"
 
 #: R/mstab.b.R
 msgid ""
 "Log transformation: Intercepts are back-transformed (original units); slopes "
 "represent relative change per month on log scale."
 msgstr ""
+"Логарифмическое преобразование: отсечения обратно преобразованы (в исходных "
+"единицах); наклоны отражают относительное изменение в месяц на "
+"логарифмической шкале."
 
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/log-additive.title
@@ -4573,7 +4671,7 @@ msgstr "Лог-ранговый тест не удалось рассчитат�
 
 #: mSRV/options/showLogRank.title
 msgid "Log-rank test for group comparison"
-msgstr ""
+msgstr "Лог-ранговый тест для сравнения групп"
 
 #: R/mlr.b.R
 msgid "Log(OR)"
@@ -4630,15 +4728,15 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Long-term Storage (Zone II)"
-msgstr ""
+msgstr "Долгосрочное хранение (Зона II)"
 
 #: mSTAB/options/arrhRhLong.title
 msgid "Long-Term Storage Relative Humidity (%)"
-msgstr ""
+msgstr "Относительная влажность при долгосрочном хранении (%)"
 
 #: mSTAB/options/arrhTempLong.title
 msgid "Long-Term Storage Temperature (°C)"
-msgstr ""
+msgstr "Температура при долгосрочном хранении (°C)"
 
 #: mSTAB/options/studyDuration.title
 msgid "Long-term Study Duration (0 - auto)"
@@ -4676,7 +4774,7 @@ msgstr "Нижний 95% ДИ"
 
 #: mMNV/results/sphericityTable.columns.title
 msgid "Lower Bound ε"
-msgstr ""
+msgstr "Нижняя граница ε"
 
 #: mSRV/results/rocSection/rocTable.columns.title
 msgid "Lower CI"
@@ -4693,12 +4791,12 @@ msgstr "Только нижний предел (Убывающий показа�
 
 #: mSTAB/options/specType3/lower.title
 msgid "Lower limit only (Decreasing attribute / Dissolution)"
-msgstr ""
+msgstr "Только нижний предел (убывающий показатель / растворение)"
 
 #: mSTAB/options/specType4/lower.title
 #: mSTAB/options/specType5/lower.title
 msgid "Lower limit only (Decreasing attribute)"
-msgstr ""
+msgstr "Только нижний предел (убывающий показатель)"
 
 #: mCOR/options/plotMetL.title
 msgid "Lower part"
@@ -4706,19 +4804,19 @@ msgstr "Нижняя часть"
 
 #: mSTAB/options/lsl2.title
 msgid "Lower Specification Limit (LSL 2)"
-msgstr ""
+msgstr "Нижний предел спецификации (LSL 2)"
 
 #: mSTAB/options/lsl3.title
 msgid "Lower Specification Limit (LSL 3)"
-msgstr ""
+msgstr "Нижний предел спецификации (LSL 3)"
 
 #: mSTAB/options/lsl4.title
 msgid "Lower Specification Limit (LSL 4)"
-msgstr ""
+msgstr "Нижний предел спецификации (LSL 4)"
 
 #: mSTAB/options/lsl5.title
 msgid "Lower Specification Limit (LSL 5)"
-msgstr ""
+msgstr "Нижний предел спецификации (LSL 5)"
 
 #: mSTAB/options/lsl.title
 msgid "Lower Specification Limit (LSL)"
@@ -4726,7 +4824,7 @@ msgstr "Нижний спецификационный предел (LSL)"
 
 #: R/mstab.b.R
 msgid "Lower SRL:"
-msgstr ""
+msgstr "Нижний SRL:"
 
 #: mUI/results/stat/uistat.columns.title
 msgid "Lower threshold"
@@ -4759,11 +4857,11 @@ msgstr "MAF"
 
 #: R/msnp.b.R
 msgid "MAF = {val}"
-msgstr ""
+msgstr "MAF = {val}"
 
 #: R/msnp.b.R
 msgid "MAF is below threshold ({thr})"
-msgstr ""
+msgstr "MAF ниже порога ({thr})"
 
 #: mSNP/options/ternaryShowMAF.title
 msgid "MAF threshold boundary lines"
@@ -4775,11 +4873,11 @@ msgstr "Порог MAF для предупреждений"
 
 #: R/mmnv.b.R
 msgid "Mahalanobis Distance D²"
-msgstr ""
+msgstr "Расстояние Махаланобиса D²"
 
 #: R/mmnv.b.R
 msgid "Mahalanobis Distance D² (Residual Outliers)"
-msgstr ""
+msgstr "Расстояние Махаланобиса D² (выбросы остатков)"
 
 #: package/analyses/mMNV.title
 #: package/analyses/mMNV.menuTitle
@@ -4789,11 +4887,11 @@ msgstr ""
 #: mMNV/ui.title
 #: mMNV/results.title
 msgid "MANOVA & Repeated Measures"
-msgstr ""
+msgstr "MANOVA и повторные измерения"
 
 #: R/mmnv.b.R
 msgid "MANOVA & Repeated Measures: Methodological Guide"
-msgstr ""
+msgstr "MANOVA и повторные измерения: Методологическое руководство"
 
 #: R/mlr.b.R
 #: mRF/options/mtry_method/manual.title
@@ -4828,25 +4926,27 @@ msgstr "Таблица классификации MAR"
 
 #: R/mmnv.b.R
 msgid "Mardia Multivariate Kurtosis (Residuals)"
-msgstr ""
+msgstr "Многомерный эксцесс Мардиа (остатки)"
 
 #: R/mmnv.b.R
 msgid "Mardia Multivariate Skewness (Residuals)"
-msgstr ""
+msgstr "Многомерная асимметрия Мардиа (остатки)"
 
 #: mMNV/results/meansTable.title
 msgid "Marginal Means & Descriptives"
-msgstr ""
+msgstr "Маргинальные средние и описательные статистики"
 
 #: mMNV/options/showMeansTable.title
 msgid "Marginal Means & Descriptives Table"
-msgstr ""
+msgstr "Таблица маргинальных средних и описательных статистик"
 
 #: R/mmnv.b.R
 msgid ""
 "Marginal means and descriptives are evaluated for primary factor '{factor}' "
 "pooled across remaining factors."
 msgstr ""
+"Маргинальные средние и описательные статистики вычислены для основного "
+"фактора '{factor}', агрегируя по остальным."
 
 #: mROC/options/mAst.title
 msgid "Mark significance *<0.05, **<0.01, ***<0.001"
@@ -4905,17 +5005,20 @@ msgstr "Матрица №{i}"
 #: mMNV/options/showSphericity.title
 #: mMNV/results/sphericityTable.title
 msgid "Mauchly's Sphericity Test & Epsilon Estimates"
-msgstr ""
+msgstr "Критерий сферичности Мокли и оценки эпсилон"
 
 #: R/mmnv.b.R
 msgid ""
 "Mauchly's test evaluates sphericity (equal variances of differences). Values "
 "of ε close to 1 indicate sphericity; ε < .75 indicates substantial departure."
 msgstr ""
+"Критерий Мочли проверяет сферичность (равенство дисперсий разностей). "
+"Значения ε близкие к 1 свидетельствуют о соблюдении сферичности; ε < .75 "
+"указывает на существенное нарушение."
 
 #: mMNV/results/sphericityTable.columns.title
 msgid "Mauchly's W"
-msgstr ""
+msgstr "W Мокли"
 
 #: mSNP/options/mdrOrder.title
 msgid "Max interaction order"
@@ -4945,7 +5048,7 @@ msgstr "Макс. время (0 = без огр.)"
 
 #: mSRV/ui[2]/kmMaxTime.label
 msgid "Maximum evaluation horizon (0 = unlimited)"
-msgstr ""
+msgstr "Максимальный горизонт оценки (0 = неограничен)"
 
 #: R/msnp.b.R
 msgid ""
@@ -5031,7 +5134,7 @@ msgstr "Средняя предсказанная вероятность"
 
 #: R/mmnv.b.R
 msgid "Mean Response"
-msgstr ""
+msgstr "Средний отклик"
 
 #: mMNV/results/univariateTable.columns.title
 #: mMNV/results/contrastsTable.columns.title
@@ -5056,6 +5159,8 @@ msgid ""
 "Median survival is the time at which survival probability drops to 50%. CI "
 "indicates 95% confidence limits."
 msgstr ""
+"Медианная выживаемость – это время, когда вероятность выживания падает до "
+"50%. CI указывает на 95% доверительный интервал."
 
 #: mCOR/options/method.title
 #: mMOUT/ui[1][0].label
@@ -5238,7 +5343,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "mo"
-msgstr ""
+msgstr "мес."
 
 #: R/mdca.b.R
 #: R/msnp.b.R
@@ -5279,7 +5384,7 @@ msgstr "Коэффициенты модели (после отбора факт�
 #: mMNV/options/showAssumptionChecks.title
 #: mMNV/results/assumptionsTable.title
 msgid "Model Diagnostics & Assumption Checks"
-msgstr ""
+msgstr "Диагностика модели и проверка допущений"
 
 #: mSTAB/options/showDiagTable.title
 msgid "Model Diagnostics & Assumptions Table"
@@ -5324,6 +5429,8 @@ msgid ""
 "Model parameters, standard errors, and confidence intervals for the adopted "
 "regression model."
 msgstr ""
+"Параметры модели, стандартные ошибки и доверительные интервалы для принятой "
+"регрессионной модели."
 
 #: mSNP/options/mdrBarPlot.title
 msgid "Model performance barplot"
@@ -5343,6 +5450,9 @@ msgid ""
 "Models time-varying effects via time interactions. Significant p-value "
 "indicates hazard ratio changes over time."
 msgstr ""
+"Моделирует изменяющиеся во времени эффекты посредством временных "
+"взаимодействий. Значительное значение p указывает на изменение отношения "
+"рисков с течением времени."
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -5356,7 +5466,7 @@ msgstr "Умеренная стабильность (0.25 ≤ CS < 0.5)"
 
 #: R/mstab.b.R
 msgid "Moderately Conservative"
-msgstr ""
+msgstr "Умеренно консервативная оценка"
 
 #: mOUT/options/outlcheck/mZS.title
 msgid "Modified Z-score (Hampel filter)"
@@ -5364,11 +5474,11 @@ msgstr "Модифицированная Z-оценка (фильтр Хампе
 
 #: mSTAB/options/arrhB.title
 msgid "Moisture Sensitivity Factor B (% RH^-1)"
-msgstr ""
+msgstr "Коэффициент чувствительности к влаге B (% RH^-1)"
 
 #: R/mstab.b.R
 msgid "month"
-msgstr ""
+msgstr "месяц"
 
 #: R/mstab.b.R
 msgid "months"
@@ -5386,22 +5496,23 @@ msgstr "MSE"
 #: mSTAB/options/showMultiBatchTable.title
 #: mSTAB/results/multiBatchTable.title
 msgid "Multi-Attribute Batch Evaluation Matrix"
-msgstr ""
+msgstr "Матрица оценки серий по нескольким показателям"
 
 #: R/mstab.b.R
 #: mSTAB/options/showMultiShelfPlot.title
 #: mSTAB/results/multiShelfPlot.title
 msgid "Multi-Attribute Shelf Life Comparison & Horizon Plot"
 msgstr ""
+"График сравнения сроков годности и горизонта стабильности по показателям"
 
 #: mSTAB/options/showMultiShelfTable.title
 #: mSTAB/results/multiShelfTable.title
 msgid "Multi-Attribute Shelf Life Summary Table"
-msgstr ""
+msgstr "Сводная таблица сроков годности по нескольким показателям"
 
 #: mSTAB/ui[5].label
 msgid "Multi-Attribute Shelf-Life & Worst-Case Options"
-msgstr ""
+msgstr "Параметры многоатрибутивной оценки и наихудшего случая"
 
 #: R/msrv.b.R
 msgid ""
@@ -5435,6 +5546,9 @@ msgid ""
 "analysis, and plots evaluate primary factor '{factor}' pooled across "
 "remaining factors."
 msgstr ""
+"Указано несколько межгрупповых факторов. Описательные статистики, критерий "
+"Бокса, профильный анализ и графики оценивают основной фактор '{factor}', "
+"агрегируя по остальным."
 
 #: mCOR/options/adjust.title
 msgid "Multiple comparison correction"
@@ -5454,7 +5568,7 @@ msgstr "Коррекция множественных сравнений"
 
 #: mMNV/results/multivariateTable.columns.title
 msgid "Multiv. Test"
-msgstr ""
+msgstr "Многомерный тест"
 
 #: package/analyses/mMNV.description
 #: mMNV/options.description.main
@@ -5462,25 +5576,29 @@ msgid ""
 "Multivariate Analysis of Variance (MANOVA), Repeated Measures MANOVA without "
 "sphericity assumption (O'Brien & Kaiser, 1985), and Profile Analysis."
 msgstr ""
+"Многомерный дисперсионный анализ (MANOVA), MANOVA повторных измерений без "
+"допущения о сферичности (O'Brien & Kaiser, 1985) и профильный анализ."
 
 #: package/datasets/MANOVA&RepeatedMeasures.description
 msgid ""
 "Multivariate Analysis of Variance (MANOVA), Repeated Measures, and Profile "
 "Analysis demonstration"
 msgstr ""
+"Демонстрация многомерного дисперсионного анализа (MANOVA), повторных "
+"измерений и профильного анализа"
 
 #: R/mmnv.b.R
 msgid "Multivariate kurtosis normal."
-msgstr ""
+msgstr "Многомерный эксцесс в пределах нормы."
 
 #: R/mmnv.b.R
 msgid "Multivariate kurtosis significant (departure from normality)."
-msgstr ""
+msgstr "Многомерный эксцесс значим (отклонение от нормальности)."
 
 #: mMNV/options/showOutlierPlot.title
 #: mMNV/results/outlierPlot.title
 msgid "Multivariate Outliers (Mahalanobis Distance) Plot"
-msgstr ""
+msgstr "График многомерных выбросов (расстояние Махаланобиса)"
 
 #: package/analyses/mMOUT.title
 #: package/analyses/mMOUT.menuTitle
@@ -5492,23 +5610,23 @@ msgstr "Многомерное выявление и удаление выбро
 
 #: R/mmnv.b.R
 msgid "Multivariate skewness normal."
-msgstr ""
+msgstr "Многомерная асимметрия в пределах нормы."
 
 #: R/mmnv.b.R
 msgid "Multivariate skewness significant (departure from normality)."
-msgstr ""
+msgstr "Многомерная асимметрия значима (отклонение от нормальности)."
 
 #: R/mmnv.b.R
 msgid "Multivariate Test Criteria:"
-msgstr ""
+msgstr "Многомерные статистические критерии:"
 
 #: mMNV/ui[2].label
 msgid "Multivariate Tests"
-msgstr ""
+msgstr "Многомерные критерии"
 
 #: mMNV/results/multivariateTable.title
 msgid "Multivariate Tests (MANOVA)"
-msgstr ""
+msgstr "Многомерные критерии (MANOVA)"
 
 #: R/mmnv.b.R
 msgid ""
@@ -5516,6 +5634,8 @@ msgid ""
 "assuming sphericity. Pillai's trace is recommended as the most robust "
 "criterion."
 msgstr ""
+"Многомерные критерии оценивают динамику во времени без предположения о "
+"сферичности. След Пиллая рекомендуется как наиболее устойчивый показатель."
 
 #: R/mmnv.b.R
 msgid ""
@@ -5523,6 +5643,9 @@ msgid ""
 "(O'Brien & Kaiser, 1985). Pillai's trace is robust to heterogeneity of "
 "covariance matrices."
 msgstr ""
+"Многомерные критерии не налагают допущения о сферичности на ковариационную "
+"матрицу (O'Brien & Kaiser, 1985). След Пиллая робастен к неоднородности "
+"ковариационных матриц."
 
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "N at Risk"
@@ -5654,7 +5777,7 @@ msgstr "Демонстрация классификатора нейронной
 
 #: R/mmnv.b.R
 msgid "NO assumption of sphericity"
-msgstr ""
+msgstr "НЕ ТРЕБУЕТ СФЕРИЧНОСТИ"
 
 #: R/mdca.b.R
 msgid "No clinical gain"
@@ -5689,6 +5812,7 @@ msgstr "Ошибочно классифицированных объектов �
 #: R/mmnv.b.R
 msgid "No multivariate residual outliers detected at critical threshold (p < .001)."
 msgstr ""
+"Многомерных выбросов остатков на критическом уровне (p < .001) не обнаружено."
 
 #: R/mstab.b.R
 msgid "No significant autocorrelation"
@@ -5699,6 +5823,8 @@ msgid ""
 "No significant change at accelerated condition (Extrapolation up to 2X, max "
 "X + 12 mo)"
 msgstr ""
+"Нет значимых изменений при ускоренных условиях (Экстраполяция до 2X, макс. X "
+"+ 12 мес.)"
 
 #: R/msrv.b.R
 msgid "No valid predictors found for time-dependent Cox model."
@@ -5764,7 +5890,7 @@ msgstr "Нет (Линейная кинетика нулевого порядк�
 
 #: mSTAB/options/accelCondition/none.title
 msgid "None / Not evaluated (No extrapolation)"
-msgstr ""
+msgstr "Нет данных / Не оценивалось (Без экстраполяции)"
 
 #: R/mmout.b.R
 msgid "Normal"
@@ -5910,7 +6036,7 @@ msgstr "Набл. AA"
 
 #: R/msnp.b.R
 msgid "Obs AA (n, %)"
-msgstr ""
+msgstr "Набл. AA (n, %)"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
@@ -5919,7 +6045,7 @@ msgstr "Набл. AB"
 
 #: R/msnp.b.R
 msgid "Obs AB (n, %)"
-msgstr ""
+msgstr "Набл. AB (n, %)"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
@@ -5928,11 +6054,11 @@ msgstr "Набл. BB"
 
 #: R/msnp.b.R
 msgid "Obs BB (n, %)"
-msgstr ""
+msgstr "Набл. BB (n, %)"
 
 #: R/mmnv.b.R
 msgid "Observation Index"
-msgstr ""
+msgstr "Индекс наблюдения"
 
 #: R/mmf.b.R
 #: R/msnp.b.R
@@ -5947,6 +6073,8 @@ msgstr "Наблюдаемые данные"
 #: R/mstab.b.R
 msgid "Observed data, regression fits, and 95% confidence bands per batch"
 msgstr ""
+"Фактические данные, регрессионные прямые и 95% доверительные границы для "
+"каждой серии"
 
 #: mLR/results/riskTable.columns.title
 #: mMLP/results/riskTable.columns.title
@@ -6011,6 +6139,8 @@ msgid ""
 "Only a single batch provided; ANCOVA poolability is not evaluated. Single "
 "linear regression is fitted."
 msgstr ""
+"Предоставлена только одна серия; объединяемость ANCOVA не оценивается. "
+"Построена линейная регрессия для одной серии."
 
 #: R/mrf.b.R
 msgid "OOB"
@@ -6053,7 +6183,7 @@ msgstr "Оптимальный порог"
 
 #: R/mstab.b.R
 msgid "Optimistic (High thermal sensitivity)"
-msgstr ""
+msgstr "Оптимистичная оценка (высокая термочувствительность)"
 
 #: R/msnp.b.R
 #: mSNP/results/assocGroup/assocTable.columns.title
@@ -6079,7 +6209,7 @@ msgstr "Другие серии"
 
 #: R/mstab.b.R
 msgid "Other quality attributes"
-msgstr ""
+msgstr "Остальные показатели качества"
 
 #: R/mrf.b.R
 msgid "Out-of-Bag (OOB)"
@@ -6202,27 +6332,31 @@ msgstr "ИТОГОВЫЙ / ПРЕДЛАГАЕМЫЙ"
 
 #: R/mstab.b.R
 msgid "Overall Permitted Shelf Life"
-msgstr ""
+msgstr "Итоговый допустимый срок годности"
 
 #: R/mstab.b.R
 msgid "Overall Permitted Shelf Life:"
-msgstr ""
+msgstr "Общий регламентированный срок годности:"
 
 #: R/mstab.b.R
 msgid "Overall Product Shelf Life"
-msgstr ""
+msgstr "Итоговый срок годности препарата"
 
 #: R/mstab.b.R
 msgid ""
 "Overall shelf life across multiple attributes is governed by the earliest "
 "failure time among all evaluated parameters."
 msgstr ""
+"Общий срок годности по нескольким показателям определяется самым ранним "
+"моментом выхода за пределы спецификации."
 
 #: R/mstab.b.R
 msgid ""
 "Overall shelf life cannot be determined because the shelf life for batch(es) "
 "{batches} could not be estimated."
 msgstr ""
+"Общий срок годности не может быть определен, так как срок годности для серии"
+"(й) {batches} не может быть оценен."
 
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/overdominant.title
@@ -6240,7 +6374,7 @@ msgstr "p (A)"
 
 #: R/msnp.b.R
 msgid "p (A) (%)"
-msgstr ""
+msgstr "p (A) (%)"
 
 #: mROC/results/rocTable.columns.title
 msgid "p (DeLong)"
@@ -6343,7 +6477,7 @@ msgstr "Частичная зависимость: {var}"
 #: mMNV/results/univariateTable.columns.title
 #: mMNV/results/contrastsTable.columns.title
 msgid "Partial η²"
-msgstr ""
+msgstr "Частная η²"
 
 #: mMLP/options/partition.title
 #: mMLP/ui[2]/partition.label
@@ -6443,6 +6577,9 @@ msgid ""
 "months) when supported by accelerated stability data showing no significant "
 "change."
 msgstr ""
+"Позволяет продлить срок годности до 2x от наблюдаемой длительности (не более "
+"X + 12 мес.) при подтверждении отсутствия значимых изменений в ускоренных "
+"условиях."
 
 #: R/mstab.b.R
 msgid "Permitted Shelf Life"
@@ -6491,12 +6628,12 @@ msgstr "Пицца"
 
 #: R/mmnv.b.R
 msgid "Pillai / Univariate"
-msgstr ""
+msgstr "Пиллай / Одномерный"
 
 #: R/mmnv.b.R
 #: mMNV/options/testPillai.title
 msgid "Pillai's Trace"
-msgstr ""
+msgstr "След Пиллая"
 
 #: R/mmnv.b.R
 msgid ""
@@ -6504,6 +6641,9 @@ msgid ""
 "homogeneity of covariance matrices. Wilks' Lambda is the standard "
 "likelihood-ratio criterion reported in psychological and medical literature."
 msgstr ""
+"След Пиллая является наиболее робастным критерием при нарушении однородности "
+"ковариационных матриц. Лямбда Уилкса – стандартный критерий отношения "
+"правдоподобия в академических публикациях."
 
 #: R/msrv.b.R
 msgid ""
@@ -6535,7 +6675,7 @@ msgstr "График корреляций между переменными"
 
 #: mMNV/options/plotError.title
 msgid "Plot Error Bars"
-msgstr ""
+msgstr "Планки погрешностей графика"
 
 #: mMF/ui[1][0][2].label
 msgid "Plot options"
@@ -6578,7 +6718,7 @@ msgstr "Тест полиморфизма"
 
 #: mMNV/options/contrastType/polynomial.title
 msgid "Polynomial (Linear, Quadratic, etc.)"
-msgstr ""
+msgstr "Полиномиальные (линейный, квадратичный и др.)"
 
 #: mSTAB/options/alphaPool.title
 msgid "Poolability Alpha Level (α)"
@@ -6587,6 +6727,8 @@ msgstr "Уровень значимости пулируемости (α)"
 #: R/mmnv.b.R
 msgid "Pooled covariance matrix is singular or non-positive definite."
 msgstr ""
+"Объединенная ковариационная матрица вырождена или не является положительно "
+"определенной."
 
 #: R/mstab.b.R
 msgid "Pooled residual variance across batches"
@@ -6598,7 +6740,7 @@ msgstr "Объединенный наклон"
 
 #: R/mstab.b.R
 msgid "Pooled slope"
-msgstr ""
+msgstr "Объединенный наклон"
 
 #: mSNP/results/hweGroup/freqTable.columns.title
 #: mSNP/results/hweGroup/hwTable.columns.title
@@ -6675,11 +6817,11 @@ msgstr "PPV"
 
 #: R/mstab.b.R
 msgid "Pre-exponential factor (ln A)"
-msgstr ""
+msgstr "Предэкспоненциальный множитель (ln A)"
 
 #: R/mmnv.b.R
 msgid "preceding"
-msgstr ""
+msgstr "предшествующие"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -6721,15 +6863,15 @@ msgstr "Прогнозируемая вероятность"
 
 #: mSTAB/results/arrhTable.columns.title
 msgid "Predicted Shelf Life (months)"
-msgstr ""
+msgstr "Прогнозируемый срок годности (мес.)"
 
 #: mSTAB/results/arrhSensTable.columns.title
 msgid "Predicted Shelf Life at 25°C (months)"
-msgstr ""
+msgstr "Прогнозируемый срок годности при 25°C (мес.)"
 
 #: R/mstab.b.R
 msgid "Predicted via Arrhenius kinetics for attribute:"
-msgstr ""
+msgstr "Прогноз по кинетике Аррениуса для показателя:"
 
 #: mSTAB/options/showPredPlot.title
 msgid "Prediction Intervals & Release Limits (SRL)"
@@ -6835,19 +6977,19 @@ msgstr "Интервал вероятности"
 
 #: R/mstab.b.R
 msgid "Product Minimum"
-msgstr ""
+msgstr "Минимум по препарату"
 
 #: mMNV/options/showProfileAnalysis.title
 msgid "Profile Analysis (Parallelism, Coincidence, Flatness)"
-msgstr ""
+msgstr "Профильный анализ (параллельность, совпадение, горизонтальность)"
 
 #: R/mmnv.b.R
 msgid "Profile analysis evaluates between-subjects factor '{factor}'."
-msgstr ""
+msgstr "Анализ профилей оценивает межгрупповой фактор '{factor}'."
 
 #: mMNV/results/profileTable.title
 msgid "Profile Analysis Summary"
-msgstr ""
+msgstr "Сводка профильного анализа"
 
 #: R/mmnv.b.R
 msgid ""
@@ -6855,53 +6997,68 @@ msgid ""
 "trajectories), Coincidence (different overall levels), and Flatness (change "
 "over time)."
 msgstr ""
+"Профильный анализ проверяет 3 вопроса: параллельность (различия динамики "
+"между группами), совпадение (общие межгрупповые различия) и плоскость "
+"(наличие изменений во времени)."
 
 #: R/mmnv.b.R
 msgid "Profiles are flat (no significant change across repeated measures over time)."
 msgstr ""
+"Профили горизонтальны (значимых изменений показателей во времени не выявлено)"
+"."
 
 #: R/mmnv.b.R
 msgid ""
 "Profiles are NOT flat (significant change across repeated measures over "
 "time)."
 msgstr ""
+"Профили НЕ горизонтальны (выявлены значимые изменения показателей во времени)"
+"."
 
 #: R/mmnv.b.R
 msgid ""
 "Profiles are NOT parallel (groups change differently over time; interaction "
 "is significant)."
 msgstr ""
+"Профили НЕ параллельны (группы изменяются во времени по-разному; "
+"взаимодействие значимо)."
 
 #: R/mmnv.b.R
 msgid ""
 "Profiles are parallel (no significant difference in trajectory over time "
 "between groups)."
 msgstr ""
+"Профили параллельны (статистически значимых различий в траекториях групп во "
+"времени не выявлено)."
 
 #: R/mmnv.b.R
 msgid ""
 "Profiles coincide (no significant overall elevation difference between "
 "groups)."
 msgstr ""
+"Профили совпадают (значимых различий между группами по общему уровню не "
+"выявлено)."
 
 #: R/mmnv.b.R
 msgid ""
 "Profiles do NOT coincide (significant overall elevation difference between "
 "groups)."
 msgstr ""
+"Профили НЕ совпадают (выявлены значимые различия между группами по общему "
+"уровню)."
 
 #: R/mstab.b.R
 msgid "Projected Degradation Trajectories Across Storage Temperatures"
-msgstr ""
+msgstr "Прогнозируемые траектории деградации при различных температурах"
 
 #: mSTAB/options/showArrhTrajPlot.title
 #: mSTAB/results/arrhTrajPlot.title
 msgid "Projected Degradation Trajectories Across Temperatures Plot"
-msgstr ""
+msgstr "График прогнозируемых траекторий деградации при различных температурах"
 
 #: mSTAB/results/arrhTable.columns.title
 msgid "Projection & Regulatory Assessment"
-msgstr ""
+msgstr "Проекция и регуляторная оценка"
 
 #: mSRV/results/coxSection/coxAssumpTable.title
 msgid "Proportional Hazards Assumption (Schoenfeld Residuals Test)"
@@ -6912,10 +7069,13 @@ msgid ""
 "Proportional hazards assumption test via Schoenfeld residuals is not "
 "available for Firth's penalized Cox regression models."
 msgstr ""
+"Проверка допущения пропорциональности рисков по остаткам Шенфельда "
+"недоступна для моделей регрессии Кокса со штрафным правдоподобием Фирта."
 
 #: R/msrv.b.R
 msgid "Proportional hazards test (cox.zph) could not be computed: {reason}"
 msgstr ""
+"Тест пропорциональности рисков (cox.zph) не может быть вычислен: {reason}"
 
 #: mUI/options/isProp.title
 #: mUI/results/stat/intstat.title
@@ -6954,7 +7114,7 @@ msgstr "q (B)"
 
 #: R/msnp.b.R
 msgid "q (B) (%)"
-msgstr ""
+msgstr "q (B) (%)"
 
 #: R/msnp.b.R
 msgid "Q-Q plot for HWE"
@@ -6967,7 +7127,7 @@ msgstr "Q-Q график p-values HWE"
 
 #: R/mmnv.b.R
 msgid "Quadratic"
-msgstr ""
+msgstr "Квадратичный"
 
 #: mDCA/options/palBrewer.title
 #: mSRV/options/palBrewer.title
@@ -6976,7 +7136,7 @@ msgstr "Качественная палитра"
 
 #: R/mstab.b.R
 msgid "Quality Attribute"
-msgstr ""
+msgstr "Показатель качества"
 
 #: mSNP/results/qcGroup.title
 msgid "Quality Control (QC) Analysis"
@@ -7008,11 +7168,11 @@ msgstr "Таблица качества репрезентации (Cos²)"
 
 #: R/mmnv.b.R
 msgid "Quartic"
-msgstr ""
+msgstr "4-й степени"
 
 #: R/mmnv.b.R
 msgid "Quintic"
-msgstr ""
+msgstr "5-й степени"
 
 #: mSNP/options/ldMetric/r2.title
 #: mSNP/results/ldGroup/ldTable.columns.title
@@ -7067,7 +7227,7 @@ msgstr "Ранг"
 
 #: R/mstab.b.R
 msgid "Rate of Change"
-msgstr ""
+msgstr "Скорость изменения"
 
 #: mDCA/options/recalibrate.title
 msgid "Recalibrate Probabilities (Platt Scaling)"
@@ -7094,7 +7254,7 @@ msgstr "Опорный уровень: {ref}"
 
 #: R/mstab.b.R
 msgid "Refrigerated Storage (Cold Chain)"
-msgstr ""
+msgstr "Холодильное хранение (холодовая цепь)"
 
 #: package/analyses/mLR.menuSubgroup
 #: package/analyses/mRF.menuSubgroup
@@ -7155,7 +7315,7 @@ msgstr "Оптимизация штрафа регуляризации"
 
 #: mSTAB/results/arrhSensTable.columns.title
 msgid "Relative AF (vs 25°C)"
-msgstr ""
+msgstr "Относительный AF (к 25°C)"
 
 #: mPWR/ui[1]/n_ratio.label
 msgid "Relative size of group 2 to group 1"
@@ -7182,7 +7342,7 @@ msgstr "Повт. {k}-кратная КВ (x{r})"
 
 #: mMNV/options/contrastType/repeated.title
 msgid "Repeated (Successive differences)"
-msgstr ""
+msgstr "Повторные (последовательные разности)"
 
 #: R/mlr.b.R
 msgid "Repeated CV"
@@ -7190,25 +7350,27 @@ msgstr "Повторная кросс-проверка"
 
 #: mMNV/ui[0][0].label
 msgid "Repeated Measures Cells (Within-Subjects)"
-msgstr ""
+msgstr "Ячейки повторных измерений (внутрисубъектные)"
 
 #: mMNV/ui[1].label
 msgid "Repeated Measures Design & Contrasts"
-msgstr ""
+msgstr "Дизайн повторяющихся мер и контрасты"
 
 #: R/mmnv.b.R
 msgid ""
 "Repeated Measures requires at least 2 variables / time points in Repeated "
 "Measures Cells."
 msgstr ""
+"Для анализа повторных измерений необходимо указать минимум 2 переменные / "
+"временные точки."
 
 #: R/mmnv.b.R
 msgid "Repeated Measures Trajectory Profile"
-msgstr ""
+msgstr "Траекторный профиль повторных измерений"
 
 #: mMNV/options/rmCells.title
 msgid "Repeated Measures Variables / Time Points"
-msgstr ""
+msgstr "Переменные повторных измерений / временные точки"
 
 #: R/mlr.b.R
 msgid "Repeated Stratified CV"
@@ -7228,6 +7390,9 @@ msgid ""
 "confidence intervals. Model tests evaluate effects at the mean of the "
 "covariates."
 msgstr ""
+"Приведены наблюдаемые выборочные средние и SD с 95% доверительными "
+"интервалами t-распределения Стьюдента. Тесты модели оценивают эффекты при "
+"средних значениях ковариат."
 
 #: R/mpca.b.R
 msgid "Representation Quality (Cos²)"
@@ -7239,7 +7404,7 @@ msgstr "Воспроизводимые результаты генерации �
 
 #: R/mstab.b.R
 msgid "requires strictly positive values of the response variable."
-msgstr ""
+msgstr "требует строго положительных значений переменной отклика."
 
 #: mSTAB/results/diagPlot.title
 msgid "Residual Diagnostic Plots"
@@ -7256,6 +7421,8 @@ msgstr "Остаточная ошибка (Полная модель)"
 #: R/mmnv.b.R
 msgid "residual observation(s) exceed critical Mahalanobis D² (p < .001)."
 msgstr ""
+"наблюдение(я) остатков превышают критическое расстояние Махаланобиса D² (p < "
+".001)."
 
 #: R/mstab.b.R
 msgid "Residual Standard Error (s)"
@@ -7279,7 +7446,7 @@ msgstr "Остатки vs Время"
 
 #: R/mstab.b.R
 msgid "Response Level"
-msgstr ""
+msgstr "Уровень отклика"
 
 #: mSTAB/options/trans.title
 msgid "Response Transformation"
@@ -7287,19 +7454,19 @@ msgstr "Преобразование отклика"
 
 #: mSTAB/options/trans2.title
 msgid "Response Transformation (Attribute 2)"
-msgstr ""
+msgstr "Трансформация отклика (показатель 2)"
 
 #: mSTAB/options/trans3.title
 msgid "Response Transformation (Attribute 3)"
-msgstr ""
+msgstr "Трансформация отклика (показатель 3)"
 
 #: mSTAB/options/trans4.title
 msgid "Response Transformation (Attribute 4)"
-msgstr ""
+msgstr "Трансформация отклика (показатель 4)"
 
 #: mSTAB/options/trans5.title
 msgid "Response Transformation (Attribute 5)"
-msgstr ""
+msgstr "Трансформация отклика (показатель 5)"
 
 #: R/msrv.b.R
 msgid "Restricted mean survival time evaluated up to τ = {tau}."
@@ -7307,7 +7474,7 @@ msgstr "Ограниченное среднее время выживаемос�
 
 #: mSTAB/results/arrhTable.columns.title
 msgid "RH (%)"
-msgstr ""
+msgstr "ОВ (%)"
 
 #: mCOR/options/clPos/r.title
 msgid "Right"
@@ -7329,7 +7496,7 @@ msgstr "Классификация риска"
 
 #: mSTAB/results/arrhSensTable.columns.title
 msgid "Risk Profile / Assessment"
-msgstr ""
+msgstr "Профиль риска / Оценка"
 
 #: mLR/results/riskTable.title
 #: mMLP/results/riskTable.title
@@ -7346,7 +7513,7 @@ msgstr "Таблица стратификации риска"
 
 #: mSRV/options/kmTable.title
 msgid "Risk table"
-msgstr ""
+msgstr "Таблица риска"
 
 #: R/mmout.b.R
 msgid "Robust"
@@ -7458,7 +7625,7 @@ msgstr "ROC графики"
 
 #: mSRV/options/rocPlot.title
 msgid "ROC plot"
-msgstr ""
+msgstr "График ROC"
 
 #: mLR/results/rocTable.title
 #: mMLP/results/rocTable.title
@@ -7509,7 +7676,7 @@ msgstr "Строка"
 #: R/mmnv.b.R
 #: mMNV/options/testRoy.title
 msgid "Roy's Largest Root"
-msgstr ""
+msgstr "Наибольший корень Роя"
 
 #: mRF/options/sample_fraction.title
 #: mRF/ui[1]/sample_fraction.label
@@ -7531,6 +7698,8 @@ msgstr "Размер выборки (N1)"
 #: R/mmnv.b.R
 msgid "Sample size in one or more groups (n <= p) is insufficient for Box's M test."
 msgstr ""
+"Объем выборки в одной или нескольких группах (n <= p) недостаточен для теста "
+"Box's M."
 
 #: R/mcor.b.R
 msgid "Sample size is too small to compute Classical Partial Correlation."
@@ -7583,11 +7752,11 @@ msgstr "График масштаба-локации"
 
 #: R/msrv.b.R
 msgid "Schoenfeld residuals – {var}"
-msgstr ""
+msgstr "Остатки Шёнфельда – {var}"
 
 #: mSRV/options/showSchoenfeldPlot.title
 msgid "Schoenfeld residuals plot"
-msgstr ""
+msgstr "График остатков Шёнфельда"
 
 #: mSRV/results/coxSection/schoenfeldPlots.title
 msgid "Schoenfeld Residuals Plots"
@@ -7619,7 +7788,7 @@ msgstr "График осыпи с параллельным анализом"
 
 #: mMNV/results/meansTable.columns.title
 msgid "SD"
-msgstr ""
+msgstr "Станд. откл. (SD)"
 
 #: package/datasets/SDIROCclassification.name
 msgid "SDI ROC classification"
@@ -7674,6 +7843,10 @@ msgid ""
 "(e.g., Time), Between-Subjects Factors (e.g., Treatment Group), and "
 "Covariates."
 msgstr ""
+"Выберите не менее 2 переменных повторных измерений (например, T1, T2, T3) в "
+"поле «Ячейки повторных измерений». При необходимости укажите имя "
+"внутригруппового фактора (например, Время), межгрупповые факторы (например, "
+"Группа терапии) и ковариаты."
 
 #: mCOR/options/selgroup.title
 #: mROC/options/selgroup.title
@@ -7729,6 +7902,8 @@ msgid ""
 "Sensitivity of projected shelf life to temperature and activation energy "
 "variations."
 msgstr ""
+"Чувствительность прогнозируемого срока годности к вариациям температуры и "
+"энергии активации."
 
 #: mUI/options/minSe.title
 msgid "Sensitivity outside UI >"
@@ -7798,6 +7973,8 @@ msgid ""
 "Sex variable levels could not be identified automatically. Specify the "
 "female level in options if needed."
 msgstr ""
+"Уровни переменной пола не удалось определить автоматически. При "
+"необходимости укажите уровень женского пола в параметрах."
 
 #: mCOR/options/plotMetU/shade.title
 #: mCOR/options/plotMetL/shade.title
@@ -7834,13 +8011,15 @@ msgstr "Сравнение сроков годности и горизонт э�
 
 #: R/mstab.b.R
 msgid "Shelf Life Estimation:"
-msgstr ""
+msgstr "Оценка срока годности:"
 
 #: R/mstab.b.R
 msgid ""
 "Shelf life for batch '{batch}' cannot be computed (insufficient time points "
 "or degrees of freedom)."
 msgstr ""
+"Срок годности для серии '{batch}' не может быть рассчитан (недостаточно "
+"временных точек или степеней свободы)."
 
 #: mSTAB/options/showShelfTable.title
 msgid "Shelf Life Summary Table"
@@ -7848,7 +8027,7 @@ msgstr "Сводная таблица срока годности"
 
 #: R/mstab.b.R
 msgid "Shortest batch: {batch}"
-msgstr ""
+msgstr "Лимитирующая серия: {batch}"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -7878,13 +8057,15 @@ msgstr "Маркеры значимости"
 
 #: mSTAB/options/accelCondition/change_observed.title
 msgid "Significant change at accelerated condition (No extrapolation)"
-msgstr ""
+msgstr "Значимые изменения при ускоренных условиях (Без экстраполяции)"
 
 #: mSTAB/options/accelCondition/intermediate_ok.title
 msgid ""
 "Significant change at accelerated, none at intermediate (Extrapolation up to "
 "1.5X, max X + 6 mo)"
 msgstr ""
+"Значимые изменения при ускоренных, нет при промежуточных (Экстраполяция до "
+"1.5X, макс. X + 6 мес.)"
 
 #: R/msnp.b.R
 msgid "Significant HWE deviation"
@@ -7898,7 +8079,7 @@ msgstr ""
 
 #: mSTAB/ui[8].label
 msgid "Single Attribute Detailed Tables & Plots"
-msgstr ""
+msgstr "Подробные таблицы и графики отдельного показателя"
 
 #: R/mstab.b.R
 msgid "Single batch – poolability test not applicable"
@@ -7906,11 +8087,11 @@ msgstr "Одна серия – тест пулируемости неприме
 
 #: R/mstab.b.R
 msgid "Single batch degradation rate with {pct}% confidence interval"
-msgstr ""
+msgstr "Скорость деградации для одной серии с {pct}% доверительным интервалом"
 
 #: R/mstab.b.R
 msgid "Single batch linear regression"
-msgstr ""
+msgstr "Линейная регрессия для одной серии"
 
 #: mCOR/options/clustMet/single.title
 msgid "Single Linkage"
@@ -7934,7 +8115,7 @@ msgstr "Наклон (скорость / мес.)"
 
 #: R/mstab.b.R
 msgid "Slopes ANCOVA Test:"
-msgstr ""
+msgstr "Тест ANCOVA для наклонов:"
 
 #: R/mstab.b.R
 msgid "Slopes are poolable"
@@ -7942,7 +8123,7 @@ msgstr "Наклоны объединяемы"
 
 #: R/mstab.b.R
 msgid "Slopes differ (p <= {alpha}) -> Adopt Model 1"
-msgstr ""
+msgstr "Наклоны различаются (p <= {alpha}) -> Принимается Модель 1"
 
 #: R/mstab.b.R
 msgid "Slopes differ significantly"
@@ -7988,19 +8169,19 @@ msgstr "Тип спецификационного предела"
 
 #: mSTAB/options/specType2.title
 msgid "Specification Limit Type (Attribute 2)"
-msgstr ""
+msgstr "Тип предела спецификации (показатель 2)"
 
 #: mSTAB/options/specType3.title
 msgid "Specification Limit Type (Attribute 3)"
-msgstr ""
+msgstr "Тип предела спецификации (показатель 3)"
 
 #: mSTAB/options/specType4.title
 msgid "Specification Limit Type (Attribute 4)"
-msgstr ""
+msgstr "Тип предела спецификации (показатель 4)"
 
 #: mSTAB/options/specType5.title
 msgid "Specification Limit Type (Attribute 5)"
-msgstr ""
+msgstr "Тип предела спецификации (показатель 5)"
 
 #: R/mmlp.b.R
 #: R/mpca.b.R
@@ -8043,11 +8224,11 @@ msgstr "Демонстрация ROC классификации индекса �
 
 #: R/mmnv.b.R
 msgid "Sphericity Assumed"
-msgstr ""
+msgstr "Предполагается сферичность"
 
 #: mMNV/results/univariateTable.columns.title
 msgid "Sphericity Correction"
-msgstr ""
+msgstr "Поправка сферичности"
 
 #: mROC/options/splitROC.title
 msgid "Split curves"
@@ -8106,17 +8287,19 @@ msgstr "Профиль стабильности и оценка срока го�
 
 #: R/mstab.b.R
 msgid "Standard Activation Energy"
-msgstr ""
+msgstr "Стандартная энергия активации"
 
 #: mMNV/options/plotError/se.title
 msgid "Standard Error (SE)"
-msgstr ""
+msgstr "Стандартная ошибка (SE)"
 
 #: R/msrv.b.R
 msgid ""
 "Standard errors and confidence intervals are adjusted for clustering by "
 "{var} (Huber–White robust sandwich estimator)."
 msgstr ""
+"Стандартные ошибки и доверительные интервалы скорректированы с учетом "
+"кластеризации по {var} (робастный сэндвич-оцениватель Хьюбера–Уайта)."
 
 #: mLR/results/coeffTable.columns.title
 msgid "Standardized Beta"
@@ -8157,6 +8340,8 @@ msgid ""
 "Statistical shelf life is the earliest time point where the confidence bound "
 "for the mean intersects specification limits (ICH Q1E)."
 msgstr ""
+"Статистический срок годности определяется самой ранней точкой пересечения "
+"доверительной границы среднего с пределами спецификации (ICH Q1E)."
 
 #: mSNP/results/qcGroup/qcTable.columns.title
 msgid "Status"
@@ -8173,7 +8358,7 @@ msgstr "Статус / Лимитирующий фактор"
 
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Status / Limiting Role"
-msgstr ""
+msgstr "Статус / Роль лимитирующего фактора"
 
 #: R/msrv.b.R
 msgid ""
@@ -8219,11 +8404,11 @@ msgstr ""
 
 #: mSTAB/results/arrhTable.columns.title
 msgid "Storage Condition / Climatic Zone"
-msgstr ""
+msgstr "Условия хранения / Климатическая зона"
 
 #: R/mstab.b.R
 msgid "Storage Time"
-msgstr ""
+msgstr "Время хранения"
 
 #: R/mdca.b.R
 msgid "Strategy / Model"
@@ -8239,6 +8424,8 @@ msgid ""
 "Subdistribution hazard ratio (sHR) models covariate effects directly on "
 "cumulative incidence with robust SE."
 msgstr ""
+"Коэффициент риска субраспределения (sHR) моделирует ковариантное воздействие "
+"непосредственно на кумулятивную заболеваемость с устойчивой SE."
 
 #: mSRV/results/compRisksSection/fineGrayTable.columns.title
 msgid "Subdistribution HR (sHR)"
@@ -8251,7 +8438,7 @@ msgstr "ID субъекта / кластер (опционально)"
 
 #: R/mmnv.b.R
 msgid "subsequent"
-msgstr ""
+msgstr "последующие"
 
 #: mROC/options/cmpDeLong/succ.title
 msgid "Successively"
@@ -8348,7 +8535,7 @@ msgstr "Целевой"
 
 #: R/mstab.b.R
 msgid "Target Registration Condition"
-msgstr ""
+msgstr "Целевые регистрационные условия"
 
 #: R/mdca.b.R
 msgid "Target variable must contain both positive and negative cases."
@@ -8359,17 +8546,19 @@ msgstr ""
 #: mSTAB/options/tempVar.title
 #: mSTAB/results/arrhTable.columns.title
 msgid "Temperature (°C)"
-msgstr ""
+msgstr "Температура (°C)"
 
 #: mSTAB/ui[0][7].label
 msgid "Temperature (°C) (Arrhenius, Optional)"
-msgstr ""
+msgstr "Температура (°C) (Аррениус, опционально)"
 
 #: R/mmnv.b.R
 msgid ""
 "Term '{term}' has a singular hypothesis or error matrix and was omitted from "
 "multivariate tests."
 msgstr ""
+"Эффект '{term}' имеет вырожденную матрицу гипотезы или ошибки и был исключен "
+"из многомерных тестов."
 
 #: mSNP/options/ternaryPlot.title
 #: mSNP/results/hweGroup/ternaryPlot.title
@@ -8386,11 +8575,11 @@ msgstr "Оценка нормальности"
 
 #: mMNV/results/profileTable.columns.title
 msgid "Test Method"
-msgstr ""
+msgstr "Метод критерия"
 
 #: mSRV/options/coxAssump.title
 msgid "Test proportional hazards assumption"
-msgstr ""
+msgstr "Проверка допущения пропорциональности рисков"
 
 #: mSTAB/results/poolTable.columns.title
 msgid "Test Step / Source"
@@ -8415,32 +8604,41 @@ msgid ""
 "tests equality of intercepts (Step 2; alpha = 0.25) to adopt Model 1, Model "
 "2, or Model 3."
 msgstr ""
+"Проверяет равенство углов наклона серий (Шаг 1; alpha = 0.25). При равенстве "
+"проверяет равенство отсечений (Шаг 2; alpha = 0.25) для выбора Модели 1, "
+"Модели 2 или Модели 3."
 
 #: mMNV/results/contrastsTable.title
 msgid "Tests of Within-Subjects Contrasts"
-msgstr ""
+msgstr "Критерии внутрисубъектных контрастов"
 
 #: mMNV/results/univariateTable.title
 msgid "Tests of Within-Subjects Effects (Univariate ANOVA)"
-msgstr ""
+msgstr "Критерии внутрисубъектных эффектов (одномерный ANOVA)"
 
 #: R/msrv.b.R
 msgid ""
 "Tests proportional hazards assumption. Significant p-value (p < 0.05) "
 "indicates non-proportional hazards over time."
 msgstr ""
+"Проверяет предположение о пропорциональных рисках. Значимое значение p (p "
+"<0,05) указывает на непропорциональные риски с течением времени."
 
 #: R/msrv.b.R
 msgid ""
 "The 'coxphf' package is required for Firth's penalized likelihood Cox "
 "regression. Please install it with install.packages('coxphf')."
 msgstr ""
+"Для регрессии Кокса со штрафным правдоподобием Фирта требуется пакет "
+"'coxphf'. Установите его с помощью install.packages('coxphf')."
 
 #: R/mlr.b.R
 msgid ""
 "The 'logistf' package is required for Firth's penalized likelihood. Please "
 "install it with install.packages('logistf')."
 msgstr ""
+"Для использования штрафного правдоподобия Фирта требуется пакет 'logistf'. "
+"Установите его с помощью install.packages('logistf')."
 
 #: R/mpwr.b.R
 msgid "The 'pwrss' package is not installed. Please install it in R."
@@ -8498,6 +8696,8 @@ msgid ""
 "The Multivariate Analysis of Variance (MANOVA) approach to repeated measures "
 "designs"
 msgstr ""
+"Подход многомерного дисперсионного анализа (MANOVA) к планам с повторными "
+"измерениями"
 
 #: R/msrv.b.R
 msgid ""
@@ -8555,11 +8755,11 @@ msgstr "Время"
 
 #: mMNV/results/meansTable.columns.title
 msgid "Time / Condition"
-msgstr ""
+msgstr "Время / Условие"
 
 #: mSRV/ui[2].label
 msgid "Time Horizon & Cutoff"
-msgstr ""
+msgstr "Временной горизонт и отсечка"
 
 #: mSRV/results/rocSection/rocTable.columns.title
 msgid "Time Point t"
@@ -8567,7 +8767,7 @@ msgstr "Временная точка t"
 
 #: mSRV/options/timeDepFunc.title
 msgid "Time transform function"
-msgstr ""
+msgstr "Функция трансформации времени"
 
 #: mSTAB/options/time.title
 #: mSTAB/ui[0][1].label
@@ -8590,7 +8790,7 @@ msgstr "Зависимый от времени ROC-анализ"
 
 #: mSRV/options/showRoc.title
 msgid "Time-dependent ROC analysis"
-msgstr ""
+msgstr "Зависящий от времени ROC-анализ"
 
 #: mSRV/results/rocSection/rocPlot.title
 msgid "Time-dependent ROC Curves"
@@ -8611,19 +8811,19 @@ msgstr "Изменяющиеся во времени эффекты (Кокс)"
 
 #: mSRV/options/showTimeDepEffects.title
 msgid "Time-varying effects (time-varying coefficients)"
-msgstr ""
+msgstr "Изменяющиеся во времени эффекты (изменяющиеся во времени коэффициенты)"
 
 #: mSRV/results/coxSection/timeDepTable.title
 msgid "Time-varying Effects in Cox Model"
-msgstr ""
+msgstr "Зависящие от времени эффекты в модели Кокса"
 
 #: R/msrv.b.R
 msgid "Time-varying effects model fitting failed to converge: {reason}"
-msgstr ""
+msgstr "Модель с зависящими от времени эффектами не сошлась: {reason}"
 
 #: R/mmnv.b.R
 msgid "Too few complete observations (minimum 3 required)."
-msgstr ""
+msgstr "Слишком мало полных наблюдений (требуется минимум 3)."
 
 #: R/mpca.b.R
 msgid "Too few observations after removing missing values (minimum 5 required)."
@@ -8708,7 +8908,7 @@ msgstr "Обучающая BA"
 #: mMNV/options/showProfilePlot.title
 #: mMNV/results/profilePlot.title
 msgid "Trajectory / Profile Plot"
-msgstr ""
+msgstr "График профилей / траекторий"
 
 #: R/mdca.b.R
 msgid "Treat All"
@@ -8720,17 +8920,19 @@ msgstr "Не лечить никого"
 
 #: mMNV/options/contrastType/treatment.title
 msgid "Treatment (Compare to baseline)"
-msgstr ""
+msgstr "Сравнение с контролем (базовым уровнем)"
 
 #: R/mmnv.b.R
 msgid ""
 "treats repeated measurements as a multivariate vector of dependent "
 "variables. Unlike classical univariate RM-ANOVA, the MANOVA approach makes"
 msgstr ""
+"рассматривает повторные замеры как многомерный вектор зависимых переменных. "
+"В отличие от классического одномерного RM-ANOVA, подход MANOVA"
 
 #: R/mstab.b.R
 msgid "Tropical Climates"
-msgstr ""
+msgstr "Тропический климат"
 
 #: mSNP/options/assocForestTrunc.title
 msgid "Truncate large confidence intervals"
@@ -8802,7 +9004,7 @@ msgstr "Не определено (нулевая дисперсия остат�
 
 #: R/mstab.b.R
 msgid "Undetermined"
-msgstr ""
+msgstr "Не определен"
 
 #: R/mmnv.b.R
 msgid ""
@@ -8810,6 +9012,9 @@ msgid ""
 ".05), report Greenhouse-Geisser (ε < .75) or Huynh-Feldt (ε ≥ .75) corrected "
 "p-values."
 msgstr ""
+"Одномерный дисперсионный анализ предполагает сферичность. При нарушении "
+"сферичности (p < .05) используйте поправки Гринхауза–Гейссера (при ε < .75) "
+"или Хюйнха–Фельдта (при ε ≥ .75)."
 
 #: package/analyses/mOUT.title
 #: package/analyses/mOUT.menuTitle
@@ -8821,11 +9026,11 @@ msgstr "Одномерное выявление и удаление выброс
 
 #: mMNV/options/showUnivariate.title
 msgid "Univariate Tests (with Sphericity Corrections)"
-msgstr ""
+msgstr "Одномерные критерии (с поправками сферичности)"
 
 #: mMNV/ui[3].label
 msgid "Univariate Tests & Contrasts"
-msgstr ""
+msgstr "Одномерные критерии и контрасты"
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
@@ -8845,7 +9050,7 @@ msgstr "Верхний забор"
 
 #: mSTAB/options/specType3/upper.title
 msgid "Upper limit only (Increasing attribute / Degradant)"
-msgstr ""
+msgstr "Только верхний предел (возрастающий показатель / продукт деградации)"
 
 #: mSTAB/options/specType/upper.title
 #: mSTAB/options/specType2/upper.title
@@ -8855,7 +9060,7 @@ msgstr "Только верхний предел (Возрастающий по�
 #: mSTAB/options/specType4/upper.title
 #: mSTAB/options/specType5/upper.title
 msgid "Upper limit only (Increasing attribute)"
-msgstr ""
+msgstr "Только верхний предел (возрастающий показатель)"
 
 #: mCOR/options/plotMetU.title
 msgid "Upper part"
@@ -8863,19 +9068,19 @@ msgstr "Верхняя часть"
 
 #: mSTAB/options/usl2.title
 msgid "Upper Specification Limit (USL 2)"
-msgstr ""
+msgstr "Верхний предел спецификации (USL 2)"
 
 #: mSTAB/options/usl3.title
 msgid "Upper Specification Limit (USL 3)"
-msgstr ""
+msgstr "Верхний предел спецификации (USL 3)"
 
 #: mSTAB/options/usl4.title
 msgid "Upper Specification Limit (USL 4)"
-msgstr ""
+msgstr "Верхний предел спецификации (USL 4)"
 
 #: mSTAB/options/usl5.title
 msgid "Upper Specification Limit (USL 5)"
-msgstr ""
+msgstr "Верхний предел спецификации (USL 5)"
 
 #: mSTAB/options/usl.title
 msgid "Upper Specification Limit (USL)"
@@ -8883,7 +9088,7 @@ msgstr "Верхний спецификационный предел (USL)"
 
 #: R/mstab.b.R
 msgid "Upper SRL:"
-msgstr ""
+msgstr "Верхний SRL:"
 
 #: mUI/results/stat/uistat.columns.title
 msgid "Upper threshold"
@@ -8891,7 +9096,7 @@ msgstr "Верхний порог"
 
 #: mSNP/options/polyDf1.title
 msgid "Use reduced df for polymorphism (1 df per contrast)"
-msgstr ""
+msgstr "Использовать уменьшенные df для полиморфизма (1 df на контраст)"
 
 #: mPWR/results/powerTable.columns.superTitle
 msgid "User Defined"
@@ -9044,6 +9249,8 @@ msgid ""
 "When sample size is very small (N < k), where MANOVA cannot be computed "
 "because error degrees of freedom are insufficient."
 msgstr ""
+"Когда выборка крайне мала (N < k), где MANOVA не может быть вычислен из-за "
+"недостатка степеней свободы ошибки."
 
 #: R/mmnv.b.R
 msgid ""
@@ -9051,19 +9258,22 @@ msgid ""
 "least 10 to 15 (N - g >= k + 10) and the sphericity assumption is violated "
 "(Mauchly's p < .05, epsilon < .75)."
 msgstr ""
+"Когда объем выборки на группу превышает число повторных замеров хотя бы на 10"
+"–15 (N - g >= k + 10) и допущение о сферичности нарушено (Мокли p < .05, "
+"эпсилон < .75)."
 
 #: R/mmnv.b.R
 msgid "When to prefer MANOVA:"
-msgstr ""
+msgstr "Когда предпочесть MANOVA:"
 
 #: R/mmnv.b.R
 msgid "When to prefer Univariate ANOVA:"
-msgstr ""
+msgstr "Когда предпочесть одномерный ANOVA:"
 
 #: R/mmnv.b.R
 #: mMNV/options/testWilks.title
 msgid "Wilks' Lambda"
-msgstr ""
+msgstr "Лямбда Уилкса"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Window Span (%)"
@@ -9079,23 +9289,23 @@ msgstr "С контролем"
 
 #: mMNV/options/showContrastsTable.title
 msgid "Within-Subjects Contrasts Table"
-msgstr ""
+msgstr "Таблица внутрисубъектных контрастов"
 
 #: mMNV/results/sphericityTable.columns.title
 msgid "Within-Subjects Effect"
-msgstr ""
+msgstr "Внутрисубъектный эффект"
 
 #: mMNV/options/rmFactorName.title
 msgid "Within-Subjects Factor Name"
-msgstr ""
+msgstr "Имя внутрисубъектного фактора"
 
 #: R/mstab.b.R
 msgid "Worst-Case Driver (Governing)"
-msgstr ""
+msgstr "Лимитирующий фактор (определяющий)"
 
 #: R/mstab.b.R
 msgid "Worst-Case Min"
-msgstr ""
+msgstr "Минимум наихудшего случая"
 
 #: mLR/ui[3]/show_roc/roc_x.label
 #: mMLP/ui[3]/show_roc/roc_x.label
@@ -9122,7 +9332,7 @@ msgstr "z-значение"
 
 #: R/mstab.b.R
 msgid "Zero residual variance (perfect fit)"
-msgstr ""
+msgstr "Нулевая остаточная дисперсия (точная подгонка)"
 
 #: mPWR/options/alpha.title
 #: mPWR/ui[0]/alpha.label
