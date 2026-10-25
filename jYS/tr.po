@@ -16,6 +16,14 @@ msgstr ""
 msgid "-log10(p-value)"
 msgstr ""
 
+#: R/mstab.b.R
+msgid ""
+"'Little or no change' was selected in the questionnaire, but ANCOVA "
+"indicates statistically significant batch slope variation or trend (p = "
+"{p}). Please verify whether the 'little or no change' criterion of ICH Q1E "
+"Section 2.4.1.1 is met."
+msgstr ""
+
 #: R/mmnv.b.R
 msgid "(compound symmetry) on the error variance-covariance matrix."
 msgstr ""
@@ -46,6 +54,13 @@ msgstr ""
 
 #: R/mlr.b.R
 msgid "{k}-Fold CV"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"{n} identical duplicate record(s) detected (matching Time, Batch, and "
+"Response values). Please verify whether these represent intended analytical "
+"replicates or inadvertent duplicate entries."
 msgstr ""
 
 #: R/msrv.b.R
@@ -157,13 +172,6 @@ msgstr ""
 msgid ""
 "<b>Balanced Accuracy (BA)</b> = (Sensitivity + Specificity) / 2. Accounts "
 "for class imbalance. BA = 0.5 indicates random classification."
-msgstr ""
-
-#: R/msnp.b.R
-msgid ""
-"<b>Best model selection</b>: the genetic model with the lowest p-value is "
-"highlighted. This helps identify the most likely mode of inheritance for the "
-"observed association."
 msgstr ""
 
 #: R/mcor.b.R
@@ -421,15 +429,17 @@ msgstr ""
 msgid ""
 "<b>Firth's penalized likelihood</b> (Firth, 1993) reduces small-sample bias "
 "and addresses monotone likelihood (separation) in Cox regression. Parameters "
-"and 95% hazard ratio confidence intervals are estimated using penalized "
-"profile likelihood."
+"are estimated by penalized maximum likelihood; hazard ratio confidence "
+"intervals and p-values are based on profile penalized likelihood ratio "
+"tests, while z is a Wald statistic."
 msgstr ""
 
 #: R/mlr.b.R
 msgid ""
 "<b>Firth's penalized likelihood</b> (Firth, 1993) reduces small-sample bias "
-"and addresses separation. Parameters and 95% confidence intervals are "
-"estimated using penalized profile likelihood."
+"and addresses separation. Parameters are estimated by penalized maximum "
+"likelihood; confidence intervals and p-values are based on profile penalized "
+"likelihood ratio tests, while z is a Wald statistic."
 msgstr ""
 
 #: R/mlr.b.R
@@ -606,6 +616,13 @@ msgid ""
 "Criterion (EBIC) tuning parameter selection (gamma = {gamma}). GLASSO uses "
 "L1 regularization to shrink weak partial correlations to exactly zero, "
 "producing a sparse network."
+msgstr ""
+
+#: R/msnp.b.R
+msgid ""
+"<b>Model comparison</b>: the genetic model with the lowest p-value (or "
+"lowest AIC) indicates the most likely mode of inheritance for the observed "
+"association."
 msgstr ""
 
 #: R/mui.b.R
@@ -999,7 +1016,7 @@ msgid "95% CI Upper"
 msgstr ""
 
 #: mMNV/options/plotError/ci.title
-#: mSTAB/results/arrhRegTable.columns.title
+#: mSTAB/results/arrhRegTable.columns.superTitle
 msgid "95% Confidence Interval"
 msgstr ""
 
@@ -1041,24 +1058,45 @@ msgstr "Aralık"
 
 #: R/mmnv.b.R
 msgid ""
-"A significant p-value (p < .05) indicates violation of sphericity, "
-"demonstrating why the MANOVA approach is required."
+"A significant p-value indicates departure from sphericity. When sphericity "
+"is violated, use epsilon corrections or multivariate tests."
 msgstr ""
 
 #: R/mstab.b.R
 msgid "Accelerated Condition (Reference)"
 msgstr ""
 
+#: mSTAB/options/accelResult.title
+msgid "Accelerated Condition Testing Outcome"
+msgstr ""
+
 #: mSTAB/options/arrhRhAcc.title
 msgid "Accelerated Relative Humidity (%)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "accelerated study condition"
+msgstr ""
+
+#: mSTAB/options/arrhDataCondition/accelerated.title
+msgid "Accelerated study condition (e.g. 40°C / 75% RH)"
+msgstr ""
+
+#: R/mstab.b.R
+#: mSTAB/options/accelResult/not_tested.title
+msgid "Accelerated study not conducted / Unknown"
 msgstr ""
 
 #: mSTAB/options/arrhTempAcc.title
 msgid "Accelerated Study Temperature (°C)"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Accelerated Testing Outcome"
+msgstr ""
+
 #: mSTAB/options/accelCondition.title
-msgid "Accelerated Testing Support (ICH Q1E App. A)"
+msgid "Accelerated Testing Support (Legacy ICH Q1E App. A)"
 msgstr ""
 
 #: mSTAB/results/arrhTable.columns.title
@@ -1112,6 +1150,11 @@ msgstr ""
 msgid "Actual Class"
 msgstr ""
 
+#: mSTAB/options/factors.title
+#: mSTAB/ui[0][3].label
+msgid "Additional Factors"
+msgstr ""
+
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
 msgid "Adjusted Median Survival"
 msgstr ""
@@ -1155,6 +1198,7 @@ msgid "Adjusted Survival Summary"
 msgstr ""
 
 #: mSTAB/results/shelfTable.columns.title
+#: mSTAB/results/comboShelfTable.columns.title
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Adopted Model"
 msgstr ""
@@ -1254,6 +1298,10 @@ msgstr ""
 msgid "ANCOVA Poolability:"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "ANCOVA Regression Fit"
+msgstr ""
+
 #: mCOR/options/plotOrder/AOE.title
 msgid "Angular order eigenvectors"
 msgstr "Açısal sıra özvektörleri"
@@ -1295,16 +1343,34 @@ msgid ""
 "stability projections."
 msgstr ""
 
+#: R/mstab.b.R
+msgid ""
+"Arrhenius kinetics cannot be calculated because the estimated degradation "
+"rate is non-positive or undefined."
+msgstr ""
+
 #: mSTAB/results/arrhRegTable.title
 msgid "Arrhenius Multi-Temperature Regression Model"
 msgstr ""
 
-#: mSTAB/results/diagTable.columns.title
-msgid "Assessment / Criteria"
+#: R/mstab.b.R
+msgid ""
+"Arrhenius projected shelf life cannot be calculated because the baseline "
+"shelf life is undetermined."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Arrhenius stability kinetics: Analysed data assumed to be collected at "
+"{condition} ({temp} °C / {rh}% RH)."
 msgstr ""
 
 #: mMNV/results/assumptionsTable.columns.title
-msgid "Assessment & Recommendation"
+msgid "Assessment"
+msgstr ""
+
+#: mSTAB/results/diagTable.columns.title
+msgid "Assessment / Criteria"
 msgstr ""
 
 #: mSNP/options/assocEnable.title
@@ -1315,20 +1381,17 @@ msgstr ""
 msgid "Assumed Ea (kJ/mol)"
 msgstr ""
 
+#: mMNV/options/showAssumptionChecks.title
+#: mMNV/results/assumptionsTable.title
+msgid "Assumption Checks"
+msgstr ""
+
 #: mMNV/ui[4].label
 msgid "Assumptions & Diagnostics"
 msgstr ""
 
 #: mSNP/options/ternaryRegion/1.title
 msgid "Asymptotic chi-square"
-msgstr ""
-
-#: mSNP/options/ternaryRegion/3.title
-msgid "Asymptotic chi-square (females)"
-msgstr ""
-
-#: mSNP/options/ternaryRegion/5.title
-msgid "Asymptotic likelihood ratio"
 msgstr ""
 
 #: R/msnp.b.R
@@ -1338,13 +1401,33 @@ msgid ""
 msgstr ""
 
 #: R/mstab.b.R
+msgid ""
+"At least 2 temperature groups with observed degradation are required to fit "
+"Arrhenius kinetics."
+msgstr ""
+
+#: R/mstab.b.R
 msgid "At least 3 valid observations are required for stability analysis."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"At least one batch must have observations at two or more distinct time "
+"points."
 msgstr ""
 
 #: R/msrv.b.R
 msgid ""
 "At least one predictor (group or covariate) is required for Fine–Gray "
 "regression."
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Attribute '{attr}' was excluded from analysis: {reason}"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Attribute '{name}' not found in dataset."
 msgstr ""
 
 #: mSTAB/results/multiShelfTable.columns.title
@@ -1378,7 +1461,7 @@ msgstr ""
 
 #: R/mstab.b.R
 #: mSTAB/options/dep2.title
-#: mSTAB/ui[0][3].label
+#: mSTAB/ui[0][4].label
 msgid "Attribute 2 (Impurities / Degradants)"
 msgstr ""
 
@@ -1396,7 +1479,7 @@ msgstr ""
 
 #: R/mstab.b.R
 #: mSTAB/options/dep3.title
-#: mSTAB/ui[0][4].label
+#: mSTAB/ui[0][5].label
 msgid "Attribute 3 (Dissolution / Physical)"
 msgstr ""
 
@@ -1418,7 +1501,7 @@ msgstr ""
 
 #: R/mstab.b.R
 #: mSTAB/options/dep4.title
-#: mSTAB/ui[0][5].label
+#: mSTAB/ui[0][6].label
 msgid "Attribute 4 (Optional)"
 msgstr ""
 
@@ -1432,7 +1515,7 @@ msgstr ""
 
 #: R/mstab.b.R
 #: mSTAB/options/dep5.title
-#: mSTAB/ui[0][6].label
+#: mSTAB/ui[0][7].label
 msgid "Attribute 5 (Optional)"
 msgstr ""
 
@@ -1464,6 +1547,10 @@ msgstr ""
 msgid "Automatic (ICH Q1E Decision Tree)"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Available (pilot batches / packaging)"
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Average (Mean)"
 msgstr ""
@@ -1481,7 +1568,7 @@ msgstr "Ortalama Bağlantı (UPGMA)"
 msgid "Avoided at 20% (per 100)"
 msgstr ""
 
-#: mLR/ui[3]/show_roc/roc_unit.label
+#: mLR/ui[4]/show_roc/roc_unit.label
 #: mMLP/ui[3]/show_roc/roc_unit.label
 #: mPCA/ui[3][0]/rocPlot/roc_unit.label
 #: mRF/ui[3]/show_roc/roc_unit.label
@@ -1517,6 +1604,10 @@ msgid "baseline"
 msgstr ""
 
 #: R/mstab.b.R
+msgid "Baseline observation duration Y"
+msgstr ""
+
+#: R/mstab.b.R
 msgid "Baseline rate (40°C):"
 msgstr ""
 
@@ -1538,8 +1629,16 @@ msgstr ""
 msgid "Batch Degradation Rates & ANCOVA Slope Comparison"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Batch intercepts differ (p <= {alpha}) -> Adopt Model 2"
+msgstr ""
+
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Batch Minimum Shelf Life (months)"
+msgstr ""
+
+#: mSTAB/results/comboShelfTable.columns.title
+msgid "Batches"
 msgstr ""
 
 #: package/datasets/BCModelsROCEstimation.name
@@ -1669,7 +1768,7 @@ msgid "Boxplots with outliers"
 msgstr "Aykırı değerlerle kutu grafikleri"
 
 #: mLR/options/palBrewer.title
-#: mLR/ui[3]/show_roc/palBrewer.label
+#: mLR/ui[4]/show_roc/palBrewer.label
 #: mMLP/options/palBrewer.title
 #: mMLP/ui[3]/show_roc/palBrewer.label
 #: mPCA/options/palBrewer.title
@@ -1734,6 +1833,10 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Cannot evaluate normality (insufficient variance)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Cannot evaluate slopes"
 msgstr ""
 
 #: R/mstab.b.R
@@ -1806,6 +1909,10 @@ msgstr ""
 msgid "Centroid Linkage (UPGMC)"
 msgstr "Ağırlık Merkezi Bağlantısı (UPGMC)"
 
+#: R/mstab.b.R
+msgid "Change and variability observed over time"
+msgstr ""
+
 #: package/datasets/CHDModelsROCEstimation.name
 msgid "CHD Models ROC Estimation"
 msgstr "CHD Modelleri ROC Tahmini"
@@ -1841,6 +1948,30 @@ msgstr ""
 
 #: R/mmout.b.R
 msgid "Chi-Square Q-Q Plot ({method})"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "chi-square test"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/5.title
+msgid "Chi-square with both continuity corrections"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/2.title
+msgid "Chi-square with continuity correction"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/4.title
+msgid "Chi-square with continuity correction (D < 0)"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/3.title
+msgid "Chi-square with continuity correction (D > 0)"
+msgstr ""
+
+#: mSNP/options/ternaryRegion/6.title
+msgid "Chi-square with upper and lower continuity correction"
 msgstr ""
 
 #: R/msrv.b.R
@@ -1948,12 +2079,12 @@ msgid "Clinical Threshold Settings"
 msgstr ""
 
 #: mLR/options/forestClip.title
-#: mLR/ui[3]/showForest/forestClip.label
+#: mLR/ui[4]/showForest/forestClip.label
 msgid "Clip very large Odds Ratios"
 msgstr ""
 
 #: mLR/options/forestClipThreshold.title
-#: mLR/ui[3]/showForest/forestClipThreshold.label
+#: mLR/ui[4]/showForest/forestClipThreshold.label
 msgid "Clipping threshold"
 msgstr ""
 
@@ -2031,6 +2162,14 @@ msgstr ""
 msgid "Coefficient of Determination (R²)"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Cohort slopes differ (p <= {alpha}) -> Adopt Model 1"
+msgstr ""
+
+#: R/mmnv.b.R
+msgid "Coincidence supported (no significant elevation difference)."
+msgstr ""
+
 #: mCOR/options/plotMetU/color.title
 #: mCOR/options/plotMetL/color.title
 msgid "Color"
@@ -2039,6 +2178,13 @@ msgstr "Renk"
 #: mCOR/options/clustCol.title
 msgid "Colored Clusters"
 msgstr "Renkli Kümeler"
+
+#: R/mstab.b.R
+msgid ""
+"Combination shelf life represents the earliest intersection of one-sided 95% "
+"confidence bounds across all batches within each factor combination (ICH Q1E "
+"Section B.3.2.2.1)."
+msgstr ""
 
 #: mLR/options/multiclass_roc_type/combined.title
 msgid "Combined"
@@ -2172,10 +2318,6 @@ msgstr ""
 msgid "Concordance"
 msgstr "Uyum"
 
-#: mROC/results/text.title
-msgid "Conditions"
-msgstr "Koşullar"
-
 #: mLR/results/misclassifiedTable.columns.title
 msgid "Confidence"
 msgstr ""
@@ -2262,7 +2404,7 @@ msgid "Continuous Predictors / Scores"
 msgstr ""
 
 #: mMNV/results/contrastsTable.columns.title
-msgid "Contrast / Trend"
+msgid "Contrast"
 msgstr ""
 
 #: mMNV/options/contrastType.title
@@ -2358,6 +2500,7 @@ msgstr ""
 msgid "Covariates"
 msgstr ""
 
+#: mSRV/options/covariates.title
 #: mSRV/ui[0][5].label
 msgid "Covariates (Adjustment / Confounders)"
 msgstr ""
@@ -2371,10 +2514,6 @@ msgstr ""
 #, fuzzy
 msgid "Covariates (Continuous Predictors)"
 msgstr "EŞ Değişkenler (Sürekli Tahmin Ediciler)"
-
-#: mSRV/options/covariates.title
-msgid "Covariates (Cox regression)"
-msgstr ""
 
 #: mSRV/results/coxSection/coxForestPlot.title
 msgid "Cox Hazard Ratios Forest Plot"
@@ -2421,7 +2560,7 @@ msgid "Cross-validation folds"
 msgstr ""
 
 #: mLR/options/cv_folds.title
-#: mLR/ui[2]/cv_folds.label
+#: mLR/ui[3]/cv_folds.label
 #: mMLP/options/cv_folds.title
 #: mMLP/ui[2]/cv_folds.label
 #: mRF/options/cv_folds.title
@@ -2434,7 +2573,7 @@ msgstr "Çapraz Doğrulama Katlamaları (K)"
 msgid "Cross-Validation Repeats"
 msgstr ""
 
-#: mLR/ui[2]/cv_repeats.label
+#: mLR/ui[3]/cv_repeats.label
 msgid "Cross-Validation Repeats (R)"
 msgstr ""
 
@@ -2504,7 +2643,7 @@ msgid "Cut-off"
 msgstr ""
 
 #: mLR/options/show_roc_cut.title
-#: mLR/ui[3]/show_roc/show_roc_cut.label
+#: mLR/ui[4]/show_roc/show_roc_cut.label
 #: mMLP/options/show_roc_cut.title
 #: mMLP/ui[3]/show_roc/show_roc_cut.label
 #: mPCA/options/show_roc_cut.title
@@ -2629,6 +2768,10 @@ msgstr ""
 msgid "Decision Curves Plot (Net Benefit)"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Decision tree verification"
+msgstr ""
+
 #: mSTAB/results/arrhTable.columns.title
 msgid "Degradation Rate (k / month)"
 msgstr ""
@@ -2672,6 +2815,11 @@ msgstr "Bağımlı Değişken (Hedef)"
 
 #: R/mlr.b.R
 msgid "Dependent variable must have at least two levels."
+msgstr ""
+
+#: mMNV/options/showMeansTable.title
+#: mMNV/results/meansTable.title
+msgid "Descriptives"
 msgstr ""
 
 #: mMNV/ui[5].label
@@ -2739,10 +2887,6 @@ msgstr ""
 
 #: mSTAB/results/diagTable.columns.title
 msgid "Diagnostic / Assumption Test"
-msgstr ""
-
-#: mMNV/results/assumptionsTable.columns.title
-msgid "Diagnostic Test"
 msgstr ""
 
 #: package/analyses/mUI.menuSubgroup
@@ -2828,7 +2972,8 @@ msgstr ""
 
 #: mMNV/results/multivariateTable.columns.title
 #: mMNV/results/univariateTable.columns.title
-msgid "Effect / Source"
+#: mMNV/results/sphericityTable.columns.title
+msgid "Effect"
 msgstr ""
 
 #: R/mpwr.b.R
@@ -2844,6 +2989,12 @@ msgstr "Etki Büyülülüğü"
 
 #: R/msnp.b.R
 msgid "Effect size (Beta)"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"Effect size calculation is not supported for equivalence designs. Please "
+"calculate Sample Size (N) or Power instead."
 msgstr ""
 
 #: mSNP/results/popGroup/popTable.columns.title
@@ -2867,12 +3018,16 @@ msgstr ""
 msgid "ElasticNet (α={alpha}, {penalty})"
 msgstr ""
 
-#: mLR/ui[1]/elastic_alpha.label
+#: mLR/ui[2]/elastic_alpha.label
 msgid "ElasticNet Alpha (0=Ridge, 1=LASSO)"
 msgstr ""
 
 #: mLR/options/elastic_alpha.title
 msgid "ElasticNet Alpha (L1 Ratio)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Elevated temperature testing (ICH Q1E Section 2.4.3)"
 msgstr ""
 
 #: mCOR/options/plotMetU/ellipse.title
@@ -2921,6 +3076,22 @@ msgid "Entry / Start time variable must be numeric."
 msgstr ""
 
 #: R/mstab.b.R
+msgid "Equal batch intercepts (p > {alpha}) -> Proceed to Step 4"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Equal cohort slopes (p > {alpha}) -> Proceed to Step 2"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Equal factor intercepts (p > {alpha}) -> Adopt Model 3"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Equal factor slopes (p > {alpha}) -> Proceed to Step 3"
+msgstr ""
+
+#: R/mstab.b.R
 msgid "Equal intercepts (p > {alpha}) -> Adopt Model 3"
 msgstr ""
 
@@ -2928,14 +3099,13 @@ msgstr ""
 msgid "Equal slopes (p > {alpha}) -> Proceed to Step 2"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Equation for fitted line:"
+msgstr ""
+
 #: R/mpwr.b.R
 #: mPWR/ui[0]/alt/equivalent.title
 msgid "equivalence"
-msgstr ""
-
-#: mPWR/options/margin.title
-#: mPWR/ui[0]/margin.label
-msgid "Equivalence / Non-Inferiority / Superiority margin"
 msgstr ""
 
 #: R/mmlp.b.R
@@ -2985,6 +3155,10 @@ msgstr ""
 msgid "Estimated out-of-bag (OOB) imputation error"
 msgstr "Tahmini out-of-bag (OOB) doldurma hatası"
 
+#: mLR/ui[1].label
+msgid "Estimation"
+msgstr ""
+
 #: mCOR/options/netMethod.title
 msgid "Estimation method"
 msgstr ""
@@ -3008,7 +3182,8 @@ msgstr ""
 #: R/msrv.b.R
 msgid ""
 "Evaluates marker discriminative accuracy (AUC) at time t. Cut-off is "
-"determined by the Youden index."
+"determined by the Youden index. Subjects censored before time t are excluded "
+"without IPCW weighting."
 msgstr ""
 
 #: R/mmnv.b.R
@@ -3065,28 +3240,28 @@ msgstr ""
 msgid "Events (n)"
 msgstr ""
 
-#: mSNP/options/ternaryRegion/4.title
-msgid "Exact (females)"
-msgstr ""
-
-#: mSNP/options/ternaryRegion/7.title
-msgid "Exact autosomal"
-msgstr ""
-
-#: mSNP/options/ternaryRegion/2.title
-msgid "Exact joint (males & females)"
-msgstr ""
-
-#: mSNP/options/ternaryRegion/6.title
-msgid "Exact joint permutation"
-msgstr ""
-
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "Exact p"
 msgstr ""
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "Exact p-adj"
+msgstr ""
+
+#: R/msnp.b.R
+msgid "exact test"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Exceeds by {diff} mo"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Exceeds ceiling"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Excluded"
 msgstr ""
 
 #: R/msnp.b.R
@@ -3185,6 +3360,10 @@ msgid "Extrapolation Cap"
 msgstr ""
 
 #: R/mstab.b.R
+msgid "Extrapolation Ceiling"
+msgstr ""
+
+#: R/mstab.b.R
 msgid "Extrapolation Limit:"
 msgstr ""
 
@@ -3206,6 +3385,19 @@ msgstr ""
 msgid "F1-Score"
 msgstr "F1-Puan"
 
+#: mSTAB/results/comboShelfTable.columns.title
+msgid "Factor Combination"
+msgstr ""
+
+#: mSTAB/options/showComboShelfTable.title
+#: mSTAB/results/comboShelfTable.title
+msgid "Factor Combinations Shelf Life Summary Table"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Factor intercepts differ (p <= {alpha}) -> Adopt Model 2"
+msgstr ""
+
 #: mPCA/results/loadingsTable.title
 msgid "Factor Loadings"
 msgstr ""
@@ -3224,6 +3416,10 @@ msgstr ""
 
 #: mPCA/options/loadingsTable.title
 msgid "Factor loadings table"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Factor slopes differ (p <= {alpha}) -> Adopt Model 1"
 msgstr ""
 
 #: mLR/options/factors.title
@@ -3253,11 +3449,11 @@ msgid "False Positive (FP)"
 msgstr ""
 
 #: mLR/options/method.title
-#: mLR/ui[1]/method.label
+#: mLR/ui[2]/method.label
 msgid "Feature Selection Method"
 msgstr ""
 
-#: mLR/ui[1].label
+#: mLR/ui[2].label
 msgid "Feature Selection Settings"
 msgstr ""
 
@@ -3299,6 +3495,10 @@ msgstr ""
 msgid "First principal component"
 msgstr "Birinci temel bileşen"
 
+#: R/msrv.b.R
+msgid "Firth's Cox regression warning: {msg}"
+msgstr ""
+
 #: R/mlr.b.R
 #: mLR/options/firth.title
 #: mLR/ui[1]/firth.label
@@ -3308,9 +3508,35 @@ msgid "Firth's penalized likelihood"
 msgstr ""
 
 #: R/mlr.b.R
+msgid "Firth's penalized likelihood estimation warning: {msg}"
+msgstr ""
+
+#: R/mlr.b.R
 msgid ""
 "Firth's penalized likelihood is currently only supported for binary logistic "
 "regression. Falling back to standard multinomial model."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"Firth's penalized likelihood is not applicable to adjusted survival curves; "
+"standard Cox regression was used."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"Firth's penalized likelihood is not applicable to Fine–Gray competing risks "
+"models; standard subdistribution hazard regression was used."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"Firth's penalized likelihood is not applicable to time-varying Cox models; "
+"standard Cox regression was used."
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Fitted Line"
 msgstr ""
 
 #: R/mstab.b.R
@@ -3321,9 +3547,25 @@ msgstr ""
 msgid "Flag significant correlations"
 msgstr "Anlamlı korelasyonları işaretle"
 
+#: R/mmnv.b.R
+msgid "Flatness supported (no significant change across repeated measures)."
+msgstr ""
+
 #: R/mpca.b.R
 #: mPCA/results/regTable.columns.title
 msgid "Fold"
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"For equivalence tests, the expected effect size (|d|) must be strictly less "
+"than the hypothesis margin (δ)."
+msgstr ""
+
+#: R/mpwr.b.R
+msgid ""
+"For equivalence, non-inferiority, or superiority hypotheses, the hypothesis "
+"margin (δ) must be strictly greater than 0."
 msgstr ""
 
 #: mSRV/options/coxForest.title
@@ -3336,7 +3578,7 @@ msgid "Forest Plot of Odds Ratios"
 msgstr ""
 
 #: mLR/options/showForest.title
-#: mLR/ui[3]/showForest.label
+#: mLR/ui[4]/showForest.label
 #: mSNP/options/assocForest.title
 msgid "Forest plot of Odds Ratios"
 msgstr ""
@@ -3355,6 +3597,30 @@ msgstr ""
 
 #: mSNP/ui[2].label
 msgid "Frequency Tables"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Frozen (-20°C ± 5°C)"
+msgstr ""
+
+#: mSTAB/options/storageCond/frozen.title
+msgid "Frozen storage (-20°C ± 5°C)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Frozen: Conservative extrapolation with supporting data (ICH Q1E Section "
+"2.4.3)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Frozen: Limited to long-term data duration (ICH Q1E Section 2.4.3)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Fully Supported: Conforms to {prop} months within regulatory ceiling ({cap} "
+"months)"
 msgstr ""
 
 #: mSNP/results/assocGroup/assocTable.title
@@ -3426,12 +3692,21 @@ msgid ""
 "0.05 indicates significant improvement)."
 msgstr ""
 
+#: mSTAB/results/comboShelfTable.columns.title
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Governing Batch"
 msgstr ""
 
 #: R/mstab.b.R
 msgid "Governing Expiry Date"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Governing Minimum"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Governing Statistical Shelf Life"
 msgstr ""
 
 #: R/mstab.b.R
@@ -3461,11 +3736,11 @@ msgid ""
 msgstr ""
 
 #: R/mmnv.b.R
-msgid "Greenhouse-Geisser"
+msgid "Greenhouse–Geisser"
 msgstr ""
 
 #: mMNV/results/sphericityTable.columns.title
-msgid "Greenhouse-Geisser ε"
+msgid "Greenhouse–Geisser ε"
 msgstr ""
 
 #: R/mout.b.R
@@ -3493,8 +3768,6 @@ msgid "Group Projection in PCA Space"
 msgstr ""
 
 #: R/mmnv.b.R
-#: mMNV/options/showHePlot.title
-#: mMNV/results/hePlot.title
 msgid "Group Scatter with Data Ellipses"
 msgstr ""
 
@@ -3644,7 +3917,7 @@ msgid "High Risk"
 msgstr ""
 
 #: mLR/options/risk_cut_high.title
-#: mLR/ui[3]/show_risk_strat/risk_cut_high.label
+#: mLR/ui[4]/show_risk_strat/risk_cut_high.label
 #: mMLP/options/risk_cut_high.title
 #: mMLP/ui[3]/show_risk_strat/risk_cut_high.label
 #: mRF/options/risk_cut_high.title
@@ -3696,7 +3969,7 @@ msgid "Hold-out Validation Split"
 msgstr "Tutma Dışı Doğrulama Bölme"
 
 #: mLR/options/val_split.title
-#: mLR/ui[2]/val_split.label
+#: mLR/ui[3]/val_split.label
 #: mMLP/options/val_split.title
 #: mMLP/ui[2]/val_split.label
 #: mRF/options/val_split.title
@@ -3731,7 +4004,7 @@ msgstr ""
 
 #: R/mmnv.b.R
 #: mMNV/options/testHotelling.title
-msgid "Hotelling-Lawley Trace"
+msgid "Hotelling–Lawley Trace"
 msgstr ""
 
 #: R/msrv.b.R
@@ -3745,11 +4018,11 @@ msgid "Hub markers table"
 msgstr ""
 
 #: R/mmnv.b.R
-msgid "Huynh-Feldt"
+msgid "Huynh–Feldt"
 msgstr ""
 
 #: mMNV/results/sphericityTable.columns.title
-msgid "Huynh-Feldt ε"
+msgid "Huynh–Feldt ε"
 msgstr ""
 
 #: R/msnp.b.R
@@ -3769,20 +4042,44 @@ msgid "HWE statistical tests"
 msgstr ""
 
 #: mCOR/options/hyp.title
+#: mMNV/results/profileTable.columns.title
 msgid "Hypothesis"
 msgstr "Hipotez"
 
-#: mMNV/results/profileTable.columns.title
-msgid "Hypothesis / Question"
+#: mPWR/options/margin.title
+#: mPWR/ui[0]/margin.label
+msgid "Hypothesis margin (δ)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "ICH Permitted"
 msgstr ""
 
 #: R/mstab.b.R
 msgid "ICH Q1E Extrapolation:"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "ICH Q1E Logic Engine"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "ICH Q1E Permitted Shelf Life"
+msgstr ""
+
 #: mSTAB/results/shelfTable.columns.title
+#: mSTAB/results/comboShelfTable.columns.title
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "ICH Q1E Permitted Shelf Life (months)"
+msgstr ""
+
+#: mSTAB/results/regTable.columns.title
+msgid "ICH Q1E Reference & Regulatory Criteria"
+msgstr ""
+
+#: mSTAB/options/showRegTable.title
+#: mSTAB/results/regTable.title
+msgid "ICH Q1E Regulatory Extrapolation & Decision Tree Summary"
 msgstr ""
 
 #: package/datasets/Outliersidentificationandremoval.description
@@ -3877,6 +4174,14 @@ msgstr "İndeksler (Satırlar)"
 msgid "Individual Batch"
 msgstr ""
 
+#: mSTAB/results/batchPlots.title
+msgid "Individual Batch Shelf Life Plots"
+msgstr ""
+
+#: mSTAB/options/showBatchPlots.title
+msgid "Individual Batch Shelf Life Plots (Standalone)"
+msgstr ""
+
 #: R/mstab.b.R
 msgid "Individual Batch Stability Trajectories"
 msgstr ""
@@ -3907,11 +4212,22 @@ msgstr "Giriş-çıkış grafiği"
 msgid "Influx-outflux plot for missing data patterns"
 msgstr "Eksik veri desenleri için giriş-çıkış grafiği"
 
+#: R/mstab.b.R
+msgid ""
+"Initial observation(s) at time {t0} for attribute '{attr}' already fall "
+"outside specification limits. Establishing a valid shelf life is "
+"questionable."
+msgstr ""
+
 #: mMLP/options/rang.title
 #: mMLP/ui[1]/rang.label
 #, fuzzy
 msgid "Initial Weights Range"
 msgstr "İlk Ağırlık Aralığı"
+
+#: R/mstab.b.R
+msgid "Input inconsistency"
+msgstr ""
 
 #: R/mmlp.b.R
 #, fuzzy
@@ -3935,6 +4251,11 @@ msgstr ""
 msgid "Insufficient degrees of freedom for slopes test"
 msgstr ""
 
+#: R/mstab.b.R
+#: mSTAB/options/storageCond.title
+msgid "Intended Storage Condition"
+msgstr ""
+
 #: R/msnp.b.R
 msgid "Interaction Order"
 msgstr ""
@@ -3956,8 +4277,16 @@ msgstr "Kümeler Arası Matrisler"
 msgid "Intermediate Condition (Zone IVa)"
 msgstr ""
 
+#: mSTAB/options/intermedResult.title
+msgid "Intermediate Condition Testing Outcome (where applicable)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Intermediate Testing Outcome"
+msgstr ""
+
 #: mMNV/results/profileTable.columns.title
-msgid "Interpretation & Decision"
+msgid "Interpretation"
 msgstr ""
 
 #: R/mui.b.R
@@ -4224,6 +4553,10 @@ msgid "Limiting Batch:"
 msgstr ""
 
 #: R/mstab.b.R
+msgid "Limiting combination"
+msgstr ""
+
+#: R/mstab.b.R
 msgid "Limiting CQA:"
 msgstr ""
 
@@ -4245,13 +4578,17 @@ msgstr "Linear Regresyon (F-Testi)"
 msgid "Linkage Disequilibrium (LD) analysis"
 msgstr ""
 
-#: mSNP/ui[10].label
+#: mSNP/ui[11].label
 #: mSNP/results/ldGroup.title
 msgid "Linkage Disequilibrium (LD) Analysis"
 msgstr ""
 
 #: mSNP/results/ldGroup/ldTable.title
 msgid "Linkage Disequilibrium (LD) Table"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Little or no change / low variability"
 msgstr ""
 
 #: R/mpca.b.R
@@ -4262,7 +4599,7 @@ msgstr ""
 msgid "Log Degradation Rate"
 msgstr ""
 
-#: mLR/ui[3]/showForest/forestLog.label
+#: mLR/ui[4]/showForest/forestLog.label
 msgid "Log scale"
 msgstr ""
 
@@ -4271,7 +4608,9 @@ msgid "Log scale for Odds Ratios"
 msgstr ""
 
 #: R/mstab.b.R
-msgid "Log transformation for attribute"
+msgid ""
+"Log transformation requires strictly positive values of the response "
+"variable."
 msgstr ""
 
 #: R/mstab.b.R
@@ -4348,8 +4687,24 @@ msgid ""
 "Settings) for reproducibility."
 msgstr ""
 
+#: mSTAB/options/littleChange.title
+msgid "Long-term data show little or no change and little variability"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Long-term Data Variability"
+msgstr ""
+
 #: R/mstab.b.R
 msgid "Long-term Storage (Zone II)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "long-term storage condition"
+msgstr ""
+
+#: mSTAB/options/arrhDataCondition/long_term.title
+msgid "Long-term storage condition (e.g. 25°C / 60% RH)"
 msgstr ""
 
 #: mSTAB/options/arrhRhLong.title
@@ -4364,6 +4719,10 @@ msgstr ""
 msgid "Long-term Study Duration (0 - auto)"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Long-term Study Duration (Y)"
+msgstr ""
+
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -4372,7 +4731,7 @@ msgid "Low Risk"
 msgstr ""
 
 #: mLR/options/risk_cut_low.title
-#: mLR/ui[3]/show_risk_strat/risk_cut_low.label
+#: mLR/ui[4]/show_risk_strat/risk_cut_low.label
 #: mMLP/options/risk_cut_low.title
 #: mMLP/ui[3]/show_risk_strat/risk_cut_low.label
 #: mRF/options/risk_cut_low.title
@@ -4382,6 +4741,10 @@ msgstr ""
 
 #: R/mcor.b.R
 msgid "Low stability (CS < 0.25). Interpret centrality with caution."
+msgstr ""
+
+#: mSTAB/results/arrhRegTable.columns.title
+msgid "Lower"
 msgstr ""
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
@@ -4422,6 +4785,10 @@ msgstr ""
 msgid "Lower part"
 msgstr "Alt kısım"
 
+#: R/mstab.b.R
+msgid "Lower Specification"
+msgstr ""
+
 #: mSTAB/options/lsl2.title
 msgid "Lower Specification Limit (LSL 2)"
 msgstr ""
@@ -4440,6 +4807,18 @@ msgstr ""
 
 #: mSTAB/options/lsl.title
 msgid "Lower Specification Limit (LSL)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Lower specification limit (LSL) must be specified when Specification Type "
+"includes lower limit."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Lower specification limit (LSL) must be strictly less than Upper "
+"specification limit (USL)."
 msgstr ""
 
 #: R/mstab.b.R
@@ -4500,12 +4879,7 @@ msgstr ""
 msgid "Mahalanobis Distance D² (Residual Outliers)"
 msgstr ""
 
-#: package/analyses/mMNV.title
-#: package/analyses/mMNV.menuTitle
 #: package/datasets/MANOVA&RepeatedMeasures.name
-#: mMNV/options.title
-#: mMNV/options.menuTitle
-#: mMNV/ui.title
 #: mMNV/results.title
 msgid "MANOVA & Repeated Measures"
 msgstr ""
@@ -4551,14 +4925,6 @@ msgstr ""
 
 #: R/mmnv.b.R
 msgid "Mardia Multivariate Skewness (Residuals)"
-msgstr ""
-
-#: mMNV/results/meansTable.title
-msgid "Marginal Means & Descriptives"
-msgstr ""
-
-#: mMNV/options/showMeansTable.title
-msgid "Marginal Means & Descriptives Table"
 msgstr ""
 
 #: R/mmnv.b.R
@@ -4611,18 +4977,13 @@ msgstr ""
 msgid "Mathematical Model Formula"
 msgstr ""
 
-#: mLR/ui[3]/show_formula.label
+#: mLR/ui[4]/show_formula.label
 msgid "Mathematical model formula"
 msgstr ""
 
 #: R/mcor.b.R
 msgid "Matrix #{i}"
 msgstr "Matris #{i}"
-
-#: mMNV/options/showSphericity.title
-#: mMNV/results/sphericityTable.title
-msgid "Mauchly's Sphericity Test & Epsilon Estimates"
-msgstr ""
 
 #: R/mmnv.b.R
 msgid ""
@@ -4662,6 +5023,10 @@ msgstr ""
 msgid "Max time (0 = unlimited)"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Maximum conditional extension limit"
+msgstr ""
+
 #: mSRV/ui[2]/kmMaxTime.label
 msgid "Maximum evaluation horizon (0 = unlimited)"
 msgstr ""
@@ -4675,6 +5040,13 @@ msgstr ""
 #: mMF/options/maxiter.title
 msgid "Maximum number of iterations"
 msgstr "Maksimum yineleme sayısı"
+
+#: R/mstab.b.R
+msgid ""
+"Maximum observed Time is {max_t}. Please verify that Time is entered in "
+"months, as ICH Q1E extrapolation rules (such as +12 months or multipliers) "
+"assume time in months."
+msgstr ""
 
 #: mDCA/options/threshMax.title
 msgid "Maximum Threshold"
@@ -4802,6 +5174,10 @@ msgstr ""
 msgid "Min Threshold (%)"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "min(Statistical Shelf Life, Extrapolation Ceiling)"
+msgstr ""
+
 #: mPWR/options/es.title
 #: mPWR/ui[0]/es.label
 #, fuzzy
@@ -4857,7 +5233,7 @@ msgid "Misclassified Cases"
 msgstr ""
 
 #: mLR/options/show_misclassified.title
-#: mLR/ui[3]/show_misclassified.label
+#: mLR/ui[4]/show_misclassified.label
 msgid "Misclassified cases table"
 msgstr ""
 
@@ -4999,9 +5375,12 @@ msgstr ""
 msgid "Model Coefficients (Post-Selection / Refitted Model)"
 msgstr ""
 
-#: mMNV/options/showAssumptionChecks.title
-#: mMNV/results/assumptionsTable.title
-msgid "Model Diagnostics & Assumption Checks"
+#: R/mstab.b.R
+msgid "Model diagnostic note"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Model diagnostic warning"
 msgstr ""
 
 #: mSTAB/options/showDiagTable.title
@@ -5135,7 +5514,7 @@ msgid ""
 msgstr ""
 
 #: mLR/options/multiclass_roc_type.title
-#: mLR/ui[3]/show_roc/multiclass_roc_type.label
+#: mLR/ui[4]/show_roc/multiclass_roc_type.label
 #: mMLP/options/multiclass_roc_type.title
 #: mMLP/ui[3]/show_roc/multiclass_roc_type.label
 #: mRF/options/multiclass_roc_type.title
@@ -5143,7 +5522,15 @@ msgstr ""
 msgid "Multiclass ROC Layout"
 msgstr ""
 
-#: mSNP/ui[8].label
+#: R/mstab.b.R
+msgid ""
+"Multifactor ANCOVA poolability tests evaluate whether stability batches and "
+"packaging/strength factor levels can share common slopes and intercepts "
+"according to ICH Q1E Section B.3.2.2.1 (alpha = 0.25 for batch terms, alpha "
+"= 0.05 for factor terms)."
+msgstr ""
+
+#: mSNP/ui[9].label
 #: mSNP/results/mdrGroup.title
 msgid "Multifactor Dimensionality Reduction (MDR)"
 msgstr ""
@@ -5167,23 +5554,8 @@ msgstr "Çoklu karşılaştırma düzeltmesi"
 msgid "Multiple imputation for missing data"
 msgstr "Eksik veriler için çoklu doldurma"
 
-#: mSNP/ui[1].label
-msgid "Multiple Testing"
-msgstr ""
-
 #: mSNP/options/adjust.title
 msgid "Multiple testing correction"
-msgstr ""
-
-#: mMNV/results/multivariateTable.columns.title
-msgid "Multiv. Test"
-msgstr ""
-
-#: package/analyses/mMNV.description
-#: mMNV/options.description.main
-msgid ""
-"Multivariate Analysis of Variance (MANOVA), Repeated Measures MANOVA without "
-"sphericity assumption (O'Brien & Kaiser, 1985), and Profile Analysis."
 msgstr ""
 
 #: package/datasets/MANOVA&RepeatedMeasures.description
@@ -5202,7 +5574,7 @@ msgstr ""
 
 #: mMNV/options/showOutlierPlot.title
 #: mMNV/results/outlierPlot.title
-msgid "Multivariate Outliers (Mahalanobis Distance) Plot"
+msgid "Multivariate Outliers (Mahalanobis Distance)"
 msgstr ""
 
 #: package/analyses/mMOUT.title
@@ -5226,11 +5598,8 @@ msgid "Multivariate Test Criteria:"
 msgstr ""
 
 #: mMNV/ui[2].label
-msgid "Multivariate Tests"
-msgstr ""
-
 #: mMNV/results/multivariateTable.title
-msgid "Multivariate Tests (MANOVA)"
+msgid "Multivariate Tests"
 msgstr ""
 
 #: R/mmnv.b.R
@@ -5400,7 +5769,11 @@ msgid "No clinical gain"
 msgstr ""
 
 #: R/msrv.b.R
-msgid "No complete cases available for time-dependent Cox model."
+msgid "No complete cases available for time-varying Cox model."
+msgstr ""
+
+#: R/mstab.b.R
+msgid "no degradation"
 msgstr ""
 
 #: R/msrv.b.R
@@ -5429,14 +5802,31 @@ msgstr ""
 msgid "No significant autocorrelation"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "No significant change at 25°C / 60% RH (6 mo)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "No significant change at accelerated condition (6 mo)"
+msgstr ""
+
+#: mSTAB/options/accelResult/no_change.title
+msgid "No significant change at accelerated condition (6 months)"
+msgstr ""
+
 #: mSTAB/options/accelCondition/no_change.title
 msgid ""
 "No significant change at accelerated condition (Extrapolation up to 2X, max "
 "X + 12 mo)"
 msgstr ""
 
+#: R/mstab.b.R
+#: mSTAB/options/intermedResult/no_change.title
+msgid "No significant change at intermediate condition"
+msgstr ""
+
 #: R/msrv.b.R
-msgid "No valid predictors found for time-dependent Cox model."
+msgid "No valid predictors found for time-varying Cox model."
 msgstr ""
 
 #: R/mcor.b.R
@@ -5521,6 +5911,10 @@ msgstr ""
 msgid "Normality p-value"
 msgstr "Normallik<br>p-değeri"
 
+#: R/mstab.b.R
+msgid "Not available / unverified"
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "Not enough events or survivors at the selected analysis time point t to "
@@ -5528,7 +5922,48 @@ msgid ""
 msgstr ""
 
 #: R/mstab.b.R
+#: mSTAB/options/intermedResult/not_applicable.title
+msgid "Not performed / Not applicable"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Not performed / Study missing"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Not supported"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Not Supported: Limiting statistical estimate ({stat} months) is less than "
+"proposed ({prop} months)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Not Supported: Proposed shelf life ({prop} months) exceeds regulatory "
+"ceiling ({cap} months)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Not tested"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Not tested (cohort slopes differ)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Not tested (model already selected)"
+msgstr ""
+
+#: R/mstab.b.R
 msgid "Not tested (slopes are unequal)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Not tested (slopes poolability test could not be evaluated)"
 msgstr ""
 
 #: R/msnp.b.R
@@ -5676,7 +6111,7 @@ msgid "Observed Data"
 msgstr ""
 
 #: R/mstab.b.R
-msgid "Observed data, regression fits, and 95% confidence bands per batch"
+msgid "Observed data, regression fits, and {pct}% confidence bands per batch"
 msgstr ""
 
 #: mLR/results/riskTable.columns.title
@@ -5825,6 +6260,10 @@ msgstr ""
 msgid "Out-of-Bag (OOB) Estimation"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Out-of-specification at baseline"
+msgstr ""
+
 #: R/msnp.b.R
 msgid "Outcome"
 msgstr ""
@@ -5929,7 +6368,7 @@ msgstr "Çıktı bilgisi"
 msgid "Output Layer"
 msgstr "Çıkış Katmanı"
 
-#: mLR/ui[3].label
+#: mLR/ui[4].label
 #: mMLP/ui[3].label
 #: mRF/ui[3].label
 #, fuzzy
@@ -5949,7 +6388,17 @@ msgid "Overall Permitted Shelf Life:"
 msgstr ""
 
 #: R/mstab.b.R
+msgid "OVERALL PRODUCT"
+msgstr ""
+
+#: R/mstab.b.R
 msgid "Overall Product Shelf Life"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Overall product shelf life cannot be determined because one or more quality "
+"attributes failed validation."
 msgstr ""
 
 #: R/mstab.b.R
@@ -6039,8 +6488,16 @@ msgstr "Çift Örnekler (Student)"
 msgid "Paired Samples (Wilcoxon)"
 msgstr "Çift Örnekler (Wilcoxon)"
 
+#: R/mmnv.b.R
+msgid "Parallelism supported (no significant interaction)."
+msgstr ""
+
 #: mSTAB/results/coefTable.columns.title
 msgid "Parameter"
+msgstr ""
+
+#: mSTAB/results/regTable.columns.title
+msgid "Parameter Category / Source"
 msgstr ""
 
 #: mCOR/options/glassoTable.title
@@ -6217,7 +6674,7 @@ msgstr ""
 msgid "PFC"
 msgstr "PFC"
 
-#: mSNP/ui[4].label
+#: mSNP/ui[6].label
 #: mSNP/results/assocGroup.title
 msgid "Phenotype Association Tests"
 msgstr ""
@@ -6230,10 +6687,6 @@ msgstr ""
 #: mCOR/options/plotMetL/pie.title
 msgid "Pie"
 msgstr "Pasta"
-
-#: R/mmnv.b.R
-msgid "Pillai / Univariate"
-msgstr ""
 
 #: R/mmnv.b.R
 #: mMNV/options/testPillai.title
@@ -6262,7 +6715,7 @@ msgid "Please select at least 2 variables for PCA."
 msgstr ""
 
 #: R/msrv.b.R
-msgid "Please specify one or more time-dependent covariates."
+msgid "Please specify one or more covariates with time-varying effects."
 msgstr ""
 
 #: mUI/options/isTGR.title
@@ -6333,6 +6786,10 @@ msgid "Pooled residual variance across batches"
 msgstr ""
 
 #: R/mstab.b.R
+msgid "Pooled residual variance across cohorts"
+msgstr ""
+
+#: R/mstab.b.R
 msgid "Pooled Slope"
 msgstr ""
 
@@ -6349,7 +6806,7 @@ msgstr ""
 msgid "Population genetic metrics"
 msgstr ""
 
-#: mSNP/ui[6].label
+#: mSNP/ui[7].label
 #: mSNP/results/popGroup.title
 msgid "Population genetics metrics"
 msgstr ""
@@ -6365,6 +6822,10 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Possible residual autocorrelation"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Potential data entry error"
 msgstr ""
 
 #: R/mpwr.b.R
@@ -6589,15 +7050,12 @@ msgid "Product Minimum"
 msgstr ""
 
 #: mMNV/options/showProfileAnalysis.title
-msgid "Profile Analysis (Parallelism, Coincidence, Flatness)"
+#: mMNV/results/profileTable.title
+msgid "Profile Analysis"
 msgstr ""
 
 #: R/mmnv.b.R
 msgid "Profile analysis evaluates between-subjects factor '{factor}'."
-msgstr ""
-
-#: mMNV/results/profileTable.title
-msgid "Profile Analysis Summary"
 msgstr ""
 
 #: R/mmnv.b.R
@@ -6607,38 +7065,24 @@ msgid ""
 "over time)."
 msgstr ""
 
-#: R/mmnv.b.R
-msgid "Profiles are flat (no significant change across repeated measures over time)."
+#: R/mlr.b.R
+msgid "Profile likelihood confidence intervals or p-values could not be evaluated."
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Profile likelihood confidence limits or p-values could not be evaluated."
 msgstr ""
 
 #: R/mmnv.b.R
-msgid ""
-"Profiles are NOT flat (significant change across repeated measures over "
-"time)."
+msgid "Profiles deviate from parallelism (interaction is significant)."
 msgstr ""
 
 #: R/mmnv.b.R
-msgid ""
-"Profiles are NOT parallel (groups change differently over time; interaction "
-"is significant)."
+msgid "Profiles differ in elevation (significant group main effect)."
 msgstr ""
 
 #: R/mmnv.b.R
-msgid ""
-"Profiles are parallel (no significant difference in trajectory over time "
-"between groups)."
-msgstr ""
-
-#: R/mmnv.b.R
-msgid ""
-"Profiles coincide (no significant overall elevation difference between "
-"groups)."
-msgstr ""
-
-#: R/mmnv.b.R
-msgid ""
-"Profiles do NOT coincide (significant overall elevation difference between "
-"groups)."
+msgid "Profiles show change across repeated measures."
 msgstr ""
 
 #: R/mstab.b.R
@@ -6652,6 +7096,16 @@ msgstr ""
 
 #: mSTAB/results/arrhTable.columns.title
 msgid "Projection & Regulatory Assessment"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Projections use empirically fitted activation energy Ea = {ea} kJ/mol from "
+"multi-temperature regression."
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Projections use user-specified activation energy Ea = {ea} kJ/mol."
 msgstr ""
 
 #: mSRV/results/coxSection/coxAssumpTable.title
@@ -6675,11 +7129,32 @@ msgstr ""
 msgid "Proportions of Intervals"
 msgstr "Aralık"
 
+#: R/mstab.b.R
+msgid "Proposed / Target Shelf Life"
+msgstr ""
+
+#: mSTAB/options/proposedShelfLife.title
+msgid "Proposed / Target Shelf Life (months, 0 = auto)"
+msgstr ""
+
 #: mUI/options/decision.title
 #: mUI/results/decision.title
 #, fuzzy
 msgid "Proposed decision"
 msgstr "Önerilen karar"
+
+#: R/mstab.b.R
+msgid "Proposed Shelf Life Assessment"
+msgstr ""
+
+#: mSTAB/results/shelfTable.columns.title
+#: mSTAB/results/comboShelfTable.columns.title
+msgid "Proposed Shelf Life Conformity"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Proposed shelf life warning"
+msgstr ""
 
 #: mCOR/options/plots.description.ui
 msgid "provide a correlation matrix plot."
@@ -6737,7 +7212,7 @@ msgstr ""
 msgid "Quality Control (QC) Analysis"
 msgstr ""
 
-#: mSNP/ui[7].label
+#: mSNP/ui[8].label
 msgid "Quality Control (QC) Filters"
 msgstr ""
 
@@ -6848,7 +7323,39 @@ msgid "Reference level: {ref}"
 msgstr ""
 
 #: R/mstab.b.R
+msgid "Refrigerated (5°C ± 3°C)"
+msgstr ""
+
+#: mSTAB/options/storageCond/refrigerated.title
+msgid "Refrigerated storage (5°C ± 3°C)"
+msgstr ""
+
+#: R/mstab.b.R
 msgid "Refrigerated Storage (Cold Chain)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Refrigerated: Accelerated data unavailable"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Refrigerated: Change between 3-6 mo, no supporting data"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Refrigerated: Change between 3-6 mo, supporting data available (ICH Q1E App. "
+"A.2)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Refrigerated: No significant change at 25°C / 60% RH (ICH Q1E App. A.2)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Refrigerated: Significant change within first 3 months at 25°C (ICH Q1E App. "
+"A.2)"
 msgstr ""
 
 #: package/analyses/mLR.menuSubgroup
@@ -6904,8 +7411,20 @@ msgstr ""
 msgid "Regularization Penalty Choice"
 msgstr ""
 
-#: mLR/ui[1]/lasso_penalty.label
+#: mLR/ui[2]/lasso_penalty.label
 msgid "Regularization Penalty Optimization"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Regulatory Ceiling"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Regulatory guidance notice"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Regulatory Verdict"
 msgstr ""
 
 #: mSTAB/results/arrhSensTable.columns.title
@@ -6916,6 +7435,14 @@ msgstr ""
 #, fuzzy
 msgid "Relative size of group 2 to group 1"
 msgstr "1. gruba göre 2. grubun göreli boyutu"
+
+#: R/mstab.b.R
+msgid "Relevant Supporting Data"
+msgstr ""
+
+#: mSTAB/options/supportingData.title
+msgid "Relevant supporting data available (pilot batches, packaging)"
+msgstr ""
 
 #: mMLP/options/activation/relu.title
 #, fuzzy
@@ -6945,12 +7472,28 @@ msgstr ""
 msgid "Repeated CV"
 msgstr ""
 
+#: package/analyses/mMNV.title
+#: package/analyses/mMNV.menuTitle
+#: mMNV/options.title
+#: mMNV/options.menuTitle
+#: mMNV/ui.title
+msgid "Repeated Measures & Profile Analysis"
+msgstr ""
+
+#: mMNV/options/rmCells.title
 #: mMNV/ui[0][0].label
 msgid "Repeated Measures Cells (Within-Subjects)"
 msgstr ""
 
 #: mMNV/ui[1].label
 msgid "Repeated Measures Design & Contrasts"
+msgstr ""
+
+#: package/analyses/mMNV.description
+#: mMNV/options.description.main
+msgid ""
+"Repeated Measures MANOVA without sphericity assumption (O'Brien & Kaiser, "
+"1985) and Profile Analysis."
 msgstr ""
 
 #: R/mmnv.b.R
@@ -6963,10 +7506,6 @@ msgstr ""
 msgid "Repeated Measures Trajectory Profile"
 msgstr ""
 
-#: mMNV/options/rmCells.title
-msgid "Repeated Measures Variables / Time Points"
-msgstr ""
-
 #: R/mlr.b.R
 msgid "Repeated Stratified CV"
 msgstr ""
@@ -6977,6 +7516,10 @@ msgstr ""
 
 #: mLR/options/partition/repeated_kfold.title
 msgid "Repeated Stratified K-Fold CV"
+msgstr ""
+
+#: mSTAB/results/regTable.columns.title
+msgid "Reported Value / Assessment"
 msgstr ""
 
 #: R/mmnv.b.R
@@ -6995,7 +7538,9 @@ msgid "Reproducible random number generation (RNG) results"
 msgstr "Tekrarlanabilir rastgele sayı üretimi (RNG) sonuçları"
 
 #: R/mstab.b.R
-msgid "requires strictly positive values of the response variable."
+msgid ""
+"Residual degrees of freedom is 0; statistical inference and confidence "
+"intervals cannot be evaluated."
 msgstr ""
 
 #: mSTAB/results/diagPlot.title
@@ -7008,6 +7553,21 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Residual Error (Full Model)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Residual heteroscedasticity detected (variance significantly changes with "
+"time, Spearman |e| vs Time p = {p} < 0.01). Standard ANCOVA assumes constant "
+"residual variance across time."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Residual normality assumption is violated (Shapiro-Wilk p = {p} < 0.01). "
+"Confidence intervals and shelf-life estimates based on standard normal error "
+"assumptions may be inaccurate. Consider response transformation or examining "
+"for outliers."
 msgstr ""
 
 #: R/mmnv.b.R
@@ -7032,6 +7592,10 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Residuals vs Time"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Response and Time variables must contain only finite numeric values."
 msgstr ""
 
 #: R/mstab.b.R
@@ -7095,7 +7659,7 @@ msgid "Risk Stratification"
 msgstr ""
 
 #: mLR/options/show_risk_strat.title
-#: mLR/ui[3]/show_risk_strat.label
+#: mLR/ui[4]/show_risk_strat.label
 #: mMLP/options/show_risk_strat.title
 #: mRF/options/show_risk_strat.title
 msgid "Risk Stratification Table"
@@ -7147,7 +7711,7 @@ msgstr "ROC Analizi"
 msgid "ROC Analysis Comparison"
 msgstr "ROC Analizi Karşılaştırması"
 
-#: mLR/ui[3]/show_roc.label
+#: mLR/ui[4]/show_roc.label
 msgid "ROC analysis curves"
 msgstr ""
 
@@ -7232,7 +7796,7 @@ msgid "ROC Results"
 msgstr ""
 
 #: mLR/options/show_roc_table.title
-#: mLR/ui[3]/show_roc/show_roc_table.label
+#: mLR/ui[4]/show_roc/show_roc_table.label
 #: mMLP/options/show_roc_table.title
 #: mMLP/ui[3]/show_roc/show_roc_table.label
 #: mPCA/options/show_roc_table.title
@@ -7259,6 +7823,38 @@ msgstr ""
 #, fuzzy
 msgid "ROC X-axis Coordinate"
 msgstr "ROC X Ekseni Koordinatı"
+
+#: R/mstab.b.R
+msgid ""
+"Room Temp: Accelerated change, intermediate confirmed stable (ICH Q1E App. "
+"A.1)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Room Temp: Accelerated change, intermediate study missing (ICH Q1E Section "
+"2.4.2.1)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Room Temp: Accelerated testing not evaluated (ICH Q1E Section 2.4.1)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Room Temp: No significant change at accelerated condition (ICH Q1E App. A.1)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Room Temp: Significant change at accelerated and intermediate conditions"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Room Temperature (25°C / 60% RH or 30°C / 65% RH)"
+msgstr ""
+
+#: mSTAB/options/storageCond/room.title
+msgid "Room temperature storage (25°C / 60% RH or 30°C / 65% RH)"
+msgstr ""
 
 #: mLR/results/misclassifiedTable.columns.title
 #: mMLP/results/misclassifiedTable.columns.title
@@ -7311,7 +7907,7 @@ msgstr ""
 msgid "Sample size ratio (N<sub>2</sub>/N<sub>1</sub>)"
 msgstr "Örnek boyut oranı (N<sub>2</sub>/N<sub>1</sub>)"
 
-#: mLR/ui[4].label
+#: mLR/ui[5].label
 #: mMLP/ui[4].label
 #: mMOUT/ui[3].label
 #: mRF/ui[4].label
@@ -7340,6 +7936,11 @@ msgstr "Ölçek konumu"
 
 #: R/mstab.b.R
 msgid "Scale-Location"
+msgstr ""
+
+#: mMNV/options/showHePlot.title
+#: mMNV/results/hePlot.title
+msgid "Scatter with Data Ellipses"
 msgstr ""
 
 #: R/msrv.b.R
@@ -7397,7 +7998,7 @@ msgid "SE"
 msgstr ""
 
 #: mLR/options/seed.title
-#: mLR/ui[2]/seed.label
+#: mLR/ui[3]/seed.label
 #: mMF/options/seed.title
 #: mMLP/options/seed.title
 #: mMLP/ui[2]/seed.label
@@ -7437,6 +8038,10 @@ msgstr "Grup seç"
 #: mLR/options/selgroup.title
 #: mPCA/options/selgroup.title
 msgid "Select group for filtering"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Selected Decision Tree Branch"
 msgstr ""
 
 #: R/mlr.b.R
@@ -7596,9 +8201,15 @@ msgid "Shelf Life Estimation:"
 msgstr ""
 
 #: R/mstab.b.R
-msgid ""
-"Shelf life for batch '{batch}' cannot be computed (insufficient time points "
-"or degrees of freedom)."
+msgid "Shelf life evaluated on the {t} °C subset."
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Shelf life for batch '{batch}' could not be evaluated."
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Shelf Life Plot for Batch"
 msgstr ""
 
 #: mSTAB/options/showShelfTable.title
@@ -7631,6 +8242,10 @@ msgstr "Anlamlılık"
 msgid "Significance level (alpha)"
 msgstr ""
 
+#: mSTAB/options/alphaFactor.title
+msgid "Significance Level for Factors (alpha, default 0.05)"
+msgstr ""
+
 #: mSNP/options/signifMarkers.title
 msgid "Significance markers"
 msgstr ""
@@ -7645,6 +8260,46 @@ msgid ""
 "1.5X, max X + 6 mo)"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Significant change between 3 and 6 months at 25°C"
+msgstr ""
+
+#: mSTAB/options/accelResult/change_observed.title
+msgid "Significant change observed at accelerated condition (within 6 months)"
+msgstr ""
+
+#: R/mstab.b.R
+#: mSTAB/options/intermedResult/change_observed.title
+msgid "Significant change observed at intermediate condition"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Significant change observed within 6 months"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Significant change occurred at accelerated testing for a frozen product (ICH "
+"Q1E Section 2.4.2.3). No extrapolation beyond real-time long-term data is "
+"permitted."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Significant change occurred within the first 3 months at accelerated "
+"condition (ICH Q1E Section 2.4.2.2). No extrapolation is permitted, and a "
+"shelf life shorter than real-time data may be required if degradation during "
+"shipping is a concern."
+msgstr ""
+
+#: mSTAB/options/accelResult/change_refrig_early.title
+msgid "Significant change within first 3 months (refrigerated only)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Significant change within first 3 months at 25°C"
+msgstr ""
+
 #: R/msnp.b.R
 msgid "Significant HWE deviation"
 msgstr ""
@@ -7653,7 +8308,7 @@ msgstr ""
 msgid "Simultaneous multiple correlation comparisons using {n} method"
 msgstr "{n} yöntemi kullanılarak eşzamanlı çoklu korelasyon karşılaştırmaları"
 
-#: mSTAB/ui[8].label
+#: mSTAB/ui[9].label
 msgid "Single Attribute Detailed Tables & Plots"
 msgstr ""
 
@@ -7705,6 +8360,13 @@ msgstr ""
 msgid "Slopes differ significantly"
 msgstr ""
 
+#: R/mstab.b.R
+msgid ""
+"Slopes poolability could not be evaluated due to insufficient residual "
+"degrees of freedom. Model 1 (separate slopes and intercepts) adopted as "
+"conservative fallback."
+msgstr ""
+
 #: package/datasets/SNPandHWEanalysis.name
 msgid "SNP and HWE analysis"
 msgstr ""
@@ -7722,6 +8384,12 @@ msgstr ""
 #, fuzzy
 msgid "Softmax"
 msgstr "Yumuşak Maksimum"
+
+#: R/mstab.b.R
+msgid ""
+"Some batches were not tested or have incomplete data for certain attributes "
+"(shown blank)."
+msgstr ""
 
 #: R/mpca.b.R
 msgid "Source"
@@ -7799,6 +8467,13 @@ msgstr "Özgüllük"
 msgid "Specificity outside UI >"
 msgstr "Özgüllük"
 
+#: R/mstab.b.R
+msgid ""
+"Specified Long-Term Study Duration ({dur} months) is shorter than the "
+"maximum observed time in the data ({max_t} months). The maximum observed "
+"time was used as the study duration."
+msgstr ""
+
 #: package/datasets/SDIROCclassification.description
 msgid "Sperm Deformity Index ROC Classification demonstration"
 msgstr "Sperm Deformite İndeksi ROC Sınıflandırması demonstrasyonu"
@@ -7809,6 +8484,11 @@ msgstr ""
 
 #: mMNV/results/univariateTable.columns.title
 msgid "Sphericity Correction"
+msgstr ""
+
+#: mMNV/options/showSphericity.title
+#: mMNV/results/sphericityTable.title
+msgid "Sphericity Tests & Epsilon Corrections"
 msgstr ""
 
 #: mROC/options/splitROC.title
@@ -7880,6 +8560,12 @@ msgid ""
 "{var} (Huber–White robust sandwich estimator)."
 msgstr ""
 
+#: R/msrv.b.R
+msgid ""
+"Standard errors and confidence intervals are computed using the Huber–White "
+"robust sandwich estimator grouped by subject."
+msgstr ""
+
 #: mLR/results/coeffTable.columns.title
 msgid "Standardized Beta"
 msgstr ""
@@ -7910,6 +8596,7 @@ msgid "Statistical intersection"
 msgstr ""
 
 #: mSTAB/results/shelfTable.columns.title
+#: mSTAB/results/comboShelfTable.columns.title
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Statistical Shelf Life (months)"
 msgstr ""
@@ -7933,6 +8620,7 @@ msgstr ""
 msgid "Status / Limiting Factor"
 msgstr ""
 
+#: mSTAB/results/comboShelfTable.columns.title
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Status / Limiting Role"
 msgstr ""
@@ -7960,11 +8648,33 @@ msgid "Std. Error"
 msgstr ""
 
 #: R/mstab.b.R
+msgid "Step 1: Batch * Factor * Time (Cohort Slopes)"
+msgstr ""
+
+#: R/mstab.b.R
 msgid "Step 1: Slopes (Batch * Time)"
 msgstr ""
 
 #: R/mstab.b.R
+msgid "Step 2: Factor * Time (Factor Slopes)"
+msgstr ""
+
+#: R/mstab.b.R
 msgid "Step 2: Intercepts (Batch)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Step 3: Batch Intercepts"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Step 4: Factor Intercepts"
+msgstr ""
+
+#: R/mlr.b.R
+msgid ""
+"Stepwise feature selection is performed using standard maximum likelihood "
+"(AIC) before refitting the final model with Firth's penalized likelihood."
 msgstr ""
 
 #: R/mlr.b.R
@@ -7975,6 +8685,10 @@ msgstr ""
 
 #: mSTAB/results/arrhTable.columns.title
 msgid "Storage Condition / Climatic Zone"
+msgstr ""
+
+#: mSTAB/options/arrhDataCondition.title
+msgid "Storage condition of analysed data"
 msgstr ""
 
 #: R/mstab.b.R
@@ -7988,6 +8702,14 @@ msgstr ""
 #: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Strength"
+msgstr ""
+
+#: mSTAB/results/regTable.columns.title
+msgid "Study & Regulatory Evaluation Parameter"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Study Data Coverage"
 msgstr ""
 
 #: R/msrv.b.R
@@ -8007,6 +8729,13 @@ msgstr ""
 
 #: R/mmnv.b.R
 msgid "subsequent"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Substantial residual autocorrelation detected (Durbin-Watson d = {dw}). "
+"Autocorrelated errors can cause standard confidence intervals to be overly "
+"narrow."
 msgstr ""
 
 #: mROC/options/cmpDeLong/succ.title
@@ -8031,6 +8760,10 @@ msgstr ""
 #: R/mpwr.b.R
 #: mPWR/ui[0]/alt/superior.title
 msgid "superiority"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Supported"
 msgstr ""
 
 #: R/mpwr.b.R
@@ -8092,6 +8825,7 @@ msgstr "Kuyruk"
 msgid "Tanh"
 msgstr "Tanh"
 
+#: R/mstab.b.R
 #: mDCA/options/targetLevel.title
 #: mDCA/ui[0][0]/targetLevel.label
 msgid "Target"
@@ -8105,12 +8839,16 @@ msgstr ""
 msgid "Target variable must contain both positive and negative cases."
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Target:"
+msgstr ""
+
 #: mSTAB/options/tempVar.title
 #: mSTAB/results/arrhTable.columns.title
 msgid "Temperature (°C)"
 msgstr ""
 
-#: mSTAB/ui[0][7].label
+#: mSTAB/ui[0][8].label
 msgid "Temperature (°C) (Arrhenius, Optional)"
 msgstr ""
 
@@ -8120,11 +8858,26 @@ msgid ""
 "multivariate tests."
 msgstr ""
 
+#: R/mmnv.b.R
+msgid ""
+"Term '{term}' has a singular hypothesis or error matrix; profile test "
+"omitted."
+msgstr ""
+
+#: R/mmnv.b.R
+msgid ""
+"Term '{term}' has insufficient residual degrees of freedom for multivariate "
+"profile test."
+msgstr ""
+
 #: mSNP/options/ternaryPlot.title
 #: mSNP/results/hweGroup/ternaryPlot.title
 msgid "Ternary diagram (de Finetti)"
 msgstr ""
 
+#: mMNV/results/multivariateTable.columns.title
+#: mMNV/results/profileTable.columns.title
+#: mMNV/results/assumptionsTable.columns.title
 #: mSRV/results/coxSection/coxFitTable.columns.title
 msgid "Test"
 msgstr ""
@@ -8132,10 +8885,6 @@ msgstr ""
 #: mOUT/options/norm.title
 msgid "Test for normality"
 msgstr "Normallik testi"
-
-#: mMNV/results/profileTable.columns.title
-msgid "Test Method"
-msgstr ""
 
 #: mSRV/options/coxAssump.title
 msgid "Test proportional hazards assumption"
@@ -8166,12 +8915,8 @@ msgid ""
 "2, or Model 3."
 msgstr ""
 
-#: mMNV/results/contrastsTable.title
-msgid "Tests of Within-Subjects Contrasts"
-msgstr ""
-
 #: mMNV/results/univariateTable.title
-msgid "Tests of Within-Subjects Effects (Univariate ANOVA)"
+msgid "Tests of Within-Subjects Effects"
 msgstr ""
 
 #: R/msrv.b.R
@@ -8247,10 +8992,22 @@ msgid ""
 "designs"
 msgstr ""
 
+#: R/mstab.b.R
+msgid ""
+"The proposed shelf life of {prop} months exceeds the maximum allowable ICH "
+"Q1E shelf life of {limit} months ({reason})."
+msgstr ""
+
 #: R/msrv.b.R
 msgid ""
 "The selected exposure variable must be categorical or have 10 or fewer "
 "distinct values."
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"The specified Long-Term Storage Temperature ({temp} °C) was not found in the "
+"Temperature variable '{var}'. Available temperatures: {avail}."
 msgstr ""
 
 #: R/mmout.b.R
@@ -8318,6 +9075,10 @@ msgstr ""
 msgid "Time transform function"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Time unit advisory"
+msgstr ""
+
 #: mSTAB/options/time.title
 #: mSTAB/ui[0][1].label
 msgid "Time Variable"
@@ -8326,6 +9087,10 @@ msgstr ""
 #: mSRV/options/elapsed.title
 #: mSRV/ui[0][0].label
 msgid "Time Variable (elapsed time)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Time variable cannot contain negative values."
 msgstr ""
 
 #: R/msrv.b.R
@@ -8455,7 +9220,7 @@ msgstr ""
 
 #: mMNV/options/showProfilePlot.title
 #: mMNV/results/profilePlot.title
-msgid "Trajectory / Profile Plot"
+msgid "Trajectory Plot"
 msgstr ""
 
 #: R/mdca.b.R
@@ -8502,6 +9267,10 @@ msgstr ""
 #, fuzzy
 msgid "Two-graph ROC curves"
 msgstr "İki Grafik ROC Eğrileri"
+
+#: mSNP/options/ternaryRegion/7.title
+msgid "Two-sided exact test"
+msgstr ""
 
 #: R/mpwr.b.R
 #: mPWR/ui[0]/alt/two.sided.title
@@ -8555,7 +9324,19 @@ msgid "Undefined (zero residual variance)"
 msgstr ""
 
 #: R/mstab.b.R
+msgid ""
+"Under ICH Q1E (Section 2.4.2.1), when significant change occurs at the "
+"accelerated storage condition for a room-temperature product, testing at an "
+"intermediate condition (e.g., 30 °C / 65% RH) is required. Please specify "
+"the intermediate testing outcome."
+msgstr ""
+
+#: R/mstab.b.R
 msgid "Undetermined"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Undetermined (statistical evaluation not completed)"
 msgstr ""
 
 #: R/mmnv.b.R
@@ -8574,11 +9355,15 @@ msgid "Univariate outliers identification and removal"
 msgstr "Tek değişkenli aykırı değer tanımlama ve kaldırma"
 
 #: mMNV/options/showUnivariate.title
-msgid "Univariate Tests (with Sphericity Corrections)"
+msgid "Univariate Tests (Sphericity Corrections)"
 msgstr ""
 
 #: mMNV/ui[3].label
 msgid "Univariate Tests & Contrasts"
+msgstr ""
+
+#: mSTAB/results/arrhRegTable.columns.title
+msgid "Upper"
 msgstr ""
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
@@ -8615,6 +9400,10 @@ msgstr ""
 msgid "Upper part"
 msgstr "Üst kısım"
 
+#: R/mstab.b.R
+msgid "Upper Specification"
+msgstr ""
+
 #: mSTAB/options/usl2.title
 msgid "Upper Specification Limit (USL 2)"
 msgstr ""
@@ -8636,6 +9425,12 @@ msgid "Upper Specification Limit (USL)"
 msgstr ""
 
 #: R/mstab.b.R
+msgid ""
+"Upper specification limit (USL) must be specified when Specification Type "
+"includes upper limit."
+msgstr ""
+
+#: R/mstab.b.R
 msgid "Upper SRL:"
 msgstr ""
 
@@ -8648,10 +9443,26 @@ msgstr "Üst eşik"
 msgid "Use reduced df for polymorphism (1 df per contrast)"
 msgstr ""
 
+#: R/mstab.b.R
+msgid "User Assessment"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "User Declaration"
+msgstr ""
+
 #: mPWR/results/powerTable.columns.superTitle
 #, fuzzy
 msgid "User Defined"
 msgstr "Kullanıcı Tanımlı"
+
+#: R/mstab.b.R
+msgid "User Protocol Input"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "User Target Specification"
+msgstr ""
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -8672,12 +9483,16 @@ msgstr ""
 msgid "Validation"
 msgstr "Doğrulama"
 
+#: R/mstab.b.R
+msgid "Validation Failed"
+msgstr ""
+
 #: mLR/options/partition.title
-#: mLR/ui[2]/partition.label
+#: mLR/ui[3]/partition.label
 msgid "Validation Method"
 msgstr ""
 
-#: mLR/ui[2].label
+#: mLR/ui[3].label
 #: mMLP/ui[2].label
 #: mRF/ui[2].label
 #, fuzzy
@@ -8841,11 +9656,8 @@ msgid "With control"
 msgstr "Kontrol ile"
 
 #: mMNV/options/showContrastsTable.title
-msgid "Within-Subjects Contrasts Table"
-msgstr ""
-
-#: mMNV/results/sphericityTable.columns.title
-msgid "Within-Subjects Effect"
+#: mMNV/results/contrastsTable.title
+msgid "Within-Subjects Contrasts"
 msgstr ""
 
 #: mMNV/options/rmFactorName.title
@@ -8860,7 +9672,7 @@ msgstr ""
 msgid "Worst-Case Min"
 msgstr ""
 
-#: mLR/ui[3]/show_roc/roc_x.label
+#: mLR/ui[4]/show_roc/roc_x.label
 #: mMLP/ui[3]/show_roc/roc_x.label
 #: mPCA/ui[3][0]/rocPlot/roc_x.label
 #: mRF/ui[3]/show_roc/roc_x.label
