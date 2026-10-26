@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-10-15 03:52+0000\n"
+"PO-Revision-Date: 2026-11-16 22:24+0000\n"
 "Last-Translator: SHIBATA Seiji <sbtseiji@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jamovi/module-"
 "jys/ja/>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.11.dev0\n"
+"X-Generator: Weblate 2026.12.dev0\n"
 
 #: R/msnp.b.R
 msgid "-log10(p-value)"
@@ -65,11 +65,11 @@ msgstr ""
 
 #: R/msnp.b.R
 msgid "{females} F"
-msgstr ""
+msgstr "{females} 女"
 
 #: R/msnp.b.R
 msgid "{females} F / {males} M"
-msgstr ""
+msgstr "{females} 女 / {males} 男"
 
 #: R/mtab1.b.R
 msgid "{group} (N = {n})"
@@ -93,6 +93,9 @@ msgid ""
 "Response values). Please verify whether these represent intended analytical "
 "replicates or inadvertent duplicate entries."
 msgstr ""
+"完全に重複したレコードが {n} 件検出されました（時間、ロット、応答値が一致）。"
+"意図した分析上の繰り返し測定か、誤って重複入力されたものかを確認してください"
+"。"
 
 #: R/mmnv.b.R
 msgid "{n} residual observation(s) exceed critical Mahalanobis D² (α = .001)"
@@ -100,7 +103,7 @@ msgstr ""
 
 #: R/msrv.b.R
 msgid "{pred} (AUC = {auc})"
-msgstr ""
+msgstr "{pred}（AUC = {auc}）"
 
 #: R/mstab.b.R
 msgid "{temp}°C / {rh}% RH (Accelerated)"
@@ -120,7 +123,7 @@ msgstr ""
 
 #: R/msnp.b.R
 msgid "{val} F"
-msgstr ""
+msgstr "{val} 女"
 
 #: R/mstab.b.R
 msgid "{val} months"
@@ -196,24 +199,30 @@ msgid ""
 "<b>Adopted Structure</b>: Model 1 (Separate slopes and separate intercepts). "
 "Batches degrade at different rates."
 msgstr ""
+"<b>採用モデル</b>：モデル1（個別の傾き・個別の切片）。ロットごとに分解速度が"
+"異なります。"
 
 #: R/mstab.b.R
 msgid ""
 "<b>Adopted Structure</b>: Model 2 (Common slope, separate intercepts). "
 "Batches degrade at a parallel rate but start at different initial levels."
 msgstr ""
+"<b>採用モデル</b>：モデル2（共通の傾き・個別の切片）。ロット間で分解速度は平"
+"行ですが、初期値が異なります。"
 
 #: R/mstab.b.R
 msgid ""
 "<b>Adopted Structure</b>: Model 3 (Common slope, common intercept). All "
 "batches are fully pooled into a single regression line."
 msgstr ""
+"<b>採用モデル</b>：モデル3（共通の傾き・共通の切片）。すべてのロットを併合し"
+"、1本の回帰直線で表します。"
 
 #: R/mstab.b.R
 msgid ""
 "<b>Adopted Structure</b>: Single batch linear regression. No poolability "
 "testing."
-msgstr ""
+msgstr "b>採用モデル</b>：単一ロットの線形回帰。併合可能性の検定は行いません。"
 
 #: R/msnp.b.R
 msgid ""
@@ -467,6 +476,8 @@ msgid ""
 "<b>Difference Contrasts</b>: Compare each time point to the average of "
 "preceding time points (reverse Helmert)."
 msgstr ""
+"<b>差分対比</b>：各時点を、それより前の時点の平均と比較します（逆ヘルマート）"
+"。"
 
 #: R/mdca.b.R
 msgid ""
@@ -593,6 +604,9 @@ msgid ""
 "specification limits within 240 months. Permitted shelf life is governed by "
 "the allowable ICH Q1E extrapolation limit ({cap} months)."
 msgstr ""
+"<b>外挿上限を適用</b>：分解の信頼限界は240か月以内に規格限度と交差しません。"
+"許容有効期間は、ICH Q1Eで認められる外挿の上限（{cap}か月）によって決まります"
+"。"
 
 #: R/mstab.b.R
 msgid ""
@@ -600,6 +614,8 @@ msgid ""
 "exceeds the allowable ICH Q1E extrapolation limit ({cap} months). Permitted "
 "shelf life is capped at {cap} months."
 msgstr ""
+"<b>外挿上限を適用</b>：統計的な交点（{stat}か月）がICH Q1Eで認められる外挿の"
+"上限（{cap}か月）を超えています。許容有効期間は{cap}か月に制限されます。"
 
 #: R/msrv.b.R
 msgid ""
@@ -625,6 +641,9 @@ msgid ""
 "eliminate small-sample bias and prevent infinite odds ratios when events are "
 "rare or data are separated."
 msgstr ""
+"<b>ファースの罰則付き尤度</b>：罰則（ジェフリーズの事前分布）を適用して小標本"
+"バイアスを除去し、イベントがまれな場合やデータが分離している場合にオッズ比が"
+"無限大になるのを防ぎます。"
 
 #: R/msrv.b.R
 msgid ""
@@ -632,6 +651,8 @@ msgid ""
 "the overall significance of the model (joint effect of all predictors) using "
 "penalized likelihood."
 msgstr ""
+"<b>ファースの罰則付き尤度</b>：尤度比検定とワルド検定により、罰則付き尤度を用"
+"いてモデル全体の有意性（すべての予測変数の同時効果）を評価します。"
 
 #: R/msnp.b.R
 msgid ""
@@ -682,7 +703,7 @@ msgstr ""
 msgid ""
 "<b>Helmert Contrasts</b>: Compare each time point to the average of "
 "subsequent time points."
-msgstr ""
+msgstr "<b>ヘルマート対比</b>：各時点を、それより後の時点の平均と比較します。"
 
 #: R/mmlp.b.R
 msgid ""
@@ -741,6 +762,8 @@ msgid ""
 "<b>Limiting Batch</b>: Overall shelf life is determined by {batch} ({months} "
 "months), which represents the earliest intersection among all batches."
 msgstr ""
+"<b>律速ロット</b>：全体の有効期間は、全ロット中で最も早く規格限度と交差する "
+"{batch}（{months}か月）によって決まります。"
 
 #: R/mui.b.R
 msgid ""
@@ -853,6 +876,8 @@ msgid ""
 "lowest AIC) indicates the most likely mode of inheritance for the observed "
 "association."
 msgstr ""
+"<b>モデル比較</b>：p値（またはAIC）が最も小さい遺伝モデルが、観測された関連に"
+"ついて最も可能性の高い遺伝形式を示します。"
 
 #: R/mui.b.R
 msgid ""
@@ -966,12 +991,16 @@ msgid ""
 "into orthogonal trends: Linear (constant rate of change), Quadratic "
 "(curvature/plateau), and Cubic (inflection points)."
 msgstr ""
+"<b>直交多項式対比</b>：被験者内要因を直交する傾向成分に分解します：1次（一定"
+"の変化率）、2次（曲率・プラトー）、3次（変曲点）。"
 
 #: R/mstab.b.R
 msgid ""
 "<b>Overall Shelf Life Undetermined</b>: Cannot be proposed because shelf "
 "life for batch(es) {batches} could not be estimated."
 msgstr ""
+"<b>全体の有効期間は未確定</b>：ロット {batches} の有効期間を推定できなかった"
+"ため、提案できません。"
 
 #: R/msnp.b.R
 msgid ""
@@ -1071,7 +1100,7 @@ msgstr ""
 msgid ""
 "<b>Repeated Contrasts</b>: Compare each successive time point / condition to "
 "the immediately preceding one."
-msgstr ""
+msgstr "<b>反復対比</b>：連続する各時点／条件を、その直前の時点／条件と比較します。"
 
 #: R/mui.b.R
 msgid "<b>Se</b> - sensitivity of the positive class TP/(TP+FN)"
@@ -1157,6 +1186,8 @@ msgid ""
 "<b>Treatment Contrasts</b>: Compare each subsequent time point / condition "
 "to the first (baseline)."
 msgstr ""
+"<b>処理対比</b>：2番目以降の各時点／条件を、最初の時点（ベースライン）と比較"
+"します。"
 
 #: R/mui.b.R
 msgid ""
@@ -1223,7 +1254,7 @@ msgstr "1 − 特異度"
 
 #: R/msrv.b.R
 msgid "1 – Specificity"
-msgstr ""
+msgstr "1 − 特異度"
 
 #: mSNP/options/mdrOrder/1.title
 msgid "1-way"
@@ -1231,7 +1262,7 @@ msgstr "1要因"
 
 #: R/mmnv.b.R
 msgid "1. Parallelism ({time} × {group} Interaction)"
-msgstr ""
+msgstr "1. 平行性（{time} × {group} 交互作用）"
 
 #: mSNP/options/mdrFolds/10.title
 msgid "10 folds"
@@ -1252,11 +1283,11 @@ msgstr "2要因"
 
 #: R/mmnv.b.R
 msgid "2. Equal Levels (Coincidence / {group} Main Effect)"
-msgstr ""
+msgstr "2. 水準の等質性（一致性 / {group} の主効果）"
 
 #: R/mstab.b.R
 msgid "2°C – 8°C Protected"
-msgstr ""
+msgstr "2°C～8°C 保存"
 
 #: mSNP/options/mdrFolds/3.title
 msgid "3 folds"
@@ -1268,7 +1299,7 @@ msgstr "3要因"
 
 #: R/mmnv.b.R
 msgid "3. Flatness (Within-Subjects Change over {time})"
-msgstr ""
+msgstr "3. 平坦性（{time} にわたる被験者内変化）"
 
 #: mOUT/options/tholdZS/3.0.title
 msgid "3.0 (standard)"
@@ -1280,11 +1311,11 @@ msgstr "3.5（標準）"
 
 #: R/mstab.b.R
 msgid "30°C / 65% RH (Intermediate)"
-msgstr ""
+msgstr "30°C / 65% RH（中間的条件）"
 
 #: R/mstab.b.R
 msgid "30°C Intermediate"
-msgstr ""
+msgstr "30°C 中間的条件"
 
 #: mSNP/options/mdrOrder/4.title
 msgid "4-way"
@@ -1296,21 +1327,21 @@ msgstr "5分割"
 
 #: R/mstab.b.R
 msgid "5°C Refrigerated"
-msgstr ""
+msgstr "5°C 冷蔵"
 
 #: mMNV/results/meansTable.columns.title
 #: mSTAB/results/coefTable.columns.title
 msgid "95% CI Lower"
-msgstr ""
+msgstr "95%信頼区間下限"
 
 #: mMNV/results/meansTable.columns.title
 #: mSTAB/results/coefTable.columns.title
 msgid "95% CI Upper"
-msgstr ""
+msgstr "95%信頼区間上限"
 
 #: mSTAB/results/arrhRegTable.columns.superTitle
 msgid "95% Confidence Interval"
-msgstr ""
+msgstr "95%信頼区間"
 
 #: mMNV/options/plotError/ci.title
 msgid "95% confidence interval"
@@ -1353,6 +1384,8 @@ msgid ""
 "A significant p-value indicates departure from sphericity. When sphericity "
 "is violated, use epsilon corrections or multivariate tests."
 msgstr ""
+"有意なp値は球面性からの逸脱を示します。球面性が満たされない場合は、イプシロン"
+"修正または多変量検定を用いてください。"
 
 #: R/mstab.b.R
 msgid "Accelerated Condition ({temp}°C / {rh}% RH)"
@@ -1360,11 +1393,11 @@ msgstr ""
 
 #: mSTAB/options/accelResult.title
 msgid "Accelerated Condition Testing Outcome"
-msgstr ""
+msgstr "加速条件での試験結果"
 
 #: mSTAB/options/arrhRhAcc.title
 msgid "Accelerated Relative Humidity (%)"
-msgstr ""
+msgstr "加速試験の相対湿度（%）"
 
 #: R/mstab.b.R
 msgid "Accelerated Stress Condition"
@@ -1372,28 +1405,28 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "accelerated study condition"
-msgstr ""
+msgstr "加速試験条件"
 
 #: mSTAB/options/arrhDataCondition/accelerated.title
 msgid "Accelerated study condition (e.g. 40°C / 75% RH)"
-msgstr ""
+msgstr "加速試験条件（例：40°C / 75% RH）"
 
 #: R/mstab.b.R
 #: mSTAB/options/accelResult/not_tested.title
 msgid "Accelerated study not conducted / Unknown"
-msgstr ""
+msgstr "加速試験未実施 / 不明"
 
 #: mSTAB/options/arrhTempAcc.title
 msgid "Accelerated Study Temperature (°C)"
-msgstr ""
+msgstr "加速試験の温度（°C）"
 
 #: R/mstab.b.R
 msgid "Accelerated Testing Outcome"
-msgstr ""
+msgstr "加速試験結果"
 
 #: mSTAB/options/accelCondition.title
 msgid "Accelerated Testing Support (Legacy ICH Q1E App. A)"
-msgstr ""
+msgstr "加速試験による裏付け（旧ICH Q1E 付録A）"
 
 #: R/mstab.b.R
 msgid "Acceleration Factor ({t1}°C vs {t2}°C)"
@@ -1401,7 +1434,7 @@ msgstr ""
 
 #: mSTAB/results/arrhTable.columns.title
 msgid "Acceleration Factor (AF)"
-msgstr ""
+msgstr "加速係数（AF）"
 
 #: mDCA/options/palBrewer/Accent.title
 #: mLR/options/palBrewer/Accent.title
@@ -1415,7 +1448,7 @@ msgstr "アクセント"
 
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Acceptance Criteria"
-msgstr ""
+msgstr "判定基準"
 
 #: mSNP/options/ternaryRegion.title
 msgid "Acceptance region type"
@@ -1427,11 +1460,11 @@ msgstr "精度"
 
 #: R/mstab.b.R
 msgid "Activation Energy (Ea, kJ/mol)"
-msgstr ""
+msgstr "活性化エネルギー（Ea, kJ/mol）"
 
 #: mSTAB/results/arrhSensTable.title
 msgid "Activation Energy (Ea) Sensitivity Analysis Table"
-msgstr ""
+msgstr "活性化エネルギー（Ea）感度分析表"
 
 #: mSTAB/options/showArrhSens.title
 msgid "Activation Energy (Ea) Sensitivity Table"
@@ -1443,7 +1476,7 @@ msgstr ""
 
 #: mSTAB/options/arrhEa.title
 msgid "Activation Energy Ea (kJ/mol)"
-msgstr ""
+msgstr "活性化エネルギー Ea（kJ/mol）"
 
 #: mLR/results/misclassifiedTable.columns.title
 #: mMLP/results/matrixTable.columns.title
@@ -1456,7 +1489,7 @@ msgstr "実際のクラス"
 #: mSTAB/options/factors.title
 #: mSTAB/ui[0][3].label
 msgid "Additional Factors"
-msgstr ""
+msgstr "追加因子"
 
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
 msgid "Adjusted Median Survival"
@@ -1468,7 +1501,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Adjusted R²"
-msgstr ""
+msgstr "自由度調整済みR²"
 
 #: R/mpca.b.R
 msgid "Adjusted Rand Index (ARI)"
@@ -1480,15 +1513,15 @@ msgstr "調整済RMST"
 
 #: R/msrv.b.R
 msgid "Adjusted survival baseline hazard estimation failed: {reason}"
-msgstr ""
+msgstr "調整済み生存曲線のベースラインハザード推定に失敗しました：{reason}"
 
 #: R/msrv.b.R
 msgid "Adjusted survival curve model fitting failed: {reason}"
-msgstr ""
+msgstr "調整済み生存曲線モデルの当てはめに失敗しました：{reason}"
 
 #: mSRV/options/showAdjCurves.title
 msgid "Adjusted survival curves"
-msgstr ""
+msgstr "調整済み生存曲線"
 
 #: mSRV/ui[4].label
 #: mSRV/results/adjSection.title
@@ -1508,7 +1541,7 @@ msgstr "調整済生存要約"
 #: mSTAB/results/comboShelfTable.columns.title
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Adopted Model"
-msgstr ""
+msgstr "採用モデル"
 
 #: R/mstab.b.R
 msgid "Adopted: {model}"
@@ -1537,11 +1570,11 @@ msgstr "すべて"
 
 #: mSTAB/options/detailAttr/all.title
 msgid "All Attributes (Sequential Tables)"
-msgstr ""
+msgstr "すべての品質特性（順次表示）"
 
 #: R/mstab.b.R
 msgid "All CQAs Met"
-msgstr ""
+msgstr "すべてのCQAが適合"
 
 #: mSNP/options/geneticModel/all.title
 msgid "All models"
@@ -1607,29 +1640,31 @@ msgstr "結果変数による遺伝子型の解析"
 
 #: mSRV/options/rocTime.title
 msgid "Analysis time point t"
-msgstr ""
+msgstr "解析時点 t"
 
 #: mSTAB/results/poolTable.title
 msgid "ANCOVA Poolability Testing and Model Selection"
-msgstr ""
+msgstr "ANCOVAによる併合可能性の検定とモデル選択"
 
 #: mSTAB/options/showPoolTable.title
 msgid "ANCOVA Poolability Testing Table"
-msgstr ""
+msgstr "ANCOVA併合可能性検定表"
 
 #: R/mstab.b.R
 msgid ""
 "ANCOVA poolability tests evaluate whether stability batches can share common "
 "slopes and intercepts according to ICH Q1E."
 msgstr ""
+"ANCOVAによる併合可能性の検定では、ICH Q1Eに従い、安定性試験のロット間で傾きと"
+"切片を共通にできるかを評価します。"
 
 #: R/mstab.b.R
 msgid "ANCOVA Poolability:"
-msgstr ""
+msgstr "ANCOVA併合可能性："
 
 #: R/mstab.b.R
 msgid "ANCOVA Regression Fit"
-msgstr ""
+msgstr "ANCOVA回帰の当てはめ"
 
 #: mCOR/options/plotOrder/AOE.title
 msgid "Angular order eigenvectors"
@@ -1642,24 +1677,24 @@ msgstr "ANOVA / ANCOVA (F検定)"
 
 #: mMNV/results/sphericityTable.columns.title
 msgid "Approx. χ²"
-msgstr ""
+msgstr "近似χ²"
 
 #: mSTAB/ui[6].label
 msgid "Arrhenius Accelerated Kinetics (ICH Q1A / ASAP)"
-msgstr ""
+msgstr "アレニウス加速速度論（ICH Q1A / ASAP）"
 
 #: mSTAB/results/arrhTable.title
 msgid "Arrhenius Accelerated Stability Recalculation Table"
-msgstr ""
+msgstr "アレニウス式による加速安定性再計算表"
 
 #: R/mstab.b.R
 msgid "Arrhenius Degradation Kinetics Plot"
-msgstr ""
+msgstr "アレニウス分解速度プロット"
 
 #: mSTAB/options/showArrhPlot.title
 #: mSTAB/results/arrhPlot.title
 msgid "Arrhenius Degradation Kinetics Plot (ln(k) vs 1000/T)"
-msgstr ""
+msgstr "アレニウス分解速度プロット（ln(k) vs 1000/T）"
 
 #: mSTAB/options/showArrh.title
 msgid "Arrhenius Kinetic Extrapolation"
@@ -1669,37 +1704,43 @@ msgstr ""
 msgid ""
 "Arrhenius kinetics and humidity acceleration factor model for accelerated "
 "stability projections."
-msgstr ""
+msgstr "加速安定性予測のための、アレニウス速度論と湿度加速係数のモデル。"
 
 #: R/mstab.b.R
 msgid ""
 "Arrhenius kinetics cannot be calculated because the estimated degradation "
 "rate is non-positive or undefined."
 msgstr ""
+"推定された分解速度が0以下または未定義のため、アレニウス速度論を計算できません"
+"。"
 
 #: mSTAB/results/arrhRegTable.title
 msgid "Arrhenius Multi-Temperature Regression Model"
-msgstr ""
+msgstr "アレニウス多温度回帰モデル"
 
 #: R/mstab.b.R
 msgid ""
 "Arrhenius projected shelf life cannot be calculated because the baseline "
 "shelf life is undetermined."
 msgstr ""
+"基準となる有効期間が未確定のため、アレニウス式による予測有効期間を計算できま"
+"せん。"
 
 #: R/mstab.b.R
 msgid ""
 "Arrhenius stability kinetics: Analysed data assumed to be collected at "
 "{condition} ({temp} °C / {rh}% RH)."
 msgstr ""
+"アレニウス安定性速度論：解析データは {condition}（{temp} °C / {rh}% RH）で収"
+"集されたものとみなします。"
 
 #: mMNV/results/assumptionsTable.columns.title
 msgid "Assessment"
-msgstr ""
+msgstr "評価"
 
 #: mSTAB/results/diagTable.columns.title
 msgid "Assessment / Criteria"
-msgstr ""
+msgstr "評価 / 基準"
 
 #: mSNP/options/assocEnable.title
 msgid "Association tests"
@@ -1711,11 +1752,11 @@ msgstr ""
 
 #: mSTAB/results/arrhSensTable.columns.title
 msgid "Assumed Ea (kJ/mol)"
-msgstr ""
+msgstr "仮定したEa（kJ/mol）"
 
 #: mMNV/results/assumptionsTable.title
 msgid "Assumption Checks"
-msgstr ""
+msgstr "仮定のチェック"
 
 #: mMNV/options/showAssumptionChecks.title
 msgid "Assumption checks"
@@ -1727,29 +1768,31 @@ msgstr ""
 
 #: mSNP/options/ternaryRegion/1.title
 msgid "Asymptotic chi-square"
-msgstr ""
+msgstr "漸近的χ²"
 
 #: R/msnp.b.R
 msgid ""
 "At least 2 markers passing Quality Control are required for Linkage "
 "Disequilibrium analysis."
-msgstr ""
+msgstr "連鎖不平衡解析には、品質管理を通過したマーカーが少なくとも2つ必要です。"
 
 #: R/mstab.b.R
 msgid ""
 "At least 2 temperature groups with observed degradation are required to fit "
 "Arrhenius kinetics."
 msgstr ""
+"アレニウス速度論を当てはめるには、分解が観測された温度群が少なくとも2つ必要で"
+"す。"
 
 #: R/mstab.b.R
 msgid "At least 3 valid observations are required for stability analysis."
-msgstr ""
+msgstr "安定性解析には、有効な観測値が少なくとも3つ必要です。"
 
 #: R/mstab.b.R
 msgid ""
 "At least one batch must have observations at two or more distinct time "
 "points."
-msgstr ""
+msgstr "少なくとも1つのロットで、2つ以上の異なる時点に観測値が必要です。"
 
 #: R/msrv.b.R
 msgid ""
@@ -1759,104 +1802,104 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Attribute '{attr}' was excluded from analysis: {reason}"
-msgstr ""
+msgstr "品質特性 '{attr}' は解析から除外されました：{reason}"
 
 #: R/mstab.b.R
 msgid "Attribute '{name}' not found in dataset."
-msgstr ""
+msgstr "品質特性 '{name}' がデータセットに見つかりません。"
 
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Attribute / Parameter"
-msgstr ""
+msgstr "品質特性 / パラメータ"
 
 #: mSTAB/options/dep.title
 msgid "Attribute / Response"
-msgstr ""
+msgstr "品質特性 / 応答"
 
 #: R/mstab.b.R
 #: mSTAB/options/detailAttr/dep.title
 msgid "Attribute 1 (Assay / Primary)"
-msgstr ""
+msgstr "品質特性1（含量 / 主要）"
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Attribute 1 (months)"
-msgstr ""
+msgstr "品質特性1（か月）"
 
 #: mSTAB/ui[0][0].label
 msgid "Attribute 1 (Primary / Assay)"
-msgstr ""
+msgstr "品質特性1（主要 / 含量）"
 
 #: mSTAB/ui[1].label
 msgid "Attribute 1 Specifications (Assay / Primary)"
-msgstr ""
+msgstr "品質特性1の規格（含量 / 主要）"
 
 #: mSTAB/options/detailAttr/dep2.title
 msgid "Attribute 2"
-msgstr ""
+msgstr "品質特性2"
 
 #: R/mstab.b.R
 #: mSTAB/options/dep2.title
 #: mSTAB/ui[0][4].label
 msgid "Attribute 2 (Impurities / Degradants)"
-msgstr ""
+msgstr "品質特性2（不純物 / 分解生成物）"
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Attribute 2 (months)"
-msgstr ""
+msgstr "品質特性2（か月）"
 
 #: mSTAB/ui[2].label
 msgid "Attribute 2 Specifications (Impurities / Degradants)"
-msgstr ""
+msgstr "品質特性2の規格（不純物 / 分解生成物）"
 
 #: mSTAB/options/detailAttr/dep3.title
 msgid "Attribute 3"
-msgstr ""
+msgstr "品質特性3"
 
 #: R/mstab.b.R
 #: mSTAB/options/dep3.title
 #: mSTAB/ui[0][5].label
 msgid "Attribute 3 (Dissolution / Physical)"
-msgstr ""
+msgstr "品質特性3（溶出性 / 物理的特性）"
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Attribute 3 (months)"
-msgstr ""
+msgstr "品質特性3（か月）"
 
 #: mSTAB/ui[3].label
 msgid "Attribute 3 Specifications (Dissolution / Physical)"
-msgstr ""
+msgstr "品質特性3の規格（溶出性 / 物理的特性）"
 
 #: mSTAB/options/detailAttr/dep4.title
 msgid "Attribute 4"
-msgstr ""
+msgstr "品質特性4"
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Attribute 4 (months)"
-msgstr ""
+msgstr "品質特性4（か月）"
 
 #: R/mstab.b.R
 #: mSTAB/options/dep4.title
 #: mSTAB/ui[0][6].label
 msgid "Attribute 4 (Optional)"
-msgstr ""
+msgstr "品質特性4（任意）"
 
 #: mSTAB/options/detailAttr/dep5.title
 msgid "Attribute 5"
-msgstr ""
+msgstr "品質特性5"
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Attribute 5 (months)"
-msgstr ""
+msgstr "品質特性5（か月）"
 
 #: R/mstab.b.R
 #: mSTAB/options/dep5.title
 #: mSTAB/ui[0][7].label
 msgid "Attribute 5 (Optional)"
-msgstr ""
+msgstr "品質特性5（任意）"
 
 #: mSTAB/ui[4].label
 msgid "Attributes 4 & 5 Specifications (Optional)"
-msgstr ""
+msgstr "品質特性4・5の規格（任意）"
 
 #: R/mroc.b.R
 #: mLR/results/rocTable.columns.title
@@ -1888,7 +1931,7 @@ msgstr "自動（分類：平方根）"
 
 #: R/mstab.b.R
 msgid "Autocorrelation (Durbin-Watson d)"
-msgstr ""
+msgstr "自己相関（ダービン=ワトソンd）"
 
 #: package/analyses/mTAB1.description
 #: mTAB1/options.description.main
@@ -1906,11 +1949,11 @@ msgstr ""
 
 #: mSTAB/options/modelChoice/auto.title
 msgid "Automatic (ICH Q1E Decision Tree)"
-msgstr ""
+msgstr "自動（ICH Q1E 判定樹）"
 
 #: R/mstab.b.R
 msgid "Available (pilot batches / packaging)"
-msgstr ""
+msgstr "あり（パイロットロット / 包装）"
 
 #: R/mpca.b.R
 msgid "Average (Mean)"
@@ -2010,7 +2053,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Baseline observation duration Y"
-msgstr ""
+msgstr "基準となる観測期間 Y"
 
 #: R/mstab.b.R
 msgid "Baseline rate ({temp}°C): {rate} / month"
@@ -2023,28 +2066,28 @@ msgstr ""
 #: mSTAB/results/shelfTable.columns.title
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Batch / Cohort"
-msgstr ""
+msgstr "ロット / コホート"
 
 #: mSTAB/options/batch.title
 #: mSTAB/ui[0][2].label
 msgid "Batch / Lot"
-msgstr ""
+msgstr "バッチ / ロット"
 
 #: mSTAB/results/ratePlot.title
 msgid "Batch Degradation Rates & ANCOVA Slope Comparison"
-msgstr ""
+msgstr "ロットごとの分解速度とANCOVAによる傾きの比較"
 
 #: R/mstab.b.R
 msgid "Batch intercepts differ (p <= {alpha}) -> Adopt Model 2"
-msgstr ""
+msgstr "ロット間で切片が異なる（p <= {alpha}）-> モデル2を採用"
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Batch Minimum Shelf Life (months)"
-msgstr ""
+msgstr "ロットの最短有効期間（か月）"
 
 #: mSTAB/results/comboShelfTable.columns.title
 msgid "Batches"
-msgstr ""
+msgstr "ロット"
 
 #: package/datasets/BCModelsROCEstimation.name
 msgid "BC Models ROC Estimation"
@@ -2097,7 +2140,7 @@ msgstr "ベータ95%信頼区間上限"
 
 #: R/msrv.b.R
 msgid "Beta(t) for {var}"
-msgstr ""
+msgstr "{var} のBeta(t)"
 
 #: mMNV/options/between.title
 #: mMNV/ui[0][1].label
@@ -2149,11 +2192,11 @@ msgstr "ブートストラップの種類"
 
 #: R/mcor.b.R
 msgid "Bootstrapped Edge Weights 95% CI"
-msgstr ""
+msgstr "エッジ重みのブートストラップ95%信頼区間"
 
 #: mCOR/options/glassoStability.title
 msgid "Bootstrapped stability analysis"
-msgstr ""
+msgstr "ブートストラップによる安定性分析"
 
 #: mTAB1/options/statFormatCont/both.title
 msgid "Both (Mean ± SD and Median [Q1; Q3])"
@@ -2163,16 +2206,16 @@ msgstr ""
 #: mSTAB/options/specType2/both.title
 #: mSTAB/options/specType3/both.title
 msgid "Both limits (Two-sided / Unknown direction)"
-msgstr ""
+msgstr "上下限（両側 / 方向不明）"
 
 #: mSTAB/options/specType4/both.title
 #: mSTAB/options/specType5/both.title
 msgid "Both limits (Two-sided)"
-msgstr ""
+msgstr "上下限（両側）"
 
 #: mMOUT/options/plotType/both.title
 msgid "Both Plots"
-msgstr ""
+msgstr "両方のプロット"
 
 #: mCOR/options/clPos/b.title
 msgid "Bottom"
@@ -2180,13 +2223,13 @@ msgstr "下"
 
 #: R/mmnv.b.R
 msgid "Box's M (Equality of Covariance Matrices)"
-msgstr ""
+msgstr "ボックスのM（共分散行列の等質性）"
 
 #: R/mmnv.b.R
 msgid ""
 "Box's M evaluates covariance homogeneity across levels of primary factor "
 "'{factor}'."
-msgstr ""
+msgstr "ボックスのMは、主要因 '{factor}' の水準間での共分散の等質性を評価します。"
 
 #: mTAB1/options/plotTypeCont/box_clean.title
 #: mTAB1/options/plotType/box_clean.title
@@ -2217,15 +2260,15 @@ msgstr "カラーパレット"
 
 #: mDCA/results/calTable.columns.title
 msgid "Brier Score"
-msgstr ""
+msgstr "ブライアー・スコア"
 
 #: R/msnp.b.R
 msgid "Ca"
-msgstr ""
+msgstr "ケース"
 
 #: mSNP/options/groupTotal.title
 msgid "Calculate totals"
-msgstr ""
+msgstr "合計を計算"
 
 #: mOUT/results/stat/outstat.description
 msgid "Calculated fences for outliers"
@@ -2236,64 +2279,68 @@ msgid ""
 "Calculating Polygenic Risk Score (PRS) requires specifying a "
 "dependent/outcome variable to estimate SNP weights."
 msgstr ""
+"多遺伝子リスクスコア（PRS）を計算するには、SNPの重みを推定するための従属変数"
+"／アウトカム変数を指定する必要があります。"
 
 #: R/mpwr.b.R
 msgid "Calculation error: {err}"
-msgstr ""
+msgstr "計算エラー：{err}"
 
 #: R/mpwr.b.R
 msgid ""
 "Calculations for survival log-rank test are based on Schoenfeld's asymptotic "
 "approximation. N1 represents the total number of events required."
 msgstr ""
+"生存時間のログランク検定の計算は、Schoenfeldの漸近近似に基づきます。N1は必要"
+"なイベントの総数を表します。"
 
 #: mDCA/options/calBins.title
 msgid "Calibration Deciles (Bins)"
-msgstr ""
+msgstr "較正の分位数（ビン数）"
 
 #: mDCA/results/calTable.columns.title
 msgid "Calibration Intercept"
-msgstr ""
+msgstr "較正切片"
 
 #: mDCA/results/calTable.columns.title
 msgid "Calibration Slope"
-msgstr ""
+msgstr "較正傾き"
 
 #: mSNP/results/qcGroup/qcTable.columns.title
 msgid "Call Rate"
-msgstr ""
+msgstr "コール率"
 
 #: R/mstab.b.R
 msgid "Cannot evaluate homoscedasticity"
-msgstr ""
+msgstr "等分散性を評価できません"
 
 #: R/mstab.b.R
 msgid "Cannot evaluate normality (insufficient variance)"
-msgstr ""
+msgstr "正規性を評価できません（分散が不十分）"
 
 #: R/mstab.b.R
 msgid "Cannot evaluate slopes"
-msgstr ""
+msgstr "傾きを評価できません"
 
 #: R/mstab.b.R
 msgid "Capped by extrapolation rule"
-msgstr ""
+msgstr "外挿規則により制限"
 
 #: R/mstab.b.R
 msgid "Capped by ICH Q1E extrapolation limit ({cap} months)"
-msgstr ""
+msgstr "ICH Q1Eの外挿上限（{cap}か月）により制限"
 
 #: mCOR/options/glassoBootType/casedrop.title
 msgid "Case-dropping (centrality stability)"
-msgstr ""
+msgstr "ケース除去（中心性の安定性）"
 
 #: R/mcor.b.R
 msgid "Case-dropping Centrality Stability Curve"
-msgstr ""
+msgstr "ケース除去による中心性安定性曲線"
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Cases"
-msgstr ""
+msgstr "ケース"
 
 #: R/mrf.b.R
 msgid ""
@@ -2303,7 +2350,7 @@ msgstr ""
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Cases/Controls Ratio"
-msgstr ""
+msgstr "ケース／対照比"
 
 #: mTAB1/options/plotTypeCat.title
 msgid "Categorical plot type"
@@ -2323,16 +2370,16 @@ msgstr ""
 
 #: R/msrv.b.R
 msgid "Cause"
-msgstr ""
+msgstr "原因"
 
 #: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 #: mSRV/results/compRisksSection/grayTestTable.columns.title
 msgid "Cause / Event"
-msgstr ""
+msgstr "原因 / イベント"
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "CCR"
-msgstr ""
+msgstr "CCR"
 
 #: R/mmnv.b.R
 msgid ""
@@ -2340,28 +2387,30 @@ msgid ""
 "intervals. If covariates are present, model tests are evaluated at mean "
 "covariate values."
 msgstr ""
+"セル平均と標準偏差（95% スチューデントのt信頼区間付き）。共変量がある場合、"
+"モデルの検定は共変量の平均値において評価されます。"
 
 #: mSRV/options/compCensor.title
 #: mSRV/ui[5]/showCompRisks/compCensor.label
 msgid "Censored level"
-msgstr ""
+msgstr "打ち切りの水準"
 
 #: R/mcor.b.R
 msgid "Centrality correlation"
-msgstr ""
+msgstr "中心性の相関"
 
 #: R/mcor.b.R
 msgid "Centrality Correlation (r)"
-msgstr ""
+msgstr "中心性の相関（r）"
 
 #: mCOR/results/glassoGroup/glassoHubTable.title
 msgid "Centrality metrics (hub markers)"
-msgstr ""
+msgstr "中心性指標（ハブマーカー）"
 
 #: mCOR/options/glassoCentralityPlot.title
 #: mCOR/results/glassoGroup/glassoCentralityPlot.title
 msgid "Centrality plot"
-msgstr ""
+msgstr "中心性プロット"
 
 #: mCOR/options/clustMet/centroid.title
 msgid "Centroid Linkage (UPGMC)"
@@ -2369,7 +2418,7 @@ msgstr "重心連結法（UPGMC）"
 
 #: R/mstab.b.R
 msgid "Change and variability observed over time"
-msgstr ""
+msgstr "経時的な変化とばらつきが認められる"
 
 #: mTAB1/results/tab1.columns.title
 msgid "Characteristic"
@@ -2383,7 +2432,7 @@ msgstr "CHDモデルのROC推定"
 #: mSRV/results/coxSection/coxAssumpTable.columns.title
 #: mSRV/results/compRisksSection/grayTestTable.columns.title
 msgid "Chi-Square"
-msgstr ""
+msgstr "χ²"
 
 #: R/mtab1.b.R
 msgid "Chi-square (continuity corr.)"
@@ -2391,7 +2440,7 @@ msgstr ""
 
 #: mMOUT/results/stat.columns.title
 msgid "Chi-Square Cut-off"
-msgstr ""
+msgstr "χ²カットオフ"
 
 #: R/mpwr.b.R
 #: mPWR/options/design/chisq.title
@@ -2400,20 +2449,20 @@ msgstr "χ²適合度・独立性検定"
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "Chi-square p"
-msgstr ""
+msgstr "χ² p"
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "Chi-square p-adj"
-msgstr ""
+msgstr "χ² 調整済みp"
 
 #: mMOUT/options/plotType/qq.title
 #: mMOUT/results/qqplot.title
 msgid "Chi-Square Q-Q Plot"
-msgstr ""
+msgstr "χ² Q-Qプロット"
 
 #: R/mmout.b.R
 msgid "Chi-Square Q-Q Plot ({method})"
-msgstr ""
+msgstr "χ² Q-Qプロット（{method}）"
 
 #: R/mtab1.b.R
 #: mTAB1/options/catTest/chisq.title
@@ -2422,31 +2471,31 @@ msgstr ""
 
 #: mSNP/options/ternaryRegion/5.title
 msgid "Chi-square with both continuity corrections"
-msgstr ""
+msgstr "両方の連続性補正付きχ²"
 
 #: mSNP/options/ternaryRegion/2.title
 msgid "Chi-square with continuity correction"
-msgstr ""
+msgstr "連続性補正付きχ²"
 
 #: mSNP/options/ternaryRegion/4.title
 msgid "Chi-square with continuity correction (D < 0)"
-msgstr ""
+msgstr "連続性補正付きχ²（D < 0）"
 
 #: mSNP/options/ternaryRegion/3.title
 msgid "Chi-square with continuity correction (D > 0)"
-msgstr ""
+msgstr "連続性補正付きχ²（D > 0）"
 
 #: mSNP/options/ternaryRegion/6.title
 msgid "Chi-square with upper and lower continuity correction"
-msgstr ""
+msgstr "上側・下側の連続性補正付きχ²"
 
 #: R/msrv.b.R
 msgid "Choose different levels for the censoring code and the event of interest."
-msgstr ""
+msgstr "打ち切りコードと対象イベントには異なる水準を選択してください。"
 
 #: mROC/results/rocTable.columns.superTitle
 msgid "CI"
-msgstr ""
+msgstr "信頼区間"
 
 #: mCOR/results/matrix.columns.content
 msgid "CI Lower"
@@ -2472,40 +2521,40 @@ msgstr "円"
 
 #: R/mmout.b.R
 msgid "Classic Outlier"
-msgstr ""
+msgstr "古典的外れ値"
 
 #: R/mmout.b.R
 msgid "Classical"
-msgstr ""
+msgstr "古典的"
 
 #: package/analyses/mMNV.menuSubgroup
 #: mMNV/options.menuSubgroup
 msgid "Classical & Advanced ANOVA"
-msgstr ""
+msgstr "古典的・発展的ANOVA"
 
 #: mMOUT/options/method/classic.title
 msgid "Classical Mahalanobis distance"
-msgstr ""
+msgstr "古典的マハラノビス距離"
 
 #: mCOR/options/netMethod/classic.title
 msgid "Classical Partial Correlation"
-msgstr ""
+msgstr "古典的偏相関"
 
 #: R/mcor.b.R
 msgid "Classical Partial Correlation Network"
-msgstr ""
+msgstr "古典的偏相関ネットワーク"
 
 #: mCOR/options/netMethod/semiclassic.title
 msgid "Classical Semi-Partial Correlation"
-msgstr ""
+msgstr "古典的半偏相関"
 
 #: R/mcor.b.R
 msgid "Classical Semi-Partial Correlation Network"
-msgstr ""
+msgstr "古典的半偏相関ネットワーク"
 
 #: R/mmout.b.R
 msgid "Classical Squared Mahalanobis Distance"
-msgstr ""
+msgstr "古典的マハラノビス距離の2乗"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -2534,34 +2583,34 @@ msgstr ""
 
 #: mDCA/results/windowTable.title
 msgid "Clinical Decision Window"
-msgstr ""
+msgstr "臨床判断範囲"
 
 #: mDCA/options/showWindowTable.title
 msgid "Clinical Decision Window Table"
-msgstr ""
+msgstr "臨床判断範囲表"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Clinical Superiority"
-msgstr ""
+msgstr "臨床的優位性"
 
 #: mDCA/ui[1].label
 msgid "Clinical Threshold Settings"
-msgstr ""
+msgstr "臨床閾値の設定"
 
 #: mLR/options/forestClip.title
 #: mLR/ui[4]/showForest/forestClip.label
 msgid "Clip very large Odds Ratios"
-msgstr ""
+msgstr "非常に大きいオッズ比を切り詰める"
 
 #: mLR/options/forestClipThreshold.title
 #: mLR/ui[4]/showForest/forestClipThreshold.label
 msgid "Clipping threshold"
-msgstr ""
+msgstr "切り詰めの閾値"
 
 #: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Closeness"
-msgstr ""
+msgstr "近接中心性"
 
 #: mROC/options/theBest/bestC.title
 msgid "Closest to (0, 1) cut-off"
@@ -2573,22 +2622,24 @@ msgstr ""
 
 #: R/mcor.b.R
 msgid "Cluster {i}"
-msgstr ""
+msgstr "クラスター {i}"
 
 #: mPWR/options/crt.title
 #: mPWR/ui[2]/crt.label
 msgid "Cluster / Multilevel Randomized Trial (CRT/MST)"
-msgstr ""
+msgstr "クラスター／多施設ランダム化試験（CRT/MST）"
 
 #: mPWR/ui[2].label
 msgid "Cluster Randomized Trials"
-msgstr ""
+msgstr "クラスターランダム化試験"
 
 #: R/msrv.b.R
 msgid ""
 "Clustering is not supported with Firth's penalized Cox regression; cluster "
 "adjustment was omitted."
 msgstr ""
+"FirthのCox回帰ではクラスタリングがサポートされていないため、クラスター調整は"
+"省略されました。"
 
 #: mCOR/options/numClust.title
 msgid "Clusters"
@@ -2596,41 +2647,41 @@ msgstr "クラスタ"
 
 #: mPWR/results/powerTable.columns.title
 msgid "Clusters 1"
-msgstr ""
+msgstr "クラスター数1"
 
 #: mPWR/results/powerTable.columns.title
 msgid "Clusters 2"
-msgstr ""
+msgstr "クラスター数2"
 
 #: R/msnp.b.R
 msgid "Co"
-msgstr ""
+msgstr "対照"
 
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/codominant.title
 msgid "Codominant"
-msgstr ""
+msgstr "共優性"
 
 #: R/msnp.b.R
 msgid "Codominant (AB vs AA)"
-msgstr ""
+msgstr "共優性（AB vs AA）"
 
 #: R/msnp.b.R
 msgid "Codominant (BB vs AA)"
-msgstr ""
+msgstr "共優性（BB vs AA）"
 
 #: mSRV/results/compRisksSection/fineGrayTable.columns.title
 msgid "Coefficient"
-msgstr ""
+msgstr "係数"
 
 #: mSRV/results/coxSection/coxCoefTable.columns.title
 #: mSRV/results/coxSection/timeDepTable.columns.title
 msgid "Coefficient (Estimate)"
-msgstr ""
+msgstr "係数（推定値）"
 
 #: R/mstab.b.R
 msgid "Coefficient of Determination (R²)"
-msgstr ""
+msgstr "決定係数（R²）"
 
 #: R/mstab.b.R
 msgid "Coefficient of determination: R² = {r2}."
@@ -2638,7 +2689,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Cohort slopes differ (p <= {alpha}) -> Adopt Model 1"
-msgstr ""
+msgstr "コホート間で傾きが異なる（p <= {alpha}）-> モデル1を採用"
 
 #: R/mtab1.b.R
 msgid "Col %"
@@ -2666,82 +2717,84 @@ msgstr ""
 
 #: mLR/options/multiclass_roc_type/combined.title
 msgid "Combined"
-msgstr ""
+msgstr "統合"
 
 #: mMLP/options/multiclass_roc_type/combined.title
 #: mRF/options/multiclass_roc_type/combined.title
 msgid "Combined Plot (Single Axes)"
-msgstr ""
+msgstr "統合プロット（単一軸）"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Combined ROC - Cross-Validation"
-msgstr ""
+msgstr "統合ROC - 交差検証"
 
 #: R/mrf.b.R
 msgid "Combined ROC - Out-of-Bag (OOB)"
-msgstr ""
+msgstr "統合ROC - OOB（out-of-bag）"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Combined ROC - Training"
-msgstr ""
+msgstr "統合ROC - 訓練"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Combined ROC - Validation"
-msgstr ""
+msgstr "統合ROC - 検証"
 
 #: R/mstab.b.R
 msgid "Common line"
-msgstr ""
+msgstr "共通直線"
 
 #: R/mstab.b.R
 msgid "Common line across all batches"
-msgstr ""
+msgstr "全ロット共通の直線"
 
 #: R/mstab.b.R
 msgid "Common line across batches"
-msgstr ""
+msgstr "ロット共通の直線"
 
 #: R/mstab.b.R
 msgid "Common slope & common intercept (Model 3)"
-msgstr ""
+msgstr "共通の傾き・共通の切片（モデル3）"
 
 #: R/mstab.b.R
 msgid "Common slope & intercept (Pooled)"
-msgstr ""
+msgstr "共通の傾き・切片（併合）"
 
 #: R/mstab.b.R
 msgid "Common slope & separate intercepts"
-msgstr ""
+msgstr "共通の傾き・個別の切片"
 
 #: R/mstab.b.R
 msgid "Common slope & separate intercepts (Model 2)"
-msgstr ""
+msgstr "共通の傾き・個別の切片（モデル2）"
 
 #: mSTAB/options/modelChoice/common_slope_common_int.title
 msgid "Common slope and common intercept (Model 3)"
-msgstr ""
+msgstr "共通の傾き・共通の切片（モデル3）"
 
 #: mSTAB/options/modelChoice/common_slope_sep_int.title
 msgid "Common slope with separate intercepts (Model 2)"
-msgstr ""
+msgstr "共通の傾き・個別の切片（モデル2）"
 
 #: R/msrv.b.R
 msgid ""
 "Compares cumulative incidence functions between groups in the presence of "
 "competing risks."
-msgstr ""
+msgstr "競合リスクが存在する場合に、グループ間で累積発生関数を比較します。"
 
 #: R/msrv.b.R
 msgid ""
 "Compares survival distributions between groups. Significant p-value (p < "
 "0.05) indicates difference in survival."
 msgstr ""
+"グループ間で生存分布を比較します。p値が有意（p < 0.05）であれば、生存に差があ"
+"ることを示します。"
 
 #: mTAB1/results/postHoc.columns.title
 msgid "Comparison"
@@ -2749,22 +2802,24 @@ msgstr ""
 
 #: mLR/results/coeffTable.columns.title
 msgid "Comparison Level"
-msgstr ""
+msgstr "比較水準"
 
 #: mSRV/ui[5].label
 #: mSRV/results/compRisksSection.title
 msgid "Competing Risks Analysis"
-msgstr ""
+msgstr "競合リスク分析"
 
 #: mSRV/options/showCompRisks.title
 msgid "Competing risks analysis"
-msgstr ""
+msgstr "競合リスク分析"
 
 #: R/msrv.b.R
 msgid ""
 "Competing risks levels were automatically assigned: Event of interest = "
 "'{event}', Censored level = '{censor}'."
 msgstr ""
+"競合リスクの水準を自動で割り当てました：対象イベント = '{event}'、打ち切りの"
+"水準 = '{censor}'。"
 
 #: mCOR/options/clustMet/complete.title
 msgid "Complete Linkage"
@@ -2781,7 +2836,7 @@ msgstr "完全変数をプロット"
 
 #: R/mstab.b.R
 msgid "Compliant"
-msgstr ""
+msgstr "適合"
 
 #: R/mstab.b.R
 msgid "Compliant (> 240 months)"
@@ -2789,15 +2844,15 @@ msgstr ""
 
 #: mPCA/results/varianceTable.columns.title
 msgid "Component"
-msgstr ""
+msgstr "成分"
 
 #: mPCA/results/varianceTable.title
 msgid "Component Eigenvalues and Explained Variance"
-msgstr ""
+msgstr "成分の固有値と説明分散"
 
 #: R/mpca.b.R
 msgid "Component Number"
-msgstr ""
+msgstr "成分番号"
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "Concordance"
@@ -2805,7 +2860,7 @@ msgstr "適合指数"
 
 #: mLR/results/misclassifiedTable.columns.title
 msgid "Confidence"
-msgstr ""
+msgstr "確信度"
 
 #: mROC/options/ciAUC.title
 #: mROC/ui[1]/ciAUC.label
@@ -2823,35 +2878,35 @@ msgstr "信頼区間幅"
 
 #: mSRV/options/adjCI.title
 msgid "Confidence intervals (bootstrap)"
-msgstr ""
+msgstr "信頼区間（ブートストラップ）"
 
 #: mSRV/options/cifCI.title
 msgid "Confidence intervals (CIF)"
-msgstr ""
+msgstr "信頼区間（CIF）"
 
 #: mSRV/options/kmCI.title
 msgid "Confidence intervals (KM)"
-msgstr ""
+msgstr "信頼区間（KM）"
 
 #: mSRV/options/rocCI.title
 msgid "Confidence intervals (ROC)"
-msgstr ""
+msgstr "信頼区間（ROC）"
 
 #: R/mmnv.b.R
 msgid "Confidence intervals are 95% Student's t intervals."
-msgstr ""
+msgstr "信頼区間は95% スチューデントのt区間です。"
 
 #: mSRV/options/rocWidth.title
 msgid "Confidence level (%)"
-msgstr ""
+msgstr "信頼水準（%）"
 
 #: mSTAB/options/confLevel.title
 msgid "Confidence Level for Shelf Life"
-msgstr ""
+msgstr "有効期間の信頼水準"
 
 #: R/mstab.b.R
 msgid "Conforming"
-msgstr ""
+msgstr "適合"
 
 #: mMLP/options/show_matrix.title
 #: mMLP/results/matrixTable.title
@@ -2864,19 +2919,19 @@ msgstr "混同行列"
 msgid ""
 "Connection of a variable's missingness indicator with observed data on other "
 "variables"
-msgstr ""
+msgstr "ある変数の欠損指標と、他の変数の観測データとの関連"
 
 #: R/mmf.b.R
 msgid "Connection of a variable's observed data with missing data on other variables"
-msgstr ""
+msgstr "ある変数の観測データと、他の変数の欠損データとの関連"
 
 #: R/mstab.b.R
 msgid "Consensus Benchmark (20 kcal/mol)"
-msgstr ""
+msgstr "合意された基準値（20 kcal/mol）"
 
 #: R/mstab.b.R
 msgid "Constant variance met (p >= 0.05)"
-msgstr ""
+msgstr "等分散性を満たす（p >= 0.05）"
 
 #: mTAB1/options/plotTypeCat/balloon.title
 #: mTAB1/options/plotType/balloon.title
@@ -2885,7 +2940,7 @@ msgstr ""
 
 #: R/mpca.b.R
 msgid "Contingency Matrix (Clusters vs Groups):"
-msgstr ""
+msgstr "分割表（クラスター vs グループ）："
 
 #: mTAB1/options/plotTypeCont.title
 msgid "Continuous plot type"
@@ -2894,7 +2949,7 @@ msgstr ""
 #: mDCA/options/scores.title
 #: mDCA/ui[0][2].label
 msgid "Continuous Predictors / Scores"
-msgstr ""
+msgstr "連続予測変数 / スコア"
 
 #: mTAB1/options/statFormatCont.title
 msgid "Continuous statistics format"
@@ -2906,7 +2961,7 @@ msgstr ""
 
 #: mMNV/results/contrastsTable.columns.title
 msgid "Contrast"
-msgstr ""
+msgstr "対比"
 
 #: mMNV/options/contrastType.title
 msgid "Contrast type"
@@ -2916,15 +2971,15 @@ msgstr ""
 msgid ""
 "Contrasts compare specific trajectories across time points (e.g., linear "
 "trends or step-by-step changes)."
-msgstr ""
+msgstr "対比は、時点間の特定の推移（例：線形傾向や段階的な変化）を比較します。"
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Controls"
-msgstr ""
+msgstr "対照"
 
 #: package/datasets/RandomForestCHDclassification.description
 msgid "Coronary Heart Disease classification using Random Forest"
-msgstr ""
+msgstr "ランダムフォレストによる冠動脈性心疾患の分類"
 
 #: mCOR/options/hyp/corr.title
 msgid "Correlated"
@@ -2969,7 +3024,7 @@ msgstr "相関行列"
 
 #: R/mcor.b.R
 msgid "Correlation matrix contains missing values. Cannot compute Graphical Lasso."
-msgstr ""
+msgstr "相関行列に欠損値が含まれています。グラフィカル・ラッソを計算できません。"
 
 #: R/mcor.b.R
 msgid ""
@@ -2983,22 +3038,22 @@ msgstr "変数間の相関"
 
 #: R/mpca.b.R
 msgid "Cos²"
-msgstr ""
+msgstr "Cos²"
 
 #: R/msnp.b.R
 #: R/mtab1.b.R
 #: mMLP/results/matrixTable.columns.title
 #: mRF/results/matrixTable.columns.title
 msgid "Count"
-msgstr ""
+msgstr "度数"
 
 #: R/msrv.b.R
 msgid "Counting process formulation with left-truncation (tstart, elapsed)."
-msgstr ""
+msgstr "左切断を考慮した計数過程による定式化（tstart, elapsed）。"
 
 #: R/mmnv.b.R
 msgid "Covariance matrix in one or more groups is singular or non-positive definite."
-msgstr ""
+msgstr "1つ以上のグループで共分散行列が特異または正定値ではありません。"
 
 #: R/msrv.b.R
 #: mMNV/options/covs.title
@@ -3006,12 +3061,12 @@ msgstr ""
 #: mSNP/options/covs.title
 #: mSNP/ui[0][2].label
 msgid "Covariates"
-msgstr ""
+msgstr "共変量"
 
 #: mSRV/options/covariates.title
 #: mSRV/ui[0][5].label
 msgid "Covariates (Adjustment / Confounders)"
-msgstr ""
+msgstr "共変量（調整 / 交絡因子）"
 
 #: mLR/options/covs.title
 #: mLR/ui[0][1].label
@@ -3024,28 +3079,28 @@ msgstr "共変量（連続説明変数）"
 
 #: mSRV/results/coxSection/coxForestPlot.title
 msgid "Cox Hazard Ratios Forest Plot"
-msgstr ""
+msgstr "Coxハザード比のフォレストプロット"
 
 #: mSRV/results/coxSection/coxFitTable.title
 msgid "Cox Model Fit Statistics"
-msgstr ""
+msgstr "Coxモデルの適合統計量"
 
 #: R/msrv.b.R
 msgid "Cox proportional hazards model fitting failed: {reason}"
-msgstr ""
+msgstr "Cox比例ハザードモデルの当てはめに失敗しました：{reason}"
 
 #: mSRV/ui[3].label
 #: mSRV/results/coxSection.title
 msgid "Cox Proportional Hazards Regression"
-msgstr ""
+msgstr "Cox比例ハザード回帰"
 
 #: mSRV/options/showCox.title
 msgid "Cox proportional hazards regression"
-msgstr ""
+msgstr "Cox比例ハザード回帰"
 
 #: mSRV/results/coxSection/coxCoefTable.title
 msgid "Cox Regression Coefficients"
-msgstr ""
+msgstr "Cox回帰係数"
 
 #: R/mmnv.b.R
 msgid "Critical threshold (p < .001): {crit}"
@@ -3070,7 +3125,7 @@ msgstr ""
 
 #: mSNP/options/mdrFolds.title
 msgid "Cross-validation folds"
-msgstr ""
+msgstr "交差検証の分割数"
 
 #: mLR/options/cv_folds.title
 #: mLR/ui[3]/cv_folds.label
@@ -3083,33 +3138,33 @@ msgstr "交差検証の分割数（K）"
 
 #: mLR/options/cv_repeats.title
 msgid "Cross-Validation Repeats"
-msgstr ""
+msgstr "交差検証の反復回数"
 
 #: mLR/ui[3]/cv_repeats.label
 msgid "Cross-Validation Repeats (R)"
-msgstr ""
+msgstr "交差検証の反復回数（R）"
 
 #: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
 msgid "CS-coefficient (cor = 0.7)"
-msgstr ""
+msgstr "CS係数（cor = 0.7）"
 
 #: R/mmnv.b.R
 msgid "Cubic"
-msgstr ""
+msgstr "3次"
 
 #: mPCA/results/varianceTable.columns.title
 msgid "Cumulative %"
-msgstr ""
+msgstr "累積%"
 
 #: R/msrv.b.R
 #: mSRV/options/kmType/hazard.title
 msgid "Cumulative hazard"
-msgstr ""
+msgstr "累積ハザード"
 
 #: R/msrv.b.R
 #: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 msgid "Cumulative Incidence"
-msgstr ""
+msgstr "累積発生率"
 
 #: R/msrv.b.R
 msgid "Cumulative incidence (Aalen-Johansen) model fitting failed: {reason}"
@@ -3131,18 +3186,18 @@ msgstr ""
 
 #: mSRV/results/compRisksSection/cifSummaryTable.title
 msgid "Cumulative Incidence Summary"
-msgstr ""
+msgstr "累積発生率の要約"
 
 #: mSRV/options/showCifTable.title
 msgid "Cumulative incidence summary"
-msgstr ""
+msgstr "累積発生率の要約"
 
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
 #: mPCA/results/rocTable.columns.title
 #: mRF/results/rocTable.columns.title
 msgid "Curve"
-msgstr ""
+msgstr "曲線"
 
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
@@ -3152,7 +3207,7 @@ msgstr ""
 #: mSRV/results/rocSection/rocTable.columns.title
 #: mUI/results/stat/rocTable.columns.title
 msgid "Cut-off"
-msgstr ""
+msgstr "カットオフ"
 
 #: mLR/options/show_roc_cut.title
 #: mLR/ui[4]/show_roc/show_roc_cut.label
@@ -3164,26 +3219,26 @@ msgstr ""
 #: mRF/ui[3]/show_roc/show_roc_cut.label
 #: mUI/options/show_roc_cut.title
 msgid "Cut-off thresholds"
-msgstr ""
+msgstr "カットオフ閾値"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "CV"
-msgstr ""
+msgstr "交差検証"
 
 #: mLR/results/infoTable.columns.title
 msgid "CV Acc (%)"
-msgstr ""
+msgstr "交差検証正解率（%）"
 
 #: mSNP/results/mdrGroup/mdrBestTable.columns.title
 msgid "CVC"
-msgstr ""
+msgstr "CVC"
 
 #: mSNP/options/ldMetric/Dprime.title
 #: mSNP/results/ldGroup/ldTable.columns.title
 msgid "D'"
-msgstr ""
+msgstr "D'"
 
 #: mMF/results/estim/mcar.columns.title
 msgid "D²"
@@ -3201,7 +3256,7 @@ msgstr "ダーク2"
 
 #: R/mmnv.b.R
 msgid "Data ellipses (68% dashed, 95% solid) for '{v1}' and '{v2}'"
-msgstr ""
+msgstr "'{v1}' と '{v2}' のデータ楕円（68% 破線、95% 実線）"
 
 #: package/analyses/mMF.menuSubgroup
 #: package/analyses/mOUT.menuSubgroup
@@ -3212,7 +3267,7 @@ msgstr ""
 #: mOUT/options.menuSubgroup
 #: mTAB1/options.menuSubgroup
 msgid "Data Preprocessing"
-msgstr ""
+msgstr "データ前処理"
 
 #: R/msrv.b.R
 msgid "Data weighting for Fine-Gray model failed: {reason}"
@@ -3222,7 +3277,7 @@ msgstr ""
 #: R/mlr.b.R
 #: R/mpca.b.R
 msgid "Dataset restricted to group: {g}"
-msgstr ""
+msgstr "データセットをグループに限定：{g}"
 
 #: mLR/options/roc_unit/decimal.title
 #: mMLP/options/roc_unit/decimal.title
@@ -3242,13 +3297,13 @@ msgstr "判断"
 #: mDCA/ui.title
 #: mDCA/results.title
 msgid "Decision Curve Analysis (DCA)"
-msgstr ""
+msgstr "決定曲線分析（DCA）"
 
 #: package/datasets/DecisionCurveAnalysisCHDmodels.description
 msgid ""
 "Decision Curve Analysis (DCA) and Model Calibration for CHD prediction "
 "models demonstration"
-msgstr ""
+msgstr "CHD予測モデルの決定曲線分析（DCA）とモデル較正のデモ"
 
 #: package/analyses/mDCA.description
 #: mDCA/options.description.main
@@ -3257,40 +3312,44 @@ msgid ""
 "benefit (Vickers et al., 2006) and interventions avoided for predictive "
 "models and biomarkers."
 msgstr ""
+"決定曲線分析（DCA）とモデル較正。予測モデルやバイオマーカーについて、臨床的な"
+"純利益（Vickers et al., 2006）と回避できる介入を評価します。"
 
 #: R/mdca.b.R
 msgid ""
 "Decision Curve Analysis (DCA) evaluates the clinical net benefit of "
 "prediction models and biomarkers across a range of decision thresholds."
 msgstr ""
+"決定曲線分析（DCA）は、予測モデルやバイオマーカーの臨床的な純利益を、判断閾値"
+"の範囲にわたって評価します。"
 
 #: R/mdca.b.R
 msgid "Decision Curve Analysis (Net Benefit)"
-msgstr ""
+msgstr "決定曲線分析（純利益）"
 
 #: package/datasets/DecisionCurveAnalysisCHDmodels.name
 msgid "Decision Curve Analysis CHD models"
-msgstr ""
+msgstr "決定曲線分析 CHDモデル"
 
 #: mDCA/results/dcaPlot.title
 msgid "Decision Curves (Net Benefit vs Threshold)"
-msgstr ""
+msgstr "決定曲線（純利益 vs 閾値）"
 
 #: mDCA/options/showDcaPlot.title
 msgid "Decision Curves Plot (Net Benefit)"
-msgstr ""
+msgstr "決定曲線プロット（純利益）"
 
 #: R/mstab.b.R
 msgid "Decision tree verification"
-msgstr ""
+msgstr "判定樹の確認"
 
 #: mSTAB/results/arrhTable.columns.title
 msgid "Degradation Rate (k / month)"
-msgstr ""
+msgstr "分解速度（k / 月）"
 
 #: mSTAB/options/showRatePlot.title
 msgid "Degradation Rates / Slopes Comparison"
-msgstr ""
+msgstr "分解速度 / 傾きの比較"
 
 #: R/mstab.b.R
 msgid "Degradation Rates / Slopes Comparison ({pct}% CI)"
@@ -3298,7 +3357,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Degradation rates across evaluated batches"
-msgstr ""
+msgstr "評価対象ロット間の分解速度"
 
 #: R/mstab.b.R
 msgid ""
@@ -3345,7 +3404,7 @@ msgstr "従属変数（ターゲット）"
 
 #: R/mlr.b.R
 msgid "Dependent variable must have at least two levels."
-msgstr ""
+msgstr "従属変数には少なくとも2つの水準が必要です。"
 
 #: mTAB1/options/method.title
 msgid "Descriptive statistics"
@@ -3360,7 +3419,7 @@ msgstr ""
 #: mMNV/options/showMeansTable.title
 #: mMNV/results/meansTable.title
 msgid "Descriptives"
-msgstr ""
+msgstr "記述統計"
 
 #: mMNV/ui[5].label
 msgid "Descriptives & plots"
@@ -3372,19 +3431,19 @@ msgstr "デザイン"
 
 #: mPWR/ui[1].label
 msgid "Design Parameters"
-msgstr ""
+msgstr "デザインパラメータ"
 
 #: mSTAB/options/detailAttr.title
 msgid "Detailed Analysis Display"
-msgstr ""
+msgstr "詳細解析の表示"
 
 #: mSNP/options/mdrCellTable.title
 msgid "Detailed cell classification table"
-msgstr ""
+msgstr "セル分類の詳細表"
 
 #: mSNP/results/mdrGroup/mdrCellTable.title
 msgid "Detailed Cell Risk Classification"
-msgstr ""
+msgstr "セルのリスク分類の詳細"
 
 #: R/mstab.b.R
 msgid "Detailed results shown for attribute: '{name}'"
@@ -3395,6 +3454,8 @@ msgid ""
 "Determined by the earliest time point where the confidence bound for the "
 "mean intersects the specification limit, governed by the worst-case batch."
 msgstr ""
+"平均値の信頼限界が規格限度と交差する最も早い時点で決まり、ワーストケースの"
+"ロットによって律速されます。"
 
 #: R/mtab1.b.R
 #: mMNV/results/sphericityTable.columns.title
@@ -3405,14 +3466,14 @@ msgstr ""
 #: mSRV/results/compRisksSection/grayTestTable.columns.title
 #: mSTAB/results/poolTable.columns.title
 msgid "df"
-msgstr ""
+msgstr "自由度"
 
 #: mMNV/results/multivariateTable.columns.title
 #: mMNV/results/univariateTable.columns.title
 #: mMNV/results/profileTable.columns.title
 #: mMNV/results/assumptionsTable.columns.title
 msgid "df1"
-msgstr ""
+msgstr "自由度1"
 
 #: mSTAB/results/diagTable.columns.title
 msgid "df1 / N"
@@ -3424,18 +3485,18 @@ msgstr ""
 #: mMNV/results/assumptionsTable.columns.title
 #: mSTAB/results/diagTable.columns.title
 msgid "df2"
-msgstr ""
+msgstr "自由度2"
 
 #: mSTAB/results/diagTable.columns.title
 msgid "Diagnostic / Assumption Test"
-msgstr ""
+msgstr "診断 / 仮定の検定"
 
 #: package/analyses/mUI.menuSubgroup
 #: package/analyses/mSNP.menuSubgroup
 #: mSNP/options.menuSubgroup
 #: mUI/options.menuSubgroup
 msgid "Diagnostics & Genetics"
-msgstr ""
+msgstr "診断と遺伝学"
 
 #: mUI/options/UImethod/noUI.title
 msgid "Dichotomization (no uncertainty)"
@@ -3450,6 +3511,8 @@ msgid ""
 "Direct adjustment (G-computation) averages predicted survival over sample "
 "covariates. RMST is restricted mean survival time up to τ."
 msgstr ""
+"直接調整法（G計算）は、標本の共変量にわたって予測生存率を平均します。RMSTはτ"
+"までの制限付き平均生存時間です。"
 
 #: mLR/results/rocTable.columns.title
 #: mMLP/results/rocTable.columns.title
@@ -3466,7 +3529,7 @@ msgstr "向き"
 #: mMOUT/options/plotType/dd.title
 #: mMOUT/results/ddplot.title
 msgid "Distance-Distance Plot"
-msgstr ""
+msgstr "距離-距離プロット"
 
 #: mTAB1/results/normAudit.title
 msgid "Distribution & Normality Audit"
@@ -3495,7 +3558,7 @@ msgstr "分布モデル"
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/dominant.title
 msgid "Dominant"
-msgstr ""
+msgstr "優性"
 
 #: mTAB1/options/plotTypeCat/donut.title
 #: mTAB1/options/plotType/donut.title
@@ -3508,7 +3571,7 @@ msgstr "点線"
 
 #: R/mcor.b.R
 msgid "Dropped Cases (%)"
-msgstr ""
+msgstr "除去したケース（%）"
 
 #: R/mtab1.b.R
 msgid "DSCF (non-parametric)"
@@ -3538,33 +3601,33 @@ msgstr ""
 
 #: mDCA/results/calTable.columns.title
 msgid "E avg"
-msgstr ""
+msgstr "平均誤差"
 
 #: mDCA/results/calTable.columns.title
 msgid "E max"
-msgstr ""
+msgstr "E max"
 
 #: mCOR/options/glassoType/ebic.title
 msgid "EBIC"
-msgstr ""
+msgstr "EBIC"
 
 #: mCOR/options/glassoGamma.title
 msgid "EBIC gamma"
-msgstr ""
+msgstr "EBICのガンマ"
 
 #: mCOR/options/glassoLabels.title
 msgid "Edge labels"
-msgstr ""
+msgstr "エッジのラベル"
 
 #: R/mcor.b.R
 msgid "Edge Weights Bootstrap"
-msgstr ""
+msgstr "エッジ重みのブートストラップ"
 
 #: mMNV/results/multivariateTable.columns.title
 #: mMNV/results/univariateTable.columns.title
 #: mMNV/results/sphericityTable.columns.title
 msgid "Effect"
-msgstr ""
+msgstr "効果"
 
 #: R/mpwr.b.R
 #: mPWR/options/calc/es.title
@@ -3577,42 +3640,44 @@ msgstr "効果量"
 
 #: R/msnp.b.R
 msgid "Effect size (Beta)"
-msgstr ""
+msgstr "効果量（ベータ）"
 
 #: R/mpwr.b.R
 msgid ""
 "Effect size calculation is not supported for equivalence designs. Please "
 "calculate Sample Size (N) or Power instead."
 msgstr ""
+"同等性デザインでは効果量の計算はサポートされていません。代わりに"
+"サンプルサイズ（N）または検出力を計算してください。"
 
 #: mSNP/results/popGroup/popTable.columns.title
 msgid "Effective Alleles (Ne)"
-msgstr ""
+msgstr "有効アレル数（Ne）"
 
 #: R/mpca.b.R
 #: mPCA/results/varianceTable.columns.title
 msgid "Eigenvalue"
-msgstr ""
+msgstr "固有値"
 
 #: R/mpca.b.R
 msgid "Eigenvalues and Parallel Analysis"
-msgstr ""
+msgstr "固有値と平行分析"
 
 #: mLR/options/method/elastic.title
 msgid "ElasticNet (L1 + L2 Regularization)"
-msgstr ""
+msgstr "エラスティックネット（L1 + L2正則化）"
 
 #: R/mlr.b.R
 msgid "ElasticNet (α={alpha}, {penalty})"
-msgstr ""
+msgstr "エラスティックネット（α={alpha}, {penalty}）"
 
 #: mLR/ui[2]/elastic_alpha.label
 msgid "ElasticNet Alpha (0=Ridge, 1=LASSO)"
-msgstr ""
+msgstr "エラスティックネットのアルファ（0=リッジ、1=LASSO）"
 
 #: mLR/options/elastic_alpha.title
 msgid "ElasticNet Alpha (L1 Ratio)"
-msgstr ""
+msgstr "エラスティックネットのアルファ（L1比率）"
 
 #: R/mstab.b.R
 msgid "Elevated temperature testing (ICH Q1E Section 2.5.2)"
@@ -3625,7 +3690,7 @@ msgstr "楕円"
 
 #: R/mstab.b.R
 msgid "Empirical Baseline (Study Condition)"
-msgstr ""
+msgstr "経験的ベースライン（試験条件）"
 
 #: R/mstab.b.R
 msgid ""
@@ -3637,12 +3702,12 @@ msgstr ""
 
 #: R/mmout.b.R
 msgid "Empirical Squared Mahalanobis Distances"
-msgstr ""
+msgstr "経験的マハラノビス距離の2乗"
 
 #: mCOR/options/plotMetU/empty.title
 #: mCOR/options/plotMetL/empty.title
 msgid "Empty"
-msgstr ""
+msgstr "空白"
 
 #: R/mmf.b.R
 msgid "Empty data table"
@@ -3651,43 +3716,45 @@ msgstr "空のデータテーブル"
 #: mSRV/options/tstart.title
 #: mSRV/ui[0][1].label
 msgid "Entry / Start Time (optional)"
-msgstr ""
+msgstr "エントリー／開始時間（任意）"
 
 #: R/msrv.b.R
 msgid "Entry / Start time must be non-negative (>= 0)."
-msgstr ""
+msgstr "エントリー／開始時間は0以上（>= 0）でなければなりません。"
 
 #: R/msrv.b.R
 msgid "Entry / Start time must be strictly less than elapsed time (start < stop)."
 msgstr ""
+"エントリー／開始時間は経過時間より厳密に小さくなければなりません（start < "
+"stop）。"
 
 #: R/msrv.b.R
 msgid "Entry / Start time variable must be numeric."
-msgstr ""
+msgstr "エントリー／開始時間の変数は数値でなければなりません。"
 
 #: R/mstab.b.R
 msgid "Equal batch intercepts (p > {alpha}) -> Proceed to Step 4"
-msgstr ""
+msgstr "ロット間で切片が等しい（p > {alpha}）-> ステップ4へ"
 
 #: R/mstab.b.R
 msgid "Equal cohort slopes (p > {alpha}) -> Proceed to Step 2"
-msgstr ""
+msgstr "コホート間で傾きが等しい（p > {alpha}）-> ステップ2へ"
 
 #: R/mstab.b.R
 msgid "Equal factor intercepts (p > {alpha}) -> Adopt Model 3"
-msgstr ""
+msgstr "因子間で切片が等しい（p > {alpha}）-> モデル3を採用"
 
 #: R/mstab.b.R
 msgid "Equal factor slopes (p > {alpha}) -> Proceed to Step 3"
-msgstr ""
+msgstr "因子間で傾きが等しい（p > {alpha}）-> ステップ3へ"
 
 #: R/mstab.b.R
 msgid "Equal intercepts (p > {alpha}) -> Adopt Model 3"
-msgstr ""
+msgstr "切片が等しい（p > {alpha}）-> モデル3を採用"
 
 #: R/mstab.b.R
 msgid "Equal slopes (p > {alpha}) -> Proceed to Step 2"
-msgstr ""
+msgstr "傾きが等しい（p > {alpha}）-> ステップ2へ"
 
 #: R/mstab.b.R
 msgid "Equation for fitted line: {eq}"
@@ -3696,7 +3763,7 @@ msgstr ""
 #: R/mpwr.b.R
 #: mPWR/ui[0]/alt/equivalent.title
 msgid "equivalence"
-msgstr ""
+msgstr "同等性"
 
 #: R/mpwr.b.R
 msgid ""
@@ -3706,11 +3773,11 @@ msgstr ""
 
 #: R/mmlp.b.R
 msgid "Error during neural network fitting: {err}"
-msgstr ""
+msgstr "ニューラルネットワークの当てはめ中にエラーが発生しました：{err}"
 
 #: R/mrf.b.R
 msgid "Error during Random Forest fitting: {err}"
-msgstr ""
+msgstr "ランダムフォレストの当てはめ中にエラーが発生しました：{err}"
 
 #: R/mmnv.b.R
 msgid "Error evaluating MANOVA model: {error}"
@@ -3718,34 +3785,34 @@ msgstr ""
 
 #: R/mcor.b.R
 msgid "Error in Classical Partial Correlation calculation: {}"
-msgstr ""
+msgstr "古典的偏相関の計算でエラーが発生しました：{}"
 
 #: R/mcor.b.R
 msgid "Error in Classical Semi-Partial Correlation calculation: {}"
-msgstr ""
+msgstr "古典的半偏相関の計算でエラーが発生しました：{}"
 
 #: R/mcor.b.R
 msgid "Error in Graphical Lasso calculation: {}"
-msgstr ""
+msgstr "グラフィカル・ラッソの計算でエラーが発生しました：{}"
 
 #: R/mpca.b.R
 msgid "Error occurred while calculating PCA. Please check your variables."
-msgstr ""
+msgstr "PCAの計算中にエラーが発生しました。変数を確認してください。"
 
 #: mLR/results/misclassifiedTable.columns.title
 #: mMLP/results/misclassifiedTable.columns.title
 #: mRF/results/misclassifiedTable.columns.title
 msgid "Error Type"
-msgstr ""
+msgstr "誤りの種類"
 
 #: mSTAB/results/coefTable.columns.title
 #: mSTAB/results/arrhRegTable.columns.title
 msgid "Estimate"
-msgstr ""
+msgstr "推定値"
 
 #: mLR/results/coeffTable.columns.title
 msgid "Estimate (B)"
-msgstr ""
+msgstr "推定値（B）"
 
 #: mMF/results/imput/errors.title
 msgid "Estimated out-of-bag (OOB) imputation error"
@@ -3753,11 +3820,11 @@ msgstr "推定OOB補完誤差"
 
 #: mLR/ui[1].label
 msgid "Estimation"
-msgstr ""
+msgstr "推定"
 
 #: mCOR/options/netMethod.title
 msgid "Estimation method"
-msgstr ""
+msgstr "推定方法"
 
 #: R/mstab.b.R
 msgid "Evaluated Batch: {batch}"
@@ -3780,6 +3847,8 @@ msgid ""
 "Evaluates drug substance or drug product stability data and estimates shelf "
 "life / retest period according to the ICH Q1E guideline."
 msgstr ""
+"ICH Q1Eガイドラインに従い、原薬または製剤の安定性データを評価し、有効期間／"
+"リテスト期間を推定します。"
 
 #: R/mmnv.b.R
 msgid ""
@@ -3795,7 +3864,7 @@ msgstr ""
 msgid ""
 "Evaluates individual batch shelf lives across all quality attributes "
 "simultaneously."
-msgstr ""
+msgstr "すべての品質特性について、ロットごとの有効期間を同時に評価します。"
 
 #: R/msrv.b.R
 msgid ""
@@ -3803,6 +3872,9 @@ msgid ""
 "determined by the Youden index. Subjects censored before time t are excluded "
 "without IPCW weighting."
 msgstr ""
+"時点tにおけるマーカーの識別精度（AUC）を評価します。カットオフはユーデン指数"
+"により決定されます。時点tより前に打ち切られた対象者は、IPCW重み付けを行わずに"
+"除外されます。"
 
 #: R/mmnv.b.R
 msgid ""
@@ -3810,6 +3882,8 @@ msgid ""
 "(Box's M), multivariate normality (Mardia), and multivariate outliers "
 "(Mahalanobis D²)."
 msgstr ""
+"残差に関するモデルの仮定を評価します：共分散行列の等質性（ボックスのM）、多変"
+"量正規性（マーディア）、多変量外れ値（マハラノビスD²）。"
 
 #: R/mmnv.b.R
 msgid "Evaluates multivariate kurtosis of residuals (H₀: normal kurtosis)"
@@ -3828,6 +3902,8 @@ msgid ""
 "Evaluates regression assumptions: goodness of fit, residual normality "
 "(Shapiro-Wilk), homoscedasticity, and autocorrelation (Durbin-Watson)."
 msgstr ""
+"回帰の仮定を評価します：適合度、残差の正規性（シャピロ=ウィルク）、等分散性、"
+"自己相関（ダービン=ワトソン）。"
 
 #: R/mstab.b.R
 msgid "Evaluation Incomplete"
@@ -3842,7 +3918,7 @@ msgstr "MAR説明モデルの評価"
 msgid ""
 "Evaluation of stability data and shelf life estimation according to ICH Q1E "
 "guideline demonstration"
-msgstr ""
+msgstr "ICH Q1Eガイドラインに基づく安定性データの評価と有効期間推定のデモ"
 
 #: package/analyses/mSTAB.description
 #: mSTAB/options.description.main
@@ -3851,40 +3927,42 @@ msgid ""
 "Q1E guideline using ANCOVA poolability testing and specification-directed "
 "confidence bounds."
 msgstr ""
+"ICH Q1Eガイドラインに従い、ANCOVAによる併合可能性の検定と規格方向に応じた信頼"
+"限界を用いて、安定性データの評価と有効期間の推定を行います。"
 
 #: mSRV/options/statusEvent.title
 #: mSRV/ui[0][2]/statusEvent.label
 msgid "Event level"
-msgstr ""
+msgstr "イベントの水準"
 
 #: mSRV/options/compEvent.title
 #: mSRV/ui[5]/showCompRisks/compEvent.label
 msgid "Event of interest"
-msgstr ""
+msgstr "対象イベント"
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
 #: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 msgid "Events"
-msgstr ""
+msgstr "イベント数"
 
 #: mLR/results/riskTable.columns.title
 #: mMLP/results/riskTable.columns.title
 #: mRF/results/riskTable.columns.title
 msgid "Events (n)"
-msgstr ""
+msgstr "イベント数（n）"
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "Exact p"
-msgstr ""
+msgstr "正確検定 p"
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "Exact p-adj"
-msgstr ""
+msgstr "正確検定 調整済みp"
 
 #: R/mstab.b.R
 msgid "Exceeds by {diff} mo"
-msgstr ""
+msgstr "{diff}か月超過"
 
 #: R/mstab.b.R
 msgid "Exceeds ceiling ({val} mo)"
@@ -3892,63 +3970,63 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Excluded"
-msgstr ""
+msgstr "除外"
 
 #: R/msnp.b.R
 msgid "Excluded {n} heterozygous male genotype call(s) for X-linked analysis."
-msgstr ""
+msgstr "X連鎖解析のため、男性のヘテロ接合の遺伝子型コールを {n} 件除外しました。"
 
 #: R/msnp.b.R
 msgid "Excluded: Call Rate < {val}"
-msgstr ""
+msgstr "除外：コール率 < {val}"
 
 #: R/msnp.b.R
 msgid "Excluded: HWE p < {val}"
-msgstr ""
+msgstr "除外：HWE p < {val}"
 
 #: R/msnp.b.R
 msgid "Excluded: MAF < {val}"
-msgstr ""
+msgstr "除外：MAF < {val}"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
 msgid "Exp AA"
-msgstr ""
+msgstr "期待 AA"
 
 #: R/msnp.b.R
 msgid "Exp AA (n, %)"
-msgstr ""
+msgstr "期待 AA（n, %）"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
 msgid "Exp AB"
-msgstr ""
+msgstr "期待 AB"
 
 #: R/msnp.b.R
 msgid "Exp AB (n, %)"
-msgstr ""
+msgstr "期待 AB（n, %）"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
 msgid "Exp BB"
-msgstr ""
+msgstr "期待 BB"
 
 #: R/msnp.b.R
 msgid "Exp BB (n, %)"
-msgstr ""
+msgstr "期待 BB（n, %）"
 
 #: R/msnp.b.R
 msgid "Expected"
-msgstr ""
+msgstr "期待値"
 
 #: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Expected Influence"
-msgstr ""
+msgstr "期待影響度"
 
 #: R/msnp.b.R
 msgid "Expected p-value (-log10)"
-msgstr ""
+msgstr "期待p値（-log10）"
 
 #: mMF/results/estim/mars.columns.title
 #: mMF/results/estim/fMARtab.template.columns.title
@@ -3960,15 +4038,15 @@ msgstr "説明変数"
 #: mCOR/options.menuSubgroup
 #: mPCA/options.menuSubgroup
 msgid "Exploratory & Factor Analysis"
-msgstr ""
+msgstr "探索的分析・因子分析"
 
 #: mSRV/ui[0][6].label
 msgid "Exposure Variable (Adjusted Curves)"
-msgstr ""
+msgstr "曝露変数（調整済み曲線）"
 
 #: mSRV/options/adjExposure.title
 msgid "Exposure variable (adjusted curves)"
-msgstr ""
+msgstr "曝露変数（調整済み曲線）"
 
 #: package.description
 msgid ""
@@ -3993,7 +4071,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Extrapolation Ceiling"
-msgstr ""
+msgstr "外挿上限"
 
 #: R/mstab.b.R
 msgid "Extrapolation Limit: {cap} mo"
@@ -4001,15 +4079,15 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Extreme Climates"
-msgstr ""
+msgstr "過酷な気候"
 
 #: mMNV/results/assumptionsTable.columns.title
 msgid "F / χ²"
-msgstr ""
+msgstr "F / χ²"
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "F_IS"
-msgstr ""
+msgstr "F_IS"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -4018,39 +4096,39 @@ msgstr "F1値"
 
 #: mSTAB/results/comboShelfTable.columns.title
 msgid "Factor Combination"
-msgstr ""
+msgstr "因子の組み合わせ"
 
 #: mSTAB/results/comboShelfTable.title
 msgid "Factor Combinations Shelf Life Summary Table"
-msgstr ""
+msgstr "因子の組み合わせ別有効期間要約表"
 
 #: R/mstab.b.R
 msgid "Factor intercepts differ (p <= {alpha}) -> Adopt Model 2"
-msgstr ""
+msgstr "因子間で切片が異なる（p <= {alpha}）-> モデル2を採用"
 
 #: mPCA/results/loadingsTable.title
 msgid "Factor Loadings"
-msgstr ""
+msgstr "因子負荷量"
 
 #: mPCA/options/loadingsHeatmap.title
 msgid "Factor loadings heatmap"
-msgstr ""
+msgstr "因子負荷量のヒートマップ"
 
 #: mPCA/results/loadingsHeatmap.title
 msgid "Factor Loadings Heatmap"
-msgstr ""
+msgstr "因子負荷量のヒートマップ"
 
 #: R/mpca.b.R
 msgid "Factor Loadings Matrix"
-msgstr ""
+msgstr "因子負荷行列"
 
 #: mPCA/options/loadingsTable.title
 msgid "Factor loadings table"
-msgstr ""
+msgstr "因子負荷量の表"
 
 #: R/mstab.b.R
 msgid "Factor slopes differ (p <= {alpha}) -> Adopt Model 1"
-msgstr ""
+msgstr "因子間で傾きが異なる（p <= {alpha}）-> モデル1を採用"
 
 #: mSTAB/options/showComboShelfTable.title
 msgid "Factor-Combination Shelf-Life Table"
@@ -4067,50 +4145,50 @@ msgstr "因子（カテゴリカル説明変数）"
 
 #: R/msnp.b.R
 msgid "Failed QC ({label})"
-msgstr ""
+msgstr "QC不合格（{label}）"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "False Negative (FN)"
-msgstr ""
+msgstr "偽陰性（FN）"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "False Positive (FP)"
-msgstr ""
+msgstr "偽陽性（FP）"
 
 #: mLR/options/method.title
 #: mLR/ui[2]/method.label
 msgid "Feature Selection Method"
-msgstr ""
+msgstr "特徴選択の方法"
 
 #: mLR/ui[2].label
 msgid "Feature Selection Settings"
-msgstr ""
+msgstr "特徴選択の設定"
 
 #: mSNP/options/femaleLevel.title
 msgid "Female level"
-msgstr ""
+msgstr "女性の水準"
 
 #: R/msnp.b.R
 msgid ""
 "Fewer than 10 complete cases available; MDR analysis cannot be reliably "
 "performed."
-msgstr ""
+msgstr "完全ケースが10未満のため、MDR解析を信頼性をもって実行できません。"
 
 #: mLR/options/group.title
 #: mLR/ui[0][3].label
 #: mPCA/options/group.title
 #: mPCA/ui[0][2].label
 msgid "Filter Variable"
-msgstr ""
+msgstr "フィルター変数"
 
 #: mCOR/options/group.title
 #: mCOR/ui[0][1].label
 msgid "Filtering Variable"
-msgstr ""
+msgstr "フィルター変数"
 
 #: R/msrv.b.R
 msgid "Fine-Gray model fitting failed to converge: {reason}"
@@ -4138,30 +4216,34 @@ msgstr "第1主成分"
 
 #: R/msrv.b.R
 msgid "Firth's Cox regression warning: {msg}"
-msgstr ""
+msgstr "FirthのCox回帰の警告：{msg}"
 
 #: mLR/options/firth.title
 #: mLR/ui[1]/firth.label
 #: mSRV/options/coxFirth.title
 #: mSRV/ui[3]/showCox/coxFirth.label
 msgid "Firth's penalized likelihood"
-msgstr ""
+msgstr "Firthの罰則付き尤度"
 
 #: R/mlr.b.R
 msgid "Firth's penalized likelihood estimation warning: {msg}"
-msgstr ""
+msgstr "Firthの罰則付き尤度による推定の警告：{msg}"
 
 #: R/mlr.b.R
 msgid ""
 "Firth's penalized likelihood is currently only supported for binary logistic "
 "regression. Falling back to standard multinomial model."
 msgstr ""
+"Firthの罰則付き尤度は現在、二項ロジスティック回帰でのみサポートされています。"
+"通常の多項モデルを使用します。"
 
 #: R/msrv.b.R
 msgid ""
 "Firth's penalized likelihood is not applicable to adjusted survival curves; "
 "standard Cox regression was used."
 msgstr ""
+"Firthの罰則付き尤度は調整済み生存曲線には適用できないため、通常のCox回帰を使"
+"用しました。"
 
 #: R/msrv.b.R
 msgid ""
@@ -4174,6 +4256,8 @@ msgid ""
 "Firth's penalized likelihood is not applicable to time-varying Cox models; "
 "standard Cox regression was used."
 msgstr ""
+"Firthの罰則付き尤度は時間依存Coxモデルには適用できないため、通常のCox回帰を使"
+"用しました。"
 
 #: R/mtab1.b.R
 #: mTAB1/options/catTest/fisher.title
@@ -4192,11 +4276,11 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Fitted Line"
-msgstr ""
+msgstr "回帰直線"
 
 #: R/mstab.b.R
 msgid "Fitted values"
-msgstr ""
+msgstr "予測値"
 
 #: mCOR/options/flag.title
 msgid "Flag significant correlations"
@@ -4209,58 +4293,62 @@ msgstr ""
 #: R/mpca.b.R
 #: mPCA/results/regTable.columns.title
 msgid "Fold"
-msgstr ""
+msgstr "分割"
 
 #: R/mpwr.b.R
 msgid ""
 "For equivalence tests, the expected effect size (|d|) must be strictly less "
 "than the hypothesis margin (δ)."
 msgstr ""
+"同等性検定では、期待される効果量（|d|）は仮説のマージン（δ）より厳密に小さく"
+"なければなりません。"
 
 #: R/mpwr.b.R
 msgid ""
 "For equivalence, non-inferiority, or superiority hypotheses, the hypothesis "
 "margin (δ) must be strictly greater than 0."
 msgstr ""
+"同等性、非劣性、優越性の仮説では、仮説のマージン（δ）は0より厳密に大きくなけ"
+"ればなりません。"
 
 #: mSRV/options/coxForest.title
 msgid "Forest plot of hazard ratios"
-msgstr ""
+msgstr "ハザード比のフォレストプロット"
 
 #: R/mlr.b.R
 #: mLR/results/forestPlot.title
 msgid "Forest Plot of Odds Ratios"
-msgstr ""
+msgstr "オッズ比のフォレストプロット"
 
 #: mLR/options/showForest.title
 #: mLR/ui[4]/showForest.label
 #: mSNP/options/assocForest.title
 msgid "Forest plot of Odds Ratios"
-msgstr ""
+msgstr "オッズ比のフォレストプロット"
 
 #: R/mlr.b.R
 msgid "Forward (AIC)"
-msgstr ""
+msgstr "前進法（AIC）"
 
 #: mLR/options/method/forward.title
 msgid "Forward Stepwise Selection (AIC)"
-msgstr ""
+msgstr "前進ステップワイズ法（AIC）"
 
 #: mSNP/options/freqPct.title
 msgid "Frequencies as percentages (%)"
-msgstr ""
+msgstr "度数をパーセント（%）で表示"
 
 #: mSNP/ui[2].label
 msgid "Frequency Tables"
-msgstr ""
+msgstr "度数表"
 
 #: R/mstab.b.R
 msgid "Frozen (-20°C ± 5°C)"
-msgstr ""
+msgstr "冷凍（-20°C ± 5°C）"
 
 #: mSTAB/options/storageCond/frozen.title
 msgid "Frozen storage (-20°C ± 5°C)"
-msgstr ""
+msgstr "冷凍保存（-20°C ± 5°C）"
 
 #: R/mstab.b.R
 msgid "Frozen: Limited to long-term data duration (ICH Q1E Section 2.5.2)"
@@ -4270,7 +4358,7 @@ msgstr ""
 msgid ""
 "Fully Supported: Conforms to {prop} months within regulatory ceiling ({cap} "
 "months)"
-msgstr ""
+msgstr "完全に支持：{prop}か月は規制上の上限（{cap}か月）の範囲内で適合"
 
 #: R/mtab1.b.R
 msgid "Games-Howell"
@@ -4286,115 +4374,119 @@ msgstr ""
 
 #: mSNP/results/assocGroup/assocTable.title
 msgid "Genetic Association Analysis"
-msgstr ""
+msgstr "遺伝的関連解析"
 
 #: mSNP/options/geneticModel.title
 #: mSNP/results/assocGroup/assocTable.columns.title
 msgid "Genetic model"
-msgstr ""
+msgstr "遺伝モデル"
 
 #: R/msnp.b.R
 msgid "Genetic model: {model}"
-msgstr ""
+msgstr "遺伝モデル：{model}"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/groupAnalysisTable.columns.title
 msgid "Genotype"
-msgstr ""
+msgstr "遺伝子型"
 
 #: mSNP/options/groupTable.title
 msgid "Genotype and allele analysis by outcome"
-msgstr ""
+msgstr "アウトカム別の遺伝子型・アレル解析"
 
 #: mSNP/results/hweGroup/freqTable.title
 msgid "Genotype and Allele Frequencies"
-msgstr ""
+msgstr "遺伝子型頻度とアレル頻度"
 
 #: mSNP/options/barPlot.title
 #: mSNP/results/hweGroup/barPlot.title
 msgid "Genotype barplot (Observed vs Expected)"
-msgstr ""
+msgstr "遺伝子型の棒グラフ（観測 vs 期待）"
 
 #: R/msnp.b.R
 msgid "Genotype Means (Mean ± SD)"
-msgstr ""
+msgstr "遺伝子型別の平均（平均 ± SD）"
 
 #: R/msnp.b.R
 msgid "Genotype N"
-msgstr ""
+msgstr "遺伝子型 N"
 
 #: R/msnp.b.R
 msgid "Genotype test"
-msgstr ""
+msgstr "遺伝子型検定"
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Genotypes"
-msgstr ""
+msgstr "遺伝子型"
 
 #: R/msnp.b.R
 #: mSNP/results/assocGroup/assocTable.columns.title
 msgid "Genotypes Cases"
-msgstr ""
+msgstr "遺伝子型 ケース"
 
 #: R/msnp.b.R
 #: mSNP/results/assocGroup/assocTable.columns.title
 msgid "Genotypes Controls"
-msgstr ""
+msgstr "遺伝子型 対照"
 
 #: R/mdca.b.R
 #: R/mmnv.b.R
 #: R/mstab.b.R
 msgid "Getting started:"
-msgstr ""
+msgstr "はじめに："
 
 #: R/msrv.b.R
 msgid ""
 "Global tests assess whether predictors collectively improve model fit (p < "
 "0.05 indicates significant improvement)."
 msgstr ""
+"全体検定では、予測変数が全体としてモデルの適合を改善するかを評価します（p < "
+"0.05は有意な改善を示します）。"
 
 #: mSTAB/results/comboShelfTable.columns.title
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Governing Batch"
-msgstr ""
+msgstr "律速ロット"
 
 #: R/mstab.b.R
 msgid "Governing Expiry Date"
-msgstr ""
+msgstr "律速となる使用期限"
 
 #: R/mstab.b.R
 msgid "Governing Minimum"
-msgstr ""
+msgstr "律速となる最小値"
 
 #: R/mstab.b.R
 msgid "Governing Statistical Shelf Life"
-msgstr ""
+msgstr "律速となる統計的有効期間"
 
 #: R/mstab.b.R
 msgid "Governing worst-case"
-msgstr ""
+msgstr "律速となるワーストケース"
 
 #: mSTAB/options/detailAttr/worst.title
 msgid "Governing Worst-Case Attribute"
-msgstr ""
+msgstr "律速となるワーストケースの品質特性"
 
 #: mCOR/options/netMethod/glasso.title
 msgid "Graphical Lasso (GLASSO)"
-msgstr ""
+msgstr "グラフィカル・ラッソ（GLASSO）"
 
 #: mSRV/results/compRisksSection/grayTestTable.title
 msgid "Gray's Test for Group Differences"
-msgstr ""
+msgstr "グループ間差のグレイ検定"
 
 #: mSRV/options/showGrayTest.title
 msgid "Gray's test for group differences"
-msgstr ""
+msgstr "グループ間差のグレイ検定"
 
 #: R/msrv.b.R
 msgid ""
 "Gray's test is not supported for counting-process / delayed entry data "
 "(start time specified)."
 msgstr ""
+"計数過程／遅延エントリーのデータ（開始時間を指定）では、グレイ検定はサポート"
+"されていません。"
 
 #: R/mmnv.b.R
 msgid "Greenhouse-Geisser"
@@ -4424,14 +4516,17 @@ msgid ""
 "small sample size or collinearity). Classic Mahalanobis distance was used "
 "instead."
 msgstr ""
+"グループ '{grp}'：ロバストなMCD共分散推定に失敗しました（サンプルサイズが小さ"
+"いか共線性が原因の可能性があります）。代わりに古典的マハラノビス距離を使用し"
+"ました。"
 
 #: R/mpca.b.R
 msgid "Group Projection in PCA Space"
-msgstr ""
+msgstr "PCA空間でのグループの射影"
 
 #: R/mmnv.b.R
 msgid "Group Scatter with Data Ellipses"
-msgstr ""
+msgstr "データ楕円付きグループ散布図"
 
 #: R/mpca.b.R
 msgid "Group: {group}"
@@ -4439,7 +4534,7 @@ msgstr ""
 
 #: R/mpca.b.R
 msgid "Group: {group} (Permutation {p})"
-msgstr ""
+msgstr "グループ：{group}（置換 {p}）"
 
 #: mMOUT/options/group.title
 #: mMOUT/ui[0][1].label
@@ -4464,62 +4559,62 @@ msgstr ""
 
 #: R/msrv.b.R
 msgid "Grouping variable must have at least 2 levels for Gray's test."
-msgstr ""
+msgstr "グレイ検定には、グループ化変数に少なくとも2つの水準が必要です。"
 
 #: R/mpca.b.R
 msgid ""
 "Grouping variable must have at least 2 levels for regression and ROC "
 "analysis."
-msgstr ""
+msgstr "回帰分析とROC分析には、グループ化変数に少なくとも2つの水準が必要です。"
 
 #: mCOR/options/glassoLayout/groups.title
 msgid "Groups"
-msgstr ""
+msgstr "グループ"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
 msgid "H(exp)"
-msgstr ""
+msgstr "H（期待）"
 
 #: R/msnp.b.R
 msgid "H(exp) (%)"
-msgstr ""
+msgstr "H(exp)（%）"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
 msgid "H(obs)"
-msgstr ""
+msgstr "H（観測）"
 
 #: R/msnp.b.R
 msgid "H(obs) (%)"
-msgstr ""
+msgstr "H(obs)（%）"
 
 #: mSNP/ui[3].label
 #: mSNP/results/hweGroup.title
 msgid "Hardy-Weinberg Equilibrium (HWE) Analysis"
-msgstr ""
+msgstr "ハーディ・ワインベルグ平衡（HWE）解析"
 
 #: mSNP/results/hweGroup/hwTable.title
 msgid "Hardy-Weinberg Equilibrium Statistical Tests"
-msgstr ""
+msgstr "ハーディ・ワインベルグ平衡の統計的検定"
 
 #: mDCA/options/harm.title
 msgid "Harm of Intervention"
-msgstr ""
+msgstr "介入の害"
 
 #: R/mpwr.b.R
 #: R/msrv.b.R
 msgid "Hazard Ratio"
-msgstr ""
+msgstr "ハザード比"
 
 #: mSRV/results/coxSection/coxCoefTable.columns.title
 #: mSRV/results/coxSection/timeDepTable.columns.title
 msgid "Hazard Ratio (HR)"
-msgstr ""
+msgstr "ハザード比（HR）"
 
 #: R/msrv.b.R
 msgid "Hazard Ratios (95% CI)"
-msgstr ""
+msgstr "ハザード比（95%信頼区間）"
 
 #: package/datasets/HIROCclassification.description
 msgid "Healthy/Ill ROC Classification demonstration"
@@ -4527,11 +4622,11 @@ msgstr "健常／病者ROC分類デモ"
 
 #: mSNP/options/ldMetric.title
 msgid "Heatmap metric"
-msgstr ""
+msgstr "ヒートマップの指標"
 
 #: mMNV/options/contrastType/helmert.title
 msgid "Helmert"
-msgstr ""
+msgstr "ヘルマート"
 
 #: package/datasets/HIROCclassification.name
 msgid "HI ROC classification"
@@ -4567,6 +4662,8 @@ msgid ""
 "Hierarchical clustering cannot be computed because the correlation matrix "
 "contains missing (NA/NaN) values."
 msgstr ""
+"相関行列に欠損値（NA/NaN）が含まれているため、階層的クラスタリングを計算でき"
+"ません。"
 
 #: mCOR/results/treeplot.title
 msgid "Hierarchical clustering tree"
@@ -4577,7 +4674,7 @@ msgstr "階層的クラスタリングツリー"
 #: R/mrf.b.R
 #: R/msnp.b.R
 msgid "High Risk"
-msgstr ""
+msgstr "高リスク"
 
 #: mLR/options/risk_cut_high.title
 #: mLR/ui[4]/show_risk_strat/risk_cut_high.label
@@ -4586,15 +4683,15 @@ msgstr ""
 #: mRF/options/risk_cut_high.title
 #: mRF/ui[3]/show_risk_strat/risk_cut_high.label
 msgid "High Risk Threshold (%)"
-msgstr ""
+msgstr "高リスクの閾値（%）"
 
 #: R/mcor.b.R
 msgid "High stability (CS >= 0.5)"
-msgstr ""
+msgstr "高い安定性（CS >= 0.5）"
 
 #: R/mstab.b.R
 msgid "Highly Conservative (Low thermal sensitivity)"
-msgstr ""
+msgstr "非常に保守的（温度感受性が低い）"
 
 #: mCOR/options/adjust/hochberg.title
 msgid "Hochberg (1988)"
@@ -4602,11 +4699,11 @@ msgstr "Hochberg (1988)"
 
 #: R/mlr.b.R
 msgid "Hold-out ({split}%)"
-msgstr ""
+msgstr "ホールドアウト（{split}%）"
 
 #: mLR/results/infoTable.columns.title
 msgid "Hold-out Acc (%)"
-msgstr ""
+msgstr "ホールドアウト正解率（%）"
 
 #: mMLP/results/infoTable.columns.title
 #: mRF/results/infoTable.columns.title
@@ -4617,11 +4714,11 @@ msgstr "ホールドアウト正解率（%）"
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Hold-out Validation"
-msgstr ""
+msgstr "ホールドアウト検証"
 
 #: R/mpca.b.R
 msgid "Hold-out Validation (AUC = {auc})"
-msgstr ""
+msgstr "ホールドアウト検証（AUC = {auc}）"
 
 #: mLR/options/partition/holdout.title
 #: mMLP/options/partition/holdout.title
@@ -4643,7 +4740,7 @@ msgstr "ホールドアウト分割比率（%）"
 #: mTAB1/options/padjust/holm.title
 #: mTAB1/options/postHocMethod/holm.title
 msgid "Holm"
-msgstr ""
+msgstr "ホルム"
 
 #: mCOR/options/adjust/holm.title
 msgid "Holm (1979)"
@@ -4667,11 +4764,11 @@ msgstr "Hommel (1988)"
 
 #: R/mstab.b.R
 msgid "Homoscedasticity (|e| vs Time correlation)"
-msgstr ""
+msgstr "等分散性（|e|と時間の相関）"
 
 #: R/mstab.b.R
 msgid "Hot & Humid Condition (Zone IVb)"
-msgstr ""
+msgstr "高温多湿条件（気候区分 IVb）"
 
 #: R/mmnv.b.R
 msgid "Hotelling-Lawley Trace"
@@ -4685,11 +4782,11 @@ msgstr ""
 msgid ""
 "HR > 1 indicates increased risk of event, HR < 1 indicates lower risk "
 "(protective effect)."
-msgstr ""
+msgstr "HR > 1 はイベントのリスク増加、HR < 1 はリスク低下（保護効果）を示します。"
 
 #: mCOR/options/glassoHub.title
 msgid "Hub markers table"
-msgstr ""
+msgstr "ハブマーカーの表"
 
 #: R/mmnv.b.R
 msgid "Huynh-Feldt"
@@ -4701,7 +4798,7 @@ msgstr ""
 
 #: R/msnp.b.R
 msgid "HWE compliant"
-msgstr ""
+msgstr "HWEに適合"
 
 #: R/msnp.b.R
 msgid "HWE compliant (chi-square test)"
@@ -4713,7 +4810,7 @@ msgstr ""
 
 #: R/msnp.b.R
 msgid "HWE deviation"
-msgstr ""
+msgstr "HWEからの逸脱"
 
 #: R/msnp.b.R
 msgid "HWE deviation (chi-square test)"
@@ -4725,11 +4822,11 @@ msgstr ""
 
 #: mSNP/results/qcGroup/qcTable.columns.title
 msgid "HWE p-value (Controls)"
-msgstr ""
+msgstr "HWEのp値（対照群）"
 
 #: mSNP/options/hwTests.title
 msgid "HWE statistical tests"
-msgstr ""
+msgstr "HWEの統計的検定"
 
 #: mCOR/options/hyp.title
 #: mMNV/results/profileTable.columns.title
@@ -4739,7 +4836,7 @@ msgstr "仮説"
 #: mPWR/options/margin.title
 #: mPWR/ui[0]/margin.label
 msgid "Hypothesis margin (δ)"
-msgstr ""
+msgstr "仮説のマージン（δ）"
 
 #: R/mstab.b.R
 msgid "ICH Permitted: {val} mo"
@@ -4763,25 +4860,25 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "ICH Q1E Extrapolation:"
-msgstr ""
+msgstr "ICH Q1E 外挿："
 
 #: R/mstab.b.R
 msgid "ICH Q1E Logic Engine"
-msgstr ""
+msgstr "ICH Q1E 判定ロジック"
 
 #: R/mstab.b.R
 msgid "ICH Q1E Permitted Shelf Life"
-msgstr ""
+msgstr "ICH Q1E 許容有効期間"
 
 #: mSTAB/results/shelfTable.columns.title
 #: mSTAB/results/comboShelfTable.columns.title
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "ICH Q1E Permitted Shelf Life (months)"
-msgstr ""
+msgstr "ICH Q1E 許容有効期間（か月）"
 
 #: mSTAB/results/regTable.title
 msgid "ICH Q1E Regulatory Extrapolation & Decision Tree Summary"
-msgstr ""
+msgstr "ICH Q1E 規制上の外挿と判定樹の要約"
 
 #: package/datasets/Outliersidentificationandremoval.description
 msgid "Identification, analysis and removal of data outliers by groups"
@@ -4806,25 +4903,25 @@ msgstr "補完"
 
 #: mRF/results/importanceTable.columns.title
 msgid "Importance"
-msgstr ""
+msgstr "重要度"
 
 #: mRF/options/imp_type.title
 #: mRF/ui[3]/show_imp/imp_type.label
 msgid "Importance Type"
-msgstr ""
+msgstr "重要度の種類"
 
 #: R/mrf.b.R
 msgid "Importance type:"
-msgstr ""
+msgstr "重要度の種類："
 
 #: R/mrf.b.R
 #: mRF/options/imp_type/impurity.title
 msgid "Impurity (Gini) Importance"
-msgstr ""
+msgstr "不純度（ジニ）重要度"
 
 #: R/mmf.b.R
 msgid "Imputation failed: {}"
-msgstr ""
+msgstr "補完に失敗しました：{}"
 
 #: R/mmf.b.R
 msgid "Imputation model predictor"
@@ -4865,7 +4962,7 @@ msgstr "独立標本（ウィルコクソン）"
 
 #: mMOUT/results/oind.columns.title
 msgid "Indices"
-msgstr ""
+msgstr "インデックス"
 
 #: R/mout.b.R
 msgid "Indices (Rows)"
@@ -4873,11 +4970,11 @@ msgstr "インデックス（行）"
 
 #: R/mstab.b.R
 msgid "Individual Batch"
-msgstr ""
+msgstr "個別ロット"
 
 #: mSTAB/results/batchPlots.title
 msgid "Individual Batch Shelf Life Plots"
-msgstr ""
+msgstr "ロット別の有効期間プロット"
 
 #: mSTAB/options/showBatchPlots.title
 msgid "Individual Batch Shelf-Life Plots"
@@ -4890,20 +4987,20 @@ msgstr ""
 #: mSTAB/options/showFacetPlot.title
 #: mSTAB/results/facetPlot.title
 msgid "Individual Batch Trajectories (Faceted)"
-msgstr ""
+msgstr "ロット別の推移（ファセット表示）"
 
 #: mSTAB/results/predPlot.title
 msgid "Individual Prediction Intervals & Release Limits (SRL)"
-msgstr ""
+msgstr "個別の予測区間と出荷規格（SRL）"
 
 #: mPCA/options/biplot.title
 #: mPCA/results/biplot.title
 msgid "Influence vectors (Biplot)"
-msgstr ""
+msgstr "影響ベクトル（バイプロット）"
 
 #: R/mmf.b.R
 msgid "Influx"
-msgstr ""
+msgstr "流入"
 
 #: mMF/results/estim/fplot.title
 msgid "Influx-outflux plot"
@@ -4919,6 +5016,8 @@ msgid ""
 "outside specification limits. Establishing a valid shelf life is "
 "questionable."
 msgstr ""
+"品質特性 '{attr}' の時点 {t0} における初期観測値が、すでに規格限度を外れてい"
+"ます。妥当な有効期間を設定できるかは疑問です。"
 
 #: mMLP/options/rang.title
 #: mMLP/ui[1]/rang.label
@@ -4931,7 +5030,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Input inconsistency"
-msgstr ""
+msgstr "入力の不整合"
 
 #: R/mmlp.b.R
 msgid "Input Layer"
@@ -4941,11 +5040,11 @@ msgstr "入力層"
 #: mSTAB/results/instructions.title
 #: mTAB1/results/instructions.title
 msgid "Instructions"
-msgstr ""
+msgstr "説明"
 
 #: mMNV/results/instructions.title
 msgid "Instructions & Methodological Guidance"
-msgstr ""
+msgstr "説明と方法論ガイド"
 
 #: R/mtab1.b.R
 msgid "Insufficient data"
@@ -4953,28 +5052,28 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Insufficient degrees of freedom for intercepts test"
-msgstr ""
+msgstr "切片の検定に必要な自由度が不足しています"
 
 #: R/mstab.b.R
 msgid "Insufficient degrees of freedom for slopes test"
-msgstr ""
+msgstr "傾きの検定に必要な自由度が不足しています"
 
 #: R/mstab.b.R
 #: mSTAB/options/storageCond.title
 msgid "Intended Storage Condition"
-msgstr ""
+msgstr "予定する保存条件"
 
 #: R/msnp.b.R
 msgid "Interaction Order"
-msgstr ""
+msgstr "交互作用の次数"
 
 #: mSTAB/results/shelfTable.columns.title
 msgid "Intercept (t = 0)"
-msgstr ""
+msgstr "切片（t = 0）"
 
 #: R/mstab.b.R
 msgid "Intercepts differ (p <= {alpha}) -> Adopt Model 2"
-msgstr ""
+msgstr "切片が異なる（p <= {alpha}）-> モデル2を採用"
 
 #: mCOR/options/clustMat.title
 #: mCOR/results/rplots.title
@@ -4983,19 +5082,19 @@ msgstr "クラスター間行列"
 
 #: R/mstab.b.R
 msgid "Intermediate Condition (Zone IVa)"
-msgstr ""
+msgstr "中間的条件（気候区分 IVa）"
 
 #: mSTAB/options/intermedResult.title
 msgid "Intermediate Condition Testing Outcome (where applicable)"
-msgstr ""
+msgstr "中間的条件での試験結果（該当する場合）"
 
 #: R/mstab.b.R
 msgid "Intermediate Testing Outcome"
-msgstr ""
+msgstr "中間的試験の結果"
 
 #: mMNV/results/profileTable.columns.title
 msgid "Interpretation"
-msgstr ""
+msgstr "解釈"
 
 #: R/mui.b.R
 #: mUI/results/stat/uistat.columns.title
@@ -5019,16 +5118,16 @@ msgstr ""
 
 #: R/mdca.b.R
 msgid "Interventions Avoided (per 100 patients)"
-msgstr ""
+msgstr "回避された介入（100人あたり）"
 
 #: mDCA/options/showAvoidedPlot.title
 msgid "Interventions Avoided Plot"
-msgstr ""
+msgstr "回避された介入のプロット"
 
 #: mPWR/options/icc.title
 #: mPWR/ui[2]/icc.label
 msgid "Intraclass correlation (ICC)"
-msgstr ""
+msgstr "級内相関（ICC）"
 
 #: R/mmlp.b.R
 msgid ""
@@ -5112,12 +5211,12 @@ msgstr ""
 #: R/mlr.b.R
 #: R/mpca.b.R
 msgid "K-Fold CV"
-msgstr ""
+msgstr "K分割交差検証"
 
 #: R/mlr.b.R
 #: R/mpca.b.R
 msgid "K-Fold CV (AUC = {auc})"
-msgstr ""
+msgstr "K分割交差検証（AUC = {auc}）"
 
 #: mMLP/results/infoTable.columns.title
 #: mRF/results/infoTable.columns.title
@@ -5127,27 +5226,27 @@ msgstr "K分割交差検証の正解率（%）"
 #: mPCA/options/regKFold.title
 #: mPCA/ui[3][0]/regKFold.label
 msgid "K-folds for CV"
-msgstr ""
+msgstr "交差検証の分割数（K）"
 
 #: mPCA/ui[3][0][0].label
 msgid "K-Means «Blind» Clustering"
-msgstr ""
+msgstr "K平均法による「ブラインド」クラスタリング"
 
 #: mPCA/results/kmeansTable.title
 msgid "K-Means «Blind» Clustering vs Real Groups"
-msgstr ""
+msgstr "K平均法による「ブラインド」クラスタリング vs 実際のグループ"
 
 #: R/mpca.b.R
 msgid "K-Means Cluster"
-msgstr ""
+msgstr "K平均法クラスター"
 
 #: R/mpca.b.R
 msgid "K-Means clustering failed:"
-msgstr ""
+msgstr "K平均法クラスタリングに失敗しました："
 
 #: mPCA/options/kmeansTable.title
 msgid "K-Means contingency/ARI comparison"
-msgstr ""
+msgstr "K平均法の分割表／ARIによる比較"
 
 #: mSRV/results/kmSection/kmPlot.title
 msgid "Kaplan-Meier Curve"
@@ -5191,7 +5290,7 @@ msgstr "ケンドールのタウ"
 
 #: mSTAB/results/arrhRegTable.columns.title
 msgid "Kinetic Parameter"
-msgstr ""
+msgstr "速度論パラメータ"
 
 #: R/mtab1.b.R
 msgid "Kruskal-Wallis"
@@ -5207,31 +5306,31 @@ msgstr ""
 
 #: mLR/options/lasso_penalty/1se.title
 msgid "Lambda 1SE (Most Sparse Model)"
-msgstr ""
+msgstr "Lambda 1SE（最もスパースなモデル）"
 
 #: mLR/options/lasso_penalty/min.title
 msgid "Lambda Min (Minimum CV Error)"
-msgstr ""
+msgstr "Lambda Min（交差検証誤差が最小）"
 
 #: R/mlr.b.R
 msgid "LASSO ({penalty})"
-msgstr ""
+msgstr "LASSO（{penalty}）"
 
 #: mLR/options/method/lasso.title
 msgid "LASSO L1 Regularization"
-msgstr ""
+msgstr "LASSO L1正則化"
 
 #: mSNP/results/ldGroup/ldHeatmap.title
 msgid "LD Heatmap"
-msgstr ""
+msgstr "LDヒートマップ"
 
 #: mSNP/options/ldHeatmap.title
 msgid "LD heatmap (r² / D' triangular plot)"
-msgstr ""
+msgstr "LDヒートマップ（r² / D' の三角プロット）"
 
 #: mSNP/options/ldTable.title
 msgid "LD metrics table"
-msgstr ""
+msgstr "LD指標の表"
 
 #: mMLP/options/show_curve.title
 msgid "Learning Curve"
@@ -5259,15 +5358,15 @@ msgstr ""
 
 #: R/msrv.b.R
 msgid "Likelihood Ratio Test"
-msgstr ""
+msgstr "尤度比検定"
 
 #: mSTAB/results/multiBatchTable.columns.title
 msgid "Limiting Attribute"
-msgstr ""
+msgstr "律速となる品質特性"
 
 #: R/mstab.b.R
 msgid "Limiting batch"
-msgstr ""
+msgstr "律速ロット"
 
 #: R/mstab.b.R
 msgid "Limiting Batch: {batch}"
@@ -5275,7 +5374,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Limiting combination"
-msgstr ""
+msgstr "律速となる組み合わせ"
 
 #: R/mstab.b.R
 msgid "Limiting CQA: {attr}"
@@ -5291,7 +5390,7 @@ msgstr "線幅"
 
 #: R/mmnv.b.R
 msgid "Linear"
-msgstr ""
+msgstr "1次"
 
 #: R/mpwr.b.R
 #: mPWR/options/design/linear.title
@@ -5304,24 +5403,24 @@ msgstr ""
 
 #: mSNP/options/ldEnable.title
 msgid "Linkage Disequilibrium (LD) analysis"
-msgstr ""
+msgstr "連鎖不平衡（LD）解析"
 
 #: mSNP/ui[10].label
 #: mSNP/results/ldGroup.title
 msgid "Linkage Disequilibrium (LD) Analysis"
-msgstr ""
+msgstr "連鎖不平衡（LD）解析"
 
 #: mSNP/results/ldGroup/ldTable.title
 msgid "Linkage Disequilibrium (LD) Table"
-msgstr ""
+msgstr "連鎖不平衡（LD）表"
 
 #: R/mstab.b.R
 msgid "Little or no change / low variability"
-msgstr ""
+msgstr "ほとんど変化なし / ばらつきが小さい"
 
 #: R/mpca.b.R
 msgid "Loading"
-msgstr ""
+msgstr "負荷量"
 
 #: R/mstab.b.R
 msgctxt "Log Degradation Rate"
@@ -5330,48 +5429,50 @@ msgstr ""
 
 #: mLR/ui[4]/showForest/forestLog.label
 msgid "Log scale"
-msgstr ""
+msgstr "対数目盛"
 
 #: mLR/options/forestLog.title
 msgid "Log scale for Odds Ratios"
-msgstr ""
+msgstr "オッズ比を対数目盛で表示"
 
 #: R/mstab.b.R
 msgid ""
 "Log transformation requires strictly positive values of the response "
 "variable."
-msgstr ""
+msgstr "対数変換には、応答変数が厳密に正の値である必要があります。"
 
 #: R/mstab.b.R
 msgid ""
 "Log transformation: Intercepts are back-transformed (original units); slopes "
 "represent relative change per month on log scale."
 msgstr ""
+"対数変換：切片は逆変換されています（元の単位）。傾きは対数尺度での1か月あたり"
+"の相対変化を表します。"
 
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/log-additive.title
 msgid "Log-additive"
-msgstr ""
+msgstr "対数加算"
 
 #: mSRV/results/logRankTable.title
 msgid "Log-rank Test (Group Comparison)"
-msgstr ""
+msgstr "ログランク検定（グループ比較）"
 
 #: R/msrv.b.R
 msgid "Log-rank test could not be computed: {err}"
-msgstr ""
+msgstr "ログランク検定を計算できませんでした：{err}"
 
 #: mSRV/options/showLogRank.title
 msgid "Log-rank test for group comparison"
-msgstr ""
+msgstr "グループ比較のためのログランク検定"
 
 #: R/mlr.b.R
 msgid "Log(OR)"
-msgstr ""
+msgstr "Log(OR)"
 
 #: mSRV/options/timeDepFunc/log.title
 msgid "log(t) (Logarithmic time)"
-msgstr ""
+msgstr "log(t)（対数時間）"
 
 #: package/analyses/mLR.title
 #: package/analyses/mLR.menuTitle
@@ -5380,7 +5481,7 @@ msgstr ""
 #: mLR/ui.title
 #: mLR/results.title
 msgid "Logistic Regression"
-msgstr ""
+msgstr "ロジスティック回帰"
 
 #: R/mpwr.b.R
 #: mPWR/options/design/logistic.title
@@ -5389,23 +5490,23 @@ msgstr "ロジスティック回帰（ワルドZ検定）"
 
 #: package/datasets/LogisticRegressionbloodcells.name
 msgid "Logistic Regression blood cells"
-msgstr ""
+msgstr "ロジスティック回帰 血球"
 
 #: package/datasets/LogisticRegressionbloodcells.description
 msgid "Logistic Regression demonstration"
-msgstr ""
+msgstr "ロジスティック回帰のデモ"
 
 #: R/mlr.b.R
 msgid "Logistic Regression Model (Log-odds)"
-msgstr ""
+msgstr "ロジスティック回帰モデル（対数オッズ）"
 
 #: R/mlr.b.R
 msgid "Logistic Regression Predicted Class"
-msgstr ""
+msgstr "ロジスティック回帰の予測クラス"
 
 #: R/mlr.b.R
 msgid "Logistic Regression Predicted Probability"
-msgstr ""
+msgstr "ロジスティック回帰の予測確率"
 
 #: package/analyses/mLR.description
 #: mLR/options.description.main
@@ -5414,14 +5515,16 @@ msgid ""
 "partitioning uses a random seed (default 42, configurable under Validation "
 "Settings) for reproducibility."
 msgstr ""
+"特徴選択付きロジスティック回帰。再現性のため、交差検証の分割には乱数シード（"
+"既定値42、検証設定で変更可能）を使用します。"
 
 #: mSTAB/options/littleChange.title
 msgid "Long-term data show little or no change and little variability"
-msgstr ""
+msgstr "長期保存試験データでほとんど変化がなく、ばらつきも小さい"
 
 #: R/mstab.b.R
 msgid "Long-term Data Variability"
-msgstr ""
+msgstr "長期保存試験データのばらつき"
 
 #: mSTAB/options/studyDuration.title
 msgid "Long-term Duration (months, 0 = auto)"
@@ -5433,30 +5536,30 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "long-term storage condition"
-msgstr ""
+msgstr "長期保存条件"
 
 #: mSTAB/options/arrhDataCondition/long_term.title
 msgid "Long-term storage condition (e.g. 25°C / 60% RH)"
-msgstr ""
+msgstr "長期保存条件（例：25°C / 60% RH）"
 
 #: mSTAB/options/arrhRhLong.title
 msgid "Long-Term Storage Relative Humidity (%)"
-msgstr ""
+msgstr "長期保存の相対湿度（%）"
 
 #: mSTAB/options/arrhTempLong.title
 msgid "Long-Term Storage Temperature (°C)"
-msgstr ""
+msgstr "長期保存の温度（°C）"
 
 #: R/mstab.b.R
 msgid "Long-term Study Duration (Y)"
-msgstr ""
+msgstr "長期保存試験の期間（Y）"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 #: R/msnp.b.R
 msgid "Low Risk"
-msgstr ""
+msgstr "低リスク"
 
 #: mLR/options/risk_cut_low.title
 #: mLR/ui[4]/show_risk_strat/risk_cut_low.label
@@ -5465,16 +5568,16 @@ msgstr ""
 #: mRF/options/risk_cut_low.title
 #: mRF/ui[3]/show_risk_strat/risk_cut_low.label
 msgid "Low Risk Threshold (%)"
-msgstr ""
+msgstr "低リスクの閾値（%）"
 
 #: R/mcor.b.R
 msgid "Low stability (CS < 0.25). Interpret centrality with caution."
-msgstr ""
+msgstr "安定性が低い（CS < 0.25）。中心性の解釈には注意してください。"
 
 #: mROC/results/rocTable.columns.title
 #: mSTAB/results/arrhRegTable.columns.title
 msgid "Lower"
-msgstr ""
+msgstr "下限"
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
@@ -5482,15 +5585,15 @@ msgstr ""
 #: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 #: mSRV/results/compRisksSection/fineGrayTable.columns.title
 msgid "Lower 95% CI"
-msgstr ""
+msgstr "95%信頼区間下限"
 
 #: mMNV/results/sphericityTable.columns.title
 msgid "Lower Bound ε"
-msgstr ""
+msgstr "下限 ε"
 
 #: mSRV/results/rocSection/rocTable.columns.title
 msgid "Lower CI"
-msgstr ""
+msgstr "信頼区間下限"
 
 #: R/mout.b.R
 msgid "Lower fence"
@@ -5499,16 +5602,16 @@ msgstr "フェンス下限"
 #: mSTAB/options/specType/lower.title
 #: mSTAB/options/specType2/lower.title
 msgid "Lower limit only (Decreasing attribute / Assay)"
-msgstr ""
+msgstr "下限のみ（減少する品質特性 / 含量）"
 
 #: mSTAB/options/specType3/lower.title
 msgid "Lower limit only (Decreasing attribute / Dissolution)"
-msgstr ""
+msgstr "下限のみ（減少する品質特性 / 溶出性）"
 
 #: mSTAB/options/specType4/lower.title
 #: mSTAB/options/specType5/lower.title
 msgid "Lower limit only (Decreasing attribute)"
-msgstr ""
+msgstr "下限のみ（減少する品質特性）"
 
 #: mCOR/options/plotMetL.title
 msgid "Lower part"
@@ -5516,35 +5619,35 @@ msgstr "下部"
 
 #: mSTAB/options/lsl2.title
 msgid "Lower Specification Limit (LSL 2)"
-msgstr ""
+msgstr "規格下限（LSL 2）"
 
 #: mSTAB/options/lsl3.title
 msgid "Lower Specification Limit (LSL 3)"
-msgstr ""
+msgstr "規格下限（LSL 3）"
 
 #: mSTAB/options/lsl4.title
 msgid "Lower Specification Limit (LSL 4)"
-msgstr ""
+msgstr "規格下限（LSL 4）"
 
 #: mSTAB/options/lsl5.title
 msgid "Lower Specification Limit (LSL 5)"
-msgstr ""
+msgstr "規格下限（LSL 5）"
 
 #: mSTAB/options/lsl.title
 msgid "Lower Specification Limit (LSL)"
-msgstr ""
+msgstr "規格下限（LSL）"
 
 #: R/mstab.b.R
 msgid ""
 "Lower specification limit (LSL) must be specified when Specification Type "
 "includes lower limit."
-msgstr ""
+msgstr "規格の種類に下限が含まれる場合は、規格下限（LSL）を指定する必要があります。"
 
 #: R/mstab.b.R
 msgid ""
 "Lower specification limit (LSL) must be strictly less than Upper "
 "specification limit (USL)."
-msgstr ""
+msgstr "規格下限（LSL）は規格上限（USL）より厳密に小さくなければなりません。"
 
 #: R/mstab.b.R
 msgid "Lower SRL: {val}"
@@ -5556,23 +5659,23 @@ msgstr "下限値"
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "LR-"
-msgstr ""
+msgstr "LR-"
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "LR+"
-msgstr ""
+msgstr "LR+"
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "LRT p"
-msgstr ""
+msgstr "尤度比検定 p"
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "LRT p-adj"
-msgstr ""
+msgstr "尤度比検定 調整済みp"
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "LRT Stat"
-msgstr ""
+msgstr "尤度比検定 統計量"
 
 #: R/mstab.b.R
 msgid "LS = Lower Specification"
@@ -5581,31 +5684,31 @@ msgstr ""
 #: mSNP/results/qcGroup/qcTable.columns.title
 #: mSNP/results/popGroup/popTable.columns.title
 msgid "MAF"
-msgstr ""
+msgstr "MAF"
 
 #: R/msnp.b.R
 msgid "MAF = {val}"
-msgstr ""
+msgstr "MAF = {val}"
 
 #: R/msnp.b.R
 msgid "MAF is below threshold ({thr})"
-msgstr ""
+msgstr "MAFが閾値（{thr}）を下回っています"
 
 #: mSNP/options/ternaryShowMAF.title
 msgid "MAF threshold boundary lines"
-msgstr ""
+msgstr "MAF閾値の境界線"
 
 #: mSNP/options/mafThreshold.title
 msgid "MAF threshold for warnings"
-msgstr ""
+msgstr "警告を出すMAFの閾値"
 
 #: R/mmnv.b.R
 msgid "Mahalanobis Distance D²"
-msgstr ""
+msgstr "マハラノビス距離 D²"
 
 #: R/mmnv.b.R
 msgid "Mahalanobis Distance D² (Residual Outliers)"
-msgstr ""
+msgstr "マハラノビス距離 D²（残差の外れ値）"
 
 #: R/mtab1.b.R
 msgid "Mann-Whitney U"
@@ -5614,11 +5717,11 @@ msgstr ""
 #: R/mlr.b.R
 #: mRF/options/mtry_method/manual.title
 msgid "Manual"
-msgstr ""
+msgstr "手動"
 
 #: mLR/options/method/manual.title
 msgid "Manual (Use All Predictors)"
-msgstr ""
+msgstr "手動（すべての予測変数を使用）"
 
 #: R/mcor.b.R
 msgid ""
@@ -5633,15 +5736,15 @@ msgstr "手動クラスタ"
 #: mRF/options/mtry_val.title
 #: mRF/ui[1]/mtry_val.label
 msgid "Manual mtry Value"
-msgstr ""
+msgstr "mtryの値（手動）"
 
 #: mCOR/options/glassoType/manual.title
 msgid "Manual penalty"
-msgstr ""
+msgstr "手動ペナルティ"
 
 #: mCOR/options/glassoRho.title
 msgid "Manual penalty (ρ)"
-msgstr ""
+msgstr "手動ペナルティ（ρ）"
 
 #: mMF/results/estim/mcar.description
 #: mMF/results/estim/mars.description
@@ -5650,11 +5753,11 @@ msgstr "MAR分類表"
 
 #: R/mmnv.b.R
 msgid "Mardia Multivariate Kurtosis (Residuals)"
-msgstr ""
+msgstr "マーディアの多変量尖度（残差）"
 
 #: R/mmnv.b.R
 msgid "Mardia Multivariate Skewness (Residuals)"
-msgstr ""
+msgstr "マーディアの多変量歪度（残差）"
 
 #: mROC/options/mAst.title
 msgid "Mark significance *<0.05, **<0.01, ***<0.001"
@@ -5667,35 +5770,37 @@ msgstr "有意なものに印 *<0.05, **<0.01, ***<0.001"
 #: mSNP/results/qcGroup/qcTable.columns.title
 #: mSNP/results/popGroup/popTable.columns.title
 msgid "Marker"
-msgstr ""
+msgstr "マーカー"
 
 #: R/msnp.b.R
 msgid ""
 "Marker '{marker}' has more than two distinct alleles ({alleles}). Only "
 "bi-allelic markers are supported."
 msgstr ""
+"マーカー '{marker}' には3つ以上のアレル（{alleles}）があります。二対立遺伝子"
+"マーカーのみサポートしています。"
 
 #: mSNP/results/ldGroup/ldTable.columns.title
 msgid "Marker 1"
-msgstr ""
+msgstr "マーカー1"
 
 #: mSNP/results/ldGroup/ldTable.columns.title
 msgid "Marker 2"
-msgstr ""
+msgstr "マーカー2"
 
 #: mSNP/results/popGroup/popTable.title
 msgid "Marker Informative Metrics"
-msgstr ""
+msgstr "マーカーの情報量指標"
 
 #: R/msnp.b.R
 #: mSNP/options/vars.title
 #: mSNP/ui[0][0].label
 msgid "Markers"
-msgstr ""
+msgstr "マーカー"
 
 #: mSNP/options/xLinked.title
 msgid "Markers are X-linked"
-msgstr ""
+msgstr "マーカーはX連鎖"
 
 #: R/msnp.b.R
 msgid ""
@@ -5705,11 +5810,11 @@ msgstr ""
 
 #: mLR/results/formulaHtml.title
 msgid "Mathematical Model Formula"
-msgstr ""
+msgstr "数理モデルの式"
 
 #: mLR/ui[4]/show_formula.label
 msgid "Mathematical model formula"
-msgstr ""
+msgstr "数理モデルの式"
 
 #: R/mcor.b.R
 msgid "Matrix #{i}"
@@ -5720,14 +5825,16 @@ msgid ""
 "Mauchly's test evaluates sphericity (equal variances of differences). Values "
 "of ε close to 1 indicate sphericity; ε < .75 indicates substantial departure."
 msgstr ""
+"モークリーの検定は球面性（差の分散が等しいこと）を評価します。εが1に近い値は"
+"球面性を示し、ε < .75 は大きな逸脱を示します。"
 
 #: mMNV/results/sphericityTable.columns.title
 msgid "Mauchly's W"
-msgstr ""
+msgstr "モークリーのW"
 
 #: mSNP/options/mdrOrder.title
 msgid "Max interaction order"
-msgstr ""
+msgstr "交互作用の最大次数"
 
 #: mMLP/results/infoTable.columns.title
 msgid "Max Iterations"
@@ -5741,29 +5848,31 @@ msgstr "最大反復回数（エポック数）"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "Max Net Benefit"
-msgstr ""
+msgstr "最大純利益"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Max Threshold (%)"
-msgstr ""
+msgstr "最大閾値（%）"
 
 #: mSRV/options/kmMaxTime.title
 msgid "Max time (0 = unlimited)"
-msgstr ""
+msgstr "最大時間（0 = 無制限）"
 
 #: R/mstab.b.R
 msgid "Maximum conditional extension limit"
-msgstr ""
+msgstr "条件付き延長の上限"
 
 #: mSRV/ui[2]/kmMaxTime.label
 msgid "Maximum evaluation horizon (0 = unlimited)"
-msgstr ""
+msgstr "最大評価期間（0 = 無制限）"
 
 #: R/msnp.b.R
 msgid ""
 "Maximum interaction order was reduced from {user_ord} to {max_ord} (the "
 "number of available markers)."
 msgstr ""
+"交互作用の最大次数を {user_ord} から {max_ord}（利用可能なマーカー数）に減ら"
+"しました。"
 
 #: mMF/options/maxiter.title
 msgid "Maximum number of iterations"
@@ -5775,6 +5884,9 @@ msgid ""
 "months, as ICH Q1E extrapolation rules (such as +12 months or multipliers) "
 "assume time in months."
 msgstr ""
+"観測された時間の最大値は {max_t} です。ICH Q1Eの外挿規則（+12か月や倍率など）"
+"は月単位の時間を前提としているため、時間が月単位で入力されているか確認してく"
+"ださい。"
 
 #: mUI/options/uiSe.title
 msgid "Maximum sensitivity inside UI"
@@ -5786,12 +5898,12 @@ msgstr ""
 
 #: mDCA/options/threshMax.title
 msgid "Maximum Threshold"
-msgstr ""
+msgstr "最大閾値"
 
 #: mRF/options/maxdepth.title
 #: mRF/ui[1]/maxdepth.label
 msgid "Maximum Tree Depth (0 = unlimited)"
-msgstr ""
+msgstr "木の最大深さ（0 = 無制限）"
 
 #: mMF/results/estim/mcar.columns.content
 msgid "MCAR"
@@ -5803,11 +5915,11 @@ msgstr "MCAR（完全無作為欠損）およびMAR（無作為欠損）推定"
 
 #: R/mui.b.R
 msgid "MCI=0 ({})"
-msgstr ""
+msgstr "MCI=0（{}）"
 
 #: R/mui.b.R
 msgid "MCI=1 ({})"
-msgstr ""
+msgstr "MCI=1（{}）"
 
 #: mCOR/options/clustMet/mcquitty.title
 msgid "McQuitty Linkage (WPGMA)"
@@ -5815,25 +5927,27 @@ msgstr "マクイッティ連結法（WPGMA）"
 
 #: mSNP/options/mdrEnable.title
 msgid "MDR analysis"
-msgstr ""
+msgstr "MDR解析"
 
 #: R/msnp.b.R
 msgid ""
 "MDR analysis requires a binary outcome (2 levels), but '{var}' has {n} "
 "levels."
 msgstr ""
+"MDR解析には二値（2水準）のアウトカムが必要ですが、'{var}' には {n} 個の水準が"
+"あります。"
 
 #: mSNP/results/mdrGroup/mdrHeatmap.title
 msgid "MDR Interaction Heatmap"
-msgstr ""
+msgstr "MDR交互作用ヒートマップ"
 
 #: mSNP/options/mdrHeatmap.title
 msgid "MDR interaction heatmap (2-way grid)"
-msgstr ""
+msgstr "MDR交互作用ヒートマップ（2要因グリッド）"
 
 #: mSNP/results/mdrGroup/mdrBarPlot.title
 msgid "MDR Model Performance Comparison"
-msgstr ""
+msgstr "MDRモデルの性能比較"
 
 #: R/mout.b.R
 #: mMNV/results/meansTable.columns.title
@@ -5869,17 +5983,17 @@ msgstr "平均正解率減少量（%）"
 
 #: R/mdca.b.R
 msgid "Mean Predicted Probability"
-msgstr ""
+msgstr "平均予測確率"
 
 #: R/mmnv.b.R
 msgid "Mean Response"
-msgstr ""
+msgstr "平均応答"
 
 #: mMNV/results/univariateTable.columns.title
 #: mMNV/results/contrastsTable.columns.title
 #: mSTAB/results/poolTable.columns.title
 msgid "Mean Square"
-msgstr ""
+msgstr "平均平方"
 
 #: mTAB1/options/plotTypeCont/mean_ci.title
 #: mTAB1/options/plotType/mean_ci.title
@@ -5901,13 +6015,15 @@ msgstr "中央値連結法"
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 msgid "Median Survival"
-msgstr ""
+msgstr "生存期間中央値"
 
 #: R/msrv.b.R
 msgid ""
 "Median survival is the time at which survival probability drops to 50%. CI "
 "indicates 95% confidence limits."
 msgstr ""
+"生存期間中央値は、生存確率が50%に低下する時間です。CIは95%信頼限界を示します"
+"。"
 
 #: mCOR/options/method.title
 #: mMOUT/ui[1][0].label
@@ -5923,19 +6039,19 @@ msgstr "指標"
 
 #: mPCA/results/kmeansTable.columns.title
 msgid "Metric / Cluster"
-msgstr ""
+msgstr "指標 / クラスター"
 
 #: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
 msgid "Metric / Target"
-msgstr ""
+msgstr "指標 / 対象"
 
 #: mDCA/results/windowTable.columns.title
 msgid "Min Threshold (%)"
-msgstr ""
+msgstr "最小閾値（%）"
 
 #: R/mstab.b.R
 msgid "min(Statistical Shelf Life, Extrapolation Ceiling)"
-msgstr ""
+msgstr "min(統計的有効期間, 外挿上限)"
 
 #: mPWR/options/es.title
 #: mPWR/ui[0]/es.label
@@ -5952,7 +6068,7 @@ msgstr "最低でも2つの補完変数が必要です"
 
 #: mSNP/options/qcCallRate.title
 msgid "Minimum Call Rate"
-msgstr ""
+msgstr "最小コール率"
 
 #: mPWR/options/power.title
 #: mPWR/ui[0]/power.label
@@ -5961,17 +6077,17 @@ msgstr "最小希望検出力"
 
 #: mSNP/options/qcHwe.title
 msgid "Minimum HWE p-value in controls"
-msgstr ""
+msgstr "対照群におけるHWEのp値の最小値"
 
 #: mSNP/options/qcMaf.title
 msgid "Minimum MAF"
-msgstr ""
+msgstr "最小MAF"
 
 #: mRF/options/nodesize.title
 #: mRF/ui[1]/nodesize.label
 #: mRF/results/infoTable.columns.title
 msgid "Minimum Node Size"
-msgstr ""
+msgstr "最小ノードサイズ"
 
 #: mUI/options/minSe.title
 msgid "Minimum sensitivity outside UI"
@@ -5983,29 +6099,29 @@ msgstr ""
 
 #: mDCA/options/threshMin.title
 msgid "Minimum Threshold"
-msgstr ""
+msgstr "最小閾値"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Misclassified"
-msgstr ""
+msgstr "誤分類"
 
 #: mLR/results/misclassifiedTable.title
 #: mMLP/results/misclassifiedTable.title
 #: mRF/results/misclassifiedTable.title
 msgid "Misclassified Cases"
-msgstr ""
+msgstr "誤分類されたケース"
 
 #: mLR/options/show_misclassified.title
 #: mLR/ui[4]/show_misclassified.label
 msgid "Misclassified cases table"
-msgstr ""
+msgstr "誤分類ケースの表"
 
 #: mMLP/options/show_misclassified.title
 #: mRF/options/show_misclassified.title
 msgid "Misclassified Cases Table"
-msgstr ""
+msgstr "誤分類ケースの表"
 
 #: mMF/options/alg/mF.title
 msgid "missForest (2012)"
@@ -6078,11 +6194,11 @@ msgstr "多層パーセプトロン分類器の学習曲線"
 
 #: R/mmlp.b.R
 msgid "MLP Classifier Predicted Class"
-msgstr ""
+msgstr "多層パーセプトロン分類器の予測クラス"
 
 #: R/mmlp.b.R
 msgid "MLP Classifier Predicted Probability"
-msgstr ""
+msgstr "多層パーセプトロン分類器の予測確率"
 
 #: mMLP/results/curvePlot.title
 msgid "MLP Learning Curve"
@@ -6099,76 +6215,81 @@ msgid ""
 "partitioning use a random seed (default 42, configurable under Validation "
 "Settings) for reproducibility."
 msgstr ""
+"多層パーセプトロン（MLP）ニューラルネットワーク分類器。再現性のため、重みの初"
+"期化とデータの分割には乱数シード（既定値42、検証設定で変更可能）を使用します"
+"。"
 
 #: R/mdca.b.R
 #: R/msnp.b.R
 #: mDCA/results/calTable.columns.title
 msgid "Model"
-msgstr ""
+msgstr "モデル"
 
 #: mDCA/results/dcaTable.columns.title
 #: mDCA/results/windowTable.columns.title
 msgid "Model / Predictor"
-msgstr ""
+msgstr "モデル / 予測変数"
 
 #: mDCA/ui[3].label
 msgid "Model Calibration"
-msgstr ""
+msgstr "モデル較正"
 
 #: R/mdca.b.R
 #: mDCA/results/calPlot.title
 msgid "Model Calibration Curves (Observed vs Predicted)"
-msgstr ""
+msgstr "モデル較正曲線（観測 vs 予測）"
 
 #: mDCA/results/calTable.title
 msgid "Model Calibration Metrics"
-msgstr ""
+msgstr "モデル較正の指標"
 
 #: mDCA/options/showCalPlot.title
 msgid "Model Calibration Plot"
-msgstr ""
+msgstr "モデル較正プロット"
 
 #: mDCA/options/showCalTable.title
 msgid "Model Calibration Table"
-msgstr ""
+msgstr "モデル較正表"
 
 #: mLR/results/coeffTable.title
 msgid "Model Coefficients (Post-Selection / Refitted Model)"
-msgstr ""
+msgstr "モデル係数（選択後 / 再推定モデル）"
 
 #: R/mstab.b.R
 msgid "Model diagnostic note"
-msgstr ""
+msgstr "モデル診断の注記"
 
 #: R/mstab.b.R
 msgid "Model diagnostic warning"
-msgstr ""
+msgstr "モデル診断の警告"
 
 #: mSTAB/options/showDiagTable.title
 msgid "Model Diagnostics & Assumptions Table"
-msgstr ""
+msgstr "モデル診断と仮定の表"
 
 #: mSTAB/results/diagTable.title
 msgid "Model Diagnostics & Goodness of Fit"
-msgstr ""
+msgstr "モデル診断と適合度"
 
 #: R/mstab.b.R
 msgid "Model explained variance"
-msgstr ""
+msgstr "モデルの説明分散"
 
 #: R/msrv.b.R
 msgid ""
 "Model fit (Wald test): χ² = {stat}, df = {df}, p = {p}; Events of interest = "
 "{nev}"
 msgstr ""
+"モデルの適合（ワルド検定）：χ² = {stat}、自由度 = {df}、p = {p}；対象イベント"
+"数 = {nev}"
 
 #: mLR/results/infoTable.title
 msgid "Model Fit & Predictive Performance"
-msgstr ""
+msgstr "モデルの適合と予測性能"
 
 #: mLR/options/show_formula.title
 msgid "Model formula"
-msgstr ""
+msgstr "モデル式"
 
 #: mMLP/results/infoTable.title
 #: mRF/results/infoTable.title
@@ -6184,40 +6305,42 @@ msgstr "モデルパラメータ"
 msgid ""
 "Model parameters, standard errors, and confidence intervals for the adopted "
 "regression model."
-msgstr ""
+msgstr "採用した回帰モデルのパラメータ、標準誤差、信頼区間。"
 
 #: mSNP/options/mdrBarPlot.title
 msgid "Model performance barplot"
-msgstr ""
+msgstr "モデル性能の棒グラフ"
 
 #: mDCA/options/probs.title
 #: mDCA/ui[0][1].label
 msgid "Model Probabilities (0 to 1)"
-msgstr ""
+msgstr "モデルの確率（0～1）"
 
 #: mSTAB/options/modelChoice.title
 msgid "Model Selection Strategy"
-msgstr ""
+msgstr "モデル選択の方針"
 
 #: R/msrv.b.R
 msgid ""
 "Models time-varying effects via time interactions. Significant p-value "
 "indicates hazard ratio changes over time."
 msgstr ""
+"時間との交互作用により時間依存効果をモデル化します。p値が有意であれば、"
+"ハザード比が時間とともに変化することを示します。"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Moderate Risk"
-msgstr ""
+msgstr "中リスク"
 
 #: R/mcor.b.R
 msgid "Moderate stability (0.25 <= CS < 0.5)"
-msgstr ""
+msgstr "中程度の安定性（0.25 <= CS < 0.5）"
 
 #: R/mstab.b.R
 msgid "Moderately Conservative"
-msgstr ""
+msgstr "やや保守的"
 
 #: mOUT/options/outlcheck/mZS.title
 msgid "Modified Z-score (Hampel filter)"
@@ -6239,26 +6362,26 @@ msgstr ""
 
 #: R/mmf.b.R
 msgid "MSE"
-msgstr ""
+msgstr "MSE"
 
 #: mSTAB/options/showMultiBatchTable.title
 #: mSTAB/results/multiBatchTable.title
 msgid "Multi-Attribute Batch Evaluation Matrix"
-msgstr ""
+msgstr "複数品質特性によるロット評価マトリックス"
 
 #: R/mstab.b.R
 #: mSTAB/results/multiShelfPlot.title
 msgid "Multi-Attribute Shelf Life Comparison & Horizon Plot"
-msgstr ""
+msgstr "複数品質特性の有効期間比較とホライズンプロット"
 
 #: mSTAB/options/showMultiShelfTable.title
 #: mSTAB/results/multiShelfTable.title
 msgid "Multi-Attribute Shelf Life Summary Table"
-msgstr ""
+msgstr "複数品質特性の有効期間要約表"
 
 #: mSTAB/ui[5].label
 msgid "Multi-Attribute Shelf-Life & Worst-Case Options"
-msgstr ""
+msgstr "複数品質特性の有効期間とワーストケースのオプション"
 
 #: mSTAB/options/showMultiShelfPlot.title
 msgid "Multi-Attribute Shelf-Life Plot"
@@ -6269,6 +6392,8 @@ msgid ""
 "Multi-row data collapsed to unique subjects based on '{subjectId}' with "
 "baseline marker values."
 msgstr ""
+"複数行のデータを、'{subjectId}' に基づきベースラインのマーカー値をもつ一意の"
+"対象者に集約しました。"
 
 #: mLR/options/multiclass_roc_type.title
 #: mLR/ui[4]/show_roc/multiclass_roc_type.label
@@ -6277,7 +6402,7 @@ msgstr ""
 #: mRF/options/multiclass_roc_type.title
 #: mRF/ui[3]/show_roc/multiclass_roc_type.label
 msgid "Multiclass ROC Layout"
-msgstr ""
+msgstr "多クラスROCのレイアウト"
 
 #: R/mstab.b.R
 msgid ""
@@ -6290,7 +6415,7 @@ msgstr ""
 #: mSNP/ui[8].label
 #: mSNP/results/mdrGroup.title
 msgid "Multifactor Dimensionality Reduction (MDR)"
-msgstr ""
+msgstr "多因子次元削減法（MDR）"
 
 #: R/mstab.b.R
 msgid ""
@@ -6300,7 +6425,7 @@ msgstr ""
 
 #: R/mlr.b.R
 msgid "Multinomial Log-odds Equations"
-msgstr ""
+msgstr "多項対数オッズの式"
 
 #: R/mmnv.b.R
 msgid ""
@@ -6308,6 +6433,9 @@ msgid ""
 "analysis, and plots evaluate primary factor '{factor}' pooled across "
 "remaining factors."
 msgstr ""
+"複数の被験者間要因が指定されています。記述統計、ボックスのM、プロファイル分析"
+"、プロットは、主要因 '{factor}' について、その他の要因を併合して評価していま"
+"す。"
 
 #: mCOR/options/adjust.title
 msgid "Multiple comparison correction"
@@ -6320,11 +6448,11 @@ msgstr "欠損値の多重補完"
 #: mSNP/options/adjust.title
 #: mTAB1/options/padjust.title
 msgid "Multiple testing correction"
-msgstr ""
+msgstr "多重検定の補正"
 
 #: mMNV/results/outlierPlot.title
 msgid "Multivariate Outliers (Mahalanobis Distance)"
-msgstr ""
+msgstr "多変量外れ値（マハラノビス距離）"
 
 #: mMNV/options/showOutlierPlot.title
 msgid "Multivariate outliers (Mahalanobis distance)"
@@ -6336,15 +6464,15 @@ msgstr ""
 #: mMOUT/ui.title
 #: mMOUT/results.title
 msgid "Multivariate outliers identification and removal"
-msgstr ""
+msgstr "多変量外れ値の同定と除去"
 
 #: R/mmnv.b.R
 msgid "Multivariate Test Criteria:"
-msgstr ""
+msgstr "多変量検定の基準："
 
 #: mMNV/results/multivariateTable.title
 msgid "Multivariate Tests"
-msgstr ""
+msgstr "多変量検定"
 
 #: mMNV/ui[2].label
 msgid "Multivariate tests"
@@ -6356,6 +6484,8 @@ msgid ""
 "assuming sphericity. Pillai's trace is recommended as the most robust "
 "criterion."
 msgstr ""
+"多変量検定は、球面性を仮定せずに時間にわたる被験者内の変化を評価します。最も"
+"頑健な基準として、ピライのトレースを推奨します。"
 
 #: R/mmnv.b.R
 msgid ""
@@ -6363,6 +6493,8 @@ msgid ""
 "(O'Brien & Kaiser, 1985). Pillai's trace is robust to heterogeneity of "
 "covariance matrices."
 msgstr ""
+"多変量検定は、共分散行列に球面性を仮定しません（O'Brien & Kaiser, 1985）。"
+"ピライのトレースは、共分散行列の非等質性に対して頑健です。"
 
 #: R/mtab1.b.R
 msgid "n"
@@ -6379,7 +6511,7 @@ msgstr ""
 
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "N at Risk"
-msgstr ""
+msgstr "リスク集合の人数"
 
 #: R/mpwr.b.R
 #: mPWR/results/nEsCurve.title
@@ -6392,7 +6524,7 @@ msgstr "効果量ごとのN曲線"
 
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "N Events"
-msgstr ""
+msgstr "イベント数"
 
 #: mPWR/ui[0]/n.label
 msgid "N for group 1"
@@ -6420,23 +6552,23 @@ msgstr "N2"
 #: mSTAB/options/trans4/log.title
 #: mSTAB/options/trans5/log.title
 msgid "Natural logarithm ln(Y) (First-order kinetics)"
-msgstr ""
+msgstr "自然対数 ln(Y)（1次反応速度）"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 10%"
-msgstr ""
+msgstr "10%時点のNB"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 20%"
-msgstr ""
+msgstr "20%時点のNB"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 30%"
-msgstr ""
+msgstr "30%時点のNB"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "NB at 40%"
-msgstr ""
+msgstr "40%時点のNB"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -6449,45 +6581,45 @@ msgstr "負の重み"
 
 #: R/mdca.b.R
 msgid "Net Benefit"
-msgstr ""
+msgstr "純利益"
 
 #: mDCA/results/dcaTable.title
 msgid "Net Benefit at Key Clinical Thresholds"
-msgstr ""
+msgstr "主要な臨床閾値における純利益"
 
 #: mDCA/options/showDcaTable.title
 msgid "Net Benefit Summary Table"
-msgstr ""
+msgstr "純利益の要約表"
 
 #: R/mdca.b.R
 msgid "Net Reduction in Interventions"
-msgstr ""
+msgstr "介入の正味の削減数"
 
 #: mDCA/results/avoidedPlot.title
 msgid "Net Reduction in Interventions (per 100 patients)"
-msgstr ""
+msgstr "介入の正味の削減数（100人あたり）"
 
 #: R/mcor.b.R
 msgid "Network"
-msgstr ""
+msgstr "ネットワーク"
 
 #: mCOR/options/glassoLayout.title
 msgid "Network layout"
-msgstr ""
+msgstr "ネットワークのレイアウト"
 
 #: mCOR/options/glassoPlot.title
 #: mCOR/results/glassoGroup/glassoPlot.title
 msgid "Network plot"
-msgstr ""
+msgstr "ネットワークプロット"
 
 #: mCOR/options/glassoStabilityPlot.title
 #: mCOR/results/glassoGroup/glassoStabilityPlot.title
 msgid "Network stability plot"
-msgstr ""
+msgstr "ネットワーク安定性プロット"
 
 #: mCOR/results/glassoGroup/glassoStabilityTable.title
 msgid "Network stability summary"
-msgstr ""
+msgstr "ネットワーク安定性の要約"
 
 #: mMLP/options/show_topo.title
 msgid "Network Topology / Architecture Diagram"
@@ -6511,11 +6643,11 @@ msgstr ""
 
 #: R/mdca.b.R
 msgid "No clinical gain"
-msgstr ""
+msgstr "臨床的利益なし"
 
 #: R/msrv.b.R
 msgid "No complete cases available for time-varying Cox model."
-msgstr ""
+msgstr "時間依存Coxモデルに使用できる完全ケースがありません。"
 
 #: R/msrv.b.R
 msgid "No events of the target cause observed for Fine-Gray regression."
@@ -6523,17 +6655,17 @@ msgstr ""
 
 #: R/msnp.b.R
 msgid "No markers remained after Quality Control filters for association analysis."
-msgstr ""
+msgstr "品質管理フィルターの適用後、関連解析に使用できるマーカーが残っていません。"
 
 #: R/msnp.b.R
 msgid "No markers remained after Quality Control filters for MDR analysis."
-msgstr ""
+msgstr "品質管理フィルターの適用後、MDR解析に使用できるマーカーが残っていません。"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "No misclassified cases found."
-msgstr ""
+msgstr "誤分類されたケースはありません。"
 
 #: R/mmnv.b.R
 msgid "No multivariate residual outliers detected at critical threshold (α = .001)"
@@ -6541,42 +6673,42 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "No significant autocorrelation"
-msgstr ""
+msgstr "有意な自己相関なし"
 
 #: R/mstab.b.R
 msgid "No significant change at 25°C / 60% RH (6 mo)"
-msgstr ""
+msgstr "25°C / 60% RHで明確な変化なし（6か月）"
 
 #: R/mstab.b.R
 msgid "No significant change at accelerated condition (6 mo)"
-msgstr ""
+msgstr "加速条件で明確な変化なし（6か月）"
 
 #: mSTAB/options/accelResult/no_change.title
 msgid "No significant change at accelerated condition (6 months)"
-msgstr ""
+msgstr "加速条件で明確な変化なし（6か月）"
 
 #: mSTAB/options/accelCondition/no_change.title
 msgid ""
 "No significant change at accelerated condition (Extrapolation up to 2X, max "
 "X + 12 mo)"
-msgstr ""
+msgstr "加速条件で明確な変化なし（最大2X、上限 X + 12か月まで外挿）"
 
 #: R/mstab.b.R
 #: mSTAB/options/intermedResult/no_change.title
 msgid "No significant change at intermediate condition"
-msgstr ""
+msgstr "中間的条件で明確な変化なし"
 
 #: R/msrv.b.R
 msgid "No valid predictors found for time-varying Cox model."
-msgstr ""
+msgstr "時間依存Coxモデルに有効な予測変数が見つかりません。"
 
 #: R/mcor.b.R
 msgid "Node Strength Stability"
-msgstr ""
+msgstr "ノードのストレングスの安定性"
 
 #: R/mpca.b.R
 msgid "Noise (95th percentile)"
-msgstr ""
+msgstr "ノイズ（95パーセンタイル）"
 
 #: R/msnp.b.R
 msgid "Nominal (α)"
@@ -6591,7 +6723,7 @@ msgstr ""
 #: R/mpwr.b.R
 #: mPWR/ui[0]/alt/non-inferior.title
 msgid "non-inferiority"
-msgstr ""
+msgstr "非劣性"
 
 #: R/mtab1.b.R
 msgid "Non-normal (Non-parametric)"
@@ -6603,7 +6735,7 @@ msgstr "ノンパラメトリック"
 
 #: mCOR/options/glassoBootType/nonparametric.title
 msgid "Non-parametric (edge stability)"
-msgstr ""
+msgstr "ノンパラメトリック（エッジの安定性）"
 
 #: mTAB1/options/method/nonparam.title
 msgid "Non-parametric (Median [Q1; Q3])"
@@ -6612,6 +6744,8 @@ msgstr ""
 #: R/mcor.b.R
 msgid "Non-parametric bootstrap ({b} iterations). Mean edge 95% CI width: {w}%"
 msgstr ""
+"ノンパラメトリック・ブートストラップ（{b} 回反復）。エッジの95%信頼区間の平均"
+"幅：{w}%"
 
 #: R/mlr.b.R
 #: mCOR/options/adjust/none.title
@@ -6642,15 +6776,15 @@ msgstr "なし"
 #: mSTAB/options/trans4/none.title
 #: mSTAB/options/trans5/none.title
 msgid "None (Zero-order linear kinetics)"
-msgstr ""
+msgstr "なし（0次の線形反応速度）"
 
 #: mSTAB/options/accelCondition/none.title
 msgid "None / Not evaluated (No extrapolation)"
-msgstr ""
+msgstr "なし / 評価せず（外挿なし）"
 
 #: R/mmout.b.R
 msgid "Normal"
-msgstr ""
+msgstr "正常"
 
 #: R/mtab1.b.R
 msgid "Normal (Parametric)"
@@ -6658,15 +6792,15 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Normal Q-Q"
-msgstr ""
+msgstr "正規Q-Q"
 
 #: R/mstab.b.R
 msgid "Normality assumption met (p >= 0.05)"
-msgstr ""
+msgstr "正規性の仮定を満たす（p >= 0.05）"
 
 #: R/mstab.b.R
 msgid "Normality of Residuals (Shapiro-Wilk)"
-msgstr ""
+msgstr "残差の正規性（シャピロ=ウィルク）"
 
 #: R/mout.b.R
 #: R/mui.b.R
@@ -6679,22 +6813,24 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Not available / unverified"
-msgstr ""
+msgstr "なし / 未確認"
 
 #: R/msrv.b.R
 msgid ""
 "Not enough events or survivors at the selected analysis time point t to "
 "perform ROC analysis."
 msgstr ""
+"選択した解析時点tでのイベント数または生存者数が不足しているため、ROC分析を実"
+"行できません。"
 
 #: R/mstab.b.R
 #: mSTAB/options/intermedResult/not_applicable.title
 msgid "Not performed / Not applicable"
-msgstr ""
+msgstr "未実施 / 該当なし"
 
 #: R/mstab.b.R
 msgid "Not performed / Study missing"
-msgstr ""
+msgstr "未実施 / 試験データなし"
 
 #: R/mstab.b.R
 msgid "Not supported ({stat} < {prop} mo)"
@@ -6705,12 +6841,16 @@ msgid ""
 "Not Supported: Limiting statistical estimate ({stat} months) is less than "
 "proposed ({prop} months)"
 msgstr ""
+"支持されない：律速となる統計的推定値（{stat}か月）が提案値（{prop}か月）より"
+"短い"
 
 #: R/mstab.b.R
 msgid ""
 "Not Supported: Proposed shelf life ({prop} months) exceeds regulatory "
 "ceiling ({cap} months)"
 msgstr ""
+"支持されない：提案有効期間（{prop}か月）が規制上の上限（{cap}か月）を超えてい"
+"る"
 
 #: R/mstab.b.R
 msgid ""
@@ -6720,37 +6860,39 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Not tested"
-msgstr ""
+msgstr "検定せず"
 
 #: R/mstab.b.R
 msgid "Not tested (cohort slopes differ)"
-msgstr ""
+msgstr "検定せず（コホート間で傾きが異なる）"
 
 #: R/mstab.b.R
 msgid "Not tested (model already selected)"
-msgstr ""
+msgstr "検定せず（モデルは選択済み）"
 
 #: R/mstab.b.R
 msgid "Not tested (slopes are unequal)"
-msgstr ""
+msgstr "検定せず（傾きが等しくない）"
 
 #: R/mstab.b.R
 msgid "Not tested (slopes poolability test could not be evaluated)"
-msgstr ""
+msgstr "検定せず（傾きの併合可能性の検定を評価できなかった）"
 
 #: R/msnp.b.R
 msgid ""
 "Note: Allelic and Genotypic models are unadjusted. Logistic regression is "
 "fitted for other models."
 msgstr ""
+"注：アレルモデルと遺伝子型モデルは未調整です。その他のモデルでは"
+"ロジスティック回帰を当てはめています。"
 
 #: R/msnp.b.R
 msgid "Note: Linear regression is adjusted for selected covariates."
-msgstr ""
+msgstr "注：線形回帰は選択した共変量で調整しています。"
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "NPV"
-msgstr ""
+msgstr "NPV"
 
 #: mCOR/options/plotMetU/number.title
 #: mCOR/options/plotMetL/number.title
@@ -6767,20 +6909,20 @@ msgstr ""
 
 #: mPCA/options/kMeansK.title
 msgid "Number of clusters (K-Means)"
-msgstr ""
+msgstr "クラスター数（K平均法）"
 
 #: mPCA/ui[3][0]/kMeansK.label
 msgid "Number of clusters (K)"
-msgstr ""
+msgstr "クラスター数（K）"
 
 #: R/mpwr.b.R
 msgid "Number of Clusters (k1)"
-msgstr ""
+msgstr "クラスター数（k1）"
 
 #: mPCA/options/npc.title
 #: mPCA/ui[1][0]/npc.label
 msgid "Number of components to retain"
-msgstr ""
+msgstr "保持する成分の数"
 
 #: mPWR/options/k_covariates.title
 #: mPWR/ui[1]/k_covariates.label
@@ -6789,7 +6931,7 @@ msgstr "共変量の数"
 
 #: R/mpwr.b.R
 msgid "Number of Events"
-msgstr ""
+msgstr "イベント数"
 
 #: mPWR/options/factor_levels.title
 #: mPWR/ui[1]/factor_levels.label
@@ -6798,7 +6940,7 @@ msgstr "因子の水準数 / グループ数"
 
 #: mSNP/options/nPermMDR.title
 msgid "Number of MDR permutations"
-msgstr ""
+msgstr "MDRの置換回数"
 
 #: R/mmf.b.R
 msgid "Number of missing entries"
@@ -6814,22 +6956,22 @@ msgstr "パターン数"
 
 #: mSNP/options/nPerm.title
 msgid "Number of permutations"
-msgstr ""
+msgstr "置換回数"
 
 #: mRF/ui[3]/show_pdp/pdp_n_vars.label
 msgid "Number of Top Predictors"
-msgstr ""
+msgstr "上位の予測変数の数"
 
 #: mRF/options/pdp_n_vars.title
 msgid "Number of Top Predictors for PDP"
-msgstr ""
+msgstr "PDPに用いる上位の予測変数の数"
 
 #: R/mrf.b.R
 #: mRF/options/ntree.title
 #: mRF/ui[1]/ntree.label
 #: mRF/results/infoTable.columns.title
 msgid "Number of Trees"
-msgstr ""
+msgstr "決定木の数"
 
 #: mMF/options/ntree.title
 msgid "Number of trees to grow in each forest"
@@ -6838,38 +6980,38 @@ msgstr "各フォレストで生成する木の数"
 #: mPCA/options/scorePlot.title
 #: mPCA/results/scorePlot.title
 msgid "Object score distribution with 95% ellipses"
-msgstr ""
+msgstr "95%楕円付きの対象スコアの分布"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
 msgid "Obs AA"
-msgstr ""
+msgstr "観測 AA"
 
 #: R/msnp.b.R
 msgid "Obs AA (n, %)"
-msgstr ""
+msgstr "観測 AA（n, %）"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
 msgid "Obs AB"
-msgstr ""
+msgstr "観測 AB"
 
 #: R/msnp.b.R
 msgid "Obs AB (n, %)"
-msgstr ""
+msgstr "観測 AB（n, %）"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
 msgid "Obs BB"
-msgstr ""
+msgstr "観測 BB"
 
 #: R/msnp.b.R
 msgid "Obs BB (n, %)"
-msgstr ""
+msgstr "観測 BB（n, %）"
 
 #: R/mmnv.b.R
 msgid "Observation Index"
-msgstr ""
+msgstr "観測値のインデックス"
 
 #: R/mtab1.b.R
 msgid ""
@@ -6880,29 +7022,29 @@ msgstr ""
 #: R/mmf.b.R
 #: R/msnp.b.R
 msgid "Observed"
-msgstr ""
+msgstr "観測値"
 
 #: R/mpca.b.R
 msgid "Observed Data"
-msgstr ""
+msgstr "観測データ"
 
 #: R/mstab.b.R
 msgid "Observed data, regression fits, and {pct}% confidence bands per batch"
-msgstr ""
+msgstr "ロットごとの観測データ、回帰直線、{pct}%信頼帯"
 
 #: mLR/results/riskTable.columns.title
 #: mMLP/results/riskTable.columns.title
 #: mRF/results/riskTable.columns.title
 msgid "Observed Event Rate (%)"
-msgstr ""
+msgstr "観測されたイベント発生率（%）"
 
 #: R/msnp.b.R
 msgid "Observed p-value (-log10)"
-msgstr ""
+msgstr "観測p値（-log10）"
 
 #: R/mdca.b.R
 msgid "Observed Proportion of Events"
-msgstr ""
+msgstr "観測されたイベントの割合"
 
 #: R/mstab.b.R
 msgid "Observed: {val} months"
@@ -6911,20 +7053,20 @@ msgstr ""
 #: R/msnp.b.R
 #: mSNP/results/assocGroup/assocTable.columns.title
 msgid "Odds Ratio"
-msgstr ""
+msgstr "オッズ比"
 
 #: R/msnp.b.R
 msgid "Odds Ratio (log scale)"
-msgstr ""
+msgstr "オッズ比（対数目盛）"
 
 #: R/mlr.b.R
 #: mLR/results/coeffTable.columns.title
 msgid "Odds Ratio (OR)"
-msgstr ""
+msgstr "オッズ比（OR）"
 
 #: mSNP/results/assocGroup/assocForest.title
 msgid "Odds Ratio Forest Plot"
-msgstr ""
+msgstr "オッズ比のフォレストプロット"
 
 #: R/mstab.b.R
 msgid ""
@@ -6971,27 +7113,29 @@ msgid ""
 "Only a single batch provided; ANCOVA poolability is not evaluated. Single "
 "linear regression is fitted."
 msgstr ""
+"ロットが1つしかないため、ANCOVAによる併合可能性は評価しません。単一の線形回帰"
+"を当てはめます。"
 
 #: R/mrf.b.R
 msgid "OOB"
-msgstr ""
+msgstr "OOB"
 
 #: mRF/results/infoTable.columns.title
 msgid "OOB Accuracy (%)"
-msgstr ""
+msgstr "OOB正解率（%）"
 
 #: R/mrf.b.R
 msgid "OOB Error (%)"
-msgstr ""
+msgstr "OOB誤差（%）"
 
 #: R/mrf.b.R
 #: mRF/results/oobCurvePlot.title
 msgid "OOB Error Convergence"
-msgstr ""
+msgstr "OOB誤差の収束"
 
 #: mRF/options/show_oob_curve.title
 msgid "OOB Error Convergence Curve"
-msgstr ""
+msgstr "OOB誤差の収束曲線"
 
 #: mMF/results/imput/errors.description
 msgid "OOB errors table"
@@ -6999,36 +7143,36 @@ msgstr "OOB誤差表"
 
 #: mROC/options/theBest.title
 msgid "Optimal cut-off"
-msgstr ""
+msgstr "最適カットオフ"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
 #: R/mrf.b.R
 msgid "Optimal cutoff for '{part}' could not be computed: {err}"
-msgstr ""
+msgstr "'{part}' の最適カットオフを計算できませんでした：{err}"
 
 #: mDCA/results/dcaTable.columns.title
 msgid "Optimal Threshold"
-msgstr ""
+msgstr "最適閾値"
 
 #: R/mstab.b.R
 msgid "Optimistic (High thermal sensitivity)"
-msgstr ""
+msgstr "楽観的（温度感受性が高い）"
 
 #: R/msnp.b.R
 #: mSNP/results/assocGroup/assocTable.columns.title
 msgid "OR Lower 95% CI"
-msgstr ""
+msgstr "オッズ比95%信頼区間下限"
 
 #: R/msnp.b.R
 #: mSNP/results/assocGroup/assocTable.columns.title
 msgid "OR Upper 95% CI"
-msgstr ""
+msgstr "オッズ比95%信頼区間上限"
 
 #: mSNP/results/mdrGroup/mdrBestTable.columns.title
 msgid "Order"
-msgstr ""
+msgstr "次数"
 
 #: R/mtab1.b.R
 msgid ""
@@ -7062,47 +7206,47 @@ msgstr "オリジナル"
 
 #: R/mstab.b.R
 msgid "Other batches"
-msgstr ""
+msgstr "その他のロット"
 
 #: R/mstab.b.R
 msgid "Other quality attributes"
-msgstr ""
+msgstr "その他の品質特性"
 
 #: R/mrf.b.R
 msgid "Out-of-Bag (OOB)"
-msgstr ""
+msgstr "OOB（out-of-bag）"
 
 #: mRF/options/partition/oob.title
 msgid "Out-of-Bag (OOB) Estimation"
-msgstr ""
+msgstr "OOB（out-of-bag）推定"
 
 #: R/mstab.b.R
 msgid "Out-of-specification at baseline"
-msgstr ""
+msgstr "ベースライン時点で規格外"
 
 #: R/msnp.b.R
 msgid "Outcome"
-msgstr ""
+msgstr "アウトカム"
 
 #: mSNP/options/outcome.title
 msgid "Outcome (Case/Control)"
-msgstr ""
+msgstr "アウトカム（ケース／対照）"
 
 #: mSNP/ui[0][1].label
 msgid "Outcome Variable (Case/Control)"
-msgstr ""
+msgstr "アウトカム変数（ケース／対照）"
 
 #: R/msnp.b.R
 msgid "Outcome variable must have 2 levels for MDR analysis."
-msgstr ""
+msgstr "MDR解析には、アウトカム変数に2つの水準が必要です。"
 
 #: R/msnp.b.R
 msgid "Outcome variable must have at least 2 levels for association tests."
-msgstr ""
+msgstr "関連検定には、アウトカム変数に少なくとも2つの水準が必要です。"
 
 #: R/mmf.b.R
 msgid "OutFlux"
-msgstr ""
+msgstr "流出"
 
 #: R/mmout.b.R
 #: R/mout.b.R
@@ -7111,11 +7255,11 @@ msgstr "除去済"
 
 #: R/mmout.b.R
 msgid "Outlier"
-msgstr ""
+msgstr "外れ値"
 
 #: R/mmout.b.R
 msgid "Outlier (Both)"
-msgstr ""
+msgstr "外れ値（両方）"
 
 #: mMOUT/options/method.title
 #: mOUT/options/outlcheck.title
@@ -7150,11 +7294,11 @@ msgstr "外れ値のインデックス"
 
 #: mMOUT/results/oind.title
 msgid "Outliers indices (Rows)"
-msgstr ""
+msgstr "外れ値のインデックス（行）"
 
 #: mMOUT/options/outind.title
 msgid "Outliers indices table"
-msgstr ""
+msgstr "外れ値のインデックス表"
 
 #: mOUT/ui[2].label
 msgid "Outliers removal"
@@ -7162,7 +7306,7 @@ msgstr "外れ値の除去"
 
 #: mMOUT/results/stat.title
 msgid "Outliers summary"
-msgstr ""
+msgstr "外れ値の要約"
 
 #: mMLP/options/out_activation.title
 #: mMLP/ui[1]/out_activation.label
@@ -7210,44 +7354,48 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Overall Product Shelf Life"
-msgstr ""
+msgstr "製品全体の有効期間"
 
 #: R/mstab.b.R
 msgid ""
 "Overall product shelf life cannot be determined because one or more quality "
 "attributes failed validation."
-msgstr ""
+msgstr "1つ以上の品質特性で検証に失敗したため、製品全体の有効期間を決定できません。"
 
 #: R/mstab.b.R
 msgid ""
 "Overall shelf life across multiple attributes is governed by the earliest "
 "failure time among all evaluated parameters."
 msgstr ""
+"複数の品質特性にわたる全体の有効期間は、評価したすべてのパラメータのうち最も"
+"早く規格を外れる時点によって決まります。"
 
 #: R/mstab.b.R
 msgid ""
 "Overall shelf life cannot be determined because the shelf life for batch(es) "
 "{batches} could not be estimated."
 msgstr ""
+"ロット {batches} の有効期間を推定できなかったため、全体の有効期間を決定できま"
+"せん。"
 
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/overdominant.title
 msgid "Overdominant"
-msgstr ""
+msgstr "超優性"
 
 #: R/msnp.b.R
 #: R/mtab1.b.R
 msgid "p"
-msgstr ""
+msgstr "p"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
 msgid "p (A)"
-msgstr ""
+msgstr "p (A)"
 
 #: R/msnp.b.R
 msgid "p (A) (%)"
-msgstr ""
+msgstr "p (A)（%）"
 
 #: R/mtab1.b.R
 msgid "p (adj)"
@@ -7259,7 +7407,7 @@ msgstr ""
 
 #: mROC/results/rocTable.columns.title
 msgid "p (DeLong)"
-msgstr ""
+msgstr "p（DeLong）"
 
 #: mTAB1/results/normAudit.columns.title
 msgid "p (SW)"
@@ -7267,7 +7415,7 @@ msgstr ""
 
 #: mSNP/results/assocGroup/assocTable.columns.title
 msgid "p-adjusted"
-msgstr ""
+msgstr "調整済みp値"
 
 #: mCOR/options/pval.title
 #: mCOR/results/matrix.columns.content
@@ -7297,12 +7445,16 @@ msgid ""
 "Packages 'glasso' and 'qgraph' are required for this analysis. Please "
 "install them."
 msgstr ""
+"この解析には 'glasso' と 'qgraph' パッケージが必要です。インストールしてくだ"
+"さい。"
 
 #: R/mcor.b.R
 msgid ""
 "Packages 'ppcor' and 'qgraph' are required for this analysis. Please install "
 "them."
 msgstr ""
+"この解析には 'ppcor' と 'qgraph' パッケージが必要です。インストールしてくださ"
+"い。"
 
 #: mDCA/options/palBrewer/Paired.title
 #: mLR/options/palBrewer/Paired.title
@@ -7347,7 +7499,7 @@ msgstr ""
 #: mSTAB/results/regTable.columns.title
 #: mSTAB/results/coefTable.columns.title
 msgid "Parameter"
-msgstr ""
+msgstr "パラメータ"
 
 #: mTAB1/options/method/param.title
 msgid "Parametric (Mean ± SD)"
@@ -7360,42 +7512,42 @@ msgstr ""
 #: mCOR/options/glassoTable.title
 #: mCOR/results/glassoGroup/glassoTable.title
 msgid "Partial correlation matrix"
-msgstr ""
+msgstr "偏相関行列"
 
 #: mCOR/options/glasso.title
 msgid "Partial correlation network"
-msgstr ""
+msgstr "偏相関ネットワーク"
 
 #: mCOR/ui[6].label
 #: mCOR/results/glassoGroup.title
 msgid "Partial Correlation Network"
-msgstr ""
+msgstr "偏相関ネットワーク"
 
 #: R/mcor.b.R
 msgid "Partial Correlation Network (GLASSO)"
-msgstr ""
+msgstr "偏相関ネットワーク（GLASSO）"
 
 #: R/mcor.b.R
 msgid "Partial Correlation Weight"
-msgstr ""
+msgstr "偏相関の重み"
 
 #: mRF/results/pdpPlot.title
 msgid "Partial Dependence Plots"
-msgstr ""
+msgstr "部分依存プロット"
 
 #: mRF/options/show_pdp.title
 msgid "Partial Dependence Plots (Top Predictors)"
-msgstr ""
+msgstr "部分依存プロット（上位の予測変数）"
 
 #: R/mrf.b.R
 msgid "Partial Dependence: {var}"
-msgstr ""
+msgstr "部分依存：{var}"
 
 #: mMNV/results/multivariateTable.columns.title
 #: mMNV/results/univariateTable.columns.title
 #: mMNV/results/contrastsTable.columns.title
 msgid "Partial η²"
-msgstr ""
+msgstr "偏η²"
 
 #: mMLP/options/partition.title
 #: mMLP/ui[2]/partition.label
@@ -7406,7 +7558,7 @@ msgstr "分割法"
 
 #: R/msnp.b.R
 msgid "Passed"
-msgstr ""
+msgstr "合格"
 
 #: mLR/options/palBrewer/Pastel1.title
 #: mMLP/options/palBrewer/Pastel1.title
@@ -7423,31 +7575,31 @@ msgstr "パターン頻度"
 
 #: R/mpca.b.R
 msgid "PC"
-msgstr ""
+msgstr "PC"
 
 #: mPCA/options/pcX.title
 msgid "PC for X axis"
-msgstr ""
+msgstr "X軸の主成分"
 
 #: mPCA/ui[1][0]/pcX.label
 msgid "PC for X axis (Plot)"
-msgstr ""
+msgstr "X軸の主成分（プロット）"
 
 #: mPCA/options/pcY.title
 msgid "PC for Y axis"
-msgstr ""
+msgstr "Y軸の主成分"
 
 #: mPCA/ui[1][0]/pcY.label
 msgid "PC for Y axis (Plot)"
-msgstr ""
+msgstr "Y軸の主成分（プロット）"
 
 #: package/datasets/PCAbloodcells.name
 msgid "PCA blood cells"
-msgstr ""
+msgstr "PCA 血球"
 
 #: mPCA/ui[1].label
 msgid "PCA Configuration"
-msgstr ""
+msgstr "PCAの設定"
 
 #: mCOR/options/method/pearson.title
 msgid "Pearson (r)"
@@ -7463,7 +7615,7 @@ msgstr "ピアソンのr"
 
 #: R/mstab.b.R
 msgid "Penalized for parameter count"
-msgstr ""
+msgstr "パラメータ数に対する罰則付き"
 
 #: R/mmf.b.R
 msgid "per pattern"
@@ -7498,11 +7650,11 @@ msgstr "パーセント (%)"
 
 #: mSNP/options/hwPerm.title
 msgid "Perform permutation test"
-msgstr ""
+msgstr "置換検定を実行"
 
 #: mSNP/options/mdrPermTest.title
 msgid "Perform permutation testing"
-msgstr ""
+msgstr "置換検定を実行"
 
 #: mMLP/results/statsTable.title
 #: mRF/results/statsTable.title
@@ -7532,15 +7684,15 @@ msgstr "順列重要度"
 #: mSNP/results/hweGroup/hwTable.columns.title
 #: mSNP/results/mdrGroup/mdrBestTable.columns.title
 msgid "Permutation p"
-msgstr ""
+msgstr "置換検定 p"
 
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "Permutation p-adj"
-msgstr ""
+msgstr "置換検定 調整済みp"
 
 #: R/mpca.b.R
 msgid "Permutation separation test calculation failed: {err}"
-msgstr ""
+msgstr "置換による分離検定の計算に失敗しました：{err}"
 
 #: R/mpca.b.R
 msgid ""
@@ -7562,11 +7714,11 @@ msgstr "誤分類率"
 #: mSNP/ui[4].label
 #: mSNP/results/assocGroup.title
 msgid "Phenotype Association Tests"
-msgstr ""
+msgstr "表現型との関連検定"
 
 #: mSNP/results/popGroup/popTable.columns.title
 msgid "PIC"
-msgstr ""
+msgstr "PIC"
 
 #: mCOR/options/plotMetU/pie.title
 #: mCOR/options/plotMetL/pie.title
@@ -7575,7 +7727,7 @@ msgstr "円グラフ"
 
 #: R/mmnv.b.R
 msgid "Pillai's Trace"
-msgstr ""
+msgstr "ピライのトレース"
 
 #: mMNV/options/testPillai.title
 msgid "Pillai's trace"
@@ -7587,24 +7739,29 @@ msgid ""
 "homogeneity of covariance matrices. Wilks' Lambda is the standard "
 "likelihood-ratio criterion reported in psychological and medical literature."
 msgstr ""
+"ピライのトレースは、共分散行列の等質性の仮定の違反に対して最も頑健な統計量で"
+"す。ウィルクスのラムダは、心理学や医学の文献で報告される標準的な尤度比基準で"
+"す。"
 
 #: R/msrv.b.R
 msgid ""
 "Please select a Grouping Variable or Exposure Variable to compute adjusted "
 "survival curves."
 msgstr ""
+"調整済み生存曲線を計算するには、グループ変数または曝露変数を選択してください"
+"。"
 
 #: R/mmout.b.R
 msgid "Please select at least 2 variables for multivariate analysis."
-msgstr ""
+msgstr "多変量解析には少なくとも2つの変数を選択してください。"
 
 #: R/mpca.b.R
 msgid "Please select at least 2 variables for PCA."
-msgstr ""
+msgstr "PCAには少なくとも2つの変数を選択してください。"
 
 #: R/msrv.b.R
 msgid "Please specify one or more covariates with time-varying effects."
-msgstr ""
+msgstr "時間依存効果をもつ共変量を1つ以上指定してください。"
 
 #: mUI/options/isTGR.title
 msgid "Plot"
@@ -7633,7 +7790,7 @@ msgstr "欠損パターンを図示"
 #: mMOUT/options/plotType.title
 #: mSRV/options/kmType.title
 msgid "Plot type"
-msgstr ""
+msgstr "プロットの種類"
 
 #: mTAB1/options/plotType.title
 msgid "Plot type (legacy)"
@@ -7651,7 +7808,7 @@ msgstr "プロット"
 #: mSNP/options/prsOutput.title
 #: mSNP/results/prsOutput.title
 msgid "Polygenic Risk Score"
-msgstr ""
+msgstr "多遺伝子リスクスコア"
 
 #: mROC/options/polygon.title
 msgid "Polygon"
@@ -7659,11 +7816,11 @@ msgstr "ポリゴン"
 
 #: mSNP/results/hweGroup/groupAnalysisTable.columns.title
 msgid "Polymorphism"
-msgstr ""
+msgstr "多型"
 
 #: R/msnp.b.R
 msgid "Polymorphism test"
-msgstr ""
+msgstr "多型の検定"
 
 #: mMNV/options/contrastType/polynomial.title
 msgid "Polynomial (linear, quadratic, etc.)"
@@ -7671,7 +7828,7 @@ msgstr ""
 
 #: mSTAB/options/alphaPool.title
 msgid "Poolability Alpha Level (α)"
-msgstr ""
+msgstr "併合可能性の有意水準（α）"
 
 #: R/mstab.b.R
 msgid "Pooled / Common"
@@ -7679,37 +7836,37 @@ msgstr ""
 
 #: R/mmnv.b.R
 msgid "Pooled covariance matrix is singular or non-positive definite."
-msgstr ""
+msgstr "プールした共分散行列が特異または正定値ではありません。"
 
 #: R/mstab.b.R
 msgid "Pooled residual variance across batches"
-msgstr ""
+msgstr "ロット間でプールした残差分散"
 
 #: R/mstab.b.R
 msgid "Pooled residual variance across cohorts"
-msgstr ""
+msgstr "コホート間でプールした残差分散"
 
 #: R/mstab.b.R
 msgid "Pooled Slope"
-msgstr ""
+msgstr "共通の傾き"
 
 #: R/mstab.b.R
 msgid "Pooled slope"
-msgstr ""
+msgstr "共通の傾き"
 
 #: mSNP/results/hweGroup/freqTable.columns.title
 #: mSNP/results/hweGroup/hwTable.columns.title
 msgid "Population"
-msgstr ""
+msgstr "集団"
 
 #: mSNP/options/popMetrics.title
 msgid "Population genetic metrics"
-msgstr ""
+msgstr "集団遺伝学的指標"
 
 #: mSNP/ui[6].label
 #: mSNP/results/popGroup.title
 msgid "Population genetics metrics"
-msgstr ""
+msgstr "集団遺伝学的指標"
 
 #: R/mmlp.b.R
 msgid "Positive Weight"
@@ -7717,11 +7874,11 @@ msgstr "正の重み"
 
 #: R/mstab.b.R
 msgid "Possible non-normality (p < 0.05)"
-msgstr ""
+msgstr "非正規性の可能性あり（p < 0.05）"
 
 #: R/mstab.b.R
 msgid "Possible residual autocorrelation"
-msgstr ""
+msgstr "残差の自己相関の可能性あり"
 
 #: mTAB1/options/postHocMethod.title
 msgid "Post-hoc pairwise method"
@@ -7740,7 +7897,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Potential data entry error"
-msgstr ""
+msgstr "データ入力の誤りの可能性"
 
 #: R/mpwr.b.R
 #: package/analyses/mPWR.menuGroup
@@ -7758,11 +7915,11 @@ msgstr "効果量ごとの検出力"
 #: R/mpwr.b.R
 #: mPWR/results/powerEsAlphaCurve.title
 msgid "Power by Effect Size and Alpha"
-msgstr ""
+msgstr "効果量と有意水準ごとの検出力"
 
 #: mPWR/options/power_es_alpha_curve.title
 msgid "Power by Effect Size and Alpha Curve"
-msgstr ""
+msgstr "効果量と有意水準ごとの検出力曲線"
 
 #: mPWR/options/power_es_curve.title
 msgid "Power by Effect Size Curve"
@@ -7787,11 +7944,11 @@ msgstr "「検出力曲線（サンプルサイズ別）"
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "PPV"
-msgstr ""
+msgstr "PPV"
 
 #: R/mstab.b.R
 msgid "Pre-exponential factor (ln A)"
-msgstr ""
+msgstr "頻度因子（ln A）"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -7800,7 +7957,7 @@ msgstr "適合率"
 
 #: R/mcor.b.R
 msgid "Precision matrix diagonal elements are not all positive."
-msgstr ""
+msgstr "精度行列の対角要素がすべて正ではありません。"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -7817,7 +7974,7 @@ msgstr ""
 #: mRF/results/misclassifiedTable.columns.title
 #: mRF/results/predClass.title
 msgid "Predicted Class"
-msgstr ""
+msgstr "予測クラス"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -7829,12 +7986,12 @@ msgstr ""
 #: mRF/options/predProb.title
 #: mRF/results/predProb.title
 msgid "Predicted Probability"
-msgstr ""
+msgstr "予測確率"
 
 #: mSTAB/results/arrhTable.columns.title
 #: mSTAB/results/arrhSensTable.columns.title
 msgid "Predicted Shelf Life (months)"
-msgstr ""
+msgstr "予測有効期間（か月）"
 
 #: R/mstab.b.R
 msgid "Predicted Shelf Life at {temp}°C (months)"
@@ -7846,7 +8003,7 @@ msgstr ""
 
 #: mSTAB/options/showPredPlot.title
 msgid "Prediction Intervals & Release Limits (SRL)"
-msgstr ""
+msgstr "予測区間と出荷規格（SRL）"
 
 #: R/mstab.b.R
 msgid "Prediction Intervals & Shelf-Life Release Limits (SRL) (ICH Q1E)"
@@ -7890,7 +8047,7 @@ msgstr "予測変数"
 #: mSRV/options/rocPredictors.title
 #: mSRV/ui[0][8].label
 msgid "Predictors (ROC)"
-msgstr ""
+msgstr "予測変数（ROC）"
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "Prevalence"
@@ -7898,11 +8055,11 @@ msgstr "有病率"
 
 #: R/mpca.b.R
 msgid "Principal Component"
-msgstr ""
+msgstr "主成分"
 
 #: R/mpca.b.R
 msgid "Principal Component {i} (PC{i}) – {pct}% of variance"
-msgstr ""
+msgstr "第{i}主成分（PC{i}）– 分散の{pct}%"
 
 #: package/analyses/mPCA.title
 #: package/analyses/mPCA.menuTitle
@@ -7910,11 +8067,11 @@ msgstr ""
 #: mPCA/ui.title
 #: mPCA/results.title
 msgid "Principal Component Analysis"
-msgstr ""
+msgstr "主成分分析"
 
 #: package/datasets/PCAbloodcells.description
 msgid "Principal Component Analysis (PCA) demonstration"
-msgstr ""
+msgstr "主成分分析（PCA）のデモ"
 
 #: package/analyses/mPCA.description
 #: mPCA/options.description.main
@@ -7923,33 +8080,35 @@ msgid ""
 "cross-validation use a random seed (default 42, configurable under PCA "
 "Configuration) for reproducibility."
 msgstr ""
+"主成分分析（PCA）。再現性のため、平行分析と交差検証には乱数シード（既定値42、"
+"PCAの設定で変更可能）を使用します。"
 
 #: mMLP/results/misclassifiedTable.columns.title
 #: mRF/results/misclassifiedTable.columns.title
 msgid "Probability"
-msgstr ""
+msgstr "確率"
 
 #: R/mlr.b.R
 msgid "Probability Model"
-msgstr ""
+msgstr "確率モデル"
 
 #: R/mlr.b.R
 msgid "Probability Models"
-msgstr ""
+msgstr "確率モデル"
 
 #: mLR/results/riskTable.columns.title
 #: mMLP/results/riskTable.columns.title
 #: mRF/results/riskTable.columns.title
 msgid "Probability Range"
-msgstr ""
+msgstr "確率の範囲"
 
 #: R/mstab.b.R
 msgid "Product Minimum"
-msgstr ""
+msgstr "製品の最小値"
 
 #: mMNV/results/profileTable.title
 msgid "Profile Analysis"
-msgstr ""
+msgstr "プロファイル分析"
 
 #: mMNV/options/showProfileAnalysis.title
 msgid "Profile analysis"
@@ -7957,7 +8116,7 @@ msgstr ""
 
 #: R/mmnv.b.R
 msgid "Profile analysis evaluates between-subjects factor '{factor}'."
-msgstr ""
+msgstr "プロファイル分析では被験者間要因 '{factor}' を評価します。"
 
 #: R/mmnv.b.R
 msgid ""
@@ -7965,22 +8124,24 @@ msgid ""
 "trajectories), Coincidence (different overall levels), and Flatness (change "
 "over time)."
 msgstr ""
+"プロファイル分析では3つの主要な問いを検定します：平行性（グループごとの推移の"
+"違い）、一致性（全体的な水準の違い）、平坦性（時間による変化）。"
 
 #: R/mlr.b.R
 msgid "Profile likelihood confidence intervals or p-values could not be evaluated."
-msgstr ""
+msgstr "プロファイル尤度による信頼区間またはp値を評価できませんでした。"
 
 #: R/msrv.b.R
 msgid "Profile likelihood confidence limits or p-values could not be evaluated."
-msgstr ""
+msgstr "プロファイル尤度による信頼限界またはp値を評価できませんでした。"
 
 #: R/mstab.b.R
 msgid "Projected Degradation Trajectories Across Storage Temperatures"
-msgstr ""
+msgstr "保存温度別の予測分解推移"
 
 #: mSTAB/results/arrhTrajPlot.title
 msgid "Projected Degradation Trajectories Across Temperatures Plot"
-msgstr ""
+msgstr "温度別の予測分解推移プロット"
 
 #: mSTAB/options/showArrhTrajPlot.title
 msgid "Projected Degradation Trajectories Plot"
@@ -7988,31 +8149,37 @@ msgstr ""
 
 #: mSTAB/results/arrhTable.columns.title
 msgid "Projection & Regulatory Assessment"
-msgstr ""
+msgstr "予測と規制上の評価"
 
 #: R/mstab.b.R
 msgid ""
 "Projections use empirically fitted activation energy Ea = {ea} kJ/mol from "
 "multi-temperature regression."
 msgstr ""
+"予測には、多温度回帰から経験的に推定した活性化エネルギー Ea = {ea} kJ/mol を"
+"使用しています。"
 
 #: R/mstab.b.R
 msgid "Projections use user-specified activation energy Ea = {ea} kJ/mol."
 msgstr ""
+"予測には、ユーザーが指定した活性化エネルギー Ea = {ea} kJ/mol を使用していま"
+"す。"
 
 #: mSRV/results/coxSection/coxAssumpTable.title
 msgid "Proportional Hazards Assumption (Schoenfeld Residuals Test)"
-msgstr ""
+msgstr "比例ハザード性の仮定（シェーンフェルド残差による検定）"
 
 #: R/msrv.b.R
 msgid ""
 "Proportional hazards assumption test via Schoenfeld residuals is not "
 "available for Firth's penalized Cox regression models."
 msgstr ""
+"シェーンフェルド残差による比例ハザード性の検定は、FirthのCox回帰モデルでは利"
+"用できません。"
 
 #: R/msrv.b.R
 msgid "Proportional hazards test (cox.zph) could not be computed: {reason}"
-msgstr ""
+msgstr "比例ハザード性の検定（cox.zph）を計算できませんでした：{reason}"
 
 #: mUI/options/isProp.title
 #: mUI/results/stat/intstat.title
@@ -8021,7 +8188,7 @@ msgstr "区間の割合"
 
 #: R/mstab.b.R
 msgid "Proposed / Target Shelf Life"
-msgstr ""
+msgstr "提案 / 目標有効期間"
 
 #: mUI/options/decision.title
 #: mUI/results/decision.title
@@ -8031,11 +8198,11 @@ msgstr "決定案"
 #: mSTAB/results/shelfTable.columns.title
 #: mSTAB/results/comboShelfTable.columns.title
 msgid "Proposed Shelf Life Conformity"
-msgstr ""
+msgstr "提案有効期間への適合"
 
 #: R/mstab.b.R
 msgid "Proposed shelf life warning"
-msgstr ""
+msgstr "提案有効期間に関する警告"
 
 #: mCOR/options/plots.description.ui
 msgid "provide a correlation matrix plot."
@@ -8043,11 +8210,11 @@ msgstr "相関行列の図を作成します。"
 
 #: mSNP/options/manhattanPlot.title
 msgid "Pseudo-Manhattan plot"
-msgstr ""
+msgstr "疑似マンハッタンプロット"
 
 #: mSNP/results/assocGroup/manhattanPlot.title
 msgid "Pseudo-Manhattan Plot of Association p-values"
-msgstr ""
+msgstr "関連解析のp値の疑似マンハッタンプロット"
 
 #: mPWR/options/calc.title
 msgid "Purpose of Calculation"
@@ -8055,25 +8222,25 @@ msgstr "計算の目的"
 
 #: R/mmf.b.R
 msgid "PVU"
-msgstr ""
+msgstr "PVU"
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
 msgid "q (B)"
-msgstr ""
+msgstr "q (B)"
 
 #: R/msnp.b.R
 msgid "q (B) (%)"
-msgstr ""
+msgstr "q (B)（%）"
 
 #: R/msnp.b.R
 msgid "Q-Q plot for HWE"
-msgstr ""
+msgstr "HWEのQ-Qプロット"
 
 #: mSNP/options/qqPlot.title
 #: mSNP/results/hweGroup/qqPlot.title
 msgid "Q-Q plot of HWE p-values"
-msgstr ""
+msgstr "HWEのp値のQ-Qプロット"
 
 #: R/mtab1.b.R
 msgctxt "Q1; Q3"
@@ -8088,57 +8255,57 @@ msgstr ""
 
 #: R/mmnv.b.R
 msgid "Quadratic"
-msgstr ""
+msgstr "2次"
 
 #: mDCA/options/palBrewer.title
 #: mSRV/options/palBrewer.title
 msgid "Qualitative Palette"
-msgstr ""
+msgstr "カラーパレット"
 
 #: R/mstab.b.R
 msgid "Quality Attribute"
-msgstr ""
+msgstr "品質特性"
 
 #: mSNP/results/qcGroup.title
 msgid "Quality Control (QC) Analysis"
-msgstr ""
+msgstr "品質管理（QC）解析"
 
 #: mSNP/ui[7].label
 msgid "Quality Control (QC) Filters"
-msgstr ""
+msgstr "品質管理（QC）フィルター"
 
 #: mSNP/results/qcGroup/qcTable.title
 msgid "Quality Control Summary"
-msgstr ""
+msgstr "品質管理の要約"
 
 #: mPCA/results/cos2Table.title
 msgid "Quality of representation (Cos²)"
-msgstr ""
+msgstr "表現の質（Cos²）"
 
 #: mPCA/options/cos2Heatmap.title
 msgid "Quality of representation (Cos²) heatmap"
-msgstr ""
+msgstr "表現の質（Cos²）のヒートマップ"
 
 #: mPCA/results/cos2Heatmap.title
 msgid "Quality of representation (Cos²) Heatmap"
-msgstr ""
+msgstr "表現の質（Cos²）のヒートマップ"
 
 #: mPCA/options/cos2Table.title
 msgid "Quality of representation (Cos²) table"
-msgstr ""
+msgstr "表現の質（Cos²）の表"
 
 #: R/mmnv.b.R
 msgid "Quartic"
-msgstr ""
+msgstr "4次"
 
 #: R/mmnv.b.R
 msgid "Quintic"
-msgstr ""
+msgstr "5次"
 
 #: mSNP/options/ldMetric/r2.title
 #: mSNP/results/ldGroup/ldTable.columns.title
 msgid "r²"
-msgstr ""
+msgstr "r²"
 
 #: mPWR/options/r2_predictor.title
 #: mPWR/ui[1]/r2_predictor.label
@@ -8147,7 +8314,7 @@ msgstr "他の共変量による予測変数 X の決定係数（‭R²）"
 
 #: package/datasets/RandomForestCHDclassification.name
 msgid "Random Forest CHD classification"
-msgstr ""
+msgstr "ランダムフォレスト CHD分類"
 
 #: package/analyses/mRF.title
 #: package/analyses/mRF.menuTitle
@@ -8156,7 +8323,7 @@ msgstr ""
 #: mRF/ui.title
 #: mRF/results.title
 msgid "Random Forest Classifier"
-msgstr ""
+msgstr "ランダムフォレスト分類器"
 
 #: package/analyses/mRF.description
 #: mRF/options.description.main
@@ -8165,18 +8332,20 @@ msgid ""
 "partitioning uses a random seed (default 42, configurable under Validation "
 "Settings) for reproducibility."
 msgstr ""
+"rangerパッケージを用いたランダムフォレスト分類器。再現性のため、データの分割"
+"には乱数シード（既定値42、検証設定で変更可能）を使用します。"
 
 #: R/mrf.b.R
 msgid "Random Forest Predicted Class"
-msgstr ""
+msgstr "ランダムフォレストの予測クラス"
 
 #: R/mrf.b.R
 msgid "Random Forest Predicted Probability"
-msgstr ""
+msgstr "ランダムフォレストの予測確率"
 
 #: mSNP/options/mdrSeed.title
 msgid "Random seed"
-msgstr ""
+msgstr "乱数シード"
 
 #: mMLP/results/importanceTable.columns.title
 #: mRF/results/importanceTable.columns.title
@@ -8193,17 +8362,17 @@ msgstr ""
 
 #: mDCA/options/recalibrate.title
 msgid "Recalibrate Probabilities (Platt Scaling)"
-msgstr ""
+msgstr "確率の再較正（プラット・スケーリング）"
 
 #: R/msnp.b.R
 #: mSNP/options/geneticModel/recessive.title
 msgid "Recessive"
-msgstr ""
+msgstr "劣性"
 
 #: mLR/options/refLevel.title
 #: mLR/ui[0][0]/refLevel.label
 msgid "Reference"
-msgstr ""
+msgstr "基準"
 
 #: mUI/options/refval.title
 #: mUI/ui[0][1]/refval.label
@@ -8212,23 +8381,23 @@ msgstr "基準レベル"
 
 #: R/mlr.b.R
 msgid "Reference level: {ref}"
-msgstr ""
+msgstr "基準水準：{ref}"
 
 #: R/mstab.b.R
 msgid "Refrigerated (5°C ± 3°C)"
-msgstr ""
+msgstr "冷蔵（5°C ± 3°C）"
 
 #: mSTAB/options/storageCond/refrigerated.title
 msgid "Refrigerated storage (5°C ± 3°C)"
-msgstr ""
+msgstr "冷蔵保存（5°C ± 3°C）"
 
 #: R/mstab.b.R
 msgid "Refrigerated Storage (Cold Chain)"
-msgstr ""
+msgstr "冷蔵保存（コールドチェーン）"
 
 #: R/mstab.b.R
 msgid "Refrigerated: Accelerated data unavailable"
-msgstr ""
+msgstr "冷蔵：加速試験データなし"
 
 #: R/mstab.b.R
 msgid "Refrigerated: Little or no change / variability (ICH Q1E Section 2.5.1.1)"
@@ -8240,7 +8409,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Refrigerated: No significant change at 25°C / 60% RH (ICH Q1E App. A.2)"
-msgstr ""
+msgstr "冷蔵：25°C / 60% RHで明確な変化なし（ICH Q1E 付録A.2）"
 
 #: R/mstab.b.R
 msgid "Refrigerated: Significant change between 3 and 6 months (ICH Q1E App. A.2)"
@@ -8250,7 +8419,7 @@ msgstr ""
 msgid ""
 "Refrigerated: Significant change within first 3 months at 25°C (ICH Q1E App. "
 "A.2)"
-msgstr ""
+msgstr "冷蔵：25°Cで最初の3か月以内に明確な変化あり（ICH Q1E 付録A.2）"
 
 #: package/analyses/mLR.menuSubgroup
 #: package/analyses/mRF.menuSubgroup
@@ -8267,59 +8436,59 @@ msgstr ""
 #: mSRV/options.menuSubgroup
 #: mSTAB/options.menuSubgroup
 msgid "Regression & Classification"
-msgstr ""
+msgstr "回帰と分類"
 
 #: R/mpca.b.R
 msgid "Regression and ROC validation failed:"
-msgstr ""
+msgstr "回帰とROCによる検証に失敗しました："
 
 #: mSTAB/options/showCoefTable.title
 msgid "Regression Coefficients Table"
-msgstr ""
+msgstr "回帰係数の表"
 
 #: mPCA/ui[3][0][3].label
 msgid "Regression Model & Validation"
-msgstr ""
+msgstr "回帰モデルと検証"
 
 #: mSTAB/results/coefTable.title
 msgid "Regression Model Coefficients"
-msgstr ""
+msgstr "回帰モデルの係数"
 
 #: mPCA/results/regTable.title
 msgid "Regression Model Performance (K-fold Cross-Validation)"
-msgstr ""
+msgstr "回帰モデルの性能（K分割交差検証）"
 
 #: mPCA/options/regTable.title
 msgid "Regression model quality with K-fold CV"
-msgstr ""
+msgstr "K分割交差検証による回帰モデルの性能"
 
 #: mPCA/results/rocPlot.title
 msgid "Regression Model ROC Curve (Full Dataset)"
-msgstr ""
+msgstr "回帰モデルのROC曲線（全データ）"
 
 #: mPCA/options/rocPlot.title
 msgid "Regression ROC plot"
-msgstr ""
+msgstr "回帰のROCプロット"
 
 #: mLR/options/lasso_penalty.title
 msgid "Regularization Penalty Choice"
-msgstr ""
+msgstr "正則化ペナルティの選択"
 
 #: mLR/ui[2]/lasso_penalty.label
 msgid "Regularization Penalty Optimization"
-msgstr ""
+msgstr "正則化ペナルティの最適化"
 
 #: R/mstab.b.R
 msgid "Regulatory Ceiling"
-msgstr ""
+msgstr "規制上の上限"
 
 #: R/mstab.b.R
 msgid "Regulatory guidance notice"
-msgstr ""
+msgstr "規制ガイダンスに関する注意"
 
 #: R/mstab.b.R
 msgid "Regulatory Verdict"
-msgstr ""
+msgstr "規制上の判定"
 
 #: mSTAB/results/arrhSensTable.columns.title
 msgid "Relative AF"
@@ -8331,11 +8500,11 @@ msgstr "サイズ比（グループ2／グループ1）"
 
 #: R/mstab.b.R
 msgid "Relevant Supporting Data"
-msgstr ""
+msgstr "関連する裏付けデータ"
 
 #: mSTAB/options/supportingData.title
 msgid "Relevant supporting data available (pilot batches, packaging)"
-msgstr ""
+msgstr "関連する裏付けデータあり（パイロットロット、包装）"
 
 #: mMLP/options/activation/relu.title
 msgid "ReLU"
@@ -8355,7 +8524,7 @@ msgstr "並べ替え"
 
 #: R/mlr.b.R
 msgid "Rep {k}-Fold CV (x{r})"
-msgstr ""
+msgstr "反復{k}分割交差検証（x{r}）"
 
 #: mMNV/options/contrastType/repeated.title
 msgid "Repeated (successive differences)"
@@ -8363,7 +8532,7 @@ msgstr ""
 
 #: R/mlr.b.R
 msgid "Repeated CV"
-msgstr ""
+msgstr "反復交差検証"
 
 #: package/analyses/mMNV.title
 #: package/analyses/mMNV.menuTitle
@@ -8373,7 +8542,7 @@ msgstr ""
 #: mMNV/ui.title
 #: mMNV/results.title
 msgid "Repeated Measures & Profile Analysis"
-msgstr ""
+msgstr "反復測定とプロファイル分析"
 
 #: R/mmnv.b.R
 msgid "Repeated Measures & Profile Analysis: Methodological Guide"
@@ -8398,28 +8567,30 @@ msgid ""
 "Repeated Measures MANOVA without sphericity assumption (O'Brien & Kaiser, "
 "1985) and Profile Analysis."
 msgstr ""
+"球面性を仮定しない反復測定MANOVA（O'Brien & Kaiser, 1985）とプロファイル分析"
+"。"
 
 #: R/mmnv.b.R
 msgid ""
 "Repeated Measures requires at least 2 variables / time points in Repeated "
 "Measures Cells."
-msgstr ""
+msgstr "反復測定には、反復測定のセルに少なくとも2つの変数／時点が必要です。"
 
 #: R/mmnv.b.R
 msgid "Repeated Measures Trajectory Profile"
-msgstr ""
+msgstr "反復測定の推移プロファイル"
 
 #: R/mlr.b.R
 msgid "Repeated Stratified CV"
-msgstr ""
+msgstr "反復層化交差検証"
 
 #: R/mpca.b.R
 msgid "Repeated Stratified CV (AUC = {auc})"
-msgstr ""
+msgstr "反復層化交差検証（AUC = {auc}）"
 
 #: mLR/options/partition/repeated_kfold.title
 msgid "Repeated Stratified K-Fold CV"
-msgstr ""
+msgstr "反復層化K分割交差検証"
 
 #: R/mmnv.b.R
 msgid ""
@@ -8427,10 +8598,12 @@ msgid ""
 "confidence intervals. Model tests evaluate effects at the mean of the "
 "covariates."
 msgstr ""
+"報告値は、観測されたセル平均と標準偏差（95% スチューデントのt信頼区間付き）で"
+"す。モデルの検定では、共変量の平均値において効果を評価します。"
 
 #: R/mpca.b.R
 msgid "Representation Quality (Cos²)"
-msgstr ""
+msgstr "表現の質（Cos²）"
 
 #: mMF/options/setseed.title
 msgid "Reproducible random number generation (RNG) results"
@@ -8440,19 +8613,19 @@ msgstr "再現可能な乱数生成（RNG）の結果"
 msgid ""
 "Residual degrees of freedom is 0; statistical inference and confidence "
 "intervals cannot be evaluated."
-msgstr ""
+msgstr "残差の自由度が0のため、統計的推測と信頼区間を評価できません。"
 
 #: mSTAB/results/diagPlot.title
 msgid "Residual Diagnostic Plots"
-msgstr ""
+msgstr "残差診断プロット"
 
 #: mSTAB/options/showDiagPlot.title
 msgid "Residual Diagnostics Plots"
-msgstr ""
+msgstr "残差診断プロット"
 
 #: R/mstab.b.R
 msgid "Residual Error (Full Model)"
-msgstr ""
+msgstr "残差誤差（フルモデル）"
 
 #: R/mstab.b.R
 msgid ""
@@ -8471,47 +8644,47 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Residual Standard Error (s)"
-msgstr ""
+msgstr "残差標準誤差（s）"
 
 #: R/mstab.b.R
 msgid "Residual variability estimate"
-msgstr ""
+msgstr "残差のばらつきの推定値"
 
 #: R/mstab.b.R
 msgid "Residuals"
-msgstr ""
+msgstr "残差"
 
 #: R/mstab.b.R
 msgid "Residuals vs Fitted"
-msgstr ""
+msgstr "残差 vs 予測値"
 
 #: R/mstab.b.R
 msgid "Residuals vs Time"
-msgstr ""
+msgstr "残差 vs 時間"
 
 #: R/mstab.b.R
 msgid "Response and Time variables must contain only finite numeric values."
-msgstr ""
+msgstr "応答変数と時間変数には有限の数値のみを含める必要があります。"
 
 #: mSTAB/options/trans.title
 msgid "Response Transformation"
-msgstr ""
+msgstr "応答変数の変換"
 
 #: mSTAB/options/trans2.title
 msgid "Response Transformation (Attribute 2)"
-msgstr ""
+msgstr "応答変数の変換（品質特性2）"
 
 #: mSTAB/options/trans3.title
 msgid "Response Transformation (Attribute 3)"
-msgstr ""
+msgstr "応答変数の変換（品質特性3）"
 
 #: mSTAB/options/trans4.title
 msgid "Response Transformation (Attribute 4)"
-msgstr ""
+msgstr "応答変数の変換（品質特性4）"
 
 #: mSTAB/options/trans5.title
 msgid "Response Transformation (Attribute 5)"
-msgstr ""
+msgstr "応答変数の変換（品質特性5）"
 
 #: R/mstab.b.R
 msgid ""
@@ -8521,7 +8694,7 @@ msgstr ""
 
 #: R/msrv.b.R
 msgid "Restricted mean survival time evaluated up to τ = {tau}."
-msgstr ""
+msgstr "制限付き平均生存時間は τ = {tau} まで評価しています。"
 
 #: mSTAB/results/regTable.columns.title
 msgid "Result"
@@ -8529,7 +8702,7 @@ msgstr ""
 
 #: mSTAB/results/arrhTable.columns.title
 msgid "RH (%)"
-msgstr ""
+msgstr "RH（%）"
 
 #: mCOR/options/clPos/r.title
 msgid "Right"
@@ -8539,62 +8712,64 @@ msgstr "右"
 #: mMLP/results/riskTable.columns.title
 #: mRF/results/riskTable.columns.title
 msgid "Risk Category"
-msgstr ""
+msgstr "リスク区分"
 
 #: R/msnp.b.R
 msgid "Risk Class"
-msgstr ""
+msgstr "リスク区分"
 
 #: mSNP/results/mdrGroup/mdrCellTable.columns.title
 msgid "Risk Classification"
-msgstr ""
+msgstr "リスク分類"
 
 #: mSTAB/results/arrhSensTable.columns.title
 msgid "Risk Profile / Assessment"
-msgstr ""
+msgstr "リスクプロファイル / 評価"
 
 #: mLR/results/riskTable.title
 #: mMLP/results/riskTable.title
 #: mRF/results/riskTable.title
 msgid "Risk Stratification"
-msgstr ""
+msgstr "リスク層別化"
 
 #: mLR/options/show_risk_strat.title
 #: mLR/ui[4]/show_risk_strat.label
 #: mMLP/options/show_risk_strat.title
 #: mRF/options/show_risk_strat.title
 msgid "Risk Stratification Table"
-msgstr ""
+msgstr "リスク層別化表"
 
 #: mSRV/options/kmTable.title
 msgid "Risk table"
-msgstr ""
+msgstr "リスク表"
 
 #: R/mmout.b.R
 msgid "Robust"
-msgstr ""
+msgstr "ロバスト"
 
 #: mMOUT/options/method/robust.title
 msgid "Robust Mahalanobis distance (MCD)"
-msgstr ""
+msgstr "ロバストなマハラノビス距離（MCD）"
 
 #: R/mmout.b.R
 msgid ""
 "Robust MCD covariance estimation failed (possibly due to small sample size "
 "or collinearity). Classic Mahalanobis distance was used instead."
 msgstr ""
+"ロバストなMCD共分散推定に失敗しました（サンプルサイズが小さいか共線性が原因の"
+"可能性があります）。代わりに古典的マハラノビス距離を使用しました。"
 
 #: R/mmout.b.R
 msgid "Robust Outlier"
-msgstr ""
+msgstr "ロバストな外れ値"
 
 #: mSRV/results/compRisksSection/fineGrayTable.columns.title
 msgid "Robust SE"
-msgstr ""
+msgstr "ロバスト標準誤差"
 
 #: R/mmout.b.R
 msgid "Robust Squared Mahalanobis Distance"
-msgstr ""
+msgstr "ロバストなマハラノビス距離の2乗"
 
 #: mLR/options/show_roc.title
 #: mMLP/options/show_roc.title
@@ -8612,20 +8787,20 @@ msgstr "ROC分析比較"
 
 #: mLR/ui[4]/show_roc.label
 msgid "ROC analysis curves"
-msgstr ""
+msgstr "ROC分析曲線"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
 #: R/mrf.b.R
 msgid "ROC analysis for '{part}' could not be computed: {err}"
-msgstr ""
+msgstr "'{part}' のROC分析を計算できませんでした：{err}"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "ROC Analysis for {class}"
-msgstr ""
+msgstr "{class} のROC分析"
 
 #: mLR/options/roc_unit.title
 #: mMLP/options/roc_unit.title
@@ -8657,7 +8832,7 @@ msgstr "ROC比較"
 
 #: mLR/results/rocPlot.title
 msgid "ROC Curve Comparison"
-msgstr ""
+msgstr "ROC曲線の比較"
 
 #: R/mlr.b.R
 #: R/mpca.b.R
@@ -8669,7 +8844,7 @@ msgstr "ROC曲線"
 #: package/datasets/BCModelsROCEstimation.description
 #: package/datasets/CHDModelsROCEstimation.description
 msgid "ROC estimation for binomial logistic models demonstration"
-msgstr ""
+msgstr "二項ロジスティックモデルのROC推定のデモ"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -8689,7 +8864,7 @@ msgstr ""
 
 #: mSRV/options/rocPlot.title
 msgid "ROC plot"
-msgstr ""
+msgstr "ROCプロット"
 
 #: mLR/results/rocTable.title
 #: mMLP/results/rocTable.title
@@ -8697,11 +8872,11 @@ msgstr ""
 #: mRF/results/rocTable.title
 #: mUI/results/stat/rocTable.title
 msgid "ROC Quantitative Evaluation"
-msgstr ""
+msgstr "ROCの定量的評価"
 
 #: mROC/results/rocTable.title
 msgid "ROC Results"
-msgstr ""
+msgstr "ROCの結果"
 
 #: mROC/ui[1].label
 msgid "ROC statistics & cut-offs"
@@ -8719,14 +8894,14 @@ msgstr ""
 #: mROC/ui[1]/showTable.label
 #: mUI/options/show_roc_table.title
 msgid "ROC table"
-msgstr ""
+msgstr "ROC表"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mpca.b.R
 #: R/mrf.b.R
 msgid "ROC table calculation for '{part}' failed: {err}"
-msgstr ""
+msgstr "'{part}' のROC表の計算に失敗しました：{err}"
 
 #: mLR/options/roc_x.title
 #: mMLP/options/roc_x.title
@@ -8739,17 +8914,17 @@ msgstr "ROC X軸座標"
 msgid ""
 "Room Temp: Accelerated change, intermediate confirmed stable (ICH Q1E App. "
 "A.1)"
-msgstr ""
+msgstr "室温：加速条件で変化あり、中間的条件で安定性を確認（ICH Q1E 付録A.1）"
 
 #: R/mstab.b.R
 msgid ""
 "Room Temp: Accelerated change, intermediate study missing (ICH Q1E Section "
 "2.4.2.1)"
-msgstr ""
+msgstr "室温：加速条件で変化あり、中間的試験データなし（ICH Q1E 2.4.2.1項）"
 
 #: R/mstab.b.R
 msgid "Room Temp: Accelerated testing not evaluated (ICH Q1E Section 2.4.1)"
-msgstr ""
+msgstr "室温：加速試験は評価せず（ICH Q1E 2.4.1項）"
 
 #: R/mstab.b.R
 msgid "Room Temp: Intermediate stable, no supporting data (ICH Q1E App. A.1)"
@@ -8765,25 +8940,25 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Room Temp: No significant change at accelerated condition (ICH Q1E App. A.1)"
-msgstr ""
+msgstr "室温：加速条件で明確な変化なし（ICH Q1E 付録A.1）"
 
 #: R/mstab.b.R
 msgid "Room Temp: Significant change at accelerated and intermediate conditions"
-msgstr ""
+msgstr "室温：加速条件と中間的条件で明確な変化あり"
 
 #: R/mstab.b.R
 msgid "Room Temperature (25°C / 60% RH or 30°C / 65% RH)"
-msgstr ""
+msgstr "室温（25°C / 60% RH または 30°C / 65% RH）"
 
 #: mSTAB/options/storageCond/room.title
 msgid "Room temperature storage (25°C / 60% RH or 30°C / 65% RH)"
-msgstr ""
+msgstr "室温保存（25°C / 60% RH または 30°C / 65% RH）"
 
 #: mLR/results/misclassifiedTable.columns.title
 #: mMLP/results/misclassifiedTable.columns.title
 #: mRF/results/misclassifiedTable.columns.title
 msgid "Row"
-msgstr ""
+msgstr "行"
 
 #: R/mtab1.b.R
 msgid "Row %"
@@ -8795,7 +8970,7 @@ msgstr ""
 
 #: R/mmnv.b.R
 msgid "Roy's Largest Root"
-msgstr ""
+msgstr "ロイの最大根"
 
 #: mMNV/options/testRoy.title
 msgid "Roy's largest root"
@@ -8808,7 +8983,7 @@ msgstr ""
 #: mRF/options/sample_fraction.title
 #: mRF/ui[1]/sample_fraction.label
 msgid "Sample Fraction (Bootstrap)"
-msgstr ""
+msgstr "サンプル比率（ブートストラップ）"
 
 #: R/mpwr.b.R
 msgid "Sample Size (N)"
@@ -8816,7 +8991,7 @@ msgstr "サンプルサイズ (N)"
 
 #: R/msrv.b.R
 msgid "Sample size (n) and events count unique subjects."
-msgstr ""
+msgstr "サンプルサイズ（n）とイベント数は、一意の対象者で数えています。"
 
 #: R/mpwr.b.R
 msgid "Sample Size (N1)"
@@ -8829,18 +9004,20 @@ msgstr ""
 #: R/mmnv.b.R
 msgid "Sample size in one or more groups (n <= p) is insufficient for Box's M test."
 msgstr ""
+"1つ以上のグループでサンプルサイズ（n <= p）がボックスのM検定には不足していま"
+"す。"
 
 #: R/mcor.b.R
 msgid "Sample size is too small to compute Classical Partial Correlation."
-msgstr ""
+msgstr "サンプルサイズが小さすぎるため、古典的偏相関を計算できません。"
 
 #: R/mcor.b.R
 msgid "Sample size is too small to compute Classical Semi-Partial Correlation."
-msgstr ""
+msgstr "サンプルサイズが小さすぎるため、古典的半偏相関を計算できません。"
 
 #: R/mcor.b.R
 msgid "Sample size is too small to compute Graphical Lasso."
-msgstr ""
+msgstr "サンプルサイズが小さすぎるため、グラフィカル・ラッソを計算できません。"
 
 #: mPWR/options/n_ratio.title
 msgid "Sample size ratio (N<sub>2</sub>/N<sub>1</sub>)"
@@ -8857,12 +9034,12 @@ msgstr "保存"
 #: mMOUT/options/outDist.title
 #: mMOUT/results/outDist.title
 msgid "Saved Mahalanobis distances"
-msgstr ""
+msgstr "マハラノビス距離を保存"
 
 #: mMOUT/options/outFlag.title
 #: mMOUT/results/outFlag.title
 msgid "Saved outlier flags"
-msgstr ""
+msgstr "外れ値フラグを保存"
 
 #: R/mrf.b.R
 msgid ""
@@ -8872,7 +9049,7 @@ msgstr ""
 
 #: mCOR/options/glassoPlotScale.title
 msgid "Scale node size by centrality"
-msgstr ""
+msgstr "ノードの大きさを中心性で調整"
 
 #: mCOR/options/clPos.title
 msgid "Scale position"
@@ -8880,11 +9057,11 @@ msgstr "スケールの位置"
 
 #: R/mstab.b.R
 msgid "Scale-Location"
-msgstr ""
+msgstr "スケール-位置"
 
 #: mMNV/results/hePlot.title
 msgid "Scatter with Data Ellipses"
-msgstr ""
+msgstr "データ楕円付き散布図"
 
 #: mMNV/options/showHePlot.title
 msgid "Scatter with data ellipses"
@@ -8892,23 +9069,23 @@ msgstr ""
 
 #: R/msrv.b.R
 msgid "Schoenfeld residuals – {var}"
-msgstr ""
+msgstr "シェーンフェルド残差 – {var}"
 
 #: mSRV/options/showSchoenfeldPlot.title
 msgid "Schoenfeld residuals plot"
-msgstr ""
+msgstr "シェーンフェルド残差プロット"
 
 #: mSRV/results/coxSection/schoenfeldPlots.title
 msgid "Schoenfeld Residuals Plots"
-msgstr ""
+msgstr "シェーンフェルド残差プロット"
 
 #: R/mdca.b.R
 msgid "Score"
-msgstr ""
+msgstr "スコア"
 
 #: R/msrv.b.R
 msgid "Score (Log-rank) Test"
-msgstr ""
+msgstr "スコア（ログランク）検定"
 
 #: R/msrv.b.R
 msgid ""
@@ -8918,16 +9095,16 @@ msgstr ""
 
 #: mPCA/options/screePlot.title
 msgid "Scree plot with parallel analysis"
-msgstr ""
+msgstr "平行分析付きスクリープロット"
 
 #: mPCA/results/screePlot.title
 msgid "Scree Plot with Parallel Analysis"
-msgstr ""
+msgstr "平行分析付きスクリープロット"
 
 #: mMNV/results/meansTable.columns.title
 #: mTAB1/results/normAudit.columns.title
 msgid "SD"
-msgstr ""
+msgstr "標準偏差"
 
 #: package/datasets/SDIROCclassification.name
 msgid "SDI ROC classification"
@@ -8936,14 +9113,14 @@ msgstr "SDIのROC分類"
 #: mROC/results/rocTable.columns.title
 #: mUI/results/stat/mcistat.columns.title
 msgid "Se"
-msgstr ""
+msgstr "Se"
 
 #: mMNV/results/meansTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
 #: mSRV/results/coxSection/timeDepTable.columns.title
 #: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 msgid "SE"
-msgstr ""
+msgstr "標準誤差"
 
 #: mLR/options/seed.title
 #: mLR/ui[3]/seed.label
@@ -8955,13 +9132,15 @@ msgstr ""
 #: mRF/options/seed.title
 #: mRF/ui[2]/seed.label
 msgid "Seed number"
-msgstr ""
+msgstr "シード値"
 
 #: R/mdca.b.R
 msgid ""
 "Select a binary target variable (Outcome), target event level, and at least "
 "one model probability column (values between 0 and 1)."
 msgstr ""
+"二値の目的変数（アウトカム）、対象イベントの水準、および少なくとも1つのモデル"
+"確率の列（0～1の値）を選択してください。"
 
 #: R/mstab.b.R
 msgid ""
@@ -8969,6 +9148,9 @@ msgid ""
 "time variable (e.g. Months), and a batch/lot factor variable. Specify your "
 "acceptance criteria (LSL and/or USL)."
 msgstr ""
+"定量的な品質特性（例：含量%や不純物%）、連続的な時間変数（例：月数）、ロット"
+"／バッチの因子変数を選択してください。判定基準（LSLとUSLのいずれかまたは両方"
+"）を指定してください。"
 
 #: R/mmnv.b.R
 msgid ""
@@ -8977,6 +9159,9 @@ msgid ""
 "(e.g., Time), Between-Subjects Factors (e.g., Treatment Group), and "
 "Covariates."
 msgstr ""
+"反復測定の変数（例：T1、T2、T3）を少なくとも2つ、反復測定のセルに指定してくだ"
+"さい。必要に応じて、被験者内要因名（例：時間）、被験者間要因（例：処置群）、"
+"共変量を指定してください。"
 
 #: mCOR/options/selgroup.title
 #: mROC/options/selgroup.title
@@ -8986,19 +9171,19 @@ msgstr "グループ選択"
 #: mLR/options/selgroup.title
 #: mPCA/options/selgroup.title
 msgid "Select group for filtering"
-msgstr ""
+msgstr "フィルターするグループを選択"
 
 #: R/mstab.b.R
 msgid "Selected Decision Tree Branch"
-msgstr ""
+msgstr "選択された判定樹の分岐"
 
 #: R/mlr.b.R
 msgid "Selected Factors: {factors}; Selected Covariates: {covs}"
-msgstr ""
+msgstr "選択された因子：{factors}；選択された共変量：{covs}"
 
 #: mLR/results/infoTable.columns.title
 msgid "Selection"
-msgstr ""
+msgstr "選択"
 
 #: R/mpca.b.R
 #: R/mroc.b.R
@@ -9020,7 +9205,7 @@ msgstr "感度（％）"
 #: mRF/results/rocTable.columns.title
 #: mUI/results/stat/rocTable.columns.title
 msgid "Sensitivity (Se)"
-msgstr ""
+msgstr "感度（Se）"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -9031,28 +9216,28 @@ msgstr "感度 / 再現率"
 msgid ""
 "Sensitivity of projected shelf life to temperature and activation energy "
 "variations."
-msgstr ""
+msgstr "温度と活性化エネルギーの変動に対する予測有効期間の感度。"
 
 #: mLR/options/multiclass_roc_type/separate.title
 msgid "Separate"
-msgstr ""
+msgstr "個別"
 
 #: mMLP/options/multiclass_roc_type/separate.title
 #: mRF/options/multiclass_roc_type/separate.title
 msgid "Separate Plots (Class-Specific)"
-msgstr ""
+msgstr "個別プロット（クラス別）"
 
 #: R/mstab.b.R
 msgid "Separate slopes & intercepts"
-msgstr ""
+msgstr "個別の傾き・切片"
 
 #: R/mstab.b.R
 msgid "Separate slopes & separate intercepts (Model 1)"
-msgstr ""
+msgstr "個別の傾き・個別の切片（モデル1）"
 
 #: mSTAB/options/modelChoice/sep_slopes_sep_int.title
 msgid "Separate slopes and separate intercepts (Model 1)"
-msgstr ""
+msgstr "個別の傾き・個別の切片（モデル1）"
 
 #: mDCA/options/palBrewer/Set1.title
 #: mLR/options/palBrewer/Set1.title
@@ -9086,17 +9271,19 @@ msgstr "セット3"
 
 #: mSNP/options/gender.title
 msgid "Sex variable"
-msgstr ""
+msgstr "性別変数"
 
 #: mSNP/ui[0][4].label
 msgid "Sex Variable (for X-linked HWE)"
-msgstr ""
+msgstr "性別変数（X連鎖HWE用）"
 
 #: R/msnp.b.R
 msgid ""
 "Sex variable levels could not be identified automatically. Specify the "
 "female level in options if needed."
 msgstr ""
+"性別変数の水準を自動で識別できませんでした。必要に応じて、オプションで女性の"
+"水準を指定してください。"
 
 #: R/msnp.b.R
 msgid ""
@@ -9111,7 +9298,7 @@ msgstr "シェード"
 
 #: mSNP/results/popGroup/popTable.columns.title
 msgid "Shannon Index (I)"
-msgstr ""
+msgstr "シャノン指数（I）"
 
 #: mTAB1/results/normAudit.columns.title
 msgid "Shapiro-Wilk W"
@@ -9119,11 +9306,11 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Shelf Life (months)"
-msgstr ""
+msgstr "有効期間（か月）"
 
 #: mSTAB/results/shelfTable.title
 msgid "Shelf Life / Retest Period Estimation Summary"
-msgstr ""
+msgstr "有効期間 / リテスト期間の推定の要約"
 
 #: R/mstab.b.R
 msgid "Shelf Life = {val}"
@@ -9139,23 +9326,23 @@ msgstr ""
 
 #: mSTAB/options/showShelfPlot.title
 msgid "Shelf Life Comparison & Horizon Plot"
-msgstr ""
+msgstr "有効期間の比較とホライズンプロット"
 
 #: mSTAB/results/shelfPlot.title
 msgid "Shelf Life Comparison & ICH Q1E Extrapolation Horizon"
-msgstr ""
+msgstr "有効期間の比較とICH Q1E外挿ホライズン"
 
 #: R/mstab.b.R
 msgid "Shelf Life Estimation:"
-msgstr ""
+msgstr "有効期間の推定："
 
 #: R/mstab.b.R
 msgid "Shelf life evaluated on the {t} °C subset."
-msgstr ""
+msgstr "有効期間は {t} °C のサブセットで評価しています。"
 
 #: R/mstab.b.R
 msgid "Shelf life for batch '{batch}' could not be evaluated."
-msgstr ""
+msgstr "ロット '{batch}' の有効期間を評価できませんでした。"
 
 #: R/mstab.b.R
 msgid "Shelf Life Plot for Batch {batch}"
@@ -9163,7 +9350,7 @@ msgstr ""
 
 #: mSTAB/options/showShelfTable.title
 msgid "Shelf Life Summary Table"
-msgstr ""
+msgstr "有効期間の要約表"
 
 #: R/mstab.b.R
 msgid "Shelf Life: {val} months"
@@ -9171,7 +9358,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Shortest batch: {batch}"
-msgstr ""
+msgstr "最短のロット：{batch}"
 
 #: mTAB1/options/missing/ifany.title
 msgid "Show if missing values present"
@@ -9181,7 +9368,7 @@ msgstr ""
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Showing first {max_rows} of {total} misclassified cases."
-msgstr ""
+msgstr "誤分類ケース {total} 件のうち最初の {max_rows} 件を表示しています。"
 
 #: R/mmlp.b.R
 #: mMLP/options/activation/sigmoid.title
@@ -9200,7 +9387,7 @@ msgstr ""
 #: mMOUT/options/alpha.title
 #: mSNP/options/alpha.title
 msgid "Significance level (alpha)"
-msgstr ""
+msgstr "有意水準（alpha）"
 
 #: mSTAB/options/alphaFactor.title
 msgid "Significance Level for Factors (α)"
@@ -9208,34 +9395,36 @@ msgstr ""
 
 #: mSNP/options/signifMarkers.title
 msgid "Significance markers"
-msgstr ""
+msgstr "有意性のマーク"
 
 #: mSTAB/options/accelCondition/change_observed.title
 msgid "Significant change at accelerated condition (No extrapolation)"
-msgstr ""
+msgstr "加速条件で明確な変化あり（外挿なし）"
 
 #: mSTAB/options/accelCondition/intermediate_ok.title
 msgid ""
 "Significant change at accelerated, none at intermediate (Extrapolation up to "
 "1.5X, max X + 6 mo)"
 msgstr ""
+"加速条件で明確な変化あり、中間的条件では変化なし（最大1.5X、上限 X + 6か月ま"
+"で外挿）"
 
 #: R/mstab.b.R
 msgid "Significant change between 3 and 6 months at 25°C"
-msgstr ""
+msgstr "25°Cで3～6か月の間に明確な変化あり"
 
 #: mSTAB/options/accelResult/change_observed.title
 msgid "Significant change observed at accelerated condition (within 6 months)"
-msgstr ""
+msgstr "加速条件で明確な変化あり（6か月以内）"
 
 #: R/mstab.b.R
 #: mSTAB/options/intermedResult/change_observed.title
 msgid "Significant change observed at intermediate condition"
-msgstr ""
+msgstr "中間的条件で明確な変化あり"
 
 #: R/mstab.b.R
 msgid "Significant change observed within 6 months"
-msgstr ""
+msgstr "6か月以内に明確な変化あり"
 
 #: R/mstab.b.R
 msgid ""
@@ -9254,15 +9443,15 @@ msgstr ""
 
 #: mSTAB/options/accelResult/change_refrig_early.title
 msgid "Significant change within first 3 months (refrigerated only)"
-msgstr ""
+msgstr "最初の3か月以内に明確な変化あり（冷蔵のみ）"
 
 #: R/mstab.b.R
 msgid "Significant change within first 3 months at 25°C"
-msgstr ""
+msgstr "25°Cで最初の3か月以内に明確な変化あり"
 
 #: R/msnp.b.R
 msgid "Significant HWE deviation"
-msgstr ""
+msgstr "HWEからの有意な逸脱"
 
 #: R/mcor.b.R
 msgid "Simultaneous multiple correlation comparisons using {n} method"
@@ -9270,7 +9459,7 @@ msgstr "{n} 法による相関の同時多重比較"
 
 #: mSTAB/ui[10].label
 msgid "Single Attribute Detailed Tables & Plots"
-msgstr ""
+msgstr "単一品質特性の詳細表とプロット"
 
 #: R/mstab.b.R
 msgid "Single batch"
@@ -9278,15 +9467,15 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Single batch – poolability test not applicable"
-msgstr ""
+msgstr "単一ロット – 併合可能性の検定は該当しません"
 
 #: R/mstab.b.R
 msgid "Single batch degradation rate with {pct}% confidence interval"
-msgstr ""
+msgstr "単一ロットの分解速度と{pct}%信頼区間"
 
 #: R/mstab.b.R
 msgid "Single batch linear regression"
-msgstr ""
+msgstr "単一ロットの線形回帰"
 
 #: R/mstab.b.R
 msgid "Single batch regression"
@@ -9302,7 +9491,7 @@ msgstr "最短距離法"
 #: mSNP/ui.title
 #: mSNP/results.title
 msgid "Single Nucleotide Polymorphism"
-msgstr ""
+msgstr "一塩基多型"
 
 #: mTAB1/results/normAudit.columns.title
 msgid "Skewness"
@@ -9314,7 +9503,7 @@ msgstr "タイトル斜め表示"
 
 #: mSTAB/results/shelfTable.columns.title
 msgid "Slope (rate / month)"
-msgstr ""
+msgstr "傾き（速度 / 月）"
 
 #: R/mstab.b.R
 msgid "Slopes ANCOVA Test: F = {f}, p {p} ({status})"
@@ -9322,15 +9511,15 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Slopes are poolable"
-msgstr ""
+msgstr "傾きは併合可能"
 
 #: R/mstab.b.R
 msgid "Slopes differ (p <= {alpha}) -> Adopt Model 1"
-msgstr ""
+msgstr "傾きが異なる（p <= {alpha}）-> モデル1を採用"
 
 #: R/mstab.b.R
 msgid "Slopes differ significantly"
-msgstr ""
+msgstr "傾きが有意に異なる"
 
 #: R/mstab.b.R
 msgid ""
@@ -9338,6 +9527,8 @@ msgid ""
 "degrees of freedom. Model 1 (separate slopes and intercepts) adopted as "
 "conservative fallback."
 msgstr ""
+"残差の自由度が不足しているため、傾きの併合可能性を評価できませんでした。保守"
+"的な代替としてモデル1（個別の傾き・切片）を採用しました。"
 
 #: R/mtab1.b.R
 msgid "SMD"
@@ -9345,15 +9536,15 @@ msgstr ""
 
 #: package/datasets/SNPandHWEanalysis.name
 msgid "SNP and HWE analysis"
-msgstr ""
+msgstr "SNPとHWE解析"
 
 #: package/datasets/SNPandHWEanalysis.description
 msgid "SNP Association and Hardy-Weinberg Equilibrium analysis demonstration"
-msgstr ""
+msgstr "SNPの関連解析とハーディ・ワインベルグ平衡解析のデモ"
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "SNPV"
-msgstr ""
+msgstr "SNPV"
 
 #: mMLP/options/activation/softmax.title
 #: mMLP/options/out_activation/softmax.title
@@ -9365,16 +9556,18 @@ msgid ""
 "Some batches were not tested or have incomplete data for certain attributes "
 "(shown blank)."
 msgstr ""
+"一部のロットは、特定の品質特性について未試験またはデータが不完全です（空欄で"
+"表示）。"
 
 #: R/mpca.b.R
 #: mSTAB/results/regTable.columns.title
 msgid "Source"
-msgstr ""
+msgstr "由来"
 
 #: mROC/results/rocTable.columns.title
 #: mUI/results/stat/mcistat.columns.title
 msgid "Sp"
-msgstr ""
+msgstr "Sp"
 
 #: mCOR/options/method/spearman.title
 msgid "Spearman (ρ)"
@@ -9382,27 +9575,27 @@ msgstr "スピアマン (ρ)"
 
 #: R/mcor.b.R
 msgid "Spearman's ρ"
-msgstr ""
+msgstr "スピアマンのρ"
 
 #: mSTAB/options/specType.title
 msgid "Specification Limit Type"
-msgstr ""
+msgstr "規格限度の種類"
 
 #: mSTAB/options/specType2.title
 msgid "Specification Limit Type (Attribute 2)"
-msgstr ""
+msgstr "規格限度の種類（品質特性2）"
 
 #: mSTAB/options/specType3.title
 msgid "Specification Limit Type (Attribute 3)"
-msgstr ""
+msgstr "規格限度の種類（品質特性3）"
 
 #: mSTAB/options/specType4.title
 msgid "Specification Limit Type (Attribute 4)"
-msgstr ""
+msgstr "規格限度の種類（品質特性4）"
 
 #: mSTAB/options/specType5.title
 msgid "Specification Limit Type (Attribute 5)"
-msgstr ""
+msgstr "規格限度の種類（品質特性5）"
 
 #: R/mmlp.b.R
 #: R/mpca.b.R
@@ -9429,7 +9622,7 @@ msgstr "特異性（％）"
 #: mRF/results/rocTable.columns.title
 #: mUI/results/stat/rocTable.columns.title
 msgid "Specificity (Sp)"
-msgstr ""
+msgstr "特異度（Sp）"
 
 #: R/mstab.b.R
 msgid ""
@@ -9457,15 +9650,15 @@ msgstr "精子奇形指数のROC分類デモ"
 
 #: R/mmnv.b.R
 msgid "Sphericity Assumed"
-msgstr ""
+msgstr "球面性を仮定"
 
 #: mMNV/results/univariateTable.columns.title
 msgid "Sphericity Correction"
-msgstr ""
+msgstr "球面性の修正"
 
 #: mMNV/results/sphericityTable.title
 msgid "Sphericity Tests & Epsilon Corrections"
-msgstr ""
+msgstr "球面性の検定とイプシロン修正"
 
 #: mMNV/options/showSphericity.title
 msgid "Sphericity tests & epsilon corrections"
@@ -9477,19 +9670,19 @@ msgstr "曲線分割"
 
 #: mSNP/options/hweSplitOutcome.title
 msgid "Split HWE by outcome"
-msgstr ""
+msgstr "アウトカム別にHWEを分割"
 
 #: mROC/results/splots.title
 msgid "Split ROC by predictors"
-msgstr ""
+msgstr "予測変数別に分割したROC"
 
 #: mUI/results/stat/mcistat.columns.title
 msgid "SPPV"
-msgstr ""
+msgstr "SPPV"
 
 #: mCOR/options/glassoLayout/spring.title
 msgid "Spring"
-msgstr ""
+msgstr "スプリング"
 
 #: mCOR/options/plotMetU/square.title
 #: mCOR/options/plotMetL/square.title
@@ -9498,7 +9691,7 @@ msgstr "四角"
 
 #: mSTAB/options/showStabPlot.title
 msgid "Stability & Shelf Life Plot"
-msgstr ""
+msgstr "安定性と有効期間のプロット"
 
 #: R/mstab.b.R
 #: package/analyses/mSTAB.title
@@ -9508,19 +9701,19 @@ msgstr ""
 #: mSTAB/ui.title
 #: mSTAB/results.title
 msgid "Stability Analysis (ICH Q1E)"
-msgstr ""
+msgstr "安定性解析（ICH Q1E）"
 
 #: package/datasets/StabilityAnalysisICHQ1E.name
 msgid "Stability Analysis ICH Q1E"
-msgstr ""
+msgstr "安定性解析 ICH Q1E"
 
 #: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
 msgid "Stability Assessment"
-msgstr ""
+msgstr "安定性の評価"
 
 #: mSTAB/results/stabPlot.title
 msgid "Stability Plot with Confidence Bounds and Specification Limits"
-msgstr ""
+msgstr "信頼限界と規格限度を示した安定性プロット"
 
 #: R/mstab.b.R
 msgid "Stability Profile & Shelf Life Estimation (ICH Q1E)"
@@ -9528,7 +9721,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Standard Activation Energy"
-msgstr ""
+msgstr "標準的な活性化エネルギー"
 
 #: mMNV/options/plotError/se.title
 msgid "Standard error (SE)"
@@ -9554,7 +9747,7 @@ msgstr ""
 
 #: mLR/results/coeffTable.columns.title
 msgid "Standardized Beta"
-msgstr ""
+msgstr "標準化ベータ"
 
 #: mTAB1/options/showSmd.title
 msgid "Standardized Mean Difference (SMD)"
@@ -9568,26 +9761,26 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Standardized Residuals"
-msgstr ""
+msgstr "標準化残差"
 
 #: R/mtab1.b.R
 #: mMNV/results/assumptionsTable.columns.title
 #: mSRV/results/coxSection/coxFitTable.columns.title
 #: mTAB1/results/postHoc.columns.title
 msgid "Statistic"
-msgstr ""
+msgstr "統計量"
 
 #: mSTAB/results/diagTable.columns.title
 msgid "Statistic / Value"
-msgstr ""
+msgstr "統計量 / 値"
 
 #: mSTAB/results/poolTable.columns.title
 msgid "Statistical Decision (ICH Q1E)"
-msgstr ""
+msgstr "統計的判定（ICH Q1E）"
 
 #: R/mstab.b.R
 msgid "Statistical intersection"
-msgstr ""
+msgstr "統計的な交点"
 
 #: mSTAB/ui[7].label
 msgid "Statistical Model & Study Parameters"
@@ -9597,13 +9790,15 @@ msgstr ""
 #: mSTAB/results/comboShelfTable.columns.title
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Statistical Shelf Life (months)"
-msgstr ""
+msgstr "統計的有効期間（か月）"
 
 #: R/mstab.b.R
 msgid ""
 "Statistical shelf life is the earliest time point where the confidence bound "
 "for the mean intersects specification limits (ICH Q1E)."
 msgstr ""
+"統計的有効期間は、平均値の信頼限界が規格限度と交差する最も早い時点です（ICH "
+"Q1E）。"
 
 #: R/mstab.b.R
 msgid "Statistical SL = {val}"
@@ -9619,43 +9814,45 @@ msgstr ""
 
 #: mSNP/results/qcGroup/qcTable.columns.title
 msgid "Status"
-msgstr ""
+msgstr "状態"
 
 #: mSRV/options/status.title
 #: mSRV/ui[0][2].label
 msgid "Status / Event Variable"
-msgstr ""
+msgstr "状態 / イベント変数"
 
 #: mSTAB/results/shelfTable.columns.title
 msgid "Status / Limiting Factor"
-msgstr ""
+msgstr "状態 / 律速要因"
 
 #: mSTAB/results/comboShelfTable.columns.title
 #: mSTAB/results/multiShelfTable.columns.title
 msgid "Status / Limiting Role"
-msgstr ""
+msgstr "状態 / 律速の役割"
 
 #: R/msrv.b.R
 msgid ""
 "Status variable has only one event type; cumulative incidence is equal to 1 "
 "– KM survival."
 msgstr ""
+"状態変数のイベントの種類が1つだけのため、累積発生率は 1 − KM生存率 と等しくな"
+"ります。"
 
 #: R/msrv.b.R
 msgid "Status variable must be factor, character, or numeric."
-msgstr ""
+msgstr "状態変数は因子型、文字型、または数値型でなければなりません。"
 
 #: R/msrv.b.R
 msgid ""
 "Status variable must have at least two distinct values for Competing Risks "
 "analysis."
-msgstr ""
+msgstr "競合リスク分析には、状態変数に少なくとも2つの異なる値が必要です。"
 
 #: mLR/results/coeffTable.columns.title
 #: mSTAB/results/coefTable.columns.title
 #: mSTAB/results/arrhRegTable.columns.title
 msgid "Std. Error"
-msgstr ""
+msgstr "標準誤差"
 
 #: R/mtab1.b.R
 msgid "Std. residual"
@@ -9663,47 +9860,51 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Step 1: Batch * Factor * Time (Cohort Slopes)"
-msgstr ""
+msgstr "ステップ1：ロット * 因子 * 時間（コホートの傾き）"
 
 #: R/mstab.b.R
 msgid "Step 1: Slopes (Batch * Time)"
-msgstr ""
+msgstr "ステップ1：傾き（ロット * 時間）"
 
 #: R/mstab.b.R
 msgid "Step 2: Factor * Time (Factor Slopes)"
-msgstr ""
+msgstr "ステップ2：因子 * 時間（因子の傾き）"
 
 #: R/mstab.b.R
 msgid "Step 2: Intercepts (Batch)"
-msgstr ""
+msgstr "ステップ2：切片（ロット）"
 
 #: R/mstab.b.R
 msgid "Step 3: Batch Intercepts"
-msgstr ""
+msgstr "ステップ3：ロットの切片"
 
 #: R/mstab.b.R
 msgid "Step 4: Factor Intercepts"
-msgstr ""
+msgstr "ステップ4：因子の切片"
 
 #: R/mlr.b.R
 msgid ""
 "Stepwise feature selection is performed using standard maximum likelihood "
 "(AIC) before refitting the final model with Firth's penalized likelihood."
 msgstr ""
+"ステップワイズ法による特徴選択は、通常の最尤法（AIC）で行い、その後Firthの罰"
+"則付き尤度で最終モデルを再推定します。"
 
 #: R/mlr.b.R
 msgid ""
 "Stepwise selection failed to retain any predictors or encountered an error; "
 "falling back to all predictors."
 msgstr ""
+"ステップワイズ選択で予測変数が1つも残らなかったか、エラーが発生したため、すべ"
+"ての予測変数を使用します。"
 
 #: mSTAB/results/arrhTable.columns.title
 msgid "Storage Condition / Climatic Zone"
-msgstr ""
+msgstr "保存条件 / 気候区分"
 
 #: mSTAB/options/arrhDataCondition.title
 msgid "Storage condition of analysed data"
-msgstr ""
+msgstr "解析データの保存条件"
 
 #: R/mstab.b.R
 msgid "Storage Time (months)"
@@ -9711,12 +9912,12 @@ msgstr ""
 
 #: R/mdca.b.R
 msgid "Strategy / Model"
-msgstr ""
+msgstr "戦略 / モデル"
 
 #: R/mcor.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
 msgid "Strength"
-msgstr ""
+msgstr "ストレングス"
 
 #: R/mtab1.b.R
 msgid "Student's t-test"
@@ -9728,7 +9929,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Study Data Coverage"
-msgstr ""
+msgstr "試験データの対象期間"
 
 #: R/mstab.b.R
 msgid "Study duration cutoff"
@@ -9739,15 +9940,17 @@ msgid ""
 "Subdistribution hazard ratio (sHR) models covariate effects directly on "
 "cumulative incidence with robust SE."
 msgstr ""
+"部分分布ハザード比（sHR）は、ロバスト標準誤差を用いて、共変量が累積発生率に及"
+"ぼす効果を直接モデル化します。"
 
 #: mSRV/results/compRisksSection/fineGrayTable.columns.title
 msgid "Subdistribution HR (sHR)"
-msgstr ""
+msgstr "部分分布ハザード比（sHR）"
 
 #: mSRV/options/subjectId.title
 #: mSRV/ui[0][3].label
 msgid "Subject ID / Cluster (optional)"
-msgstr ""
+msgstr "対象者ID / クラスター（任意）"
 
 #: R/msrv.b.R
 msgid ""
@@ -9761,6 +9964,8 @@ msgid ""
 "Autocorrelated errors can cause standard confidence intervals to be overly "
 "narrow."
 msgstr ""
+"残差に大きな自己相関が検出されました（ダービン=ワトソン d = {dw}）。誤差に自"
+"己相関があると、通常の信頼区間が狭くなりすぎることがあります。"
 
 #: mROC/options/cmpDeLong/succ.title
 msgid "Successively"
@@ -9774,7 +9979,7 @@ msgstr "合計"
 #: mMNV/results/contrastsTable.columns.title
 #: mSTAB/results/poolTable.columns.title
 msgid "Sum of Squares"
-msgstr ""
+msgstr "平方和"
 
 #: mTAB1/ui[1].label
 msgid "Summary & Formatting Options"
@@ -9782,16 +9987,16 @@ msgstr ""
 
 #: R/mdca.b.R
 msgid "Superior"
-msgstr ""
+msgstr "優れている"
 
 #: R/mpwr.b.R
 #: mPWR/ui[0]/alt/superior.title
 msgid "superiority"
-msgstr ""
+msgstr "優越性"
 
 #: R/mstab.b.R
 msgid "Supported"
-msgstr ""
+msgstr "支持される"
 
 #: R/mstab.b.R
 msgid "Supported ({val} mo)"
@@ -9804,7 +10009,7 @@ msgstr ""
 #: R/mpwr.b.R
 #: mPWR/options/design/survival.title
 msgid "Survival / Log-Rank Test"
-msgstr ""
+msgstr "生存時間 / ログランク検定"
 
 #: package/analyses/mSRV.title
 #: package/analyses/mSRV.menuTitle
@@ -9812,13 +10017,15 @@ msgstr ""
 #: mSRV/ui.title
 #: mSRV/results.title
 msgid "Survival Analysis"
-msgstr ""
+msgstr "生存時間分析"
 
 #: package/datasets/SurvivalAnalysisKaggle.description
 msgid ""
 "Survival Analysis (Kaplan-Meier, Cox regression, Adjusted Curves, Competing "
 "Risks, and Time-Dependent Effects) demonstration"
 msgstr ""
+"生存時間分析（カプラン・マイヤー、Cox回帰、調整済み曲線、競合リスク、時間依存"
+"効果）のデモ"
 
 #: package/analyses/mSRV.description
 msgid ""
@@ -9827,19 +10034,22 @@ msgid ""
 "analysis (Aalen-Johansen CIF, Gray's test, Fine-Gray model), time-dependent "
 "covariates, and time-dependent ROC curves."
 msgstr ""
+"カプラン・マイヤー曲線、ログランク検定、Cox比例ハザード回帰、調整済み生存曲線"
+"、競合リスク分析（Aalen–Johansen CIF、グレイ検定、ファイン・グレイモデル）、"
+"時間依存共変量、時間依存ROC曲線を含む生存時間分析。"
 
 #: package/datasets/SurvivalAnalysisKaggle.name
 msgid "Survival Analysis Kaggle"
-msgstr ""
+msgstr "生存時間分析 Kaggle"
 
 #: R/msrv.b.R
 #: mSRV/options/kmType/survival.title
 msgid "Survival probability"
-msgstr ""
+msgstr "生存確率"
 
 #: mSRV/options/timeDepFunc/linear.title
 msgid "t (Linear time)"
-msgstr ""
+msgstr "t（線形時間）"
 
 #: mCOR/ui[4].label
 msgid "Tables"
@@ -9847,7 +10057,7 @@ msgstr "表"
 
 #: mPCA/ui[2].label
 msgid "Tables and Visualizations"
-msgstr ""
+msgstr "表と可視化"
 
 #: mMLP/options/activation/tanh.title
 msgid "Tanh"
@@ -9856,11 +10066,11 @@ msgstr "双曲線正弦関数"
 #: mDCA/options/targetLevel.title
 #: mDCA/ui[0][0]/targetLevel.label
 msgid "Target"
-msgstr ""
+msgstr "ターゲット"
 
 #: R/mstab.b.R
 msgid "Target Registration Condition"
-msgstr ""
+msgstr "目標とする承認申請条件"
 
 #: mSTAB/options/proposedShelfLife.title
 msgid "Target Shelf Life (months, 0 = auto)"
@@ -9868,7 +10078,7 @@ msgstr ""
 
 #: R/mdca.b.R
 msgid "Target variable must contain both positive and negative cases."
-msgstr ""
+msgstr "目的変数には陽性と陰性の両方のケースが含まれている必要があります。"
 
 #: R/mstab.b.R
 msgid "Target: {val} mo"
@@ -9877,11 +10087,11 @@ msgstr ""
 #: mSTAB/options/tempVar.title
 #: mSTAB/results/arrhTable.columns.title
 msgid "Temperature (°C)"
-msgstr ""
+msgstr "温度（°C）"
 
 #: mSTAB/ui[0][8].label
 msgid "Temperature (°C) (Arrhenius, Optional)"
-msgstr ""
+msgstr "温度（°C）（アレニウス、任意）"
 
 #: R/mstab.b.R
 msgid ""
@@ -9904,23 +10114,27 @@ msgid ""
 "Term '{term}' has a singular hypothesis or error matrix and was omitted from "
 "multivariate tests."
 msgstr ""
+"項 '{term}' の仮説行列または誤差行列が特異であるため、多変量検定から除外しま"
+"した。"
 
 #: R/mmnv.b.R
 msgid ""
 "Term '{term}' has a singular hypothesis or error matrix; profile test "
 "omitted."
 msgstr ""
+"項 '{term}' の仮説行列または誤差行列が特異であるため、プロファイル検定を省略"
+"しました。"
 
 #: R/mmnv.b.R
 msgid ""
 "Term '{term}' has insufficient residual degrees of freedom for multivariate "
 "profile test."
-msgstr ""
+msgstr "項 '{term}' は、多変量プロファイル検定に必要な残差の自由度が不足しています。"
 
 #: mSNP/options/ternaryPlot.title
 #: mSNP/results/hweGroup/ternaryPlot.title
 msgid "Ternary diagram (de Finetti)"
-msgstr ""
+msgstr "三角図（de Finetti）"
 
 #: R/mtab1.b.R
 #: mMNV/results/multivariateTable.columns.title
@@ -9928,7 +10142,7 @@ msgstr ""
 #: mMNV/results/assumptionsTable.columns.title
 #: mSRV/results/coxSection/coxFitTable.columns.title
 msgid "Test"
-msgstr ""
+msgstr "検定"
 
 #: mOUT/options/norm.title
 msgid "Test for normality"
@@ -9936,7 +10150,7 @@ msgstr "正規性の検定"
 
 #: mSRV/options/coxAssump.title
 msgid "Test proportional hazards assumption"
-msgstr ""
+msgstr "比例ハザード性の仮定を検定"
 
 #: mTAB1/options/showStat.title
 msgid "Test statistic"
@@ -9944,7 +10158,7 @@ msgstr ""
 
 #: mSTAB/results/poolTable.columns.title
 msgid "Test Step / Source"
-msgstr ""
+msgstr "検定ステップ / 変動因"
 
 #: mPWR/options/k_tested.title
 #: mPWR/ui[1]/k_tested.label
@@ -9953,11 +10167,11 @@ msgstr "検証済み説明変数"
 
 #: R/msnp.b.R
 msgid "Testing"
-msgstr ""
+msgstr "テスト"
 
 #: mSNP/results/mdrGroup/mdrBestTable.columns.title
 msgid "Testing BA"
-msgstr ""
+msgstr "テストBA"
 
 #: R/mstab.b.R
 msgid ""
@@ -9968,25 +10182,31 @@ msgstr ""
 
 #: mMNV/results/univariateTable.title
 msgid "Tests of Within-Subjects Effects"
-msgstr ""
+msgstr "被験者内効果の検定"
 
 #: R/msrv.b.R
 msgid ""
 "Tests proportional hazards assumption. Significant p-value (p < 0.05) "
 "indicates non-proportional hazards over time."
 msgstr ""
+"比例ハザード性の仮定を検定します。p値が有意（p < 0.05）であれば、ハザードが時"
+"間的に比例していないことを示します。"
 
 #: R/msrv.b.R
 msgid ""
 "The 'coxphf' package is required for Firth's penalized likelihood Cox "
 "regression. Please install it with install.packages('coxphf')."
 msgstr ""
+"Firthの罰則付き尤度によるCox回帰には 'coxphf' パッケージが必要です。"
+"install.packages('coxphf') でインストールしてください。"
 
 #: R/mlr.b.R
 msgid ""
 "The 'logistf' package is required for Firth's penalized likelihood. Please "
 "install it with install.packages('logistf')."
 msgstr ""
+"Firthの罰則付き尤度には 'logistf' パッケージが必要です。install.packages"
+"('logistf') でインストールしてください。"
 
 #: R/mpwr.b.R
 msgid "The 'pwrss' package is not installed. Please install it in R."
@@ -9994,7 +10214,7 @@ msgstr "'pwrss' パッケージがインストールされていません。Rに
 
 #: R/mrf.b.R
 msgid "The 'ranger' package is required. Please install it."
-msgstr ""
+msgstr "'ranger' パッケージが必要です。インストールしてください。"
 
 #: R/mroc.b.R
 msgid ""
@@ -10010,16 +10230,20 @@ msgid ""
 "The correlation matrix was not positive definite and was adjusted to the "
 "nearest positive definite matrix to calculate Graphical Lasso."
 msgstr ""
+"相関行列が正定値ではなかったため、グラフィカル・ラッソの計算のために最も近い"
+"正定値行列に調整しました。"
 
 #: R/mlr.b.R
 msgid ""
 "The dataset has too few complete cases to perform logistic regression "
 "(minimum 15 cases required)."
 msgstr ""
+"データセット内の完全ケースが少なすぎるため、ロジスティック回帰を実行できませ"
+"ん（最低15ケース必要）。"
 
 #: R/mrf.b.R
 msgid "The dataset has too few complete cases to train the model."
-msgstr ""
+msgstr "データセット内の完全ケースが少なすぎるため、モデルの訓練ができません。"
 
 #: R/mmlp.b.R
 msgid "The dataset has too few complete cases to train the neural network."
@@ -10030,11 +10254,11 @@ msgstr ""
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "The dependent variable must have at least 2 levels."
-msgstr ""
+msgstr "従属変数には少なくとも2つの水準が必要です。"
 
 #: R/msrv.b.R
 msgid "The exposure variable must have at least two distinct levels."
-msgstr ""
+msgstr "曝露変数には少なくとも2つの異なる水準が必要です。"
 
 #: R/mmnv.b.R
 msgid ""
@@ -10050,6 +10274,8 @@ msgid ""
 "The proposed shelf life of {prop} months exceeds the maximum allowable ICH "
 "Q1E shelf life of {limit} months ({reason})."
 msgstr ""
+"提案有効期間 {prop}か月は、ICH Q1Eで認められる最大有効期間 {limit}か月を超え"
+"ています（{reason}）。"
 
 #: R/mstab.b.R
 msgid ""
@@ -10062,20 +10288,24 @@ msgid ""
 "The selected exposure variable must be categorical or have 10 or fewer "
 "distinct values."
 msgstr ""
+"選択した曝露変数は、カテゴリ変数であるか、異なる値が10個以下である必要があり"
+"ます。"
 
 #: R/mstab.b.R
 msgid ""
 "The specified Long-Term Storage Temperature ({temp} °C) was not found in the "
 "Temperature variable '{var}'. Available temperatures: {avail}."
 msgstr ""
+"指定された長期保存温度（{temp} °C）が温度変数 '{var}' に見つかりません。利用"
+"可能な温度：{avail}。"
 
 #: R/mmout.b.R
 msgid "Theoretical Chi-Square Quantiles"
-msgstr ""
+msgstr "χ²分布の理論分位点"
 
 #: R/mstab.b.R
 msgid "Theoretical Quantiles"
-msgstr ""
+msgstr "理論分位点"
 
 #: package/datasets/UncertainInterval(UI).description
 msgid "Three-Way threshold determination in test results"
@@ -10087,15 +10317,15 @@ msgstr ""
 
 #: R/mpca.b.R
 msgid "Threshold (K = {optimal} comp.)"
-msgstr ""
+msgstr "閾値（K = {optimal} 成分）"
 
 #: R/mcor.b.R
 msgid "Threshold (r = 0.70)"
-msgstr ""
+msgstr "閾値（r = 0.70）"
 
 #: mOUT/options/tholdmZS.title
 msgid "Threshold for modified Z-score"
-msgstr ""
+msgstr "修正Z得点の閾値"
 
 #: mOUT/options/tholdZS.title
 msgid "Threshold for Z-score"
@@ -10108,50 +10338,50 @@ msgstr "ユーデン指数に基づく閾値"
 
 #: R/mdca.b.R
 msgid "Threshold Probability"
-msgstr ""
+msgstr "閾値確率"
 
 #: mDCA/options/threshStep.title
 msgid "Threshold Step"
-msgstr ""
+msgstr "閾値の刻み幅"
 
 #: mMNV/options/rmFactorName.default
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 msgid "Time"
-msgstr ""
+msgstr "時間"
 
 #: mMNV/results/meansTable.columns.title
 msgid "Time / Condition"
-msgstr ""
+msgstr "時間 / 条件"
 
 #: mSRV/ui[2].label
 msgid "Time Horizon & Cutoff"
-msgstr ""
+msgstr "評価期間とカットオフ"
 
 #: mSRV/results/rocSection/rocTable.columns.title
 msgid "Time Point t"
-msgstr ""
+msgstr "時点 t"
 
 #: mSRV/options/timeDepFunc.title
 msgid "Time transform function"
-msgstr ""
+msgstr "時間変換関数"
 
 #: R/mstab.b.R
 msgid "Time unit advisory"
-msgstr ""
+msgstr "時間単位に関する注意"
 
 #: mSTAB/options/time.title
 #: mSTAB/ui[0][1].label
 msgid "Time Variable"
-msgstr ""
+msgstr "時間変数"
 
 #: mSRV/options/elapsed.title
 #: mSRV/ui[0][0].label
 msgid "Time Variable (elapsed time)"
-msgstr ""
+msgstr "時間変数（経過時間）"
 
 #: R/mstab.b.R
 msgid "Time variable cannot contain negative values."
-msgstr ""
+msgstr "時間変数に負の値を含めることはできません。"
 
 #: R/mstab.b.R
 msgid "Time variable must be a continuous numeric variable, not categorical labels."
@@ -10159,59 +10389,59 @@ msgstr ""
 
 #: R/msrv.b.R
 msgid "Time variable must be numeric."
-msgstr ""
+msgstr "時間変数は数値でなければなりません。"
 
 #: mSRV/ui[6].label
 #: mSRV/results/rocSection.title
 msgid "Time-dependent ROC Analysis"
-msgstr ""
+msgstr "時間依存ROC分析"
 
 #: mSRV/options/showRoc.title
 msgid "Time-dependent ROC analysis"
-msgstr ""
+msgstr "時間依存ROC分析"
 
 #: mSRV/results/rocSection/rocPlot.title
 msgid "Time-dependent ROC Curves"
-msgstr ""
+msgstr "時間依存ROC曲線"
 
 #: R/msrv.b.R
 msgid "Time-dependent ROC Curves (t = {time})"
-msgstr ""
+msgstr "時間依存ROC曲線（t = {time}）"
 
 #: mSRV/results/rocSection/rocTable.title
 msgid "Time-dependent ROC Results"
-msgstr ""
+msgstr "時間依存ROCの結果"
 
 #: mSRV/options/timeDepVars.title
 #: mSRV/ui[0][7].label
 msgid "Time-varying Effects (Cox)"
-msgstr ""
+msgstr "時間依存効果（Cox）"
 
 #: mSRV/options/showTimeDepEffects.title
 msgid "Time-varying effects (time-varying coefficients)"
-msgstr ""
+msgstr "時間依存効果（時間依存係数）"
 
 #: mSRV/results/coxSection/timeDepTable.title
 msgid "Time-varying Effects in Cox Model"
-msgstr ""
+msgstr "Coxモデルにおける時間依存効果"
 
 #: R/msrv.b.R
 msgid "Time-varying effects model fitting failed to converge: {reason}"
-msgstr ""
+msgstr "時間依存効果モデルの当てはめが収束しませんでした：{reason}"
 
 #: R/mmnv.b.R
 msgid "Too few complete observations (minimum 3 required)."
-msgstr ""
+msgstr "完全な観測値が少なすぎます（最低3つ必要）。"
 
 #: R/mpca.b.R
 msgid "Too few observations after removing missing values (minimum 5 required)."
-msgstr ""
+msgstr "欠損値を除いた後の観測値が少なすぎます（最低5つ必要）。"
 
 #: R/mdca.b.R
 msgid ""
 "Too few valid observations for Decision Curve Analysis (at least 10 "
 "required)."
-msgstr ""
+msgstr "決定曲線分析に有効な観測値が少なすぎます（少なくとも10必要）。"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -10219,19 +10449,19 @@ msgstr ""
 #: R/mrf.b.R
 #: R/msnp.b.R
 msgid "Total"
-msgstr ""
+msgstr "合計"
 
 #: mLR/results/riskTable.columns.title
 #: mMLP/results/riskTable.columns.title
 #: mRF/results/riskTable.columns.title
 msgid "Total (%)"
-msgstr ""
+msgstr "合計（%）"
 
 #: mLR/results/riskTable.columns.title
 #: mMLP/results/riskTable.columns.title
 #: mRF/results/riskTable.columns.title
 msgid "Total (N)"
-msgstr ""
+msgstr "合計（N）"
 
 #: R/mmf.b.R
 msgid "Total number of missing entries {}"
@@ -10246,15 +10476,15 @@ msgstr "総予測変数"
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Train"
-msgstr ""
+msgstr "訓練"
 
 #: mLR/results/infoTable.columns.title
 msgid "Train Acc (%)"
-msgstr ""
+msgstr "訓練正解率（%）"
 
 #: mLR/results/infoTable.columns.title
 msgid "Train AUC"
-msgstr ""
+msgstr "訓練AUC"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
@@ -10268,7 +10498,7 @@ msgstr "訓練"
 
 #: R/mpca.b.R
 msgid "Training (AUC = {auc})"
-msgstr ""
+msgstr "訓練（AUC = {auc}）"
 
 #: mMLP/results/infoTable.columns.title
 #: mRF/results/infoTable.columns.title
@@ -10277,11 +10507,11 @@ msgstr "訓練正解率（%）"
 
 #: mSNP/results/mdrGroup/mdrBestTable.columns.title
 msgid "Training BA"
-msgstr ""
+msgstr "訓練BA"
 
 #: mMNV/results/profilePlot.title
 msgid "Trajectory Plot"
-msgstr ""
+msgstr "推移プロット"
 
 #: mMNV/options/showProfilePlot.title
 msgid "Trajectory plot"
@@ -10289,7 +10519,7 @@ msgstr ""
 
 #: R/mdca.b.R
 msgid "Treat All"
-msgstr ""
+msgstr "全員に介入"
 
 #: mTAB1/options/ordTest/nominal.title
 msgid "Treat as nominal (Chi-square / Fisher's exact)"
@@ -10297,7 +10527,7 @@ msgstr ""
 
 #: R/mdca.b.R
 msgid "Treat None"
-msgstr ""
+msgstr "介入しない"
 
 #: mMNV/options/contrastType/treatment.title
 msgid "Treatment (compare to baseline)"
@@ -10305,11 +10535,11 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Tropical Climates"
-msgstr ""
+msgstr "熱帯気候"
 
 #: mSNP/options/assocForestTrunc.title
 msgid "Truncate large confidence intervals"
-msgstr ""
+msgstr "大きな信頼区間を切り詰める"
 
 #: R/mtab1.b.R
 msgid "Tukey HSD"
@@ -10329,7 +10559,7 @@ msgstr ""
 
 #: mCOR/options/glassoType.title
 msgid "Tuning parameter"
-msgstr ""
+msgstr "チューニングパラメータ"
 
 #: R/mpwr.b.R
 msgid "two one-tailed"
@@ -10337,7 +10567,7 @@ msgstr "両片側"
 
 #: R/mpca.b.R
 msgid "Two-dimensional Variable Projection (Biplot)"
-msgstr ""
+msgstr "変数の2次元射影（バイプロット）"
 
 #: mUI/options/UImethod/TGR.title
 #: mUI/results/plotsTGR.title
@@ -10350,7 +10580,7 @@ msgstr ""
 
 #: mSNP/options/ternaryRegion/7.title
 msgid "Two-sided exact test"
-msgstr ""
+msgstr "両側正確検定"
 
 #: R/mpwr.b.R
 #: mPWR/ui[0]/alt/two.sided.title
@@ -10360,7 +10590,7 @@ msgstr "両側"
 #: R/msnp.b.R
 #: R/mstab.b.R
 msgid "Type"
-msgstr ""
+msgstr "種類"
 
 #: mPWR/options/plot_err.title
 #: mPWR/results/plot.title
@@ -10373,7 +10603,7 @@ msgstr "不確実区間"
 
 #: package/datasets/UIforbinomiallogisticmodels.name
 msgid "UI for binomial logistic models"
-msgstr ""
+msgstr "二項ロジスティックモデルのUI"
 
 #: package/analyses/mUI.title
 #: package/analyses/mUI.menuTitle
@@ -10388,7 +10618,7 @@ msgstr "不確実区間 (UI)"
 
 #: package/datasets/UIforbinomiallogisticmodels.description
 msgid "Uncertain Interval estimation for binomial logistic models"
-msgstr ""
+msgstr "二項ロジスティックモデルの不確実区間の推定"
 
 #: mUI/options/polygon.title
 msgid "Uncertainty interval polygon"
@@ -10396,7 +10626,7 @@ msgstr "不確実区間のポリゴン"
 
 #: R/mstab.b.R
 msgid "Undefined (zero residual variance)"
-msgstr ""
+msgstr "未定義（残差分散が0）"
 
 #: R/mstab.b.R
 msgid ""
@@ -10405,14 +10635,17 @@ msgid ""
 "intermediate condition (e.g., 30 °C / 65% RH) is required. Please specify "
 "the intermediate testing outcome."
 msgstr ""
+"ICH Q1E（2.4.2.1項）では、室温保存製品で加速条件において明確な変化が生じた場"
+"合、中間的条件（例：30 °C / 65% RH）での試験が必要です。中間的試験の結果を指"
+"定してください。"
 
 #: R/mstab.b.R
 msgid "Undetermined"
-msgstr ""
+msgstr "未確定"
 
 #: R/mstab.b.R
 msgid "Undetermined (statistical evaluation not completed)"
-msgstr ""
+msgstr "未確定（統計的評価が完了していません）"
 
 #: R/mstab.b.R
 msgid "Undetermined (Validation Failed)"
@@ -10424,6 +10657,9 @@ msgid ""
 ".05), report Greenhouse-Geisser (ε < .75) or Huynh-Feldt (ε ≥ .75) corrected "
 "p-values."
 msgstr ""
+"単変量ANOVAは球面性を仮定します。モークリーの検定が有意（p < .05）な場合は、"
+"グリーンハウス＝ガイザー（ε < .75）またはホイン＝フェルト（ε ≥ .75）で修正し"
+"たp値を報告してください。"
 
 #: package/analyses/mOUT.title
 #: package/analyses/mOUT.menuTitle
@@ -10444,7 +10680,7 @@ msgstr ""
 #: mROC/results/rocTable.columns.title
 #: mSTAB/results/arrhRegTable.columns.title
 msgid "Upper"
-msgstr ""
+msgstr "上限"
 
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/coxSection/coxCoefTable.columns.title
@@ -10452,11 +10688,11 @@ msgstr ""
 #: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 #: mSRV/results/compRisksSection/fineGrayTable.columns.title
 msgid "Upper 95% CI"
-msgstr ""
+msgstr "95%信頼区間上限"
 
 #: mSRV/results/rocSection/rocTable.columns.title
 msgid "Upper CI"
-msgstr ""
+msgstr "信頼区間上限"
 
 #: R/mout.b.R
 msgid "Upper fence"
@@ -10464,17 +10700,17 @@ msgstr "フェンス上限"
 
 #: mSTAB/options/specType3/upper.title
 msgid "Upper limit only (Increasing attribute / Degradant)"
-msgstr ""
+msgstr "上限のみ（増加する品質特性 / 分解生成物）"
 
 #: mSTAB/options/specType/upper.title
 #: mSTAB/options/specType2/upper.title
 msgid "Upper limit only (Increasing attribute / Impurity)"
-msgstr ""
+msgstr "上限のみ（増加する品質特性 / 不純物）"
 
 #: mSTAB/options/specType4/upper.title
 #: mSTAB/options/specType5/upper.title
 msgid "Upper limit only (Increasing attribute)"
-msgstr ""
+msgstr "上限のみ（増加する品質特性）"
 
 #: mCOR/options/plotMetU.title
 msgid "Upper part"
@@ -10482,29 +10718,29 @@ msgstr "上部"
 
 #: mSTAB/options/usl2.title
 msgid "Upper Specification Limit (USL 2)"
-msgstr ""
+msgstr "規格上限（USL 2）"
 
 #: mSTAB/options/usl3.title
 msgid "Upper Specification Limit (USL 3)"
-msgstr ""
+msgstr "規格上限（USL 3）"
 
 #: mSTAB/options/usl4.title
 msgid "Upper Specification Limit (USL 4)"
-msgstr ""
+msgstr "規格上限（USL 4）"
 
 #: mSTAB/options/usl5.title
 msgid "Upper Specification Limit (USL 5)"
-msgstr ""
+msgstr "規格上限（USL 5）"
 
 #: mSTAB/options/usl.title
 msgid "Upper Specification Limit (USL)"
-msgstr ""
+msgstr "規格上限（USL）"
 
 #: R/mstab.b.R
 msgid ""
 "Upper specification limit (USL) must be specified when Specification Type "
 "includes upper limit."
-msgstr ""
+msgstr "規格の種類に上限が含まれる場合は、規格上限（USL）を指定する必要があります。"
 
 #: R/mstab.b.R
 msgid "Upper SRL: {val}"
@@ -10520,11 +10756,11 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "User Assessment"
-msgstr ""
+msgstr "ユーザーによる評価"
 
 #: R/mstab.b.R
 msgid "User Declaration"
-msgstr ""
+msgstr "ユーザーの申告"
 
 #: mPWR/results/powerTable.columns.superTitle
 msgid "User Defined"
@@ -10532,21 +10768,21 @@ msgstr "ユーザー定義"
 
 #: R/mstab.b.R
 msgid "User Protocol Input"
-msgstr ""
+msgstr "ユーザーのプロトコル入力"
 
 #: R/mstab.b.R
 msgid "User Target Specification"
-msgstr ""
+msgstr "ユーザーの目標設定"
 
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Val"
-msgstr ""
+msgstr "検証"
 
 #: mLR/results/infoTable.columns.title
 msgid "Val / CV AUC"
-msgstr ""
+msgstr "検証 / 交差検証 AUC"
 
 #: R/mmlp.b.R
 #: R/mrf.b.R
@@ -10558,7 +10794,7 @@ msgstr "検証"
 
 #: R/mstab.b.R
 msgid "Validation Failed"
-msgstr ""
+msgstr "検証に失敗"
 
 #: R/mstab.b.R
 msgid "Validation Incomplete"
@@ -10567,7 +10803,7 @@ msgstr ""
 #: mLR/options/partition.title
 #: mLR/ui[3]/partition.label
 msgid "Validation Method"
-msgstr ""
+msgstr "検証方法"
 
 #: R/mrf.b.R
 msgid ""
@@ -10584,11 +10820,11 @@ msgstr "検証設定"
 #: mMNV/results/multivariateTable.columns.title
 #: mMNV/results/profileTable.columns.title
 msgid "Value"
-msgstr ""
+msgstr "値"
 
 #: mPCA/results/kmeansTable.columns.title
 msgid "Value / Match count"
-msgstr ""
+msgstr "値 / 一致数"
 
 #: mTAB1/options/plotCatLabels.title
 msgid "Value labels on categorical plots"
@@ -10608,7 +10844,7 @@ msgstr ""
 
 #: R/mdca.b.R
 msgid "Values of '{var}' must be probabilities between 0 and 1."
-msgstr ""
+msgstr "'{var}' の値は0から1の間の確率でなければなりません。"
 
 #: R/mpca.b.R
 #: mCOR/results/glassoGroup/glassoHubTable.columns.title
@@ -10630,17 +10866,17 @@ msgstr "変数 - $key"
 
 #: mSRV/results/coxSection/timeDepTable.columns.title
 msgid "Variable / Term"
-msgstr ""
+msgstr "変数 / 項"
 
 #: R/mrf.b.R
 #: mRF/options/show_imp.title
 #: mRF/results/importanceTable.title
 msgid "Variable Importance"
-msgstr ""
+msgstr "変数の重要度"
 
 #: mRF/results/importancePlot.title
 msgid "Variable Importance Chart"
-msgstr ""
+msgstr "変数の重要度チャート"
 
 #: R/mmf.b.R
 msgid "Variable name"
@@ -10665,13 +10901,13 @@ msgstr "変数"
 
 #: mPCA/ui[0][0].label
 msgid "Variables for PCA"
-msgstr ""
+msgstr "PCAに用いる変数"
 
 #: mRF/options/mtry_method.title
 #: mRF/ui[1]/mtry_method.label
 #: mRF/results/infoTable.columns.title
 msgid "Variables per Split (mtry)"
-msgstr ""
+msgstr "分岐ごとの変数数（mtry）"
 
 #: mTAB1/options/plotScope.title
 msgid "Variables to plot"
@@ -10687,7 +10923,7 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Variance may change over time"
-msgstr ""
+msgstr "分散が経時的に変化している可能性"
 
 #: mPWR/options/var_ratio.title
 #: mPWR/ui[1]/var_ratio.label
@@ -10705,11 +10941,11 @@ msgstr ""
 
 #: R/msrv.b.R
 msgid "Wald Test"
-msgstr ""
+msgstr "ワルド検定"
 
 #: mCOR/options/clustMet/ward.D2.title
 msgid "Ward's D2 Linkage"
-msgstr ""
+msgstr "Ward D2法"
 
 #: mCOR/options/clustMet/ward.D.title
 msgid "Ward's Linkage"
@@ -10744,6 +10980,8 @@ msgid ""
 "When sample size is very small (N < k), where MANOVA cannot be computed "
 "because error degrees of freedom are insufficient."
 msgstr ""
+"サンプルサイズが非常に小さく（N < k）、誤差の自由度が不足してMANOVAを計算でき"
+"ない場合。"
 
 #: R/mmnv.b.R
 msgid ""
@@ -10751,18 +10989,21 @@ msgid ""
 "least 10 to 15 (N - g >= k + 10) and the sphericity assumption is violated "
 "(Mauchly's p < .05, epsilon < .75)."
 msgstr ""
+"グループあたりのサンプルサイズが反復測定の数を少なくとも10～15上回り（N - g >"
+"= k + 10）、かつ球面性の仮定が満たされない場合（モークリーの p < .05、"
+"イプシロン < .75）。"
 
 #: R/mmnv.b.R
 msgid "When to prefer MANOVA:"
-msgstr ""
+msgstr "MANOVAが望ましい場合："
 
 #: R/mmnv.b.R
 msgid "When to prefer Univariate ANOVA:"
-msgstr ""
+msgstr "単変量ANOVAが望ましい場合："
 
 #: R/mmnv.b.R
 msgid "Wilks' Lambda"
-msgstr ""
+msgstr "ウィルクスのラムダ"
 
 #: mMNV/options/testWilks.title
 msgid "Wilks' lambda"
@@ -10770,7 +11011,7 @@ msgstr ""
 
 #: mDCA/results/windowTable.columns.title
 msgid "Window Span (%)"
-msgstr ""
+msgstr "ウィンドウ幅（%）"
 
 #: mROC/options/cmpDeLong/w05.title
 msgid "With 0.5"
@@ -10782,7 +11023,7 @@ msgstr "コントロールと比較"
 
 #: mMNV/results/contrastsTable.title
 msgid "Within-Subjects Contrasts"
-msgstr ""
+msgstr "被験者内対比"
 
 #: mMNV/options/showContrastsTable.title
 msgid "Within-subjects contrasts"
@@ -10794,11 +11035,11 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Worst-Case Driver (Governing)"
-msgstr ""
+msgstr "ワーストケースの要因（律速）"
 
 #: R/mstab.b.R
 msgid "Worst-Case Min"
-msgstr ""
+msgstr "ワーストケースの最小値"
 
 #: mLR/ui[4]/show_roc/roc_x.label
 #: mMLP/ui[3]/show_roc/roc_x.label
@@ -10821,16 +11062,16 @@ msgstr "Z得点"
 
 #: mLR/results/coeffTable.columns.title
 msgid "z-value"
-msgstr ""
+msgstr "z値"
 
 #: R/mstab.b.R
 msgid "Zero residual variance (perfect fit)"
-msgstr ""
+msgstr "残差分散が0（完全な当てはめ）"
 
 #: mPWR/options/alpha.title
 #: mPWR/ui[0]/alpha.label
 msgid "α (type I error rate)"
-msgstr ""
+msgstr "α（第1種の誤り率）"
 
 #, fuzzy
 #~ msgid "Continuous predictors"
