@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-10-21 23:51+0000\n"
+"PO-Revision-Date: 2026-11-16 22:26+0000\n"
 "Last-Translator: Watchman89 <watchman89@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jamovi/module-"
 "vijplots/nl/>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.11.dev0\n"
+"X-Generator: Weblate 2026.12.dev0\n"
 
 #: R/areachart.b.R
 #: R/barchart.b.R
@@ -211,6 +211,16 @@ msgid ""
 "source (and changelog) is available at <a "
 "href=\"https://github.com/vjalby/vijPlots\" target=\"_blank\">Github</a>.</p>"
 msgstr ""
+"<p>Belangrijke statiestiekfiguren, allemaal gebouwd met <b>ggplot2</b> en ze "
+"bieden uitgebreide aanpassingsopties aan:</p><ul><li><strong>Continue "
+"variabelen</strong>: Histogram, Boxplot, Regenwolkplot, Verdelingsplot, "
+"Foutbalkenkaart, Lollipop plot, QQ-plot</li><li><strong>Categorische "
+"variabelen</strong>: Balkfiguur, Taartfiguur, Mozaïekfiguur, Likert-figuur</"
+"li><li><strong>Tijdserie</strong>: Lijnfiguur, Oppervlaktekaart</li><li>"
+"<strong>Meerdere Reacties</strong>: Frequenties, Kruistabel</li></ul><p>De "
+"module is beschikbaar in het <strong>Plots</strong> tabblad. </p><p>"
+"Projectbron (en veranderingenbestand) is beschikbaar op <a href=\"https://"
+"github.com/vjalby/vijPlots\" target=\"_blank\">GitHub</a></p>"
 
 #: R/corresp.b.R
 msgid ""
@@ -244,6 +254,35 @@ msgid ""
 "</ul>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Smoking</p>"
 msgstr ""
+"<p>Deze module berekent <strong>Correspondentieanalyse (CA)</strong> voor "
+"twee categorische variabelen. Berekeningen zijn gebaseerd op pakket <a href "
+"= \"https://CRAN.R-project.org/packag=FactoMineR\"target=\"_blank\">"
+"FactoMineR</a> door F. Husson, J. Josse, S. Le, J. Mazet. </p>\n"
+"<p>De gegevens kunnen een </p>\n"
+"<ul>\n"
+"<li><strong>Observatiestabel</stong> zijn (ruwe gegevens), mogelijk met "
+"gewichten door middel van <em>jamovi</em> ingebouwd gewichtensysteem of door "
+"middel van de \"Tellingen\" variabele</li>\n"
+"<li>of een <strong>Contingency tabel</strong></li>\n"
+"</ul>\n"
+"<p><strong>Supplementaire rij of kolom</strong> getallen mogen worden "
+"ingevoerd als lijst van integers : 1,3,6</p>\n"
+"<p>Vier normaliseringen (schalen van rij- en kolomscores voor het plotten) "
+"zijn beschikbaar :</p>\n"
+"<ul>\n"
+"<li><strong>Hoofzakelijk:</strong> Rij- en kolomscores worden geschaald naar "
+"hun eigenwaardes.</li>\n"
+"<li><strong>Symmetrisch:</strong> Rij- en kolomscores worden geschaald naar "
+"de vierkantswortel van hun eigenwaardes.</li>\n"
+"<li><strong>Rij Hoofdzaak:</strong> Alleen rijscores worden geschaald naar "
+"hun eigenwaardes.</li>\n"
+"<li><strong>Kolom Hoofdzaak:</strong> Alleen kolomscores worden geschaald "
+"naar hun eigenwaardes.</li>\n"
+"<li><strong>Standaard:</strong>De ruwe coördinaten zonder normalisering.</li>"
+"\n"
+"</ul>\n"
+"<p>Een voorbeeldbestand is bijgevoegd in Open > Gegevensbibliotheek > "
+"vijPlots > Roken</p>"
 
 #: R/multcorresp.b.R
 msgid ""
@@ -2858,7 +2897,7 @@ msgstr "Per groep"
 #: multcorresp/options.menuGroup
 #: principal/options.menuGroup
 msgid "hidden"
-msgstr ""
+msgstr "verborgen"
 
 #: barplot/options/hideLabelsBelow.title
 #: likertplot/options/hideLabelsBelow.title
@@ -6117,7 +6156,6 @@ msgstr "Tabel"
 #: corresp/ui[5][0][0].label
 #: multcorresp/ui[6][0][0].label
 #: principal/ui[4][0][0].label
-#, fuzzy
 msgid "Tables"
 msgstr "Tabellen"
 
@@ -6504,9 +6542,8 @@ msgid "Total"
 msgstr "Totaal"
 
 #: mrcrosstabs/options/totalRow.title
-#, fuzzy
 msgid "Total row"
-msgstr "Totaalrij"
+msgstr "Totalenrij"
 
 #: mrcrosstabs/options/emptyAsNA.title
 #: mrfrequencies/options/emptyAsNA.title
