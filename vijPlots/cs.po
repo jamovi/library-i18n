@@ -13,7 +13,12 @@ msgstr ""
 "X-Generator: Weblate 2026.11.dev0\n"
 
 #: R/areachart.b.R
+#: R/barchart.b.R
+#: R/barplot.b.R
 #: R/linechart.b.R
+#: R/lollipop.b.R
+#: R/mosaic.b.R
+#: R/piechart.b.R
 msgid "\"{var}\" is a reserved name. Please rename this variable."
 msgstr "„{var}“ je vyhrazený název. Přejmenujte tuto proměnnou."
 
@@ -30,6 +35,10 @@ msgstr ""
 msgid "\"Tick Count\" option for the X-axis is only available for numeric variables."
 msgstr ""
 "Možnost „Počet značek“ pro osu X je dostupná pouze pro číselné proměnné."
+
+#: R/utils.R
+msgid "(Missing)"
+msgstr ""
 
 #: R/qqplot.b.R
 msgid "{distrib} distribution requires positive (>0) data."
@@ -84,13 +93,15 @@ msgid "# of rows/columns"
 msgstr "Počet řádků/sloupců"
 
 #: barchart/ui[3][0][0]/errorBars_ci/ciLevel.suffix
+#: barplot/results/frequencies.columns.title
+#: piechart/results/frequencies.columns.title
 msgid "%"
 msgstr "%"
 
 #: barplot/options/accuracy.title
 #: barplot/ui[2][0][2][0].label
 #: likertplot/options/accuracy.title
-#: likertplot/ui[4][0][2][0].label
+#: likertplot/ui[5][0][1][0].label
 #: mrcrosstabs/options/accuracy.title
 #: mrcrosstabs/ui[2][0][2][0].label
 #: mrfrequencies/options/accuracy.title
@@ -110,7 +121,7 @@ msgstr "% podle řádku"
 msgid "% Inertia"
 msgstr "% inerce"
 
-#: likertplot/ui[4][1][0][0].label
+#: likertplot/ui[5][0][0][0].label
 msgid "% Labels"
 msgstr "Popisky %"
 
@@ -120,6 +131,7 @@ msgstr "Popisky %"
 msgid "% of Cases"
 msgstr "% případů"
 
+#: R/mrcrosstabs.b.R
 #: mrcrosstabs/options/computedValues/cases.title
 #: mrfrequencies/options/showCases.title
 #: mrfrequencies/options/yaxis/cases.title
@@ -164,8 +176,9 @@ msgid ""
 "order in table and graph (when some variables miss some levels).</li>\n"
 "<li><strong>Convert variables to integer:</strong> when checked, the level "
 "labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
+"<li><strong>Sort Variables:</strong> orders the Likert variables by the "
+"proportion of answers in the upper half of the scale (middle level "
+"excluded).</li>\n"
 "</ul>\n"
 "<h3>Comparison Tests</h3>\n"
 "<p>When using a group variable, several tests are available:</p>\n"
@@ -176,41 +189,12 @@ msgid ""
 "Dwass-Steel-Critchlow-Fligner (DSCF) pairwise comparisons tests.</li>\n"
 "</ul>\n"
 "<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for Mann-Whitney U, Kruskal-Wallis and post hoc tests. DSCF "
+"variable) for post hoc tests or <strong>overall</strong> (groupwise and "
+"variablewise) for Mann-Whitney U, Kruskal-Wallis and post hoc tests. DSCF "
 "p-values are already adjusted (groupwise); no other adjustment is "
 "possible.</p>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
 msgstr ""
-"<h3>Data a řazení</h3>\n"
-"<ul>\n"
-"<li>Likertovy proměnné musí mít ordinální typ měření. (Funguje i spojitý "
-"celočíselný typ.)</li>\n"
-"<li>Pokud plánujete vypočítat průměr/medián/sd nebo použít srovnávací testy, "
-"musí mít celočíselný datový typ.</li>\n"
-"<li><strong>Uspořádat úrovně:</strong> při zaškrtnutí se pokusí opravit "
-"pořadí popisků v tabulce a grafu (pokud některým proměnným chybějí některé "
-"úrovně).</li>\n"
-"<li><strong>Převést proměnné na celá čísla:</strong> při zaškrtnutí jsou "
-"popisky úrovní ignorovány a použijí se pouze celočíselné hodnoty.</li>\n"
-"<li><strong>Seřadit proměnné podle mediánu:</strong> seřadí seznam "
-"Likertových proměnných podle mediánu.</li>\n"
-"</ul>\n"
-"<h3>Srovnávací testy</h3>\n"
-"<p>Při použití seskupovací proměnné je k dispozici několik testů:</p>\n"
-"<ul>\n"
-"<li><strong>Mannův-Whitneyův U:</strong> porovnání dvou skupin</li>\n"
-"<li><strong>Kruskalův-Wallisův:</strong> porovnání n skupin</li>\n"
-"<li><strong>Post hoc testy:</strong> Dunnovy, Conoverovy a Dwassovy-Steelovy-"
-"Critchlowovy-Flignerovy (DSCF) testy párových porovnání.</li>\n"
-"</ul>\n"
-"<p>Hodnoty p lze upravit <strong>po skupinách</strong> (pro každou otázku) u "
-"post hoc testů nebo <strong>celkově</strong> (přes skupiny i otázky) u "
-"Mannova-Whitneyova U testu, Kruskalova-Wallisova testu a post hoc testů. "
-"Hodnoty p testu DSCF jsou již upraveny (po skupinách); další úprava není "
-"možná.</p>\n"
-"<p>Ukázkový soubor je dostupný v nabídce Otevřít > Knihovna dat > vijPlots > "
-"Likert</p>"
 
 #: package.description
 msgid ""
@@ -475,7 +459,7 @@ msgstr ""
 #: R/qqplot.b.R
 msgid ""
 "<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
-"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"target=\"_blank\">qqplotr R package</a> by Alexandre Almeida, Adam Loy and "
 "Heike Hofmann. In-depth information can be found in the package "
 "documentation on CRAN site.</p>\n"
 "<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
@@ -519,57 +503,8 @@ msgid ""
 "<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
 "(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
 "(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
+"</ul>"
 msgstr ""
-"<p>Tento modul používá <a href = \"https://CRAN.R-project.org/"
-"package=qqplotr\" target=\"_blank\">balíček R qqplotr<a/> od Alexandra "
-"Almeidy, Adama Loye a Heike Hofmannové. Podrobné informace naleznete v "
-"dokumentaci balíčku na webu CRAN.</p>\n"
-"<p><strong>Referenční čára:</strong> Vykreslí buď <em>přímku identity</em> "
-"(y = x), nebo běžně používanou <em>Q-Q přímku</em>, která prochází dvěma "
-"kvantily dat (Q<sub>0.25</sub> a Q<sub>0.75</sub>). P-P graf podporuje pouze "
-"přímku identity.</p>\n"
-"<p><strong>Pásmo spolehlivosti:</strong> Vykreslí pásmo spolehlivosti kolem "
-"referenční čáry. Balíček qqplotr poskytuje několik metod výpočtu pásma "
-"spolehlivosti:</p>\n"
-"<ul>\n"
-"<li><strong><em>Bodové</em></strong> vytváří bodová pásma spolehlivosti "
-"založená na normálních intervalech spolehlivosti;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> vytváří bodová pásma spolehlivosti "
-"založená na parametrickém bootstrapu;</li>\n"
-"<li><strong><em>Kolmogorovův-Smirnovův</em></strong> pásmo je založeno na "
-"Kolmogorovově-Smirnovově testu;</li>\n"
-"<li><strong><em>Citlivé na chvosty</em></strong> vytváří pásma spolehlivosti "
-"citlivá na chvosty, ale je implementováno pouze pro normální Q-Q grafy;</li>"
-"\n"
-"<li><strong><em>Stejné lokální hladiny (ELL)</em></strong> vytváří "
-"simultánní pásma pomocí stejných lokálních hladin.</li>\n"
-"</ul>\n"
-"<p>P-P grafy podporují pouze metody „ELL“ a „Bootstrap“.</p>\n"
-"<p><strong>Graf bez trendu:</strong> Z objektů je <em>odstraněn trend</em> "
-"podle referenční čáry. Tento postup může pomoci snížit vizuální zkreslení "
-"způsobené kolmými vzdálenostmi bodů od referenční čáry.</p>\n"
-"<p><strong>Hodnoty parametrů:</strong> Parametry rozdělení lze odhadnout z "
-"dat pomocí:</p>\n"
-"<ul>\n"
-"<li><strong>Metody maximální věrohodnosti</strong> (s využitím balíčku MASS) "
-": měla by fungovat pro všechna rozdělení kromě „t“ a „rovnoměrného“;</li>\n"
-"<li><strong>Metody momentů</strong> pro parametry založené na momentech : "
-"měla by fungovat pro „normální“, „log-normální“, „beta“, „exponenciální“, „"
-"gama“, „logistické“ a „rovnoměrné“ rozdělení;</li>\n"
-"</ul>\n"
-"<p>nebo je může zadat uživatel:</p>\n"
-"<ul>\n"
-"<li><strong>Parametr 1:</strong> mean (normální), meanlog (log-normální), "
-"shape1 (beta), location (Cauchyho, logistické), df (chí-kvadrát, Studentovo)"
-", df1 (F), rate (exponenciální), shape (gama, Weibullovo) a min (rovnoměrné)"
-";</li>\n"
-"<li><strong>Parametr 2:</strong> sd (normální), sdlog (log-normální), shape2 "
-"(beta), scale (Cauchyho, logistické), df2 (F), rate (gama, Weibullovo) a max "
-"(rovnoměrné).</li>\n"
-"</ul>\n"
-"</p>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -590,6 +525,10 @@ msgstr "1 týden"
 #: linechart/options/dateBreak/1year.title
 msgid "1 year"
 msgstr "1 rok"
+
+#: boxplot/options/whiskers/tukey.title
+msgid "1.5 × IQR (Tukey)"
+msgstr ""
 
 #: areachart/options/dateBreak/10year.title
 #: linechart/options/dateBreak/10year.title
@@ -660,6 +599,10 @@ msgstr "2035-10-20"
 #: linechart/options/dateBreak/25year.title
 msgid "25 years"
 msgstr "25 let"
+
+#: boxplot/options/whiskers/tukey3.title
+msgid "3 × IQR"
+msgstr ""
 
 #: areachart/options/dateBreak/3month.title
 #: linechart/options/dateBreak/3month.title
@@ -810,6 +753,10 @@ msgstr "Alfa"
 msgid "Always show group legend"
 msgstr "Vždy zobrazit legendu skupin"
 
+#: piechart/options/alwaysShowLegend.title
+msgid "Always show legend"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "Apr"
@@ -833,9 +780,12 @@ msgid "Arrows"
 msgstr "Šipky"
 
 #: likertplot/options/sorting/ascending.title
-#: likertplot/ui[1][1][0]/sorting_ascending.label
 msgid "Ascending"
 msgstr "Vzestupně"
+
+#: R/qqplot.b.R
+msgid "At least two observations are required."
+msgstr ""
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -888,7 +838,7 @@ msgstr "Automaticky"
 #: barplot/ui[5].label
 #: boxplot/ui[4].label
 #: histogram/ui[5].label
-#: likertplot/ui[6].label
+#: likertplot/ui[7].label
 #: linechart/ui[2].label
 #: lollipop/ui[5].label
 #: mosaic/ui[5].label
@@ -924,7 +874,7 @@ msgstr "Sloupcový graf"
 #: barchart/options/barType.title
 #: barchart/ui[1][1][0].label
 #: barplot/options/barType.title
-#: barplot/ui[1][1][0].label
+#: barplot/ui[1][2][0].label
 #: mrcrosstabs/options/bartype.title
 #: mrcrosstabs/ui[2][0][1][0].label
 msgid "Bar Type"
@@ -997,6 +947,8 @@ msgstr "Typ biplotu"
 
 #: barchart/options/borderColor/black.title
 #: barchart/options/textColor/black.title
+#: barchart/options/pointColor/black.title
+#: barchart/options/errorBarColor/black.title
 #: barplot/options/borderColor/black.title
 #: barplot/options/textColor/black.title
 #: corresp/options/supColor/black.title
@@ -1336,18 +1288,20 @@ msgid "BY"
 msgstr "BY"
 
 #: likertplot/options/groupBy/group.title
-#: likertplot/ui[4][0][1][0]/groupBy_group.label
 msgid "By group"
 msgstr "Podle skupiny"
 
 #: likertplot/options/groupBy/variable.title
-#: likertplot/ui[4][0][1][0]/groupBy_variable.label
 msgid "By variable"
 msgstr "Podle proměnné"
 
 #: R/likertplot.b.R
 msgid "Cannot convert text variables to integers"
 msgstr "Textové proměnné nelze převést na celá čísla"
+
+#: R/likertplot.b.R
+msgid "Cannot tidy up levels: the same label is used for different values."
+msgstr ""
 
 #: R/likertplot.b.R
 msgid "Cannot tidy up text variables"
@@ -1358,7 +1312,7 @@ msgstr "Textové proměnné nelze uspořádat"
 #: barplot/ui[7][2].label
 #: boxplot/ui[6][2].label
 #: histogram/ui[7][2].label
-#: likertplot/ui[8][2].label
+#: likertplot/ui[9][2].label
 #: linechart/ui[4][2].label
 #: lollipop/ui[7][2].label
 #: mosaic/ui[7][2].label
@@ -1576,7 +1530,6 @@ msgid "Center"
 msgstr "Střed"
 
 #: likertplot/options/type/centered.title
-#: likertplot/ui[4][0][0][0]/type_centered.label
 msgid "Centered"
 msgstr "Centrovaný"
 
@@ -1584,6 +1537,10 @@ msgstr "Centrovaný"
 #: qqplot/options/distrib/chisq.title
 msgid "Chi-squared"
 msgstr "Chí-kvadrát"
+
+#: barchart/options/pointShape/circle.title
+msgid "Circle"
+msgstr ""
 
 #: piechart/options/clockwise.title
 msgid "Clockwise"
@@ -1647,7 +1604,6 @@ msgstr "Barvy a možnosti"
 #: barchart/options/facetBy/column.title
 #: barchart/ui[5][0][0][0][0]/facetBy_column.label
 #: barplot/options/facetBy/column.title
-#: barplot/ui[4][0][0][0]/facetBy_column.label
 #: boxplot/options/facetBy/column.title
 #: boxplot/ui[3][0][0][0]/facetBy_column.label
 #: corresp/options/colColor.title
@@ -1658,7 +1614,6 @@ msgstr "Barvy a možnosti"
 #: mosaic/options/facetBy/column.title
 #: mosaic/ui[4][0][0][0][0]/facetBy_column.label
 #: piechart/options/facetBy/column.title
-#: piechart/ui[4][0][0][0]/facetBy_column.label
 #: scatterplot/options/facetBy/column.title
 #: scatterplot/ui[3][0][0][0][0]/facetBy_column.label
 msgid "Column"
@@ -1756,7 +1711,6 @@ msgid "Connect ordinal categories"
 msgstr "Spojit ordinální kategorie"
 
 #: likertplot/options/postHoc/conover.title
-#: likertplot/ui[3][0][1][0]/postHoc_conover.label
 msgid "Conover"
 msgstr "Conover"
 
@@ -1820,19 +1774,12 @@ msgstr "COS2"
 #: R/histogram.b.R
 #: R/mrcrosstabs.b.R
 #: barplot/options/yaxis/count.title
-#: barplot/ui[1][0][0]/yaxis_count.label
 #: histogram/options/histtype/count.title
 #: histogram/ui[1][0][0]/histtype_count.label
 #: mosaic/options/labelType/count.title
 #: piechart/options/labels/count.title
 msgid "Count"
 msgstr "Počet"
-
-#: barplot/options/showLabels.title
-#: mrcrosstabs/options/showLabels.title
-#: mrfrequencies/options/showLabels.title
-msgid "Count labels"
-msgstr "Popisky počtů"
 
 #: mrcrosstabs/options/endorsed.title
 #: mrfrequencies/options/endorsed.title
@@ -1845,12 +1792,13 @@ msgid "Counted value string may not be empty."
 msgstr "Řetězec počítané hodnoty nesmí být prázdný."
 
 #: R/mrfrequencies.b.R
+#: barplot/results/frequencies.columns.title
 #: likertplot/options/frequencies/counts.title
-#: likertplot/ui[2][0][1][0]/frequencies_counts.label
 #: mrcrosstabs/options/computedValues/count.title
 #: mrfrequencies/options/showCounts.title
 #: mrfrequencies/options/yaxis/counts.title
 #: mrfrequencies/results/responses.columns.title
+#: piechart/results/frequencies.columns.title
 msgid "Counts"
 msgstr "Počty"
 
@@ -1865,28 +1813,21 @@ msgstr "Počty"
 msgid "Counts (optional)"
 msgstr "Počty (nepovinné)"
 
-#: R/barplot.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not all be zero."
 msgstr "Počty nesmějí být všechny nulové."
 
-#: R/barplot.b.R
 #: R/corresp.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not be infinite."
 msgstr "Počty nesmějí být nekonečné."
 
-#: R/barplot.b.R
 #: R/corresp.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not be negative."
 msgstr "Počty nesmějí být záporné."
 
-#: R/barplot.b.R
-#: R/mosaic.b.R
+#: R/utilsData.R
 msgid "Counts may not contain missing values."
 msgstr "Počty nesmějí obsahovat chybějící hodnoty."
 
@@ -1926,8 +1867,10 @@ msgid "Crosstab (% of responses)"
 msgstr "Kontingenční tabulka (% odpovědí)"
 
 #: R/multcorresp.b.R
+#: barplot/results/frequencies.columns.title
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
+#: piechart/results/frequencies.columns.title
 #: principal/results/summaryTable.columns.title
 msgid "Cumulative %"
 msgstr "Kumulativní %"
@@ -1988,7 +1931,6 @@ msgstr "Desetinná přesnost"
 #: barchart/options/order/decreasing.title
 #: barchart/ui[1][2][0]/order_decreasing.label
 #: barplot/options/order/decreasing.title
-#: barplot/ui[1][2][0]/order_decreasing.label
 #: boxplot/options/order/decreasing.title
 #: boxplot/ui[1][1][0]/order_decreasing.label
 #: lollipop/options/order/decreasing.title
@@ -1999,6 +1941,7 @@ msgstr "Desetinná přesnost"
 #: mrcrosstabs/ui[1][2][0]/order_decreasing.label
 #: mrfrequencies/options/order/decreasing.title
 #: mrfrequencies/ui[1][1][0]/order_decreasing.label
+#: piechart/options/order/decreasing.title
 msgid "Decreasing"
 msgstr "Sestupně"
 
@@ -2052,7 +1995,6 @@ msgid "Density opacity"
 msgstr "Neprůhlednost hustoty"
 
 #: likertplot/options/sorting/descending.title
-#: likertplot/ui[1][1][0]/sorting_descending.label
 msgid "Descending"
 msgstr "Sestupně"
 
@@ -2159,7 +2101,6 @@ msgid "Draw staples"
 msgstr "Vykreslit koncové příčky"
 
 #: likertplot/options/postHoc/dscf.title
-#: likertplot/ui[3][0][1][0]/postHoc_dscf.label
 msgid "DSCF"
 msgstr "DSCF"
 
@@ -2173,7 +2114,6 @@ msgid "Dummy Variables"
 msgstr "Indikátorové proměnné"
 
 #: likertplot/options/postHoc/dunn.title
-#: likertplot/ui[3][0][1][0]/postHoc_dunn.label
 msgid "Dunn"
 msgstr "Dunn"
 
@@ -2207,6 +2147,10 @@ msgstr "Stejné lokální hladiny"
 msgid "Equamax"
 msgstr "Equamax"
 
+#: barchart/options/errorBarColor.title
+msgid "Error bar"
+msgstr ""
+
 #: package/analyses/barchart.title
 #: package/analyses/barchart.menuTitle
 #: barchart/options.title
@@ -2220,10 +2164,13 @@ msgid "Error Bar Size"
 msgstr "Velikost chybových úseček"
 
 #: barchart/options/errorBars.title
-#: barchart/ui[3].label
 #: barchart/ui[3][0][0].label
 msgid "Error Bars"
 msgstr "Chybové úsečky"
+
+#: barchart/ui[3].label
+msgid "Error Bars & Observations"
+msgstr ""
 
 #: qqplot/options/paramMethod/paraEstimate.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimate.label
@@ -2438,11 +2385,15 @@ msgstr "Četnosti"
 msgid "Frequency Plot"
 msgstr "Četnostní graf"
 
+#: barplot/results/frequencies.title
 #: likertplot/results/frequencies.title
+#: piechart/results/frequencies.title
 msgid "Frequency Table"
 msgstr "Tabulka četností"
 
+#: barplot/options/frequencyTable.title
 #: likertplot/options/frequencyTable.title
+#: piechart/options/frequencyTable.title
 msgid "Frequency table"
 msgstr "Tabulka četností"
 
@@ -2582,6 +2533,8 @@ msgid "Ggsci:NPG"
 msgstr "Ggsci:NPG"
 
 #: barchart/options/borderColor/gray.title
+#: barchart/options/pointColor/gray.title
+#: barchart/options/errorBarColor/gray.title
 #: barplot/options/borderColor/gray.title
 #: corresp/options/supColor/darkgray.title
 #: histogram/options/fillColor/#999999.title
@@ -2690,6 +2643,33 @@ msgstr "Šedá"
 msgid "Greys"
 msgstr "Šedé"
 
+#: areachart/options/xGridLines.title
+#: areachart/options/yGridLines.title
+#: barchart/options/xGridLines.title
+#: barchart/options/yGridLines.title
+#: barplot/options/xGridLines.title
+#: barplot/options/yGridLines.title
+#: boxplot/options/xGridLines.title
+#: boxplot/options/yGridLines.title
+#: histogram/options/xGridLines.title
+#: histogram/options/yGridLines.title
+#: linechart/options/xGridLines.title
+#: linechart/options/yGridLines.title
+#: lollipop/options/xGridLines.title
+#: lollipop/options/yGridLines.title
+#: mrcrosstabs/options/xGridLines.title
+#: mrcrosstabs/options/yGridLines.title
+#: mrfrequencies/options/xGridLines.title
+#: mrfrequencies/options/yGridLines.title
+#: qqplot/options/xGridLines.title
+#: qqplot/options/yGridLines.title
+#: raincloud/options/xGridLines.title
+#: raincloud/options/yGridLines.title
+#: scatterplot/options/xGridLines.title
+#: scatterplot/options/yGridLines.title
+msgid "Grid lines"
+msgstr ""
+
 #: areachart/options/group.title
 #: areachart/ui/mode/oneVariable[0][0][2].label
 #: barchart/options/group.title
@@ -2701,7 +2681,6 @@ msgstr "Šedé"
 #: histogram/options/group.title
 #: histogram/ui[0][1].label
 #: likertplot/options/groupSize.title
-#: likertplot/ui[4][0][1][0].label
 #: linechart/options/group.title
 #: linechart/ui[0][2].label
 #: lollipop/options/group.title
@@ -2734,7 +2713,16 @@ msgstr "Skupina + počet"
 msgid "Group + Percent"
 msgstr "Skupina + procento"
 
+#: likertplot/results/comp/pwTable.columns.title
+msgid "Group 1"
+msgstr ""
+
+#: likertplot/results/comp/pwTable.columns.title
+msgid "Group 2"
+msgstr ""
+
 #: likertplot/options/groupBy.title
+#: likertplot/ui[1][1][0].label
 msgid "Group By"
 msgstr "Seskupit podle"
 
@@ -2771,7 +2759,6 @@ msgid "Grouping Variable"
 msgstr "Seskupovací proměnná"
 
 #: likertplot/options/pValue/group.title
-#: likertplot/ui[3][0][2][0]/pValue_group.label
 msgid "Groupwise"
 msgstr "Po skupinách"
 
@@ -2784,13 +2771,46 @@ msgstr "Po skupinách"
 msgid "hidden"
 msgstr "skrytý"
 
+#: barplot/options/hideLabelsBelow.title
 #: likertplot/options/hideLabelsBelow.title
-msgid "Hide % labels below 5%"
-msgstr "Skrýt popisky % pod 5 %"
+#: mrcrosstabs/options/hideLabelsBelow.title
+msgid "Hide % below 5%"
+msgstr ""
 
 #: mosaic/options/hideAxes.title
 msgid "Hide axes"
 msgstr "Skrýt osy"
+
+#: areachart/options/xHideAxis.title
+#: areachart/options/yHideAxis.title
+#: barchart/options/xHideAxis.title
+#: barchart/options/yHideAxis.title
+#: barplot/options/xHideAxis.title
+#: barplot/options/yHideAxis.title
+#: boxplot/options/xHideAxis.title
+#: boxplot/options/yHideAxis.title
+#: histogram/options/xHideAxis.title
+#: histogram/options/yHideAxis.title
+#: linechart/options/xHideAxis.title
+#: linechart/options/yHideAxis.title
+#: lollipop/options/xHideAxis.title
+#: lollipop/options/yHideAxis.title
+#: mrcrosstabs/options/xHideAxis.title
+#: mrcrosstabs/options/yHideAxis.title
+#: mrfrequencies/options/xHideAxis.title
+#: mrfrequencies/options/yHideAxis.title
+#: qqplot/options/xHideAxis.title
+#: qqplot/options/yHideAxis.title
+#: raincloud/options/xHideAxis.title
+#: raincloud/options/yHideAxis.title
+#: scatterplot/options/xHideAxis.title
+#: scatterplot/options/yHideAxis.title
+msgid "Hide axis"
+msgstr ""
+
+#: piechart/options/hideLabelsBelow.title
+msgid "Hide labels below 5%"
+msgstr ""
 
 #: package/analyses/histogram.title
 #: package/analyses/histogram.menuTitle
@@ -2838,17 +2858,19 @@ msgstr "Vodorovný graf"
 msgid "Identity line"
 msgstr "Přímka identity"
 
+#: areachart/options/ignoreNA.title
 #: barchart/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
 #: likertplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
 #: raincloud/options/ignoreNA.title
+#: scatterplot/options/ignoreNA.title
 msgid "Ignore missing groups"
 msgstr "Ignorovat chybějící skupiny"
 
-#: areachart/options/ignoreNA.title
 #: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
 #: mosaic/options/ignoreNA.title
+#: piechart/options/ignoreNA.title
 msgid "Ignore missing values"
 msgstr "Ignorovat chybějící hodnoty"
 
@@ -2859,7 +2881,6 @@ msgstr "Vylepšit zobrazení popisků"
 #: barchart/options/order/increasing.title
 #: barchart/ui[1][2][0]/order_increasing.label
 #: barplot/options/order/increasing.title
-#: barplot/ui[1][2][0]/order_increasing.label
 #: boxplot/options/order/increasing.title
 #: boxplot/ui[1][1][0]/order_increasing.label
 #: lollipop/options/order/increasing.title
@@ -2870,6 +2891,7 @@ msgstr "Vylepšit zobrazení popisků"
 #: mrcrosstabs/ui[1][2][0]/order_increasing.label
 #: mrfrequencies/options/order/increasing.title
 #: mrfrequencies/ui[1][1][0]/order_increasing.label
+#: piechart/options/order/increasing.title
 msgid "Increasing"
 msgstr "Vzestupně"
 
@@ -3106,7 +3128,6 @@ msgstr "Kruskalovy-Wallisovy testy"
 #: piechart/options/labType/label.title
 #: piechart/options/labSize.title
 #: piechart/options/textColor.title
-#: piechart/ui[2][0][0][0]/labType_label.label
 #: principal/options/labelVar.title
 #: principal/ui[1][1].label
 #: scatterplot/options/labelVar.title
@@ -3199,7 +3220,7 @@ msgstr "Poloha popisku"
 msgid "Label rotation"
 msgstr "Natočení popisků"
 
-#: likertplot/ui[4][2][0][0].label
+#: likertplot/ui[4][1][1][0].label
 msgid "Label Size"
 msgstr "Velikost popisku"
 
@@ -3208,8 +3229,9 @@ msgstr "Velikost popisku"
 msgid "Label Type"
 msgstr "Typ popisků"
 
+#: likertplot/ui[5].label
 #: piechart/options/labels.title
-#: piechart/ui[1][1][0].label
+#: piechart/ui[1][3][0].label
 #: piechart/ui[2].label
 #: principal/options/labelColor.title
 msgid "Labels"
@@ -3316,7 +3338,7 @@ msgstr "Vlevo"
 #: barplot/ui[6][0].label
 #: boxplot/ui[5][0].label
 #: histogram/ui[6][0].label
-#: likertplot/ui[7][0].label
+#: likertplot/ui[8][0].label
 #: linechart/ui[3][0].label
 #: mosaic/options/showOpacityLegend.title
 #: mosaic/ui[6][0].label
@@ -3348,7 +3370,7 @@ msgstr "Legenda"
 msgid "Legend & Axis Titles"
 msgstr "Legenda a názvy os"
 
-#: likertplot/ui[7].label
+#: likertplot/ui[8].label
 msgid "Legend Title"
 msgstr "Název legendy"
 
@@ -3731,7 +3753,6 @@ msgid "Method: {method}"
 msgstr "Metoda: {method}"
 
 #: barplot/options/labelPosition/middle.title
-#: barplot/ui[2][0][1][0]/labelPosition_middle.label
 #: mrcrosstabs/options/labelPosition/middle.title
 #: mrcrosstabs/ui[2][0][0][1]/labelPosition_middle.label
 #: mrfrequencies/options/labelPosition/middle.title
@@ -3775,6 +3796,10 @@ msgstr "Min"
 msgid "Min / Max"
 msgstr "Min / Max"
 
+#: boxplot/options/whiskers/minmax.title
+msgid "Min–max"
+msgstr ""
+
 #: principal/options/rotation/entropy.title
 msgid "Minimum entropy"
 msgstr "Minimální entropie"
@@ -3783,6 +3808,10 @@ msgstr "Minimální entropie"
 #: R/lollipop.b.R
 msgid "Minimum of {var}"
 msgstr "Minimum {var}"
+
+#: R/utilsData.R
+msgid "Missing values: {n}"
+msgstr ""
 
 #: package/analyses/mosaic.title
 #: package/analyses/mosaic.menuTitle
@@ -3867,15 +3896,12 @@ msgstr "Nebyla použita žádná rotace."
 #: barchart/ui[1][2][0]/order_none.label
 #: barplot/options/order/none.title
 #: barplot/options/borderColor/none.title
-#: barplot/ui[1][2][0]/order_none.label
 #: boxplot/options/order/none.title
 #: boxplot/ui[1][1][0]/order_none.label
 #: histogram/options/fillColor/none.title
 #: histogram/options/borderColor/none.title
 #: likertplot/options/sorting/none.title
 #: likertplot/options/pValue/none.title
-#: likertplot/ui[1][1][0]/sorting_none.label
-#: likertplot/ui[3][0][2][0]/pValue_none.label
 #: lollipop/options/order/none.title
 #: lollipop/ui[2][1][0]/order_none.label
 #: mosaic/options/yAxis/none.title
@@ -3888,6 +3914,7 @@ msgstr "Nebyla použita žádná rotace."
 #: mrfrequencies/options/order/none.title
 #: mrfrequencies/options/borderColor/none.title
 #: mrfrequencies/ui[1][1][0]/order_none.label
+#: piechart/options/order/none.title
 #: piechart/options/labels/none.title
 #: piechart/options/borderColor/none.title
 #: principal/options/rotation/none.title
@@ -4071,6 +4098,7 @@ msgstr "Souhrn pozorování"
 msgid "Observation Table"
 msgstr "Tabulka pozorování"
 
+#: barchart/ui[3][1][1].label
 #: multcorresp/options/showObservations.title
 #: multcorresp/options/showObservationPlot.title
 #: principal/options/showObservations.title
@@ -4130,6 +4158,10 @@ msgstr "pouze"
 msgid "Opacity"
 msgstr "Neprůhlednost"
 
+#: barchart/options/pointShape/opencircle.title
+msgid "Open circle"
+msgstr ""
+
 #: mrcrosstabs/options/optionname.title
 #: mrfrequencies/options/optionname.title
 msgid "Option name"
@@ -4144,12 +4176,14 @@ msgstr "Název možnosti"
 msgid "Option Variables"
 msgstr "Proměnné odpovědí"
 
+#: barplot/ui[1][0][0].label
 #: histogram/ui[2].label
-#: likertplot/ui[4][1][1][0].label
+#: likertplot/ui[4][1][0][0].label
 #: mrcrosstabs/options/optionname.default
 #: mrcrosstabs/results/crosstab.columns.title
 #: mrfrequencies/options/optionname.default
 #: mrfrequencies/results/responses.columns.title
+#: piechart/ui[1][0][0].label
 msgid "Options"
 msgstr "Možnosti"
 
@@ -4233,7 +4267,6 @@ msgstr "Odlehlé hodnoty"
 
 #: R/mrcrosstabs.b.R
 #: likertplot/options/pValue/overall.title
-#: likertplot/ui[3][0][2][0]/pValue_overall.label
 msgid "Overall"
 msgstr "Celkově"
 
@@ -4407,7 +4440,6 @@ msgstr "Pearsonova rezidua"
 
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
-#: barplot/ui[1][0][0]/yaxis_percent.label
 #: mosaic/options/yAxis/percent.title
 #: mosaic/options/labelType/percent.title
 #: piechart/options/labels/percent.title
@@ -4415,7 +4447,6 @@ msgid "Percent"
 msgstr "Procento"
 
 #: likertplot/options/frequencies/percentages.title
-#: likertplot/ui[2][0][1][0]/frequencies_percentages.label
 msgid "Percentages"
 msgstr "Procenta"
 
@@ -4469,7 +4500,7 @@ msgstr "Růžová a zelená"
 msgid "Plot"
 msgstr "Graf"
 
-#: likertplot/ui[4][2][1][0].label
+#: likertplot/ui[6][0][1][0].label
 #: multcorresp/ui[7][0][0][0].label
 msgid "Plot Color"
 msgstr "Barva grafu"
@@ -4495,7 +4526,7 @@ msgstr "Rámeček grafu"
 #: mrfrequencies/ui[2].label
 #: mrfrequencies/ui[2][0][0][0].label
 #: multcorresp/ui[7].label
-#: piechart/ui[1][0][0].label
+#: piechart/ui[1][1][0].label
 #: qqplot/ui[2][1][0].label
 #: raincloud/ui[1][0][0].label
 #: scatterplot/ui[1][0][0].label
@@ -4507,7 +4538,7 @@ msgstr "Možnosti grafu"
 #: barplot/ui[7].label
 #: boxplot/ui[6].label
 #: histogram/ui[7].label
-#: likertplot/ui[8].label
+#: likertplot/ui[9].label
 #: linechart/ui[4].label
 #: lollipop/ui[7].label
 #: mosaic/ui[7].label
@@ -4539,6 +4570,7 @@ msgstr "Typ grafu"
 msgid "Plots"
 msgstr "Grafy"
 
+#: barchart/options/pointColor.title
 #: scatterplot/options/pointSize.title
 msgid "Point"
 msgstr "Bod"
@@ -4789,12 +4821,6 @@ msgstr "QLT"
 msgid "Quartimax"
 msgstr "Quartimax"
 
-#: likertplot/results/frequencies.columns.title
-#: likertplot/results/comp/uTestTable.columns.title
-#: likertplot/results/comp/kwTable.columns.title
-msgid "Questions"
-msgstr "Otázky"
-
 #: package/analyses/raincloud.title
 #: package/analyses/raincloud.menuTitle
 #: raincloud/options.title
@@ -4831,6 +4857,8 @@ msgid "Range"
 msgstr "Rozsah"
 
 #: barchart/options/textColor/red.title
+#: barchart/options/pointColor/red.title
+#: barchart/options/errorBarColor/red.title
 #: corresp/options/rowColor/red.title
 #: corresp/options/colColor/red.title
 #: histogram/options/fillColor/#E41A1C.title
@@ -4979,9 +5007,12 @@ msgstr "Regresní přímka"
 msgid "Reverse disposition"
 msgstr "Obrátit uspořádání"
 
+#: likertplot/options/reverseLikert.title
+msgid "Reverse level order"
+msgstr ""
+
 #: barchart/options/reverseStack.title
 #: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
 #: mosaic/options/reverseStack.title
 #: mrcrosstabs/options/reverseStack.title
 msgid "Reverse stacking order"
@@ -5096,7 +5127,6 @@ msgstr "Rotace"
 #: barchart/options/facetBy/row.title
 #: barchart/ui[5][0][0][0][0]/facetBy_row.label
 #: barplot/options/facetBy/row.title
-#: barplot/ui[4][0][0][0]/facetBy_row.label
 #: boxplot/options/facetBy/row.title
 #: boxplot/ui[3][0][0][0]/facetBy_row.label
 #: corresp/options/rowColor.title
@@ -5107,7 +5137,6 @@ msgstr "Rotace"
 #: mosaic/options/facetBy/row.title
 #: mosaic/ui[4][0][0][0][0]/facetBy_row.label
 #: piechart/options/facetBy/row.title
-#: piechart/ui[4][0][0][0]/facetBy_row.label
 #: scatterplot/options/facetBy/row.title
 #: scatterplot/ui[3][0][0][0][0]/facetBy_row.label
 msgid "Row"
@@ -5311,6 +5340,10 @@ msgstr "Set 3"
 msgid "Several variables"
 msgstr "Několik proměnných"
 
+#: barchart/options/pointShape.title
+msgid "Shape"
+msgstr ""
+
 #: scatterplot/options/groupShapes.title
 msgid "Shape by group"
 msgstr "Tvar podle skupiny"
@@ -5344,6 +5377,10 @@ msgstr "Zobrazit čáry"
 msgid "Show normal curve"
 msgstr "Zobrazit normální křivku"
 
+#: barchart/options/showPoints.title
+msgid "Show observations"
+msgstr ""
+
 #: linechart/options/showPoint.title
 msgid "Show points"
 msgstr "Zobrazit body"
@@ -5367,6 +5404,7 @@ msgstr "Singulární hodnota"
 #: areachart/options/legendFontSize.title
 #: areachart/options/xAxisFontSize.title
 #: areachart/options/yAxisFontSize.title
+#: barchart/options/pointSize.title
 #: barchart/options/facetFontSize.title
 #: barchart/options/legendFontSize.title
 #: barchart/options/xAxisFontSize.title
@@ -5447,20 +5485,22 @@ msgid "Some values are missing from the contingency table."
 msgstr "V kontingenční tabulce chybějí některé hodnoty."
 
 #: likertplot/options/sorting.title
-#: likertplot/ui[1][1][0].label
-msgid "Sort Variables by Median"
-msgstr "Seřadit proměnné podle mediánu"
+#: likertplot/ui[4][0][1][0].label
+msgid "Sort Variables"
+msgstr ""
 
 #: barchart/options/order.title
 #: barchart/ui[1][2][0].label
 #: barplot/options/order.title
-#: barplot/ui[1][2][0].label
+#: barplot/ui[1][3][0].label
 #: lollipop/options/order.title
 #: lollipop/ui[2][1][0].label
 #: mrcrosstabs/options/order.title
 #: mrcrosstabs/ui[1][2][0].label
 #: mrfrequencies/options/order.title
 #: mrfrequencies/ui[1][1][0].label
+#: piechart/options/order.title
+#: piechart/ui[1][2][0].label
 msgid "Sorting"
 msgstr "Řazení"
 
@@ -5488,6 +5528,10 @@ msgstr "Řazení (podle mediánu)"
 msgid "Spectral"
 msgstr "Spectral"
 
+#: barchart/options/pointShape/square.title
+msgid "Square"
+msgstr ""
+
 #: principal/results/summaryTable.columns.title
 msgid "SS Loadings"
 msgstr "Součet čtverců zátěží"
@@ -5498,7 +5542,6 @@ msgstr "Součet čtverců zátěží"
 #: histogram/options/groupingN/stack.title
 #: histogram/ui[1][2][0]/groupingN_stack.label
 #: likertplot/options/type/stacked.title
-#: likertplot/ui[4][0][0][0]/type_stacked.label
 #: mrcrosstabs/options/bartype/stack.title
 msgid "Stacked"
 msgstr "Skládaný"
@@ -5595,7 +5638,7 @@ msgstr "Styl"
 #: barplot/ui[7][1].label
 #: boxplot/ui[6][1].label
 #: histogram/ui[7][1].label
-#: likertplot/ui[8][1].label
+#: likertplot/ui[9][1].label
 #: linechart/ui[4][1].label
 #: lollipop/ui[7][1].label
 #: mosaic/ui[7][1].label
@@ -5719,15 +5762,13 @@ msgstr "Testy"
 
 #: mrcrosstabs/options/textColor.title
 #: piechart/options/labType/text.title
-#: piechart/ui[2][0][0][0]/labType_text.label
 msgid "Text"
 msgstr "Text"
 
 #: barplot/ui[2][0][1][1].label
 #: boxplot/ui[2][0][0][1].label
 #: corresp/ui[6][0][0][0].label
-#: likertplot/ui[5].label
-#: likertplot/ui[5][0][0][0].label
+#: likertplot/ui[6][0][0][0].label
 #: mrcrosstabs/ui[2][0][2][1].label
 #: mrfrequencies/ui[2][0][0][1].label
 #: multcorresp/ui[7][0][0][1].label
@@ -5741,6 +5782,7 @@ msgid "Text size"
 msgstr "Velikost textu"
 
 #: corresp/ui[6].label
+#: likertplot/ui[6].label
 msgid "Text Size & Colors"
 msgstr "Velikost textu a barvy"
 
@@ -6000,7 +6042,7 @@ msgstr "Časové řady"
 #: barplot/ui[7][0].label
 #: boxplot/ui[6][0].label
 #: histogram/ui[7][0].label
-#: likertplot/ui[8][0].label
+#: likertplot/ui[9][0].label
 #: linechart/ui[4][0].label
 #: lollipop/ui[7][0].label
 #: mosaic/ui[7][0].label
@@ -6032,7 +6074,6 @@ msgstr "Text názvu"
 #: barplot/options/labelPosition/top.title
 #: barplot/options/legendPosition/top.title
 #: barplot/options/yAxisPosition/1.title
-#: barplot/ui[2][0][1][0]/labelPosition_top.label
 #: boxplot/options/legendPosition/top.title
 #: boxplot/options/yAxisPosition/1.title
 #: corresp/options/yAxisPosition/1.title
@@ -6065,7 +6106,10 @@ msgstr "Text názvu"
 msgid "Top"
 msgstr "Nahoře"
 
+#: R/mrcrosstabs.b.R
+#: R/mrfrequencies.b.R
 #: R/multcorresp.b.R
+#: R/utilsData.R
 #: mrfrequencies/options/showTotal.title
 msgid "Total"
 msgstr "Celkem"
@@ -6162,6 +6206,12 @@ msgstr "Použít popis proměnné jako název"
 msgid "Value Labels"
 msgstr "Popisky hodnot"
 
+#: barplot/options/showLabels.title
+#: mrcrosstabs/options/showLabels.title
+#: mrfrequencies/options/showLabels.title
+msgid "Value labels"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 #: lollipop/options/yaxis/identity.title
@@ -6219,6 +6269,9 @@ msgstr "Graf proměnných"
 #: areachart/ui/mode/severalVariables[0][0][1].label
 #: boxplot/options/vars.title
 #: boxplot/ui[0][0].label
+#: likertplot/results/frequencies.columns.title
+#: likertplot/results/comp/uTestTable.columns.title
+#: likertplot/results/comp/kwTable.columns.title
 #: linechart/options/vars.title
 #: linechart/ui[0][1].label
 #: multcorresp/options/vars.title
@@ -6377,6 +6430,10 @@ msgstr "Viridis:Viridis"
 msgid "Weibull"
 msgstr "Weibullovo"
 
+#: boxplot/options/whiskers.title
+msgid "Whiskers"
+msgstr ""
+
 #: barchart/options/borderColor/white.title
 #: barchart/options/textColor/white.title
 #: barplot/options/borderColor/white.title
@@ -6405,12 +6462,10 @@ msgid "Width"
 msgstr "Šířka"
 
 #: barplot/options/percentWithin/category.title
-#: barplot/ui[1][0][0]/yaxis_percent/percentWithin_category.label
 msgid "Within categories"
 msgstr "V rámci kategorií"
 
 #: barplot/options/percentWithin/group.title
-#: barplot/ui[1][0][0]/yaxis_percent/percentWithin_gGroup.label
 msgid "Within groups"
 msgstr "V rámci skupin"
 
@@ -6437,7 +6492,7 @@ msgstr "Nesprávné hodnoty parametrů."
 #: corresp/ui[7][0].label
 #: histogram/ui[5][0][0][0].label
 #: histogram/ui[6][1].label
-#: likertplot/ui[6][0][0][0].label
+#: likertplot/ui[7][0][0][0].label
 #: linechart/options/timeVar.title
 #: linechart/ui[0][0].label
 #: linechart/ui[1][1][0].label
@@ -6508,7 +6563,7 @@ msgstr "Rozsah osy X"
 #: barchart/ui[6][0][1][0].label
 #: barchart/ui[7][2].label
 #: barplot/options/yaxis.title
-#: barplot/ui[1][0][0].label
+#: barplot/ui[1][1][0].label
 #: barplot/ui[5][0][1][0].label
 #: barplot/ui[6][2].label
 #: boxplot/ui[4][0][1][0].label
@@ -6518,7 +6573,7 @@ msgstr "Rozsah osy X"
 #: histogram/ui[1][0][0].label
 #: histogram/ui[5][0][1][0].label
 #: histogram/ui[6][2].label
-#: likertplot/ui[6][0][1][0].label
+#: likertplot/ui[7][0][1][0].label
 #: linechart/ui[2][0][1][0].label
 #: linechart/ui[3][2].label
 #: lollipop/options/yaxis.title

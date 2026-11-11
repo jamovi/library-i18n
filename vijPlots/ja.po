@@ -13,7 +13,12 @@ msgstr ""
 "X-Generator: Weblate 2026.11.dev0\n"
 
 #: R/areachart.b.R
+#: R/barchart.b.R
+#: R/barplot.b.R
 #: R/linechart.b.R
+#: R/lollipop.b.R
+#: R/mosaic.b.R
+#: R/piechart.b.R
 msgid "\"{var}\" is a reserved name. Please rename this variable."
 msgstr "\"{var}\" は予約語です。変数名を変更してください。"
 
@@ -28,6 +33,10 @@ msgstr "X軸の「範囲」オプションは、数値変数と日付変数で�
 #: R/linechart.b.R
 msgid "\"Tick Count\" option for the X-axis is only available for numeric variables."
 msgstr "X軸の「目盛り数」オプションは、数値変数でのみ使用できます。"
+
+#: R/utils.R
+msgid "(Missing)"
+msgstr ""
 
 #: R/qqplot.b.R
 msgid "{distrib} distribution requires positive (>0) data."
@@ -82,13 +91,15 @@ msgid "# of rows/columns"
 msgstr "行/列数"
 
 #: barchart/ui[3][0][0]/errorBars_ci/ciLevel.suffix
+#: barplot/results/frequencies.columns.title
+#: piechart/results/frequencies.columns.title
 msgid "%"
 msgstr "%"
 
 #: barplot/options/accuracy.title
 #: barplot/ui[2][0][2][0].label
 #: likertplot/options/accuracy.title
-#: likertplot/ui[4][0][2][0].label
+#: likertplot/ui[5][0][1][0].label
 #: mrcrosstabs/options/accuracy.title
 #: mrcrosstabs/ui[2][0][2][0].label
 #: mrfrequencies/options/accuracy.title
@@ -108,7 +119,7 @@ msgstr "行%"
 msgid "% Inertia"
 msgstr "%慣性"
 
-#: likertplot/ui[4][1][0][0].label
+#: likertplot/ui[5][0][0][0].label
 msgid "% Labels"
 msgstr "%ラベル"
 
@@ -118,6 +129,7 @@ msgstr "%ラベル"
 msgid "% of Cases"
 msgstr "ケース%"
 
+#: R/mrcrosstabs.b.R
 #: mrcrosstabs/options/computedValues/cases.title
 #: mrfrequencies/options/showCases.title
 #: mrfrequencies/options/yaxis/cases.title
@@ -162,8 +174,9 @@ msgid ""
 "order in table and graph (when some variables miss some levels).</li>\n"
 "<li><strong>Convert variables to integer:</strong> when checked, the level "
 "labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
+"<li><strong>Sort Variables:</strong> orders the Likert variables by the "
+"proportion of answers in the upper half of the scale (middle level "
+"excluded).</li>\n"
 "</ul>\n"
 "<h3>Comparison Tests</h3>\n"
 "<p>When using a group variable, several tests are available:</p>\n"
@@ -174,39 +187,12 @@ msgid ""
 "Dwass-Steel-Critchlow-Fligner (DSCF) pairwise comparisons tests.</li>\n"
 "</ul>\n"
 "<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for Mann-Whitney U, Kruskal-Wallis and post hoc tests. DSCF "
+"variable) for post hoc tests or <strong>overall</strong> (groupwise and "
+"variablewise) for Mann-Whitney U, Kruskal-Wallis and post hoc tests. DSCF "
 "p-values are already adjusted (groupwise); no other adjustment is "
 "possible.</p>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
 msgstr ""
-"<h3>データと並べ替え</h3>\n"
-"<ul>\n"
-"<li>Likert変数は順序尺度である必要があります（連続・整数でも使用できます）"
-"。</li>\n"
-"<li>平均値・中央値・SDの算出や比較検定を行う場合は、整数型である必要がありま"
-"す。</li>\n"
-"<li><strong>水準を整える：</strong>チェックすると、一部の変数で欠けている水準"
-"がある場合に、表とグラフの水準の順序を揃えようとします。</li>\n"
-"<li><strong>変数を整数型に変換：</strong>チェックすると、水準ラベルを無視し、"
-"整数値のみを使用します。</li>\n"
-"<li><strong>変数を中央値で並べ替え：</strong>Likert変数の一覧を中央値の順に並"
-"べます。</li>\n"
-"</ul>\n"
-"<h3>比較検定</h3>\n"
-"<p>グループ変数を使用する場合、以下の検定を利用できます。</p>\n"
-"<ul>\n"
-"<li><strong>Mann-Whitney U検定：</strong>2群の比較</li>\n"
-"<li><strong>Kruskal-Wallis検定：</strong>複数群の比較</li>\n"
-"<li><strong>事後検定：</strong>Dunn、Conover、Dwass-Steel-Critchlow-Fligner（"
-"DSCF）によるペアごとの比較検定。</li>\n"
-"</ul>\n"
-"<p>p値は、事後検定では<strong>設問ごと</strong>（groupwise）、Mann-Whitney U"
-"検定、Kruskal-Wallis検定、事後検定では<strong>全体</strong>（groupwiseおよび"
-"questionwise）で調整できます。DSCFのp値はすでに調整済み（groupwise）で、これ"
-"以上の調整はできません。</p>\n"
-"<p>サンプルファイルは「開く > データライブラリ > vijPlots > Likert」にありま"
-"す。</p>"
 
 #: package.description
 msgid ""
@@ -469,7 +455,7 @@ msgstr ""
 #: R/qqplot.b.R
 msgid ""
 "<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
-"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"target=\"_blank\">qqplotr R package</a> by Alexandre Almeida, Adam Loy and "
 "Heike Hofmann. In-depth information can be found in the package "
 "documentation on CRAN site.</p>\n"
 "<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
@@ -513,57 +499,8 @@ msgid ""
 "<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
 "(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
 "(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
+"</ul>"
 msgstr ""
-"<p>このモジュールは、Alexandre Almeida、Adam Loy、Heike Hofmannらによる <a "
-"href = \"https://CRAN.R-project.org/package=qqplotr\" target=\"_blank\">"
-"qqplotr R パッケージ<a/> を使用しています。詳細な情報は、CRANサイトにある"
-"パッケージのドキュメントで確認できます。</p>\n"
-"<p><strong>参照線：</strong> <em>恒等線</em> (y = x)、または2つのデータ分位"
-"数 (Q<sub>0.25</sub> および Q<sub>0.75</sub>) を通る一般的な <em>Q-Q 線</em> "
-"のいずれかを描画します。P-P プロットは恒等線のみをサポートしています。</p>\n"
-"<p><strong>信頼帯：</strong> 参照線の周囲に信頼帯を描画します。qqplotr "
-"パッケージでは、信頼帯を計算するために以下のようないくつかの手法が提供されて"
-"います：</p>\n"
-"<ul>\n"
-"<li><strong><em>点別</em></strong> は、正規分布の信頼区間に基づいて点別の信頼"
-"帯を構築します。</li>\n"
-"<li><strong><em>ブートストラップ</em></strong> は、パラメトリック・"
-"ブートストラップに基づいて点別の信頼帯を作成します。</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> 帯は、コルモゴロフ・"
-"スミルノフ検定に基づいています。</li>\n"
-"<li><strong><em>Tail-Sensitive</em></strong> は、裾の重さに感度を持たせた信頼"
-"帯を構築しますが、正規 Q-Q プロットに対してのみ実装されています。</li>\n"
-"<li><strong><em>等局所水準</em></strong> は、等局所水準を用いて同時信頼帯を構"
-"築します。</li>\n"
-"</ul>\n"
-"<p>P-P プロットは「等局所水準」と「ブートストラップ」の手法のみをサポートして"
-"います。</p>\n"
-"<p><strong>トレンド除去プロット：</strong> 各オブジェクトは、参照線に基づい"
-"て <em>トレンド除去</em> されます。この手順は、点から参照線までの直交距離によ"
-"って生じる視覚的なバイアスを軽減するのに役立ちます。</p>\n"
-"<p><strong>パラメタ値：</strong> 分布のパラメタは、以下の方法でデータから推定"
-"できます：</p>\n"
-"<ul>\n"
-"<li><strong>最尤法</strong>（MASS パッケージを使用）： 「t分布」と「一様分布"
-"」を除くすべての分布で機能します。</li>\n"
-"<li><strong>モーメント法 </strong> (モーメントに基づくパラメーター用): 「正規"
-"分布」、「対数正規分布」、「ベータ分布」、「指数分布」、「ガンマ分布」、「"
-"ロジスティック分布」、「一様分布」で機能します。</li>\n"
-"</ul>\n"
-"<p>または、ユーザーが入力することも可能です：</p>\n"
-"<ul>\n"
-"<li><strong>パラメーター 1：</strong> 平均（正規分布）、対数平均（対数正規分"
-"布）、形状1 (ベータ分布)、位置（コーシー分布、ロジスティック分布）、自由度（"
-"カイ2乗、スチューデント）、自由度1（F分布）、レート（指数分布）、形状（ガンマ"
-"分布、ワイブル分布）、最小値（一様分布）。</li>\n"
-"<li><strong>パラメーター 2：</strong> 標準偏差（正規分布）、対数標準偏差（対"
-"数正規分布）、形状2 (ベータ分布)、スケール （コーシー分布、ロジスティック分布"
-"）、自由度2（F分布）、レート （ガンマ分布、ワイブル分布）、最大値（一様分布）"
-"。</li>\n"
-"</ul>\n"
-"</p>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -584,6 +521,10 @@ msgstr "1週間"
 #: linechart/options/dateBreak/1year.title
 msgid "1 year"
 msgstr "1年"
+
+#: boxplot/options/whiskers/tukey.title
+msgid "1.5 × IQR (Tukey)"
+msgstr ""
 
 #: areachart/options/dateBreak/10year.title
 #: linechart/options/dateBreak/10year.title
@@ -654,6 +595,10 @@ msgstr "2035-10-20"
 #: linechart/options/dateBreak/25year.title
 msgid "25 years"
 msgstr "25年"
+
+#: boxplot/options/whiskers/tukey3.title
+msgid "3 × IQR"
+msgstr ""
 
 #: areachart/options/dateBreak/3month.title
 #: linechart/options/dateBreak/3month.title
@@ -804,6 +749,10 @@ msgstr "アルファ"
 msgid "Always show group legend"
 msgstr "つねにグループの凡例を表示"
 
+#: piechart/options/alwaysShowLegend.title
+msgid "Always show legend"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "Apr"
@@ -827,9 +776,12 @@ msgid "Arrows"
 msgstr "矢印"
 
 #: likertplot/options/sorting/ascending.title
-#: likertplot/ui[1][1][0]/sorting_ascending.label
 msgid "Ascending"
 msgstr "昇順"
+
+#: R/qqplot.b.R
+msgid "At least two observations are required."
+msgstr ""
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -882,7 +834,7 @@ msgstr "自動"
 #: barplot/ui[5].label
 #: boxplot/ui[4].label
 #: histogram/ui[5].label
-#: likertplot/ui[6].label
+#: likertplot/ui[7].label
 #: linechart/ui[2].label
 #: lollipop/ui[5].label
 #: mosaic/ui[5].label
@@ -918,7 +870,7 @@ msgstr "棒グラフ"
 #: barchart/options/barType.title
 #: barchart/ui[1][1][0].label
 #: barplot/options/barType.title
-#: barplot/ui[1][1][0].label
+#: barplot/ui[1][2][0].label
 #: mrcrosstabs/options/bartype.title
 #: mrcrosstabs/ui[2][0][1][0].label
 msgid "Bar Type"
@@ -991,6 +943,8 @@ msgstr "バイプロットの種類"
 
 #: barchart/options/borderColor/black.title
 #: barchart/options/textColor/black.title
+#: barchart/options/pointColor/black.title
+#: barchart/options/errorBarColor/black.title
 #: barplot/options/borderColor/black.title
 #: barplot/options/textColor/black.title
 #: corresp/options/supColor/black.title
@@ -1330,18 +1284,20 @@ msgid "BY"
 msgstr "処理"
 
 #: likertplot/options/groupBy/group.title
-#: likertplot/ui[4][0][1][0]/groupBy_group.label
 msgid "By group"
 msgstr "グループごと"
 
 #: likertplot/options/groupBy/variable.title
-#: likertplot/ui[4][0][1][0]/groupBy_variable.label
 msgid "By variable"
 msgstr "変数ごと"
 
 #: R/likertplot.b.R
 msgid "Cannot convert text variables to integers"
 msgstr "文字変数を整数に変換できません"
+
+#: R/likertplot.b.R
+msgid "Cannot tidy up levels: the same label is used for different values."
+msgstr ""
 
 #: R/likertplot.b.R
 msgid "Cannot tidy up text variables"
@@ -1352,7 +1308,7 @@ msgstr "テキスト変数は整形できません"
 #: barplot/ui[7][2].label
 #: boxplot/ui[6][2].label
 #: histogram/ui[7][2].label
-#: likertplot/ui[8][2].label
+#: likertplot/ui[9][2].label
 #: linechart/ui[4][2].label
 #: lollipop/ui[7][2].label
 #: mosaic/ui[7][2].label
@@ -1570,7 +1526,6 @@ msgid "Center"
 msgstr "中央"
 
 #: likertplot/options/type/centered.title
-#: likertplot/ui[4][0][0][0]/type_centered.label
 msgid "Centered"
 msgstr "中央揃え"
 
@@ -1578,6 +1533,10 @@ msgstr "中央揃え"
 #: qqplot/options/distrib/chisq.title
 msgid "Chi-squared"
 msgstr "カイ2乗"
+
+#: barchart/options/pointShape/circle.title
+msgid "Circle"
+msgstr ""
 
 #: piechart/options/clockwise.title
 msgid "Clockwise"
@@ -1641,7 +1600,6 @@ msgstr "配色 & オプション"
 #: barchart/options/facetBy/column.title
 #: barchart/ui[5][0][0][0][0]/facetBy_column.label
 #: barplot/options/facetBy/column.title
-#: barplot/ui[4][0][0][0]/facetBy_column.label
 #: boxplot/options/facetBy/column.title
 #: boxplot/ui[3][0][0][0]/facetBy_column.label
 #: corresp/options/colColor.title
@@ -1652,7 +1610,6 @@ msgstr "配色 & オプション"
 #: mosaic/options/facetBy/column.title
 #: mosaic/ui[4][0][0][0][0]/facetBy_column.label
 #: piechart/options/facetBy/column.title
-#: piechart/ui[4][0][0][0]/facetBy_column.label
 #: scatterplot/options/facetBy/column.title
 #: scatterplot/ui[3][0][0][0][0]/facetBy_column.label
 msgid "Column"
@@ -1750,7 +1707,6 @@ msgid "Connect ordinal categories"
 msgstr "順序カテゴリーを接続"
 
 #: likertplot/options/postHoc/conover.title
-#: likertplot/ui[3][0][1][0]/postHoc_conover.label
 msgid "Conover"
 msgstr "コノバー"
 
@@ -1814,19 +1770,12 @@ msgstr "コサイン2乗"
 #: R/histogram.b.R
 #: R/mrcrosstabs.b.R
 #: barplot/options/yaxis/count.title
-#: barplot/ui[1][0][0]/yaxis_count.label
 #: histogram/options/histtype/count.title
 #: histogram/ui[1][0][0]/histtype_count.label
 #: mosaic/options/labelType/count.title
 #: piechart/options/labels/count.title
 msgid "Count"
 msgstr "度数"
-
-#: barplot/options/showLabels.title
-#: mrcrosstabs/options/showLabels.title
-#: mrfrequencies/options/showLabels.title
-msgid "Count labels"
-msgstr "度数ラベル"
 
 #: mrcrosstabs/options/endorsed.title
 #: mrfrequencies/options/endorsed.title
@@ -1839,12 +1788,13 @@ msgid "Counted value string may not be empty."
 msgstr "集計値の文字列を空にすることはできません。"
 
 #: R/mrfrequencies.b.R
+#: barplot/results/frequencies.columns.title
 #: likertplot/options/frequencies/counts.title
-#: likertplot/ui[2][0][1][0]/frequencies_counts.label
 #: mrcrosstabs/options/computedValues/count.title
 #: mrfrequencies/options/showCounts.title
 #: mrfrequencies/options/yaxis/counts.title
 #: mrfrequencies/results/responses.columns.title
+#: piechart/results/frequencies.columns.title
 msgid "Counts"
 msgstr "度数"
 
@@ -1859,28 +1809,21 @@ msgstr "度数"
 msgid "Counts (optional)"
 msgstr "度数（任意）"
 
-#: R/barplot.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not all be zero."
 msgstr "0でない度数を含む必要があります。"
 
-#: R/barplot.b.R
 #: R/corresp.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not be infinite."
 msgstr "度数は有限でなくてはなりません。"
 
-#: R/barplot.b.R
 #: R/corresp.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not be negative."
 msgstr "度数は正の値でなければなりません。"
 
-#: R/barplot.b.R
-#: R/mosaic.b.R
+#: R/utilsData.R
 msgid "Counts may not contain missing values."
 msgstr "度数に欠損値を含めることはできません。"
 
@@ -1920,8 +1863,10 @@ msgid "Crosstab (% of responses)"
 msgstr "クロス集計（回答%）"
 
 #: R/multcorresp.b.R
+#: barplot/results/frequencies.columns.title
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
+#: piechart/results/frequencies.columns.title
 #: principal/results/summaryTable.columns.title
 msgid "Cumulative %"
 msgstr "累積％"
@@ -1982,7 +1927,6 @@ msgstr "表示桁数"
 #: barchart/options/order/decreasing.title
 #: barchart/ui[1][2][0]/order_decreasing.label
 #: barplot/options/order/decreasing.title
-#: barplot/ui[1][2][0]/order_decreasing.label
 #: boxplot/options/order/decreasing.title
 #: boxplot/ui[1][1][0]/order_decreasing.label
 #: lollipop/options/order/decreasing.title
@@ -1993,6 +1937,7 @@ msgstr "表示桁数"
 #: mrcrosstabs/ui[1][2][0]/order_decreasing.label
 #: mrfrequencies/options/order/decreasing.title
 #: mrfrequencies/ui[1][1][0]/order_decreasing.label
+#: piechart/options/order/decreasing.title
 msgid "Decreasing"
 msgstr "降順"
 
@@ -2046,7 +1991,6 @@ msgid "Density opacity"
 msgstr "密度不透明度"
 
 #: likertplot/options/sorting/descending.title
-#: likertplot/ui[1][1][0]/sorting_descending.label
 msgid "Descending"
 msgstr "降順"
 
@@ -2153,7 +2097,6 @@ msgid "Draw staples"
 msgstr "ステープルを描画"
 
 #: likertplot/options/postHoc/dscf.title
-#: likertplot/ui[3][0][1][0]/postHoc_dscf.label
 msgid "DSCF"
 msgstr "DSCF"
 
@@ -2167,7 +2110,6 @@ msgid "Dummy Variables"
 msgstr "ダミー変数"
 
 #: likertplot/options/postHoc/dunn.title
-#: likertplot/ui[3][0][1][0]/postHoc_dunn.label
 msgid "Dunn"
 msgstr "ダン"
 
@@ -2201,6 +2143,10 @@ msgstr "等局所レベル"
 msgid "Equamax"
 msgstr "エカマックス"
 
+#: barchart/options/errorBarColor.title
+msgid "Error bar"
+msgstr ""
+
 #: package/analyses/barchart.title
 #: package/analyses/barchart.menuTitle
 #: barchart/options.title
@@ -2214,10 +2160,13 @@ msgid "Error Bar Size"
 msgstr "誤差線のサイズ"
 
 #: barchart/options/errorBars.title
-#: barchart/ui[3].label
 #: barchart/ui[3][0][0].label
 msgid "Error Bars"
 msgstr "誤差線"
+
+#: barchart/ui[3].label
+msgid "Error Bars & Observations"
+msgstr ""
 
 #: qqplot/options/paramMethod/paraEstimate.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimate.label
@@ -2432,11 +2381,15 @@ msgstr "度数"
 msgid "Frequency Plot"
 msgstr "度数プロット"
 
+#: barplot/results/frequencies.title
 #: likertplot/results/frequencies.title
+#: piechart/results/frequencies.title
 msgid "Frequency Table"
 msgstr "度数分布表"
 
+#: barplot/options/frequencyTable.title
 #: likertplot/options/frequencyTable.title
+#: piechart/options/frequencyTable.title
 msgid "Frequency table"
 msgstr "度数分布表"
 
@@ -2576,6 +2529,8 @@ msgid "Ggsci:NPG"
 msgstr "Ggsci：NPG"
 
 #: barchart/options/borderColor/gray.title
+#: barchart/options/pointColor/gray.title
+#: barchart/options/errorBarColor/gray.title
 #: barplot/options/borderColor/gray.title
 #: corresp/options/supColor/darkgray.title
 #: histogram/options/fillColor/#999999.title
@@ -2684,6 +2639,33 @@ msgstr "グレー"
 msgid "Greys"
 msgstr "グレー系"
 
+#: areachart/options/xGridLines.title
+#: areachart/options/yGridLines.title
+#: barchart/options/xGridLines.title
+#: barchart/options/yGridLines.title
+#: barplot/options/xGridLines.title
+#: barplot/options/yGridLines.title
+#: boxplot/options/xGridLines.title
+#: boxplot/options/yGridLines.title
+#: histogram/options/xGridLines.title
+#: histogram/options/yGridLines.title
+#: linechart/options/xGridLines.title
+#: linechart/options/yGridLines.title
+#: lollipop/options/xGridLines.title
+#: lollipop/options/yGridLines.title
+#: mrcrosstabs/options/xGridLines.title
+#: mrcrosstabs/options/yGridLines.title
+#: mrfrequencies/options/xGridLines.title
+#: mrfrequencies/options/yGridLines.title
+#: qqplot/options/xGridLines.title
+#: qqplot/options/yGridLines.title
+#: raincloud/options/xGridLines.title
+#: raincloud/options/yGridLines.title
+#: scatterplot/options/xGridLines.title
+#: scatterplot/options/yGridLines.title
+msgid "Grid lines"
+msgstr ""
+
 #: areachart/options/group.title
 #: areachart/ui/mode/oneVariable[0][0][2].label
 #: barchart/options/group.title
@@ -2695,7 +2677,6 @@ msgstr "グレー系"
 #: histogram/options/group.title
 #: histogram/ui[0][1].label
 #: likertplot/options/groupSize.title
-#: likertplot/ui[4][0][1][0].label
 #: linechart/options/group.title
 #: linechart/ui[0][2].label
 #: lollipop/options/group.title
@@ -2728,7 +2709,16 @@ msgstr "グループ + 度数"
 msgid "Group + Percent"
 msgstr "グループ + パーセント"
 
+#: likertplot/results/comp/pwTable.columns.title
+msgid "Group 1"
+msgstr ""
+
+#: likertplot/results/comp/pwTable.columns.title
+msgid "Group 2"
+msgstr ""
+
 #: likertplot/options/groupBy.title
+#: likertplot/ui[1][1][0].label
 msgid "Group By"
 msgstr "グループ化の基準"
 
@@ -2765,7 +2755,6 @@ msgid "Grouping Variable"
 msgstr "グループ変数"
 
 #: likertplot/options/pValue/group.title
-#: likertplot/ui[3][0][2][0]/pValue_group.label
 msgid "Groupwise"
 msgstr "グループ単位"
 
@@ -2778,13 +2767,46 @@ msgstr "グループ単位"
 msgid "hidden"
 msgstr "非表示"
 
+#: barplot/options/hideLabelsBelow.title
 #: likertplot/options/hideLabelsBelow.title
-msgid "Hide % labels below 5%"
-msgstr "5%未満の％ラベルを非表示"
+#: mrcrosstabs/options/hideLabelsBelow.title
+msgid "Hide % below 5%"
+msgstr ""
 
 #: mosaic/options/hideAxes.title
 msgid "Hide axes"
 msgstr "軸を隠す"
+
+#: areachart/options/xHideAxis.title
+#: areachart/options/yHideAxis.title
+#: barchart/options/xHideAxis.title
+#: barchart/options/yHideAxis.title
+#: barplot/options/xHideAxis.title
+#: barplot/options/yHideAxis.title
+#: boxplot/options/xHideAxis.title
+#: boxplot/options/yHideAxis.title
+#: histogram/options/xHideAxis.title
+#: histogram/options/yHideAxis.title
+#: linechart/options/xHideAxis.title
+#: linechart/options/yHideAxis.title
+#: lollipop/options/xHideAxis.title
+#: lollipop/options/yHideAxis.title
+#: mrcrosstabs/options/xHideAxis.title
+#: mrcrosstabs/options/yHideAxis.title
+#: mrfrequencies/options/xHideAxis.title
+#: mrfrequencies/options/yHideAxis.title
+#: qqplot/options/xHideAxis.title
+#: qqplot/options/yHideAxis.title
+#: raincloud/options/xHideAxis.title
+#: raincloud/options/yHideAxis.title
+#: scatterplot/options/xHideAxis.title
+#: scatterplot/options/yHideAxis.title
+msgid "Hide axis"
+msgstr ""
+
+#: piechart/options/hideLabelsBelow.title
+msgid "Hide labels below 5%"
+msgstr ""
 
 #: package/analyses/histogram.title
 #: package/analyses/histogram.menuTitle
@@ -2832,17 +2854,19 @@ msgstr "水平プロット"
 msgid "Identity line"
 msgstr "同一線"
 
+#: areachart/options/ignoreNA.title
 #: barchart/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
 #: likertplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
 #: raincloud/options/ignoreNA.title
+#: scatterplot/options/ignoreNA.title
 msgid "Ignore missing groups"
 msgstr "欠損グループを無視"
 
-#: areachart/options/ignoreNA.title
 #: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
 #: mosaic/options/ignoreNA.title
+#: piechart/options/ignoreNA.title
 msgid "Ignore missing values"
 msgstr "欠損値を無視"
 
@@ -2853,7 +2877,6 @@ msgstr "ラベル表示の改善"
 #: barchart/options/order/increasing.title
 #: barchart/ui[1][2][0]/order_increasing.label
 #: barplot/options/order/increasing.title
-#: barplot/ui[1][2][0]/order_increasing.label
 #: boxplot/options/order/increasing.title
 #: boxplot/ui[1][1][0]/order_increasing.label
 #: lollipop/options/order/increasing.title
@@ -2864,6 +2887,7 @@ msgstr "ラベル表示の改善"
 #: mrcrosstabs/ui[1][2][0]/order_increasing.label
 #: mrfrequencies/options/order/increasing.title
 #: mrfrequencies/ui[1][1][0]/order_increasing.label
+#: piechart/options/order/increasing.title
 msgid "Increasing"
 msgstr "昇順"
 
@@ -3100,7 +3124,6 @@ msgstr "クラスカル・ウォリス検定"
 #: piechart/options/labType/label.title
 #: piechart/options/labSize.title
 #: piechart/options/textColor.title
-#: piechart/ui[2][0][0][0]/labType_label.label
 #: principal/options/labelVar.title
 #: principal/ui[1][1].label
 #: scatterplot/options/labelVar.title
@@ -3193,7 +3216,7 @@ msgstr "ラベル位置"
 msgid "Label rotation"
 msgstr "ラベル回転"
 
-#: likertplot/ui[4][2][0][0].label
+#: likertplot/ui[4][1][1][0].label
 msgid "Label Size"
 msgstr "ラベル サイズ"
 
@@ -3202,8 +3225,9 @@ msgstr "ラベル サイズ"
 msgid "Label Type"
 msgstr "ラベルタイプ"
 
+#: likertplot/ui[5].label
 #: piechart/options/labels.title
-#: piechart/ui[1][1][0].label
+#: piechart/ui[1][3][0].label
 #: piechart/ui[2].label
 #: principal/options/labelColor.title
 msgid "Labels"
@@ -3310,7 +3334,7 @@ msgstr "左"
 #: barplot/ui[6][0].label
 #: boxplot/ui[5][0].label
 #: histogram/ui[6][0].label
-#: likertplot/ui[7][0].label
+#: likertplot/ui[8][0].label
 #: linechart/ui[3][0].label
 #: mosaic/options/showOpacityLegend.title
 #: mosaic/ui[6][0].label
@@ -3342,7 +3366,7 @@ msgstr "凡例"
 msgid "Legend & Axis Titles"
 msgstr "凡例 & 軸タイトル"
 
-#: likertplot/ui[7].label
+#: likertplot/ui[8].label
 msgid "Legend Title"
 msgstr "凡例タイトル"
 
@@ -3725,7 +3749,6 @@ msgid "Method: {method}"
 msgstr "方法：{method}"
 
 #: barplot/options/labelPosition/middle.title
-#: barplot/ui[2][0][1][0]/labelPosition_middle.label
 #: mrcrosstabs/options/labelPosition/middle.title
 #: mrcrosstabs/ui[2][0][0][1]/labelPosition_middle.label
 #: mrfrequencies/options/labelPosition/middle.title
@@ -3769,6 +3792,10 @@ msgstr "最小値"
 msgid "Min / Max"
 msgstr "最小値／最大値"
 
+#: boxplot/options/whiskers/minmax.title
+msgid "Min–max"
+msgstr ""
+
 #: principal/options/rotation/entropy.title
 msgid "Minimum entropy"
 msgstr "最小エントロピー"
@@ -3777,6 +3804,10 @@ msgstr "最小エントロピー"
 #: R/lollipop.b.R
 msgid "Minimum of {var}"
 msgstr "{var} の最小値"
+
+#: R/utilsData.R
+msgid "Missing values: {n}"
+msgstr ""
 
 #: package/analyses/mosaic.title
 #: package/analyses/mosaic.menuTitle
@@ -3861,15 +3892,12 @@ msgstr "回転されていません。"
 #: barchart/ui[1][2][0]/order_none.label
 #: barplot/options/order/none.title
 #: barplot/options/borderColor/none.title
-#: barplot/ui[1][2][0]/order_none.label
 #: boxplot/options/order/none.title
 #: boxplot/ui[1][1][0]/order_none.label
 #: histogram/options/fillColor/none.title
 #: histogram/options/borderColor/none.title
 #: likertplot/options/sorting/none.title
 #: likertplot/options/pValue/none.title
-#: likertplot/ui[1][1][0]/sorting_none.label
-#: likertplot/ui[3][0][2][0]/pValue_none.label
 #: lollipop/options/order/none.title
 #: lollipop/ui[2][1][0]/order_none.label
 #: mosaic/options/yAxis/none.title
@@ -3882,6 +3910,7 @@ msgstr "回転されていません。"
 #: mrfrequencies/options/order/none.title
 #: mrfrequencies/options/borderColor/none.title
 #: mrfrequencies/ui[1][1][0]/order_none.label
+#: piechart/options/order/none.title
 #: piechart/options/labels/none.title
 #: piechart/options/borderColor/none.title
 #: principal/options/rotation/none.title
@@ -4065,6 +4094,7 @@ msgstr "観測値の要約"
 msgid "Observation Table"
 msgstr "観測データ表"
 
+#: barchart/ui[3][1][1].label
 #: multcorresp/options/showObservations.title
 #: multcorresp/options/showObservationPlot.title
 #: principal/options/showObservations.title
@@ -4124,6 +4154,10 @@ msgstr "のみ"
 msgid "Opacity"
 msgstr "不透明度"
 
+#: barchart/options/pointShape/opencircle.title
+msgid "Open circle"
+msgstr ""
+
 #: mrcrosstabs/options/optionname.title
 #: mrfrequencies/options/optionname.title
 msgid "Option name"
@@ -4138,12 +4172,14 @@ msgstr "オプション名"
 msgid "Option Variables"
 msgstr "オプション変数"
 
+#: barplot/ui[1][0][0].label
 #: histogram/ui[2].label
-#: likertplot/ui[4][1][1][0].label
+#: likertplot/ui[4][1][0][0].label
 #: mrcrosstabs/options/optionname.default
 #: mrcrosstabs/results/crosstab.columns.title
 #: mrfrequencies/options/optionname.default
 #: mrfrequencies/results/responses.columns.title
+#: piechart/ui[1][0][0].label
 msgid "Options"
 msgstr "オプション"
 
@@ -4227,7 +4263,6 @@ msgstr "外れ値"
 
 #: R/mrcrosstabs.b.R
 #: likertplot/options/pValue/overall.title
-#: likertplot/ui[3][0][2][0]/pValue_overall.label
 msgid "Overall"
 msgstr "全体"
 
@@ -4401,7 +4436,6 @@ msgstr "Pearson残差"
 
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
-#: barplot/ui[1][0][0]/yaxis_percent.label
 #: mosaic/options/yAxis/percent.title
 #: mosaic/options/labelType/percent.title
 #: piechart/options/labels/percent.title
@@ -4409,7 +4443,6 @@ msgid "Percent"
 msgstr "パーセント"
 
 #: likertplot/options/frequencies/percentages.title
-#: likertplot/ui[2][0][1][0]/frequencies_percentages.label
 msgid "Percentages"
 msgstr "パーセンテージ"
 
@@ -4461,7 +4494,7 @@ msgstr "ピンクと緑"
 msgid "Plot"
 msgstr "プロット"
 
-#: likertplot/ui[4][2][1][0].label
+#: likertplot/ui[6][0][1][0].label
 #: multcorresp/ui[7][0][0][0].label
 msgid "Plot Color"
 msgstr "プロットの色"
@@ -4487,7 +4520,7 @@ msgstr "プロット枠"
 #: mrfrequencies/ui[2].label
 #: mrfrequencies/ui[2][0][0][0].label
 #: multcorresp/ui[7].label
-#: piechart/ui[1][0][0].label
+#: piechart/ui[1][1][0].label
 #: qqplot/ui[2][1][0].label
 #: raincloud/ui[1][0][0].label
 #: scatterplot/ui[1][0][0].label
@@ -4499,7 +4532,7 @@ msgstr "プロットオプション"
 #: barplot/ui[7].label
 #: boxplot/ui[6].label
 #: histogram/ui[7].label
-#: likertplot/ui[8].label
+#: likertplot/ui[9].label
 #: linechart/ui[4].label
 #: lollipop/ui[7].label
 #: mosaic/ui[7].label
@@ -4531,6 +4564,7 @@ msgstr "プロットの種類"
 msgid "Plots"
 msgstr "プロット"
 
+#: barchart/options/pointColor.title
 #: scatterplot/options/pointSize.title
 msgid "Point"
 msgstr "点"
@@ -4781,12 +4815,6 @@ msgstr "品質"
 msgid "Quartimax"
 msgstr "クォーティマックス"
 
-#: likertplot/results/frequencies.columns.title
-#: likertplot/results/comp/uTestTable.columns.title
-#: likertplot/results/comp/kwTable.columns.title
-msgid "Questions"
-msgstr "質問"
-
 #: package/analyses/raincloud.title
 #: package/analyses/raincloud.menuTitle
 #: raincloud/options.title
@@ -4823,6 +4851,8 @@ msgid "Range"
 msgstr "範囲"
 
 #: barchart/options/textColor/red.title
+#: barchart/options/pointColor/red.title
+#: barchart/options/errorBarColor/red.title
 #: corresp/options/rowColor/red.title
 #: corresp/options/colColor/red.title
 #: histogram/options/fillColor/#E41A1C.title
@@ -4971,9 +5001,12 @@ msgstr "回帰線"
 msgid "Reverse disposition"
 msgstr "配置を逆にする"
 
+#: likertplot/options/reverseLikert.title
+msgid "Reverse level order"
+msgstr ""
+
 #: barchart/options/reverseStack.title
 #: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
 #: mosaic/options/reverseStack.title
 #: mrcrosstabs/options/reverseStack.title
 msgid "Reverse stacking order"
@@ -5088,7 +5121,6 @@ msgstr "回転"
 #: barchart/options/facetBy/row.title
 #: barchart/ui[5][0][0][0][0]/facetBy_row.label
 #: barplot/options/facetBy/row.title
-#: barplot/ui[4][0][0][0]/facetBy_row.label
 #: boxplot/options/facetBy/row.title
 #: boxplot/ui[3][0][0][0]/facetBy_row.label
 #: corresp/options/rowColor.title
@@ -5099,7 +5131,6 @@ msgstr "回転"
 #: mosaic/options/facetBy/row.title
 #: mosaic/ui[4][0][0][0][0]/facetBy_row.label
 #: piechart/options/facetBy/row.title
-#: piechart/ui[4][0][0][0]/facetBy_row.label
 #: scatterplot/options/facetBy/row.title
 #: scatterplot/ui[3][0][0][0][0]/facetBy_row.label
 msgid "Row"
@@ -5303,6 +5334,10 @@ msgstr "セット3"
 msgid "Several variables"
 msgstr "複数の変数"
 
+#: barchart/options/pointShape.title
+msgid "Shape"
+msgstr ""
+
 #: scatterplot/options/groupShapes.title
 msgid "Shape by group"
 msgstr "グループ別形状"
@@ -5336,6 +5371,10 @@ msgstr "線を表示"
 msgid "Show normal curve"
 msgstr "正規分布曲線を表示"
 
+#: barchart/options/showPoints.title
+msgid "Show observations"
+msgstr ""
+
 #: linechart/options/showPoint.title
 msgid "Show points"
 msgstr "点を表示"
@@ -5359,6 +5398,7 @@ msgstr "特異値"
 #: areachart/options/legendFontSize.title
 #: areachart/options/xAxisFontSize.title
 #: areachart/options/yAxisFontSize.title
+#: barchart/options/pointSize.title
 #: barchart/options/facetFontSize.title
 #: barchart/options/legendFontSize.title
 #: barchart/options/xAxisFontSize.title
@@ -5439,20 +5479,22 @@ msgid "Some values are missing from the contingency table."
 msgstr "分割表に欠けている値があります。"
 
 #: likertplot/options/sorting.title
-#: likertplot/ui[1][1][0].label
-msgid "Sort Variables by Median"
-msgstr "変数を中央値で並び替え"
+#: likertplot/ui[4][0][1][0].label
+msgid "Sort Variables"
+msgstr ""
 
 #: barchart/options/order.title
 #: barchart/ui[1][2][0].label
 #: barplot/options/order.title
-#: barplot/ui[1][2][0].label
+#: barplot/ui[1][3][0].label
 #: lollipop/options/order.title
 #: lollipop/ui[2][1][0].label
 #: mrcrosstabs/options/order.title
 #: mrcrosstabs/ui[1][2][0].label
 #: mrfrequencies/options/order.title
 #: mrfrequencies/ui[1][1][0].label
+#: piechart/options/order.title
+#: piechart/ui[1][2][0].label
 msgid "Sorting"
 msgstr "並び替え"
 
@@ -5480,6 +5522,10 @@ msgstr "並び替え（中央値順）"
 msgid "Spectral"
 msgstr "スペクトル"
 
+#: barchart/options/pointShape/square.title
+msgid "Square"
+msgstr ""
+
 #: principal/results/summaryTable.columns.title
 msgid "SS Loadings"
 msgstr "負荷量2乗和"
@@ -5490,7 +5536,6 @@ msgstr "負荷量2乗和"
 #: histogram/options/groupingN/stack.title
 #: histogram/ui[1][2][0]/groupingN_stack.label
 #: likertplot/options/type/stacked.title
-#: likertplot/ui[4][0][0][0]/type_stacked.label
 #: mrcrosstabs/options/bartype/stack.title
 msgid "Stacked"
 msgstr "積み上げ"
@@ -5587,7 +5632,7 @@ msgstr "スタイル"
 #: barplot/ui[7][1].label
 #: boxplot/ui[6][1].label
 #: histogram/ui[7][1].label
-#: likertplot/ui[8][1].label
+#: likertplot/ui[9][1].label
 #: linechart/ui[4][1].label
 #: lollipop/ui[7][1].label
 #: mosaic/ui[7][1].label
@@ -5711,15 +5756,13 @@ msgstr "検定"
 
 #: mrcrosstabs/options/textColor.title
 #: piechart/options/labType/text.title
-#: piechart/ui[2][0][0][0]/labType_text.label
 msgid "Text"
 msgstr "文字"
 
 #: barplot/ui[2][0][1][1].label
 #: boxplot/ui[2][0][0][1].label
 #: corresp/ui[6][0][0][0].label
-#: likertplot/ui[5].label
-#: likertplot/ui[5][0][0][0].label
+#: likertplot/ui[6][0][0][0].label
 #: mrcrosstabs/ui[2][0][2][1].label
 #: mrfrequencies/ui[2][0][0][1].label
 #: multcorresp/ui[7][0][0][1].label
@@ -5733,6 +5776,7 @@ msgid "Text size"
 msgstr "文字サイズ"
 
 #: corresp/ui[6].label
+#: likertplot/ui[6].label
 msgid "Text Size & Colors"
 msgstr "文字サイズと色"
 
@@ -5989,7 +6033,7 @@ msgstr "時系列"
 #: barplot/ui[7][0].label
 #: boxplot/ui[6][0].label
 #: histogram/ui[7][0].label
-#: likertplot/ui[8][0].label
+#: likertplot/ui[9][0].label
 #: linechart/ui[4][0].label
 #: lollipop/ui[7][0].label
 #: mosaic/ui[7][0].label
@@ -6021,7 +6065,6 @@ msgstr "タイトル"
 #: barplot/options/labelPosition/top.title
 #: barplot/options/legendPosition/top.title
 #: barplot/options/yAxisPosition/1.title
-#: barplot/ui[2][0][1][0]/labelPosition_top.label
 #: boxplot/options/legendPosition/top.title
 #: boxplot/options/yAxisPosition/1.title
 #: corresp/options/yAxisPosition/1.title
@@ -6054,7 +6097,10 @@ msgstr "タイトル"
 msgid "Top"
 msgstr "上"
 
+#: R/mrcrosstabs.b.R
+#: R/mrfrequencies.b.R
 #: R/multcorresp.b.R
+#: R/utilsData.R
 #: mrfrequencies/options/showTotal.title
 msgid "Total"
 msgstr "合計"
@@ -6151,6 +6197,12 @@ msgstr "変数の説明を名前に使用"
 msgid "Value Labels"
 msgstr "値ラベル"
 
+#: barplot/options/showLabels.title
+#: mrcrosstabs/options/showLabels.title
+#: mrfrequencies/options/showLabels.title
+msgid "Value labels"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 #: lollipop/options/yaxis/identity.title
@@ -6208,6 +6260,9 @@ msgstr "変数プロット"
 #: areachart/ui/mode/severalVariables[0][0][1].label
 #: boxplot/options/vars.title
 #: boxplot/ui[0][0].label
+#: likertplot/results/frequencies.columns.title
+#: likertplot/results/comp/uTestTable.columns.title
+#: likertplot/results/comp/kwTable.columns.title
 #: linechart/options/vars.title
 #: linechart/ui[0][1].label
 #: multcorresp/options/vars.title
@@ -6366,6 +6421,10 @@ msgstr "Viridis：基本"
 msgid "Weibull"
 msgstr "ワイブル"
 
+#: boxplot/options/whiskers.title
+msgid "Whiskers"
+msgstr ""
+
 #: barchart/options/borderColor/white.title
 #: barchart/options/textColor/white.title
 #: barplot/options/borderColor/white.title
@@ -6394,12 +6453,10 @@ msgid "Width"
 msgstr "幅"
 
 #: barplot/options/percentWithin/category.title
-#: barplot/ui[1][0][0]/yaxis_percent/percentWithin_category.label
 msgid "Within categories"
 msgstr "カテゴリ内"
 
 #: barplot/options/percentWithin/group.title
-#: barplot/ui[1][0][0]/yaxis_percent/percentWithin_gGroup.label
 msgid "Within groups"
 msgstr "グループ内"
 
@@ -6426,7 +6483,7 @@ msgstr "パラメタ値が不正です。"
 #: corresp/ui[7][0].label
 #: histogram/ui[5][0][0][0].label
 #: histogram/ui[6][1].label
-#: likertplot/ui[6][0][0][0].label
+#: likertplot/ui[7][0][0][0].label
 #: linechart/options/timeVar.title
 #: linechart/ui[0][0].label
 #: linechart/ui[1][1][0].label
@@ -6497,7 +6554,7 @@ msgstr "X軸範囲"
 #: barchart/ui[6][0][1][0].label
 #: barchart/ui[7][2].label
 #: barplot/options/yaxis.title
-#: barplot/ui[1][0][0].label
+#: barplot/ui[1][1][0].label
 #: barplot/ui[5][0][1][0].label
 #: barplot/ui[6][2].label
 #: boxplot/ui[4][0][1][0].label
@@ -6507,7 +6564,7 @@ msgstr "X軸範囲"
 #: histogram/ui[1][0][0].label
 #: histogram/ui[5][0][1][0].label
 #: histogram/ui[6][2].label
-#: likertplot/ui[6][0][1][0].label
+#: likertplot/ui[7][0][1][0].label
 #: linechart/ui[2][0][1][0].label
 #: linechart/ui[3][2].label
 #: lollipop/options/yaxis.title

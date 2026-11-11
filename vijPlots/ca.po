@@ -13,7 +13,12 @@ msgstr ""
 "X-Generator: Weblate 2026.7.dev0\n"
 
 #: R/areachart.b.R
+#: R/barchart.b.R
+#: R/barplot.b.R
 #: R/linechart.b.R
+#: R/lollipop.b.R
+#: R/mosaic.b.R
+#: R/piechart.b.R
 msgid "\"{var}\" is a reserved name. Please rename this variable."
 msgstr ""
 
@@ -27,6 +32,10 @@ msgstr ""
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "\"Tick Count\" option for the X-axis is only available for numeric variables."
+msgstr ""
+
+#: R/utils.R
+msgid "(Missing)"
 msgstr ""
 
 #: R/qqplot.b.R
@@ -90,6 +99,8 @@ msgid "# of rows/columns"
 msgstr "# de files/columnes"
 
 #: barchart/ui[3][0][0]/errorBars_ci/ciLevel.suffix
+#: barplot/results/frequencies.columns.title
+#: piechart/results/frequencies.columns.title
 #, fuzzy
 msgid "%"
 msgstr "%"
@@ -97,7 +108,7 @@ msgstr "%"
 #: barplot/options/accuracy.title
 #: barplot/ui[2][0][2][0].label
 #: likertplot/options/accuracy.title
-#: likertplot/ui[4][0][2][0].label
+#: likertplot/ui[5][0][1][0].label
 #: mrcrosstabs/options/accuracy.title
 #: mrcrosstabs/ui[2][0][2][0].label
 #: mrfrequencies/options/accuracy.title
@@ -120,7 +131,7 @@ msgstr "% per fila"
 msgid "% Inertia"
 msgstr "% Inèrcia"
 
-#: likertplot/ui[4][1][0][0].label
+#: likertplot/ui[5][0][0][0].label
 #, fuzzy
 msgid "% Labels"
 msgstr "% Etiquetes"
@@ -132,6 +143,7 @@ msgstr "% Etiquetes"
 msgid "% of Cases"
 msgstr "% de casos"
 
+#: R/mrcrosstabs.b.R
 #: mrcrosstabs/options/computedValues/cases.title
 #: mrfrequencies/options/showCases.title
 #: mrfrequencies/options/yaxis/cases.title
@@ -181,8 +193,9 @@ msgid ""
 "order in table and graph (when some variables miss some levels).</li>\n"
 "<li><strong>Convert variables to integer:</strong> when checked, the level "
 "labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
+"<li><strong>Sort Variables:</strong> orders the Likert variables by the "
+"proportion of answers in the upper half of the scale (middle level "
+"excluded).</li>\n"
 "</ul>\n"
 "<h3>Comparison Tests</h3>\n"
 "<p>When using a group variable, several tests are available:</p>\n"
@@ -193,8 +206,8 @@ msgid ""
 "Dwass-Steel-Critchlow-Fligner (DSCF) pairwise comparisons tests.</li>\n"
 "</ul>\n"
 "<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for Mann-Whitney U, Kruskal-Wallis and post hoc tests. DSCF "
+"variable) for post hoc tests or <strong>overall</strong> (groupwise and "
+"variablewise) for Mann-Whitney U, Kruskal-Wallis and post hoc tests. DSCF "
 "p-values are already adjusted (groupwise); no other adjustment is "
 "possible.</p>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
@@ -370,10 +383,9 @@ msgstr ""
 "vijPlots > Targetes de crèdit</p>"
 
 #: R/qqplot.b.R
-#, fuzzy
 msgid ""
 "<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
-"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"target=\"_blank\">qqplotr R package</a> by Alexandre Almeida, Adam Loy and "
 "Heike Hofmann. In-depth information can be found in the package "
 "documentation on CRAN site.</p>\n"
 "<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
@@ -417,58 +429,8 @@ msgid ""
 "<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
 "(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
 "(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
+"</ul>"
 msgstr ""
-"<p>Aquest mòdul utilitza el <a href = \"https://CRAN.R-project.org/"
-"package=qqplotr\" target=\"_blank\">paquet R qqplotr<a/> d'Alexandre "
-"Almeida, Adam Loy i Heike Hofmann. Es pot trobar informació detallada a la "
-"documentació del paquet al lloc de CRAN.</p>\n"
-"<p><strong>Línia de referència:</strong> Dibuixa la <em>línia d'identitat</"
-"em> (y = x) o la línia Q-Q comunament utilitzada que intercepta dos quantils "
-"de dades (Q<sub>0.25</sub> i Q<sub>0.75</sub>). El grafic P-P només admet la "
-"línia d'identitat.</p>\n"
-"<p><strong>Banda de confiança:</strong> Dibuixa una banda de confiança al "
-"voltant de la línia de referència. El paquet qqplotr proporciona diversos "
-"mètodes per calcular la banda de confiança:</p>\n"
-"<ul>\n"
-"<li><strong><em>Puntual</em></strong> construeix bandes de confiança "
-"puntuals basades en intervals de confiança normals;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> crea bandes de confiança puntuals "
-"basades en una bootstrap paramètrica;</li>\n"
-"<li><strong><em>Kolmogorov-Smirnov</em></strong> la banda es basa en la "
-"prova de Kolmogorov-Smirnov;</li>\n"
-"<li><strong><em>Sensible a la cua</em></strong> construeix bandes de "
-"confiança sensibles a la cua però només està implementada per a gràfics Q-Q "
-"normals;</li>\n"
-"<li><strong><em>Nivells locals iguals (ELL)</em></strong> construeix bandes "
-"simultànies mitjançant nivells locals iguals.</li>\n"
-"</ul>\n"
-"<p>El grafic P-P només admet els mètodes \"ELL\" i \"Bootstrap\".</p>\n"
-"<p><strong>Grafic desapuntat:</strong> Els objectes estan <em>desapuntats</"
-"em> segons la línia de referència. Aquest procediment pot ajudar a reduir "
-"les biases visuals causades per les distàncies ortogonals dels punts a la "
-"línia de referència.</p>\n"
-"<p><strong>Valors de paràmetres:</strong> Els paràmetres de distribució es "
-"poden estimar a partir de les dades mitjançant:</p>\n"
-"<ul>\n"
-"<li><strong>Mètode de màxima versemblança</strong> (mitjançant el paquet "
-"MASS): hauria de funcionar amb totes les distribucions excepte \"t\" i "
-"\"uniform\";</li>\n"
-"<li><strong>Mètode dels moments</strong> per a paràmetres basats en moments: "
-"hauria de funcionar amb les distribucions \"normal\", \"log-normal\", "
-"\"Beta\", \"Exponencial\", \"Gamma\", \"Logística\" i \"Uniform\";</li>\n"
-"</ul>\n"
-"<p>o introduïts per l'usuari:</p>\n"
-"<ul>\n"
-"<li><strong>Paràmetre 1:</strong> mitjana (Normal), mitjanalog (Log-normal), "
-"forma1 (Beta), ubicació (Cauchy, Logística), df (Chi-seguent, Estudiant), "
-"df1 (F), taxa (Exponencial), forma (Gamma, Weibull) i mínim (Uniform);</li>\n"
-"<li><strong>Paràmetre 2:</strong> desviació estàndard (normal), desviació "
-"estàndard log (Log-normal), forma2 (Beta), escala (Cauchy, Logística), df2 "
-"(F), taxa (Gamma, Weibull) i màxim (Uniform).</li>\n"
-"</ul>\n"
-"</p>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -493,6 +455,10 @@ msgstr "1 setmana"
 #, fuzzy
 msgid "1 year"
 msgstr "1 any"
+
+#: boxplot/options/whiskers/tukey.title
+msgid "1.5 × IQR (Tukey)"
+msgstr ""
 
 #: areachart/options/dateBreak/10year.title
 #: linechart/options/dateBreak/10year.title
@@ -573,6 +539,10 @@ msgstr "2035-10-20"
 #: areachart/options/dateBreak/25year.title
 #: linechart/options/dateBreak/25year.title
 msgid "25 years"
+msgstr ""
+
+#: boxplot/options/whiskers/tukey3.title
+msgid "3 × IQR"
 msgstr ""
 
 #: areachart/options/dateBreak/3month.title
@@ -737,6 +707,10 @@ msgstr "Alfa"
 msgid "Always show group legend"
 msgstr ""
 
+#: piechart/options/alwaysShowLegend.title
+msgid "Always show legend"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 #, fuzzy
@@ -764,10 +738,13 @@ msgid "Arrows"
 msgstr "Fletxes"
 
 #: likertplot/options/sorting/ascending.title
-#: likertplot/ui[1][1][0]/sorting_ascending.label
 #, fuzzy
 msgid "Ascending"
 msgstr "Ascendent"
+
+#: R/qqplot.b.R
+msgid "At least two observations are required."
+msgstr ""
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -823,7 +800,7 @@ msgstr "Automàtic"
 #: barplot/ui[5].label
 #: boxplot/ui[4].label
 #: histogram/ui[5].label
-#: likertplot/ui[6].label
+#: likertplot/ui[7].label
 #: linechart/ui[2].label
 #: lollipop/ui[5].label
 #: mosaic/ui[5].label
@@ -866,7 +843,7 @@ msgstr "Gràfic de barres"
 #: barchart/options/barType.title
 #: barchart/ui[1][1][0].label
 #: barplot/options/barType.title
-#: barplot/ui[1][1][0].label
+#: barplot/ui[1][2][0].label
 #: mrcrosstabs/options/bartype.title
 #: mrcrosstabs/ui[2][0][1][0].label
 #, fuzzy
@@ -951,6 +928,8 @@ msgstr "Tipus de biplot"
 
 #: barchart/options/borderColor/black.title
 #: barchart/options/textColor/black.title
+#: barchart/options/pointColor/black.title
+#: barchart/options/errorBarColor/black.title
 #: barplot/options/borderColor/black.title
 #: barplot/options/textColor/black.title
 #: corresp/options/supColor/black.title
@@ -1307,13 +1286,11 @@ msgid "BY"
 msgstr "Per"
 
 #: likertplot/options/groupBy/group.title
-#: likertplot/ui[4][0][1][0]/groupBy_group.label
 #, fuzzy
 msgid "By group"
 msgstr "Per grup"
 
 #: likertplot/options/groupBy/variable.title
-#: likertplot/ui[4][0][1][0]/groupBy_variable.label
 #, fuzzy
 msgid "By variable"
 msgstr "Per variable"
@@ -1322,6 +1299,10 @@ msgstr "Per variable"
 #, fuzzy
 msgid "Cannot convert text variables to integers"
 msgstr "No es pot convertir les variables de text a enters"
+
+#: R/likertplot.b.R
+msgid "Cannot tidy up levels: the same label is used for different values."
+msgstr ""
 
 #: R/likertplot.b.R
 #, fuzzy
@@ -1333,7 +1314,7 @@ msgstr "No es pot netejar les variables de text"
 #: barplot/ui[7][2].label
 #: boxplot/ui[6][2].label
 #: histogram/ui[7][2].label
-#: likertplot/ui[8][2].label
+#: likertplot/ui[9][2].label
 #: linechart/ui[4][2].label
 #: lollipop/ui[7][2].label
 #: mosaic/ui[7][2].label
@@ -1565,7 +1546,6 @@ msgid "Center"
 msgstr "Centre"
 
 #: likertplot/options/type/centered.title
-#: likertplot/ui[4][0][0][0]/type_centered.label
 #, fuzzy
 msgid "Centered"
 msgstr "Centrat"
@@ -1575,6 +1555,10 @@ msgstr "Centrat"
 #, fuzzy
 msgid "Chi-squared"
 msgstr "Quadrat de Chi"
+
+#: barchart/options/pointShape/circle.title
+msgid "Circle"
+msgstr ""
 
 #: piechart/options/clockwise.title
 msgid "Clockwise"
@@ -1643,7 +1627,6 @@ msgstr "Colors i Opcions"
 #: barchart/options/facetBy/column.title
 #: barchart/ui[5][0][0][0][0]/facetBy_column.label
 #: barplot/options/facetBy/column.title
-#: barplot/ui[4][0][0][0]/facetBy_column.label
 #: boxplot/options/facetBy/column.title
 #: boxplot/ui[3][0][0][0]/facetBy_column.label
 #: corresp/options/colColor.title
@@ -1654,7 +1637,6 @@ msgstr "Colors i Opcions"
 #: mosaic/options/facetBy/column.title
 #: mosaic/ui[4][0][0][0][0]/facetBy_column.label
 #: piechart/options/facetBy/column.title
-#: piechart/ui[4][0][0][0]/facetBy_column.label
 #: scatterplot/options/facetBy/column.title
 #: scatterplot/ui[3][0][0][0][0]/facetBy_column.label
 #, fuzzy
@@ -1770,7 +1752,6 @@ msgid "Connect ordinal categories"
 msgstr "Connectar categories ordinals"
 
 #: likertplot/options/postHoc/conover.title
-#: likertplot/ui[3][0][1][0]/postHoc_conover.label
 #, fuzzy
 msgid "Conover"
 msgstr "Conover"
@@ -1844,7 +1825,6 @@ msgstr "COS2"
 #: R/histogram.b.R
 #: R/mrcrosstabs.b.R
 #: barplot/options/yaxis/count.title
-#: barplot/ui[1][0][0]/yaxis_count.label
 #: histogram/options/histtype/count.title
 #: histogram/ui[1][0][0]/histtype_count.label
 #: mosaic/options/labelType/count.title
@@ -1852,12 +1832,6 @@ msgstr "COS2"
 #, fuzzy
 msgid "Count"
 msgstr "Comptar"
-
-#: barplot/options/showLabels.title
-#: mrcrosstabs/options/showLabels.title
-#: mrfrequencies/options/showLabels.title
-msgid "Count labels"
-msgstr ""
 
 #: mrcrosstabs/options/endorsed.title
 #: mrfrequencies/options/endorsed.title
@@ -1871,12 +1845,13 @@ msgid "Counted value string may not be empty."
 msgstr ""
 
 #: R/mrfrequencies.b.R
+#: barplot/results/frequencies.columns.title
 #: likertplot/options/frequencies/counts.title
-#: likertplot/ui[2][0][1][0]/frequencies_counts.label
 #: mrcrosstabs/options/computedValues/count.title
 #: mrfrequencies/options/showCounts.title
 #: mrfrequencies/options/yaxis/counts.title
 #: mrfrequencies/results/responses.columns.title
+#: piechart/results/frequencies.columns.title
 #, fuzzy
 msgid "Counts"
 msgstr "Comptes"
@@ -1893,28 +1868,21 @@ msgstr "Comptes"
 msgid "Counts (optional)"
 msgstr "Comptes (opcional)"
 
-#: R/barplot.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not all be zero."
 msgstr ""
 
-#: R/barplot.b.R
 #: R/corresp.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not be infinite."
 msgstr ""
 
-#: R/barplot.b.R
 #: R/corresp.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not be negative."
 msgstr ""
 
-#: R/barplot.b.R
-#: R/mosaic.b.R
+#: R/utilsData.R
 msgid "Counts may not contain missing values."
 msgstr ""
 
@@ -1962,8 +1930,10 @@ msgid "Crosstab (% of responses)"
 msgstr "Taula creuada (% de respostes)"
 
 #: R/multcorresp.b.R
+#: barplot/results/frequencies.columns.title
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
+#: piechart/results/frequencies.columns.title
 #: principal/results/summaryTable.columns.title
 #, fuzzy
 msgid "Cumulative %"
@@ -2034,7 +2004,6 @@ msgstr "Precisió decimal"
 #: barchart/options/order/decreasing.title
 #: barchart/ui[1][2][0]/order_decreasing.label
 #: barplot/options/order/decreasing.title
-#: barplot/ui[1][2][0]/order_decreasing.label
 #: boxplot/options/order/decreasing.title
 #: boxplot/ui[1][1][0]/order_decreasing.label
 #: lollipop/options/order/decreasing.title
@@ -2045,6 +2014,7 @@ msgstr "Precisió decimal"
 #: mrcrosstabs/ui[1][2][0]/order_decreasing.label
 #: mrfrequencies/options/order/decreasing.title
 #: mrfrequencies/ui[1][1][0]/order_decreasing.label
+#: piechart/options/order/decreasing.title
 #, fuzzy
 msgid "Decreasing"
 msgstr "Disminuint"
@@ -2102,7 +2072,6 @@ msgid "Density opacity"
 msgstr "Opacitat de densitat"
 
 #: likertplot/options/sorting/descending.title
-#: likertplot/ui[1][1][0]/sorting_descending.label
 #, fuzzy
 msgid "Descending"
 msgstr "Descendent"
@@ -2226,7 +2195,6 @@ msgid "Draw staples"
 msgstr "Dibuixar grapes"
 
 #: likertplot/options/postHoc/dscf.title
-#: likertplot/ui[3][0][1][0]/postHoc_dscf.label
 #, fuzzy
 msgid "DSCF"
 msgstr "DSCF"
@@ -2243,7 +2211,6 @@ msgid "Dummy Variables"
 msgstr "Variables fictícies"
 
 #: likertplot/options/postHoc/dunn.title
-#: likertplot/ui[3][0][1][0]/postHoc_dunn.label
 #, fuzzy
 msgid "Dunn"
 msgstr "Dunn"
@@ -2285,6 +2252,10 @@ msgstr "Nivells locals iguals"
 msgid "Equamax"
 msgstr "Equamax"
 
+#: barchart/options/errorBarColor.title
+msgid "Error bar"
+msgstr ""
+
 #: package/analyses/barchart.title
 #: package/analyses/barchart.menuTitle
 #: barchart/options.title
@@ -2299,11 +2270,14 @@ msgid "Error Bar Size"
 msgstr "Mida de la barra d'error"
 
 #: barchart/options/errorBars.title
-#: barchart/ui[3].label
 #: barchart/ui[3][0][0].label
 #, fuzzy
 msgid "Error Bars"
 msgstr "Barres d'error"
+
+#: barchart/ui[3].label
+msgid "Error Bars & Observations"
+msgstr ""
 
 #: qqplot/options/paramMethod/paraEstimate.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimate.label
@@ -2538,12 +2512,16 @@ msgstr "Frequències"
 msgid "Frequency Plot"
 msgstr "Gràfic de freqüència"
 
+#: barplot/results/frequencies.title
 #: likertplot/results/frequencies.title
+#: piechart/results/frequencies.title
 #, fuzzy
 msgid "Frequency Table"
 msgstr "Taula de freqüència"
 
+#: barplot/options/frequencyTable.title
 #: likertplot/options/frequencyTable.title
+#: piechart/options/frequencyTable.title
 #, fuzzy
 msgid "Frequency table"
 msgstr "Taula de freqüència"
@@ -2686,6 +2664,8 @@ msgid "Ggsci:NPG"
 msgstr ""
 
 #: barchart/options/borderColor/gray.title
+#: barchart/options/pointColor/gray.title
+#: barchart/options/errorBarColor/gray.title
 #: barplot/options/borderColor/gray.title
 #: corresp/options/supColor/darkgray.title
 #: histogram/options/fillColor/#999999.title
@@ -2802,6 +2782,33 @@ msgstr "Gris"
 msgid "Greys"
 msgstr "Grisos"
 
+#: areachart/options/xGridLines.title
+#: areachart/options/yGridLines.title
+#: barchart/options/xGridLines.title
+#: barchart/options/yGridLines.title
+#: barplot/options/xGridLines.title
+#: barplot/options/yGridLines.title
+#: boxplot/options/xGridLines.title
+#: boxplot/options/yGridLines.title
+#: histogram/options/xGridLines.title
+#: histogram/options/yGridLines.title
+#: linechart/options/xGridLines.title
+#: linechart/options/yGridLines.title
+#: lollipop/options/xGridLines.title
+#: lollipop/options/yGridLines.title
+#: mrcrosstabs/options/xGridLines.title
+#: mrcrosstabs/options/yGridLines.title
+#: mrfrequencies/options/xGridLines.title
+#: mrfrequencies/options/yGridLines.title
+#: qqplot/options/xGridLines.title
+#: qqplot/options/yGridLines.title
+#: raincloud/options/xGridLines.title
+#: raincloud/options/yGridLines.title
+#: scatterplot/options/xGridLines.title
+#: scatterplot/options/yGridLines.title
+msgid "Grid lines"
+msgstr ""
+
 #: areachart/options/group.title
 #: areachart/ui/mode/oneVariable[0][0][2].label
 #: barchart/options/group.title
@@ -2813,7 +2820,6 @@ msgstr "Grisos"
 #: histogram/options/group.title
 #: histogram/ui[0][1].label
 #: likertplot/options/groupSize.title
-#: likertplot/ui[4][0][1][0].label
 #: linechart/options/group.title
 #: linechart/ui[0][2].label
 #: lollipop/options/group.title
@@ -2851,7 +2857,16 @@ msgstr "Grup + Compte"
 msgid "Group + Percent"
 msgstr "Grup + Percentatge"
 
+#: likertplot/results/comp/pwTable.columns.title
+msgid "Group 1"
+msgstr ""
+
+#: likertplot/results/comp/pwTable.columns.title
+msgid "Group 2"
+msgstr ""
+
 #: likertplot/options/groupBy.title
+#: likertplot/ui[1][1][0].label
 #, fuzzy
 msgid "Group By"
 msgstr "Agrupar per"
@@ -2893,7 +2908,6 @@ msgid "Grouping Variable"
 msgstr "Variable de grup"
 
 #: likertplot/options/pValue/group.title
-#: likertplot/ui[3][0][2][0]/pValue_group.label
 #, fuzzy
 msgid "Groupwise"
 msgstr "Per grups"
@@ -2907,13 +2921,45 @@ msgstr "Per grups"
 msgid "hidden"
 msgstr ""
 
+#: barplot/options/hideLabelsBelow.title
 #: likertplot/options/hideLabelsBelow.title
-#, fuzzy
-msgid "Hide % labels below 5%"
-msgstr "Amagar etiquetes de percentatge per sota del 5%"
+#: mrcrosstabs/options/hideLabelsBelow.title
+msgid "Hide % below 5%"
+msgstr ""
 
 #: mosaic/options/hideAxes.title
 msgid "Hide axes"
+msgstr ""
+
+#: areachart/options/xHideAxis.title
+#: areachart/options/yHideAxis.title
+#: barchart/options/xHideAxis.title
+#: barchart/options/yHideAxis.title
+#: barplot/options/xHideAxis.title
+#: barplot/options/yHideAxis.title
+#: boxplot/options/xHideAxis.title
+#: boxplot/options/yHideAxis.title
+#: histogram/options/xHideAxis.title
+#: histogram/options/yHideAxis.title
+#: linechart/options/xHideAxis.title
+#: linechart/options/yHideAxis.title
+#: lollipop/options/xHideAxis.title
+#: lollipop/options/yHideAxis.title
+#: mrcrosstabs/options/xHideAxis.title
+#: mrcrosstabs/options/yHideAxis.title
+#: mrfrequencies/options/xHideAxis.title
+#: mrfrequencies/options/yHideAxis.title
+#: qqplot/options/xHideAxis.title
+#: qqplot/options/yHideAxis.title
+#: raincloud/options/xHideAxis.title
+#: raincloud/options/yHideAxis.title
+#: scatterplot/options/xHideAxis.title
+#: scatterplot/options/yHideAxis.title
+msgid "Hide axis"
+msgstr ""
+
+#: piechart/options/hideLabelsBelow.title
+msgid "Hide labels below 5%"
 msgstr ""
 
 #: package/analyses/histogram.title
@@ -2970,18 +3016,20 @@ msgstr "Gràfic horitzontal"
 msgid "Identity line"
 msgstr "Línia d'identitat"
 
+#: areachart/options/ignoreNA.title
 #: barchart/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
 #: likertplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
 #: raincloud/options/ignoreNA.title
+#: scatterplot/options/ignoreNA.title
 #, fuzzy
 msgid "Ignore missing groups"
 msgstr "Ignora els grups desconeguts"
 
-#: areachart/options/ignoreNA.title
 #: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
 #: mosaic/options/ignoreNA.title
+#: piechart/options/ignoreNA.title
 #, fuzzy
 msgid "Ignore missing values"
 msgstr "Ignorar valors perduts"
@@ -2994,7 +3042,6 @@ msgstr "Millora la visualització de les etiquetes"
 #: barchart/options/order/increasing.title
 #: barchart/ui[1][2][0]/order_increasing.label
 #: barplot/options/order/increasing.title
-#: barplot/ui[1][2][0]/order_increasing.label
 #: boxplot/options/order/increasing.title
 #: boxplot/ui[1][1][0]/order_increasing.label
 #: lollipop/options/order/increasing.title
@@ -3005,6 +3052,7 @@ msgstr "Millora la visualització de les etiquetes"
 #: mrcrosstabs/ui[1][2][0]/order_increasing.label
 #: mrfrequencies/options/order/increasing.title
 #: mrfrequencies/ui[1][1][0]/order_increasing.label
+#: piechart/options/order/increasing.title
 #, fuzzy
 msgid "Increasing"
 msgstr "Augmentant"
@@ -3268,7 +3316,6 @@ msgstr "Proves de Kruskal-Wallis"
 #: piechart/options/labType/label.title
 #: piechart/options/labSize.title
 #: piechart/options/textColor.title
-#: piechart/ui[2][0][0][0]/labType_label.label
 #: principal/options/labelVar.title
 #: principal/ui[1][1].label
 #: scatterplot/options/labelVar.title
@@ -3367,7 +3414,7 @@ msgstr "Posició de l'etiqueta"
 msgid "Label rotation"
 msgstr "Rotació d'etiqueta"
 
-#: likertplot/ui[4][2][0][0].label
+#: likertplot/ui[4][1][1][0].label
 #, fuzzy
 msgid "Label Size"
 msgstr "Mida de l'etiqueta"
@@ -3377,8 +3424,9 @@ msgstr "Mida de l'etiqueta"
 msgid "Label Type"
 msgstr ""
 
+#: likertplot/ui[5].label
 #: piechart/options/labels.title
-#: piechart/ui[1][1][0].label
+#: piechart/ui[1][3][0].label
 #: piechart/ui[2].label
 #: principal/options/labelColor.title
 #, fuzzy
@@ -3487,7 +3535,7 @@ msgstr "Esquerra"
 #: barplot/ui[6][0].label
 #: boxplot/ui[5][0].label
 #: histogram/ui[6][0].label
-#: likertplot/ui[7][0].label
+#: likertplot/ui[8][0].label
 #: linechart/ui[3][0].label
 #: mosaic/options/showOpacityLegend.title
 #: mosaic/ui[6][0].label
@@ -3521,7 +3569,7 @@ msgstr "Llegenda"
 msgid "Legend & Axis Titles"
 msgstr "Llegenda i títols de l'eix"
 
-#: likertplot/ui[7].label
+#: likertplot/ui[8].label
 #, fuzzy
 msgid "Legend Title"
 msgstr "Títol de la llegenda"
@@ -3950,7 +3998,6 @@ msgid "Method: {method}"
 msgstr ""
 
 #: barplot/options/labelPosition/middle.title
-#: barplot/ui[2][0][1][0]/labelPosition_middle.label
 #: mrcrosstabs/options/labelPosition/middle.title
 #: mrcrosstabs/ui[2][0][0][1]/labelPosition_middle.label
 #: mrfrequencies/options/labelPosition/middle.title
@@ -3997,6 +4044,10 @@ msgstr "Mínim"
 msgid "Min / Max"
 msgstr "Mínim / Màxim"
 
+#: boxplot/options/whiskers/minmax.title
+msgid "Min–max"
+msgstr ""
+
 #: principal/options/rotation/entropy.title
 #, fuzzy
 msgid "Minimum entropy"
@@ -4007,6 +4058,10 @@ msgstr "Entropia mínima"
 #, fuzzy
 msgid "Minimum of {var}"
 msgstr "Mínim de {var}"
+
+#: R/utilsData.R
+msgid "Missing values: {n}"
+msgstr ""
 
 #: package/analyses/mosaic.title
 #: package/analyses/mosaic.menuTitle
@@ -4100,15 +4155,12 @@ msgstr "No s'ha utilitzat cap rotació."
 #: barchart/ui[1][2][0]/order_none.label
 #: barplot/options/order/none.title
 #: barplot/options/borderColor/none.title
-#: barplot/ui[1][2][0]/order_none.label
 #: boxplot/options/order/none.title
 #: boxplot/ui[1][1][0]/order_none.label
 #: histogram/options/fillColor/none.title
 #: histogram/options/borderColor/none.title
 #: likertplot/options/sorting/none.title
 #: likertplot/options/pValue/none.title
-#: likertplot/ui[1][1][0]/sorting_none.label
-#: likertplot/ui[3][0][2][0]/pValue_none.label
 #: lollipop/options/order/none.title
 #: lollipop/ui[2][1][0]/order_none.label
 #: mosaic/options/yAxis/none.title
@@ -4121,6 +4173,7 @@ msgstr "No s'ha utilitzat cap rotació."
 #: mrfrequencies/options/order/none.title
 #: mrfrequencies/options/borderColor/none.title
 #: mrfrequencies/ui[1][1][0]/order_none.label
+#: piechart/options/order/none.title
 #: piechart/options/labels/none.title
 #: piechart/options/borderColor/none.title
 #: principal/options/rotation/none.title
@@ -4325,6 +4378,7 @@ msgstr "Resum d'observacions"
 msgid "Observation Table"
 msgstr "Taula d'observacions"
 
+#: barchart/ui[3][1][1].label
 #: multcorresp/options/showObservations.title
 #: multcorresp/options/showObservationPlot.title
 #: principal/options/showObservations.title
@@ -4394,6 +4448,10 @@ msgstr "només"
 msgid "Opacity"
 msgstr ""
 
+#: barchart/options/pointShape/opencircle.title
+msgid "Open circle"
+msgstr ""
+
 #: mrcrosstabs/options/optionname.title
 #: mrfrequencies/options/optionname.title
 #, fuzzy
@@ -4410,12 +4468,14 @@ msgstr "Nom de l'opció"
 msgid "Option Variables"
 msgstr "Variables d'opció"
 
+#: barplot/ui[1][0][0].label
 #: histogram/ui[2].label
-#: likertplot/ui[4][1][1][0].label
+#: likertplot/ui[4][1][0][0].label
 #: mrcrosstabs/options/optionname.default
 #: mrcrosstabs/results/crosstab.columns.title
 #: mrfrequencies/options/optionname.default
 #: mrfrequencies/results/responses.columns.title
+#: piechart/ui[1][0][0].label
 #, fuzzy
 msgid "Options"
 msgstr "Opcions"
@@ -4506,7 +4566,6 @@ msgstr ""
 
 #: R/mrcrosstabs.b.R
 #: likertplot/options/pValue/overall.title
-#: likertplot/ui[3][0][2][0]/pValue_overall.label
 #, fuzzy
 msgid "Overall"
 msgstr "Global"
@@ -4702,7 +4761,6 @@ msgstr ""
 
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
-#: barplot/ui[1][0][0]/yaxis_percent.label
 #: mosaic/options/yAxis/percent.title
 #: mosaic/options/labelType/percent.title
 #: piechart/options/labels/percent.title
@@ -4711,7 +4769,6 @@ msgid "Percent"
 msgstr "Percentatge"
 
 #: likertplot/options/frequencies/percentages.title
-#: likertplot/ui[2][0][1][0]/frequencies_percentages.label
 #, fuzzy
 msgid "Percentages"
 msgstr "Percentatges"
@@ -4770,7 +4827,7 @@ msgstr "Rosa i verd"
 msgid "Plot"
 msgstr "Punts"
 
-#: likertplot/ui[4][2][1][0].label
+#: likertplot/ui[6][0][1][0].label
 #: multcorresp/ui[7][0][0][0].label
 #, fuzzy
 msgid "Plot Color"
@@ -4798,7 +4855,7 @@ msgstr ""
 #: mrfrequencies/ui[2].label
 #: mrfrequencies/ui[2][0][0][0].label
 #: multcorresp/ui[7].label
-#: piechart/ui[1][0][0].label
+#: piechart/ui[1][1][0].label
 #: qqplot/ui[2][1][0].label
 #: raincloud/ui[1][0][0].label
 #: scatterplot/ui[1][0][0].label
@@ -4811,7 +4868,7 @@ msgstr "Opcions de gràfic"
 #: barplot/ui[7].label
 #: boxplot/ui[6].label
 #: histogram/ui[7].label
-#: likertplot/ui[8].label
+#: likertplot/ui[9].label
 #: linechart/ui[4].label
 #: lollipop/ui[7].label
 #: mosaic/ui[7].label
@@ -4847,6 +4904,7 @@ msgstr "Tipus de gràfic"
 msgid "Plots"
 msgstr "Gràfics"
 
+#: barchart/options/pointColor.title
 #: scatterplot/options/pointSize.title
 #, fuzzy
 msgid "Point"
@@ -5123,13 +5181,6 @@ msgstr "QLT"
 msgid "Quartimax"
 msgstr "Quartimax"
 
-#: likertplot/results/frequencies.columns.title
-#: likertplot/results/comp/uTestTable.columns.title
-#: likertplot/results/comp/kwTable.columns.title
-#, fuzzy
-msgid "Questions"
-msgstr "Preguntes"
-
 #: package/analyses/raincloud.title
 #: package/analyses/raincloud.menuTitle
 #: raincloud/options.title
@@ -5168,6 +5219,8 @@ msgid "Range"
 msgstr "Rang"
 
 #: barchart/options/textColor/red.title
+#: barchart/options/pointColor/red.title
+#: barchart/options/errorBarColor/red.title
 #: corresp/options/rowColor/red.title
 #: corresp/options/colColor/red.title
 #: histogram/options/fillColor/#E41A1C.title
@@ -5329,9 +5382,12 @@ msgstr "Línia de regressió"
 msgid "Reverse disposition"
 msgstr "Invertir la disposició"
 
+#: likertplot/options/reverseLikert.title
+msgid "Reverse level order"
+msgstr ""
+
 #: barchart/options/reverseStack.title
 #: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
 #: mosaic/options/reverseStack.title
 #: mrcrosstabs/options/reverseStack.title
 #, fuzzy
@@ -5450,7 +5506,6 @@ msgstr "Rotació"
 #: barchart/options/facetBy/row.title
 #: barchart/ui[5][0][0][0][0]/facetBy_row.label
 #: barplot/options/facetBy/row.title
-#: barplot/ui[4][0][0][0]/facetBy_row.label
 #: boxplot/options/facetBy/row.title
 #: boxplot/ui[3][0][0][0]/facetBy_row.label
 #: corresp/options/rowColor.title
@@ -5461,7 +5516,6 @@ msgstr "Rotació"
 #: mosaic/options/facetBy/row.title
 #: mosaic/ui[4][0][0][0][0]/facetBy_row.label
 #: piechart/options/facetBy/row.title
-#: piechart/ui[4][0][0][0]/facetBy_row.label
 #: scatterplot/options/facetBy/row.title
 #: scatterplot/ui[3][0][0][0][0]/facetBy_row.label
 #, fuzzy
@@ -5694,6 +5748,10 @@ msgstr "Conjunt 3"
 msgid "Several variables"
 msgstr "Diverses variables"
 
+#: barchart/options/pointShape.title
+msgid "Shape"
+msgstr ""
+
 #: scatterplot/options/groupShapes.title
 msgid "Shape by group"
 msgstr ""
@@ -5732,6 +5790,10 @@ msgstr "Mostrar línies"
 msgid "Show normal curve"
 msgstr "Mostrar corba normal"
 
+#: barchart/options/showPoints.title
+msgid "Show observations"
+msgstr ""
+
 #: linechart/options/showPoint.title
 #, fuzzy
 msgid "Show points"
@@ -5760,6 +5822,7 @@ msgstr "Valor singular"
 #: areachart/options/legendFontSize.title
 #: areachart/options/xAxisFontSize.title
 #: areachart/options/yAxisFontSize.title
+#: barchart/options/pointSize.title
 #: barchart/options/facetFontSize.title
 #: barchart/options/legendFontSize.title
 #: barchart/options/xAxisFontSize.title
@@ -5844,21 +5907,22 @@ msgid "Some values are missing from the contingency table."
 msgstr ""
 
 #: likertplot/options/sorting.title
-#: likertplot/ui[1][1][0].label
-#, fuzzy
-msgid "Sort Variables by Median"
-msgstr "Ordena les variables per mediana"
+#: likertplot/ui[4][0][1][0].label
+msgid "Sort Variables"
+msgstr ""
 
 #: barchart/options/order.title
 #: barchart/ui[1][2][0].label
 #: barplot/options/order.title
-#: barplot/ui[1][2][0].label
+#: barplot/ui[1][3][0].label
 #: lollipop/options/order.title
 #: lollipop/ui[2][1][0].label
 #: mrcrosstabs/options/order.title
 #: mrcrosstabs/ui[1][2][0].label
 #: mrfrequencies/options/order.title
 #: mrfrequencies/ui[1][1][0].label
+#: piechart/options/order.title
+#: piechart/ui[1][2][0].label
 #, fuzzy
 msgid "Sorting"
 msgstr "Ordenació"
@@ -5889,6 +5953,10 @@ msgstr "Ordenació (per mediana)"
 msgid "Spectral"
 msgstr "Espectral"
 
+#: barchart/options/pointShape/square.title
+msgid "Square"
+msgstr ""
+
 #: principal/results/summaryTable.columns.title
 #, fuzzy
 msgid "SS Loadings"
@@ -5900,7 +5968,6 @@ msgstr "Càrregues de SS"
 #: histogram/options/groupingN/stack.title
 #: histogram/ui[1][2][0]/groupingN_stack.label
 #: likertplot/options/type/stacked.title
-#: likertplot/ui[4][0][0][0]/type_stacked.label
 #: mrcrosstabs/options/bartype/stack.title
 #, fuzzy
 msgid "Stacked"
@@ -6015,7 +6082,7 @@ msgstr ""
 #: barplot/ui[7][1].label
 #: boxplot/ui[6][1].label
 #: histogram/ui[7][1].label
-#: likertplot/ui[8][1].label
+#: likertplot/ui[9][1].label
 #: linechart/ui[4][1].label
 #: lollipop/ui[7][1].label
 #: mosaic/ui[7][1].label
@@ -6167,7 +6234,6 @@ msgstr "Proves"
 
 #: mrcrosstabs/options/textColor.title
 #: piechart/options/labType/text.title
-#: piechart/ui[2][0][0][0]/labType_text.label
 #, fuzzy
 msgid "Text"
 msgstr "Text"
@@ -6175,8 +6241,7 @@ msgstr "Text"
 #: barplot/ui[2][0][1][1].label
 #: boxplot/ui[2][0][0][1].label
 #: corresp/ui[6][0][0][0].label
-#: likertplot/ui[5].label
-#: likertplot/ui[5][0][0][0].label
+#: likertplot/ui[6][0][0][0].label
 #: mrcrosstabs/ui[2][0][2][1].label
 #: mrfrequencies/ui[2][0][0][1].label
 #: multcorresp/ui[7][0][0][1].label
@@ -6192,6 +6257,7 @@ msgid "Text size"
 msgstr "Mida del text"
 
 #: corresp/ui[6].label
+#: likertplot/ui[6].label
 #, fuzzy
 msgid "Text Size & Colors"
 msgstr "Mida de text i colors"
@@ -6462,7 +6528,7 @@ msgstr "Sèrie temporal"
 #: barplot/ui[7][0].label
 #: boxplot/ui[6][0].label
 #: histogram/ui[7][0].label
-#: likertplot/ui[8][0].label
+#: likertplot/ui[9][0].label
 #: linechart/ui[4][0].label
 #: lollipop/ui[7][0].label
 #: mosaic/ui[7][0].label
@@ -6497,7 +6563,6 @@ msgstr "Text del títol"
 #: barplot/options/labelPosition/top.title
 #: barplot/options/legendPosition/top.title
 #: barplot/options/yAxisPosition/1.title
-#: barplot/ui[2][0][1][0]/labelPosition_top.label
 #: boxplot/options/legendPosition/top.title
 #: boxplot/options/yAxisPosition/1.title
 #: corresp/options/yAxisPosition/1.title
@@ -6531,7 +6596,10 @@ msgstr "Text del títol"
 msgid "Top"
 msgstr "Dalt"
 
+#: R/mrcrosstabs.b.R
+#: R/mrfrequencies.b.R
 #: R/multcorresp.b.R
+#: R/utilsData.R
 #: mrfrequencies/options/showTotal.title
 #, fuzzy
 msgid "Total"
@@ -6642,6 +6710,12 @@ msgstr "Utilitzar la descripció de la variable com a nom"
 msgid "Value Labels"
 msgstr "Etiquetes de valor"
 
+#: barplot/options/showLabels.title
+#: mrcrosstabs/options/showLabels.title
+#: mrfrequencies/options/showLabels.title
+msgid "Value labels"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 #: lollipop/options/yaxis/identity.title
@@ -6704,6 +6778,9 @@ msgstr "Gràfic de variable"
 #: areachart/ui/mode/severalVariables[0][0][1].label
 #: boxplot/options/vars.title
 #: boxplot/ui[0][0].label
+#: likertplot/results/frequencies.columns.title
+#: likertplot/results/comp/uTestTable.columns.title
+#: likertplot/results/comp/kwTable.columns.title
 #: linechart/options/vars.title
 #: linechart/ui[0][1].label
 #: multcorresp/options/vars.title
@@ -6874,6 +6951,10 @@ msgstr "Viridis:Viridis"
 msgid "Weibull"
 msgstr "Weibull"
 
+#: boxplot/options/whiskers.title
+msgid "Whiskers"
+msgstr ""
+
 #: barchart/options/borderColor/white.title
 #: barchart/options/textColor/white.title
 #: barplot/options/borderColor/white.title
@@ -6904,13 +6985,11 @@ msgid "Width"
 msgstr "Amplada"
 
 #: barplot/options/percentWithin/category.title
-#: barplot/ui[1][0][0]/yaxis_percent/percentWithin_category.label
 #, fuzzy
 msgid "Within categories"
 msgstr "Dins de les categories"
 
 #: barplot/options/percentWithin/group.title
-#: barplot/ui[1][0][0]/yaxis_percent/percentWithin_gGroup.label
 #, fuzzy
 msgid "Within groups"
 msgstr "Dins dels grups"
@@ -6939,7 +7018,7 @@ msgstr "Valors de paràmetres incorrectes."
 #: corresp/ui[7][0].label
 #: histogram/ui[5][0][0][0].label
 #: histogram/ui[6][1].label
-#: likertplot/ui[6][0][0][0].label
+#: likertplot/ui[7][0][0][0].label
 #: linechart/options/timeVar.title
 #: linechart/ui[0][0].label
 #: linechart/ui[1][1][0].label
@@ -7015,7 +7094,7 @@ msgstr "Abast de l'eix X"
 #: barchart/ui[6][0][1][0].label
 #: barchart/ui[7][2].label
 #: barplot/options/yaxis.title
-#: barplot/ui[1][0][0].label
+#: barplot/ui[1][1][0].label
 #: barplot/ui[5][0][1][0].label
 #: barplot/ui[6][2].label
 #: boxplot/ui[4][0][1][0].label
@@ -7025,7 +7104,7 @@ msgstr "Abast de l'eix X"
 #: histogram/ui[1][0][0].label
 #: histogram/ui[5][0][1][0].label
 #: histogram/ui[6][2].label
-#: likertplot/ui[6][0][1][0].label
+#: likertplot/ui[7][0][1][0].label
 #: linechart/ui[2][0][1][0].label
 #: linechart/ui[3][2].label
 #: lollipop/options/yaxis.title

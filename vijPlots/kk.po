@@ -9,7 +9,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: R/areachart.b.R
+#: R/barchart.b.R
+#: R/barplot.b.R
 #: R/linechart.b.R
+#: R/lollipop.b.R
+#: R/mosaic.b.R
+#: R/piechart.b.R
 msgid "\"{var}\" is a reserved name. Please rename this variable."
 msgstr ""
 
@@ -23,6 +28,10 @@ msgstr ""
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "\"Tick Count\" option for the X-axis is only available for numeric variables."
+msgstr ""
+
+#: R/utils.R
+msgid "(Missing)"
 msgstr ""
 
 #: R/qqplot.b.R
@@ -88,6 +97,8 @@ msgid "# of rows/columns"
 msgstr "Жолдар мен бағандар саны"
 
 #: barchart/ui[3][0][0]/errorBars_ci/ciLevel.suffix
+#: barplot/results/frequencies.columns.title
+#: piechart/results/frequencies.columns.title
 #, fuzzy
 msgid "%"
 msgstr "%"
@@ -95,7 +106,7 @@ msgstr "%"
 #: barplot/options/accuracy.title
 #: barplot/ui[2][0][2][0].label
 #: likertplot/options/accuracy.title
-#: likertplot/ui[4][0][2][0].label
+#: likertplot/ui[5][0][1][0].label
 #: mrcrosstabs/options/accuracy.title
 #: mrcrosstabs/ui[2][0][2][0].label
 #: mrfrequencies/options/accuracy.title
@@ -118,7 +129,7 @@ msgstr "% бойынша қатар"
 msgid "% Inertia"
 msgstr "% Инерция"
 
-#: likertplot/ui[4][1][0][0].label
+#: likertplot/ui[5][0][0][0].label
 #, fuzzy
 msgid "% Labels"
 msgstr "% Мәтіндері"
@@ -130,6 +141,7 @@ msgstr "% Мәтіндері"
 msgid "% of Cases"
 msgstr "Жағдайлардың пайызы"
 
+#: R/mrcrosstabs.b.R
 #: mrcrosstabs/options/computedValues/cases.title
 #: mrfrequencies/options/showCases.title
 #: mrfrequencies/options/yaxis/cases.title
@@ -179,8 +191,9 @@ msgid ""
 "order in table and graph (when some variables miss some levels).</li>\n"
 "<li><strong>Convert variables to integer:</strong> when checked, the level "
 "labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
+"<li><strong>Sort Variables:</strong> orders the Likert variables by the "
+"proportion of answers in the upper half of the scale (middle level "
+"excluded).</li>\n"
 "</ul>\n"
 "<h3>Comparison Tests</h3>\n"
 "<p>When using a group variable, several tests are available:</p>\n"
@@ -191,8 +204,8 @@ msgid ""
 "Dwass-Steel-Critchlow-Fligner (DSCF) pairwise comparisons tests.</li>\n"
 "</ul>\n"
 "<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for Mann-Whitney U, Kruskal-Wallis and post hoc tests. DSCF "
+"variable) for post hoc tests or <strong>overall</strong> (groupwise and "
+"variablewise) for Mann-Whitney U, Kruskal-Wallis and post hoc tests. DSCF "
 "p-values are already adjusted (groupwise); no other adjustment is "
 "possible.</p>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
@@ -364,10 +377,9 @@ msgstr ""
 "қосылған</p>"
 
 #: R/qqplot.b.R
-#, fuzzy
 msgid ""
 "<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
-"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"target=\"_blank\">qqplotr R package</a> by Alexandre Almeida, Adam Loy and "
 "Heike Hofmann. In-depth information can be found in the package "
 "documentation on CRAN site.</p>\n"
 "<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
@@ -411,55 +423,8 @@ msgid ""
 "<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
 "(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
 "(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
+"</ul>"
 msgstr ""
-"<p>Бұл модуль <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
-"target=\"_blank\">qqplotr R пакетінің<a/> Alexandre Almeida, Adam Loy және "
-"Heike Hofmann пайдаланады. Терең ақпарат пакеттің құжаттамасында CRAN "
-"сайтында табыла алады.</p>\n"
-"<p><strong>Сілтеме линиясы:</strong> Идентитет линиясын (y = x) немесе екі "
-"деректер квантілін (Q<sub>0.25</sub> және Q<sub>0.75</sub>) қиылыстыратын "
-"қолданылатын Q-Q линиясын салады. P-P графігі тек идентитет линиясын "
-"қолдайды.</p>\n"
-"<p><strong>Сенім бандасы:</strong> Сілтеме линиясының айналасында сенім "
-"бандасын салады. qqplotr пакеті сенім бандасын есептеу үшін бірнеше "
-"әдістерді ұсынады:</p>\n"
-"<ul>\n"
-"<li><strong><em>Нүктелік</em></strong> нормаль сенім аралықтарына сүйене "
-"отырып нүктелік сенім бандасын құрады;</li>\n"
-"<li><strong><em>Bootstrap</em></strong> параметрлік бутстреп бойынша "
-"нүктелік сенім бандасын жасайды;</li>\n"
-"<li><strong><em>Колмогоров-Смирнов</em></strong> бандасы Колмогоров-Смирнов "
-"тестіне сүйене отырып жасалады;</li>\n"
-"<li><strong><em>Құйрықты сезгіш</em></strong> құйрықты сезгіш сенім бандасын "
-"құрады, бірақ тек нормаль Q-Q графігінде жасалған;</li>\n"
-"<li><strong><em>Тең локаль деңгейлер (ELL)</em></strong> бірдей локаль "
-"деңгейлерді пайдаланып синхронды бандасын құрады.</li>\n"
-"</ul>\n"
-"<p>P-P графігі тек \"ELL\" және \"Bootstrap\" әдістерін қолдайды.</p>\n"
-"<p><strong>Детрендталған график:</strong> Объектілер сілтеме линиясына "
-"сәйкес детрендталған. Бұл процедура сілтеме линиясына перпендикуляр "
-"қашықтықтардан туындайтын көріністік байланысты азайтуға көмектесуі мүмкін.</"
-"p>\n"
-"<p><strong>Параметрлердің мәндер:</strong> Тарату параметрлері деректерден "
-"MASS пакеті пайдаланылып максималь жақындық әдісі бойынша бағаланады: бұл "
-"барлық таратуларда, \"t\" және \"унитар\" таратуларынан басқа жұмыс істеуі "
-"тиіс;</li>\n"
-"<li><strong>Момент әдісі</strong> моменттік параметрлер үшін: бұл "
-"\"нормаль\", \"лог-нормаль\", \"Бета\", \"Экспоненциал\", \"Гамма\", "
-"\"Логистика\" және \"Унитар\" таратуларында жұмыс істеуі тиіс;</li>\n"
-"</ul>\n"
-"<p>немесе пайдаланушы енгізеді:</p>\n"
-"<ul>\n"
-"<li><strong>Параметр 1:</strong> орташа (Нормаль), meanlog (Лог-нормаль), "
-"shape1 (Бета), location (Кошы, Логистика), df (Хи-квадрат, Студент), df1 (F)"
-", rate (Экспоненциал), shape (Гамма, Вейбулл) және min (Унитар);</li>\n"
-"<li><strong>Параметр 2:</strong> sd (нормаль), sdlog (Лог-нормаль), shape2 "
-"(Бета), scale (Кошы, Логистика), df2 (F), rate (Гамма, Вейбулл) және max "
-"(Унитар).</li>\n"
-"</ul>\n"
-"</p>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -484,6 +449,10 @@ msgstr "1 апта"
 #, fuzzy
 msgid "1 year"
 msgstr "1 жыл"
+
+#: boxplot/options/whiskers/tukey.title
+msgid "1.5 × IQR (Tukey)"
+msgstr ""
 
 #: areachart/options/dateBreak/10year.title
 #: linechart/options/dateBreak/10year.title
@@ -564,6 +533,10 @@ msgstr "2035-10-20"
 #: areachart/options/dateBreak/25year.title
 #: linechart/options/dateBreak/25year.title
 msgid "25 years"
+msgstr ""
+
+#: boxplot/options/whiskers/tukey3.title
+msgid "3 × IQR"
 msgstr ""
 
 #: areachart/options/dateBreak/3month.title
@@ -726,6 +699,10 @@ msgstr "Альфа"
 msgid "Always show group legend"
 msgstr ""
 
+#: piechart/options/alwaysShowLegend.title
+msgid "Always show legend"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 #, fuzzy
@@ -753,10 +730,13 @@ msgid "Arrows"
 msgstr "Жебелер"
 
 #: likertplot/options/sorting/ascending.title
-#: likertplot/ui[1][1][0]/sorting_ascending.label
 #, fuzzy
 msgid "Ascending"
 msgstr "По возрастанию"
+
+#: R/qqplot.b.R
+msgid "At least two observations are required."
+msgstr ""
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -812,7 +792,7 @@ msgstr "Авто"
 #: barplot/ui[5].label
 #: boxplot/ui[4].label
 #: histogram/ui[5].label
-#: likertplot/ui[6].label
+#: likertplot/ui[7].label
 #: linechart/ui[2].label
 #: lollipop/ui[5].label
 #: mosaic/ui[5].label
@@ -853,7 +833,7 @@ msgstr "Жолақы сурет"
 #: barchart/options/barType.title
 #: barchart/ui[1][1][0].label
 #: barplot/options/barType.title
-#: barplot/ui[1][1][0].label
+#: barplot/ui[1][2][0].label
 #: mrcrosstabs/options/bartype.title
 #: mrcrosstabs/ui[2][0][1][0].label
 #, fuzzy
@@ -938,6 +918,8 @@ msgstr "Биплот түрі"
 
 #: barchart/options/borderColor/black.title
 #: barchart/options/textColor/black.title
+#: barchart/options/pointColor/black.title
+#: barchart/options/errorBarColor/black.title
 #: barplot/options/borderColor/black.title
 #: barplot/options/textColor/black.title
 #: corresp/options/supColor/black.title
@@ -1294,13 +1276,11 @@ msgid "BY"
 msgstr "БОЙЫНША"
 
 #: likertplot/options/groupBy/group.title
-#: likertplot/ui[4][0][1][0]/groupBy_group.label
 #, fuzzy
 msgid "By group"
 msgstr "Топ бойынша"
 
 #: likertplot/options/groupBy/variable.title
-#: likertplot/ui[4][0][1][0]/groupBy_variable.label
 #, fuzzy
 msgid "By variable"
 msgstr "Айнымалы бойынша"
@@ -1309,6 +1289,10 @@ msgstr "Айнымалы бойынша"
 #, fuzzy
 msgid "Cannot convert text variables to integers"
 msgstr "Мәтін айнымалыларын бүтін санға ауыстыруға болмайды"
+
+#: R/likertplot.b.R
+msgid "Cannot tidy up levels: the same label is used for different values."
+msgstr ""
 
 #: R/likertplot.b.R
 #, fuzzy
@@ -1320,7 +1304,7 @@ msgstr "Мәтін айнымалысын тазарту мүмкін емес"
 #: barplot/ui[7][2].label
 #: boxplot/ui[6][2].label
 #: histogram/ui[7][2].label
-#: likertplot/ui[8][2].label
+#: likertplot/ui[9][2].label
 #: linechart/ui[4][2].label
 #: lollipop/ui[7][2].label
 #: mosaic/ui[7][2].label
@@ -1552,7 +1536,6 @@ msgid "Center"
 msgstr "Орталық"
 
 #: likertplot/options/type/centered.title
-#: likertplot/ui[4][0][0][0]/type_centered.label
 #, fuzzy
 msgid "Centered"
 msgstr "Орталықтандырылған"
@@ -1562,6 +1545,10 @@ msgstr "Орталықтандырылған"
 #, fuzzy
 msgid "Chi-squared"
 msgstr "Хи-квадрат"
+
+#: barchart/options/pointShape/circle.title
+msgid "Circle"
+msgstr ""
 
 #: piechart/options/clockwise.title
 msgid "Clockwise"
@@ -1630,7 +1617,6 @@ msgstr "Түстер және опциялар"
 #: barchart/options/facetBy/column.title
 #: barchart/ui[5][0][0][0][0]/facetBy_column.label
 #: barplot/options/facetBy/column.title
-#: barplot/ui[4][0][0][0]/facetBy_column.label
 #: boxplot/options/facetBy/column.title
 #: boxplot/ui[3][0][0][0]/facetBy_column.label
 #: corresp/options/colColor.title
@@ -1641,7 +1627,6 @@ msgstr "Түстер және опциялар"
 #: mosaic/options/facetBy/column.title
 #: mosaic/ui[4][0][0][0][0]/facetBy_column.label
 #: piechart/options/facetBy/column.title
-#: piechart/ui[4][0][0][0]/facetBy_column.label
 #: scatterplot/options/facetBy/column.title
 #: scatterplot/ui[3][0][0][0][0]/facetBy_column.label
 #, fuzzy
@@ -1757,7 +1742,6 @@ msgid "Connect ordinal categories"
 msgstr "Соединить порядковые категории"
 
 #: likertplot/options/postHoc/conover.title
-#: likertplot/ui[3][0][1][0]/postHoc_conover.label
 #, fuzzy
 msgid "Conover"
 msgstr "Коновер"
@@ -1831,7 +1815,6 @@ msgstr "COS2"
 #: R/histogram.b.R
 #: R/mrcrosstabs.b.R
 #: barplot/options/yaxis/count.title
-#: barplot/ui[1][0][0]/yaxis_count.label
 #: histogram/options/histtype/count.title
 #: histogram/ui[1][0][0]/histtype_count.label
 #: mosaic/options/labelType/count.title
@@ -1839,12 +1822,6 @@ msgstr "COS2"
 #, fuzzy
 msgid "Count"
 msgstr "Сан"
-
-#: barplot/options/showLabels.title
-#: mrcrosstabs/options/showLabels.title
-#: mrfrequencies/options/showLabels.title
-msgid "Count labels"
-msgstr ""
 
 #: mrcrosstabs/options/endorsed.title
 #: mrfrequencies/options/endorsed.title
@@ -1858,12 +1835,13 @@ msgid "Counted value string may not be empty."
 msgstr ""
 
 #: R/mrfrequencies.b.R
+#: barplot/results/frequencies.columns.title
 #: likertplot/options/frequencies/counts.title
-#: likertplot/ui[2][0][1][0]/frequencies_counts.label
 #: mrcrosstabs/options/computedValues/count.title
 #: mrfrequencies/options/showCounts.title
 #: mrfrequencies/options/yaxis/counts.title
 #: mrfrequencies/results/responses.columns.title
+#: piechart/results/frequencies.columns.title
 #, fuzzy
 msgid "Counts"
 msgstr "Количество"
@@ -1880,28 +1858,21 @@ msgstr "Количество"
 msgid "Counts (optional)"
 msgstr "Саналар (опциялық)"
 
-#: R/barplot.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not all be zero."
 msgstr ""
 
-#: R/barplot.b.R
 #: R/corresp.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not be infinite."
 msgstr ""
 
-#: R/barplot.b.R
 #: R/corresp.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not be negative."
 msgstr ""
 
-#: R/barplot.b.R
-#: R/mosaic.b.R
+#: R/utilsData.R
 msgid "Counts may not contain missing values."
 msgstr ""
 
@@ -1949,8 +1920,10 @@ msgid "Crosstab (% of responses)"
 msgstr "Кросстабуляция (жауаптардың пайызы)"
 
 #: R/multcorresp.b.R
+#: barplot/results/frequencies.columns.title
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
+#: piechart/results/frequencies.columns.title
 #: principal/results/summaryTable.columns.title
 #, fuzzy
 msgid "Cumulative %"
@@ -2021,7 +1994,6 @@ msgstr "Ондыı дéңгей"
 #: barchart/options/order/decreasing.title
 #: barchart/ui[1][2][0]/order_decreasing.label
 #: barplot/options/order/decreasing.title
-#: barplot/ui[1][2][0]/order_decreasing.label
 #: boxplot/options/order/decreasing.title
 #: boxplot/ui[1][1][0]/order_decreasing.label
 #: lollipop/options/order/decreasing.title
@@ -2032,6 +2004,7 @@ msgstr "Ондыı дéңгей"
 #: mrcrosstabs/ui[1][2][0]/order_decreasing.label
 #: mrfrequencies/options/order/decreasing.title
 #: mrfrequencies/ui[1][1][0]/order_decreasing.label
+#: piechart/options/order/decreasing.title
 #, fuzzy
 msgid "Decreasing"
 msgstr "Азайту"
@@ -2089,7 +2062,6 @@ msgid "Density opacity"
 msgstr "Тығыздықтың ашықтығы"
 
 #: likertplot/options/sorting/descending.title
-#: likertplot/ui[1][1][0]/sorting_descending.label
 #, fuzzy
 msgid "Descending"
 msgstr "Кемітетін"
@@ -2214,7 +2186,6 @@ msgid "Draw staples"
 msgstr "Нарисовать скобки"
 
 #: likertplot/options/postHoc/dscf.title
-#: likertplot/ui[3][0][1][0]/postHoc_dscf.label
 #, fuzzy
 msgid "DSCF"
 msgstr "DSCF"
@@ -2231,7 +2202,6 @@ msgid "Dummy Variables"
 msgstr "Фактические переменные"
 
 #: likertplot/options/postHoc/dunn.title
-#: likertplot/ui[3][0][1][0]/postHoc_dunn.label
 #, fuzzy
 msgid "Dunn"
 msgstr "Данн"
@@ -2273,6 +2243,10 @@ msgstr "Бірдей жергілікті деңгейлер"
 msgid "Equamax"
 msgstr "Equamax"
 
+#: barchart/options/errorBarColor.title
+msgid "Error bar"
+msgstr ""
+
 #: package/analyses/barchart.title
 #: package/analyses/barchart.menuTitle
 #: barchart/options.title
@@ -2287,11 +2261,14 @@ msgid "Error Bar Size"
 msgstr "Қате жолағы өлшемі"
 
 #: barchart/options/errorBars.title
-#: barchart/ui[3].label
 #: barchart/ui[3][0][0].label
 #, fuzzy
 msgid "Error Bars"
 msgstr "Қате жолақтары"
+
+#: barchart/ui[3].label
+msgid "Error Bars & Observations"
+msgstr ""
 
 #: qqplot/options/paramMethod/paraEstimate.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimate.label
@@ -2526,12 +2503,16 @@ msgstr "Жиілік"
 msgid "Frequency Plot"
 msgstr "Жиілік суреті"
 
+#: barplot/results/frequencies.title
 #: likertplot/results/frequencies.title
+#: piechart/results/frequencies.title
 #, fuzzy
 msgid "Frequency Table"
 msgstr "Жиілік кестесі"
 
+#: barplot/options/frequencyTable.title
 #: likertplot/options/frequencyTable.title
+#: piechart/options/frequencyTable.title
 #, fuzzy
 msgid "Frequency table"
 msgstr "Жиілік кестесі"
@@ -2674,6 +2655,8 @@ msgid "Ggsci:NPG"
 msgstr ""
 
 #: barchart/options/borderColor/gray.title
+#: barchart/options/pointColor/gray.title
+#: barchart/options/errorBarColor/gray.title
 #: barplot/options/borderColor/gray.title
 #: corresp/options/supColor/darkgray.title
 #: histogram/options/fillColor/#999999.title
@@ -2790,6 +2773,33 @@ msgstr "Сұр"
 msgid "Greys"
 msgstr "Шүﾘлері"
 
+#: areachart/options/xGridLines.title
+#: areachart/options/yGridLines.title
+#: barchart/options/xGridLines.title
+#: barchart/options/yGridLines.title
+#: barplot/options/xGridLines.title
+#: barplot/options/yGridLines.title
+#: boxplot/options/xGridLines.title
+#: boxplot/options/yGridLines.title
+#: histogram/options/xGridLines.title
+#: histogram/options/yGridLines.title
+#: linechart/options/xGridLines.title
+#: linechart/options/yGridLines.title
+#: lollipop/options/xGridLines.title
+#: lollipop/options/yGridLines.title
+#: mrcrosstabs/options/xGridLines.title
+#: mrcrosstabs/options/yGridLines.title
+#: mrfrequencies/options/xGridLines.title
+#: mrfrequencies/options/yGridLines.title
+#: qqplot/options/xGridLines.title
+#: qqplot/options/yGridLines.title
+#: raincloud/options/xGridLines.title
+#: raincloud/options/yGridLines.title
+#: scatterplot/options/xGridLines.title
+#: scatterplot/options/yGridLines.title
+msgid "Grid lines"
+msgstr ""
+
 #: areachart/options/group.title
 #: areachart/ui/mode/oneVariable[0][0][2].label
 #: barchart/options/group.title
@@ -2801,7 +2811,6 @@ msgstr "Шүﾘлері"
 #: histogram/options/group.title
 #: histogram/ui[0][1].label
 #: likertplot/options/groupSize.title
-#: likertplot/ui[4][0][1][0].label
 #: linechart/options/group.title
 #: linechart/ui[0][2].label
 #: lollipop/options/group.title
@@ -2839,7 +2848,16 @@ msgstr "Топ + Сан"
 msgid "Group + Percent"
 msgstr "Топ + Пайыз"
 
+#: likertplot/results/comp/pwTable.columns.title
+msgid "Group 1"
+msgstr ""
+
+#: likertplot/results/comp/pwTable.columns.title
+msgid "Group 2"
+msgstr ""
+
 #: likertplot/options/groupBy.title
+#: likertplot/ui[1][1][0].label
 #, fuzzy
 msgid "Group By"
 msgstr "Топтастыру бойынша"
@@ -2881,7 +2899,6 @@ msgid "Grouping Variable"
 msgstr "Топтастыру айнымалы"
 
 #: likertplot/options/pValue/group.title
-#: likertplot/ui[3][0][2][0]/pValue_group.label
 #, fuzzy
 msgid "Groupwise"
 msgstr "Топтық түрде"
@@ -2895,13 +2912,45 @@ msgstr "Топтық түрде"
 msgid "hidden"
 msgstr ""
 
+#: barplot/options/hideLabelsBelow.title
 #: likertplot/options/hideLabelsBelow.title
-#, fuzzy
-msgid "Hide % labels below 5%"
-msgstr "5%-дан төмен % мәтіндерін жасыру"
+#: mrcrosstabs/options/hideLabelsBelow.title
+msgid "Hide % below 5%"
+msgstr ""
 
 #: mosaic/options/hideAxes.title
 msgid "Hide axes"
+msgstr ""
+
+#: areachart/options/xHideAxis.title
+#: areachart/options/yHideAxis.title
+#: barchart/options/xHideAxis.title
+#: barchart/options/yHideAxis.title
+#: barplot/options/xHideAxis.title
+#: barplot/options/yHideAxis.title
+#: boxplot/options/xHideAxis.title
+#: boxplot/options/yHideAxis.title
+#: histogram/options/xHideAxis.title
+#: histogram/options/yHideAxis.title
+#: linechart/options/xHideAxis.title
+#: linechart/options/yHideAxis.title
+#: lollipop/options/xHideAxis.title
+#: lollipop/options/yHideAxis.title
+#: mrcrosstabs/options/xHideAxis.title
+#: mrcrosstabs/options/yHideAxis.title
+#: mrfrequencies/options/xHideAxis.title
+#: mrfrequencies/options/yHideAxis.title
+#: qqplot/options/xHideAxis.title
+#: qqplot/options/yHideAxis.title
+#: raincloud/options/xHideAxis.title
+#: raincloud/options/yHideAxis.title
+#: scatterplot/options/xHideAxis.title
+#: scatterplot/options/yHideAxis.title
+msgid "Hide axis"
+msgstr ""
+
+#: piechart/options/hideLabelsBelow.title
+msgid "Hide labels below 5%"
 msgstr ""
 
 #: package/analyses/histogram.title
@@ -2958,18 +3007,20 @@ msgstr "Жол бойынша сурет"
 msgid "Identity line"
 msgstr "Ішкі сызық"
 
+#: areachart/options/ignoreNA.title
 #: barchart/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
 #: likertplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
 #: raincloud/options/ignoreNA.title
+#: scatterplot/options/ignoreNA.title
 #, fuzzy
 msgid "Ignore missing groups"
 msgstr "Жоқ топтарды елемеу"
 
-#: areachart/options/ignoreNA.title
 #: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
 #: mosaic/options/ignoreNA.title
+#: piechart/options/ignoreNA.title
 #, fuzzy
 msgid "Ignore missing values"
 msgstr "Жоқтыларды елемеу"
@@ -2982,7 +3033,6 @@ msgstr "Лейбл көрсетілімінің жақсартуы"
 #: barchart/options/order/increasing.title
 #: barchart/ui[1][2][0]/order_increasing.label
 #: barplot/options/order/increasing.title
-#: barplot/ui[1][2][0]/order_increasing.label
 #: boxplot/options/order/increasing.title
 #: boxplot/ui[1][1][0]/order_increasing.label
 #: lollipop/options/order/increasing.title
@@ -2993,6 +3043,7 @@ msgstr "Лейбл көрсетілімінің жақсартуы"
 #: mrcrosstabs/ui[1][2][0]/order_increasing.label
 #: mrfrequencies/options/order/increasing.title
 #: mrfrequencies/ui[1][1][0]/order_increasing.label
+#: piechart/options/order/increasing.title
 #, fuzzy
 msgid "Increasing"
 msgstr "Өсу"
@@ -3256,7 +3307,6 @@ msgstr "Крускал-Воллис тесттері"
 #: piechart/options/labType/label.title
 #: piechart/options/labSize.title
 #: piechart/options/textColor.title
-#: piechart/ui[2][0][0][0]/labType_label.label
 #: principal/options/labelVar.title
 #: principal/ui[1][1].label
 #: scatterplot/options/labelVar.title
@@ -3355,7 +3405,7 @@ msgstr "Лейбл орналасуы"
 msgid "Label rotation"
 msgstr "Мәтін айналуы"
 
-#: likertplot/ui[4][2][0][0].label
+#: likertplot/ui[4][1][1][0].label
 #, fuzzy
 msgid "Label Size"
 msgstr "Мәтін өлшемі"
@@ -3365,8 +3415,9 @@ msgstr "Мәтін өлшемі"
 msgid "Label Type"
 msgstr ""
 
+#: likertplot/ui[5].label
 #: piechart/options/labels.title
-#: piechart/ui[1][1][0].label
+#: piechart/ui[1][3][0].label
 #: piechart/ui[2].label
 #: principal/options/labelColor.title
 #, fuzzy
@@ -3475,7 +3526,7 @@ msgstr "Сол"
 #: barplot/ui[6][0].label
 #: boxplot/ui[5][0].label
 #: histogram/ui[6][0].label
-#: likertplot/ui[7][0].label
+#: likertplot/ui[8][0].label
 #: linechart/ui[3][0].label
 #: mosaic/options/showOpacityLegend.title
 #: mosaic/ui[6][0].label
@@ -3509,7 +3560,7 @@ msgstr "Аңдатпа"
 msgid "Legend & Axis Titles"
 msgstr "Аңдатпа & Ось атаулары"
 
-#: likertplot/ui[7].label
+#: likertplot/ui[8].label
 #, fuzzy
 msgid "Legend Title"
 msgstr "Аңдатпасының атауы"
@@ -3938,7 +3989,6 @@ msgid "Method: {method}"
 msgstr ""
 
 #: barplot/options/labelPosition/middle.title
-#: barplot/ui[2][0][1][0]/labelPosition_middle.label
 #: mrcrosstabs/options/labelPosition/middle.title
 #: mrcrosstabs/ui[2][0][0][1]/labelPosition_middle.label
 #: mrfrequencies/options/labelPosition/middle.title
@@ -3985,6 +4035,10 @@ msgstr "Мин"
 msgid "Min / Max"
 msgstr "Минимум / Максимум"
 
+#: boxplot/options/whiskers/minmax.title
+msgid "Min–max"
+msgstr ""
+
 #: principal/options/rotation/entropy.title
 #, fuzzy
 msgid "Minimum entropy"
@@ -3995,6 +4049,10 @@ msgstr "Минималды энтропия"
 #, fuzzy
 msgid "Minimum of {var}"
 msgstr "{var} минимумы"
+
+#: R/utilsData.R
+msgid "Missing values: {n}"
+msgstr ""
 
 #: package/analyses/mosaic.title
 #: package/analyses/mosaic.menuTitle
@@ -4088,15 +4146,12 @@ msgstr "Айналым пайдаланылмады."
 #: barchart/ui[1][2][0]/order_none.label
 #: barplot/options/order/none.title
 #: barplot/options/borderColor/none.title
-#: barplot/ui[1][2][0]/order_none.label
 #: boxplot/options/order/none.title
 #: boxplot/ui[1][1][0]/order_none.label
 #: histogram/options/fillColor/none.title
 #: histogram/options/borderColor/none.title
 #: likertplot/options/sorting/none.title
 #: likertplot/options/pValue/none.title
-#: likertplot/ui[1][1][0]/sorting_none.label
-#: likertplot/ui[3][0][2][0]/pValue_none.label
 #: lollipop/options/order/none.title
 #: lollipop/ui[2][1][0]/order_none.label
 #: mosaic/options/yAxis/none.title
@@ -4109,6 +4164,7 @@ msgstr "Айналым пайдаланылмады."
 #: mrfrequencies/options/order/none.title
 #: mrfrequencies/options/borderColor/none.title
 #: mrfrequencies/ui[1][1][0]/order_none.label
+#: piechart/options/order/none.title
 #: piechart/options/labels/none.title
 #: piechart/options/borderColor/none.title
 #: principal/options/rotation/none.title
@@ -4313,6 +4369,7 @@ msgstr "Бақылау және қорытынды"
 msgid "Observation Table"
 msgstr "Байқау кестесі"
 
+#: barchart/ui[3][1][1].label
 #: multcorresp/options/showObservations.title
 #: multcorresp/options/showObservationPlot.title
 #: principal/options/showObservations.title
@@ -4382,6 +4439,10 @@ msgstr "тек"
 msgid "Opacity"
 msgstr ""
 
+#: barchart/options/pointShape/opencircle.title
+msgid "Open circle"
+msgstr ""
+
 #: mrcrosstabs/options/optionname.title
 #: mrfrequencies/options/optionname.title
 #, fuzzy
@@ -4398,12 +4459,14 @@ msgstr "Опция аты"
 msgid "Option Variables"
 msgstr "Таңдау айнымалы"
 
+#: barplot/ui[1][0][0].label
 #: histogram/ui[2].label
-#: likertplot/ui[4][1][1][0].label
+#: likertplot/ui[4][1][0][0].label
 #: mrcrosstabs/options/optionname.default
 #: mrcrosstabs/results/crosstab.columns.title
 #: mrfrequencies/options/optionname.default
 #: mrfrequencies/results/responses.columns.title
+#: piechart/ui[1][0][0].label
 #, fuzzy
 msgid "Options"
 msgstr "Параметрлер"
@@ -4494,7 +4557,6 @@ msgstr ""
 
 #: R/mrcrosstabs.b.R
 #: likertplot/options/pValue/overall.title
-#: likertplot/ui[3][0][2][0]/pValue_overall.label
 #, fuzzy
 msgid "Overall"
 msgstr "Жалпы"
@@ -4690,7 +4752,6 @@ msgstr ""
 
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
-#: barplot/ui[1][0][0]/yaxis_percent.label
 #: mosaic/options/yAxis/percent.title
 #: mosaic/options/labelType/percent.title
 #: piechart/options/labels/percent.title
@@ -4699,7 +4760,6 @@ msgid "Percent"
 msgstr "Процент"
 
 #: likertplot/options/frequencies/percentages.title
-#: likertplot/ui[2][0][1][0]/frequencies_percentages.label
 #, fuzzy
 msgid "Percentages"
 msgstr "Пайыздық"
@@ -4758,7 +4818,7 @@ msgstr "Пінк пен жасыл"
 msgid "Plot"
 msgstr "График"
 
-#: likertplot/ui[4][2][1][0].label
+#: likertplot/ui[6][0][1][0].label
 #: multcorresp/ui[7][0][0][0].label
 #, fuzzy
 msgid "Plot Color"
@@ -4786,7 +4846,7 @@ msgstr ""
 #: mrfrequencies/ui[2].label
 #: mrfrequencies/ui[2][0][0][0].label
 #: multcorresp/ui[7].label
-#: piechart/ui[1][0][0].label
+#: piechart/ui[1][1][0].label
 #: qqplot/ui[2][1][0].label
 #: raincloud/ui[1][0][0].label
 #: scatterplot/ui[1][0][0].label
@@ -4799,7 +4859,7 @@ msgstr "Сурет опциялары"
 #: barplot/ui[7].label
 #: boxplot/ui[6].label
 #: histogram/ui[7].label
-#: likertplot/ui[8].label
+#: likertplot/ui[9].label
 #: linechart/ui[4].label
 #: lollipop/ui[7].label
 #: mosaic/ui[7].label
@@ -4835,6 +4895,7 @@ msgstr "Сурет түрі"
 msgid "Plots"
 msgstr "Суреттер"
 
+#: barchart/options/pointColor.title
 #: scatterplot/options/pointSize.title
 #, fuzzy
 msgid "Point"
@@ -5111,13 +5172,6 @@ msgstr "QLT"
 msgid "Quartimax"
 msgstr "Quartimax"
 
-#: likertplot/results/frequencies.columns.title
-#: likertplot/results/comp/uTestTable.columns.title
-#: likertplot/results/comp/kwTable.columns.title
-#, fuzzy
-msgid "Questions"
-msgstr "Сұрақтар"
-
 #: package/analyses/raincloud.title
 #: package/analyses/raincloud.menuTitle
 #: raincloud/options.title
@@ -5156,6 +5210,8 @@ msgid "Range"
 msgstr "Диапазон"
 
 #: barchart/options/textColor/red.title
+#: barchart/options/pointColor/red.title
+#: barchart/options/errorBarColor/red.title
 #: corresp/options/rowColor/red.title
 #: corresp/options/colColor/red.title
 #: histogram/options/fillColor/#E41A1C.title
@@ -5317,9 +5373,12 @@ msgstr "Регрессия сызығы"
 msgid "Reverse disposition"
 msgstr "Диспозицияны қайтару"
 
+#: likertplot/options/reverseLikert.title
+msgid "Reverse level order"
+msgstr ""
+
 #: barchart/options/reverseStack.title
 #: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
 #: mosaic/options/reverseStack.title
 #: mrcrosstabs/options/reverseStack.title
 #, fuzzy
@@ -5438,7 +5497,6 @@ msgstr "Айналу"
 #: barchart/options/facetBy/row.title
 #: barchart/ui[5][0][0][0][0]/facetBy_row.label
 #: barplot/options/facetBy/row.title
-#: barplot/ui[4][0][0][0]/facetBy_row.label
 #: boxplot/options/facetBy/row.title
 #: boxplot/ui[3][0][0][0]/facetBy_row.label
 #: corresp/options/rowColor.title
@@ -5449,7 +5507,6 @@ msgstr "Айналу"
 #: mosaic/options/facetBy/row.title
 #: mosaic/ui[4][0][0][0][0]/facetBy_row.label
 #: piechart/options/facetBy/row.title
-#: piechart/ui[4][0][0][0]/facetBy_row.label
 #: scatterplot/options/facetBy/row.title
 #: scatterplot/ui[3][0][0][0][0]/facetBy_row.label
 #, fuzzy
@@ -5682,6 +5739,10 @@ msgstr "Комплект 3"
 msgid "Several variables"
 msgstr "Бірнеше айнымалылар"
 
+#: barchart/options/pointShape.title
+msgid "Shape"
+msgstr ""
+
 #: scatterplot/options/groupShapes.title
 msgid "Shape by group"
 msgstr ""
@@ -5720,6 +5781,10 @@ msgstr "Жолдарды көрсету"
 msgid "Show normal curve"
 msgstr "Нормаль сызығын көрсету"
 
+#: barchart/options/showPoints.title
+msgid "Show observations"
+msgstr ""
+
 #: linechart/options/showPoint.title
 #, fuzzy
 msgid "Show points"
@@ -5748,6 +5813,7 @@ msgstr "Жеке мән"
 #: areachart/options/legendFontSize.title
 #: areachart/options/xAxisFontSize.title
 #: areachart/options/yAxisFontSize.title
+#: barchart/options/pointSize.title
 #: barchart/options/facetFontSize.title
 #: barchart/options/legendFontSize.title
 #: barchart/options/xAxisFontSize.title
@@ -5832,21 +5898,22 @@ msgid "Some values are missing from the contingency table."
 msgstr ""
 
 #: likertplot/options/sorting.title
-#: likertplot/ui[1][1][0].label
-#, fuzzy
-msgid "Sort Variables by Median"
-msgstr "Айнымалыларды орташа мән бойынша реттеу"
+#: likertplot/ui[4][0][1][0].label
+msgid "Sort Variables"
+msgstr ""
 
 #: barchart/options/order.title
 #: barchart/ui[1][2][0].label
 #: barplot/options/order.title
-#: barplot/ui[1][2][0].label
+#: barplot/ui[1][3][0].label
 #: lollipop/options/order.title
 #: lollipop/ui[2][1][0].label
 #: mrcrosstabs/options/order.title
 #: mrcrosstabs/ui[1][2][0].label
 #: mrfrequencies/options/order.title
 #: mrfrequencies/ui[1][1][0].label
+#: piechart/options/order.title
+#: piechart/ui[1][2][0].label
 #, fuzzy
 msgid "Sorting"
 msgstr "Сортировка"
@@ -5877,6 +5944,10 @@ msgstr "Сортировка (медиана бойынша)"
 msgid "Spectral"
 msgstr "Спектральдық"
 
+#: barchart/options/pointShape/square.title
+msgid "Square"
+msgstr ""
+
 #: principal/results/summaryTable.columns.title
 #, fuzzy
 msgid "SS Loadings"
@@ -5888,7 +5959,6 @@ msgstr "SS Жүктер"
 #: histogram/options/groupingN/stack.title
 #: histogram/ui[1][2][0]/groupingN_stack.label
 #: likertplot/options/type/stacked.title
-#: likertplot/ui[4][0][0][0]/type_stacked.label
 #: mrcrosstabs/options/bartype/stack.title
 #, fuzzy
 msgid "Stacked"
@@ -6003,7 +6073,7 @@ msgstr ""
 #: barplot/ui[7][1].label
 #: boxplot/ui[6][1].label
 #: histogram/ui[7][1].label
-#: likertplot/ui[8][1].label
+#: likertplot/ui[9][1].label
 #: linechart/ui[4][1].label
 #: lollipop/ui[7][1].label
 #: mosaic/ui[7][1].label
@@ -6151,7 +6221,6 @@ msgstr "Тесттер"
 
 #: mrcrosstabs/options/textColor.title
 #: piechart/options/labType/text.title
-#: piechart/ui[2][0][0][0]/labType_text.label
 #, fuzzy
 msgid "Text"
 msgstr "Мәтін"
@@ -6159,8 +6228,7 @@ msgstr "Мәтін"
 #: barplot/ui[2][0][1][1].label
 #: boxplot/ui[2][0][0][1].label
 #: corresp/ui[6][0][0][0].label
-#: likertplot/ui[5].label
-#: likertplot/ui[5][0][0][0].label
+#: likertplot/ui[6][0][0][0].label
 #: mrcrosstabs/ui[2][0][2][1].label
 #: mrfrequencies/ui[2][0][0][1].label
 #: multcorresp/ui[7][0][0][1].label
@@ -6176,6 +6244,7 @@ msgid "Text size"
 msgstr "Мәтін өлшемі"
 
 #: corresp/ui[6].label
+#: likertplot/ui[6].label
 #, fuzzy
 msgid "Text Size & Colors"
 msgstr "Мәтін Өлшемі және Түстері"
@@ -6446,7 +6515,7 @@ msgstr "Временной ряд"
 #: barplot/ui[7][0].label
 #: boxplot/ui[6][0].label
 #: histogram/ui[7][0].label
-#: likertplot/ui[8][0].label
+#: likertplot/ui[9][0].label
 #: linechart/ui[4][0].label
 #: lollipop/ui[7][0].label
 #: mosaic/ui[7][0].label
@@ -6481,7 +6550,6 @@ msgstr "Атау мәтіні"
 #: barplot/options/labelPosition/top.title
 #: barplot/options/legendPosition/top.title
 #: barplot/options/yAxisPosition/1.title
-#: barplot/ui[2][0][1][0]/labelPosition_top.label
 #: boxplot/options/legendPosition/top.title
 #: boxplot/options/yAxisPosition/1.title
 #: corresp/options/yAxisPosition/1.title
@@ -6515,7 +6583,10 @@ msgstr "Атау мәтіні"
 msgid "Top"
 msgstr "Жоғары"
 
+#: R/mrcrosstabs.b.R
+#: R/mrfrequencies.b.R
 #: R/multcorresp.b.R
+#: R/utilsData.R
 #: mrfrequencies/options/showTotal.title
 #, fuzzy
 msgid "Total"
@@ -6626,6 +6697,12 @@ msgstr "Айнымалының сипаттамасын аты ретінде қ
 msgid "Value Labels"
 msgstr "Мäнділік тақырыптары"
 
+#: barplot/options/showLabels.title
+#: mrcrosstabs/options/showLabels.title
+#: mrfrequencies/options/showLabels.title
+msgid "Value labels"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 #: lollipop/options/yaxis/identity.title
@@ -6688,6 +6765,9 @@ msgstr "Айнымалы суреті"
 #: areachart/ui/mode/severalVariables[0][0][1].label
 #: boxplot/options/vars.title
 #: boxplot/ui[0][0].label
+#: likertplot/results/frequencies.columns.title
+#: likertplot/results/comp/uTestTable.columns.title
+#: likertplot/results/comp/kwTable.columns.title
 #: linechart/options/vars.title
 #: linechart/ui[0][1].label
 #: multcorresp/options/vars.title
@@ -6858,6 +6938,10 @@ msgstr "Viridis:Viridis"
 msgid "Weibull"
 msgstr "Вейбулл"
 
+#: boxplot/options/whiskers.title
+msgid "Whiskers"
+msgstr ""
+
 #: barchart/options/borderColor/white.title
 #: barchart/options/textColor/white.title
 #: barplot/options/borderColor/white.title
@@ -6888,13 +6972,11 @@ msgid "Width"
 msgstr "Ені"
 
 #: barplot/options/percentWithin/category.title
-#: barplot/ui[1][0][0]/yaxis_percent/percentWithin_category.label
 #, fuzzy
 msgid "Within categories"
 msgstr "Санаттар ішінде"
 
 #: barplot/options/percentWithin/group.title
-#: barplot/ui[1][0][0]/yaxis_percent/percentWithin_gGroup.label
 #, fuzzy
 msgid "Within groups"
 msgstr "Топтар ішінде"
@@ -6923,7 +7005,7 @@ msgstr "Параметр мәндері қате"
 #: corresp/ui[7][0].label
 #: histogram/ui[5][0][0][0].label
 #: histogram/ui[6][1].label
-#: likertplot/ui[6][0][0][0].label
+#: likertplot/ui[7][0][0][0].label
 #: linechart/options/timeVar.title
 #: linechart/ui[0][0].label
 #: linechart/ui[1][1][0].label
@@ -6999,7 +7081,7 @@ msgstr "X-Аксис диапазоны"
 #: barchart/ui[6][0][1][0].label
 #: barchart/ui[7][2].label
 #: barplot/options/yaxis.title
-#: barplot/ui[1][0][0].label
+#: barplot/ui[1][1][0].label
 #: barplot/ui[5][0][1][0].label
 #: barplot/ui[6][2].label
 #: boxplot/ui[4][0][1][0].label
@@ -7009,7 +7091,7 @@ msgstr "X-Аксис диапазоны"
 #: histogram/ui[1][0][0].label
 #: histogram/ui[5][0][1][0].label
 #: histogram/ui[6][2].label
-#: likertplot/ui[6][0][1][0].label
+#: likertplot/ui[7][0][1][0].label
 #: linechart/ui[2][0][1][0].label
 #: linechart/ui[3][2].label
 #: lollipop/options/yaxis.title

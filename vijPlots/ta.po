@@ -13,7 +13,12 @@ msgstr ""
 "X-Generator: Weblate 2026.7.dev0\n"
 
 #: R/areachart.b.R
+#: R/barchart.b.R
+#: R/barplot.b.R
 #: R/linechart.b.R
+#: R/lollipop.b.R
+#: R/mosaic.b.R
+#: R/piechart.b.R
 msgid "\"{var}\" is a reserved name. Please rename this variable."
 msgstr ""
 
@@ -27,6 +32,10 @@ msgstr ""
 #: R/areachart.b.R
 #: R/linechart.b.R
 msgid "\"Tick Count\" option for the X-axis is only available for numeric variables."
+msgstr ""
+
+#: R/utils.R
+msgid "(Missing)"
 msgstr ""
 
 #: R/qqplot.b.R
@@ -92,6 +101,8 @@ msgid "# of rows/columns"
 msgstr "# என்கழு/அழ்கழு"
 
 #: barchart/ui[3][0][0]/errorBars_ci/ciLevel.suffix
+#: barplot/results/frequencies.columns.title
+#: piechart/results/frequencies.columns.title
 #, fuzzy
 msgid "%"
 msgstr "%"
@@ -99,7 +110,7 @@ msgstr "%"
 #: barplot/options/accuracy.title
 #: barplot/ui[2][0][2][0].label
 #: likertplot/options/accuracy.title
-#: likertplot/ui[4][0][2][0].label
+#: likertplot/ui[5][0][1][0].label
 #: mrcrosstabs/options/accuracy.title
 #: mrcrosstabs/ui[2][0][2][0].label
 #: mrfrequencies/options/accuracy.title
@@ -122,7 +133,7 @@ msgstr "எதலுகள் கழு எதலுகள்"
 msgid "% Inertia"
 msgstr "% தன்மை"
 
-#: likertplot/ui[4][1][0][0].label
+#: likertplot/ui[5][0][0][0].label
 #, fuzzy
 msgid "% Labels"
 msgstr "% பெயரிடல்கள்"
@@ -134,6 +145,7 @@ msgstr "% பெயரிடல்கள்"
 msgid "% of Cases"
 msgstr "% வழிகள்"
 
+#: R/mrcrosstabs.b.R
 #: mrcrosstabs/options/computedValues/cases.title
 #: mrfrequencies/options/showCases.title
 #: mrfrequencies/options/yaxis/cases.title
@@ -183,8 +195,9 @@ msgid ""
 "order in table and graph (when some variables miss some levels).</li>\n"
 "<li><strong>Convert variables to integer:</strong> when checked, the level "
 "labels are ignored and only integer values are used.</li>\n"
-"<li><strong>Sort Variables by Median:</strong> orders the list of Likert "
-"variables by median.</li>\n"
+"<li><strong>Sort Variables:</strong> orders the Likert variables by the "
+"proportion of answers in the upper half of the scale (middle level "
+"excluded).</li>\n"
 "</ul>\n"
 "<h3>Comparison Tests</h3>\n"
 "<p>When using a group variable, several tests are available:</p>\n"
@@ -195,8 +208,8 @@ msgid ""
 "Dwass-Steel-Critchlow-Fligner (DSCF) pairwise comparisons tests.</li>\n"
 "</ul>\n"
 "<p>The p-values can be adjusted <strong>groupwise</strong> (for each "
-"question) for post hoc tests or <strong>overall</strong> (groupwise and "
-"questionwise) for Mann-Whitney U, Kruskal-Wallis and post hoc tests. DSCF "
+"variable) for post hoc tests or <strong>overall</strong> (groupwise and "
+"variablewise) for Mann-Whitney U, Kruskal-Wallis and post hoc tests. DSCF "
 "p-values are already adjusted (groupwise); no other adjustment is "
 "possible.</p>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
@@ -362,10 +375,9 @@ msgstr ""
 "<p>எதலுகள் எதின்கு கழு Open > Data Library > vijPlots > Credit Cards</p>"
 
 #: R/qqplot.b.R
-#, fuzzy
 msgid ""
 "<p>This module uses <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
-"target=\"_blank\">qqplotr R package<a/> by Alexandre Almeida, Adam Loy and "
+"target=\"_blank\">qqplotr R package</a> by Alexandre Almeida, Adam Loy and "
 "Heike Hofmann. In-depth information can be found in the package "
 "documentation on CRAN site.</p>\n"
 "<p><strong>Reference line:</strong> Draws either the <em>identity line</em> "
@@ -409,55 +421,8 @@ msgid ""
 "<li><strong>Parameter 2:</strong> sd (normal), sdlog (Log-normal), shape2 "
 "(Beta), scale (Cauchy, Logistic), df2 (F), rate (Gamma, Weibull) and max "
 "(Uniform).</li>\n"
-"</ul>\n"
-"</p>"
+"</ul>"
 msgstr ""
-"<p>இந்த மாடியூல் <a href = \"https://CRAN.R-project.org/package=qqplotr\" "
-"target=\"_blank\">qqplotr R பைக்கேஜ்<a/> அலெக்சாண்ட்ரே அல்மெய்டா, ஆடம் லொய் மற்றும் ஹைக் "
-"ஹோஃப்மன் ஆகியோரால் பயன்படுத்தப்படுகிறது. ஆழமான தகவல்கள் CRAN தளத்தில் உள்ள பைக்கேஜ் "
-"ஆவணங்களில் காணப்படலாம்.</p>\n"
-"<p><strong>மேற்கோள் வரிசை:</strong> அடையாள வரிசை (y = x) அல்லது பொதுவாகப் "
-"பயன்படுத்தப்படும் Q-Q வரிசையை வரையறுக்கிறது. இரண்டு தரவு குவாண்டைல்களை (Q<sub>0.25</"
-"sub> மற்றும் Q<sub>0.75</sub>) வெட்டுகிறது. P-P புளோட் அடையாள வரிசையை மட்டுமே "
-"ஆதரிக்கிறது.</p>\n"
-"<p><strong>நம்பிக்கை பட்டை:</strong> மேற்கோள் வரிசையைச் சுற்றி ஒரு நம்பிக்கை பட்டையை "
-"வரையறுக்கிறது. qqplotr பைக்கேஜ் நம்பிக்கை பட்டையை கணக்கிட பல முறைகளை வழங்குகிறது:</p>"
-"\n"
-"<ul>\n"
-"<li><strong><em>புள்ளிக்கு புள்ளி</em></strong> நார்மல் நம்பிக்கை இடைவெளிகளின் "
-"அடிப்படையில் புள்ளிக்கு புள்ளி நம்பிக்கை பட்டைகளை கட்டமைக்கிறது;</li>\n"
-"<li><strong><em>பூட்ஸ்ட்ராப்</em></strong> ஒரு பராமீட்டிரிக் பூட்ஸ்ட்ராப்பின் அடிப்படையில் "
-"புள்ளிக்கு புள்ளி நம்பிக்கை பட்டைகளை உருவாக்குகிறது;</li>\n"
-"<li><strong><em>கோல்மோகோரோவ்-ஸ்மிர்னோவ்</em></strong> பட்டை கோல்மோகோரோவ்-ஸ்மிர்னோவ் "
-"சோதனையின் அடிப்படையில் அமைந்துள்ளது;</li>\n"
-"<li><strong><em>டெயில்-சென்சிடிவ்</em></strong> ஒரு டெயில்-சென்சிடிவ் நம்பிக்கை "
-"பட்டைகளை கட்டமைக்கிறது, ஆனால் இது நார்மல் Q-Q புளோட்களுக்கு மட்டுமே "
-"நடைமுறைப்படுத்தப்பட்டுள்ளது;</li>\n"
-"<li><strong><em>சமமான உள்ளூர் நிலைகள் (ELL)</em></strong> சமமான உள்ளூர் நிலைகளைப் "
-"பயன்படுத்தி ஒரே நேர பட்டைகளை கட்டமைக்கிறது.</li>\n"
-"</ul>\n"
-"<p>P-P புளோட்கள் \"ELL\" மற்றும் \"பூட்ஸ்ட்ராப்\" முறைகளை மட்டுமே ஆதரிக்கின்றன.</p>\n"
-"<p><strong>டீட்ரெண்டட் புளோட்:</strong> பொருட்கள் மேற்கோள் வரிசைப்படி <em>டீட்ரெண்டட்</em> "
-"செய்யப்படுகின்றன. இந்த செயல்முறை மேற்கோள் வரிசையிலிருந்து புள்ளிகளின் செங்குத்து தூரங்களால் "
-"ஏற்படும் காட்சி பழுதை குறைக்க உதவும்.</p>\n"
-"<p><strong>பராமீட்டர் மதிப்புகள்:</strong> விநியோக பராமீட்டர்கள் தரவுகளிலிருந்து முறையாக "
-"மதிப்பிடப்படலாம்:</p>\n"
-"<ul>\n"
-"<li><strong>அதிகபட்ச அளவு முறை</strong> (MASS பைக்கேஜைப் பயன்படுத்தி): இது \"t\" "
-"மற்றும் \"சீரற்ற\" தவிர அனைத்து விநியோகங்களுடனும் வேலை செய்ய வேண்டும்;</li>\n"
-"<li><strong>மோமென்ட் முறை</strong> தரவுகளின் தரவுகளின் அடிப்படையில்: இது \"சாதாரண\", "
-"\"லாக்-சாதாரண\", \"பீட்டா\", \"எக்ஸ்போனென்ஷியல்\", \"காமா\", \"லாஜிஸ்டிக்\" மற்றும் \"சீரற்ற\" "
-"விநியோகங்களுடன் வேலை செய்ய வேண்டும்;</li>\n"
-"</ul>\n"
-"<p>அல்லது பயனரால் உள்ளீடு செய்யப்படுகிறது:</p>\n"
-"<ul>\n"
-"<li><strong>பராமீட்டர் 1:</strong> சாதாரண (சாதாரண), meanlog (லாக்-சாதாரண), shape1 (பீட்டா), "
-"இடம் (காசி, லாஜிஸ்டிக்), df (கை-சேர்க்கப்பட்ட, மாணவர்), df1 (F), விகிதம் (எக்ஸ்போனென்ஷியல்), "
-"வடிவம் (காமா, வெய்புல்) மற்றும் min (சீரற்ற);</li>\n"
-"<li><strong>பராமீட்டர் 2:</strong> sd (சாதாரண), sdlog (லாக்-சாதாரண), shape2 (பீட்டா), "
-"அளவு (காசி, லாஜிஸ்டிக்), df2 (F), விகிதம் (காமா, வெய்புல்) மற்றும் max (சீரற்ற).</li>\n"
-"</ul>\n"
-"</p>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -482,6 +447,10 @@ msgstr "1 வாரம்"
 #, fuzzy
 msgid "1 year"
 msgstr "1 வருடம்"
+
+#: boxplot/options/whiskers/tukey.title
+msgid "1.5 × IQR (Tukey)"
+msgstr ""
 
 #: areachart/options/dateBreak/10year.title
 #: linechart/options/dateBreak/10year.title
@@ -562,6 +531,10 @@ msgstr "2035-10-20"
 #: areachart/options/dateBreak/25year.title
 #: linechart/options/dateBreak/25year.title
 msgid "25 years"
+msgstr ""
+
+#: boxplot/options/whiskers/tukey3.title
+msgid "3 × IQR"
 msgstr ""
 
 #: areachart/options/dateBreak/3month.title
@@ -724,6 +697,10 @@ msgstr "ஆல்பா"
 msgid "Always show group legend"
 msgstr ""
 
+#: piechart/options/alwaysShowLegend.title
+msgid "Always show legend"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 #, fuzzy
@@ -751,10 +728,13 @@ msgid "Arrows"
 msgstr "அம்புகள்"
 
 #: likertplot/options/sorting/ascending.title
-#: likertplot/ui[1][1][0]/sorting_ascending.label
 #, fuzzy
 msgid "Ascending"
 msgstr "ஏறுவரிசை"
+
+#: R/qqplot.b.R
+msgid "At least two observations are required."
+msgstr ""
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -810,7 +790,7 @@ msgstr "ஆட்டோ"
 #: barplot/ui[5].label
 #: boxplot/ui[4].label
 #: histogram/ui[5].label
-#: likertplot/ui[6].label
+#: likertplot/ui[7].label
 #: linechart/ui[2].label
 #: lollipop/ui[5].label
 #: mosaic/ui[5].label
@@ -852,7 +832,7 @@ msgstr "பட்டை படம்"
 #: barchart/options/barType.title
 #: barchart/ui[1][1][0].label
 #: barplot/options/barType.title
-#: barplot/ui[1][1][0].label
+#: barplot/ui[1][2][0].label
 #: mrcrosstabs/options/bartype.title
 #: mrcrosstabs/ui[2][0][1][0].label
 #, fuzzy
@@ -937,6 +917,8 @@ msgstr "பைப்ளாட் வகை"
 
 #: barchart/options/borderColor/black.title
 #: barchart/options/textColor/black.title
+#: barchart/options/pointColor/black.title
+#: barchart/options/errorBarColor/black.title
 #: barplot/options/borderColor/black.title
 #: barplot/options/textColor/black.title
 #: corresp/options/supColor/black.title
@@ -1293,13 +1275,11 @@ msgid "BY"
 msgstr "BY"
 
 #: likertplot/options/groupBy/group.title
-#: likertplot/ui[4][0][1][0]/groupBy_group.label
 #, fuzzy
 msgid "By group"
 msgstr "குழு வாரியாக"
 
 #: likertplot/options/groupBy/variable.title
-#: likertplot/ui[4][0][1][0]/groupBy_variable.label
 #, fuzzy
 msgid "By variable"
 msgstr "மாறியாக"
@@ -1308,6 +1288,10 @@ msgstr "மாறியாக"
 #, fuzzy
 msgid "Cannot convert text variables to integers"
 msgstr "வசன மாறிகளை பகுப்புகளாக மாற்ற முடியவில்லை"
+
+#: R/likertplot.b.R
+msgid "Cannot tidy up levels: the same label is used for different values."
+msgstr ""
 
 #: R/likertplot.b.R
 #, fuzzy
@@ -1319,7 +1303,7 @@ msgstr "வரித் தொடர்களை சுத்தம் செய
 #: barplot/ui[7][2].label
 #: boxplot/ui[6][2].label
 #: histogram/ui[7][2].label
-#: likertplot/ui[8][2].label
+#: likertplot/ui[9][2].label
 #: linechart/ui[4][2].label
 #: lollipop/ui[7][2].label
 #: mosaic/ui[7][2].label
@@ -1551,7 +1535,6 @@ msgid "Center"
 msgstr "மையம்"
 
 #: likertplot/options/type/centered.title
-#: likertplot/ui[4][0][0][0]/type_centered.label
 #, fuzzy
 msgid "Centered"
 msgstr "பேன்கழுகழ"
@@ -1561,6 +1544,10 @@ msgstr "பேன்கழுகழ"
 #, fuzzy
 msgid "Chi-squared"
 msgstr "கை-சதுரம்"
+
+#: barchart/options/pointShape/circle.title
+msgid "Circle"
+msgstr ""
 
 #: piechart/options/clockwise.title
 msgid "Clockwise"
@@ -1629,7 +1616,6 @@ msgstr "வண்ணங்கள் & விருப்பங்கள்"
 #: barchart/options/facetBy/column.title
 #: barchart/ui[5][0][0][0][0]/facetBy_column.label
 #: barplot/options/facetBy/column.title
-#: barplot/ui[4][0][0][0]/facetBy_column.label
 #: boxplot/options/facetBy/column.title
 #: boxplot/ui[3][0][0][0]/facetBy_column.label
 #: corresp/options/colColor.title
@@ -1640,7 +1626,6 @@ msgstr "வண்ணங்கள் & விருப்பங்கள்"
 #: mosaic/options/facetBy/column.title
 #: mosaic/ui[4][0][0][0][0]/facetBy_column.label
 #: piechart/options/facetBy/column.title
-#: piechart/ui[4][0][0][0]/facetBy_column.label
 #: scatterplot/options/facetBy/column.title
 #: scatterplot/ui[3][0][0][0][0]/facetBy_column.label
 #, fuzzy
@@ -1756,7 +1741,6 @@ msgid "Connect ordinal categories"
 msgstr "எழ்கழு அழ்கழுகள்கழ"
 
 #: likertplot/options/postHoc/conover.title
-#: likertplot/ui[3][0][1][0]/postHoc_conover.label
 #, fuzzy
 msgid "Conover"
 msgstr "கோனோவர்"
@@ -1830,7 +1814,6 @@ msgstr "COS2"
 #: R/histogram.b.R
 #: R/mrcrosstabs.b.R
 #: barplot/options/yaxis/count.title
-#: barplot/ui[1][0][0]/yaxis_count.label
 #: histogram/options/histtype/count.title
 #: histogram/ui[1][0][0]/histtype_count.label
 #: mosaic/options/labelType/count.title
@@ -1838,12 +1821,6 @@ msgstr "COS2"
 #, fuzzy
 msgid "Count"
 msgstr "எண்ணிக்கை"
-
-#: barplot/options/showLabels.title
-#: mrcrosstabs/options/showLabels.title
-#: mrfrequencies/options/showLabels.title
-msgid "Count labels"
-msgstr ""
 
 #: mrcrosstabs/options/endorsed.title
 #: mrfrequencies/options/endorsed.title
@@ -1857,12 +1834,13 @@ msgid "Counted value string may not be empty."
 msgstr ""
 
 #: R/mrfrequencies.b.R
+#: barplot/results/frequencies.columns.title
 #: likertplot/options/frequencies/counts.title
-#: likertplot/ui[2][0][1][0]/frequencies_counts.label
 #: mrcrosstabs/options/computedValues/count.title
 #: mrfrequencies/options/showCounts.title
 #: mrfrequencies/options/yaxis/counts.title
 #: mrfrequencies/results/responses.columns.title
+#: piechart/results/frequencies.columns.title
 #, fuzzy
 msgid "Counts"
 msgstr "எண்ணிக்கை"
@@ -1879,28 +1857,21 @@ msgstr "எண்ணிக்கை"
 msgid "Counts (optional)"
 msgstr "எண்ணிக்கைகள் (விருப்பமானது)"
 
-#: R/barplot.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not all be zero."
 msgstr ""
 
-#: R/barplot.b.R
 #: R/corresp.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not be infinite."
 msgstr ""
 
-#: R/barplot.b.R
 #: R/corresp.b.R
-#: R/mosaic.b.R
-#: R/piechart.b.R
+#: R/utilsData.R
 msgid "Counts may not be negative."
 msgstr ""
 
-#: R/barplot.b.R
-#: R/mosaic.b.R
+#: R/utilsData.R
 msgid "Counts may not contain missing values."
 msgstr ""
 
@@ -1948,8 +1919,10 @@ msgid "Crosstab (% of responses)"
 msgstr "குறுக்கு அட்டவணை (% பதில்கள்)"
 
 #: R/multcorresp.b.R
+#: barplot/results/frequencies.columns.title
 #: corresp/results/eigenvalues.columns.title
 #: multcorresp/results/eigenvalues.columns.title
+#: piechart/results/frequencies.columns.title
 #: principal/results/summaryTable.columns.title
 #, fuzzy
 msgid "Cumulative %"
@@ -2020,7 +1993,6 @@ msgstr "பத்தி தெளிவு"
 #: barchart/options/order/decreasing.title
 #: barchart/ui[1][2][0]/order_decreasing.label
 #: barplot/options/order/decreasing.title
-#: barplot/ui[1][2][0]/order_decreasing.label
 #: boxplot/options/order/decreasing.title
 #: boxplot/ui[1][1][0]/order_decreasing.label
 #: lollipop/options/order/decreasing.title
@@ -2031,6 +2003,7 @@ msgstr "பத்தி தெளிவு"
 #: mrcrosstabs/ui[1][2][0]/order_decreasing.label
 #: mrfrequencies/options/order/decreasing.title
 #: mrfrequencies/ui[1][1][0]/order_decreasing.label
+#: piechart/options/order/decreasing.title
 #, fuzzy
 msgid "Decreasing"
 msgstr "குறைந்து"
@@ -2088,7 +2061,6 @@ msgid "Density opacity"
 msgstr "அடர்த்தி ஒளிருமை"
 
 #: likertplot/options/sorting/descending.title
-#: likertplot/ui[1][1][0]/sorting_descending.label
 #, fuzzy
 msgid "Descending"
 msgstr "இறங்குமுகம்"
@@ -2212,7 +2184,6 @@ msgid "Draw staples"
 msgstr "ஸ்டேபிள்களை வரையுங்கள்"
 
 #: likertplot/options/postHoc/dscf.title
-#: likertplot/ui[3][0][1][0]/postHoc_dscf.label
 #, fuzzy
 msgid "DSCF"
 msgstr "DSCF"
@@ -2229,7 +2200,6 @@ msgid "Dummy Variables"
 msgstr "டம்மி மாறிகள்"
 
 #: likertplot/options/postHoc/dunn.title
-#: likertplot/ui[3][0][1][0]/postHoc_dunn.label
 #, fuzzy
 msgid "Dunn"
 msgstr "Dunn"
@@ -2271,6 +2241,10 @@ msgstr "சம உள்ளூர் நிலைகள்"
 msgid "Equamax"
 msgstr "எழ்கழுகள்கழ"
 
+#: barchart/options/errorBarColor.title
+msgid "Error bar"
+msgstr ""
+
 #: package/analyses/barchart.title
 #: package/analyses/barchart.menuTitle
 #: barchart/options.title
@@ -2285,11 +2259,14 @@ msgid "Error Bar Size"
 msgstr "பிழை பட்டை அளவு"
 
 #: barchart/options/errorBars.title
-#: barchart/ui[3].label
 #: barchart/ui[3][0][0].label
 #, fuzzy
 msgid "Error Bars"
 msgstr "பிழை பட்டைகள்"
+
+#: barchart/ui[3].label
+msgid "Error Bars & Observations"
+msgstr ""
 
 #: qqplot/options/paramMethod/paraEstimate.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimate.label
@@ -2524,12 +2501,16 @@ msgstr "அதிர்வெண்கள்"
 msgid "Frequency Plot"
 msgstr "அதிர்வெண் படம்"
 
+#: barplot/results/frequencies.title
 #: likertplot/results/frequencies.title
+#: piechart/results/frequencies.title
 #, fuzzy
 msgid "Frequency Table"
 msgstr "அதிர்வெண் அட்டவணை"
 
+#: barplot/options/frequencyTable.title
 #: likertplot/options/frequencyTable.title
+#: piechart/options/frequencyTable.title
 #, fuzzy
 msgid "Frequency table"
 msgstr "அதிர்வெண் அட்டவணை"
@@ -2672,6 +2653,8 @@ msgid "Ggsci:NPG"
 msgstr ""
 
 #: barchart/options/borderColor/gray.title
+#: barchart/options/pointColor/gray.title
+#: barchart/options/errorBarColor/gray.title
 #: barplot/options/borderColor/gray.title
 #: corresp/options/supColor/darkgray.title
 #: histogram/options/fillColor/#999999.title
@@ -2788,6 +2771,33 @@ msgstr "சாம்பல்"
 msgid "Greys"
 msgstr "சாம்பல்"
 
+#: areachart/options/xGridLines.title
+#: areachart/options/yGridLines.title
+#: barchart/options/xGridLines.title
+#: barchart/options/yGridLines.title
+#: barplot/options/xGridLines.title
+#: barplot/options/yGridLines.title
+#: boxplot/options/xGridLines.title
+#: boxplot/options/yGridLines.title
+#: histogram/options/xGridLines.title
+#: histogram/options/yGridLines.title
+#: linechart/options/xGridLines.title
+#: linechart/options/yGridLines.title
+#: lollipop/options/xGridLines.title
+#: lollipop/options/yGridLines.title
+#: mrcrosstabs/options/xGridLines.title
+#: mrcrosstabs/options/yGridLines.title
+#: mrfrequencies/options/xGridLines.title
+#: mrfrequencies/options/yGridLines.title
+#: qqplot/options/xGridLines.title
+#: qqplot/options/yGridLines.title
+#: raincloud/options/xGridLines.title
+#: raincloud/options/yGridLines.title
+#: scatterplot/options/xGridLines.title
+#: scatterplot/options/yGridLines.title
+msgid "Grid lines"
+msgstr ""
+
 #: areachart/options/group.title
 #: areachart/ui/mode/oneVariable[0][0][2].label
 #: barchart/options/group.title
@@ -2799,7 +2809,6 @@ msgstr "சாம்பல்"
 #: histogram/options/group.title
 #: histogram/ui[0][1].label
 #: likertplot/options/groupSize.title
-#: likertplot/ui[4][0][1][0].label
 #: linechart/options/group.title
 #: linechart/ui[0][2].label
 #: lollipop/options/group.title
@@ -2837,7 +2846,16 @@ msgstr "குழு + எண்ணிக்கை"
 msgid "Group + Percent"
 msgstr "குழு + சதவீதம்"
 
+#: likertplot/results/comp/pwTable.columns.title
+msgid "Group 1"
+msgstr ""
+
+#: likertplot/results/comp/pwTable.columns.title
+msgid "Group 2"
+msgstr ""
+
 #: likertplot/options/groupBy.title
+#: likertplot/ui[1][1][0].label
 #, fuzzy
 msgid "Group By"
 msgstr "குழுவாக்கவும்"
@@ -2879,7 +2897,6 @@ msgid "Grouping Variable"
 msgstr "எழ்கழு அழ்கழுகள்கழ"
 
 #: likertplot/options/pValue/group.title
-#: likertplot/ui[3][0][2][0]/pValue_group.label
 #, fuzzy
 msgid "Groupwise"
 msgstr "குழுவாரியாக"
@@ -2893,13 +2910,45 @@ msgstr "குழுவாரியாக"
 msgid "hidden"
 msgstr ""
 
+#: barplot/options/hideLabelsBelow.title
 #: likertplot/options/hideLabelsBelow.title
-#, fuzzy
-msgid "Hide % labels below 5%"
-msgstr "5% என்கழு அழ்கழுகள்கழ என்கழு"
+#: mrcrosstabs/options/hideLabelsBelow.title
+msgid "Hide % below 5%"
+msgstr ""
 
 #: mosaic/options/hideAxes.title
 msgid "Hide axes"
+msgstr ""
+
+#: areachart/options/xHideAxis.title
+#: areachart/options/yHideAxis.title
+#: barchart/options/xHideAxis.title
+#: barchart/options/yHideAxis.title
+#: barplot/options/xHideAxis.title
+#: barplot/options/yHideAxis.title
+#: boxplot/options/xHideAxis.title
+#: boxplot/options/yHideAxis.title
+#: histogram/options/xHideAxis.title
+#: histogram/options/yHideAxis.title
+#: linechart/options/xHideAxis.title
+#: linechart/options/yHideAxis.title
+#: lollipop/options/xHideAxis.title
+#: lollipop/options/yHideAxis.title
+#: mrcrosstabs/options/xHideAxis.title
+#: mrcrosstabs/options/yHideAxis.title
+#: mrfrequencies/options/xHideAxis.title
+#: mrfrequencies/options/yHideAxis.title
+#: qqplot/options/xHideAxis.title
+#: qqplot/options/yHideAxis.title
+#: raincloud/options/xHideAxis.title
+#: raincloud/options/yHideAxis.title
+#: scatterplot/options/xHideAxis.title
+#: scatterplot/options/yHideAxis.title
+msgid "Hide axis"
+msgstr ""
+
+#: piechart/options/hideLabelsBelow.title
+msgid "Hide labels below 5%"
 msgstr ""
 
 #: package/analyses/histogram.title
@@ -2956,18 +3005,20 @@ msgstr "கிடைமட்ட வரைபடம்"
 msgid "Identity line"
 msgstr "அடையாள அச்சு"
 
+#: areachart/options/ignoreNA.title
 #: barchart/options/ignoreNA.title
+#: boxplot/options/ignoreNA.title
 #: likertplot/options/ignoreNA.title
+#: linechart/options/ignoreNA.title
 #: raincloud/options/ignoreNA.title
+#: scatterplot/options/ignoreNA.title
 #, fuzzy
 msgid "Ignore missing groups"
 msgstr "காணாத குழுக்களை புறக்கணிக்கவும்"
 
-#: areachart/options/ignoreNA.title
 #: barplot/options/ignoreNA.title
-#: boxplot/options/ignoreNA.title
-#: linechart/options/ignoreNA.title
 #: mosaic/options/ignoreNA.title
+#: piechart/options/ignoreNA.title
 #, fuzzy
 msgid "Ignore missing values"
 msgstr "காணாத மதிப்புகளை புறக்கணிக்கவும்"
@@ -2980,7 +3031,6 @@ msgstr "பெயர் காட்சியை மேம்படுத்த�
 #: barchart/options/order/increasing.title
 #: barchart/ui[1][2][0]/order_increasing.label
 #: barplot/options/order/increasing.title
-#: barplot/ui[1][2][0]/order_increasing.label
 #: boxplot/options/order/increasing.title
 #: boxplot/ui[1][1][0]/order_increasing.label
 #: lollipop/options/order/increasing.title
@@ -2991,6 +3041,7 @@ msgstr "பெயர் காட்சியை மேம்படுத்த�
 #: mrcrosstabs/ui[1][2][0]/order_increasing.label
 #: mrfrequencies/options/order/increasing.title
 #: mrfrequencies/ui[1][1][0]/order_increasing.label
+#: piechart/options/order/increasing.title
 #, fuzzy
 msgid "Increasing"
 msgstr "அதிகரிப்பு"
@@ -3254,7 +3305,6 @@ msgstr "஍ழ்கழு-உழ்கழ எழ்கழுகள்கழ"
 #: piechart/options/labType/label.title
 #: piechart/options/labSize.title
 #: piechart/options/textColor.title
-#: piechart/ui[2][0][0][0]/labType_label.label
 #: principal/options/labelVar.title
 #: principal/ui[1][1].label
 #: scatterplot/options/labelVar.title
@@ -3353,7 +3403,7 @@ msgstr "பெயரிடல் நிலை"
 msgid "Label rotation"
 msgstr "பெயர் சுழற்சி"
 
-#: likertplot/ui[4][2][0][0].label
+#: likertplot/ui[4][1][1][0].label
 #, fuzzy
 msgid "Label Size"
 msgstr "பெயரிடல் அளவு"
@@ -3363,8 +3413,9 @@ msgstr "பெயரிடல் அளவு"
 msgid "Label Type"
 msgstr ""
 
+#: likertplot/ui[5].label
 #: piechart/options/labels.title
-#: piechart/ui[1][1][0].label
+#: piechart/ui[1][3][0].label
 #: piechart/ui[2].label
 #: principal/options/labelColor.title
 #, fuzzy
@@ -3473,7 +3524,7 @@ msgstr "இடது"
 #: barplot/ui[6][0].label
 #: boxplot/ui[5][0].label
 #: histogram/ui[6][0].label
-#: likertplot/ui[7][0].label
+#: likertplot/ui[8][0].label
 #: linechart/ui[3][0].label
 #: mosaic/options/showOpacityLegend.title
 #: mosaic/ui[6][0].label
@@ -3507,7 +3558,7 @@ msgstr "குறிப்பு"
 msgid "Legend & Axis Titles"
 msgstr "தொனிப்பாட்டு மற்றும் அச்சு தலைப்புகள்"
 
-#: likertplot/ui[7].label
+#: likertplot/ui[8].label
 #, fuzzy
 msgid "Legend Title"
 msgstr "தொன்ம தலைப்பு"
@@ -3936,7 +3987,6 @@ msgid "Method: {method}"
 msgstr ""
 
 #: barplot/options/labelPosition/middle.title
-#: barplot/ui[2][0][1][0]/labelPosition_middle.label
 #: mrcrosstabs/options/labelPosition/middle.title
 #: mrcrosstabs/ui[2][0][0][1]/labelPosition_middle.label
 #: mrfrequencies/options/labelPosition/middle.title
@@ -3983,6 +4033,10 @@ msgstr "மின்"
 msgid "Min / Max"
 msgstr "மின் / அதிகபட்சம்"
 
+#: boxplot/options/whiskers/minmax.title
+msgid "Min–max"
+msgstr ""
+
 #: principal/options/rotation/entropy.title
 #, fuzzy
 msgid "Minimum entropy"
@@ -3993,6 +4047,10 @@ msgstr "குறைந்தபட்ச எந்திரோப்பி"
 #, fuzzy
 msgid "Minimum of {var}"
 msgstr "{var} இன் குறைந்தபட்சம்"
+
+#: R/utilsData.R
+msgid "Missing values: {n}"
+msgstr ""
 
 #: package/analyses/mosaic.title
 #: package/analyses/mosaic.menuTitle
@@ -4086,15 +4144,12 @@ msgstr "சுழற்சி பயன்படுத்தப்படவி�
 #: barchart/ui[1][2][0]/order_none.label
 #: barplot/options/order/none.title
 #: barplot/options/borderColor/none.title
-#: barplot/ui[1][2][0]/order_none.label
 #: boxplot/options/order/none.title
 #: boxplot/ui[1][1][0]/order_none.label
 #: histogram/options/fillColor/none.title
 #: histogram/options/borderColor/none.title
 #: likertplot/options/sorting/none.title
 #: likertplot/options/pValue/none.title
-#: likertplot/ui[1][1][0]/sorting_none.label
-#: likertplot/ui[3][0][2][0]/pValue_none.label
 #: lollipop/options/order/none.title
 #: lollipop/ui[2][1][0]/order_none.label
 #: mosaic/options/yAxis/none.title
@@ -4107,6 +4162,7 @@ msgstr "சுழற்சி பயன்படுத்தப்படவி�
 #: mrfrequencies/options/order/none.title
 #: mrfrequencies/options/borderColor/none.title
 #: mrfrequencies/ui[1][1][0]/order_none.label
+#: piechart/options/order/none.title
 #: piechart/options/labels/none.title
 #: piechart/options/borderColor/none.title
 #: principal/options/rotation/none.title
@@ -4313,6 +4369,7 @@ msgstr "பார்வை தொகுப்பு"
 msgid "Observation Table"
 msgstr "கவனிப்பு அட்டவணை"
 
+#: barchart/ui[3][1][1].label
 #: multcorresp/options/showObservations.title
 #: multcorresp/options/showObservationPlot.title
 #: principal/options/showObservations.title
@@ -4382,6 +4439,10 @@ msgstr "மட்டும்"
 msgid "Opacity"
 msgstr ""
 
+#: barchart/options/pointShape/opencircle.title
+msgid "Open circle"
+msgstr ""
+
 #: mrcrosstabs/options/optionname.title
 #: mrfrequencies/options/optionname.title
 #, fuzzy
@@ -4398,12 +4459,14 @@ msgstr "எழ்கழு தின்கழு"
 msgid "Option Variables"
 msgstr "எழ்கழு அழ்கழுகள்கழ"
 
+#: barplot/ui[1][0][0].label
 #: histogram/ui[2].label
-#: likertplot/ui[4][1][1][0].label
+#: likertplot/ui[4][1][0][0].label
 #: mrcrosstabs/options/optionname.default
 #: mrcrosstabs/results/crosstab.columns.title
 #: mrfrequencies/options/optionname.default
 #: mrfrequencies/results/responses.columns.title
+#: piechart/ui[1][0][0].label
 #, fuzzy
 msgid "Options"
 msgstr "விருப்பங்கள்"
@@ -4494,7 +4557,6 @@ msgstr ""
 
 #: R/mrcrosstabs.b.R
 #: likertplot/options/pValue/overall.title
-#: likertplot/ui[3][0][2][0]/pValue_overall.label
 #, fuzzy
 msgid "Overall"
 msgstr "ஒட்டுமொத்தமாக"
@@ -4692,7 +4754,6 @@ msgstr ""
 
 #: R/barplot.b.R
 #: barplot/options/yaxis/percent.title
-#: barplot/ui[1][0][0]/yaxis_percent.label
 #: mosaic/options/yAxis/percent.title
 #: mosaic/options/labelType/percent.title
 #: piechart/options/labels/percent.title
@@ -4701,7 +4762,6 @@ msgid "Percent"
 msgstr "சதவீதம்"
 
 #: likertplot/options/frequencies/percentages.title
-#: likertplot/ui[2][0][1][0]/frequencies_percentages.label
 #, fuzzy
 msgid "Percentages"
 msgstr "சதவீதங்கள்"
@@ -4760,7 +4820,7 @@ msgstr "இளஞ்சிவப்பு மற்றும் பச்சை"
 msgid "Plot"
 msgstr "சூழ்ச்சி"
 
-#: likertplot/ui[4][2][1][0].label
+#: likertplot/ui[6][0][1][0].label
 #: multcorresp/ui[7][0][0][0].label
 #, fuzzy
 msgid "Plot Color"
@@ -4788,7 +4848,7 @@ msgstr ""
 #: mrfrequencies/ui[2].label
 #: mrfrequencies/ui[2][0][0][0].label
 #: multcorresp/ui[7].label
-#: piechart/ui[1][0][0].label
+#: piechart/ui[1][1][0].label
 #: qqplot/ui[2][1][0].label
 #: raincloud/ui[1][0][0].label
 #: scatterplot/ui[1][0][0].label
@@ -4801,7 +4861,7 @@ msgstr "வரைபட விருப்பங்கள்"
 #: barplot/ui[7].label
 #: boxplot/ui[6].label
 #: histogram/ui[7].label
-#: likertplot/ui[8].label
+#: likertplot/ui[9].label
 #: linechart/ui[4].label
 #: lollipop/ui[7].label
 #: mosaic/ui[7].label
@@ -4837,6 +4897,7 @@ msgstr "படம் வகை"
 msgid "Plots"
 msgstr "படங்கள்"
 
+#: barchart/options/pointColor.title
 #: scatterplot/options/pointSize.title
 #, fuzzy
 msgid "Point"
@@ -5113,13 +5174,6 @@ msgstr "QLT"
 msgid "Quartimax"
 msgstr "குவார்ட்டிமாக்ஸ்"
 
-#: likertplot/results/frequencies.columns.title
-#: likertplot/results/comp/uTestTable.columns.title
-#: likertplot/results/comp/kwTable.columns.title
-#, fuzzy
-msgid "Questions"
-msgstr "கேள்விகள்"
-
 #: package/analyses/raincloud.title
 #: package/analyses/raincloud.menuTitle
 #: raincloud/options.title
@@ -5158,6 +5212,8 @@ msgid "Range"
 msgstr "வரம்பு"
 
 #: barchart/options/textColor/red.title
+#: barchart/options/pointColor/red.title
+#: barchart/options/errorBarColor/red.title
 #: corresp/options/rowColor/red.title
 #: corresp/options/colColor/red.title
 #: histogram/options/fillColor/#E41A1C.title
@@ -5319,9 +5375,12 @@ msgstr "ஒழுங்குமுறை கோடு"
 msgid "Reverse disposition"
 msgstr "வழிமுறையை மீண்டும் அமைக்கவும்"
 
+#: likertplot/options/reverseLikert.title
+msgid "Reverse level order"
+msgstr ""
+
 #: barchart/options/reverseStack.title
 #: barplot/options/reverseStack.title
-#: likertplot/options/reverseLikert.title
 #: mosaic/options/reverseStack.title
 #: mrcrosstabs/options/reverseStack.title
 #, fuzzy
@@ -5440,7 +5499,6 @@ msgstr "சுழற்சி"
 #: barchart/options/facetBy/row.title
 #: barchart/ui[5][0][0][0][0]/facetBy_row.label
 #: barplot/options/facetBy/row.title
-#: barplot/ui[4][0][0][0]/facetBy_row.label
 #: boxplot/options/facetBy/row.title
 #: boxplot/ui[3][0][0][0]/facetBy_row.label
 #: corresp/options/rowColor.title
@@ -5451,7 +5509,6 @@ msgstr "சுழற்சி"
 #: mosaic/options/facetBy/row.title
 #: mosaic/ui[4][0][0][0][0]/facetBy_row.label
 #: piechart/options/facetBy/row.title
-#: piechart/ui[4][0][0][0]/facetBy_row.label
 #: scatterplot/options/facetBy/row.title
 #: scatterplot/ui[3][0][0][0][0]/facetBy_row.label
 #, fuzzy
@@ -5684,6 +5741,10 @@ msgstr "செட் 3"
 msgid "Several variables"
 msgstr "பல மாறிகள்"
 
+#: barchart/options/pointShape.title
+msgid "Shape"
+msgstr ""
+
 #: scatterplot/options/groupShapes.title
 msgid "Shape by group"
 msgstr ""
@@ -5722,6 +5783,10 @@ msgstr "என்கழு எழ்கழுகள்கழ"
 msgid "Show normal curve"
 msgstr "சாதாரண வளைவைக் காட்டு"
 
+#: barchart/options/showPoints.title
+msgid "Show observations"
+msgstr ""
+
 #: linechart/options/showPoint.title
 #, fuzzy
 msgid "Show points"
@@ -5750,6 +5815,7 @@ msgstr "சிங்குலர் மதிப்பு"
 #: areachart/options/legendFontSize.title
 #: areachart/options/xAxisFontSize.title
 #: areachart/options/yAxisFontSize.title
+#: barchart/options/pointSize.title
 #: barchart/options/facetFontSize.title
 #: barchart/options/legendFontSize.title
 #: barchart/options/xAxisFontSize.title
@@ -5834,21 +5900,22 @@ msgid "Some values are missing from the contingency table."
 msgstr ""
 
 #: likertplot/options/sorting.title
-#: likertplot/ui[1][1][0].label
-#, fuzzy
-msgid "Sort Variables by Median"
-msgstr "மாறிகளை நடுத்தரமாக வகைப்படுத்தவும்"
+#: likertplot/ui[4][0][1][0].label
+msgid "Sort Variables"
+msgstr ""
 
 #: barchart/options/order.title
 #: barchart/ui[1][2][0].label
 #: barplot/options/order.title
-#: barplot/ui[1][2][0].label
+#: barplot/ui[1][3][0].label
 #: lollipop/options/order.title
 #: lollipop/ui[2][1][0].label
 #: mrcrosstabs/options/order.title
 #: mrcrosstabs/ui[1][2][0].label
 #: mrfrequencies/options/order.title
 #: mrfrequencies/ui[1][1][0].label
+#: piechart/options/order.title
+#: piechart/ui[1][2][0].label
 #, fuzzy
 msgid "Sorting"
 msgstr "தொகுப்பு"
@@ -5879,6 +5946,10 @@ msgstr "வகைப்பாடு (நடுமத்திமத்தால�
 msgid "Spectral"
 msgstr "நிறமாலை"
 
+#: barchart/options/pointShape/square.title
+msgid "Square"
+msgstr ""
+
 #: principal/results/summaryTable.columns.title
 #, fuzzy
 msgid "SS Loadings"
@@ -5890,7 +5961,6 @@ msgstr "SS ஏற்றம்"
 #: histogram/options/groupingN/stack.title
 #: histogram/ui[1][2][0]/groupingN_stack.label
 #: likertplot/options/type/stacked.title
-#: likertplot/ui[4][0][0][0]/type_stacked.label
 #: mrcrosstabs/options/bartype/stack.title
 #, fuzzy
 msgid "Stacked"
@@ -6005,7 +6075,7 @@ msgstr ""
 #: barplot/ui[7][1].label
 #: boxplot/ui[6][1].label
 #: histogram/ui[7][1].label
-#: likertplot/ui[8][1].label
+#: likertplot/ui[9][1].label
 #: linechart/ui[4][1].label
 #: lollipop/ui[7][1].label
 #: mosaic/ui[7][1].label
@@ -6156,7 +6226,6 @@ msgstr "பரிசோதனைகள்"
 
 #: mrcrosstabs/options/textColor.title
 #: piechart/options/labType/text.title
-#: piechart/ui[2][0][0][0]/labType_text.label
 #, fuzzy
 msgid "Text"
 msgstr "வரி"
@@ -6164,8 +6233,7 @@ msgstr "வரி"
 #: barplot/ui[2][0][1][1].label
 #: boxplot/ui[2][0][0][1].label
 #: corresp/ui[6][0][0][0].label
-#: likertplot/ui[5].label
-#: likertplot/ui[5][0][0][0].label
+#: likertplot/ui[6][0][0][0].label
 #: mrcrosstabs/ui[2][0][2][1].label
 #: mrfrequencies/ui[2][0][0][1].label
 #: multcorresp/ui[7][0][0][1].label
@@ -6181,6 +6249,7 @@ msgid "Text size"
 msgstr "வரிவடிவம் அளவு"
 
 #: corresp/ui[6].label
+#: likertplot/ui[6].label
 #, fuzzy
 msgid "Text Size & Colors"
 msgstr "வரியளவு மற்றும் நிறங்கள்"
@@ -6453,7 +6522,7 @@ msgstr "கால தொடர்"
 #: barplot/ui[7][0].label
 #: boxplot/ui[6][0].label
 #: histogram/ui[7][0].label
-#: likertplot/ui[8][0].label
+#: likertplot/ui[9][0].label
 #: linechart/ui[4][0].label
 #: lollipop/ui[7][0].label
 #: mosaic/ui[7][0].label
@@ -6488,7 +6557,6 @@ msgstr "தலைப்பு உரை"
 #: barplot/options/labelPosition/top.title
 #: barplot/options/legendPosition/top.title
 #: barplot/options/yAxisPosition/1.title
-#: barplot/ui[2][0][1][0]/labelPosition_top.label
 #: boxplot/options/legendPosition/top.title
 #: boxplot/options/yAxisPosition/1.title
 #: corresp/options/yAxisPosition/1.title
@@ -6522,7 +6590,10 @@ msgstr "தலைப்பு உரை"
 msgid "Top"
 msgstr "டன்கழ"
 
+#: R/mrcrosstabs.b.R
+#: R/mrfrequencies.b.R
 #: R/multcorresp.b.R
+#: R/utilsData.R
 #: mrfrequencies/options/showTotal.title
 #, fuzzy
 msgid "Total"
@@ -6633,6 +6704,12 @@ msgstr "பெயருக்குப் பதிலாக மாறியி�
 msgid "Value Labels"
 msgstr "மதிப்பு பிரதிநிதித்துவங்கள்"
 
+#: barplot/options/showLabels.title
+#: mrcrosstabs/options/showLabels.title
+#: mrfrequencies/options/showLabels.title
+msgid "Value labels"
+msgstr ""
+
 #: R/areachart.b.R
 #: R/linechart.b.R
 #: lollipop/options/yaxis/identity.title
@@ -6695,6 +6772,9 @@ msgstr "அழ்கழு பலழ்கழ"
 #: areachart/ui/mode/severalVariables[0][0][1].label
 #: boxplot/options/vars.title
 #: boxplot/ui[0][0].label
+#: likertplot/results/frequencies.columns.title
+#: likertplot/results/comp/uTestTable.columns.title
+#: likertplot/results/comp/kwTable.columns.title
 #: linechart/options/vars.title
 #: linechart/ui[0][1].label
 #: multcorresp/options/vars.title
@@ -6865,6 +6945,10 @@ msgstr "Viridis:Viridis"
 msgid "Weibull"
 msgstr "வெய்புல்"
 
+#: boxplot/options/whiskers.title
+msgid "Whiskers"
+msgstr ""
+
 #: barchart/options/borderColor/white.title
 #: barchart/options/textColor/white.title
 #: barplot/options/borderColor/white.title
@@ -6895,13 +6979,11 @@ msgid "Width"
 msgstr "அகலம்"
 
 #: barplot/options/percentWithin/category.title
-#: barplot/ui[1][0][0]/yaxis_percent/percentWithin_category.label
 #, fuzzy
 msgid "Within categories"
 msgstr "பகுப்பாய்வுகளுக்குள்"
 
 #: barplot/options/percentWithin/group.title
-#: barplot/ui[1][0][0]/yaxis_percent/percentWithin_gGroup.label
 #, fuzzy
 msgid "Within groups"
 msgstr "குழுக்குள்"
@@ -6930,7 +7012,7 @@ msgstr "தவறான பராமீட்டர் மதிப்புக�
 #: corresp/ui[7][0].label
 #: histogram/ui[5][0][0][0].label
 #: histogram/ui[6][1].label
-#: likertplot/ui[6][0][0][0].label
+#: likertplot/ui[7][0][0][0].label
 #: linechart/options/timeVar.title
 #: linechart/ui[0][0].label
 #: linechart/ui[1][1][0].label
@@ -7007,7 +7089,7 @@ msgstr "X-அச்சு அளவு"
 #: barchart/ui[6][0][1][0].label
 #: barchart/ui[7][2].label
 #: barplot/options/yaxis.title
-#: barplot/ui[1][0][0].label
+#: barplot/ui[1][1][0].label
 #: barplot/ui[5][0][1][0].label
 #: barplot/ui[6][2].label
 #: boxplot/ui[4][0][1][0].label
@@ -7017,7 +7099,7 @@ msgstr "X-அச்சு அளவு"
 #: histogram/ui[1][0][0].label
 #: histogram/ui[5][0][1][0].label
 #: histogram/ui[6][2].label
-#: likertplot/ui[6][0][1][0].label
+#: likertplot/ui[7][0][1][0].label
 #: linechart/ui[2][0][1][0].label
 #: linechart/ui[3][2].label
 #: lollipop/options/yaxis.title
