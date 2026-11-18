@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-07-26 12:08:06+01000\n"
-"PO-Revision-Date: 2026-10-26 00:51+0000\n"
+"PO-Revision-Date: 2026-11-19 11:51+0000\n"
 "Last-Translator: Yuri Smolyakov <smoyur@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jamovi/module-"
 "vijplots/ru/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.11.dev0\n"
+"X-Generator: Weblate 2026.12.dev0\n"
 
 #: R/areachart.b.R
 #: R/barchart.b.R
@@ -41,7 +41,7 @@ msgstr ""
 
 #: R/utils.R
 msgid "(Missing)"
-msgstr ""
+msgstr "(Отсутствующий)"
 
 #: R/qqplot.b.R
 msgid "{distrib} distribution requires positive (>0) data."
@@ -198,6 +198,38 @@ msgid ""
 "possible.</p>\n"
 "<p>A sample file is included at Open > Data Library > vijPlots > Likert</p>"
 msgstr ""
+"<h3>Данные и сортировка</h3>\n"
+"<ул>\n"
+"<li>Переменные Лайкерта должны иметь порядковый тип меры. (Continual-Integer "
+"тоже работает.)</li>\n"
+"<li>Если вы планируете вычислять среднее/медиану/стандартное отклонение или "
+"использовать сравнительные тесты, они должны иметь целочисленный тип "
+"данных.</li>\n"
+"<li><strong>Упорядочить уровни</strong>. Если этот флажок установлен, "
+"попробуйте исправить порядок меток в таблице и на графике (когда некоторые "
+"переменные пропускают некоторые уровни).</li>\n"
+"<li><strong>Преобразовать переменные в целые числа:</strong> если этот "
+"флажок установлен, метки уровней игнорируются и используются только "
+"целочисленные значения.</li>\n"
+"<li><strong>Сортировка переменных</strong>: переменные Лайкерта "
+"упорядочиваются по доле ответов в верхней половине шкалы (исключая средний "
+"уровень).</li>\n"
+"</ul>\n"
+"<h3>Сравнительные тесты</h3>\n"
+"<p>При использовании групповой переменной доступны несколько тестов:</p>\n"
+"<ул>\n"
+"<li><strong>Манн-Уитни У:</strong> Сравнение двух групп</li>\n"
+"<li><strong>Краскал-Уоллис:</strong> сравнение групп</li>\n"
+"<li><strong>Последующие тесты:</strong> тесты парного сравнения Данна, "
+"Коновера и Дуасса-Стил-Кричлоу-Флиннера (DSCF).</li>\n"
+"</ul>\n"
+"<p>Значения p можно корректировать <strong>по группам</strong> (для каждой "
+"переменной) для апостериорных тестов или <strong>в целом</strong> (по "
+"группам и по переменным) для Манна-Уитни У, Крускала-Уоллиса и апостериорных "
+"тестов. P-значения DSCF уже скорректированы (по группам); никакая другая "
+"регулировка невозможна.</p>\n"
+"<p>Пример файла доступен в разделе «Открыть» > «Библиотека данных» > "
+"vijPlots > Likert</p>"
 
 #: package.description
 msgid ""
@@ -511,6 +543,57 @@ msgid ""
 "(Uniform).</li>\n"
 "</ul>"
 msgstr ""
+"<p>В этом модуле используется <a href = \"https://CRAN.R-project.org/"
+"package=qqplotr\" target=\"_blank\">пакет qqplotr R</a>, созданный "
+"Александром Алмейдой, Адамом Лоем и Хайке Хофманном. Подробную информацию "
+"можно найти в документации пакета на сайте CRAN.</p>\n"
+"<p><strong>Опорная линия:</strong> рисует либо <em>линию идентификации</em> "
+"(y = x), либо часто используемую <em>линию Q-Q</em>, которая пересекает два "
+"квантиля данных (Q<sub>0,25</sub> и Q<sub>0,75</sub>). График P-P "
+"поддерживает только идентификационную линию.</p>\n"
+"<p><strong>Доверительная полоса</strong>. Рисует доверительную полосу вокруг "
+"опорной линии. Пакет qqplotr предоставляет несколько методов расчета "
+"доверительного интервала:</p>\n"
+"<ул>\n"
+"<li><strong><em>Поточечно</em></strong> создает поточечные доверительные "
+"интервалы на основе нормальных доверительных интервалов;</li>\n"
+"<li><strong><em>Bootstrap</em></strong> создает точечные доверительные "
+"интервалы на основе параметрической начальной загрузки;</li>\n"
+"<li><strong><em>Полоса Колмогорова-Смирнова</em></strong> основана на "
+"критерии Колмогорова-Смирнова;</li>\n"
+"<li><strong><em>Tail-Sensitive</em></strong> создает доверительные "
+"интервалы, чувствительные к хвосту, но реализуется только для обычных "
+"графиков Q-Q;</li>\n"
+"<li><strong><em>Равные локальные уровни (ELL)</em></strong> создает "
+"одновременные полосы, используя равные локальные уровни.</li>\n"
+"</ul>\n"
+"<p>Диаграммы P-P поддерживают только методы «ELL» и «Bootstrap».</p>\n"
+"<p><strong>График с устранением тренда:</strong> Объекты <em>удалены</em> в "
+"соответствии с опорной линией. Эта процедура может помочь уменьшить "
+"визуальное искажение, вызванное ортогональными расстояниями от точек до "
+"опорной линии.</p>\n"
+"<p><strong>Значения параметров:</strong> Параметры распределения можно "
+"оценить на основе данных, используя:</p>\n"
+"<ул>\n"
+"<li><strong>Метод максимального правдоподобия</strong> (с использованием "
+"пакета MASS): он должен работать со всеми распределениями, кроме «t» и «"
+"uniform»;</li>\n"
+"<li><strong>Метод моментов</strong> для моментных параметров: он должен "
+"работать с «нормальным», «логарифмически нормальным», «бета», «"
+"экспоненциальным», «гамма», «логистическим» и «равномерным» "
+"распределениями;</li>\n"
+"</ul>\n"
+"<p>или введено пользователем:</p>\n"
+"<ул>\n"
+"<li><strong>Параметр 1:</strong> среднее значение (нормальное), среднее "
+"логарифмическое (логарифмическое нормальное), форма 1 (бета), местоположение "
+"(Коши, логистика), df (хи-квадрат, студент), df1 (F), скорость "
+"(экспоненциальная), форма (гамма, Вейбулла) и минимальная (равномерная);</li>"
+"\n"
+"<li><strong>Параметр 2:</strong> sd (нормальный), sdlog (логарифмически "
+"нормальный), shape2 (бета), масштаб (Коши, логистический), df2 (F), скорость "
+"(гамма, Вейбулла) и максимум (равномерный).</li>\n"
+"</ul>"
 
 #: areachart/options/dateBreak/1day.title
 #: linechart/options/dateBreak/1day.title
@@ -534,7 +617,7 @@ msgstr "1 год"
 
 #: boxplot/options/whiskers/tukey.title
 msgid "1.5 × IQR (Tukey)"
-msgstr ""
+msgstr "1,5 × IQR (Тьюки)"
 
 #: areachart/options/dateBreak/10year.title
 #: linechart/options/dateBreak/10year.title
@@ -608,7 +691,7 @@ msgstr "25 лет"
 
 #: boxplot/options/whiskers/tukey3.title
 msgid "3 × IQR"
-msgstr ""
+msgstr "3 × IQR"
 
 #: areachart/options/dateBreak/3month.title
 #: linechart/options/dateBreak/3month.title
@@ -763,7 +846,7 @@ msgstr "Всегда показывать легенду группы"
 
 #: piechart/options/alwaysShowLegend.title
 msgid "Always show legend"
-msgstr ""
+msgstr "Всегда показывать легенду"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -793,7 +876,7 @@ msgstr "Восходящий"
 
 #: R/qqplot.b.R
 msgid "At least two observations are required."
-msgstr ""
+msgstr "Требуется как минимум два наблюдения."
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -1310,6 +1393,8 @@ msgstr "Невозможно преобразовать текстовые пе�
 #: R/likertplot.b.R
 msgid "Cannot tidy up levels: the same label is used for different values."
 msgstr ""
+"Невозможно привести уровни в порядок: одна и та же метка используется для "
+"разных значений."
 
 #: R/likertplot.b.R
 msgid "Cannot tidy up text variables"
@@ -1548,7 +1633,7 @@ msgstr "Хи-квадрат"
 
 #: barchart/options/pointShape/circle.title
 msgid "Circle"
-msgstr ""
+msgstr "Круговой"
 
 #: piechart/options/clockwise.title
 msgid "Clockwise"
@@ -2157,7 +2242,7 @@ msgstr "Эквамакс"
 
 #: barchart/options/errorBarColor.title
 msgid "Error bar"
-msgstr ""
+msgstr "Панель ошибок"
 
 #: package/analyses/barchart.title
 #: package/analyses/barchart.menuTitle
@@ -2178,7 +2263,7 @@ msgstr "Полосы ошибок"
 
 #: barchart/ui[3].label
 msgid "Error Bars & Observations"
-msgstr ""
+msgstr "Столбики ошибок и наблюдения"
 
 #: qqplot/options/paramMethod/paraEstimate.title
 #: qqplot/ui[3][0][0]/paramMethod_paraEstimate.label
@@ -2676,7 +2761,7 @@ msgstr "Серые"
 #: scatterplot/options/xGridLines.title
 #: scatterplot/options/yGridLines.title
 msgid "Grid lines"
-msgstr ""
+msgstr "Линии сетки"
 
 #: areachart/options/group.title
 #: areachart/ui/mode/oneVariable[0][0][2].label
@@ -2723,11 +2808,11 @@ msgstr "Группа + Процент"
 
 #: likertplot/results/comp/pwTable.columns.title
 msgid "Group 1"
-msgstr ""
+msgstr "Группа 1"
 
 #: likertplot/results/comp/pwTable.columns.title
 msgid "Group 2"
-msgstr ""
+msgstr "Группа 2"
 
 #: likertplot/options/groupBy.title
 #: likertplot/ui[1][1][0].label
@@ -2783,7 +2868,7 @@ msgstr "скрыто"
 #: likertplot/options/hideLabelsBelow.title
 #: mrcrosstabs/options/hideLabelsBelow.title
 msgid "Hide % below 5%"
-msgstr ""
+msgstr "Скрыть % ниже 5 %"
 
 #: mosaic/options/hideAxes.title
 msgid "Hide axes"
@@ -2814,11 +2899,11 @@ msgstr "Скрыть оси"
 #: scatterplot/options/xHideAxis.title
 #: scatterplot/options/yHideAxis.title
 msgid "Hide axis"
-msgstr ""
+msgstr "Скрыть ось"
 
 #: piechart/options/hideLabelsBelow.title
 msgid "Hide labels below 5%"
-msgstr ""
+msgstr "Скрыть ярлыки ниже 5 %"
 
 #: package/analyses/histogram.title
 #: package/analyses/histogram.menuTitle
@@ -3113,7 +3198,7 @@ msgstr "Колмогоров-Смирнов"
 
 #: likertplot/options/showKW.title
 msgid "Kruskal-Wallis"
-msgstr "Краскел-Уоллис"
+msgstr "Критерий Краскела-Уоллиса"
 
 #: likertplot/results/comp/kwTable.title
 msgid "Kruskal-Wallis Tests"
@@ -3567,7 +3652,7 @@ msgstr "Тесты Манна-Уитни требуют двух групп."
 
 #: likertplot/options/showMannU.title
 msgid "Mann-Whitney U"
-msgstr "Манн-Уитни Ю"
+msgstr "Критерий Манна-Уитни (U)"
 
 #: likertplot/results/comp/uTestTable.title
 msgid "Mann-Whitney U Tests"
@@ -3807,7 +3892,7 @@ msgstr "Мин / Макс"
 
 #: boxplot/options/whiskers/minmax.title
 msgid "Min–max"
-msgstr ""
+msgstr "Мин–макс"
 
 #: principal/options/rotation/entropy.title
 msgid "Minimum entropy"
@@ -3820,7 +3905,7 @@ msgstr "Минимум {var}"
 
 #: R/utilsData.R
 msgid "Missing values: {n}"
-msgstr ""
+msgstr "Отсутствующие значения: {n}"
 
 #: package/analyses/mosaic.title
 #: package/analyses/mosaic.menuTitle
@@ -4171,7 +4256,7 @@ msgstr "Непрозрачность"
 
 #: barchart/options/pointShape/opencircle.title
 msgid "Open circle"
-msgstr ""
+msgstr "Открытый круг"
 
 #: mrcrosstabs/options/optionname.title
 #: mrfrequencies/options/optionname.title
@@ -4279,7 +4364,7 @@ msgstr "Выбросы"
 #: R/mrcrosstabs.b.R
 #: likertplot/options/pValue/overall.title
 msgid "Overall"
-msgstr "Общий"
+msgstr "Всего"
 
 #: mrcrosstabs/options/overall.title
 msgid "Overall (all groups)"
@@ -5020,7 +5105,7 @@ msgstr "Обратное расположение"
 
 #: likertplot/options/reverseLikert.title
 msgid "Reverse level order"
-msgstr ""
+msgstr "Обратный порядок уровней"
 
 #: barchart/options/reverseStack.title
 #: barplot/options/reverseStack.title
@@ -5353,7 +5438,7 @@ msgstr "Несколько переменных"
 
 #: barchart/options/pointShape.title
 msgid "Shape"
-msgstr ""
+msgstr "Форма"
 
 #: scatterplot/options/groupShapes.title
 msgid "Shape by group"
@@ -5390,7 +5475,7 @@ msgstr "Показать нормальную кривую"
 
 #: barchart/options/showPoints.title
 msgid "Show observations"
-msgstr ""
+msgstr "Показать наблюдения"
 
 #: linechart/options/showPoint.title
 msgid "Show points"
@@ -5498,7 +5583,7 @@ msgstr "Некоторые значения отсутствуют в табли
 #: likertplot/options/sorting.title
 #: likertplot/ui[4][0][1][0].label
 msgid "Sort Variables"
-msgstr ""
+msgstr "Сортировка переменных"
 
 #: barchart/options/order.title
 #: barchart/ui[1][2][0].label
@@ -5541,7 +5626,7 @@ msgstr "Спектральный"
 
 #: barchart/options/pointShape/square.title
 msgid "Square"
-msgstr ""
+msgstr "Квадрат"
 
 #: principal/results/summaryTable.columns.title
 msgid "SS Loadings"
@@ -6126,7 +6211,7 @@ msgstr "Верх"
 #: R/utilsData.R
 #: mrfrequencies/options/showTotal.title
 msgid "Total"
-msgstr "Общий"
+msgstr "Всего"
 
 #: mrcrosstabs/options/totalRow.title
 msgid "Total row"
@@ -6226,7 +6311,7 @@ msgstr "Метки значения"
 #: mrcrosstabs/options/showLabels.title
 #: mrfrequencies/options/showLabels.title
 msgid "Value labels"
-msgstr ""
+msgstr "Метки значений"
 
 #: R/areachart.b.R
 #: R/linechart.b.R
@@ -6448,7 +6533,7 @@ msgstr "Вейбулл"
 
 #: boxplot/options/whiskers.title
 msgid "Whiskers"
-msgstr ""
+msgstr "Бакенбарды"
 
 #: barchart/options/borderColor/white.title
 #: barchart/options/textColor/white.title
