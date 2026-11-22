@@ -19,8 +19,8 @@ msgstr "-log10(p值)"
 #: R/mstab.b.R
 msgid ""
 "'Little or no change' was selected in the questionnaire, but {detail}. "
-"Please verify whether the 'little or no change' criterion of ICH Q1E Section "
-"2.4.1.1 is met."
+"Please verify whether the 'little or no change' criterion of {section} is "
+"met."
 msgstr ""
 
 #: R/mlr.b.R
@@ -1365,6 +1365,36 @@ msgstr "实际类别"
 msgid "Additional Factors"
 msgstr ""
 
+#: R/msrv.b.R
+#: mSRV/results/adjSection/adjSummaryTable.columns.title
+msgid "Adjusted CIF (τ)"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Adjusted CIF Risk Table (Observed – {cause})"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Adjusted Cumulative Incidence ({cause})"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Adjusted Cumulative Incidence Curves ({cause})"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Adjusted cumulative incidence model fitting failed: {reason}"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Adjusted Cumulative Incidence Summary ({cause})"
+msgstr ""
+
+#: R/msrv.b.R
+#: mSRV/results/adjSection/adjRiskTable.title
+msgid "Adjusted Curves Risk Table (Observed)"
+msgstr ""
+
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
 msgid "Adjusted Median Survival"
 msgstr ""
@@ -1381,8 +1411,17 @@ msgstr ""
 msgid "Adjusted Rand Index (ARI)"
 msgstr "调整兰德指数（ARI）"
 
+#: R/mpca.b.R
+msgid "Adjusted Rand Index (ARI) = {ari}"
+msgstr ""
+
+#: R/msrv.b.R
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
 msgid "Adjusted RMST"
+msgstr ""
+
+#: R/msrv.b.R
+msgid "Adjusted RMTL"
 msgstr ""
 
 #: R/msrv.b.R
@@ -1397,6 +1436,7 @@ msgstr ""
 msgid "Adjusted survival curves"
 msgstr ""
 
+#: R/msrv.b.R
 #: mSRV/ui[4].label
 #: mSRV/results/adjSection.title
 #: mSRV/results/adjSection/adjPlot.title
@@ -1407,6 +1447,7 @@ msgstr ""
 msgid "Adjusted Survival Probability"
 msgstr ""
 
+#: R/msrv.b.R
 #: mSRV/results/adjSection/adjSummaryTable.title
 msgid "Adjusted Survival Summary"
 msgstr ""
@@ -2478,6 +2519,11 @@ msgstr ""
 msgid "Closest to (0, 1) cut-off (Sp, Se)"
 msgstr ""
 
+#: R/mpca.b.R
+#: mPCA/results/kmeansTable.columns.title
+msgid "Cluster"
+msgstr ""
+
 #: R/mcor.b.R
 msgid "Cluster {i}"
 msgstr "集群 {i}"
@@ -2658,6 +2704,15 @@ msgstr ""
 msgid "Comparison Level"
 msgstr "比较水平"
 
+#: R/msrv.b.R
+msgid "Competing cause model failed."
+msgstr ""
+
+#: mSRV/results/adjSection/adjRiskTable.columns.title
+#: mSRV/results/compRisksSection/fgRiskTable.columns.title
+msgid "Competing Events"
+msgstr ""
+
 #: mSRV/ui[5].label
 #: mSRV/results/compRisksSection.title
 msgid "Competing Risks Analysis"
@@ -2665,6 +2720,13 @@ msgstr ""
 
 #: mSRV/options/showCompRisks.title
 msgid "Competing risks analysis"
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"Competing risks detected (target event: '{event}', competing: '{comp}', "
+"censored: '{censor}'). Adjusted Cumulative Incidence (CIF) is reported via "
+"cause-specific Cox G-computation."
 msgstr ""
 
 #: R/msrv.b.R
@@ -2789,10 +2851,6 @@ msgstr ""
 #: mTAB1/options/plotType/balloon.title
 msgid "Contingency balloon (Pearson residuals)"
 msgstr ""
-
-#: R/mpca.b.R
-msgid "Contingency Matrix (Clusters vs Groups):"
-msgstr "列联矩阵（集群 vs 组别）："
 
 #: mTAB1/options/plotTypeCont.title
 msgid "Continuous plot type"
@@ -3022,6 +3080,10 @@ msgstr ""
 msgid "Cumulative incidence (Aalen-Johansen) model fitting failed: {reason}"
 msgstr ""
 
+#: R/msrv.b.R
+msgid "Cumulative incidence and RMTL evaluated up to τ = {tau}."
+msgstr ""
+
 #: mSRV/options/showCifPlot.title
 msgid "Cumulative incidence curves (Aalen-Johansen)"
 msgstr ""
@@ -3082,6 +3144,12 @@ msgstr "交叉验证（CV）"
 #: mLR/results/infoTable.columns.title
 msgid "CV Acc (%)"
 msgstr "交叉验证准确率（%）"
+
+#: R/mpca.b.R
+msgid ""
+"CV fold(s) {folds} skipped due to a single class in the training or test "
+"split and excluded from K-Fold CV ROC."
+msgstr ""
 
 #: mSNP/results/mdrGroup/mdrBestTable.columns.title
 msgid "CVC"
@@ -3356,6 +3424,13 @@ msgstr ""
 msgid ""
 "Direct adjustment (G-computation) averages predicted survival over sample "
 "covariates. RMST is restricted mean survival time up to τ."
+msgstr ""
+
+#: R/msrv.b.R
+msgid ""
+"Direct adjustment (G-computation) via cause-specific Cox models averages "
+"predicted cumulative incidence over sample covariates accounting for "
+"competing risks. RMTL is restricted mean time lost up to τ."
 msgstr ""
 
 #: mLR/results/rocTable.columns.title
@@ -3670,12 +3745,22 @@ msgstr "估算方法"
 msgid "Evaluated Batch: {batch}"
 msgstr ""
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Evaluated on the hold-out validation set (out-of-sample)."
 msgstr ""
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
 #: R/mrf.b.R
 msgid "Evaluated using K-fold cross-validation predictions (out-of-sample)."
+msgstr ""
+
+#: R/mlr.b.R
+msgid ""
+"Evaluated using repeated stratified K-fold cross-validation probabilities "
+"averaged across repeats (out-of-sample)."
 msgstr ""
 
 #: R/mmnv.b.R
@@ -3769,11 +3854,16 @@ msgstr ""
 msgid "Event of interest"
 msgstr ""
 
+#: R/msrv.b.R
 #: mSRV/results/kmSection/kmSummaryTable.columns.title
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
 #: mSRV/results/compRisksSection/cifSummaryTable.columns.title
 msgid "Events"
 msgstr "事件数"
+
+#: R/msrv.b.R
+msgid "Events ({cause})"
+msgstr ""
 
 #: mLR/results/riskTable.columns.title
 #: mMLP/results/riskTable.columns.title
@@ -3869,6 +3959,10 @@ msgstr "解释变量"
 msgid "Exploratory & Factor Analysis"
 msgstr "探索性与因子分析"
 
+#: mSRV/results/adjSection/adjRiskTable.columns.title
+msgid "Exposure Group"
+msgstr ""
+
 #: mSRV/ui[0][6].label
 msgid "Exposure Variable (Adjusted Curves)"
 msgstr ""
@@ -3889,7 +3983,8 @@ msgid ""
 "Component Analysis (PCA), Single Nucleotide Polymorphism (SNP) association "
 "and Hardy-Weinberg equilibrium analysis, Decision Curve Analysis (DCA) with "
 "model calibration, Stability Analysis according to ICH Q1E guideline with "
-"ANCOVA poolability testing and shelf life estimation, and Baseline "
+"ANCOVA poolability testing and shelf life estimation, Repeated Measures "
+"MANOVA without sphericity assumption, Profile Analysis, and Baseline "
 "Characteristics (Table 1) with automated distribution audit and statistical "
 "testing."
 msgstr ""
@@ -4031,6 +4126,14 @@ msgid ""
 "subjects."
 msgstr ""
 
+#: mSRV/options/showFgRiskTable.title
+msgid "Fine-Gray risk table"
+msgstr ""
+
+#: mSRV/results/compRisksSection/fgRiskTable.title
+msgid "Fine-Gray Risk Table (Observed)"
+msgstr ""
+
 #: mSRV/options/showFineGray.title
 msgid "Fine-Gray subdistribution hazard model"
 msgstr ""
@@ -4066,8 +4169,8 @@ msgstr ""
 
 #: R/msrv.b.R
 msgid ""
-"Firth's penalized likelihood is not applicable to adjusted survival curves; "
-"standard Cox regression was used."
+"Firth's penalized likelihood is not applicable to adjusted curves; standard "
+"Cox regression was used."
 msgstr ""
 
 #: R/msrv.b.R
@@ -4321,6 +4424,7 @@ msgstr ""
 #: mSRV/results/kmSection/kmRiskTable.columns.title
 #: mSRV/results/adjSection/adjSummaryTable.columns.title
 #: mSRV/results/compRisksSection/cifSummaryTable.columns.title
+#: mSRV/results/compRisksSection/fgRiskTable.columns.title
 #: mTAB1/results/normAudit.columns.title
 msgid "Group"
 msgstr "分组"
@@ -4384,6 +4488,10 @@ msgstr ""
 #: mCOR/options/glassoLayout/groups.title
 msgid "Groups"
 msgstr "组别"
+
+#: R/mtab1.b.R
+msgid "Groups with n < 3 were omitted from Shapiro-Wilk normality testing: {groups}."
+msgstr ""
 
 #: R/msnp.b.R
 #: mSNP/results/hweGroup/freqTable.columns.title
@@ -4574,6 +4682,12 @@ msgstr ""
 msgid "Hommel (1988)"
 msgstr "Hommel (1988)"
 
+#: R/mtab1.b.R
+msgid ""
+"Homogeneity of variance was assessed with Levene's test (α = .05); Student's "
+"t / One-way ANOVA is used when p ≥ .05 and Welch's test when p < .05."
+msgstr ""
+
 #: R/mstab.b.R
 msgid "Homoscedasticity (|e| vs Time correlation)"
 msgstr ""
@@ -4695,10 +4809,6 @@ msgstr ""
 #: package/datasets/Outliersidentificationandremoval.description
 msgid "Identification, analysis and removal of data outliers by groups"
 msgstr "按组进行数据离群值的识别、分析与剔除"
-
-#: R/mmlp.b.R
-msgid "Identity (Linear)"
-msgstr "恒等（线性）"
 
 #: R/mmf.b.R
 msgid ""
@@ -5044,9 +5154,9 @@ msgstr "K均值 «盲» 聚类"
 msgid "K-Means «Blind» Clustering vs Real Groups"
 msgstr "K均值 «盲» 聚类 vs 真实组别"
 
-#: R/mpca.b.R
-msgid "K-Means Cluster"
-msgstr "K均值集群"
+#: mPCA/results/kmeansAriTable.title
+msgid "K-Means Clustering Agreement (Adjusted Rand Index)"
+msgstr ""
 
 #: R/mpca.b.R
 msgid "K-Means clustering failed:"
@@ -5213,7 +5323,7 @@ msgstr ""
 msgid "Linkage Disequilibrium (LD) analysis"
 msgstr "连锁不平衡 (LD) 分析"
 
-#: mSNP/ui[10].label
+#: mSNP/ui[8].label
 #: mSNP/results/ldGroup.title
 msgid "Linkage Disequilibrium (LD) Analysis"
 msgstr "连锁不平衡 (LD) 分析"
@@ -5311,8 +5421,16 @@ msgid "Logistic Regression Predicted Class"
 msgstr "逻辑斯谛回归预测类别"
 
 #: R/mlr.b.R
-msgid "Logistic Regression Predicted Probability"
-msgstr "逻辑斯谛回归预测概率"
+msgid "Logistic Regression Predicted Class Probability (Max-Class)"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Logistic Regression Predicted Probability of Positive Class"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Logistic Regression Predicted Probability of Positive Class ({level})"
+msgstr ""
 
 #: package/analyses/mLR.description
 #: mLR/options.description.main
@@ -5824,13 +5942,10 @@ msgid "Method"
 msgstr "方法"
 
 #: mMLP/results/statsTable.columns.title
+#: mPCA/results/kmeansAriTable.columns.title
 #: mRF/results/statsTable.columns.title
 msgid "Metric"
 msgstr "指标"
-
-#: mPCA/results/kmeansTable.columns.title
-msgid "Metric / Cluster"
-msgstr "度量 / 集群"
 
 #: mCOR/results/glassoGroup/glassoStabilityTable.columns.title
 msgid "Metric / Target"
@@ -5988,8 +6103,8 @@ msgid "MLP Classifier Predicted Class"
 msgstr "MLP分类器预测类别"
 
 #: R/mmlp.b.R
-msgid "MLP Classifier Predicted Probability"
-msgstr "MLP分类器预测概率"
+msgid "MLP Classifier Predicted Class Probability (Max-Class)"
+msgstr ""
 
 #: mMLP/results/curvePlot.title
 msgid "MLP Learning Curve"
@@ -6194,7 +6309,7 @@ msgid ""
 "alpha = {alphaFactor} for factor terms)."
 msgstr ""
 
-#: mSNP/ui[8].label
+#: mSNP/ui[7].label
 #: mSNP/results/mdrGroup.title
 msgid "Multifactor Dimensionality Reduction (MDR)"
 msgstr "多因子降维 (MDR)"
@@ -6285,6 +6400,8 @@ msgid "N = {n}"
 msgstr ""
 
 #: mSRV/results/kmSection/kmRiskTable.columns.title
+#: mSRV/results/adjSection/adjRiskTable.columns.title
+#: mSRV/results/compRisksSection/fgRiskTable.columns.title
 msgid "N at Risk"
 msgstr "风险例数"
 
@@ -6297,7 +6414,9 @@ msgstr "效应量对应的N"
 msgid "N by Effect Size Curve"
 msgstr "效应量对应的N曲线"
 
+#: R/msrv.b.R
 #: mSRV/results/kmSection/kmRiskTable.columns.title
+#: mSRV/results/adjSection/adjRiskTable.columns.title
 msgid "N Events"
 msgstr "事件数"
 
@@ -6501,6 +6620,10 @@ msgid "non-inferiority"
 msgstr "非劣效性"
 
 #: R/mtab1.b.R
+msgid "Non-normal"
+msgstr ""
+
+#: R/mtab1.b.R
 msgid "Non-normal (Non-parametric)"
 msgstr ""
 
@@ -6556,6 +6679,7 @@ msgid "None / Not evaluated (No extrapolation)"
 msgstr ""
 
 #: R/mmout.b.R
+#: R/mtab1.b.R
 msgid "Normal"
 msgstr "正态"
 
@@ -6622,7 +6746,7 @@ msgstr ""
 #: R/mstab.b.R
 msgid ""
 "Not Supported: Supporting data required for extrapolation beyond {dur} "
-"months (ICH Q1E Section 2.4.1.2)"
+"months ({section})"
 msgstr ""
 
 #: R/mstab.b.R
@@ -6643,6 +6767,10 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Not tested (slopes poolability test could not be evaluated)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid "Not tested (Step 1 could not be evaluated)"
 msgstr ""
 
 #: R/msnp.b.R
@@ -6787,6 +6915,13 @@ msgstr ""
 msgid "Observed"
 msgstr "观测"
 
+#: R/msrv.b.R
+msgid ""
+"Observed (unweighted) event-free numbers at risk and cumulative events by "
+"actual exposure group; adjusted curves reflect covariate-standardized "
+"predictions across the analytic sample."
+msgstr ""
+
 #: R/mpca.b.R
 msgid "Observed Data"
 msgstr "观测数据"
@@ -6800,6 +6935,14 @@ msgstr ""
 #: mRF/results/riskTable.columns.title
 msgid "Observed Event Rate (%)"
 msgstr "观测事件率 (%)"
+
+#: R/msrv.b.R
+msgid ""
+"Observed event-free numbers at risk and cumulative events on the Fine-Gray "
+"analytic sample (subjects experiencing a competing event leave the "
+"observable event-free risk set, whereas subdistribution modeling retains "
+"IPCW-weighted competing-event subjects)."
+msgstr ""
 
 #: R/msnp.b.R
 msgid "Observed p-value (-log10)"
@@ -7611,7 +7754,7 @@ msgstr "群体"
 msgid "Population genetic metrics"
 msgstr "群体遗传学指标"
 
-#: mSNP/ui[6].label
+#: mSNP/ui[5].label
 #: mSNP/results/popGroup.title
 msgid "Population genetics metrics"
 msgstr "群体遗传学指标"
@@ -7727,14 +7870,25 @@ msgstr "预测类别"
 #: R/mlr.b.R
 #: R/mmlp.b.R
 #: R/mrf.b.R
-#: mLR/options/predProb.title
-#: mLR/results/predProb.title
 #: mMLP/options/predProb.title
 #: mMLP/results/predProb.title
 #: mRF/options/predProb.title
 #: mRF/results/predProb.title
+msgid "Predicted Class Probability"
+msgstr ""
+
+#: R/mlr.b.R
+msgid "Predicted Positive-Class Probability"
+msgstr ""
+
+#: R/mrf.b.R
 msgid "Predicted Probability"
 msgstr "预测概率"
+
+#: mLR/options/predProb.title
+#: mLR/results/predProb.title
+msgid "Predicted Probability (P(pos) / Max Class)"
+msgstr ""
 
 #: mSTAB/results/arrhTable.columns.title
 #: mSTAB/results/arrhSensTable.columns.title
@@ -8008,7 +8162,7 @@ msgstr ""
 msgid "Quality Control (QC) Analysis"
 msgstr "质量控制 (QC) 分析"
 
-#: mSNP/ui[7].label
+#: mSNP/ui[6].label
 msgid "Quality Control (QC) Filters"
 msgstr "质量控制 (QC) 过滤器"
 
@@ -8076,8 +8230,8 @@ msgid "Random Forest Predicted Class"
 msgstr "随机森林预测类别"
 
 #: R/mrf.b.R
-msgid "Random Forest Predicted Probability"
-msgstr "随机森林预测概率"
+msgid "Random Forest Predicted Class Probability (Max-Class)"
+msgstr ""
 
 #: mSNP/options/mdrSeed.title
 msgid "Random seed"
@@ -8094,6 +8248,10 @@ msgstr ""
 
 #: mTAB1/results/postHoc.columns.title
 msgid "Raw p"
+msgstr ""
+
+#: R/mpca.b.R
+msgid "Real Group"
 msgstr ""
 
 #: mDCA/options/recalibrate.title
@@ -8214,6 +8372,13 @@ msgstr "正则化惩罚选择"
 msgid "Regularization Penalty Optimization"
 msgstr "正则化惩罚优化"
 
+#: R/mcor.b.R
+msgid ""
+"Regularized GLASSO estimates do not have p-values or significance stars; a "
+"non-zero partial correlation indicates an edge selected by the "
+"regularization."
+msgstr ""
+
 #: R/mstab.b.R
 msgid "Regulatory Ceiling"
 msgstr ""
@@ -8269,6 +8434,13 @@ msgstr ""
 #: R/mlr.b.R
 msgid "Repeated CV"
 msgstr "重复交叉验证"
+
+#: R/mlr.b.R
+msgid ""
+"Repeated K-Fold CV AUC is computed from subject-level out-of-fold "
+"probabilities averaged across repeats (matching the ROC table and plot); CV "
+"Accuracy is averaged across repeats."
+msgstr ""
 
 #: package/analyses/mMNV.title
 #: package/analyses/mMNV.menuTitle
@@ -8472,6 +8644,7 @@ msgid "Risk Stratification Table"
 msgstr "风险分层表"
 
 #: mSRV/options/kmTable.title
+#: mSRV/options/adjTable.title
 msgid "Risk table"
 msgstr ""
 
@@ -8755,6 +8928,7 @@ msgstr "样本量比值 (N<sub>2</sub>/N<sub>1</sub>)"
 #: mMLP/ui[4].label
 #: mMOUT/ui[3].label
 #: mRF/ui[4].label
+#: mSNP/ui[9].label
 #: mUI/ui[2].label
 msgid "Save"
 msgstr "保存"
@@ -8769,6 +8943,8 @@ msgstr "保存的马氏距离"
 msgid "Saved outlier flags"
 msgstr "保存的异常值标记"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
 #: R/mrf.b.R
 msgid ""
 "Saved predictions (predClass / predProb) use the full-dataset model "
@@ -9157,8 +9333,19 @@ msgid ""
 "shipping is a concern."
 msgstr ""
 
+#: R/mstab.b.R
+msgid "Significant change within first 3 months (evaluated as accelerated change)"
+msgstr ""
+
 #: mSTAB/options/accelResult/change_refrig_early.title
 msgid "Significant change within first 3 months (refrigerated only)"
+msgstr ""
+
+#: R/mstab.b.R
+msgid ""
+"Significant change within first 3 months (refrigerated option) was selected "
+"under Room Temperature storage; evaluated per accelerated significant change "
+"rules (ICH Q1E Section 2.4.2.1)."
 msgstr ""
 
 #: R/mstab.b.R
@@ -9246,6 +9433,10 @@ msgstr ""
 
 #: R/mtab1.b.R
 msgid "SMD"
+msgstr ""
+
+#: R/mtab1.b.R
+msgid "SMD is undefined due to complete separation (zero within-group variance)."
 msgstr ""
 
 #: package/datasets/SNPandHWEanalysis.name
@@ -9473,6 +9664,11 @@ msgstr ""
 
 #: R/mstab.b.R
 msgid "Standardized Residuals"
+msgstr ""
+
+#: R/mtab1.b.R
+#: mTAB1/results/postHoc.columns.title
+msgid "Stat"
 msgstr ""
 
 #: R/mtab1.b.R
@@ -9763,6 +9959,15 @@ msgstr "Tanh 函数"
 msgid "Target"
 msgstr ""
 
+#: R/msrv.b.R
+msgid "Target cause model failed."
+msgstr ""
+
+#: R/msrv.b.R
+#: mSRV/results/compRisksSection/fgRiskTable.columns.title
+msgid "Target Events"
+msgstr ""
+
 #: R/mstab.b.R
 msgid "Target Registration Condition"
 msgstr ""
@@ -10017,6 +10222,8 @@ msgstr ""
 
 #: mMNV/options/rmFactorName.default
 #: mSRV/results/kmSection/kmRiskTable.columns.title
+#: mSRV/results/adjSection/adjRiskTable.columns.title
+#: mSRV/results/compRisksSection/fgRiskTable.columns.title
 msgid "Time"
 msgstr "时间"
 
@@ -10102,6 +10309,10 @@ msgstr ""
 
 #: R/mmnv.b.R
 msgid "Too few complete observations (minimum 3 required)."
+msgstr ""
+
+#: R/mtab1.b.R
+msgid "Too few observations (n < 3)"
 msgstr ""
 
 #: R/mpca.b.R
@@ -10470,6 +10681,8 @@ msgstr ""
 msgid "Validation Method"
 msgstr "验证方法"
 
+#: R/mlr.b.R
+#: R/mmlp.b.R
 #: R/mrf.b.R
 msgid ""
 "Validation predictions unavailable; evaluated in-sample using the "
@@ -10484,12 +10697,9 @@ msgstr "验证设置"
 
 #: mMNV/results/multivariateTable.columns.title
 #: mMNV/results/profileTable.columns.title
+#: mPCA/results/kmeansAriTable.columns.title
 msgid "Value"
 msgstr "值"
-
-#: mPCA/results/kmeansTable.columns.title
-msgid "Value / Match count"
-msgstr "值 / 匹配计数"
 
 #: mTAB1/options/plotCatLabels.title
 msgid "Value labels on categorical plots"
