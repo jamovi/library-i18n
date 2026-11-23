@@ -12,6 +12,14 @@ msgstr ""
 "projects/jamovi/module-vijmulti/zh_Hant/>\n"
 "X-Generator: Weblate 2026.12.dev0\n"
 
+#: R/corresp.b.R
+msgid "\"{var}\" is a reserved name. Please rename this variable."
+msgstr ""
+
+#: R/utils.R
+msgid "(Missing)"
+msgstr ""
+
 #: R/principal.b.R
 msgid "{rotation} rotation"
 msgstr "{rotation} 旋轉"
@@ -249,7 +257,7 @@ msgstr "強調色"
 msgid "Active Margin"
 msgstr "作用邊界"
 
-#: principal/ui[7].label
+#: principal/ui[8].label
 msgid "Advanced Options"
 msgstr "進階選項"
 
@@ -333,6 +341,12 @@ msgstr "雙圖類型"
 msgid "Black"
 msgstr "黑色"
 
+#: corresp/options/plotTheme/ggBw.title
+#: multcorresp/options/plotTheme/ggBw.title
+#: principal/options/plotTheme/ggBw.title
+msgid "Black and white (ggplot2)"
+msgstr ""
+
 #: corresp/options/rowColor/blue.title
 #: corresp/options/colColor/blue.title
 #: multcorresp/options/obsColor/blue.title
@@ -411,6 +425,10 @@ msgstr "Burt 矩陣"
 #: R/multcorresp.b.R
 msgid "Burt matrix method"
 msgstr "Burt 矩陣法"
+
+#: R/corresp.b.R
+msgid "CA requires at least two dimensions with non-zero inertia."
+msgstr ""
 
 #: corresp/ui[7][2][1][0].label
 #: multcorresp/ui[8][2][1][0].label
@@ -598,12 +616,20 @@ msgid "Counts are not integers. The χ² test may not be valid."
 msgstr "次數不是整數。χ² 檢定可能不適用。"
 
 #: R/corresp.b.R
+msgid "Counts may not all be zero."
+msgstr ""
+
+#: R/corresp.b.R
 msgid "Counts may not be infinite."
 msgstr "計數不得為無限大。"
 
 #: R/corresp.b.R
 msgid "Counts may not be negative."
 msgstr "計數不得為負數。"
+
+#: R/corresp.b.R
+msgid "Counts may not contain missing values."
+msgstr ""
 
 #: principal/options/biplotType/covPlot.title
 msgid "Covariance"
@@ -619,6 +645,12 @@ msgstr "共變數雙標圖"
 #: principal/results/summaryTable.columns.title
 msgid "Cumulative %"
 msgstr "累積百分比"
+
+#: corresp/options/plotTheme/ggDark.title
+#: multcorresp/options/plotTheme/ggDark.title
+#: principal/options/plotTheme/ggDark.title
+msgid "Dark (ggplot2)"
+msgstr ""
 
 #: multcorresp/options/colorPalette/Dark2.title
 #: principal/options/colorPalette/Dark2.title
@@ -654,6 +686,15 @@ msgstr "深灰色"
 #: principal/options/obsCaptionText.default
 msgid "default"
 msgstr "預設"
+
+#: corresp/options/plotTheme/default.title
+#: corresp/options/fontFamily/default.title
+#: multcorresp/options/plotTheme/default.title
+#: multcorresp/options/fontFamily/default.title
+#: principal/options/plotTheme/default.title
+#: principal/options/fontFamily/default.title
+msgid "Default"
+msgstr ""
 
 #: corresp/results/chisq.columns.title
 #: principal/results/kmoTable.columns.title
@@ -739,6 +780,12 @@ msgstr "因素"
 #: principal/options/captionFontFace.title
 msgid "Font face"
 msgstr "字體"
+
+#: corresp/options/fontFamily.title
+#: multcorresp/options/fontFamily.title
+#: principal/options/fontFamily.title
+msgid "Font family"
+msgstr ""
 
 #: corresp/options/titleFontSize.title
 #: corresp/options/subtitleFontSize.title
@@ -837,6 +884,12 @@ msgstr "灰階"
 msgid "Group"
 msgstr "組別"
 
+#: corresp/options/plotTheme/jmvHadley.title
+#: multcorresp/options/plotTheme/jmvHadley.title
+#: principal/options/plotTheme/jmvHadley.title
+msgid "Hadley (jamovi)"
+msgstr ""
+
 #: R/multcorresp.b.R
 #: multcorresp/options/method/Indicator.title
 #: multcorresp/ui[3][0][0]/method_indicator.label
@@ -876,6 +929,12 @@ msgstr "鳶尾花"
 #: principal/options/captionFontFace/italic.title
 msgid "Italic"
 msgstr "斜體"
+
+#: corresp/options/plotTheme/jmvDefault.title
+#: multcorresp/options/plotTheme/jmvDefault.title
+#: principal/options/plotTheme/jmvDefault.title
+msgid "jamovi"
+msgstr ""
 
 #: principal/options/varColor/#A6C4F1.title
 #: principal/options/obsColor/#A6C4F1.title
@@ -972,6 +1031,12 @@ msgstr "Lémovice"
 msgid "Level"
 msgstr "水準"
 
+#: corresp/options/plotTheme/ggLight.title
+#: multcorresp/options/plotTheme/ggLight.title
+#: principal/options/plotTheme/ggLight.title
+msgid "Light (ggplot2)"
+msgstr ""
+
 #: principal/options/varColor/#B3CDE3.title
 #: principal/options/obsColor/#B3CDE3.title
 msgid "Light Blue"
@@ -1023,6 +1088,12 @@ msgstr "淺黃色"
 msgid "Limited to the first 100 observations"
 msgstr "限制於前 100 筆觀察值"
 
+#: corresp/options/plotTheme/ggLinedraw.title
+#: multcorresp/options/plotTheme/ggLinedraw.title
+#: principal/options/plotTheme/ggLinedraw.title
+msgid "Line draw (ggplot2)"
+msgstr ""
+
 #: R/corresp.b.R
 #: multcorresp/results/categories.columns.title
 #: multcorresp/results/observations.columns.title
@@ -1034,6 +1105,10 @@ msgid "MCA Principal Coordinates ({method})"
 msgstr "MCA 主坐標（{method}）"
 
 #: R/multcorresp.b.R
+msgid "MCA requires at least two dimensions with non-zero inertia."
+msgstr ""
+
+#: R/multcorresp.b.R
 msgid "MCA Standard Coordinates ({method})"
 msgstr "MCA 標準坐標（{method}）"
 
@@ -1042,9 +1117,22 @@ msgstr "MCA 標準坐標（{method}）"
 msgid "Method"
 msgstr "方法"
 
+#: corresp/options/plotTheme/jmvMinimal.title
+#: multcorresp/options/plotTheme/jmvMinimal.title
+#: principal/options/plotTheme/jmvMinimal.title
+msgid "Minimal (jamovi)"
+msgstr ""
+
+#: R/principal.b.R
 #: principal/options/rotation/entropy.title
 msgid "Minimum entropy"
 msgstr "最小熵"
+
+#: corresp/options/fontFamily/mono.title
+#: multcorresp/options/fontFamily/mono.title
+#: principal/options/fontFamily/mono.title
+msgid "Monospace"
+msgstr ""
 
 #: package/analyses/multcorresp.title
 #: package/analyses/multcorresp.menuTitle
@@ -1091,7 +1179,7 @@ msgstr "正常"
 #: corresp/ui[3][0].label
 #: multcorresp/options/normalization.title
 #: multcorresp/ui[4][0].label
-#: principal/ui[7][0][0][0].label
+#: principal/ui[8][0][0][0].label
 msgid "Normalization"
 msgstr "正規化"
 
@@ -1221,6 +1309,10 @@ msgstr "PCA 主坐標"
 #: R/principal.b.R
 msgid "PCA Principal Coordinates ({rot})"
 msgstr "PCA 主坐標（{rot}）"
+
+#: R/principal.b.R
+msgid "PCA requires at least two dimensions with non-zero variance."
+msgstr ""
 
 #: R/principal.b.R
 msgid "PCA Standard Coordinates"
@@ -1421,7 +1513,7 @@ msgstr "旋轉特徵向量"
 
 #: principal/options/rotation.title
 #: principal/ui[2][1][0].label
-#: principal/ui[7][0][1][0].label
+#: principal/ui[8][0][1][0].label
 msgid "Rotation"
 msgstr "旋轉"
 
@@ -1498,8 +1590,14 @@ msgstr "橫列"
 msgid "Same as point/arrow"
 msgstr "同點/箭頭"
 
-#: multcorresp/ui[9].label
-#: principal/ui[8].label
+#: corresp/options/fontFamily/sans.title
+#: multcorresp/options/fontFamily/sans.title
+#: principal/options/fontFamily/sans.title
+msgid "Sans serif"
+msgstr ""
+
+#: multcorresp/ui[10].label
+#: principal/ui[9].label
 msgid "Save"
 msgstr "儲存"
 
@@ -1519,6 +1617,12 @@ msgstr "陡坡圖"
 #: principal/options/screeCaptionText.title
 msgid "Scree plot"
 msgstr "陡坡圖"
+
+#: corresp/options/fontFamily/serif.title
+#: multcorresp/options/fontFamily/serif.title
+#: principal/options/fontFamily/serif.title
+msgid "Serif"
+msgstr ""
 
 #: multcorresp/options/colorPalette/Set1.title
 #: principal/options/colorPalette/Set1.title
@@ -1573,6 +1677,10 @@ msgid "Some categories have zero counts and must be removed."
 msgstr "部分類別的計數為零，須予以移除。"
 
 #: R/corresp.b.R
+msgid "Some expected counts are less than 5. The χ² test may not be valid."
+msgstr ""
+
+#: R/corresp.b.R
 msgid ""
 "Some row or column names end with \"*\", which is also used to mark "
 "supplementary rows and columns. Consider renaming them to avoid confusion."
@@ -1588,6 +1696,12 @@ msgstr "列聯表中有缺失值。"
 #: principal/options/colorPalette/Spectral.title
 msgid "Spectral"
 msgstr "頻譜"
+
+#: corresp/options/plotTheme/jmvSpss.title
+#: multcorresp/options/plotTheme/jmvSpss.title
+#: principal/options/plotTheme/jmvSpss.title
+msgid "SPSS (jamovi)"
+msgstr ""
 
 #: principal/results/summaryTable.columns.title
 msgid "SS Loadings"
@@ -1727,12 +1841,27 @@ msgid "The correlation matrix is nearly singular. Computations may not be accura
 msgstr "相關矩陣接近奇異，計算結果可能不準確。"
 
 #: R/principal.b.R
+msgid "The correlation matrix is singular: these statistics cannot be computed."
+msgstr ""
+
+#: R/principal.b.R
+msgid "The correlation matrix is singular."
+msgstr ""
+
+#: R/principal.b.R
 msgid ""
 "The following variable(s) are constant and cannot be used in a principal "
 "component analysis: {vars}."
 msgstr "下列變項為常數，無法用於主成分分析：{vars}。"
 
 #: R/multcorresp.b.R
+msgid ""
+"The following variable(s) have a single category and cannot be used in a "
+"multiple correspondence analysis: {vars}."
+msgstr ""
+
+#: R/multcorresp.b.R
+#: R/principal.b.R
 msgid "The number of dimensions cannot be greater than {max}."
 msgstr "維度數量不能大於 {max}。"
 
@@ -1745,14 +1874,17 @@ msgid "The number of dimensions cannot be greater than the number of variables."
 msgstr "維度數量不可大於變項數量。"
 
 #: R/corresp.b.R
-msgid ""
-"The singular value for dimension {n} is close to zero. The plots may not be "
-"accurate."
-msgstr "維度 {n} 的奇異值接近零，圖形可能不準確。"
-
-#: R/corresp.b.R
 msgid "The χ² statistic is equal to zero."
 msgstr "χ² 統計量等於零。"
+
+#: corresp/options/plotTheme.title
+#: corresp/ui[8].label
+#: multcorresp/options/plotTheme.title
+#: multcorresp/ui[9].label
+#: principal/options/plotTheme.title
+#: principal/ui[7].label
+msgid "Theme"
+msgstr ""
 
 #: multcorresp/options/colorPalette/tidy::alger.title
 #: principal/options/colorPalette/tidy::alger.title
